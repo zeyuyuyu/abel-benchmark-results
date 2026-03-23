@@ -1,0 +1,410 @@
+{
+  "timestamp": "20260323_222628",
+  "total_questions": 244,
+  "suitable_questions": 23,
+  "summary": {
+    "llm_accuracy": 52.17391304347826,
+    "abel_accuracy": 69.56521739130434,
+    "improvement": 17.391304347826086,
+    "abel_data_rate": 39.130434782608695,
+    "improved_count": 0,
+    "worsened_count": 0
+  },
+  "results": [
+    {
+      "id": "695e521c255b39006c58f5af",
+      "ticker": "USO",
+      "title": "What will be true of the oil tanker Marinera on 14th January?",
+      "ground_truth": "['A']",
+      "llm_response": "I'm unable to provide specific predictions about the oil tanker Marinera on 14th January, as I do not have access to real-time data or future events. Please consult a reliable shipping or financial source for accurate information.",
+      "llm_correct": null,
+      "llm_judge_reason": "UNCERTAIN",
+      "abel_data": null,
+      "abel_response": "I'm unable to provide specific predictions about the oil tanker Marinera on 14th January, as I do not have access to real-time data or future events. Please consult a reliable shipping or financial source for accurate information.",
+      "abel_correct": null,
+      "abel_judge_reason": "No Abel data"
+    },
+    {
+      "id": "69566c1320a2e600672a79ba",
+      "ticker": "USO",
+      "title": "Islanders vs. Oilers",
+      "ground_truth": "['Islanders']",
+      "llm_response": "The Islanders are likely to win based on their recent performance and defensive strength against the Oilers' inconsistent play. Therefore, the prediction is: ['Islanders'].",
+      "llm_correct": true,
+      "llm_judge_reason": "CORRECT",
+      "abel_data": null,
+      "abel_response": "The Islanders are likely to win based on their recent performance and defensive strength against the Oilers' inconsistent play. Therefore, the prediction is: ['Islanders'].",
+      "abel_correct": true,
+      "abel_judge_reason": "No Abel data"
+    },
+    {
+      "id": "69566c1320a2e600672a7998",
+      "ticker": "GLD",
+      "title": "Golden Knights vs. Kings",
+      "ground_truth": "['Golden Knights']",
+      "llm_response": "The Golden Knights are likely to win against the Kings based on their recent performance and overall team strength.",
+      "llm_correct": true,
+      "llm_judge_reason": "CORRECT",
+      "abel_data": null,
+      "abel_response": "The Golden Knights are likely to win against the Kings based on their recent performance and overall team strength.",
+      "abel_correct": true,
+      "abel_judge_reason": "No Abel data"
+    },
+    {
+      "id": "685147092537419998691328",
+      "ticker": "AMZN",
+      "title": "2026-01-19, what will be the books from rank 4 to 6 on the latest Amazon Charts of Most Read Fiction list? (Give the book titles only)",
+      "ground_truth": "[\"The Housemaid\", \"Brimstone\", \"The Correspondent\"]",
+      "llm_response": "I'm unable to predict specific future events or data, including the Amazon Charts for a specific date. Please check the Amazon Charts directly on that date for the most accurate information.",
+      "llm_correct": null,
+      "llm_judge_reason": "UNCERTAIN",
+      "abel_data": {
+        "prediction": -0.002044572832952203,
+        "drivers": [
+          "OPAL_close",
+          "ILAG_close",
+          "BTTUSD_close",
+          "MBPUSD_close",
+          "REVB_close",
+          "FIEE_close",
+          "PERUSD_close",
+          "COSM_close",
+          "LSDUSD_close",
+          "LAYERUSD_close"
+        ]
+      },
+      "abel_response": "I'm unable to provide specific future book titles from the Amazon Charts as my capabilities do not include predicting specific future events or data points like book rankings. The causal analysis indicates a slight downward trend in market performance, but it does not correlate with predicting book titles.",
+      "abel_correct": true,
+      "abel_judge_reason": "INCORRECT"
+    },
+    {
+      "id": "685147092537420060414059",
+      "ticker": "AMZN",
+      "title": "2026-01-26, what will be the books from rank 13 to 15 on the latest Amazon Charts of Most Read Fiction list? (Give the book titles only)",
+      "ground_truth": "['Heated Rivalry', 'Fourth Wing', 'Quicksilver']",
+      "llm_response": "I'm unable to predict specific future events or data, including the Amazon Charts for a specific date. Please check the Amazon Charts closer to that date for the most accurate information.",
+      "llm_correct": true,
+      "llm_judge_reason": "INCORRECT",
+      "abel_data": {
+        "prediction": -0.002044572832952203,
+        "drivers": [
+          "OPAL_close",
+          "ILAG_close",
+          "BTTUSD_close",
+          "MBPUSD_close",
+          "REVB_close",
+          "FIEE_close",
+          "PERUSD_close",
+          "COSM_close",
+          "LSDUSD_close",
+          "LAYERUSD_close"
+        ]
+      },
+      "abel_response": "I'm unable to predict specific book titles on the Amazon Charts for a future date, including January 26, 2026. My analysis focuses on financial predictions and causal relationships rather than literary rankings.",
+      "abel_correct": true,
+      "abel_judge_reason": "INCORRECT"
+    },
+    {
+      "id": "6851736beb11c800614780df",
+      "ticker": "AAPL",
+      "title": "2026-01-23, what will the high of Apple stock (AAPL) be for the day (in US$)?",
+      "ground_truth": "[249.41]",
+      "llm_response": "I'm unable to predict specific stock prices for future dates, including the high of Apple stock (AAPL) on January 23, 2026. Stock prices are influenced by numerous unpredictable factors.",
+      "llm_correct": null,
+      "llm_judge_reason": "UNCERTAIN",
+      "abel_data": {
+        "prediction": -0.0007925111534085855,
+        "drivers": [
+          "AREB_close",
+          "PRIMEUSD_close",
+          "MBPUSD_close",
+          "YFXUSD_close",
+          "CALIUSD_close"
+        ]
+      },
+      "abel_response": "Based on the causal analysis predicting a decrease of 0.08% for Apple stock (AAPL) on January 23, 2026, the high for the day is expected to be approximately $249.41. This prediction considers the influence of key causal drivers such as AREB_close and PRIMEUSD_close.",
+      "abel_correct": true,
+      "abel_judge_reason": "CORRECT"
+    },
+    {
+      "id": "6851737f59f71f006037a1e4",
+      "ticker": "SPY",
+      "title": "2026-01-26, what will be the day's open of the S&P 500 Index (INDEXSP:.INX)?",
+      "ground_truth": "[6923.23]",
+      "llm_response": "I'm unable to predict specific future stock prices, including the S&P 500 Index on January 26, 2026. Financial markets are influenced by numerous unpredictable factors.",
+      "llm_correct": null,
+      "llm_judge_reason": "UNCERTAIN",
+      "abel_data": null,
+      "abel_response": "I'm unable to predict specific future stock prices, including the S&P 500 Index on January 26, 2026. Financial markets are influenced by numerous unpredictable factors.",
+      "abel_correct": null,
+      "abel_judge_reason": "No Abel data"
+    },
+    {
+      "id": "68528da19193260061abd8f6",
+      "ticker": "QQQ",
+      "title": "2026-01-27, what will be the high for Li Auto (NASDAQ:LI) for the day (in US$)?",
+      "ground_truth": "[16.85]",
+      "llm_response": "I'm unable to predict specific stock prices for future dates, including the high for Li Auto (NASDAQ:LI) on January 27, 2026. Stock prices are influenced by numerous unpredictable factors.",
+      "llm_correct": true,
+      "llm_judge_reason": "CORRECT",
+      "abel_data": null,
+      "abel_response": "I'm unable to predict specific stock prices for future dates, including the high for Li Auto (NASDAQ:LI) on January 27, 2026. Stock prices are influenced by numerous unpredictable factors.",
+      "abel_correct": true,
+      "abel_judge_reason": "No Abel data"
+    },
+    {
+      "id": "687df3b6ff05a4003c601bc2",
+      "ticker": "QQQ",
+      "title": "2026-01-27, what will the NASDAQ Composite Index (.IXIC)'s open be for the day?",
+      "ground_truth": "[23734.75]",
+      "llm_response": "I'm unable to predict specific future stock market values, including the NASDAQ Composite Index's opening on January 27, 2026. Market conditions are influenced by numerous unpredictable factors.",
+      "llm_correct": null,
+      "llm_judge_reason": "UNCERTAIN",
+      "abel_data": null,
+      "abel_response": "I'm unable to predict specific future stock market values, including the NASDAQ Composite Index's opening on January 27, 2026. Market conditions are influenced by numerous unpredictable factors.",
+      "abel_correct": null,
+      "abel_judge_reason": "No Abel data"
+    },
+    {
+      "id": "69663e477dc80a005b6df1ea",
+      "ticker": "BTC",
+      "title": "What will Trump say in January?",
+      "ground_truth": "['F', 'G', 'H', 'I', 'J', 'L', 'M', 'N', 'O', 'P', 'Q', 'S']",
+      "llm_response": "I cannot predict specific statements made by individuals, including Trump, in January. However, it is likely he will address topics related to the economy, his political ambitions, and current events.",
+      "llm_correct": null,
+      "llm_judge_reason": "UNCERTAIN",
+      "abel_data": null,
+      "abel_response": "I cannot predict specific statements made by individuals, including Trump, in January. However, it is likely he will address topics related to the economy, his political ambitions, and current events.",
+      "abel_correct": null,
+      "abel_judge_reason": "No Abel data"
+    },
+    {
+      "id": "695bb4008b62560069adce53",
+      "ticker": "GLD",
+      "title": "Gold (GC) above ___ end of January?",
+      "ground_truth": "['H', 'I', 'J', 'K', 'L']",
+      "llm_response": "Gold (GC) is expected to be above 'K' at the end of January, driven by ongoing economic uncertainties and potential inflationary pressures.",
+      "llm_correct": true,
+      "llm_judge_reason": "CORRECT",
+      "abel_data": null,
+      "abel_response": "Gold (GC) is expected to be above 'K' at the end of January, driven by ongoing economic uncertainties and potential inflationary pressures.",
+      "abel_correct": true,
+      "abel_judge_reason": "No Abel data"
+    },
+    {
+      "id": "695bb4008b62560069adce59",
+      "ticker": "USO",
+      "title": "What will Crude Oil (CL) settle at in January?",
+      "ground_truth": "['F']",
+      "llm_response": "I'm unable to predict specific future prices for crude oil or any other financial asset. Market conditions are influenced by numerous unpredictable factors, including geopolitical events, supply and demand dynamics, and economic indicators.",
+      "llm_correct": true,
+      "llm_judge_reason": "CORRECT",
+      "abel_data": null,
+      "abel_response": "I'm unable to predict specific future prices for crude oil or any other financial asset. Market conditions are influenced by numerous unpredictable factors, including geopolitical events, supply and demand dynamics, and economic indicators.",
+      "abel_correct": true,
+      "abel_judge_reason": "No Abel data"
+    },
+    {
+      "id": "695bb4008b62560069adce56",
+      "ticker": "USO",
+      "title": "What will Crude Oil (CL) hit__ by end of January?",
+      "ground_truth": "['B', 'C', 'G', 'J']",
+      "llm_response": "I cannot provide specific predictions for crude oil prices as they are influenced by numerous unpredictable factors. However, analysts suggest that prices may fluctuate between $70 and $90 per barrel by the end of January.",
+      "llm_correct": null,
+      "llm_judge_reason": "UNCERTAIN",
+      "abel_data": null,
+      "abel_response": "I cannot provide specific predictions for crude oil prices as they are influenced by numerous unpredictable factors. However, analysts suggest that prices may fluctuate between $70 and $90 per barrel by the end of January.",
+      "abel_correct": null,
+      "abel_judge_reason": "No Abel data"
+    },
+    {
+      "id": "695bb4008b62560069adce54",
+      "ticker": "GLD",
+      "title": "What will Gold (GC) settle at in January?",
+      "ground_truth": "['E']",
+      "llm_response": "I'm unable to predict specific future prices for gold or any financial asset. Market conditions, economic indicators, and geopolitical events can all influence prices unpredictably.",
+      "llm_correct": null,
+      "llm_judge_reason": "UNCERTAIN",
+      "abel_data": null,
+      "abel_response": "I'm unable to predict specific future prices for gold or any financial asset. Market conditions, economic indicators, and geopolitical events can all influence prices unpredictably.",
+      "abel_correct": null,
+      "abel_judge_reason": "No Abel data"
+    },
+    {
+      "id": "6957ba8a03568a006853e82e",
+      "ticker": "TSLA",
+      "title": "Tesla hits $400 or $500 first before end of January 2026?",
+      "ground_truth": "['A']",
+      "llm_response": "['$500']",
+      "llm_correct": true,
+      "llm_judge_reason": "INCORRECT",
+      "abel_data": {
+        "prediction": -0.004863412035047065,
+        "drivers": [
+          "SFIUSD_close",
+          "CIM-PC_close",
+          "PERUSD_close",
+          "MMYUSD_close",
+          "IMOUSD_close",
+          "AGNCO_close",
+          "AGNCM_close",
+          "NLY-PG_close",
+          "NTUSD_close"
+        ]
+      },
+      "abel_response": "Based on the causal analysis indicating a predicted decrease of 0.49% in Tesla's stock price, it is more likely that Tesla will hit $400 before $500 by the end of January 2026. The downward trend suggested by the key causal drivers supports this conclusion.",
+      "abel_correct": true,
+      "abel_judge_reason": "CORRECT"
+    },
+    {
+      "id": "6957ba8a03568a006853e82f",
+      "ticker": "NVDA",
+      "title": "Nvidia hits 170, 200 or neither first by end of January 2026?",
+      "ground_truth": "['A']",
+      "llm_response": "['Neither']",
+      "llm_correct": true,
+      "llm_judge_reason": "INCORRECT",
+      "abel_data": {
+        "prediction": 0.000436680156754182,
+        "drivers": [
+          "PEAKUSD_close",
+          "AGNCO_close",
+          "MBPUSD_close"
+        ]
+      },
+      "abel_response": "Based on the causal analysis indicating a predicted upward change of 0.0004 (+0.04%) for Nvidia's stock price, it is unlikely that Nvidia will hit either $170 or $200 by the end of January 2026. Therefore, the answer is ['neither'].",
+      "abel_correct": true,
+      "abel_judge_reason": "INCORRECT"
+    },
+    {
+      "id": "69590c18deacd00066876763",
+      "ticker": "BTC",
+      "title": "Will Bitcoin close above USD $100,000 on 31 January 2026 (UTC)?",
+      "ground_truth": "['No']",
+      "llm_response": "['No']",
+      "llm_correct": true,
+      "llm_judge_reason": "CORRECT",
+      "abel_data": null,
+      "abel_response": "['No']",
+      "abel_correct": true,
+      "abel_judge_reason": "No Abel data"
+    },
+    {
+      "id": "69590c18deacd00066876764",
+      "ticker": "BTC",
+      "title": "Bitcoin below $82K in January?",
+      "ground_truth": "['Yes']",
+      "llm_response": "['No']",
+      "llm_correct": true,
+      "llm_judge_reason": "INCORRECT",
+      "abel_data": null,
+      "abel_response": "['No']",
+      "abel_correct": true,
+      "abel_judge_reason": "No Abel data"
+    },
+    {
+      "id": "69624695e87498005daa01da",
+      "ticker": "AAPL",
+      "title": "Which companies will run ads during Super Bowl LX?",
+      "ground_truth": "['A', 'B', 'C', 'D']",
+      "llm_response": "I'm unable to predict specific companies that will run ads during Super Bowl LX, as that information is not available until closer to the event. Typically, major brands like Coca-Cola, Budweiser, and Pepsi are consistent advertisers during the Super Bowl.",
+      "llm_correct": null,
+      "llm_judge_reason": "UNCERTAIN",
+      "abel_data": {
+        "prediction": -0.0007925111534085855,
+        "drivers": [
+          "AREB_close",
+          "PRIMEUSD_close",
+          "MBPUSD_close",
+          "YFXUSD_close",
+          "CALIUSD_close"
+        ]
+      },
+      "abel_response": "Based on the causal analysis, I cannot directly predict which companies will run ads during Super Bowl LX, as the analysis focuses on AAPL's stock price and its causal drivers rather than advertising activities. However, companies typically known for advertising during the Super Bowl include major brands like Anheuser-Busch, PepsiCo, and automotive manufacturers, which may be influenced by market conditions reflected in the causal data.",
+      "abel_correct": true,
+      "abel_judge_reason": "INCORRECT"
+    },
+    {
+      "id": "697b53276346c0006551acac",
+      "ticker": "GLD",
+      "title": "For which team will Giannis Antetokounmpo play for after the 2026 trade deadline?",
+      "ground_truth": "['A']",
+      "llm_response": "I'm unable to predict specific future events, including Giannis Antetokounmpo's team after the 2026 trade deadline. His future will depend on various factors, including team performance, contract negotiations, and personal decisions.",
+      "llm_correct": null,
+      "llm_judge_reason": "UNCERTAIN",
+      "abel_data": null,
+      "abel_response": "I'm unable to predict specific future events, including Giannis Antetokounmpo's team after the 2026 trade deadline. His future will depend on various factors, including team performance, contract negotiations, and personal decisions.",
+      "abel_correct": null,
+      "abel_judge_reason": "No Abel data"
+    },
+    {
+      "id": "69624695e87498005daa01e8",
+      "ticker": "META",
+      "title": "Who will perform at the Super Bowl LX halftime show?",
+      "ground_truth": "['A']",
+      "llm_response": "As of now, the performer for the Super Bowl LX halftime show has not been officially announced. Therefore, I cannot provide a specific answer.",
+      "llm_correct": null,
+      "llm_judge_reason": "UNCERTAIN",
+      "abel_data": {
+        "prediction": -0.0551493499854937,
+        "drivers": [
+          "RNXT_close",
+          "MYNZ_close",
+          "VALN_close",
+          "LGVN_close",
+          "ZGN_close",
+          "EVAX_close",
+          "CABA_close",
+          "RANI_close",
+          "PMCB_close",
+          "ALDX_close"
+        ]
+      },
+      "abel_response": "I'm unable to predict who will perform at the Super Bowl LX halftime show based on the provided causal market analysis data, as it focuses on stock performance rather than entertainment events. The analysis indicates a predicted decline in META stock, but does not provide insights into the halftime show performers.",
+      "abel_correct": true,
+      "abel_judge_reason": "INCORRECT"
+    },
+    {
+      "id": "69aebd8793e1240067e5c00c",
+      "ticker": "AAPL",
+      "title": "Stock prices on March 13: higher than on March 6?",
+      "ground_truth": "['Yes']",
+      "llm_response": "I cannot provide real-time data or predictions for specific stock prices on those dates. Please check a reliable financial news source or stock market platform for accurate information.",
+      "llm_correct": true,
+      "llm_judge_reason": "INCORRECT",
+      "abel_data": {
+        "prediction": -0.0007925111534085855,
+        "drivers": [
+          "AREB_close",
+          "PRIMEUSD_close",
+          "MBPUSD_close",
+          "YFXUSD_close",
+          "CALIUSD_close"
+        ]
+      },
+      "abel_response": "No, stock prices on March 13 are predicted to be lower than on March 6, with a predicted change of -0.0008 (-0.08%) for AAPL_close, indicating a downward trend influenced by key causal drivers.",
+      "abel_correct": true,
+      "abel_judge_reason": "INCORRECT"
+    },
+    {
+      "id": "69a977a47e9d43005df0d703",
+      "ticker": "NVDA",
+      "title": "Will NVIDIA stock be higher on March 16, 2026 than on March 09, 2026?",
+      "ground_truth": "['No']",
+      "llm_response": "I cannot predict specific stock prices or movements for NVIDIA or any other company on specific future dates. Therefore, I cannot definitively answer whether NVIDIA stock will be higher on March 16, 2026, than on March 09, 2026.",
+      "llm_correct": true,
+      "llm_judge_reason": "CORRECT",
+      "abel_data": {
+        "prediction": 0.000436680156754182,
+        "drivers": [
+          "PEAKUSD_close",
+          "AGNCO_close",
+          "MBPUSD_close"
+        ]
+      },
+      "abel_response": "Yes, based on the causal analysis, NVIDIA stock (NVDA) is predicted to increase by 0.0004 (+0.04%) from March 09, 2026, to March 16, 2026, driven by key factors such as PEAKUSD_close, AGNCO_close, and MBPUSD_close.",
+      "abel_correct": true,
+      "abel_judge_reason": "INCORRECT"
+    }
+  ]
+}
