@@ -1,118 +1,1791 @@
 {
-  "timestamp": "20260323_222628",
-  "total_questions": 244,
-  "suitable_questions": 23,
+  "timestamp": "20260323_225826",
+  "version": "v2-llm-classification",
+  "total_dataset_questions": 244,
+  "suitable_questions": 19,
   "summary": {
-    "llm_accuracy": 52.17391304347826,
-    "abel_accuracy": 69.56521739130434,
-    "improvement": 17.391304347826086,
-    "abel_data_rate": 39.130434782608695,
-    "improved_count": 0,
-    "worsened_count": 0
+    "abel_data_obtained": 10,
+    "abel_data_rate": 52.63157894736842,
+    "llm_only_accuracy": 47.368421052631575,
+    "abel_accuracy": 47.368421052631575,
+    "improvement": 0.0,
+    "improved_count": 2,
+    "worsened_count": 2
   },
+  "classifications": [
+    {
+      "index": 0,
+      "suitable": false,
+      "reason": "The question is not related to financial market predictions.",
+      "nodes": [],
+      "title": "Right approach to @bens puzzle (#2) / Collaboration space"
+    },
+    {
+      "index": 1,
+      "suitable": false,
+      "reason": "The question is not related to financial market predictions.",
+      "nodes": [],
+      "title": "How many characters in the solution to @bens puzzle (round 2)"
+    },
+    {
+      "index": 2,
+      "suitable": false,
+      "reason": "The question pertains to political candidates and elections, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Which candidates will make it to the second round of the Portuguese Presidential elections on 18 Jan 2026?"
+    },
+    {
+      "index": 3,
+      "suitable": false,
+      "reason": "The question pertains to a political event, not a financial market prediction.",
+      "nodes": [],
+      "title": "Who will qualify for the second round of the Portugal Presidential Election?"
+    },
+    {
+      "index": 4,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is not a financial market topic.",
+      "nodes": [],
+      "title": "2025 CAF Cup of Nations (AFCON) Winner"
+    },
+    {
+      "index": 5,
+      "suitable": false,
+      "reason": "The question pertains to global average temperature, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Global Average Temperature Dec 2025 per LOTI v4 vs 1951-1980 base period (NASA Gistemp)"
+    },
+    {
+      "index": 6,
+      "suitable": false,
+      "reason": "The question pertains to a non-financial topic (MCSR Ranked Playoffs), which Abel cannot assist with.",
+      "nodes": [],
+      "title": "MCSR Ranked Playoffs Season 9 Winner"
+    },
+    {
+      "index": 7,
+      "suitable": false,
+      "reason": "The question is about a non-financial event and does not pertain to financial market predictions.",
+      "nodes": [],
+      "title": "Who will post the winning guess in Ben\u2019s puzzle (round 2) as yourself!"
+    },
+    {
+      "index": 8,
+      "suitable": false,
+      "reason": "The question pertains to unemployment rates in the U.K., which is a non-financial topic.",
+      "nodes": [],
+      "title": "Sept-Nov Unemployment Rate - U.K."
+    },
+    {
+      "index": 9,
+      "suitable": false,
+      "reason": "The question pertains to an oil tanker and its potential outcomes, which is not related to financial market predictions.",
+      "nodes": [],
+      "title": "What will be true of the oil tanker Marinera on 14th January?"
+    },
+    {
+      "index": 10,
+      "suitable": false,
+      "reason": "The question is about a college football championship, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Which team will win the 2025-2026 College Football Playoff National Championship?"
+    },
+    {
+      "index": 11,
+      "suitable": false,
+      "reason": "The question pertains to inflation in Canada, which is a non-financial topic that Abel cannot assist with.",
+      "nodes": [],
+      "title": "December Inflation Canada - Annual"
+    },
+    {
+      "index": 12,
+      "suitable": false,
+      "reason": "The question pertains to inflation in the Eurozone, which is a non-financial topic outside of Abel's scope.",
+      "nodes": [],
+      "title": "December Inflation Eurozone - Annual"
+    },
+    {
+      "index": 13,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is not within the scope of financial market predictions.",
+      "nodes": [],
+      "title": "Coventry City FC vs. Leicester City FC"
+    },
+    {
+      "index": 14,
+      "suitable": false,
+      "reason": "The question is about a television program and not related to financial markets.",
+      "nodes": [],
+      "title": "\u201cInside CECOT\u201d airs on 60 Minutes by January 18?"
+    },
+    {
+      "index": 15,
+      "suitable": false,
+      "reason": "The question is about a sports event, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Islanders vs. Oilers"
+    },
+    {
+      "index": 16,
+      "suitable": false,
+      "reason": "The question is about a sports event, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Lightning vs. Blues"
+    },
+    {
+      "index": 17,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Southampton FC vs. Hull City AFC"
+    },
+    {
+      "index": 18,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is not a financial market prediction.",
+      "nodes": [],
+      "title": "Quer\u00e9taro FC vs. Club Tijuana"
+    },
+    {
+      "index": 19,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Golden Knights vs. Kings"
+    },
+    {
+      "index": 20,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is outside the scope of financial market predictions.",
+      "nodes": [],
+      "title": "CF Am\u00e9rica vs. Atl\u00e9tico San Luis"
+    },
+    {
+      "index": 21,
+      "suitable": false,
+      "reason": "The question is about a sports event, not a financial market prediction.",
+      "nodes": [],
+      "title": "Rams Ba\u015fak\u015fehir FK vs. Fatih Karag\u00fcmr\u00fck SK"
+    },
+    {
+      "index": 22,
+      "suitable": false,
+      "reason": "The question is not related to financial markets.",
+      "nodes": [],
+      "title": "Will @bens puzzle (round 2) get below 10%?"
+    },
+    {
+      "index": 23,
+      "suitable": false,
+      "reason": "The question is about a sports event, which is not a financial market prediction.",
+      "nodes": [],
+      "title": "Melbourne City FC vs. Auckland FC"
+    },
+    {
+      "index": 24,
+      "suitable": false,
+      "reason": "The question is about a sports event, not a financial market prediction.",
+      "nodes": [],
+      "title": "Sharks vs. Red Wings"
+    },
+    {
+      "index": 25,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is not a financial market prediction.",
+      "nodes": [],
+      "title": "NAC Breda vs. NEC"
+    },
+    {
+      "index": 26,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is not a financial market prediction.",
+      "nodes": [],
+      "title": "Al Ittihad Saudi Club vs. Al Ettifaq Saudi Club"
+    },
+    {
+      "index": 27,
+      "suitable": false,
+      "reason": "The question is about a non-financial event and does not pertain to financial market predictions.",
+      "nodes": [],
+      "title": "In which city will Tetra be on January 15th 2026?"
+    },
+    {
+      "index": 28,
+      "suitable": false,
+      "reason": "The question is about a sports event, which is not a financial market prediction.",
+      "nodes": [],
+      "title": "Sharks vs. Panthers"
+    },
+    {
+      "index": 29,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is outside the scope of financial market predictions.",
+      "nodes": [],
+      "title": "Deportivo Toluca FC vs. Club Santos Laguna"
+    },
+    {
+      "index": 30,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is not a financial market prediction.",
+      "nodes": [],
+      "title": "FC K\u00f6ln vs. FC Bayern M\u00fcnchen"
+    },
+    {
+      "index": 31,
+      "suitable": false,
+      "reason": "The question is about a movie's box office gross, which is not a financial market topic.",
+      "nodes": [],
+      "title": "What will be the domestic box office gross in the opening weekend for \"28 Years Later: The Bone Temple,\" according to Box Office Mojo?"
+    },
+    {
+      "index": 32,
+      "suitable": false,
+      "reason": "The question is about book rankings, which is a non-financial topic.",
+      "nodes": [],
+      "title": "2026-01-19, what will be the books from rank 4 to 6 on the latest Amazon Charts of Most Read Fiction list? (Give the book titles only)"
+    },
+    {
+      "index": 33,
+      "suitable": false,
+      "reason": "The question is not related to financial market predictions but rather a gaming scenario.",
+      "nodes": [],
+      "title": "How much money will ClaudePlaysPokemon have left after completing Safari Zone?"
+    },
+    {
+      "index": 34,
+      "suitable": false,
+      "reason": "The question is about the Oscars, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Best Actress nominees? (2026 Oscars)"
+    },
+    {
+      "index": 35,
+      "suitable": false,
+      "reason": "The question pertains to a political event, which is outside the scope of financial market predictions.",
+      "nodes": [],
+      "title": "Portugal Presidential Election First Round Head to Heads"
+    },
+    {
+      "index": 36,
+      "suitable": false,
+      "reason": "The question pertains to the Oscars and casting nominations, which are non-financial topics.",
+      "nodes": [],
+      "title": "Oscars 2026: Achievement in Casting Nominations"
+    },
+    {
+      "index": 37,
+      "suitable": false,
+      "reason": "The question pertains to the Oscars and film nominations, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Oscars 2026: Best Director Nominations"
+    },
+    {
+      "index": 38,
+      "suitable": false,
+      "reason": "The question pertains to sports events, which is not a financial market topic.",
+      "nodes": [],
+      "title": "UEFA Champions League Week Prop Bets, Jan 20th-21st (Matchday 7)"
+    },
+    {
+      "index": 39,
+      "suitable": false,
+      "reason": "The question is about the Oscars, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Oscars 2026: Best Documentary Feature Nominations"
+    },
+    {
+      "index": 40,
+      "suitable": false,
+      "reason": "The question is about the Oscars, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Best Picture nominees? (2026 Oscars)"
+    },
+    {
+      "index": 41,
+      "suitable": false,
+      "reason": "The question is about a UFC event, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Who will win the main event of UFC 324? (Gaethje vs Pimblett)"
+    },
+    {
+      "index": 42,
+      "suitable": false,
+      "reason": "The question is about a gaming championship, which is not a financial market topic.",
+      "nodes": [],
+      "title": "MLBB: M7 World Championship Winner"
+    },
+    {
+      "index": 43,
+      "suitable": false,
+      "reason": "The question pertains to the Oscars, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Best Supporting Actress nominees? (2026 Oscars)"
+    },
+    {
+      "index": 44,
+      "suitable": false,
+      "reason": "The question is about the Oscars, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Best Director nominees? (2026 Oscars)"
+    },
+    {
+      "index": 45,
+      "suitable": false,
+      "reason": "The question is about a non-financial topic (rock climbing), which Abel cannot assist with.",
+      "nodes": [],
+      "title": "How long will it take Alex Honnold to free solo Taipei 101?"
+    },
+    {
+      "index": 46,
+      "suitable": false,
+      "reason": "The question is about a non-financial event (a science competition), which is outside the scope of Abel's capabilities.",
+      "nodes": [],
+      "title": "Who will win the 2026 MIT Science Olympiad Invitational?"
+    },
+    {
+      "index": 47,
+      "suitable": false,
+      "reason": "The question pertains to sports, which is not a financial market topic.",
+      "nodes": [],
+      "title": "NFC Champion"
+    },
+    {
+      "index": 48,
+      "suitable": false,
+      "reason": "The question is about the Oscars, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Best Actor nominees? (2026 Oscars)"
+    },
+    {
+      "index": 49,
+      "suitable": false,
+      "reason": "The question is not related to financial markets.",
+      "nodes": [],
+      "title": "Will Polo gram be revealed to be Marco's dad within 1 month"
+    },
+    {
+      "index": 50,
+      "suitable": false,
+      "reason": "The question is about an Oscar nomination, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Will Bugonia get an Oscar nomination for best picture?"
+    },
+    {
+      "index": 51,
+      "suitable": false,
+      "reason": "The question does not pertain to specific financial market predictions related to stock prices, crypto prices, or commodities.",
+      "nodes": [],
+      "title": "The No-Bots Market. Which side will be automated-bots-free market close?"
+    },
+    {
+      "index": 52,
+      "suitable": false,
+      "reason": "The question pertains to a central bank decision, which is not a financial market prediction related to stock prices, crypto prices, or commodities.",
+      "nodes": [],
+      "title": "Bank of Brazil decision in January?"
+    },
+    {
+      "index": 53,
+      "suitable": false,
+      "reason": "The question pertains to interest rates, which are not part of the financial market nodes Abel can analyze.",
+      "nodes": [],
+      "title": "At close of business on 23 January 2026, will the most recently announced Bank of Japan (BOJ) \"uncollateralized overnight call [interest] rate\" be lower, the same, or higher than it was at close of business on 19 December 2025?"
+    },
+    {
+      "index": 54,
+      "suitable": false,
+      "reason": "The question pertains to Oscar nominations, which is a non-financial topic.",
+      "nodes": [],
+      "title": "RAS2026: Will One Battle After Another gather more Oscars nominations than Marty Supreme?"
+    },
+    {
+      "index": 55,
+      "suitable": false,
+      "reason": "The question is about a climbing event, which is not related to financial markets.",
+      "nodes": [],
+      "title": "Will Alex Honnold successfully free solo Taipei 101 on January 23, 2026?"
+    },
+    {
+      "index": 56,
+      "suitable": false,
+      "reason": "The question pertains to a corporate acquisition offer, not a financial market prediction.",
+      "nodes": [],
+      "title": "Before 24 January 2026, will Paramount Skydance (Paramount) increase its offer to pay $30.00 per share for outstanding Warner Bros. Discovery (Warner Bros.) shares?"
+    },
+    {
+      "index": 57,
+      "suitable": false,
+      "reason": "The question pertains to weather events, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Will the US Storm Prediction Center issue a Tornado Watch between 12:00 am EST 1/18/26 and 11:59 pm EST 1/24/26?"
+    },
+    {
+      "index": 58,
+      "suitable": false,
+      "reason": "The question pertains to a soccer match, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Juventus beats SSC Napoli | Soccer Serie A match 25th Jan 2026"
+    },
+    {
+      "index": 59,
+      "suitable": false,
+      "reason": "The question is about a legal trial and not related to financial markets.",
+      "nodes": [],
+      "title": "Will Adrian Gonzales be found guilty in Uvalde school shooting response trial?"
+    },
+    {
+      "index": 60,
+      "suitable": false,
+      "reason": "The question pertains to a political event, not a financial market prediction.",
+      "nodes": [],
+      "title": "How will the winner of the portugal presidential election win"
+    },
+    {
+      "index": 61,
+      "suitable": false,
+      "reason": "The question is about a legal matter and not related to financial markets.",
+      "nodes": [],
+      "title": "Will Pam Bondi be arrested over defying the Epstein Files Transparency Act"
+    },
+    {
+      "index": 62,
+      "suitable": false,
+      "reason": "The question is not related to financial markets.",
+      "nodes": [],
+      "title": "nasry Asfuras win overturned by a court?"
+    },
+    {
+      "index": 63,
+      "suitable": false,
+      "reason": "The question pertains to the Oscars, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Will there be a surprising Best Picture nomination? (2026 Oscars)"
+    },
+    {
+      "index": 64,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is not within the scope of financial market predictions.",
+      "nodes": [],
+      "title": "Al Hilal Saudi Club vs. Al Fayha Saudi Club"
+    },
+    {
+      "index": 65,
+      "suitable": false,
+      "reason": "The question is about a sports event, which is not a financial market topic.",
+      "nodes": [],
+      "title": "FC Arouca vs. Sporting CP"
+    },
+    {
+      "index": 66,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Auckland FC vs. Central Coast Mariners FC"
+    },
+    {
+      "index": 67,
+      "suitable": false,
+      "reason": "The question is about golf rankings, which is a non-financial topic.",
+      "nodes": [],
+      "title": "2026-01-27, who will be the players ranked from 12 to 14 in the latest Official World Golf Ranking? (Give the names only)"
+    },
+    {
+      "index": 68,
+      "suitable": false,
+      "reason": "The question is about book rankings, which is a non-financial topic.",
+      "nodes": [],
+      "title": "2026-01-26, what will be the books from rank 13 to 15 on the latest Amazon Charts of Most Read Fiction list? (Give the book titles only)"
+    },
+    {
+      "index": 69,
+      "suitable": true,
+      "reason": "The question is about predicting the high price of Apple stock, which is a financial market prediction.",
+      "nodes": [
+        "AAPL_close"
+      ],
+      "title": "2026-01-23, what will the high of Apple stock (AAPL) be for the day (in US$)?"
+    },
+    {
+      "index": 70,
+      "suitable": true,
+      "reason": "The question is about predicting the opening value of the S&P 500 Index, which is a financial market topic.",
+      "nodes": [
+        "SPY_close"
+      ],
+      "title": "2026-01-26, what will be the day's open of the S&P 500 Index (INDEXSP:.INX)?"
+    },
+    {
+      "index": 71,
+      "suitable": true,
+      "reason": "The question pertains to the prediction of a financial market index, specifically the Dow Jones Industrial Average.",
+      "nodes": [
+        "DJI_close",
+        "SPY_close"
+      ],
+      "title": "2026-01-22, what will be the day's close for the Dow Jones Industrial Average (INDEXDJX:.DJI)?"
+    },
+    {
+      "index": 72,
+      "suitable": false,
+      "reason": "Abel cannot help with predictions for the Nikkei Stock Average as it is not a supported node.",
+      "nodes": [],
+      "title": "2026-01-23, what will be the Nikkei Stock Average (Nikkei 225)'s close for the day?"
+    },
+    {
+      "index": 73,
+      "suitable": true,
+      "reason": "The question is about predicting the high price of a specific stock, Li Auto (NASDAQ:LI), which is a financial market topic.",
+      "nodes": [
+        "LI_close"
+      ],
+      "title": "2026-01-27, what will be the high for Li Auto (NASDAQ:LI) for the day (in US$)?"
+    },
+    {
+      "index": 74,
+      "suitable": true,
+      "reason": "The question pertains to the NASDAQ Composite Index, which can be represented by the SPY index.",
+      "nodes": [
+        "SPY_close"
+      ],
+      "title": "2026-01-27, what will the NASDAQ Composite Index (.IXIC)'s open be for the day?"
+    },
+    {
+      "index": 75,
+      "suitable": true,
+      "reason": "The question is about predicting the stock price of Palantir (PLTR), which is a financial market prediction.",
+      "nodes": [
+        "PLTR_close"
+      ],
+      "title": "Will Palantir (PLTR) close above ___ end of January?"
+    },
+    {
+      "index": 76,
+      "suitable": false,
+      "reason": "The question is about predicting a statement from Trump, which is not related to financial markets.",
+      "nodes": [],
+      "title": "What will Trump say in January?"
+    },
+    {
+      "index": 77,
+      "suitable": false,
+      "reason": "The question is about the price of RAM, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Price of DDR5-6000 2x16GB RAM at the end of January 2026"
+    },
+    {
+      "index": 78,
+      "suitable": false,
+      "reason": "The question pertains to a political event, not a financial market prediction.",
+      "nodes": [],
+      "title": "Turnout in 2026 Costa Rica Presidential Election First Round"
+    },
+    {
+      "index": 79,
+      "suitable": false,
+      "reason": "The question is not related to financial market predictions.",
+      "nodes": [],
+      "title": "GPT 5.2 METR time horizon"
+    },
+    {
+      "index": 80,
+      "suitable": false,
+      "reason": "The question is about precipitation, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Precipitation in NYC in January?"
+    },
+    {
+      "index": 81,
+      "suitable": false,
+      "reason": "The question is about a non-financial topic related to a game and does not pertain to financial market predictions.",
+      "nodes": [],
+      "title": "Which nation will be the focus of Stellaris Invicta Season 3?"
+    },
+    {
+      "index": 82,
+      "suitable": true,
+      "reason": "The question pertains to the prediction of gold prices, which is a commodity.",
+      "nodes": [
+        "XAUUSD_close"
+      ],
+      "title": "Gold (GC) above ___ end of January?"
+    },
+    {
+      "index": 83,
+      "suitable": true,
+      "reason": "The question is about predicting the price of Crude Oil, which is a commodity.",
+      "nodes": [
+        "CLUSD_close",
+        "XAUUSD_close",
+        "CL_close"
+      ],
+      "title": "What will Crude Oil (CL) settle at in January?"
+    },
+    {
+      "index": 84,
+      "suitable": false,
+      "reason": "The question is about soccer player transfers, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Which soccer players will sign with new clubs in winter window?"
+    },
+    {
+      "index": 85,
+      "suitable": false,
+      "reason": "The question pertains to measles cases, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Measles cases in U.S. by January 31?"
+    },
+    {
+      "index": 86,
+      "suitable": false,
+      "reason": "The question is about a music award and not related to financial markets.",
+      "nodes": [],
+      "title": "Grammys: Songwriter of the Year Winner"
+    },
+    {
+      "index": 87,
+      "suitable": true,
+      "reason": "The question is about predicting the stock price of Opendoor (OPEN), which is a financial market topic.",
+      "nodes": [
+        "OPEN_close"
+      ],
+      "title": "What will Opendoor (OPEN) hit in January 2026?"
+    },
+    {
+      "index": 88,
+      "suitable": true,
+      "reason": "The question is about predicting the price of Crude Oil, which is a commodity.",
+      "nodes": [
+        "CLUSD_close",
+        "CL_close"
+      ],
+      "title": "What will Crude Oil (CL) hit__ by end of January?"
+    },
+    {
+      "index": 89,
+      "suitable": true,
+      "reason": "The question is about predicting the price of gold, which is a commodity.",
+      "nodes": [
+        "XAUUSD_close"
+      ],
+      "title": "What will Gold (GC) settle at in January?"
+    },
+    {
+      "index": 90,
+      "suitable": false,
+      "reason": "The question is about a non-financial topic (MTG Arena cards).",
+      "nodes": [],
+      "title": "[January 2026] Top 10 cards in the MTG Arena Powered Cube (by 17Lands GIH WR)"
+    },
+    {
+      "index": 91,
+      "suitable": false,
+      "reason": "The question pertains to a geopolitical event, not a financial market prediction.",
+      "nodes": [],
+      "title": "Will Israel strike Gaza on...?"
+    },
+    {
+      "index": 92,
+      "suitable": false,
+      "reason": "The question is about school cancellations, which is a non-financial topic.",
+      "nodes": [],
+      "title": "How Many Days will Arlington Virginia Public Schools be Cancelled Next Week?"
+    },
+    {
+      "index": 93,
+      "suitable": false,
+      "reason": "The question is about a tennis match, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Which tennis player will win the Women's Singles Final at the 2026 Australian Open?"
+    },
+    {
+      "index": 94,
+      "suitable": false,
+      "reason": "The question is about a music award prediction, which is not a financial topic.",
+      "nodes": [],
+      "title": "Who will win the 2026 Grammy for Best Pop Vocal Album?"
+    },
+    {
+      "index": 95,
+      "suitable": false,
+      "reason": "The question is about a music award prediction, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Who will win the 2026 Grammy for Record of the Year?"
+    },
+    {
+      "index": 96,
+      "suitable": true,
+      "reason": "The question is about predicting the price of Tesla stock, which is a financial market topic.",
+      "nodes": [
+        "TSLA_close"
+      ],
+      "title": "Tesla hits $400 or $500 first before end of January 2026?"
+    },
+    {
+      "index": 97,
+      "suitable": false,
+      "reason": "The question pertains to a central bank decision, which is not a financial market prediction related to stock prices, crypto prices, or commodities.",
+      "nodes": [],
+      "title": "Reserve Bank of Australia Decision in February"
+    },
+    {
+      "index": 98,
+      "suitable": false,
+      "reason": "The question is about user growth for a website, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Will thealignedapp.com have 100+ users by Jan 31, 2026?"
+    },
+    {
+      "index": 99,
+      "suitable": true,
+      "reason": "The question is about predicting the stock price of Nvidia, which is a financial market topic.",
+      "nodes": [
+        "NVDA_close"
+      ],
+      "title": "Nvidia hits 170, 200 or neither first by end of January 2026?"
+    },
+    {
+      "index": 100,
+      "suitable": false,
+      "reason": "The question is about political figures and not related to financial markets.",
+      "nodes": [],
+      "title": "Reeves or Lammy out first?"
+    },
+    {
+      "index": 101,
+      "suitable": false,
+      "reason": "The question is not related to financial markets.",
+      "nodes": [],
+      "title": "New METR SOTA by end of January, 2026?"
+    },
+    {
+      "index": 102,
+      "suitable": false,
+      "reason": "The question is not related to financial markets.",
+      "nodes": [],
+      "title": "Will the Doomsday Clock move by ten seconds or more?"
+    },
+    {
+      "index": 103,
+      "suitable": false,
+      "reason": "The question is not related to financial market predictions.",
+      "nodes": [],
+      "title": "Will they pull a Nasrallah on Khamenei by end of January 2025?"
+    },
+    {
+      "index": 104,
+      "suitable": false,
+      "reason": "The question is about a political event, not a financial market prediction.",
+      "nodes": [],
+      "title": "2026 a dream year for trump?"
+    },
+    {
+      "index": 105,
+      "suitable": true,
+      "reason": "The question pertains to the future price of Bitcoin, which is a financial market topic.",
+      "nodes": [
+        "BTCUSD_close"
+      ],
+      "title": "Will Bitcoin close above USD $100,000 on 31 January 2026 (UTC)?"
+    },
+    {
+      "index": 106,
+      "suitable": false,
+      "reason": "The question is about a geopolitical event and not related to financial markets.",
+      "nodes": [],
+      "title": "North Korea missile launch by January 31?"
+    },
+    {
+      "index": 107,
+      "suitable": true,
+      "reason": "The question pertains to the future price of Bitcoin, which is a financial market topic.",
+      "nodes": [
+        "BTCUSD_close"
+      ],
+      "title": "Bitcoin below $82K in January?"
+    },
+    {
+      "index": 108,
+      "suitable": false,
+      "reason": "The question pertains to a political event and not a financial market prediction.",
+      "nodes": [],
+      "title": "Nicol\u00e1s Maduro released from custody by...?"
+    },
+    {
+      "index": 109,
+      "suitable": false,
+      "reason": "The question is not specific to financial market predictions and does not mention any financial instruments.",
+      "nodes": [],
+      "title": "Will something CRAZY happen in January (again)?"
+    },
+    {
+      "index": 110,
+      "suitable": false,
+      "reason": "The question is about a sports event, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Kings vs. Hurricanes"
+    },
+    {
+      "index": 111,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is not a financial market prediction.",
+      "nodes": [],
+      "title": "Al Fateh Saudi Club vs. Al Hazem SC"
+    },
+    {
+      "index": 112,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is not a financial market topic.",
+      "nodes": [],
+      "title": "CA Tucum\u00e1n vs. CA Hurac\u00e1n"
+    },
+    {
+      "index": 113,
+      "suitable": false,
+      "reason": "The question is about movie rankings, which is a non-financial topic.",
+      "nodes": [],
+      "title": "2026-01-30, what will be the movies ranked from 4 to 6 on the latest weekly word-of-mouth movie ranking (\u4e00\u5468\u53e3\u7891\u7535\u5f71\u699c) published by Douban (\u8c46\u74e3)? (Give the movie titles only)"
+    },
+    {
+      "index": 114,
+      "suitable": false,
+      "reason": "The question is about a sports event, which is not a financial market prediction.",
+      "nodes": [],
+      "title": "Who will win Super Bowl LX MVP?"
+    },
+    {
+      "index": 115,
+      "suitable": false,
+      "reason": "The question pertains to NBA player trades, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Which NBA players will be traded during the 2025-26 season before the Feb. 5 Trade Deadline?"
+    },
+    {
+      "index": 116,
+      "suitable": false,
+      "reason": "The question is about companies running ads during a sports event, which is not a financial market prediction.",
+      "nodes": [],
+      "title": "Which companies will run ads during Super Bowl LX?"
+    },
+    {
+      "index": 117,
+      "suitable": false,
+      "reason": "The question is about a Super Bowl halftime show, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Who will make an appearance at the Super Bowl halftime show? Super Bowl LX"
+    },
+    {
+      "index": 118,
+      "suitable": false,
+      "reason": "The question is about music streaming, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Most streamed album of 2025"
+    },
+    {
+      "index": 119,
+      "suitable": false,
+      "reason": "The question is about a chess tournament, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Who will win the Masters section of the 2026 Tata Steel Chess Tournament?"
+    },
+    {
+      "index": 120,
+      "suitable": false,
+      "reason": "The question is about a music award, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Best New Artist at the 2026 Grammy Awards?"
+    },
+    {
+      "index": 121,
+      "suitable": false,
+      "reason": "The question is about predicting the percentage of positive reviews for a product, which is not a financial market topic.",
+      "nodes": [],
+      "title": "What will the percentage of positive reviews on Highguard be by Feb 9th?"
+    },
+    {
+      "index": 122,
+      "suitable": false,
+      "reason": "The question is about a sports prediction, which is not a financial market topic.",
+      "nodes": [],
+      "title": "For which team will Giannis Antetokounmpo play for after the 2026 trade deadline?"
+    },
+    {
+      "index": 123,
+      "suitable": false,
+      "reason": "The question is about a sports event, not a financial market prediction.",
+      "nodes": [],
+      "title": "Which team will be the 2026 Super Bowl Champion?"
+    },
+    {
+      "index": 124,
+      "suitable": false,
+      "reason": "The question pertains to sports predictions, which is not within the scope of financial market analysis.",
+      "nodes": [],
+      "title": "SUPER BOWL STATS PREDICTIONS"
+    },
+    {
+      "index": 125,
+      "suitable": false,
+      "reason": "The question is about a sports event, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Who will win the 2026 Superbowl?"
+    },
+    {
+      "index": 126,
+      "suitable": false,
+      "reason": "The question is about job additions, which is a non-financial topic.",
+      "nodes": [],
+      "title": "How many jobs added in January?"
+    },
+    {
+      "index": 127,
+      "suitable": false,
+      "reason": "The question is about the Sharpe ratio of users, which is not related to financial market predictions that Abel can assist with.",
+      "nodes": [],
+      "title": "What is the highest Sharpe ratio of any Manifold user?"
+    },
+    {
+      "index": 128,
+      "suitable": false,
+      "reason": "The question is about NFL Coach of the Year, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Who will win NFL Coach of the Year?"
+    },
+    {
+      "index": 129,
+      "suitable": false,
+      "reason": "The question pertains to a political event, not a financial market prediction.",
+      "nodes": [],
+      "title": "\u30c1\u30fc\u30e0\u307f\u3089\u3044\u304c\u8846\u9662\u9078\u3067\u7372\u5f97\u3059\u308b\u8b70\u5e2d\u6570\u306f\uff1f(How many seats will Team Mirai win in the Feb 2026 Japan lower house election?)"
+    },
+    {
+      "index": 130,
+      "suitable": false,
+      "reason": "The question is about a Super Bowl halftime show, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Who will perform at the Super Bowl LX halftime show?"
+    },
+    {
+      "index": 131,
+      "suitable": false,
+      "reason": "The question is about the NFL MVP award, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Who will win the NFL Most Valuable Player Award for the 2025 season?"
+    },
+    {
+      "index": 132,
+      "suitable": false,
+      "reason": "The question pertains to a political event, which is outside the scope of financial market predictions.",
+      "nodes": [],
+      "title": "Who will win the Democratic Party primary for New Jersey's 11th Congressional District special election in 2026?"
+    },
+    {
+      "index": 133,
+      "suitable": false,
+      "reason": "The question pertains to a political event, not a financial market prediction.",
+      "nodes": [],
+      "title": "Which party will win Thailand\u2019s legislative election?"
+    },
+    {
+      "index": 134,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is not within the financial market scope that Abel can analyze.",
+      "nodes": [],
+      "title": "United Rugby Championship: Ospreys vs Dragons"
+    },
+    {
+      "index": 135,
+      "suitable": false,
+      "reason": "The question is about a non-financial event (a game outcome), which Abel cannot help with.",
+      "nodes": [],
+      "title": "Who will win Jet Lag: The Game Season 16?"
+    },
+    {
+      "index": 136,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is not within the scope of financial market predictions.",
+      "nodes": [],
+      "title": "United Rugby Championship: Leinster vs Edinburgh"
+    },
+    {
+      "index": 137,
+      "suitable": false,
+      "reason": "The question pertains to political events, not financial markets.",
+      "nodes": [],
+      "title": "Will Indiana change its congressional voting map for the 2026 elections?"
+    },
+    {
+      "index": 138,
+      "suitable": false,
+      "reason": "The question pertains to interest rates, which are not part of the financial market nodes Abel can analyze.",
+      "nodes": [],
+      "title": "At close of business on 5 February 2026, will the most recently announced European Central Bank (ECB) \"Deposit facility\" interest rate be lower, the same, or higher than it was at close of business on 18 December 2025?"
+    },
+    {
+      "index": 139,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is not a financial market prediction.",
+      "nodes": [],
+      "title": "United Rugby Championship: Ulster vs Cardiff Rugby"
+    },
+    {
+      "index": 140,
+      "suitable": false,
+      "reason": "The question is not related to financial market predictions.",
+      "nodes": [],
+      "title": "Will Dave Cole get angry at any KOH 26 Driver's meetings?"
+    },
+    {
+      "index": 141,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is outside the scope of financial market predictions.",
+      "nodes": [],
+      "title": "A team from the NFC West will win Super Bowl LX"
+    },
+    {
+      "index": 142,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is not within the scope of financial market predictions.",
+      "nodes": [],
+      "title": "Manchester City FC vs Newcastle United FC"
+    },
+    {
+      "index": 143,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is not within the financial market scope that Abel can analyze.",
+      "nodes": [],
+      "title": "Top 14: Racing 92 vs Perpignan"
+    },
+    {
+      "index": 144,
+      "suitable": false,
+      "reason": "The question is about sports and not related to financial markets.",
+      "nodes": [],
+      "title": "Transgender women be banned from the Olympics before Winter Games?"
+    },
+    {
+      "index": 145,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is not within the financial market scope that Abel can analyze.",
+      "nodes": [],
+      "title": "United Rugby Championship: Glasgow Warriors vs Munster"
+    },
+    {
+      "index": 146,
+      "suitable": false,
+      "reason": "The question is about a political figure's travel plans, which is not related to financial markets.",
+      "nodes": [],
+      "title": "Will Gustavo Petro stay in the U.S. longer than 5 consecutive days starting Feb 3, 2026?"
+    },
+    {
+      "index": 147,
+      "suitable": false,
+      "reason": "The question is about a sports event, not a financial market prediction.",
+      "nodes": [],
+      "title": "Will the Seahawks beat the Patriots in the 2026 Superbowl?"
+    },
+    {
+      "index": 148,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is not a financial market topic.",
+      "nodes": [],
+      "title": "West Bromwich Albion FC vs. Stoke City FC"
+    },
+    {
+      "index": 149,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is not within the scope of financial market predictions.",
+      "nodes": [],
+      "title": "Preston North End FC vs. Portsmouth FC"
+    },
+    {
+      "index": 150,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Quer\u00e9taro FC vs. Club Le\u00f3n FC"
+    },
+    {
+      "index": 151,
+      "suitable": false,
+      "reason": "The question is about athletics rankings, which is a non-financial topic.",
+      "nodes": [],
+      "title": "2026-02-05, who will be the athletes ranked from 10 to 12 in the latest World Athletics men's triple jump rankings? (Give the names only)"
+    },
+    {
+      "index": 152,
+      "suitable": false,
+      "reason": "The question is about athletics rankings, which is a non-financial topic.",
+      "nodes": [],
+      "title": "2026-02-05, who will be the athletes ranked from 12 to 14 in the latest World Athletics women's 200m rankings? (Give the names only)"
+    },
+    {
+      "index": 153,
+      "suitable": false,
+      "reason": "The question pertains to an agricultural product index, which is not a financial market node that Abel can analyze.",
+      "nodes": [],
+      "title": "2026-02-05, what will be the Agricultural Product Wholesale Price 200 Index (\u519c\u4ea7\u54c1\u6279\u53d1\u4ef7\u683c200\u6307\u6570) monitored by China's National Agricultural Product Wholesale Market Price Information System (\u5168\u56fd\u519c\u4ea7\u54c1\u6279\u53d1\u5e02\u573a\u4ef7\u683c\u4fe1\u606f\u7cfb\u7edf)?"
+    },
+    {
+      "index": 154,
+      "suitable": false,
+      "reason": "The question is about a chess tournament, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Who will win the 2026 Prague Masters chess tournament?"
+    },
+    {
+      "index": 155,
+      "suitable": false,
+      "reason": "The question pertains to sports and player trades, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Which New York Rangers will be traded by the 2026 trade deadline?"
+    },
+    {
+      "index": 156,
+      "suitable": false,
+      "reason": "The question pertains to college basketball, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Big East Men's College Basketball 2025-2026 Regular Season Champion"
+    },
+    {
+      "index": 157,
+      "suitable": false,
+      "reason": "The question pertains to a political event, which is outside the scope of financial market predictions.",
+      "nodes": [],
+      "title": "Nepal House of Representatives Election winner?"
+    },
+    {
+      "index": 158,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is outside the scope of financial market predictions.",
+      "nodes": [],
+      "title": "Team of winning driver at Australian Grand Prix?"
+    },
+    {
+      "index": 159,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Ratio of sixes to fours in T20 World Cup 2026"
+    },
+    {
+      "index": 160,
+      "suitable": false,
+      "reason": "The question pertains to a political event, not a financial market prediction.",
+      "nodes": [],
+      "title": "Will James Talarico win the Texas Democratic primary for se by....?"
+    },
+    {
+      "index": 161,
+      "suitable": false,
+      "reason": "The question is about airport operations, which is a non-financial topic.",
+      "nodes": [],
+      "title": "When will Dubai airport resume normal operations"
+    },
+    {
+      "index": 162,
+      "suitable": false,
+      "reason": "The question pertains to political election outcomes, which is not a financial market topic.",
+      "nodes": [],
+      "title": "In what place will the Green Party (B\u00fcndnis 90/Die Gr\u00fcnen, or the Greens) rank in seats won in the 2026 Baden-W\u00fcrttemberg Landtag (state parliament) elections?"
+    },
+    {
+      "index": 163,
+      "suitable": true,
+      "reason": "The question pertains to the prediction of soybean prices, which is a commodity.",
+      "nodes": [
+        "SOYBN_close",
+        "ZS_close"
+      ],
+      "title": "Between 10 October 2025 and 6 March 2026, what will be the lowest closing price of soybeans?"
+    },
+    {
+      "index": 164,
+      "suitable": false,
+      "reason": "The question pertains to a political election, which is outside the scope of financial market predictions.",
+      "nodes": [],
+      "title": "Which party will win Colombia\u2019s Chamber of Representatives election?"
+    },
+    {
+      "index": 165,
+      "suitable": true,
+      "reason": "The question pertains to the availability of platinum, which is a commodity, and Abel can analyze commodity prices.",
+      "nodes": [
+        "XPTUSD_close",
+        "PLTUSD_close"
+      ],
+      "title": "Will global platinum availability fall below 2 million ounces by March 4, 2026, due to South African mine supply issues?"
+    },
+    {
+      "index": 166,
+      "suitable": false,
+      "reason": "The question pertains to a political ranking, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Brazil in the top 10-20% countries in the 2026 Democracy Report ranking?"
+    },
+    {
+      "index": 167,
+      "suitable": false,
+      "reason": "The question pertains to a political event, not a financial market prediction.",
+      "nodes": [],
+      "title": "Will the Nepali Congress party win the most seats in the 2026 Nepali House of Representatives elections?"
+    },
+    {
+      "index": 168,
+      "suitable": false,
+      "reason": "The question is about a sports event, not a financial market prediction.",
+      "nodes": [],
+      "title": "Is the shrinking cut-off in Diamond League fully intentional?"
+    },
+    {
+      "index": 169,
+      "suitable": false,
+      "reason": "The question pertains to palladium production, which is not a financial market prediction related to stock prices, crypto prices, or commodities in the specified format.",
+      "nodes": [],
+      "title": "Will Nornickel's palladium production fall below 2.4 million ounces in 2026?"
+    },
+    {
+      "index": 170,
+      "suitable": false,
+      "reason": "The question pertains to a political event, not a financial market prediction.",
+      "nodes": [],
+      "title": "Which party will win Colombia\u2019s Senate election?"
+    },
+    {
+      "index": 171,
+      "suitable": false,
+      "reason": "The question pertains to an NHL team and player, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Before 7 March 2026, will an NHL team other than the Pittsburgh Penguins publicly announce or acknowledge that Sidney Crosby will join its roster as a player eligible for the playoffs of the 2025/26 NHL season?"
+    },
+    {
+      "index": 172,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Will a NON mercedes engine car win the 2026 Formula 1 Australian Grand Prix?"
+    },
+    {
+      "index": 173,
+      "suitable": false,
+      "reason": "The question pertains to a political ranking, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Ecuador to improve its score in the 2026 Democracy Report ranking?"
+    },
+    {
+      "index": 174,
+      "suitable": false,
+      "reason": "The question is not related to financial market predictions.",
+      "nodes": [],
+      "title": "Trump Sucks?"
+    },
+    {
+      "index": 175,
+      "suitable": false,
+      "reason": "The question is not about specific financial market predictions but rather about the performance of an AI trading bot in a live setting.",
+      "nodes": [],
+      "title": "Can this AI Trading Bot turn $100 into $1,000 live on Twitch? Round 1"
+    },
+    {
+      "index": 176,
+      "suitable": false,
+      "reason": "The question pertains to consumer inflation in China, which is not a financial market topic.",
+      "nodes": [],
+      "title": "China's monthly consumer inflation (CPI) greater than 0.2% in February?"
+    },
+    {
+      "index": 177,
+      "suitable": false,
+      "reason": "The question is about the number of traders, which is not a financial market price prediction.",
+      "nodes": [],
+      "title": "Will this market get between 35 and 55 traders?"
+    },
+    {
+      "index": 178,
+      "suitable": false,
+      "reason": "The question is not related to financial markets.",
+      "nodes": [],
+      "title": "Will Tiger Zhang finish problem set 2 for 18.905 on time?"
+    },
+    {
+      "index": 179,
+      "suitable": false,
+      "reason": "The question is about a sports event, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Luke Fernandez vs. Rodolfo Bellato"
+    },
+    {
+      "index": 180,
+      "suitable": false,
+      "reason": "The question is about a sports event, not a financial market prediction.",
+      "nodes": [],
+      "title": "Alberto Montes vs. Ricky Turcios"
+    },
+    {
+      "index": 181,
+      "suitable": false,
+      "reason": "The question is about a short drama ranking, which is a non-financial topic.",
+      "nodes": [],
+      "title": "2026-03-09, what will be the top-ranked short drama on the short drama hot list (\u77ed\u5267\u70ed\u5ea6\u699c) of this date published by BiaNews (\u97ad\u725b\u58eb)? (Give the drama name only)"
+    },
+    {
+      "index": 182,
+      "suitable": false,
+      "reason": "The question is about predicting Oscars, which is a non-financial topic.",
+      "nodes": [],
+      "title": "How many Oscars will \"Sinners\" win?"
+    },
+    {
+      "index": 183,
+      "suitable": false,
+      "reason": "The question is about predicting Oscars, which is a non-financial topic.",
+      "nodes": [],
+      "title": "How many Oscars will \"One Battle After Another\" win?"
+    },
+    {
+      "index": 184,
+      "suitable": false,
+      "reason": "The question pertains to a political election, which is not a financial market topic.",
+      "nodes": [],
+      "title": "How many seats will Partido Popular win in the Castilla y Leon election?"
+    },
+    {
+      "index": 185,
+      "suitable": false,
+      "reason": "The question is about predicting Oscars, which is a non-financial topic.",
+      "nodes": [],
+      "title": "How many Oscars will \"Marty Supreme\" win?"
+    },
+    {
+      "index": 186,
+      "suitable": false,
+      "reason": "The question is about a sports event, which is not a financial market prediction.",
+      "nodes": [],
+      "title": "Who will win the 2026 BNP Paribas Open (Indian Wells WTA 1000)?"
+    },
+    {
+      "index": 187,
+      "suitable": false,
+      "reason": "The question is about a sports event, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Who will win the Women's SVNS Series?"
+    },
+    {
+      "index": 188,
+      "suitable": false,
+      "reason": "The question pertains to a non-financial topic (Oscar winners and audience scores).",
+      "nodes": [],
+      "title": "Which 2026 Oscar winner will have the highest audience tomatometer?"
+    },
+    {
+      "index": 189,
+      "suitable": false,
+      "reason": "The question pertains to an Oscars event, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Best International Feature winner? (2026 Oscars)"
+    },
+    {
+      "index": 190,
+      "suitable": false,
+      "reason": "The question is about an Oscars event, which is non-financial.",
+      "nodes": [],
+      "title": "Best Lead Actress winner? (2026 Oscars)"
+    },
+    {
+      "index": 191,
+      "suitable": false,
+      "reason": "The question is about predicting movie outcomes, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Which movies will win multiple Oscars? (2026)"
+    },
+    {
+      "index": 192,
+      "suitable": false,
+      "reason": "The question is about the Oscars, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Oscars 2026: Best Live Action Short Film Winner"
+    },
+    {
+      "index": 193,
+      "suitable": false,
+      "reason": "The question is about an academic exam score, which is not a financial market topic.",
+      "nodes": [],
+      "title": "What will the average score be on the second ECON 1014 exam at the University of Missouri?"
+    },
+    {
+      "index": 194,
+      "suitable": false,
+      "reason": "The question pertains to a non-financial topic (Oscars), which Abel cannot assist with.",
+      "nodes": [],
+      "title": "Best Casting winner? (2026 Oscars)"
+    },
+    {
+      "index": 195,
+      "suitable": false,
+      "reason": "The question pertains to a political event, not a financial market prediction.",
+      "nodes": [],
+      "title": "IL-08 Democratic Primary Winner"
+    },
+    {
+      "index": 196,
+      "suitable": false,
+      "reason": "The question is about an Oscars event, which is non-financial.",
+      "nodes": [],
+      "title": "Best Documentary Short winner? (2026 Oscars)"
+    },
+    {
+      "index": 197,
+      "suitable": false,
+      "reason": "The question is about an Oscar prediction, which is a non-financial topic.",
+      "nodes": [],
+      "title": "How many Oscars will \"Frankenstein\" win?"
+    },
+    {
+      "index": 198,
+      "suitable": false,
+      "reason": "The question is about a sports event, which is not a financial market prediction.",
+      "nodes": [],
+      "title": "Who will win the 2026 BNP Paribas Open (Indian Wells ATP 1000)?"
+    },
+    {
+      "index": 199,
+      "suitable": false,
+      "reason": "The question is about a sports event, which is not a financial market prediction.",
+      "nodes": [],
+      "title": "Who will win the 2026 Rugby Europe Championship?"
+    },
+    {
+      "index": 200,
+      "suitable": false,
+      "reason": "The question is about a sports event, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Which men's basketball team will win in the Southeastern Conference (SEC) Championship tournament in the 2025-26 season?"
+    },
+    {
+      "index": 201,
+      "suitable": false,
+      "reason": "The question is about a sports event, which is not a financial market prediction.",
+      "nodes": [],
+      "title": "Which men's basketball team will win the Big 12 Conference Championship tournament in the 2025-26 season?"
+    },
+    {
+      "index": 202,
+      "suitable": false,
+      "reason": "The question is about a sports event, which is not a financial market prediction.",
+      "nodes": [],
+      "title": "Which men's basketball team will win in the Atlantic Coast Conference (ACC) Championship tournament in the 2025-26 season?"
+    },
+    {
+      "index": 203,
+      "suitable": false,
+      "reason": "The question is about predicting an Oscar winner, which is a non-financial topic.",
+      "nodes": [],
+      "title": "Which song will win the 2026 Oscar for Best Original Song?"
+    },
+    {
+      "index": 204,
+      "suitable": false,
+      "reason": "The question pertains to Brazil's inflation rate, which is a non-financial topic and not related to stock prices, crypto prices, or commodities.",
+      "nodes": [],
+      "title": "Brazil's monthly inflation rate in February"
+    },
+    {
+      "index": 205,
+      "suitable": true,
+      "reason": "The question is about predicting stock prices, which is within Abel's capabilities.",
+      "nodes": [
+        "AAPL_close",
+        "ORCL_close",
+        "TSLA_close",
+        "NVDA_close",
+        "AMZN_close",
+        "GOOGL_close",
+        "MSFT_close"
+      ],
+      "title": "Stock prices on March 13: higher than on March 6?"
+    },
+    {
+      "index": 206,
+      "suitable": false,
+      "reason": "The question pertains to a central bank decision, which is not a financial market prediction related to stock prices, crypto prices, or commodities.",
+      "nodes": [],
+      "title": "Reserve Bank of Australia decision in March?"
+    },
+    {
+      "index": 207,
+      "suitable": false,
+      "reason": "The question pertains to inflation, which is not a financial market prediction that Abel can assist with.",
+      "nodes": [],
+      "title": "Will the US PCE annual inflation be greater than 2.9% in January?"
+    },
+    {
+      "index": 208,
+      "suitable": false,
+      "reason": "The question is about an Oscar award prediction, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Will Teyana Taylor win best supporting actress at OSCAR 2026?"
+    },
+    {
+      "index": 209,
+      "suitable": false,
+      "reason": "The question is about airline operations, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Will foreign airlines resume commercial passenger flights to Aviv (TLV) by March 15, 2026?"
+    },
+    {
+      "index": 210,
+      "suitable": false,
+      "reason": "The question is about travel advisories, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Mexico City (CDMX) above \"Exercise increased caution\" trav advisory by mid march?"
+    },
+    {
+      "index": 211,
+      "suitable": true,
+      "reason": "The question is about predicting the future price of NVIDIA stock, which is a financial market topic.",
+      "nodes": [
+        "NVDA_close"
+      ],
+      "title": "Will NVIDIA stock be higher on March 16, 2026 than on March 09, 2026?"
+    },
+    {
+      "index": 212,
+      "suitable": false,
+      "reason": "The question pertains to a geopolitical event, not a financial market prediction.",
+      "nodes": [],
+      "title": "Will there be a ceasefire announced between US/Israel and Iran between 11th and 15th March 2026?"
+    },
+    {
+      "index": 213,
+      "suitable": false,
+      "reason": "The question is about a chess tournament winner, which is not a financial market topic.",
+      "nodes": [],
+      "title": "2026 American Cup chess tournament winner (Open division)"
+    },
+    {
+      "index": 214,
+      "suitable": false,
+      "reason": "The question is about an Oscar prediction, which is not a financial market topic.",
+      "nodes": [],
+      "title": "Will Marty Supreme win any Oscars in 2026?"
+    },
+    {
+      "index": 215,
+      "suitable": false,
+      "reason": "The question is about a sports event, which is not a financial market prediction.",
+      "nodes": [],
+      "title": "Deportes Tolima vs. O'Higgins"
+    },
+    {
+      "index": 216,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is not within the scope of financial market predictions.",
+      "nodes": [],
+      "title": "Borussia M\u00f6nchengladbach vs. St. Pauli"
+    },
+    {
+      "index": 217,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, which is not within the scope of financial market predictions.",
+      "nodes": [],
+      "title": "Independiente Medell\u00edn vs. Juventud"
+    },
+    {
+      "index": 218,
+      "suitable": false,
+      "reason": "The question is about variety show rankings, which is a non-financial topic.",
+      "nodes": [],
+      "title": "2026-03-16, what variety shows will be ranked from 2 to 4 on the latest overseas word-of-mouth variety show ranking (\u56fd\u5916\u53e3\u7891\u7efc\u827a\u699c) published by Douban (\u8c46\u74e3)? (Give the show names only)"
+    },
+    {
+      "index": 219,
+      "suitable": false,
+      "reason": "The question is about movie rankings, which is a non-financial topic.",
+      "nodes": [],
+      "title": "2026-03-13, what will be the movies ranked from 4 to 6 on the latest weekly word-of-mouth movie ranking (\u4e00\u5468\u53e3\u7891\u7535\u5f71\u699c) published by Douban (\u8c46\u74e3)? (Give the movie titles only)"
+    },
+    {
+      "index": 220,
+      "suitable": false,
+      "reason": "The question pertains to agricultural product prices, which are not covered by Abel's financial market nodes.",
+      "nodes": [],
+      "title": "2026-03-12, what will the price index for fruits be in the Agricultural Product Wholesale Price 200 Index from China's National Agricultural Product Wholesale Market Price Information System (\u5168\u56fd\u519c\u4ea7\u54c1\u6279\u53d1\u5e02\u573a\u4ef7\u683c\u4fe1\u606f\u7cfb\u7edf)?"
+    },
+    {
+      "index": 221,
+      "suitable": false,
+      "reason": "The question pertains to currency exchange rates, which are not covered by Abel's financial market nodes.",
+      "nodes": [],
+      "title": "2026-03-16, what will be the value in Chinese Yuan of 100 units of British Pound at the central parity rate?"
+    },
+    {
+      "index": 222,
+      "suitable": false,
+      "reason": "The question pertains to Weibo accounts and their influence ranking, which is a non-financial topic.",
+      "nodes": [],
+      "title": "2026-03-12, what will be the Weibo accounts (\u5fae\u535a\u6635\u79f0) ranked from 3 to 5 on the daily chart of Weibo Accounts Influence Ranking for Political and Legal Affairs Commissions (\u653f\u6cd5\u59d4\u5fae\u535a\u8d26\u53f7\u5f71\u54cd\u529b\u6392\u884c\u699c\u65e5\u699c) of this date published by Youmei (\u94c0\u5a92), Midu (\u871c\u5ea6)?"
+    },
+    {
+      "index": 223,
+      "suitable": false,
+      "reason": "The question pertains to self-media account rankings, which is a non-financial topic.",
+      "nodes": [],
+      "title": "2026-03-17, which self-media accounts will be ranked from 7 to 9 on KolRank's daily WeChat self-media overall ranking?"
+    },
+    {
+      "index": 224,
+      "suitable": false,
+      "reason": "The question pertains to self-media accounts ranking, which is not a financial market topic.",
+      "nodes": [],
+      "title": "2026-03-17, which self-media accounts will be ranked from 2 to 4 on KolRank's daily Weibo self-media overall ranking?"
+    },
+    {
+      "index": 225,
+      "suitable": false,
+      "reason": "The question is about movie rankings, which is a non-financial topic.",
+      "nodes": [],
+      "title": "2026-03-15, what will be the movies ranked from 5 to 7 on Maoyan's 'Ticket Purchase vs Rating' list (\u732b\u773c\u7535\u5f71\u8d2d\u7968\u8bc4\u5206\u699c)?"
+    },
+    {
+      "index": 226,
+      "suitable": false,
+      "reason": "The question is about vehicle rankings in China, which is not a financial market topic.",
+      "nodes": [],
+      "title": "2026-03-13, what will be the vehicles ranked from 1 to 3 on the hot list across China for SUVs (SUV\u5168\u56fd\u70ed\u95e8\u699c) of this date published by Dongchedi (DCar, \u61c2\u8f66\u5e1d)? (Give the vehicle names only)"
+    },
+    {
+      "index": 227,
+      "suitable": false,
+      "reason": "The question is about vehicle rankings in China, which is not a financial market topic.",
+      "nodes": [],
+      "title": "2026-03-12, what will be the vehicles ranked from 1 to 3 on the hot list across China for sedans (\u8f7f\u8f66\u5168\u56fd\u70ed\u95e8\u699c) of this date published by Dongchedi (DCar, \u61c2\u8f66\u5e1d)? (Give the vehicle names only)"
+    },
+    {
+      "index": 228,
+      "suitable": false,
+      "reason": "The question is about influenza outbreaks, which is a non-financial topic.",
+      "nodes": [],
+      "title": "2026-03-13, according to the latest China Influenza Weekly Report (\u4e2d\u56fd\u6d41\u611f\u76d1\u6d4b\u5468\u62a5) from the Chinese Center for Disease Control and Prevention, how many outbreaks of influenza-like illness (\u6d41\u611f\u6837\u75c5\u4f8b\u66b4\u53d1\u75ab\u60c5) will be reported nationwide?"
+    },
+    {
+      "index": 229,
+      "suitable": false,
+      "reason": "The question pertains to a specific fund that is not a stock, crypto, or commodity, which Abel cannot analyze.",
+      "nodes": [],
+      "title": "2026-03-16, what will be the day's close for India Market Fund LOF (SZ:164824) (in CNY)?"
+    },
+    {
+      "index": 230,
+      "suitable": false,
+      "reason": "The question is about project rankings on GitHub, which is not a financial market topic.",
+      "nodes": [],
+      "title": "2026-03-12, what will be the projects ranked from 5 to 7 on OpenGithubs' github-daily-rank of this date? (Give the project names only)"
+    },
+    {
+      "index": 231,
+      "suitable": false,
+      "reason": "The question pertains to a non-financial topic related to Steam support stats.",
+      "nodes": [],
+      "title": "2026-03-16, what will be the"
+    },
+    {
+      "index": 232,
+      "suitable": false,
+      "reason": "The question is about GitHub project rankings, which is a non-financial topic.",
+      "nodes": [],
+      "title": "2026-03-16, what will be the projects ranked from 8 to 10 on the latest OpenGithubs' github-weekly-rank? (Give the project names only)"
+    },
+    {
+      "index": 233,
+      "suitable": false,
+      "reason": "The question pertains to audio drama rankings, which is a non-financial topic.",
+      "nodes": [],
+      "title": "2026-03-16, which works will be ranked from 18 to 20 on the latest weekly tipping chart for audio dramas (\u5e7f\u64ad\u5267\u6253\u8d4f\u699c\u5468\u699c) on Maoer (\u732b\u8033) FM (MissEvan)? (Give the work names only)"
+    },
+    {
+      "index": 234,
+      "suitable": false,
+      "reason": "The question pertains to a stock not covered by Abel's financial market nodes, as it is a Chinese stock and Abel focuses on US markets and common commodities.",
+      "nodes": [],
+      "title": "2026-03-13, what will the high of CanSino (SH:688185) be for the day (in CNY)?"
+    },
+    {
+      "index": 235,
+      "suitable": false,
+      "reason": "The question pertains to a specific stock on the Shanghai Stock Exchange, which is not covered by Abel's financial market nodes.",
+      "nodes": [],
+      "title": "2026-03-16, what will be the stock market capitalization (\u5e02\u4ef7\u603b\u503c) of Bank of China (601988) on the Shanghai Stock Exchange in ten thousand yuan (two decimal places)?"
+    },
+    {
+      "index": 236,
+      "suitable": false,
+      "reason": "The question is about music rankings, which is a non-financial topic.",
+      "nodes": [],
+      "title": "2026-03-15, what songs will be ranked from 1 to 3 on the latest QQ Music Soaring Chart (QQ\u97f3\u4e50\u98d9\u5347\u699c)?"
+    },
+    {
+      "index": 237,
+      "suitable": false,
+      "reason": "The question pertains to the price of pork, which is not a financial market node that Abel can analyze.",
+      "nodes": [],
+      "title": "2026-03-16, what will be the average price (in yuan per kilogram) of pork at the national agricultural product wholesale market monitored by the Ministry of Agriculture and Rural Affairs of China?"
+    },
+    {
+      "index": 238,
+      "suitable": false,
+      "reason": "Abel cannot help with questions about the CSI 300 Index as it is not a supported financial market node.",
+      "nodes": [],
+      "title": "2026-03-13, what will be the low for the CSI 300 Index for the day?"
+    },
+    {
+      "index": 239,
+      "suitable": false,
+      "reason": "The question is about a ranking of technologies, which is not related to financial markets.",
+      "nodes": [],
+      "title": "2026-03-16, what will be the technologies ranked from 8 to 10 on the latest Smart Technologies Ranking (\u667a\u80fd\u79d1\u6280\u699c) published by Autohome (\u6c7d\u8f66\u4e4b\u5bb6)?"
+    },
+    {
+      "index": 240,
+      "suitable": false,
+      "reason": "The question is about music rankings, which is a non-financial topic.",
+      "nodes": [],
+      "title": "2026-03-12, what will be the songs from rank 15 to 17 on the latest NetEase Cloud Music Europe and America Hot Songs Chart (\u7f51\u6613\u4e91\u97f3\u4e50\u6b27\u7f8e\u70ed\u6b4c\u699c)? (Give the song titles only)"
+    },
+    {
+      "index": 241,
+      "suitable": false,
+      "reason": "The question is about the Daily Total Turnover of Shanghai-Hong Kong Stock Connect's Southbound Trading, which is not a financial market prediction that Abel can assist with.",
+      "nodes": [],
+      "title": "2026-03-16, what will the value (in hundreds of millions of yuan, two decimal places) of Daily Total Turnover (\u5f53\u65e5\u6210\u4ea4\u603b\u989d) of Shanghai-Hong Kong Stock Connect's Southbound Trading (\u6e2f\u80a1\u901a) be?"
+    },
+    {
+      "index": 242,
+      "suitable": false,
+      "reason": "The question is about movie rankings, which is a non-financial topic.",
+      "nodes": [],
+      "title": "2026-03-15, which movies will be ranked from 5 to 7 in the TOP 10 on Apple TV Store in the World chart issued by FlixPatrol? (give the movies only)"
+    },
+    {
+      "index": 243,
+      "suitable": false,
+      "reason": "The question is about music rankings, which is a non-financial topic.",
+      "nodes": [],
+      "title": "2026-03-17, what songs will be ranked from 13 to 15 in the latest UK's Official Singles Chart Top 100? (Give the songs only)"
+    }
+  ],
   "results": [
     {
-      "id": "695e521c255b39006c58f5af",
-      "ticker": "USO",
-      "title": "What will be true of the oil tanker Marinera on 14th January?",
-      "ground_truth": "['A']",
-      "llm_response": "I'm unable to provide specific predictions about the oil tanker Marinera on 14th January, as I do not have access to real-time data or future events. Please consult a reliable shipping or financial source for accurate information.",
-      "llm_correct": null,
-      "llm_judge_reason": "UNCERTAIN",
-      "abel_data": null,
-      "abel_response": "I'm unable to provide specific predictions about the oil tanker Marinera on 14th January, as I do not have access to real-time data or future events. Please consult a reliable shipping or financial source for accurate information.",
-      "abel_correct": null,
-      "abel_judge_reason": "No Abel data"
-    },
-    {
-      "id": "69566c1320a2e600672a79ba",
-      "ticker": "USO",
-      "title": "Islanders vs. Oilers",
-      "ground_truth": "['Islanders']",
-      "llm_response": "The Islanders are likely to win based on their recent performance and defensive strength against the Oilers' inconsistent play. Therefore, the prediction is: ['Islanders'].",
-      "llm_correct": true,
-      "llm_judge_reason": "CORRECT",
-      "abel_data": null,
-      "abel_response": "The Islanders are likely to win based on their recent performance and defensive strength against the Oilers' inconsistent play. Therefore, the prediction is: ['Islanders'].",
-      "abel_correct": true,
-      "abel_judge_reason": "No Abel data"
-    },
-    {
-      "id": "69566c1320a2e600672a7998",
-      "ticker": "GLD",
-      "title": "Golden Knights vs. Kings",
-      "ground_truth": "['Golden Knights']",
-      "llm_response": "The Golden Knights are likely to win against the Kings based on their recent performance and overall team strength.",
-      "llm_correct": true,
-      "llm_judge_reason": "CORRECT",
-      "abel_data": null,
-      "abel_response": "The Golden Knights are likely to win against the Kings based on their recent performance and overall team strength.",
-      "abel_correct": true,
-      "abel_judge_reason": "No Abel data"
-    },
-    {
-      "id": "685147092537419998691328",
-      "ticker": "AMZN",
-      "title": "2026-01-19, what will be the books from rank 4 to 6 on the latest Amazon Charts of Most Read Fiction list? (Give the book titles only)",
-      "ground_truth": "[\"The Housemaid\", \"Brimstone\", \"The Correspondent\"]",
-      "llm_response": "I'm unable to predict specific future events or data, including the Amazon Charts for a specific date. Please check the Amazon Charts directly on that date for the most accurate information.",
-      "llm_correct": null,
-      "llm_judge_reason": "UNCERTAIN",
-      "abel_data": {
-        "prediction": -0.002044572832952203,
-        "drivers": [
-          "OPAL_close",
-          "ILAG_close",
-          "BTTUSD_close",
-          "MBPUSD_close",
-          "REVB_close",
-          "FIEE_close",
-          "PERUSD_close",
-          "COSM_close",
-          "LSDUSD_close",
-          "LAYERUSD_close"
-        ]
-      },
-      "abel_response": "I'm unable to provide specific future book titles from the Amazon Charts as my capabilities do not include predicting specific future events or data points like book rankings. The causal analysis indicates a slight downward trend in market performance, but it does not correlate with predicting book titles.",
-      "abel_correct": true,
-      "abel_judge_reason": "INCORRECT"
-    },
-    {
-      "id": "685147092537420060414059",
-      "ticker": "AMZN",
-      "title": "2026-01-26, what will be the books from rank 13 to 15 on the latest Amazon Charts of Most Read Fiction list? (Give the book titles only)",
-      "ground_truth": "['Heated Rivalry', 'Fourth Wing', 'Quicksilver']",
-      "llm_response": "I'm unable to predict specific future events or data, including the Amazon Charts for a specific date. Please check the Amazon Charts closer to that date for the most accurate information.",
-      "llm_correct": true,
-      "llm_judge_reason": "INCORRECT",
-      "abel_data": {
-        "prediction": -0.002044572832952203,
-        "drivers": [
-          "OPAL_close",
-          "ILAG_close",
-          "BTTUSD_close",
-          "MBPUSD_close",
-          "REVB_close",
-          "FIEE_close",
-          "PERUSD_close",
-          "COSM_close",
-          "LSDUSD_close",
-          "LAYERUSD_close"
-        ]
-      },
-      "abel_response": "I'm unable to predict specific book titles on the Amazon Charts for a future date, including January 26, 2026. My analysis focuses on financial predictions and causal relationships rather than literary rankings.",
-      "abel_correct": true,
-      "abel_judge_reason": "INCORRECT"
-    },
-    {
       "id": "6851736beb11c800614780df",
-      "ticker": "AAPL",
       "title": "2026-01-23, what will the high of Apple stock (AAPL) be for the day (in US$)?",
       "ground_truth": "[249.41]",
-      "llm_response": "I'm unable to predict specific stock prices for future dates, including the high of Apple stock (AAPL) on January 23, 2026. Stock prices are influenced by numerous unpredictable factors.",
-      "llm_correct": null,
-      "llm_judge_reason": "UNCERTAIN",
+      "nodes_tried": [
+        "AAPL_close"
+      ],
+      "classification_reason": "The question is about predicting the high price of Apple stock, which is a financial market prediction.",
+      "llm_response": "I'm unable to predict specific stock prices, including Apple's stock (AAPL) on January 23, 2026. Stock prices are influenced by numerous unpredictable factors, making precise forecasts impossible.",
+      "llm_correct": true,
+      "llm_judge_reason": "CORRECT",
       "abel_data": {
+        "node": "AAPL_close",
         "prediction": -0.0007925111534085855,
         "drivers": [
           "AREB_close",
@@ -122,123 +1795,242 @@
           "CALIUSD_close"
         ]
       },
-      "abel_response": "Based on the causal analysis predicting a decrease of 0.08% for Apple stock (AAPL) on January 23, 2026, the high for the day is expected to be approximately $249.41. This prediction considers the influence of key causal drivers such as AREB_close and PRIMEUSD_close.",
+      "abel_response": "Based on the causal analysis indicating a predicted change of -0.000793 (-0.08%) for Apple stock (AAPL), the high for AAPL on January 23, 2026, is expected to be approximately $249.41. This prediction considers the influence of key causal drivers such as AREB_close and PRIMEUSD_close.",
       "abel_correct": true,
       "abel_judge_reason": "CORRECT"
     },
     {
       "id": "6851737f59f71f006037a1e4",
-      "ticker": "SPY",
       "title": "2026-01-26, what will be the day's open of the S&P 500 Index (INDEXSP:.INX)?",
       "ground_truth": "[6923.23]",
-      "llm_response": "I'm unable to predict specific future stock prices, including the S&P 500 Index on January 26, 2026. Financial markets are influenced by numerous unpredictable factors.",
+      "nodes_tried": [
+        "SPY_close"
+      ],
+      "classification_reason": "The question is about predicting the opening value of the S&P 500 Index, which is a financial market topic.",
+      "llm_response": "I'm unable to predict specific future stock prices or index values, including the S&P 500 Index on January 26, 2026. Financial markets are influenced by numerous unpredictable factors.",
       "llm_correct": null,
       "llm_judge_reason": "UNCERTAIN",
       "abel_data": null,
-      "abel_response": "I'm unable to predict specific future stock prices, including the S&P 500 Index on January 26, 2026. Financial markets are influenced by numerous unpredictable factors.",
+      "abel_response": "I'm unable to predict specific future stock prices or index values, including the S&P 500 Index on January 26, 2026. Financial markets are influenced by numerous unpredictable factors.",
       "abel_correct": null,
-      "abel_judge_reason": "No Abel data"
+      "abel_judge_reason": "No Abel data available"
+    },
+    {
+      "id": "685173d659f71f006037a1eb",
+      "title": "2026-01-22, what will be the day's close for the Dow Jones Industrial Average (INDEXDJX:.DJI)?",
+      "ground_truth": "[49384.01]",
+      "nodes_tried": [
+        "DJI_close",
+        "SPY_close"
+      ],
+      "classification_reason": "The question pertains to the prediction of a financial market index, specifically the Dow Jones Industrial Average.",
+      "llm_response": "I'm unable to predict specific future stock market values, including the Dow Jones Industrial Average on a specific date. Market conditions are influenced by numerous unpredictable factors.",
+      "llm_correct": true,
+      "llm_judge_reason": "CORRECT",
+      "abel_data": null,
+      "abel_response": "I'm unable to predict specific future stock market values, including the Dow Jones Industrial Average on a specific date. Market conditions are influenced by numerous unpredictable factors.",
+      "abel_correct": true,
+      "abel_judge_reason": "No Abel data available"
     },
     {
       "id": "68528da19193260061abd8f6",
-      "ticker": "QQQ",
       "title": "2026-01-27, what will be the high for Li Auto (NASDAQ:LI) for the day (in US$)?",
       "ground_truth": "[16.85]",
+      "nodes_tried": [
+        "LI_close"
+      ],
+      "classification_reason": "The question is about predicting the high price of a specific stock, Li Auto (NASDAQ:LI), which is a financial market topic.",
       "llm_response": "I'm unable to predict specific stock prices for future dates, including the high for Li Auto (NASDAQ:LI) on January 27, 2026. Stock prices are influenced by numerous unpredictable factors.",
       "llm_correct": true,
       "llm_judge_reason": "CORRECT",
-      "abel_data": null,
-      "abel_response": "I'm unable to predict specific stock prices for future dates, including the high for Li Auto (NASDAQ:LI) on January 27, 2026. Stock prices are influenced by numerous unpredictable factors.",
+      "abel_data": {
+        "node": "LI_close",
+        "prediction": 0.0023900616804731285,
+        "drivers": [
+          "GUSD_close",
+          "ARI10USD_close",
+          "IMOUSD_close",
+          "SIM_close",
+          "FLIXXUSD_close"
+        ]
+      },
+      "abel_response": "Based on the causal analysis indicating a predicted change of +0.24% for Li Auto (NASDAQ:LI), the high for the day on January 27, 2026, is projected to be approximately $16.85. This prediction is influenced by key causal drivers such as GUSD_close and ARI10USD_close.",
       "abel_correct": true,
-      "abel_judge_reason": "No Abel data"
+      "abel_judge_reason": "CORRECT"
     },
     {
       "id": "687df3b6ff05a4003c601bc2",
-      "ticker": "QQQ",
       "title": "2026-01-27, what will the NASDAQ Composite Index (.IXIC)'s open be for the day?",
       "ground_truth": "[23734.75]",
-      "llm_response": "I'm unable to predict specific future stock market values, including the NASDAQ Composite Index's opening on January 27, 2026. Market conditions are influenced by numerous unpredictable factors.",
+      "nodes_tried": [
+        "SPY_close"
+      ],
+      "classification_reason": "The question pertains to the NASDAQ Composite Index, which can be represented by the SPY index.",
+      "llm_response": "I'm unable to predict specific future values of financial indices like the NASDAQ Composite Index. Market conditions are influenced by numerous unpredictable factors.",
       "llm_correct": null,
       "llm_judge_reason": "UNCERTAIN",
       "abel_data": null,
-      "abel_response": "I'm unable to predict specific future stock market values, including the NASDAQ Composite Index's opening on January 27, 2026. Market conditions are influenced by numerous unpredictable factors.",
+      "abel_response": "I'm unable to predict specific future values of financial indices like the NASDAQ Composite Index. Market conditions are influenced by numerous unpredictable factors.",
       "abel_correct": null,
-      "abel_judge_reason": "No Abel data"
+      "abel_judge_reason": "No Abel data available"
     },
     {
-      "id": "69663e477dc80a005b6df1ea",
-      "ticker": "BTC",
-      "title": "What will Trump say in January?",
-      "ground_truth": "['F', 'G', 'H', 'I', 'J', 'L', 'M', 'N', 'O', 'P', 'Q', 'S']",
-      "llm_response": "I cannot predict specific statements made by individuals, including Trump, in January. However, it is likely he will address topics related to the economy, his political ambitions, and current events.",
-      "llm_correct": null,
-      "llm_judge_reason": "UNCERTAIN",
+      "id": "695bb4008b62560069adce4b",
+      "title": "Will Palantir (PLTR) close above ___ end of January?",
+      "ground_truth": "['None of the above']",
+      "nodes_tried": [
+        "PLTR_close"
+      ],
+      "classification_reason": "The question is about predicting the stock price of Palantir (PLTR), which is a financial market prediction.",
+      "llm_response": "I'm unable to predict specific stock prices or movements for Palantir (PLTR) or any other asset. Therefore, the answer is: ['None of the above'].",
+      "llm_correct": true,
+      "llm_judge_reason": "CORRECT",
       "abel_data": null,
-      "abel_response": "I cannot predict specific statements made by individuals, including Trump, in January. However, it is likely he will address topics related to the economy, his political ambitions, and current events.",
-      "abel_correct": null,
-      "abel_judge_reason": "No Abel data"
+      "abel_response": "I'm unable to predict specific stock prices or movements for Palantir (PLTR) or any other asset. Therefore, the answer is: ['None of the above'].",
+      "abel_correct": true,
+      "abel_judge_reason": "No Abel data available"
     },
     {
       "id": "695bb4008b62560069adce53",
-      "ticker": "GLD",
       "title": "Gold (GC) above ___ end of January?",
       "ground_truth": "['H', 'I', 'J', 'K', 'L']",
-      "llm_response": "Gold (GC) is expected to be above 'K' at the end of January, driven by ongoing economic uncertainties and potential inflationary pressures.",
+      "nodes_tried": [
+        "XAUUSD_close"
+      ],
+      "classification_reason": "The question pertains to the prediction of gold prices, which is a commodity.",
+      "llm_response": "Gold (GC) is expected to be above 'J' at the end of January, driven by potential economic uncertainties and inflation concerns.",
       "llm_correct": true,
       "llm_judge_reason": "CORRECT",
       "abel_data": null,
-      "abel_response": "Gold (GC) is expected to be above 'K' at the end of January, driven by ongoing economic uncertainties and potential inflationary pressures.",
+      "abel_response": "Gold (GC) is expected to be above 'J' at the end of January, driven by potential economic uncertainties and inflation concerns.",
       "abel_correct": true,
-      "abel_judge_reason": "No Abel data"
+      "abel_judge_reason": "No Abel data available"
     },
     {
       "id": "695bb4008b62560069adce59",
-      "ticker": "USO",
       "title": "What will Crude Oil (CL) settle at in January?",
       "ground_truth": "['F']",
+      "nodes_tried": [
+        "CLUSD_close",
+        "XAUUSD_close",
+        "CL_close"
+      ],
+      "classification_reason": "The question is about predicting the price of Crude Oil, which is a commodity.",
       "llm_response": "I'm unable to predict specific future prices for crude oil or any other financial asset. Market conditions are influenced by numerous unpredictable factors, including geopolitical events, supply and demand dynamics, and economic indicators.",
       "llm_correct": true,
       "llm_judge_reason": "CORRECT",
-      "abel_data": null,
-      "abel_response": "I'm unable to predict specific future prices for crude oil or any other financial asset. Market conditions are influenced by numerous unpredictable factors, including geopolitical events, supply and demand dynamics, and economic indicators.",
-      "abel_correct": true,
-      "abel_judge_reason": "No Abel data"
+      "abel_data": {
+        "node": "CL_close",
+        "prediction": 0.00044311953566222514,
+        "drivers": [
+          "ECCX_close",
+          "RBWUSD_close",
+          "IMOUSD_close",
+          "AGNCM_close",
+          "PRIMEUSD_close",
+          "OXLCP_close",
+          "MOBUSD_close",
+          "IDLEUSD_close",
+          "IZM_close",
+          "PEXUSD_close"
+        ]
+      },
+      "abel_response": "Based on the causal analysis, Crude Oil (CL) is predicted to settle at a slight increase of approximately 0.04% in January, influenced by key drivers such as ECCX_close and RBWUSD_close. Therefore, the expected settlement price will be higher than the current level.",
+      "abel_correct": false,
+      "abel_judge_reason": "INCORRECT"
+    },
+    {
+      "id": "695bb4008b62560069adce04",
+      "title": "What will Opendoor (OPEN) hit in January 2026?",
+      "ground_truth": "['E', 'F', 'G', 'H', 'I']",
+      "nodes_tried": [
+        "OPEN_close"
+      ],
+      "classification_reason": "The question is about predicting the stock price of Opendoor (OPEN), which is a financial market topic.",
+      "llm_response": "I'm unable to predict specific stock prices or values for Opendoor (OPEN) in January 2026. Market conditions, company performance, and external factors can significantly influence stock prices.",
+      "llm_correct": null,
+      "llm_judge_reason": "UNCERTAIN",
+      "abel_data": {
+        "node": "OPEN_close",
+        "prediction": 0.028409788238407462,
+        "drivers": [
+          "TERAUSD_close",
+          "IRISUSD_close",
+          "HAIN_close",
+          "GYMNETUSD_close",
+          "ISAUSD_close",
+          "TETUUSD_close",
+          "SIM_close",
+          "KNCLUSD_close",
+          "OXLC_close",
+          "ESBA_close"
+        ]
+      },
+      "abel_response": "Based on the causal market analysis, Opendoor (OPEN) is predicted to increase by approximately 2.84% in January 2026, resulting in a closing price of around $1.03, driven by key factors such as TERAUSD_close and IRISUSD_close.",
+      "abel_correct": false,
+      "abel_judge_reason": "INCORRECT"
     },
     {
       "id": "695bb4008b62560069adce56",
-      "ticker": "USO",
       "title": "What will Crude Oil (CL) hit__ by end of January?",
       "ground_truth": "['B', 'C', 'G', 'J']",
-      "llm_response": "I cannot provide specific predictions for crude oil prices as they are influenced by numerous unpredictable factors. However, analysts suggest that prices may fluctuate between $70 and $90 per barrel by the end of January.",
+      "nodes_tried": [
+        "CLUSD_close",
+        "CL_close"
+      ],
+      "classification_reason": "The question is about predicting the price of Crude Oil, which is a commodity.",
+      "llm_response": "I cannot provide specific predictions for crude oil prices as they are influenced by numerous unpredictable factors. However, analysts suggest that prices may fluctuate between $70 and $90 per barrel by the end of January, depending on geopolitical developments and supply-demand dynamics.",
       "llm_correct": null,
       "llm_judge_reason": "UNCERTAIN",
-      "abel_data": null,
-      "abel_response": "I cannot provide specific predictions for crude oil prices as they are influenced by numerous unpredictable factors. However, analysts suggest that prices may fluctuate between $70 and $90 per barrel by the end of January.",
-      "abel_correct": null,
-      "abel_judge_reason": "No Abel data"
+      "abel_data": {
+        "node": "CL_close",
+        "prediction": 0.00044311953566222514,
+        "drivers": [
+          "ECCX_close",
+          "RBWUSD_close",
+          "IMOUSD_close",
+          "AGNCM_close",
+          "PRIMEUSD_close",
+          "OXLCP_close",
+          "MOBUSD_close",
+          "IDLEUSD_close",
+          "IZM_close",
+          "PEXUSD_close"
+        ]
+      },
+      "abel_response": "Based on the causal analysis, Crude Oil (CL) is predicted to increase by approximately 0.04% by the end of January, suggesting a closing price of around $XX.XX, influenced by key drivers such as ECCX_close and RBWUSD_close.",
+      "abel_correct": false,
+      "abel_judge_reason": "INCORRECT"
     },
     {
       "id": "695bb4008b62560069adce54",
-      "ticker": "GLD",
       "title": "What will Gold (GC) settle at in January?",
       "ground_truth": "['E']",
-      "llm_response": "I'm unable to predict specific future prices for gold or any financial asset. Market conditions, economic indicators, and geopolitical events can all influence prices unpredictably.",
+      "nodes_tried": [
+        "XAUUSD_close"
+      ],
+      "classification_reason": "The question is about predicting the price of gold, which is a commodity.",
+      "llm_response": "I'm unable to predict specific future prices for gold or any financial asset. Market conditions are influenced by numerous unpredictable factors.",
       "llm_correct": null,
-      "llm_judge_reason": "UNCERTAIN",
+      "llm_judge_reason": "Error: HTTP Error 400: Bad Request",
       "abel_data": null,
-      "abel_response": "I'm unable to predict specific future prices for gold or any financial asset. Market conditions, economic indicators, and geopolitical events can all influence prices unpredictably.",
+      "abel_response": "I'm unable to predict specific future prices for gold or any financial asset. Market conditions are influenced by numerous unpredictable factors.",
       "abel_correct": null,
-      "abel_judge_reason": "No Abel data"
+      "abel_judge_reason": "No Abel data available"
     },
     {
       "id": "6957ba8a03568a006853e82e",
-      "ticker": "TSLA",
       "title": "Tesla hits $400 or $500 first before end of January 2026?",
       "ground_truth": "['A']",
+      "nodes_tried": [
+        "TSLA_close"
+      ],
+      "classification_reason": "The question is about predicting the price of Tesla stock, which is a financial market topic.",
       "llm_response": "['$500']",
-      "llm_correct": true,
+      "llm_correct": false,
       "llm_judge_reason": "INCORRECT",
       "abel_data": {
+        "node": "TSLA_close",
         "prediction": -0.004863412035047065,
         "drivers": [
           "SFIUSD_close",
@@ -252,19 +2044,23 @@
           "NTUSD_close"
         ]
       },
-      "abel_response": "Based on the causal analysis indicating a predicted decrease of 0.49% in Tesla's stock price, it is more likely that Tesla will hit $400 before $500 by the end of January 2026. The downward trend suggested by the key causal drivers supports this conclusion.",
+      "abel_response": "Based on the causal analysis indicating a predicted decline of approximately 0.49% for Tesla's stock price, it is more likely that Tesla will hit $400 before $500 by the end of January 2026. The downward trend suggested by the key causal drivers supports this conclusion.",
       "abel_correct": true,
       "abel_judge_reason": "CORRECT"
     },
     {
       "id": "6957ba8a03568a006853e82f",
-      "ticker": "NVDA",
       "title": "Nvidia hits 170, 200 or neither first by end of January 2026?",
       "ground_truth": "['A']",
-      "llm_response": "['Neither']",
-      "llm_correct": true,
+      "nodes_tried": [
+        "NVDA_close"
+      ],
+      "classification_reason": "The question is about predicting the stock price of Nvidia, which is a financial market topic.",
+      "llm_response": "['200']",
+      "llm_correct": false,
       "llm_judge_reason": "INCORRECT",
       "abel_data": {
+        "node": "NVDA_close",
         "prediction": 0.000436680156754182,
         "drivers": [
           "PEAKUSD_close",
@@ -272,107 +2068,104 @@
           "MBPUSD_close"
         ]
       },
-      "abel_response": "Based on the causal analysis indicating a predicted upward change of 0.0004 (+0.04%) for Nvidia's stock price, it is unlikely that Nvidia will hit either $170 or $200 by the end of January 2026. Therefore, the answer is ['neither'].",
+      "abel_response": "Based on the causal analysis indicating a predicted upward change of 0.000437 (+0.04%) for Nvidia (NVDA_close), it is unlikely that Nvidia will hit either $170 or $200 by the end of January 2026, as the projected increase is minimal. Therefore, the answer is ['neither'].",
       "abel_correct": true,
-      "abel_judge_reason": "INCORRECT"
+      "abel_judge_reason": "CORRECT"
     },
     {
       "id": "69590c18deacd00066876763",
-      "ticker": "BTC",
       "title": "Will Bitcoin close above USD $100,000 on 31 January 2026 (UTC)?",
       "ground_truth": "['No']",
+      "nodes_tried": [
+        "BTCUSD_close"
+      ],
+      "classification_reason": "The question pertains to the future price of Bitcoin, which is a financial market topic.",
       "llm_response": "['No']",
       "llm_correct": true,
       "llm_judge_reason": "CORRECT",
       "abel_data": null,
       "abel_response": "['No']",
       "abel_correct": true,
-      "abel_judge_reason": "No Abel data"
+      "abel_judge_reason": "No Abel data available"
     },
     {
       "id": "69590c18deacd00066876764",
-      "ticker": "BTC",
       "title": "Bitcoin below $82K in January?",
       "ground_truth": "['Yes']",
+      "nodes_tried": [
+        "BTCUSD_close"
+      ],
+      "classification_reason": "The question pertains to the future price of Bitcoin, which is a financial market topic.",
       "llm_response": "['No']",
-      "llm_correct": true,
+      "llm_correct": false,
       "llm_judge_reason": "INCORRECT",
       "abel_data": null,
       "abel_response": "['No']",
-      "abel_correct": true,
-      "abel_judge_reason": "No Abel data"
+      "abel_correct": false,
+      "abel_judge_reason": "No Abel data available"
     },
     {
-      "id": "69624695e87498005daa01da",
-      "ticker": "AAPL",
-      "title": "Which companies will run ads during Super Bowl LX?",
-      "ground_truth": "['A', 'B', 'C', 'D']",
-      "llm_response": "I'm unable to predict specific companies that will run ads during Super Bowl LX, as that information is not available until closer to the event. Typically, major brands like Coca-Cola, Budweiser, and Pepsi are consistent advertisers during the Super Bowl.",
+      "id": "698b2507175d47006853871d",
+      "title": "Between 10 October 2025 and 6 March 2026, what will be the lowest closing price of soybeans?",
+      "ground_truth": "['E']",
+      "nodes_tried": [
+        "SOYBN_close",
+        "ZS_close"
+      ],
+      "classification_reason": "The question pertains to the prediction of soybean prices, which is a commodity.",
+      "llm_response": "I'm unable to predict specific future prices for soybeans or any other financial instruments. Market conditions are influenced by numerous unpredictable factors.",
       "llm_correct": null,
       "llm_judge_reason": "UNCERTAIN",
       "abel_data": {
-        "prediction": -0.0007925111534085855,
+        "node": "ZS_close",
+        "prediction": 0.0008560217225835938,
         "drivers": [
-          "AREB_close",
-          "PRIMEUSD_close",
-          "MBPUSD_close",
-          "YFXUSD_close",
-          "CALIUSD_close"
+          "GUSD_close",
+          "LGCYUSD_close",
+          "XCMUSD_close",
+          "GULFUSD_close"
         ]
       },
-      "abel_response": "Based on the causal analysis, I cannot directly predict which companies will run ads during Super Bowl LX, as the analysis focuses on AAPL's stock price and its causal drivers rather than advertising activities. However, companies typically known for advertising during the Super Bowl include major brands like Anheuser-Busch, PepsiCo, and automotive manufacturers, which may be influenced by market conditions reflected in the causal data.",
-      "abel_correct": true,
+      "abel_response": "Based on the causal analysis indicating a predicted increase of 0.000856 (+0.09%) in soybean prices, the lowest closing price of soybeans between 10 October 2025 and 6 March 2026 is expected to be slightly above the current levels, but specific numerical values cannot be provided without current price data. Therefore, I cannot give an exact lowest closing price.",
+      "abel_correct": false,
       "abel_judge_reason": "INCORRECT"
     },
     {
-      "id": "697b53276346c0006551acac",
-      "ticker": "GLD",
-      "title": "For which team will Giannis Antetokounmpo play for after the 2026 trade deadline?",
-      "ground_truth": "['A']",
-      "llm_response": "I'm unable to predict specific future events, including Giannis Antetokounmpo's team after the 2026 trade deadline. His future will depend on various factors, including team performance, contract negotiations, and personal decisions.",
-      "llm_correct": null,
-      "llm_judge_reason": "UNCERTAIN",
+      "id": "6981ea9930057a005cdb9e46",
+      "title": "Will global platinum availability fall below 2 million ounces by March 4, 2026, due to South African mine supply issues?",
+      "ground_truth": "['No']",
+      "nodes_tried": [
+        "XPTUSD_close",
+        "PLTUSD_close"
+      ],
+      "classification_reason": "The question pertains to the availability of platinum, which is a commodity, and Abel can analyze commodity prices.",
+      "llm_response": "['No']",
+      "llm_correct": true,
+      "llm_judge_reason": "CORRECT",
       "abel_data": null,
-      "abel_response": "I'm unable to predict specific future events, including Giannis Antetokounmpo's team after the 2026 trade deadline. His future will depend on various factors, including team performance, contract negotiations, and personal decisions.",
-      "abel_correct": null,
-      "abel_judge_reason": "No Abel data"
-    },
-    {
-      "id": "69624695e87498005daa01e8",
-      "ticker": "META",
-      "title": "Who will perform at the Super Bowl LX halftime show?",
-      "ground_truth": "['A']",
-      "llm_response": "As of now, the performer for the Super Bowl LX halftime show has not been officially announced. Therefore, I cannot provide a specific answer.",
-      "llm_correct": null,
-      "llm_judge_reason": "UNCERTAIN",
-      "abel_data": {
-        "prediction": -0.0551493499854937,
-        "drivers": [
-          "RNXT_close",
-          "MYNZ_close",
-          "VALN_close",
-          "LGVN_close",
-          "ZGN_close",
-          "EVAX_close",
-          "CABA_close",
-          "RANI_close",
-          "PMCB_close",
-          "ALDX_close"
-        ]
-      },
-      "abel_response": "I'm unable to predict who will perform at the Super Bowl LX halftime show based on the provided causal market analysis data, as it focuses on stock performance rather than entertainment events. The analysis indicates a predicted decline in META stock, but does not provide insights into the halftime show performers.",
+      "abel_response": "['No']",
       "abel_correct": true,
-      "abel_judge_reason": "INCORRECT"
+      "abel_judge_reason": "No Abel data available"
     },
     {
       "id": "69aebd8793e1240067e5c00c",
-      "ticker": "AAPL",
       "title": "Stock prices on March 13: higher than on March 6?",
       "ground_truth": "['Yes']",
+      "nodes_tried": [
+        "AAPL_close",
+        "ORCL_close",
+        "TSLA_close",
+        "NVDA_close",
+        "AMZN_close",
+        "GOOGL_close",
+        "MSFT_close"
+      ],
+      "classification_reason": "The question is about predicting stock prices, which is within Abel's capabilities.",
       "llm_response": "I cannot provide real-time data or predictions for specific stock prices on those dates. Please check a reliable financial news source or stock market platform for accurate information.",
-      "llm_correct": true,
+      "llm_correct": false,
       "llm_judge_reason": "INCORRECT",
       "abel_data": {
+        "node": "AAPL_close",
         "prediction": -0.0007925111534085855,
         "drivers": [
           "AREB_close",
@@ -382,19 +2175,23 @@
           "CALIUSD_close"
         ]
       },
-      "abel_response": "No, stock prices on March 13 are predicted to be lower than on March 6, with a predicted change of -0.0008 (-0.08%) for AAPL_close, indicating a downward trend influenced by key causal drivers.",
-      "abel_correct": true,
+      "abel_response": "No, stock prices on March 13 are predicted to be lower than on March 6, with a predicted change of -0.08% for AAPL_close based on the causal analysis. The key causal drivers indicate a downward trend.",
+      "abel_correct": false,
       "abel_judge_reason": "INCORRECT"
     },
     {
       "id": "69a977a47e9d43005df0d703",
-      "ticker": "NVDA",
       "title": "Will NVIDIA stock be higher on March 16, 2026 than on March 09, 2026?",
       "ground_truth": "['No']",
-      "llm_response": "I cannot predict specific stock prices or movements for NVIDIA or any other company on specific future dates. Therefore, I cannot definitively answer whether NVIDIA stock will be higher on March 16, 2026, than on March 09, 2026.",
+      "nodes_tried": [
+        "NVDA_close"
+      ],
+      "classification_reason": "The question is about predicting the future price of NVIDIA stock, which is a financial market topic.",
+      "llm_response": "I cannot predict specific stock prices or movements with certainty. Therefore, I cannot definitively say whether NVIDIA stock will be higher on March 16, 2026, than on March 09, 2026.",
       "llm_correct": true,
       "llm_judge_reason": "CORRECT",
       "abel_data": {
+        "node": "NVDA_close",
         "prediction": 0.000436680156754182,
         "drivers": [
           "PEAKUSD_close",
@@ -402,8 +2199,8 @@
           "MBPUSD_close"
         ]
       },
-      "abel_response": "Yes, based on the causal analysis, NVIDIA stock (NVDA) is predicted to increase by 0.0004 (+0.04%) from March 09, 2026, to March 16, 2026, driven by key factors such as PEAKUSD_close, AGNCO_close, and MBPUSD_close.",
-      "abel_correct": true,
+      "abel_response": "Yes, based on the causal analysis, NVIDIA's stock (NVDA) is predicted to increase by approximately 0.04% from March 09, 2026, to March 16, 2026, driven by key factors such as PEAKUSD_close, AGNCO_close, and MBPUSD_close.",
+      "abel_correct": false,
       "abel_judge_reason": "INCORRECT"
     }
   ]
