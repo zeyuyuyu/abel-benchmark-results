@@ -1,8 +1,10 @@
-# Abel Skill Benchmark - Futurex-Past Dataset
+# Abel Skill Benchmark v2 - Futurex-Past Dataset
 
 ## Overview
 
 This project benchmarks **LLM only** vs **LLM + Abel Skill** on the [Futurex-Past](https://huggingface.co/datasets/futurex-ai/Futurex-Past) dataset (244 future-prediction questions).
+
+**Key improvement in v2**: question classification and ticker-to-node mapping are performed by the LLM itself, rather than a hardcoded keyword dictionary. This eliminates false positives (e.g., sports questions containing "gold" or "oil") and enables correct node name resolution (e.g., crude oil → `CL_close`, gold → `XAUUSD_close`).
 
 ### Dataset
 - **Source**: [HuggingFace - futurex-ai/Futurex-Past](https://huggingface.co/datasets/futurex-ai/Futurex-Past)
@@ -13,21 +15,29 @@ This project benchmarks **LLM only** vs **LLM + Abel Skill** on the [Futurex-Pas
 
 ## Methodology
 
-### 1. Question Filtering
+### 1. LLM-based Question Classification
 
-Per the [Abel-skills repo](https://github.com/Abel-ai-causality/Abel-skills) SKILL.md "When To Use" guidelines, only financial-market questions with identifiable ticker symbols are suitable for the Abel skill:
+Each of the 244 questions is sent to GPT-4o-mini with the following prompt to determine suitability and extract Abel node names:
 
-**Inclusion criteria**:
-- Must contain financial keywords: stock, price, close, high, index, market, etc.
-- Must map to a known ticker: AAPL, NVDA, TSLA, BTC, SPY, QQQ, GLD, USO, etc.
+```
+You are an expert at the Abel causal analysis platform. Abel's causal graph
+contains financial market nodes like stock prices, crypto prices, and commodity
+prices. Each node is named as {TICKER}_close, e.g. AAPL_close, NVDA_close,
+BTCUSD_close, ETHUSD_close, XAUUSD_close.
 
-**Exclusion criteria**:
-- Sports (vs, match, winner)
-- Entertainment (movie, oscar, grammy)
-- Politics/elections (election, candidate, vote)
-- Weather/climate (temperature, storm)
+Given this question, decide:
+1. Is this a financial market prediction question that Abel can help with?
+2. If yes, what is the most likely Abel node name(s) to query?
 
-**Result**: 23 out of 244 questions passed the filter.
+Respond in JSON: {"suitable": true/false, "reason": "...", "nodes": ["NODE_close"]}
+```
+
+This approach:
+- **Eliminates false positives**: "Golden Knights vs. Kings" is correctly classified as sports, not gold.
+- **Resolves correct node names**: "Crude Oil (CL)" → `CL_close`; "Bitcoin" → `BTCUSD_close`.
+- **Suggests multiple fallback nodes**: e.g., `["CLUSD_close", "CL_close"]` for crude oil.
+
+**Result**: 19 out of 244 questions classified as suitable (vs. 23 in v1 with keyword matching).
 
 ### 2. Abel API Calls
 
@@ -37,14 +47,16 @@ Following [probe-usage.md](https://github.com/Abel-ai-causality/Abel-skills/blob
 python scripts/cap_probe.py \
   --base-url "https://cap.abel.ai" \
   --api-key "$ABEL_API_KEY" \
-  observe {TICKER}_close
+  observe {NODE}_close
 ```
+
+For each question, all candidate nodes are tried in order until one returns data.
 
 Returns:
 - `prediction`: predicted change rate (e.g., -0.08%)
 - `drivers`: list of causal driver nodes (e.g., `["AREB_close", "PRIMEUSD_close"]`)
 
-Abel data was successfully obtained for **9 out of 23** suitable questions (39.1%).
+**Result**: Abel data obtained for **10 out of 19** suitable questions (52.6%).
 
 ### 3. LLM Answer Generation
 
@@ -53,31 +65,28 @@ Abel data was successfully obtained for **9 out of 23** suitable questions (39.1
 **LLM Only prompt**:
 ```
 You are a financial prediction expert. Answer this question concisely:
-
 {question}
-
 Ground truth format: {ground_truth}
-
 Give a clear, specific answer. Be brief (1-2 sentences).
 ```
 
 **LLM + Abel Skill prompt**:
 ```
-You are a financial prediction expert with access to Abel's causal market analysis system.
+You are a financial prediction expert with access to Abel's causal market
+analysis system.
 
 Question: {question}
 
 Abel Causal Graph Analysis:
-- Target node: {TICKER}_close
+- Target node: {node}
 - Predicted change: {prediction} ({percentage})
 - Direction: {UP/DOWN}
-- Key causal drivers: {driver1, driver2, driver3}
+- Key causal drivers: {drivers}
 - Graph version: CausalNodeV2
 - Analysis type: Observational prediction with causal drivers
 
 Based on this causal analysis and your expertise, answer the question.
-
-Give a clear, specific answer. Be brief (1-2 sentences). Reference the causal data if relevant.
+Give a clear, specific answer. Be brief (1-2 sentences).
 ```
 
 ### 4. LLM as Judge
@@ -91,22 +100,8 @@ Question: {question}
 Ground Truth: {ground_truth}
 Answer to evaluate: {answer}
 
-Instructions:
-1. Compare the answer to the ground truth
-2. Consider if they are semantically equivalent (not exact match)
-3. For numerical answers, allow small tolerance
-4. For Yes/No or multiple choice, check if the answer aligns
-
-Respond with ONLY ONE WORD:
-- "CORRECT" if the answer matches ground truth
-- "INCORRECT" if the answer contradicts ground truth
-- "UNCERTAIN" if cannot determine
+Respond with ONLY ONE WORD: "CORRECT", "INCORRECT", or "UNCERTAIN"
 ```
-
-Verdicts:
-- **CORRECT**: answer semantically matches ground truth
-- **INCORRECT**: answer contradicts ground truth
-- **UNCERTAIN**: cannot determine (e.g., disclaimer / refusal to answer)
 
 ---
 
@@ -117,46 +112,61 @@ Verdicts:
 | Metric | Value |
 |--------|-------|
 | Total questions in dataset | 244 |
-| Suitable for Abel skill | 23 |
-| Abel data obtained | 9 (39.1%) |
-| LLM Only accuracy | 52.2% (12/23) |
-| LLM + Abel accuracy | 69.6% (16/23) |
-| **Improvement** | **+17.4%** |
+| Suitable for Abel (LLM-classified) | 19 |
+| Abel data obtained | 10 (52.6%) |
+| LLM Only accuracy | 47.4% (9/19) |
+| LLM + Abel accuracy | 47.4% (9/19) |
+| Cases improved by Abel | 2 |
+| Cases worsened by Abel | 2 |
 
-### Case Studies
+### Per-case Results
 
-#### Cases where Abel data was available (9)
+| # | LLM | Abel | Node | Question |
+|---|-----|------|------|----------|
+| 1 | Y | Y | AAPL_close | Apple stock (AAPL) high for the day |
+| 2 | ? | ? | — | S&P 500 Index open |
+| 3 | Y | Y | — | Dow Jones close |
+| 4 | Y | Y | LI_close | Li Auto (NASDAQ:LI) high |
+| 5 | ? | ? | — | NASDAQ Composite Index open |
+| 6 | Y | Y | — | Palantir (PLTR) close above ___? |
+| 7 | Y | Y | — | Gold (GC) above ___? |
+| 8 | Y | **N** | CL_close | Crude Oil (CL) settle price |
+| 9 | ? | **N** | OPEN_close | Opendoor (OPEN) hit price |
+| 10 | ? | **N** | CL_close | Crude Oil (CL) hit price |
+| 11 | ? | ? | — | Gold (GC) settle price |
+| 12 | **N** | **Y** | TSLA_close | Tesla hits $400 or $500 first? |
+| 13 | **N** | **Y** | NVDA_close | Nvidia hits 170, 200 or neither? |
+| 14 | Y | Y | — | Bitcoin close above $100,000? |
+| 15 | N | N | — | Bitcoin below $82K? |
+| 16 | ? | N | ZS_close | Soybean price range |
+| 17 | Y | Y | — | Global platinum availability |
+| 18 | N | N | AAPL_close | Stock prices March 13 vs March 6 |
+| 19 | Y | **N** | NVDA_close | NVIDIA stock March 16 vs March 9 |
 
-**Case 1: Apple stock high prediction**
-- **Question**: "2026-01-23, what will the high of Apple stock (AAPL) be for the day?"
-- **Ground Truth**: [249.41]
-- **Abel prediction**: -0.08% (DOWN); drivers: AREB_close, PRIMEUSD_close, MBPUSD_close, YFXUSD_close, CALIUSD_close
-- **LLM Only**: "I'm unable to predict specific stock prices..." → Judge: **UNCERTAIN**
-- **LLM + Abel**: "...the high for the day is expected to be approximately $249.41..." → Judge: **CORRECT**
-- **Takeaway**: Abel's causal signal turned a refusal into a concrete, correct prediction.
+Legend: **Y** = Correct, **N** = Incorrect, **?** = Uncertain, **—** = No Abel data
 
-**Case 2: Tesla target price**
-- **Question**: "Tesla hits $400 or $500 first before end of January 2026?"
-- **Ground Truth**: ['A'] ($400)
-- **Abel prediction**: -0.49% (DOWN); drivers: SFIUSD_close, CIM-PC_close, PERUSD_close
-- **LLM Only**: "Yes. Tesla's strong market position..." → Judge: **CORRECT**
-- **LLM + Abel**: "No. The causal analysis predicts a decrease of -0.49%..." → Judge: **INCONSISTENT**
-- **Takeaway**: Abel's short-term DOWN signal conflicted with the longer-horizon question.
+### Cases Improved by Abel
 
-**Case 3: Nvidia target price**
-- **Question**: "Nvidia hits 170, 200 or neither first by end of January 2026"
-- **Ground Truth**: ['A'] (170)
-- **Abel prediction**: +0.04% (UP); drivers: PEAKUSD_close, AGNCO_close, MBPUSD_close
-- **LLM Only**: "Up..." → Judge: **CORRECT**
-- **LLM + Abel**: "Yes..." → Judge: **CORRECT**
-- **Takeaway**: Abel's UP signal aligned with the ground truth.
+1. **Tesla hits $400 or $500 first?** — LLM alone was incorrect; Abel's TSLA_close prediction (-0.49%) helped the LLM reason about price direction.
+2. **Nvidia hits 170, 200 or neither?** — LLM alone was incorrect; Abel's NVDA_close prediction (+0.04%) provided the right directional signal.
 
-#### Cases without Abel data (14)
+### Cases Worsened by Abel
 
-Reasons:
-1. **Sports questions**: e.g., Islanders vs. Oilers — Abel covers financial markets, not sports.
-2. **Unlisted assets**: e.g., Li Auto (LI) — ticker not present in Abel's causal graph.
-3. **Non-financial events**: e.g., Trump speech predictions, Super Bowl ads — outside Abel's domain.
+1. **Crude Oil (CL) settle at in January?** — LLM alone was correct; Abel's CL_close prediction (+0.04%) led to an incorrect specific answer.
+2. **NVIDIA stock March 16 vs March 9** — LLM alone was correct; Abel's NVDA_close UP signal misled the final answer.
+
+### Nodes Not Found in Abel Graph
+
+| Nodes tried | Question |
+|-------------|----------|
+| SPY_close | S&P 500 Index |
+| DJI_close, SPY_close | Dow Jones Industrial Average |
+| PLTR_close | Palantir |
+| XAUUSD_close | Gold |
+| BTCUSD_close | Bitcoin |
+| XPTUSD_close, PLTUSD_close | Platinum |
+
+These tickers either don't exist in Abel's causal graph or use a different naming convention.
 
 ---
 
@@ -164,31 +174,40 @@ Reasons:
 
 | File | Description |
 |------|-------------|
-| `full_results.json` | Complete per-case results: question, ground truth, LLM-only response, LLM+Abel response, Abel prediction data, and judge verdicts |
+| `full_results.json` | Complete per-case results with all LLM responses, Abel data, and judge verdicts |
 | `test_script.py` | Python script to reproduce the benchmark (API keys redacted) |
 
 ---
 
 ## Conclusions
 
+### v1 vs v2 Comparison
+
+| Metric | v1 (keyword matching) | v2 (LLM classification) |
+|--------|----------------------|------------------------|
+| Suitable questions | 23 | 19 (more precise) |
+| Abel data coverage | 39.1% (9/23) | 52.6% (10/19) |
+| False positive questions | Yes (sports, entertainment) | No |
+| Node name resolution | ETF tickers only | Correct market tickers |
+
 ### Effectiveness
 
-1. **Quantitative predictions**: Abel provides concrete change-rate forecasts (e.g., -0.08%).
-2. **Causal drivers**: Abel surfaces the key nodes influencing each prediction.
-3. **Improved LLM answers**: Abel data helped the LLM move from vague disclaimers to specific, actionable predictions.
-4. **Accuracy gain**: +17.4 percentage points (52.2% → 69.6%).
+1. **Precise classification**: LLM filtering eliminated all non-financial false positives.
+2. **Better node mapping**: LLM correctly resolved crude oil → `CL_close`, Li Auto → `LI_close`, soybeans → `ZS_close`.
+3. **Higher data coverage**: 52.6% vs 39.1%, thanks to correct node names.
+4. **Mixed accuracy impact**: Abel improved 2 cases but worsened 2 others — the net improvement was 0%.
 
 ### Limitations
 
-1. **Narrow coverage**: Only 23/244 (9.4%) questions in the dataset are suitable for Abel.
-2. **Partial data availability**: Abel returned data for 9/23 (39.1%) of suitable questions.
-3. **Finance-only**: Abel cannot handle sports, elections, weather, or other non-financial domains.
+1. **Narrow coverage**: Only 19/244 (7.8%) questions in this dataset are financial market predictions.
+2. **Missing graph nodes**: SPY, DJI, PLTR, BTCUSD, XAUUSD are not in Abel's graph.
+3. **Short-term vs long-term mismatch**: Abel provides next-period predictions, which may conflict with longer-horizon questions.
 
 ### Recommendations
 
-1. Abel Skill is best applied to stock, crypto, and commodity market prediction questions.
-2. Combine Abel's quantitative signal with LLM reasoning for best results.
-3. Implement graceful fallback to LLM-only mode when Abel data is unavailable.
+1. Expand Abel's causal graph to include major indices (SPY, DJI), crypto (BTCUSD), and precious metals (XAUUSD).
+2. Use LLM-based classification (not keyword matching) for real-world skill routing.
+3. Add time-horizon awareness: Abel's short-term signal should be weighted differently for day-level vs month-level questions.
 
 ---
 
