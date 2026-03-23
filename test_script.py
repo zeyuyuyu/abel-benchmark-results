@@ -1,152 +1,22 @@
 #!/usr/bin/env python3
 """
-Strict benchmark following Abel-skills repo guidelines.
-Uses cap_probe.py + LLM as judge.
+Abel Skill Benchmark v2 - Futurex-Past Dataset
+Uses LLM for question classification and ticker extraction.
 """
 
 import subprocess
 import json
 import urllib.request
 import time
+import os
 from datasets import load_dataset
 from datetime import datetime
 
-# API Keys
-API_KEY = "YOUR_ABEL_API_KEY"
+ABEL_API_KEY = "YOUR_ABEL_API_KEY"
 OPENAI_KEY = "YOUR_OPENAI_API_KEY"
 
-print("=" * 80)
-print("Strict Benchmark Following Abel-skills Repo Guidelines")
-print("Uses cap_probe.py + LLM as Judge")
-print("=" * 80)
-
-# 1. Load dataset
-print("\n[1/6] Loading Futurex-Past dataset...")
-ds = load_dataset("futurex-ai/Futurex-Past", split="train")
-print(f"    Total: {len(ds)} questions")
-
-# 2. Filter questions suitable for Abel
-print("\n[2/6] Filtering questions suitable for Abel skill...")
-
-FINANCIAL_TICKERS = {
-    'AAPL': ['aapl', 'apple'],
-    'NVDA': ['nvda', 'nvidia'],
-    'TSLA': ['tsla', 'tesla'],
-    'MSFT': ['msft', 'microsoft'],
-    'GOOGL': ['googl', 'google', 'alphabet'],
-    'AMZN': ['amzn', 'amazon'],
-    'META': ['meta', 'facebook'],
-    'BTC': ['btc', 'bitcoin'],
-    'SPY': ['spy', 's&p 500', 'sp500'],
-    'QQQ': ['qqq', 'nasdaq'],
-    'GLD': ['gld', 'gold'],
-    'USO': ['uso', 'oil', 'crude'],
-}
-
-def extract_ticker(text):
-    """Extract ticker symbol - strictly per SKILL.md guidelines"""
-    text_lower = text.lower()
-    for ticker, keywords in FINANCIAL_TICKERS.items():
-        for kw in keywords:
-            if kw in text_lower:
-                return ticker
-    return None
-
-def is_strictly_financial(item):
-    """Strict financial question filter - per SKILL.md 'When To Use'"""
-    title = item.get('title', '').lower()
-    prompt = item.get('prompt', '').lower()
-    text = f"{title} {prompt}"
-
-    # Must contain financial keywords
-    financial_keywords = [
-        'stock', 'price', 'close', 'high', 'low', 'open',
-        'trading', 'above', 'below', 'hit', 'index', 'market'
-    ]
-
-    has_financial = any(kw in text for kw in financial_keywords)
-
-    if not has_financial:
-        return False, None
-
-    # Exclude sports
-    if ' vs ' in text and any(x in text for x in ['fc ', 'team', 'match', 'winner']):
-        return False, None
-
-    # Exclude entertainment
-    if any(x in text for x in ['movie', 'film', 'oscar', 'grammy', 'song']):
-        return False, None
-
-    # Exclude elections/politics
-    if any(x in text for x in ['election', 'candidate', 'vote', 'president']):
-        return False, None
-
-    # Extract ticker
-    ticker = extract_ticker(text)
-
-    return ticker is not None, ticker
-
-suitable_questions = []
-for item in ds:
-    is_suitable, ticker = is_strictly_financial(item)
-    if is_suitable:
-        suitable_questions.append({
-            'id': item.get('id'),
-            'title': item.get('title'),
-            'prompt': item.get('prompt'),
-            'ground_truth': str(item.get('ground_truth')),
-            'ticker': ticker
-        })
-
-print(f"    Found {len(suitable_questions)} questions suitable for Abel")
-for i, q in enumerate(suitable_questions, 1):
-    print(f"      {i}. [{q['ticker']:5s}] {q['title'][:55]}...")
-
-if not suitable_questions:
-    print("    No suitable questions found!")
-    exit(0)
-
-# 3. Fetch Abel data using cap_probe.py
-print("\n[3/6] Fetching Abel data via cap_probe.py...")
-
-def get_abel_prediction(ticker):
-    """Strictly uses cap_probe.py as per probe-usage.md"""
-    cmd = [
-        "python3", "/tmp/cap_probe.py",
-        "--base-url", "https://cap.abel.ai",
-        "--api-key", API_KEY,
-        "observe", f"{ticker}_close"
-    ]
-
-    try:
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
-        if result.returncode == 0:
-            data = json.loads(result.stdout)
-            if data.get("ok") and data.get("status_code") == 200:
-                return {
-                    "prediction": data["result"]["prediction"],
-                    "drivers": data["result"].get("drivers", [])
-                }
-    except Exception as e:
-        print(f"      Error: {e}")
-    return None
-
-# Test Abel connection
-print("    Testing Abel API connection...")
-test_result = get_abel_prediction("AAPL")
-if test_result:
-    print(f"    OK - Abel API available (AAPL: {test_result['prediction']:+.2%})")
-else:
-    print(f"    FAIL - Abel API unavailable")
-    exit(1)
-
-# 4. Define LLM query function
-print("\n[4/6] Configuring LLM client...")
-
-def query_llm(prompt, system=""):
-    """Query OpenAI LLM"""
+def query_llm(prompt, system="", temperature=0.1):
     url = "https://api.openai.com/v1/chat/completions"
-
     messages = []
     if system:
         messages.append({"role": "system", "content": system})
@@ -155,7 +25,7 @@ def query_llm(prompt, system=""):
     payload = json.dumps({
         "model": "gpt-4o-mini",
         "messages": messages,
-        "temperature": 0.1
+        "temperature": temperature
     }).encode()
 
     req = urllib.request.Request(url, data=payload, headers={
@@ -168,13 +38,61 @@ def query_llm(prompt, system=""):
             data = json.loads(r.read())
             return data["choices"][0]["message"]["content"]
     except Exception as e:
-        return f"Error: {str(e)[:50]}"
+        return f"Error: {str(e)[:100]}"
 
-# 5. LLM as Judge function
-print("\n[5/6] Configuring LLM as Judge...")
+
+def get_abel_prediction(node_name):
+    """Call cap_probe.py to get Abel prediction for a node."""
+    cmd = [
+        "python3", "/tmp/cap_probe.py",
+        "--base-url", "https://cap.abel.ai",
+        "--api-key", ABEL_API_KEY,
+        "observe", node_name
+    ]
+    try:
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
+        if result.returncode == 0:
+            data = json.loads(result.stdout)
+            if data.get("ok") and data.get("status_code") == 200:
+                return {
+                    "node": node_name,
+                    "prediction": data["result"]["prediction"],
+                    "drivers": data["result"].get("drivers", [])
+                }
+    except Exception as e:
+        pass
+    return None
+
+
+def llm_classify_and_extract(title, prompt_text):
+    """Use LLM to decide if a question is suitable for Abel and extract the node name."""
+    classification_prompt = f"""You are an expert at the Abel causal analysis platform. Abel's causal graph contains financial market nodes like stock prices, crypto prices, and commodity prices. Each node is named as {{TICKER}}_close, e.g. AAPL_close, NVDA_close, BTCUSD_close, ETHUSD_close, XAUUSD_close.
+
+Given this question, decide:
+1. Is this a financial market prediction question that Abel can help with? Abel can ONLY help with questions about stock prices, crypto prices, commodity prices, or market index values. It CANNOT help with sports, entertainment, politics, weather, book rankings, or any non-financial topic.
+2. If yes, what is the most likely Abel node name(s) to query? Use the format TICKER_close. For crypto use the USD pair (e.g. BTCUSD_close). For commodities, use common tickers (e.g. XAUUSD_close for gold, CLUSD_close for crude oil). For stocks, use the stock ticker (e.g. AAPL_close, TSLA_close). For indices, try SPY_close for S&P500, QQQ_close for NASDAQ.
+
+Question title: {title}
+Question details: {prompt_text[:500]}
+
+Respond in this exact JSON format (no markdown, no extra text):
+{{"suitable": true/false, "reason": "brief reason", "nodes": ["NODE1_close", "NODE2_close"]}}
+
+If not suitable, set nodes to an empty list.
+If the question mentions a specific stock/crypto/commodity, include its node.
+If you're unsure about the exact node name, include multiple plausible variants (e.g. both "BTC_close" and "BTCUSD_close")."""
+
+    response = query_llm(classification_prompt)
+    try:
+        response = response.strip()
+        if response.startswith("```"):
+            response = response.split("\n", 1)[1].rsplit("```", 1)[0]
+        return json.loads(response)
+    except:
+        return {"suitable": False, "reason": "Failed to parse LLM response", "nodes": []}
+
 
 def llm_as_judge(question, ground_truth, answer):
-    """Use LLM to evaluate answer correctness"""
     judge_prompt = f"""You are an expert judge evaluating answer correctness.
 
 Question: {question}
@@ -197,30 +115,96 @@ Your judgment:"""
     judgment = query_llm(judge_prompt)
     judgment_clean = judgment.strip().upper()
 
-    if "CORRECT" in judgment_clean:
+    if "CORRECT" in judgment_clean and "INCORRECT" not in judgment_clean:
         return True, judgment
     elif "INCORRECT" in judgment_clean:
         return False, judgment
     else:
         return None, judgment
 
-# 6. Run comparison test
-print(f"\n[6/6] Running comparison test ({len(suitable_questions)} questions)...")
-print("    (Format: [LLM->Abel] [Judge: Y/N] Question)")
+
+# ============================================================
+# Main
+# ============================================================
+
+print("=" * 80)
+print("Abel Skill Benchmark v2 - Futurex-Past Dataset")
+print("LLM-based question classification & ticker extraction")
+print("=" * 80)
+
+# Step 1: Load dataset
+print("\n[1/6] Loading dataset...")
+ds = load_dataset("futurex-ai/Futurex-Past", split="train")
+print(f"  Total: {len(ds)} questions")
+
+# Step 2: Download cap_probe.py if needed
+print("\n[2/6] Ensuring cap_probe.py is available...")
+if not os.path.exists("/tmp/cap_probe.py"):
+    print("  Downloading cap_probe.py...")
+    url = "https://raw.githubusercontent.com/Abel-ai-causality/Abel-skills/main/causal-abel/scripts/cap_probe.py"
+    urllib.request.urlretrieve(url, "/tmp/cap_probe.py")
+print("  OK")
+
+# Step 3: Verify Abel API
+print("\n[3/6] Verifying Abel API connection...")
+test = get_abel_prediction("AAPL_close")
+if test:
+    print(f"  OK - AAPL_close prediction: {test['prediction']:+.4f}")
+else:
+    print("  FAIL - Abel API unavailable")
+    exit(1)
+
+# Step 4: LLM classification for all 244 questions
+print(f"\n[4/6] Classifying all {len(ds)} questions via LLM...")
+classifications = []
+suitable_count = 0
+
+for i, item in enumerate(ds):
+    title = item.get('title', '')
+    prompt_text = item.get('prompt', '')
+
+    classification = llm_classify_and_extract(title, prompt_text)
+    classification['index'] = i
+    classification['title'] = title
+    classification['prompt'] = prompt_text
+    classification['ground_truth'] = str(item.get('ground_truth'))
+    classification['id'] = item.get('id')
+    classifications.append(classification)
+
+    if classification.get('suitable'):
+        suitable_count += 1
+
+    if (i + 1) % 20 == 0:
+        print(f"  Classified {i+1}/{len(ds)} ({suitable_count} suitable so far)")
+    time.sleep(0.3)
+
+suitable = [c for c in classifications if c.get('suitable')]
+print(f"\n  Classification complete:")
+print(f"    Total: {len(ds)}")
+print(f"    Suitable for Abel: {len(suitable)}")
+
+print(f"\n  Suitable questions:")
+for i, s in enumerate(suitable, 1):
+    nodes_str = ", ".join(s.get('nodes', []))
+    print(f"    {i:>2}. [{nodes_str:20s}] {s['title'][:50]}")
+
+# Step 5: Run comparison test
+print(f"\n[5/6] Running comparison test ({len(suitable)} questions)...")
 
 results = []
 
-for i, q in enumerate(suitable_questions, 1):
-    print(f"\n    [{i}/{len(suitable_questions)}] {q['title'][:45]}...")
+for i, q in enumerate(suitable, 1):
+    print(f"\n  [{i}/{len(suitable)}] {q['title'][:50]}...")
 
     result = {
         'id': q['id'],
-        'ticker': q['ticker'],
         'title': q['title'],
-        'ground_truth': q['ground_truth']
+        'ground_truth': q['ground_truth'],
+        'nodes_tried': q.get('nodes', []),
+        'classification_reason': q.get('reason', ''),
     }
 
-    # 1. LLM Only
+    # --- LLM Only ---
     llm_prompt = f"""You are a financial prediction expert. Answer this question concisely:
 
 {q['title']}
@@ -232,27 +216,29 @@ Give a clear, specific answer. Be brief (1-2 sentences)."""
     llm_response = query_llm(llm_prompt)
     result['llm_response'] = llm_response
 
-    # Judge LLM only
-    llm_correct, llm_judge_reason = llm_as_judge(q['title'], q['ground_truth'], llm_response)
+    llm_correct, llm_judge = llm_as_judge(q['title'], q['ground_truth'], llm_response)
     result['llm_correct'] = llm_correct
-    result['llm_judge_reason'] = llm_judge_reason
+    result['llm_judge_reason'] = llm_judge
 
-    # 2. LLM + Abel Skill
-    abel_data = get_abel_prediction(q['ticker'])
+    # --- LLM + Abel ---
+    abel_data = None
+    for node in q.get('nodes', []):
+        abel_data = get_abel_prediction(node)
+        if abel_data:
+            break
 
     if abel_data:
         pred = abel_data['prediction']
         drivers = abel_data['drivers']
         direction = "UP" if pred > 0 else "DOWN" if pred < 0 else "FLAT"
 
-        # Build prompt strictly per SKILL.md
         abel_prompt = f"""You are a financial prediction expert with access to Abel's causal market analysis system.
 
 Question: {q['title']}
 
 Abel Causal Graph Analysis:
-- Target node: {q['ticker']}_close
-- Predicted change: {pred:.4f} ({pred:+.2%})
+- Target node: {abel_data['node']}
+- Predicted change: {pred:.6f} ({pred:+.2%})
 - Direction: {direction}
 - Key causal drivers: {', '.join(drivers[:5])}
 - Graph version: CausalNodeV2
@@ -268,116 +254,85 @@ Give a clear, specific answer. Be brief (1-2 sentences). Reference the causal da
         result['abel_data'] = abel_data
         result['abel_response'] = abel_response
 
-        # Judge LLM + Abel
-        abel_correct, abel_judge_reason = llm_as_judge(q['title'], q['ground_truth'], abel_response)
+        abel_correct, abel_judge = llm_as_judge(q['title'], q['ground_truth'], abel_response)
         result['abel_correct'] = abel_correct
-        result['abel_judge_reason'] = abel_judge_reason
+        result['abel_judge_reason'] = abel_judge
 
-        llm_mark = 'Y' if llm_correct else 'N' if llm_correct is not None else '?'
-        abel_mark = 'Y' if abel_correct else 'N' if abel_correct is not None else '?'
-
-        print(f"      [{llm_mark}->{abel_mark}] Judge: LLM={llm_correct}, Abel={abel_correct}")
+        lm = 'Y' if llm_correct else ('N' if llm_correct is False else '?')
+        am = 'Y' if abel_correct else ('N' if abel_correct is False else '?')
+        print(f"    Abel node: {abel_data['node']} | pred: {pred:+.4f} | LLM:{lm} Abel:{am}")
     else:
         result['abel_data'] = None
         result['abel_response'] = llm_response
         result['abel_correct'] = llm_correct
-        result['abel_judge_reason'] = "No Abel data"
+        result['abel_judge_reason'] = "No Abel data available"
 
-        llm_mark = 'Y' if llm_correct else 'N' if llm_correct is not None else '?'
-        print(f"      [{llm_mark}->-] No Abel data")
+        tried = ", ".join(q.get('nodes', []))
+        lm = 'Y' if llm_correct else ('N' if llm_correct is False else '?')
+        print(f"    No Abel data (tried: {tried}) | LLM:{lm}")
 
     results.append(result)
-    time.sleep(0.5)
+    time.sleep(0.3)
 
-# 7. Aggregate results
+# Step 6: Summary
 print("\n" + "=" * 80)
-print("7. Test Results Summary")
+print("[6/6] Results Summary")
 print("=" * 80)
 
 total = len(results)
-llm_correct_count = sum(1 for r in results if r['llm_correct'] is True)
-llm_incorrect_count = sum(1 for r in results if r['llm_correct'] is False)
-llm_uncertain_count = sum(1 for r in results if r['llm_correct'] is None)
+with_abel = sum(1 for r in results if r['abel_data'])
+llm_correct_n = sum(1 for r in results if r['llm_correct'] is True)
+llm_incorrect_n = sum(1 for r in results if r['llm_correct'] is False)
+llm_uncertain_n = sum(1 for r in results if r['llm_correct'] is None)
+abel_correct_n = sum(1 for r in results if r['abel_correct'] is True)
+abel_incorrect_n = sum(1 for r in results if r['abel_correct'] is False)
+abel_uncertain_n = sum(1 for r in results if r['abel_correct'] is None)
 
-abel_correct_count = sum(1 for r in results if r['abel_correct'] is True)
-abel_incorrect_count = sum(1 for r in results if r['abel_correct'] is False)
-abel_uncertain_count = sum(1 for r in results if r['abel_correct'] is None)
-
-with_abel_data = sum(1 for r in results if r['abel_data'])
-
-print(f"\nTotal questions: {total}")
-print(f"Abel data obtained: {with_abel_data}/{total} ({with_abel_data/total*100:.1f}%)")
+print(f"\nDataset: {len(ds)} total questions")
+print(f"Suitable for Abel (LLM-classified): {total}")
+print(f"Abel data obtained: {with_abel}/{total} ({with_abel/total*100:.1f}%)")
 
 print(f"\nLLM as Judge Results:")
-print(f"  LLM Only:")
-print(f"    Correct:   {llm_correct_count} ({llm_correct_count/total*100:.1f}%)")
-print(f"    Incorrect: {llm_incorrect_count} ({llm_incorrect_count/total*100:.1f}%)")
-print(f"    Uncertain: {llm_uncertain_count} ({llm_uncertain_count/total*100:.1f}%)")
+print(f"  LLM Only:        Correct={llm_correct_n} ({llm_correct_n/total*100:.1f}%)  Incorrect={llm_incorrect_n}  Uncertain={llm_uncertain_n}")
+print(f"  LLM + Abel Skill: Correct={abel_correct_n} ({abel_correct_n/total*100:.1f}%)  Incorrect={abel_incorrect_n}  Uncertain={abel_uncertain_n}")
 
-print(f"\n  LLM + Abel Skill:")
-print(f"    Correct:   {abel_correct_count} ({abel_correct_count/total*100:.1f}%)")
-print(f"    Incorrect: {abel_incorrect_count} ({abel_incorrect_count/total*100:.1f}%)")
-print(f"    Uncertain: {abel_uncertain_count} ({abel_uncertain_count/total*100:.1f}%)")
+improvement = (abel_correct_n - llm_correct_n) / total * 100 if total else 0
+print(f"\n  Accuracy improvement: {improvement:+.1f}%")
 
-if llm_correct_count + abel_correct_count > 0:
-    improvement = (abel_correct_count - llm_correct_count) / total * 100
-    print(f"\n  Improvement: {improvement:+.1f}%")
+improved = [r for r in results if r['llm_correct'] is not True and r['abel_correct'] is True]
+worsened = [r for r in results if r['llm_correct'] is True and r['abel_correct'] is not True]
 
-# 8. Detailed case analysis
-print("\n" + "=" * 80)
-print("8. Detailed Case Analysis")
-print("=" * 80)
+print(f"\n  Cases improved by Abel: {len(improved)}")
+for r in improved:
+    print(f"    - {r['title'][:60]}")
+print(f"  Cases worsened by Abel: {len(worsened)}")
+for r in worsened:
+    print(f"    - {r['title'][:60]}")
 
-print("\nA. Cases improved by Abel (LLM incorrect -> Abel correct):")
-improved = [r for r in results if r['llm_correct'] is False and r['abel_correct'] is True]
-for i, r in enumerate(improved[:3], 1):
-    print(f"\n  {i}. [{r['ticker']}] {r['title'][:50]}...")
-    print(f"     Ground Truth: {r['ground_truth']}")
-    print(f"     LLM only:     {r['llm_response'][:70]}...")
-    print(f"     LLM+Abel:     {r['abel_response'][:70]}...")
-    if r['abel_data']:
-        print(f"     Abel pred:    {r['abel_data']['prediction']:+.2%}")
-
-print("\nB. Cases worsened by Abel (LLM correct -> Abel incorrect):")
-worsened = [r for r in results if r['llm_correct'] is True and r['abel_correct'] is False]
-for i, r in enumerate(worsened[:3], 1):
-    print(f"\n  {i}. [{r['ticker']}] {r['title'][:50]}...")
-    print(f"     Ground Truth: {r['ground_truth']}")
-    print(f"     LLM only:     {r['llm_response'][:70]}...")
-    print(f"     LLM+Abel:     {r['abel_response'][:70]}...")
-
-# 9. Save full results
-print("\n" + "=" * 80)
-print("9. Saving Full Results")
-print("=" * 80)
-
+# Save results
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-result_file = f"/Users/zeyu/abel/strict_test_results_{timestamp}.json"
+result_file = f"/Users/zeyu/abel/benchmark_v2_results_{timestamp}.json"
+
+output = {
+    'timestamp': timestamp,
+    'version': 'v2-llm-classification',
+    'total_dataset_questions': len(ds),
+    'suitable_questions': total,
+    'summary': {
+        'abel_data_obtained': with_abel,
+        'abel_data_rate': with_abel / total * 100 if total else 0,
+        'llm_only_accuracy': llm_correct_n / total * 100 if total else 0,
+        'abel_accuracy': abel_correct_n / total * 100 if total else 0,
+        'improvement': improvement,
+        'improved_count': len(improved),
+        'worsened_count': len(worsened),
+    },
+    'classifications': [{'index': c['index'], 'suitable': c.get('suitable'), 'reason': c.get('reason'), 'nodes': c.get('nodes', []), 'title': c['title']} for c in classifications],
+    'results': results,
+}
 
 with open(result_file, 'w') as f:
-    json.dump({
-        'timestamp': timestamp,
-        'total_questions': len(ds),
-        'suitable_questions': total,
-        'summary': {
-            'llm_accuracy': llm_correct_count / total * 100 if total else 0,
-            'abel_accuracy': abel_correct_count / total * 100 if total else 0,
-            'improvement': (abel_correct_count - llm_correct_count) / total * 100 if total else 0,
-            'abel_data_rate': with_abel_data / total * 100 if total else 0,
-            'improved_count': len(improved),
-            'worsened_count': len(worsened)
-        },
-        'results': results
-    }, f, indent=2, default=str)
+    json.dump(output, f, indent=2, default=str)
 
 print(f"\nFull results saved to: {result_file}")
-print("Each case includes:")
-print("  - Question and ground truth")
-print("  - LLM only complete response")
-print("  - LLM + Abel skill complete response")
-print("  - Abel prediction data and causal drivers")
-print("  - LLM judge evaluation result and reasoning")
 print("=" * 80)
-
-if __name__ == "__main__":
-    pass
