@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-严格按照 Abel-skills repo 规范测试
-使用 cap_probe.py + LLM as judge
+Strict benchmark following Abel-skills repo guidelines.
+Uses cap_probe.py + LLM as judge.
 """
 
 import subprocess
@@ -16,17 +16,17 @@ API_KEY = "YOUR_ABEL_API_KEY"
 OPENAI_KEY = "YOUR_OPENAI_API_KEY"
 
 print("=" * 80)
-print("严格按照 Abel-skills repo 规范测试")
-print("使用 cap_probe.py + LLM as judge")
+print("Strict Benchmark Following Abel-skills Repo Guidelines")
+print("Uses cap_probe.py + LLM as Judge")
 print("=" * 80)
 
-# 1. 加载数据集
-print("\n[1/6] 加载 Futurex-Past 数据集...")
+# 1. Load dataset
+print("\n[1/6] Loading Futurex-Past dataset...")
 ds = load_dataset("futurex-ai/Futurex-Past", split="train")
-print(f"    总共 {len(ds)} 个问题")
+print(f"    Total: {len(ds)} questions")
 
-# 2. 筛选适合 Abel 的问题
-print("\n[2/6] 筛选适合 Abel skill 的问题...")
+# 2. Filter questions suitable for Abel
+print("\n[2/6] Filtering questions suitable for Abel skill...")
 
 FINANCIAL_TICKERS = {
     'AAPL': ['aapl', 'apple'],
@@ -44,7 +44,7 @@ FINANCIAL_TICKERS = {
 }
 
 def extract_ticker(text):
-    """提取股票代码 - 严格按照 SKILL.md 规范"""
+    """Extract ticker symbol - strictly per SKILL.md guidelines"""
     text_lower = text.lower()
     for ticker, keywords in FINANCIAL_TICKERS.items():
         for kw in keywords:
@@ -53,37 +53,37 @@ def extract_ticker(text):
     return None
 
 def is_strictly_financial(item):
-    """严格筛选金融问题 - 按照 SKILL.md When To Use"""
+    """Strict financial question filter - per SKILL.md 'When To Use'"""
     title = item.get('title', '').lower()
     prompt = item.get('prompt', '').lower()
     text = f"{title} {prompt}"
-    
-    # 必须有金融关键词
+
+    # Must contain financial keywords
     financial_keywords = [
         'stock', 'price', 'close', 'high', 'low', 'open',
         'trading', 'above', 'below', 'hit', 'index', 'market'
     ]
-    
+
     has_financial = any(kw in text for kw in financial_keywords)
-    
+
     if not has_financial:
         return False, None
-    
-    # 排除体育
+
+    # Exclude sports
     if ' vs ' in text and any(x in text for x in ['fc ', 'team', 'match', 'winner']):
         return False, None
-    
-    # 排除娱乐
+
+    # Exclude entertainment
     if any(x in text for x in ['movie', 'film', 'oscar', 'grammy', 'song']):
         return False, None
-    
-    # 排除选举
+
+    # Exclude elections/politics
     if any(x in text for x in ['election', 'candidate', 'vote', 'president']):
         return False, None
-    
-    # 提取股票代码
+
+    # Extract ticker
     ticker = extract_ticker(text)
-    
+
     return ticker is not None, ticker
 
 suitable_questions = []
@@ -98,26 +98,26 @@ for item in ds:
             'ticker': ticker
         })
 
-print(f"    找到 {len(suitable_questions)} 个适合 Abel 的问题")
+print(f"    Found {len(suitable_questions)} questions suitable for Abel")
 for i, q in enumerate(suitable_questions, 1):
     print(f"      {i}. [{q['ticker']:5s}] {q['title'][:55]}...")
 
 if not suitable_questions:
-    print("    没有找到适合的问题！")
+    print("    No suitable questions found!")
     exit(0)
 
-# 3. 使用 cap_probe.py 获取 Abel 数据
-print("\n[3/6] 使用 cap_probe.py 获取 Abel 数据...")
+# 3. Fetch Abel data using cap_probe.py
+print("\n[3/6] Fetching Abel data via cap_probe.py...")
 
 def get_abel_prediction(ticker):
-    """严格按照 probe-usage.md 使用 cap_probe.py"""
+    """Strictly uses cap_probe.py as per probe-usage.md"""
     cmd = [
         "python3", "/tmp/cap_probe.py",
         "--base-url", "https://cap.abel.ai",
         "--api-key", API_KEY,
         "observe", f"{ticker}_close"
     ]
-    
+
     try:
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
         if result.returncode == 0:
@@ -131,38 +131,38 @@ def get_abel_prediction(ticker):
         print(f"      Error: {e}")
     return None
 
-# 测试 Abel 连接
-print("    测试 Abel API 连接...")
+# Test Abel connection
+print("    Testing Abel API connection...")
 test_result = get_abel_prediction("AAPL")
 if test_result:
-    print(f"    ✓ Abel API 可用 (AAPL: {test_result['prediction']:+.2%})")
+    print(f"    OK - Abel API available (AAPL: {test_result['prediction']:+.2%})")
 else:
-    print(f"    ✗ Abel API 不可用")
+    print(f"    FAIL - Abel API unavailable")
     exit(1)
 
-# 4. 定义 LLM 查询函数
-print("\n[4/6] 配置 LLM 查询...")
+# 4. Define LLM query function
+print("\n[4/6] Configuring LLM client...")
 
 def query_llm(prompt, system=""):
-    """查询 OpenAI LLM"""
+    """Query OpenAI LLM"""
     url = "https://api.openai.com/v1/chat/completions"
-    
+
     messages = []
     if system:
         messages.append({"role": "system", "content": system})
     messages.append({"role": "user", "content": prompt})
-    
+
     payload = json.dumps({
         "model": "gpt-4o-mini",
         "messages": messages,
         "temperature": 0.1
     }).encode()
-    
+
     req = urllib.request.Request(url, data=payload, headers={
         "Authorization": f"Bearer {OPENAI_KEY}",
         "Content-Type": "application/json"
     })
-    
+
     try:
         with urllib.request.urlopen(req, timeout=30) as r:
             data = json.loads(r.read())
@@ -170,11 +170,11 @@ def query_llm(prompt, system=""):
     except Exception as e:
         return f"Error: {str(e)[:50]}"
 
-# 5. LLM as judge 函数
-print("\n[5/6] 配置 LLM as judge...")
+# 5. LLM as Judge function
+print("\n[5/6] Configuring LLM as Judge...")
 
 def llm_as_judge(question, ground_truth, answer):
-    """使用 LLM 评判答案正确性"""
+    """Use LLM to evaluate answer correctness"""
     judge_prompt = f"""You are an expert judge evaluating answer correctness.
 
 Question: {question}
@@ -193,10 +193,10 @@ Respond with ONLY ONE WORD:
 - "UNCERTAIN" if cannot determine
 
 Your judgment:"""
-    
+
     judgment = query_llm(judge_prompt)
     judgment_clean = judgment.strip().upper()
-    
+
     if "CORRECT" in judgment_clean:
         return True, judgment
     elif "INCORRECT" in judgment_clean:
@@ -204,22 +204,22 @@ Your judgment:"""
     else:
         return None, judgment
 
-# 6. 运行对比测试
-print(f"\n[6/6] 运行对比测试 ({len(suitable_questions)} 个问题)...")
-print("    (格式: [LLM→Abel] [Judge: ✓/✗] 问题)")
+# 6. Run comparison test
+print(f"\n[6/6] Running comparison test ({len(suitable_questions)} questions)...")
+print("    (Format: [LLM->Abel] [Judge: Y/N] Question)")
 
 results = []
 
 for i, q in enumerate(suitable_questions, 1):
     print(f"\n    [{i}/{len(suitable_questions)}] {q['title'][:45]}...")
-    
+
     result = {
         'id': q['id'],
         'ticker': q['ticker'],
         'title': q['title'],
         'ground_truth': q['ground_truth']
     }
-    
+
     # 1. LLM Only
     llm_prompt = f"""You are a financial prediction expert. Answer this question concisely:
 
@@ -228,24 +228,24 @@ for i, q in enumerate(suitable_questions, 1):
 Ground truth format: {q['ground_truth']}
 
 Give a clear, specific answer. Be brief (1-2 sentences)."""
-    
+
     llm_response = query_llm(llm_prompt)
     result['llm_response'] = llm_response
-    
+
     # Judge LLM only
     llm_correct, llm_judge_reason = llm_as_judge(q['title'], q['ground_truth'], llm_response)
     result['llm_correct'] = llm_correct
     result['llm_judge_reason'] = llm_judge_reason
-    
+
     # 2. LLM + Abel Skill
     abel_data = get_abel_prediction(q['ticker'])
-    
+
     if abel_data:
         pred = abel_data['prediction']
         drivers = abel_data['drivers']
         direction = "UP" if pred > 0 else "DOWN" if pred < 0 else "FLAT"
-        
-        # 严格按照 SKILL.md 构建 prompt
+
+        # Build prompt strictly per SKILL.md
         abel_prompt = f"""You are a financial prediction expert with access to Abel's causal market analysis system.
 
 Question: {q['title']}
@@ -263,35 +263,35 @@ Based on this causal analysis and your expertise, answer the question.
 Ground truth format: {q['ground_truth']}
 
 Give a clear, specific answer. Be brief (1-2 sentences). Reference the causal data if relevant."""
-        
+
         abel_response = query_llm(abel_prompt)
         result['abel_data'] = abel_data
         result['abel_response'] = abel_response
-        
+
         # Judge LLM + Abel
         abel_correct, abel_judge_reason = llm_as_judge(q['title'], q['ground_truth'], abel_response)
         result['abel_correct'] = abel_correct
         result['abel_judge_reason'] = abel_judge_reason
-        
-        llm_mark = '✓' if llm_correct else '✗' if llm_correct is not None else '?'
-        abel_mark = '✓' if abel_correct else '✗' if abel_correct is not None else '?'
-        
-        print(f"      [{llm_mark}→{abel_mark}] Judge: LLM={llm_correct}, Abel={abel_correct}")
+
+        llm_mark = 'Y' if llm_correct else 'N' if llm_correct is not None else '?'
+        abel_mark = 'Y' if abel_correct else 'N' if abel_correct is not None else '?'
+
+        print(f"      [{llm_mark}->{abel_mark}] Judge: LLM={llm_correct}, Abel={abel_correct}")
     else:
         result['abel_data'] = None
         result['abel_response'] = llm_response
         result['abel_correct'] = llm_correct
         result['abel_judge_reason'] = "No Abel data"
-        
-        llm_mark = '✓' if llm_correct else '✗' if llm_correct is not None else '?'
-        print(f"      [{llm_mark}→-] No Abel data")
-    
+
+        llm_mark = 'Y' if llm_correct else 'N' if llm_correct is not None else '?'
+        print(f"      [{llm_mark}->-] No Abel data")
+
     results.append(result)
     time.sleep(0.5)
 
-# 7. 统计结果
+# 7. Aggregate results
 print("\n" + "=" * 80)
-print("7. 测试结果统计")
+print("7. Test Results Summary")
 print("=" * 80)
 
 total = len(results)
@@ -305,30 +305,30 @@ abel_uncertain_count = sum(1 for r in results if r['abel_correct'] is None)
 
 with_abel_data = sum(1 for r in results if r['abel_data'])
 
-print(f"\n总问题数: {total}")
-print(f"获得 Abel 数据: {with_abel_data}/{total} ({with_abel_data/total*100:.1f}%)")
+print(f"\nTotal questions: {total}")
+print(f"Abel data obtained: {with_abel_data}/{total} ({with_abel_data/total*100:.1f}%)")
 
-print(f"\nLLM as Judge 评判结果:")
+print(f"\nLLM as Judge Results:")
 print(f"  LLM Only:")
-print(f"    正确: {llm_correct_count} ({llm_correct_count/total*100:.1f}%)")
-print(f"    错误: {llm_incorrect_count} ({llm_incorrect_count/total*100:.1f}%)")
-print(f"    不确定: {llm_uncertain_count} ({llm_uncertain_count/total*100:.1f}%)")
+print(f"    Correct:   {llm_correct_count} ({llm_correct_count/total*100:.1f}%)")
+print(f"    Incorrect: {llm_incorrect_count} ({llm_incorrect_count/total*100:.1f}%)")
+print(f"    Uncertain: {llm_uncertain_count} ({llm_uncertain_count/total*100:.1f}%)")
 
 print(f"\n  LLM + Abel Skill:")
-print(f"    正确: {abel_correct_count} ({abel_correct_count/total*100:.1f}%)")
-print(f"    错误: {abel_incorrect_count} ({abel_incorrect_count/total*100:.1f}%)")
-print(f"    不确定: {abel_uncertain_count} ({abel_uncertain_count/total*100:.1f}%)")
+print(f"    Correct:   {abel_correct_count} ({abel_correct_count/total*100:.1f}%)")
+print(f"    Incorrect: {abel_incorrect_count} ({abel_incorrect_count/total*100:.1f}%)")
+print(f"    Uncertain: {abel_uncertain_count} ({abel_uncertain_count/total*100:.1f}%)")
 
 if llm_correct_count + abel_correct_count > 0:
     improvement = (abel_correct_count - llm_correct_count) / total * 100
-    print(f"\n  提升: {improvement:+.1f}%")
+    print(f"\n  Improvement: {improvement:+.1f}%")
 
-# 8. 详细案例分析
+# 8. Detailed case analysis
 print("\n" + "=" * 80)
-print("8. 详细案例分析")
+print("8. Detailed Case Analysis")
 print("=" * 80)
 
-print("\nA. Abel 改善的案例 (LLM 错误 → Abel 正确):")
+print("\nA. Cases improved by Abel (LLM incorrect -> Abel correct):")
 improved = [r for r in results if r['llm_correct'] is False and r['abel_correct'] is True]
 for i, r in enumerate(improved[:3], 1):
     print(f"\n  {i}. [{r['ticker']}] {r['title'][:50]}...")
@@ -338,7 +338,7 @@ for i, r in enumerate(improved[:3], 1):
     if r['abel_data']:
         print(f"     Abel pred:    {r['abel_data']['prediction']:+.2%}")
 
-print("\nB. Abel 恶化的案例 (LLM 正确 → Abel 错误):")
+print("\nB. Cases worsened by Abel (LLM correct -> Abel incorrect):")
 worsened = [r for r in results if r['llm_correct'] is True and r['abel_correct'] is False]
 for i, r in enumerate(worsened[:3], 1):
     print(f"\n  {i}. [{r['ticker']}] {r['title'][:50]}...")
@@ -346,9 +346,9 @@ for i, r in enumerate(worsened[:3], 1):
     print(f"     LLM only:     {r['llm_response'][:70]}...")
     print(f"     LLM+Abel:     {r['abel_response'][:70]}...")
 
-# 9. 保存完整结果
+# 9. Save full results
 print("\n" + "=" * 80)
-print("9. 保存完整结果")
+print("9. Saving Full Results")
 print("=" * 80)
 
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -370,14 +370,14 @@ with open(result_file, 'w') as f:
         'results': results
     }, f, indent=2, default=str)
 
-print(f"\n完整结果保存至: {result_file}")
-print("包含每个 case 的:")
-print("  - 问题和 ground truth")
-print("  - LLM only 的完整回答")
-print("  - LLM + Abel skill 的完整回答")
-print("  - Abel 预测数据和驱动因素")
-print("  - LLM judge 的评判结果和理由")
+print(f"\nFull results saved to: {result_file}")
+print("Each case includes:")
+print("  - Question and ground truth")
+print("  - LLM only complete response")
+print("  - LLM + Abel skill complete response")
+print("  - Abel prediction data and causal drivers")
+print("  - LLM judge evaluation result and reasoning")
 print("=" * 80)
 
 if __name__ == "__main__":
-    pass  # Script runs when imported or executed
+    pass
