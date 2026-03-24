@@ -137,8 +137,8 @@ Initial v4 results used a lenient judge that incorrectly marked refusal answers 
 |--------|-------|
 | Suitable for Abel | 31 |
 | Abel data obtained | 15 (48%) |
-| **LLM Only accuracy** | **19.4% (6/31)** |
-| **LLM + Abel accuracy** | **38.7% (12/31)** |
+| **LLM Only accuracy** | **16.1% (5/31)** |
+| **LLM + Abel accuracy** | **35.5% (11/31)** |
 | **Improvement** | **+19.4%** |
 | Cases improved by Abel | 7 |
 | Cases worsened by Abel | 1 |
@@ -149,7 +149,7 @@ Initial v4 results used a lenient judge that incorrectly marked refusal answers 
 |--------|-------|
 | LLM Only accuracy | 20.0% (3/15) |
 | LLM + Abel accuracy | **60.0% (9/15)** |
-| **Improvement (Abel-data subset)** | **+40.0%** |
+| **Improvement (Abel-data subset)** | **+40%** |
 
 #### v4 Cases Improved by Abel (7)
 
@@ -172,7 +172,7 @@ Initial v4 results used a lenient judge that incorrectly marked refusal answers 
 #### v4 Analysis
 
 With strict judging, the true value of Abel skill becomes clear:
-- **LLM alone mostly refuses to answer** financial prediction questions ("I cannot predict stock prices"), resulting in only 19.4% accuracy.
+- **LLM alone mostly refuses to answer** financial prediction questions ("I cannot predict stock prices"), resulting in only 16.1% accuracy.
 - **Abel data enables concrete predictions**: Abel's causal signals (prediction + drivers + structural parents + Markov blanket) give the LLM enough grounding to produce specific answers instead of disclaimers.
 - **+40% accuracy improvement on Abel-data subset**: For the 15 cases where Abel data was available, accuracy jumped from 20% to 60%.
 - **Only 1 case worsened**: Multi-asset question where a single node's signal was insufficient.
@@ -189,8 +189,8 @@ Remaining issues:
 |--------|-------------------|-----------------|
 | Suitable questions | 27 | 31 |
 | Abel data coverage | 48% | 48% |
-| LLM Only accuracy | 70.4% | 19.4% |
-| LLM + Abel accuracy | 63.0% | 38.7% |
+| LLM Only accuracy | 70.4% | 16.1% |
+| LLM + Abel accuracy | 63.0% | 35.5% |
 | Improvement | -7.4% | **+19.4%** |
 | Cases improved | 2 | 7 |
 | Cases worsened | 4 | 1 |
