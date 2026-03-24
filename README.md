@@ -14,6 +14,7 @@ Benchmark versions currently included:
 | **v4** | `observe.predict` + `graph.neighbors` + `graph.markov_blanket` | Full skill usage — prediction + structural causal parents + Markov blanket |
 | **v5** | Codex with and without installed `causal-abel` skill | Direct live Abel CAP A/B on six graph/intervention tasks |
 | **v6** | Codex with and without installed `causal-abel` skill | FutureX financial-subset A/B: 10 scored `FutureX-Past` questions + 7 live `FutureX-Online` predictions |
+| **v7** | Codex with and without installed `causal-abel` skill | `FutureX-Online` live-only A/B on 7 unresolved finance questions, including output-validity checks and observed skill-use evidence |
 
 The original `v3` / `v4` pipeline uses **LLM-based question classification** (GPT-4o-mini) to identify suitable financial questions and extract ticker symbols, then **`normalize-node`** from [cap_probe.py](https://github.com/Abel-ai-causality/Abel-skills/blob/main/causal-abel/scripts/cap_probe.py) to resolve correct Abel node IDs.
 
@@ -206,6 +207,21 @@ Remaining issues:
 
 ---
 
+## v7 — FutureX-Online Live-Only A/B
+
+This newer benchmark isolates only unresolved `FutureX-Online` finance questions, so the evaluation setup no longer benefits from already-resolved historical outcomes.
+
+Headline results:
+
+- **Base**: 7 predictions returned in `722.09s`, but only `6/7` were valid boxed answers because the BTC question came back as `\boxed{}`.
+- **Skill**: 7 predictions returned in `1217.83s`, with `7/7` valid boxed answers.
+- **Predictions differed on 3/7 tasks**: KOSPI threshold hits, BTC March price band, and the March Banxico decision.
+- **Observed skill usage was real, not nominal**: the skill-side session log shows direct `cap_probe.py` calls such as `capabilities`, `normalize-node BTC`, `observe BTC`, `observe SPY`, `paths SPY BTC`, and multiple `traverse-parents` calls.
+
+This makes `v7` a cleaner benchmark for "live prediction with and without the skill" than any `FutureX-Past` setup, even though the questions are not yet scoreable until they resolve.
+
+---
+
 ## Files
 
 | File | Description |
@@ -221,6 +237,9 @@ Remaining issues:
 | `v6/results.json` | FutureX financial-subset A/B summary |
 | `v6/test_script.py` | Reproducible FutureX-Past / FutureX-Online harness |
 | `v6/cases.md` | Past scoring summary plus current-week live predictions |
+| `v7/results.json` | FutureX-Online live-only A/B summary with validity and divergence notes |
+| `v7/test_script.py` | Reproducible FutureX-Online live-only harness |
+| `v7/cases.md` | Live-only per-task comparison and observed skill-usage evidence |
 
 ---
 

@@ -1,0 +1,204 @@
+{
+  "timestamp": "20260324-144021",
+  "version": "futurex-online-live-only",
+  "dataset_name": "futurex-ai/Futurex-Online",
+  "model": "gpt-5.4",
+  "reasoning_effort": "low",
+  "today_context": "March 24, 2026 (UTC+8, Asia/Shanghai)",
+  "task_count": 7,
+  "tasks": [
+    {
+      "id": "69a2e39e5692ef005cdbf2d9",
+      "title": "S&P 500 Single-Day Gains and Losses (%) in Q1",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"S&P 500 Single-Day Gains and Losses (%) in Q1 (resolved around 2026-03-31 (GMT+8)). \nA.  the S&P 500 Index gain at least 5% on any day in Q1\nB.  the S&P 500 Index lose at least 5% on any day in Q1\nC.  the S&P 500 Index gain at least 3% on any day in Q1\nD.  the S&P 500 Index lose at least 3% on any day in Q1\nE.  the S&P 500 Index gain at least 4% on any day in Q1\nF.  the S&P 500 Index lose at least 2% on any day in Q1\nG.  the S&P 500 Index lose at least 4% on any day in Q1\nH.  the S&P 500 Index gain at least 2% on any day in Q1\nI.  the S&P 500 Index gain at least 1% on any day in Q1\nJ.  the S&P 500 Index lose at least 1% on any day in Q1\"\n        IMPORTANT: Your final answer MUST end with this exact format:\n        \n        Your task is to identify all the correct option(s) based on your analysis.\n        Your prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\n        Your final answer MUST end with this exact format:\n        listing all correct option(s) you have identified, separated by commas, within the box.\n        For example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options. \n        \n        Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "end_time": "2026-03-31",
+      "level": 2
+    },
+    {
+      "id": "69a2e39e5692ef005cdbf2e9",
+      "title": "What will KOSPI (^KS11) hit in Q1 2026?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"What will KOSPI (^KS11) hit in Q1 2026? (resolved around 2026-03-31 (GMT+8)). \nA.  KOSPI Composite Index (^KS11) hit 7000 (HIGH) in Q1 2026\nB.  KOSPI Composite Index (^KS11) hit 6000 (HIGH) in Q1 2026\nC.  KOSPI Composite Index (^KS11) hit 5500 (HIGH) in Q1 2026\nD.  KOSPI Composite Index (^KS11) hit 5300 (HIGH) in Q1 2026\nE.  KOSPI Composite Index (^KS11) hit 5100 (HIGH) in Q1 2026\nF.  KOSPI Composite Index (^KS11) hit 4900 (LOW) in Q1 2026\nG.  KOSPI Composite Index (^KS11) hit 4700 (LOW) in Q1 2026\nH.  KOSPI Composite Index (^KS11) hit 4500 (LOW) in Q1 2026\nI.  KOSPI Composite Index (^KS11) hit 6500 (HIGH) in Q1 2026\nJ.  KOSPI Composite Index (^KS11) hit 5750 (HIGH) in Q1 2026\nK.  KOSPI Composite Index (^KS11) hit 5400 (HIGH) in Q1 2026\nL.  KOSPI Composite Index (^KS11) hit 5200 (HIGH) in Q1 2026\nM.  KOSPI Composite Index (^KS11) hit 5000 (HIGH) in Q1 2026\nN.  KOSPI Composite Index (^KS11) hit 4800 (LOW) in Q1 2026\nO.  KOSPI Composite Index (^KS11) hit 4600 (LOW) in Q1 2026\"\n        IMPORTANT: Your final answer MUST end with this exact format:\n        \n        Your task is to identify all the correct option(s) based on your analysis.\n        Your prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\n        Your final answer MUST end with this exact format:\n        listing all correct option(s) you have identified, separated by commas, within the box.\n        For example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options. \n        \n        Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "end_time": "2026-03-31",
+      "level": 2
+    },
+    {
+      "id": "69a2e39e5692ef005cdbf2d8",
+      "title": "Q1 S&P 500 Performance",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Q1 S&P 500 Performance (resolved around 2026-03-31 (GMT+8)). \nA.  the percentage change in the S&P 500 in Q1 2026 be less than 0%\nB.  the percentage change in the S&P 500 in Q1 2026 be between 3% and 4%\nC.  the percentage change in the S&P 500 in Q1 2026 be between 8% and 10%\nD.  the percentage change in the S&P 500 in Q1 2026 be at least 10%\nE.  the percentage change in the S&P 500 in Q1 2026 be between 0% and 2%\nF.  the percentage change in the S&P 500 in Q1 2026 be between 2% and 3%\nG.  the percentage change in the S&P 500 in Q1 2026 be between 5% and 6%\nH.  the percentage change in the S&P 500 in Q1 2026 be between 4% and 5%\nI.  the percentage change in the S&P 500 in Q1 2026 be between 6% and 8%\"\n        IMPORTANT: Your final answer MUST end with this exact format:\n        \n        Your task is to identify all the correct option(s) based on your analysis.\n        Your prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\n        Your final answer MUST end with this exact format:\n        listing all correct option(s) you have identified, separated by commas, within the box.\n        For example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options. \n        \n        Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "end_time": "2026-03-31",
+      "level": 2
+    },
+    {
+      "id": "69a2e39e5692ef005cdbf2e8",
+      "title": "Will KOSPI (KS11) close above __ end of Q1?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Will KOSPI (KS11) close above __ end of Q1? (resolved around 2026-03-31 (GMT+8)). \nA.  the KOSPI Composite Index (^KS11) close above 5250 on the final trading day of Q1 2026\nB.  the KOSPI Composite Index (^KS11) close above 6000 on the final trading day of Q1 2026\nC.  the KOSPI Composite Index (^KS11) close above 4750 on the final trading day of Q1 2026\nD.  the KOSPI Composite Index (^KS11) close above 5750 on the final trading day of Q1 2026\nE.  the KOSPI Composite Index (^KS11) close above 7000 on the final trading day of Q1 2026\nF.  the KOSPI Composite Index (^KS11) close above 5000 on the final trading day of Q1 2026\nG.  the KOSPI Composite Index (^KS11) close above 4500 on the final trading day of Q1 2026\nH.  the KOSPI Composite Index (^KS11) close above 5500 on the final trading day of Q1 2026\nI.  the KOSPI Composite Index (^KS11) close above 6500 on the final trading day of Q1 2026\"\n        IMPORTANT: Your final answer MUST end with this exact format:\n        \n        Your task is to identify all the correct option(s) based on your analysis.\n        Your prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\n        Your final answer MUST end with this exact format:\n        listing all correct option(s) you have identified, separated by commas, within the box.\n        For example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options. \n        \n        Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "end_time": "2026-03-31",
+      "level": 2
+    },
+    {
+      "id": "69a4319df2cb3b006875e9d0",
+      "title": "What price will Bitcoin hit by March 2026? (add your prediction)",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"What price will Bitcoin hit by March 2026? (add your prediction) (resolved around 2026-03-31 (GMT+8)). \nA.  the outcome be $75,001 - $80,000\nB.  the outcome be $80,001 - $85,000\nC.  the outcome be $85,001 - $90,000\nD.  the outcome be $90,001 - $95,000\nE.  the outcome be $95,001 - $100,000\nF.  the outcome be $100,001 - $105,000\nG.  the outcome be $105,001 - $110,000\nH.  the outcome be $110,001 - $115,000\"\n        IMPORTANT: Your final answer MUST end with this exact format:\n        \n        Your task is to identify all the correct option(s) based on your analysis.\n        Your prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\n        Your final answer MUST end with this exact format:\n        listing all correct option(s) you have identified, separated by commas, within the box.\n        For example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options. \n        \n        Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "end_time": "2026-03-31",
+      "level": 2
+    },
+    {
+      "id": "699c4887d1d3cf005c1e48ad",
+      "title": "Banxico interest rate decision in March",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Banxico interest rate decision in March (resolved around 2026-03-26 (GMT+8)). \nA.  the outcome be Lower the rate\nB.  the outcome be Maintain the same rate\nC.  the outcome be Increase the rate\"\n        IMPORTANT: Your final answer MUST end with this exact format:\n        \n        Your task is to identify all the correct option(s) based on your analysis.\n        Your prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\n        Your final answer MUST end with this exact format:\n        listing all correct option(s) you have identified, separated by commas, within the box.\n        For example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options. \n        \n        Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "end_time": "2026-03-26",
+      "level": 1
+    },
+    {
+      "id": "69a2e39e5692ef005cdbf27c",
+      "title": "Robinhood launches prediction market through MIAXdx by March 31?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Robinhood launches prediction market through MIAXdx by March 31? (resolved around 2026-03-31 (GMT+8)). \"\n        IMPORTANT: Your final answer MUST end with this exact format:\n        \\boxed{Yes} or \\boxed{No}\n        Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "end_time": "2026-03-31",
+      "level": 1
+    }
+  ],
+  "runs": {
+    "base": {
+      "returncode": 0,
+      "duration_seconds": 722.09,
+      "stdout": "{\"predictions\":[{\"id\":\"69a2e39e5692ef005cdbf2d9\",\"prediction\":\"\\\\boxed{F, I, J}\"},{\"id\":\"69a2e39e5692ef005cdbf2e9\",\"prediction\":\"\\\\boxed{B, C, D, E, F, G, H, J, K, L, M, N, O}\"},{\"id\":\"69a2e39e5692ef005cdbf2d8\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"69a2e39e5692ef005cdbf2e8\",\"prediction\":\"\\\\boxed{A, C, F, G, H}\"},{\"id\":\"69a4319df2cb3b006875e9d0\",\"prediction\":\"\\\\boxed{}\"},{\"id\":\"699c4887d1d3cf005c1e48ad\",\"prediction\":\"\\\\boxed{B}\"},{\"id\":\"69a2e39e5692ef005cdbf27c\",\"prediction\":\"\\\\boxed{No}\"}]}\n",
+      "stderr": "p Center | Get answers\" name=\"twitter:description\"/><meta content=\"summary_large_image\" name=\"twitter:card\"/><meta content=\"/us/en/support/_next/static/images/robinhood-preview__0e0e3118c656b349dfefdb8428e83\n\nURL https://robinhood.com/us/en/support/articles/prediction-markets/ status 404\n<!DOCTYPE html><html><head><meta charSet=\"utf-8\"/><html lang=\"en-US\"></html><meta content=\"en_US\" property=\"og:locale\"/><meta content=\"noindex\" name=\"robots\"/><title>Robinhood Support</title><meta content=\"Robinhood Help Center | Get answers\" name=\"description\"/><meta content=\"Robinhood Support\" property=\"og:title\"/><meta content=\"Robinhood Help Center | Get answers\" property=\"og:description\"/><meta content=\"Robinhood\" property=\"og:site_name\"/><meta content=\"website\" property=\"og:type\"/><meta content=\"image/png\" property=\"og:image:type\"/><meta content=\"1300\" property=\"og:image:width\"/><meta content=\"740\" property=\"og:image:height\"/><meta content=\"/us/en/support/_next/static/images/robinhood-preview__0e0e3118c656b349dfefdb8428e83dde6b0854019460b857c9702e2ae03a9e68.jpg\" property=\"og:image\"/><meta content=\"674753905956192\" property=\"fb:app_id\"/><meta content=\"@RobinhoodApp\" property=\"twitter:site\"/><meta content=\"Robinhood Support\" name=\"twitter:title\"/><meta content=\"Robinhood Help Center | Get answers\" name=\"twitter:description\"/><meta content=\"summary_large_image\" name=\"twitter:card\"/><meta content=\"/us/en/support/_next/static/images/robinhood-preview__0e0e3118c656b349dfefdb8428e83\n\nURL https://robinhood.com/us/en/support/articles/what-are-event-contracts/ status 404\n<!DOCTYPE html><html><head><meta charSet=\"utf-8\"/><html lang=\"en-US\"></html><meta content=\"en_US\" property=\"og:locale\"/><meta content=\"noindex\" name=\"robots\"/><title>Robinhood Support</title><meta content=\"Robinhood Help Center | Get answers\" name=\"description\"/><meta content=\"Robinhood Support\" property=\"og:title\"/><meta content=\"Robinhood Help Center | Get answers\" property=\"og:description\"/><meta content=\"Robinhood\" property=\"og:site_name\"/><meta content=\"website\" property=\"og:type\"/><meta content=\"image/png\" property=\"og:image:type\"/><meta content=\"1300\" property=\"og:image:width\"/><meta content=\"740\" property=\"og:image:height\"/><meta content=\"/us/en/support/_next/static/images/robinhood-preview__0e0e3118c656b349dfefdb8428e83dde6b0854019460b857c9702e2ae03a9e68.jpg\" property=\"og:image\"/><meta content=\"674753905956192\" property=\"fb:app_id\"/><meta content=\"@RobinhoodApp\" property=\"twitter:site\"/><meta content=\"Robinhood Support\" name=\"twitter:title\"/><meta content=\"Robinhood Help Center | Get answers\" name=\"twitter:description\"/><meta content=\"summary_large_image\" name=\"twitter:card\"/><meta content=\"/us/en/support/_next/static/images/robinhood-preview__0e0e3118c656b349dfefdb8428e83\n🌐 Searching the web...\n🌐 Searched: March 2026 Banxico poll economists hold 7.00 March 26 2026\n🌐 Searching the web...\n🌐 Searched: site:robinhood.com/us/en/newsroom MIAXdx 2026 Robinhood expected to begin operations in 2026\n🌐 Searching the web...\n🌐 Searched the web\n🌐 Searching the web...\n🌐 Searched: Rothera Exchange March 2026 event contracts Robinhood\n🌐 Searching the web...\n🌐 Searched: March 2026 bitcoin end of month price prediction market March 24 2026 75000\n🌐 Searching the web...\n🌐 Searched: https://www.banxico.org.mx/publications-and-press/quarterly-reports/%7B59CD04C0-600F-F669-8162-F6999179442D%7D.pdf\n🌐 Searching the web...\n🌐 Searched: March 24 2026 KOSPI 5500 support outlook March 31 2026\ncodex\n{\"predictions\":[{\"id\":\"69a2e39e5692ef005cdbf2d9\",\"prediction\":\"\\\\boxed{F, I, J}\"},{\"id\":\"69a2e39e5692ef005cdbf2e9\",\"prediction\":\"\\\\boxed{B, C, D, E, F, G, H, J, K, L, M, N, O}\"},{\"id\":\"69a2e39e5692ef005cdbf2d8\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"69a2e39e5692ef005cdbf2e8\",\"prediction\":\"\\\\boxed{A, C, F, G, H}\"},{\"id\":\"69a4319df2cb3b006875e9d0\",\"prediction\":\"\\\\boxed{}\"},{\"id\":\"699c4887d1d3cf005c1e48ad\",\"prediction\":\"\\\\boxed{B}\"},{\"id\":\"69a2e39e5692ef005cdbf27c\",\"prediction\":\"\\\\boxed{No}\"}]}\ntokens used\n216,071\n",
+      "raw_output": "{\"predictions\":[{\"id\":\"69a2e39e5692ef005cdbf2d9\",\"prediction\":\"\\\\boxed{F, I, J}\"},{\"id\":\"69a2e39e5692ef005cdbf2e9\",\"prediction\":\"\\\\boxed{B, C, D, E, F, G, H, J, K, L, M, N, O}\"},{\"id\":\"69a2e39e5692ef005cdbf2d8\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"69a2e39e5692ef005cdbf2e8\",\"prediction\":\"\\\\boxed{A, C, F, G, H}\"},{\"id\":\"69a4319df2cb3b006875e9d0\",\"prediction\":\"\\\\boxed{}\"},{\"id\":\"699c4887d1d3cf005c1e48ad\",\"prediction\":\"\\\\boxed{B}\"},{\"id\":\"69a2e39e5692ef005cdbf27c\",\"prediction\":\"\\\\boxed{No}\"}]}",
+      "parsed_output": {
+        "predictions": [
+          {
+            "id": "69a2e39e5692ef005cdbf2d9",
+            "prediction": "\\boxed{F, I, J}"
+          },
+          {
+            "id": "69a2e39e5692ef005cdbf2e9",
+            "prediction": "\\boxed{B, C, D, E, F, G, H, J, K, L, M, N, O}"
+          },
+          {
+            "id": "69a2e39e5692ef005cdbf2d8",
+            "prediction": "\\boxed{A}"
+          },
+          {
+            "id": "69a2e39e5692ef005cdbf2e8",
+            "prediction": "\\boxed{A, C, F, G, H}"
+          },
+          {
+            "id": "69a4319df2cb3b006875e9d0",
+            "prediction": "\\boxed{}"
+          },
+          {
+            "id": "699c4887d1d3cf005c1e48ad",
+            "prediction": "\\boxed{B}"
+          },
+          {
+            "id": "69a2e39e5692ef005cdbf27c",
+            "prediction": "\\boxed{No}"
+          }
+        ]
+      },
+      "parse_error": null,
+      "predictions": [
+        {
+          "id": "69a2e39e5692ef005cdbf2d9",
+          "prediction": "\\boxed{F, I, J}"
+        },
+        {
+          "id": "69a2e39e5692ef005cdbf2e9",
+          "prediction": "\\boxed{B, C, D, E, F, G, H, J, K, L, M, N, O}"
+        },
+        {
+          "id": "69a2e39e5692ef005cdbf2d8",
+          "prediction": "\\boxed{A}"
+        },
+        {
+          "id": "69a2e39e5692ef005cdbf2e8",
+          "prediction": "\\boxed{A, C, F, G, H}"
+        },
+        {
+          "id": "69a4319df2cb3b006875e9d0",
+          "prediction": "\\boxed{}"
+        },
+        {
+          "id": "699c4887d1d3cf005c1e48ad",
+          "prediction": "\\boxed{B}"
+        },
+        {
+          "id": "69a2e39e5692ef005cdbf27c",
+          "prediction": "\\boxed{No}"
+        }
+      ]
+    },
+    "skill": {
+      "returncode": 0,
+      "duration_seconds": 1217.83,
+      "stdout": "{\"predictions\":[{\"id\":\"69a2e39e5692ef005cdbf2d9\",\"prediction\":\"\\\\boxed{F, I, J}\"},{\"id\":\"69a2e39e5692ef005cdbf2e9\",\"prediction\":\"\\\\boxed{B, C, D, E, F, J, K, L, M}\"},{\"id\":\"69a2e39e5692ef005cdbf2d8\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"69a2e39e5692ef005cdbf2e8\",\"prediction\":\"\\\\boxed{A, C, F, G, H}\"},{\"id\":\"69a4319df2cb3b006875e9d0\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"699c4887d1d3cf005c1e48ad\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"69a2e39e5692ef005cdbf27c\",\"prediction\":\"\\\\boxed{No}\"}]}\n",
+      "stderr": "1-close-above-5250-on-the-final-trading-day-of-q1-2026 ['0.86', '0.14'] 2026-03-24T04:02:48.364019Z 366.3945\nwill-the-kospi-composite-index-ks11-close-above-6000-on-the-final-trading-day-of-q1-2026 ['0.525', '0.475'] 2026-03-24T04:03:08.279382Z 98.3734\nwill-the-kospi-composite-index-ks11-close-above-4750-on-the-final-trading-day-of-q1-2026 ['0.9815', '0.0185'] 2026-03-24T04:02:57.456599Z 1971.00902\nwill-the-kospi-composite-index-ks11-close-above-5750-on-the-final-trading-day-of-q1-2026 ['0.555', '0.445'] 2026-03-24T04:03:00.666436Z 157.2597\nwill-the-kospi-composite-index-ks11-close-above-7000-on-the-final-trading-day-of-q1-2026 ['0.0165', '0.9835'] 2026-03-24T04:02:56.214526Z 180.83252\nwill-the-kospi-composite-index-ks11-close-above-5000-on-the-final-trading-day-of-q1-2026 ['0.9445', '0.0555'] 2026-03-24T04:02:52.020659Z 495.54984\nwill-the-kospi-composite-index-ks11-close-above-4500-on-the-final-trading-day-of-q1-2026 ['0.9345', '0.0655'] 2026-03-24T04:02:53.170553Z 1720.20638\nwill-the-kospi-composite-index-ks11-close-above-5500-on-the-final-trading-day-of-q1-2026 ['0.62', '0.38'] 2026-03-24T04:03:14.84236Z 181.3206\nwill-the-kospi-composite-index-ks11-close-above-6500-on-the-final-trading-day-of-q1-2026 ['0.145', '0.855'] 2026-03-24T04:03:00.045129Z 326.2688\nexec\n/bin/zsh -lc \"python3 - <<'PY'\nimport json, urllib.request\ntext=urllib.request.urlopen('https://polymarket.com/event/what-will-kospi-ks11-hit-in-q1-2026', timeout=20).read().decode('utf-8', errors='replace')\nmarker='<script id=\\\"__NEXT_DATA__\\\"'\npos=text.find(marker)\nstart=text.find('>',pos)+1\nend=text.find('</script>', start)\nobj=json.loads(text[start:end])\nprops=obj['props']['pageProps']\nprint('serverDate', props.get('serverDate'))\nfor q in props.get('dehydratedState',{}).get('queries',[]):\n    d=q.get('state',{}).get('data')\n    if isinstance(d, dict) and 'markets' in d:\n        for m in d['markets']:\n            print(m.get('slug'), m.get('outcomePrices'), m.get('updatedAt'), m.get('liquidityNum'))\nPY\" in /Users/zeyu/Documents/bach_private_cache succeeded in 650ms:\nserverDate 2026-03-24T06:33:11.718Z\nwill-kospi-composite-ks11-hit-7000-high-in-q1-2026 ['0.0325', '0.9675'] 2026-03-24T06:32:45.767046Z 249.37122\nwill-kospi-composite-ks11-hit-6000-high-in-q1-2026 ['1', '0'] 2026-03-09T23:04:11.399887Z None\nwill-kospi-composite-ks11-hit-5500-high-in-q1-2026 ['1', '0'] 2026-03-09T23:04:11.368943Z 0\nwill-kospi-composite-ks11-hit-5300-high-in-q1-2026 ['1', '0'] 2026-03-09T23:04:11.481078Z 0\nwill-kospi-composite-ks11-hit-5100-high-in-q1-2026 ['1', '0'] 2026-03-09T23:04:11.407138Z 0\nwill-kospi-composite-ks11-hit-4900-low-in-q1-2026 ['1', '0'] 2026-03-09T23:04:11.511224Z 0\nwill-kospi-composite-ks11-hit-4700-low-in-q1-2026 ['0.0285', '0.9715'] 2026-03-24T06:33:07.062216Z 637.51719\nwill-kospi-composite-ks11-hit-4500-low-in-q1-2026 ['0.0355', '0.9645'] 2026-03-24T06:29:22.038666Z 571.96799\nwill-kospi-composite-ks11-hit-6500-high-in-q1-2026 ['0.024', '0.976'] 2026-03-24T06:32:58.763557Z 826.51094\nwill-kospi-composite-ks11-hit-5750-high-in-q1-2026 ['1', '0'] 2026-03-09T23:04:11.672777Z 0\nwill-kospi-composite-ks11-hit-5400-high-in-q1-2026 ['1', '0'] 2026-03-09T23:04:11.371286Z None\nwill-kospi-composite-ks11-hit-5200-high-in-q1-2026 ['1', '0'] 2026-03-09T23:04:11.702751Z None\nwill-kospi-composite-ks11-hit-4800-low-in-q1-2026 ['0.01', '0.99'] 2026-03-24T06:32:44.715752Z 1070.26922\nwill-kospi-composite-ks11-hit-4600-low-in-q1-2026 ['0.041', '0.959'] 2026-03-24T06:29:35.895944Z 313.88163\ncodex\n{\"predictions\":[{\"id\":\"69a2e39e5692ef005cdbf2d9\",\"prediction\":\"\\\\boxed{F, I, J}\"},{\"id\":\"69a2e39e5692ef005cdbf2e9\",\"prediction\":\"\\\\boxed{B, C, D, E, F, J, K, L, M}\"},{\"id\":\"69a2e39e5692ef005cdbf2d8\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"69a2e39e5692ef005cdbf2e8\",\"prediction\":\"\\\\boxed{A, C, F, G, H}\"},{\"id\":\"69a4319df2cb3b006875e9d0\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"699c4887d1d3cf005c1e48ad\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"69a2e39e5692ef005cdbf27c\",\"prediction\":\"\\\\boxed{No}\"}]}\ntokens used\n441,566\n",
+      "raw_output": "{\"predictions\":[{\"id\":\"69a2e39e5692ef005cdbf2d9\",\"prediction\":\"\\\\boxed{F, I, J}\"},{\"id\":\"69a2e39e5692ef005cdbf2e9\",\"prediction\":\"\\\\boxed{B, C, D, E, F, J, K, L, M}\"},{\"id\":\"69a2e39e5692ef005cdbf2d8\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"69a2e39e5692ef005cdbf2e8\",\"prediction\":\"\\\\boxed{A, C, F, G, H}\"},{\"id\":\"69a4319df2cb3b006875e9d0\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"699c4887d1d3cf005c1e48ad\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"69a2e39e5692ef005cdbf27c\",\"prediction\":\"\\\\boxed{No}\"}]}",
+      "parsed_output": {
+        "predictions": [
+          {
+            "id": "69a2e39e5692ef005cdbf2d9",
+            "prediction": "\\boxed{F, I, J}"
+          },
+          {
+            "id": "69a2e39e5692ef005cdbf2e9",
+            "prediction": "\\boxed{B, C, D, E, F, J, K, L, M}"
+          },
+          {
+            "id": "69a2e39e5692ef005cdbf2d8",
+            "prediction": "\\boxed{A}"
+          },
+          {
+            "id": "69a2e39e5692ef005cdbf2e8",
+            "prediction": "\\boxed{A, C, F, G, H}"
+          },
+          {
+            "id": "69a4319df2cb3b006875e9d0",
+            "prediction": "\\boxed{A}"
+          },
+          {
+            "id": "699c4887d1d3cf005c1e48ad",
+            "prediction": "\\boxed{A}"
+          },
+          {
+            "id": "69a2e39e5692ef005cdbf27c",
+            "prediction": "\\boxed{No}"
+          }
+        ]
+      },
+      "parse_error": null,
+      "predictions": [
+        {
+          "id": "69a2e39e5692ef005cdbf2d9",
+          "prediction": "\\boxed{F, I, J}"
+        },
+        {
+          "id": "69a2e39e5692ef005cdbf2e9",
+          "prediction": "\\boxed{B, C, D, E, F, J, K, L, M}"
+        },
+        {
+          "id": "69a2e39e5692ef005cdbf2d8",
+          "prediction": "\\boxed{A}"
+        },
+        {
+          "id": "69a2e39e5692ef005cdbf2e8",
+          "prediction": "\\boxed{A, C, F, G, H}"
+        },
+        {
+          "id": "69a4319df2cb3b006875e9d0",
+          "prediction": "\\boxed{A}"
+        },
+        {
+          "id": "699c4887d1d3cf005c1e48ad",
+          "prediction": "\\boxed{A}"
+        },
+        {
+          "id": "69a2e39e5692ef005cdbf27c",
+          "prediction": "\\boxed{No}"
+        }
+      ]
+    }
+  },
+  "predictions_identical": false,
+  "duration_delta_seconds": 495.74
+}

@@ -1,0 +1,120 @@
+{
+  "timestamp": "20260324-144021",
+  "version": "v7-futurex-online-live-only",
+  "dataset_name": "futurex-ai/Futurex-Online",
+  "model": "gpt-5.4",
+  "reasoning_effort": "low",
+  "today_context": "March 24, 2026 (UTC+8, Asia/Shanghai)",
+  "task_count": 7,
+  "base_duration_seconds": 722.09,
+  "skill_duration_seconds": 1217.83,
+  "duration_delta_seconds": 495.74,
+  "predictions_identical": false,
+  "base_prediction_count": 7,
+  "skill_prediction_count": 7,
+  "base_valid_prediction_count": 6,
+  "skill_valid_prediction_count": 7,
+  "base_invalid_predictions": [
+    {
+      "id": "69a4319df2cb3b006875e9d0",
+      "title": "What price will Bitcoin hit by March 2026? (add your prediction)",
+      "prediction": "\\boxed{}"
+    }
+  ],
+  "prediction_differences": [
+    {
+      "id": "69a2e39e5692ef005cdbf2e9",
+      "title": "What will KOSPI (^KS11) hit in Q1 2026?",
+      "base_prediction": "\\boxed{B, C, D, E, F, G, H, J, K, L, M, N, O}",
+      "skill_prediction": "\\boxed{B, C, D, E, F, J, K, L, M}"
+    },
+    {
+      "id": "69a4319df2cb3b006875e9d0",
+      "title": "What price will Bitcoin hit by March 2026? (add your prediction)",
+      "base_prediction": "\\boxed{}",
+      "skill_prediction": "\\boxed{A}"
+    },
+    {
+      "id": "699c4887d1d3cf005c1e48ad",
+      "title": "Banxico interest rate decision in March",
+      "base_prediction": "\\boxed{B}",
+      "skill_prediction": "\\boxed{A}"
+    }
+  ],
+  "skill_observed_usage": true,
+  "skill_usage_examples": [
+    "python3 scripts/cap_probe.py capabilities",
+    "python3 scripts/cap_probe.py normalize-node BTC",
+    "python3 scripts/cap_probe.py observe BTC",
+    "python3 scripts/cap_probe.py observe SPY",
+    "python3 scripts/cap_probe.py paths SPY BTC --max-paths 3",
+    "python3 scripts/cap_probe.py traverse-parents COIN --top-k 8",
+    "python3 scripts/cap_probe.py traverse-parents MSTR --top-k 8",
+    "python3 scripts/cap_probe.py traverse-parents EWY --top-k 8"
+  ],
+  "tasks": [
+    {
+      "id": "69a2e39e5692ef005cdbf2d9",
+      "title": "S&P 500 Single-Day Gains and Losses (%) in Q1",
+      "base_prediction": "\\boxed{F, I, J}",
+      "skill_prediction": "\\boxed{F, I, J}",
+      "base_valid": true,
+      "skill_valid": true,
+      "differed": false
+    },
+    {
+      "id": "69a2e39e5692ef005cdbf2e9",
+      "title": "What will KOSPI (^KS11) hit in Q1 2026?",
+      "base_prediction": "\\boxed{B, C, D, E, F, G, H, J, K, L, M, N, O}",
+      "skill_prediction": "\\boxed{B, C, D, E, F, J, K, L, M}",
+      "base_valid": true,
+      "skill_valid": true,
+      "differed": true
+    },
+    {
+      "id": "69a2e39e5692ef005cdbf2d8",
+      "title": "Q1 S&P 500 Performance",
+      "base_prediction": "\\boxed{A}",
+      "skill_prediction": "\\boxed{A}",
+      "base_valid": true,
+      "skill_valid": true,
+      "differed": false
+    },
+    {
+      "id": "69a2e39e5692ef005cdbf2e8",
+      "title": "Will KOSPI (KS11) close above __ end of Q1?",
+      "base_prediction": "\\boxed{A, C, F, G, H}",
+      "skill_prediction": "\\boxed{A, C, F, G, H}",
+      "base_valid": true,
+      "skill_valid": true,
+      "differed": false
+    },
+    {
+      "id": "69a4319df2cb3b006875e9d0",
+      "title": "What price will Bitcoin hit by March 2026? (add your prediction)",
+      "base_prediction": "\\boxed{}",
+      "skill_prediction": "\\boxed{A}",
+      "base_valid": false,
+      "skill_valid": true,
+      "differed": true
+    },
+    {
+      "id": "699c4887d1d3cf005c1e48ad",
+      "title": "Banxico interest rate decision in March",
+      "base_prediction": "\\boxed{B}",
+      "skill_prediction": "\\boxed{A}",
+      "base_valid": true,
+      "skill_valid": true,
+      "differed": true
+    },
+    {
+      "id": "69a2e39e5692ef005cdbf27c",
+      "title": "Robinhood launches prediction market through MIAXdx by March 31?",
+      "base_prediction": "\\boxed{No}",
+      "skill_prediction": "\\boxed{No}",
+      "base_valid": true,
+      "skill_valid": true,
+      "differed": false
+    }
+  ]
+}
