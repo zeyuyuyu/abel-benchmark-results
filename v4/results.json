@@ -6,14 +6,14 @@
   "summary": {
     "abel_data_count": 15,
     "abel_data_rate": 48.38709677419355,
-    "llm_accuracy": 19.35483870967742,
-    "abel_accuracy": 38.70967741935484,
+    "llm_accuracy": 16.129032258064516,
+    "abel_accuracy": 35.483870967741936,
     "improvement": 19.35483870967742,
     "improved": 7,
     "worsened": 1,
     "abel_only_llm_acc": 20.0,
     "abel_only_abel_acc": 60.0,
-    "judge_version": "strict-v2"
+    "judge_version": "strict-v2-patched"
   },
   "results": [
     {
@@ -238,12 +238,12 @@
         "GC_close"
       ],
       "llm_response": "Gold (GC) is expected to be above 'K' at the end of January, driven by ongoing economic uncertainties and potential shifts in monetary policy.",
-      "llm_correct": true,
-      "llm_judge": "CORRECT",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT - answer says above K only, ground truth is [H, I, J, K, L] (all five)",
       "abel_context": null,
       "abel_response": "Gold (GC) is expected to be above 'K' at the end of January, driven by ongoing economic uncertainties and potential shifts in monetary policy.",
-      "abel_correct": true,
-      "abel_judge": "No Abel data - same as LLM"
+      "abel_correct": false,
+      "abel_judge": "INCORRECT - same as LLM, no Abel data"
     },
     {
       "id": "695bb4008b62560069adce59",
