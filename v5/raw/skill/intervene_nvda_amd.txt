@@ -1,0 +1,1 @@
+{"path_exists":true,"effect_returned":false,"intervention_skipped":false,"error_code":"invalid_intervention"}

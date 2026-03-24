@@ -1,17 +1,21 @@
-# Abel Skill Benchmark - Futurex-Past Dataset
+# Abel Skill Benchmark Results
 
 ## Overview
 
-This project benchmarks **LLM only** vs **LLM + [Abel Skill](https://github.com/Abel-ai-causality/Abel-skills)** on the [Futurex-Past](https://huggingface.co/datasets/futurex-ai/Futurex-Past) dataset (244 future-prediction questions).
+This repository collects multiple benchmarks comparing **LLM only** vs **LLM + [Abel Skill](https://github.com/Abel-ai-causality/Abel-skills)**.
 
-Two benchmark versions are included:
+The original benchmarks are on the [Futurex-Past](https://huggingface.co/datasets/futurex-ai/Futurex-Past) dataset (244 future-prediction questions), and newer additions include a direct live Abel CAP ablation plus a smaller FutureX financial-subset A/B run.
+
+Benchmark versions currently included:
 
 | Version | Skill Usage | Description |
 |---------|-------------|-------------|
 | **v3** | `observe.predict` only | Minimal skill usage — single prediction value + drivers |
 | **v4** | `observe.predict` + `graph.neighbors` + `graph.markov_blanket` | Full skill usage — prediction + structural causal parents + Markov blanket |
+| **v5** | Codex with and without installed `causal-abel` skill | Direct live Abel CAP A/B on six graph/intervention tasks |
+| **v6** | Codex with and without installed `causal-abel` skill | FutureX financial-subset A/B: 10 scored `FutureX-Past` questions + 7 live `FutureX-Online` predictions |
 
-Both versions use **LLM-based question classification** (GPT-4o-mini) to identify suitable financial questions and extract ticker symbols, then **`normalize-node`** from [cap_probe.py](https://github.com/Abel-ai-causality/Abel-skills/blob/main/causal-abel/scripts/cap_probe.py) to resolve correct Abel node IDs.
+The original `v3` / `v4` pipeline uses **LLM-based question classification** (GPT-4o-mini) to identify suitable financial questions and extract ticker symbols, then **`normalize-node`** from [cap_probe.py](https://github.com/Abel-ai-causality/Abel-skills/blob/main/causal-abel/scripts/cap_probe.py) to resolve correct Abel node IDs.
 
 ### Dataset
 - **Source**: [HuggingFace - futurex-ai/Futurex-Past](https://huggingface.co/datasets/futurex-ai/Futurex-Past)
@@ -211,6 +215,12 @@ Remaining issues:
 | `v4/results.json` | v4 full per-case results (strict judge) |
 | `v4/test_script.py` | v4 benchmark script (API keys redacted) |
 | `v4/cases.md` | v4 detailed per-case report (strict judge) |
+| `v5/results.json` | Direct Abel CAP live A/B summary for Codex base vs skill |
+| `v5/test_script.py` | Reproducible live CAP benchmark harness |
+| `v5/cases.md` | Per-task comparison and notable failure analysis |
+| `v6/results.json` | FutureX financial-subset A/B summary |
+| `v6/test_script.py` | Reproducible FutureX-Past / FutureX-Online harness |
+| `v6/cases.md` | Past scoring summary plus current-week live predictions |
 
 ---
 

@@ -1,0 +1,177 @@
+{
+  "timestamp": "20260324-115311",
+  "version": "v6-futurex-financial-subset",
+  "model": "gpt-5.4",
+  "reasoning_effort": "low",
+  "today_context": "March 24, 2026 (UTC+8, Asia/Shanghai)",
+  "subset_sizes": {
+    "past": 10,
+    "online": 7
+  },
+  "past": {
+    "base_accuracy": 0.7,
+    "base_correct": "7/10",
+    "base_duration_seconds": 380.93,
+    "skill_accuracy": 0.8,
+    "skill_correct": "8/10",
+    "skill_duration_seconds": 593.65,
+    "accuracy_delta": 0.1,
+    "tasks": [
+      {
+        "id": "694fd4d0ae81c200695c89cf",
+        "title": "Bank of Brazil decision in January?",
+        "base_prediction": "\\boxed{A}",
+        "skill_prediction": "\\boxed{A}",
+        "expected_ground_truth": "['A']",
+        "base_correct": true,
+        "skill_correct": true
+      },
+      {
+        "id": "695bb4008b62560069adce53",
+        "title": "Gold (GC) above ___ end of January?",
+        "base_prediction": "\\boxed{H, I, J, K, L}",
+        "skill_prediction": "\\boxed{H, I, J, K, L}",
+        "expected_ground_truth": "['H', 'I', 'J', 'K', 'L']",
+        "base_correct": true,
+        "skill_correct": true
+      },
+      {
+        "id": "695bb4008b62560069adce59",
+        "title": "What will Crude Oil (CL) settle at in January?",
+        "base_prediction": "\\boxed{F}",
+        "skill_prediction": "\\boxed{F}",
+        "expected_ground_truth": "['F']",
+        "base_correct": true,
+        "skill_correct": true
+      },
+      {
+        "id": "695bb4008b62560069adce04",
+        "title": "What will Opendoor (OPEN) hit in January 2026?",
+        "base_prediction": "\\boxed{E, F, G, H, I}",
+        "skill_prediction": "\\boxed{E, F, G, H, I}",
+        "expected_ground_truth": "['E', 'F', 'G', 'H', 'I']",
+        "base_correct": true,
+        "skill_correct": true
+      },
+      {
+        "id": "695bb4008b62560069adce56",
+        "title": "What will Crude Oil (CL) hit__ by end of January?",
+        "base_prediction": "\\boxed{B, C, G, J}",
+        "skill_prediction": "\\boxed{B, C, G, J}",
+        "expected_ground_truth": "['B', 'C', 'G', 'J']",
+        "base_correct": true,
+        "skill_correct": true
+      },
+      {
+        "id": "695bb4008b62560069adce54",
+        "title": "What will Gold (GC) settle at in January?",
+        "base_prediction": "\\boxed{D}",
+        "skill_prediction": "\\boxed{E}",
+        "expected_ground_truth": "['E']",
+        "base_correct": false,
+        "skill_correct": true
+      },
+      {
+        "id": "6957ba8a03568a006853e82e",
+        "title": "Tesla hits $400 or $500 first before end of January 2026?",
+        "base_prediction": "\\boxed{C}",
+        "skill_prediction": "\\boxed{C}",
+        "expected_ground_truth": "['A']",
+        "base_correct": false,
+        "skill_correct": false
+      },
+      {
+        "id": "6957ba8a03568a006853e82f",
+        "title": "Nvidia hits 170, 200 or neither first by end of January 2026?",
+        "base_prediction": "\\boxed{C}",
+        "skill_prediction": "\\boxed{C}",
+        "expected_ground_truth": "['A']",
+        "base_correct": false,
+        "skill_correct": false
+      },
+      {
+        "id": "69590c18deacd00066876763",
+        "title": "Will Bitcoin close above USD $100,000 on 31 January 2026 (UTC)?",
+        "base_prediction": "\\boxed{No}",
+        "skill_prediction": "\\boxed{No}",
+        "expected_ground_truth": "['No']",
+        "base_correct": true,
+        "skill_correct": true
+      },
+      {
+        "id": "69590c18deacd00066876764",
+        "title": "Bitcoin below $82K in January?",
+        "base_prediction": "\\boxed{Yes}",
+        "skill_prediction": "\\boxed{Yes}",
+        "expected_ground_truth": "['Yes']",
+        "base_correct": true,
+        "skill_correct": true
+      }
+    ]
+  },
+  "online": {
+    "base_duration_seconds": 804.59,
+    "skill_duration_seconds": 602.86,
+    "predictions_identical": true,
+    "base_predictions": [
+      {
+        "id": "69a2e39e5692ef005cdbf2d9",
+        "prediction": "\\boxed{F, I, J}"
+      },
+      {
+        "id": "69a2e39e5692ef005cdbf2e9",
+        "prediction": "\\boxed{B, C, D, E, F, G, H, J, K, L, M, N, O}"
+      },
+      {
+        "id": "69a2e39e5692ef005cdbf2d8",
+        "prediction": "\\boxed{A}"
+      },
+      {
+        "id": "69a2e39e5692ef005cdbf2e8",
+        "prediction": "\\boxed{A, C, F, G, H}"
+      },
+      {
+        "id": "69a4319df2cb3b006875e9d0",
+        "prediction": "\\boxed{A}"
+      },
+      {
+        "id": "699c4887d1d3cf005c1e48ad",
+        "prediction": "\\boxed{A}"
+      },
+      {
+        "id": "69a2e39e5692ef005cdbf27c",
+        "prediction": "\\boxed{No}"
+      }
+    ],
+    "skill_predictions": [
+      {
+        "id": "69a2e39e5692ef005cdbf2d9",
+        "prediction": "\\boxed{F, I, J}"
+      },
+      {
+        "id": "69a2e39e5692ef005cdbf2e9",
+        "prediction": "\\boxed{B, C, D, E, F, G, H, J, K, L, M, N, O}"
+      },
+      {
+        "id": "69a2e39e5692ef005cdbf2d8",
+        "prediction": "\\boxed{A}"
+      },
+      {
+        "id": "69a2e39e5692ef005cdbf2e8",
+        "prediction": "\\boxed{A, C, F, G, H}"
+      },
+      {
+        "id": "69a4319df2cb3b006875e9d0",
+        "prediction": "\\boxed{A}"
+      },
+      {
+        "id": "699c4887d1d3cf005c1e48ad",
+        "prediction": "\\boxed{A}"
+      },
+      {
+        "id": "69a2e39e5692ef005cdbf27c",
+        "prediction": "\\boxed{No}"
+      }
+    ]
+  }
+}

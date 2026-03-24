@@ -1,0 +1,558 @@
+{
+  "timestamp": "20260324-105731",
+  "model": "gpt-5.4",
+  "reasoning_effort": "low",
+  "base_url": "https://cap.abel.ai",
+  "ground_truth": {
+    "required_arguments": [
+      "source_node_id",
+      "target_node_id"
+    ],
+    "nvda_parents": [
+      "AGNCO_close",
+      "MBPUSD_close",
+      "PEAKUSD_close"
+    ],
+    "nvda_children": [
+      "MBPUSD_close",
+      "WDCUSD_close"
+    ],
+    "path_nvda_amd": {
+      "connected": true,
+      "path_count": 1
+    },
+    "path_soxx_amd": {
+      "connected": false,
+      "path_count": 0
+    },
+    "observe_nvda_drivers": [
+      "AGNCO_close",
+      "MBPUSD_close",
+      "PEAKUSD_close"
+    ],
+    "connectivity": {
+      "passed": false,
+      "connected_pairs": [
+        "AMD_close|NVDA_close"
+      ]
+    },
+    "intervene_nvda_amd": {
+      "path_exists": true,
+      "effect_returned": false,
+      "intervention_skipped": false,
+      "error_code": "invalid_intervention"
+    },
+    "intervene_soxx_amd": {
+      "path_exists": false,
+      "effect_returned": false,
+      "intervention_skipped": true,
+      "skip_reason": "no_directed_path_found"
+    }
+  },
+  "runs": {
+    "base": {
+      "total_points": 13,
+      "max_points": 14,
+      "accuracy": 0.9286,
+      "tasks": [
+        {
+          "task_id": "methods_graph_paths",
+          "score": {
+            "points": 1,
+            "max_points": 1,
+            "field_results": [
+              {
+                "field": "required_arguments",
+                "expected": [
+                  "source_node_id",
+                  "target_node_id"
+                ],
+                "actual": [
+                  "source_node_id",
+                  "target_node_id"
+                ],
+                "correct": true
+              }
+            ]
+          },
+          "result": {
+            "task_id": "methods_graph_paths",
+            "returncode": 0,
+            "duration_seconds": 52.8,
+            "stdout": "{\"required_arguments\":[\"source_node_id\",\"target_node_id\"]}\n",
+            "stderr": "alse,\"value_type\":\"array\",\"items_type\":\"object\"},{\"name\":\"disclosure_policy\",\"required\":true,\"value_type\":\"object\"},{\"name\":\"bindings\",\"required\":false,\"value_type\":\"object\"},{\"name\":\"extensions\",\"required\":false,\"value_type\":\"object\"}]},{\"verb\":\"meta.methods\",\"surface\":\"core\",\"description\":\"Return machine-readable method metadata for the verbs supported by this CAP endpoint.\",\"arguments\":[{\"name\":\"verbs\",\"description\":\"Specific CAP verbs to describe. Omit or pass an empty list to allow the server to return every supported method.\",\"required\":false,\"value_type\":\"array\",\"items_type\":\"string\"},{\"name\":\"detail\",\"description\":\"How much per-field metadata to include in the method description payload.\",\"required\":false,\"value_type\":\"string\",\"enum\":[\"compact\",\"full\"],\"default\":\"compact\"},{\"name\":\"include_examples\",\"description\":\"Whether to include example values in the returned argument and result-field metadata.\",\"required\":false,\"value_type\":\"boolean\",\"default\":false}],\"result_fields\":[{\"name\":\"methods\",\"required\":false,\"value_type\":\"array\",\"items_type\":\"object\"}]},{\"verb\":\"observe.predict\",\"surface\":\"core\",\"description\":\"Return an observational prediction for one target node.\",\"arguments\":[{\"name\":\"target_node\",\"description\":\"Node identifier to predict under the server's observational mode.\",\"required\":true,\"value_type\":\"string\"}],\"result_fields\":[{\"name\":\"target_node\",\"description\":\"Node identifier that the returned prediction corresponds to.\",\"required\":true,\"value_type\":\"string\"},{\"name\":\"prediction\",\"description\":\"Predicted observational value for the requested target node.\",\"required\":true,\"value_type\":\"number\"},{\"name\":\"drivers\",\"description\":\"Driver node identifiers surfaced by the server as the main explanatory contributors.\",\"required\":false,\"value_type\":\"array\",\"items_type\":\"string\"}]},{\"verb\":\"traverse.children\",\"surface\":\"convenience\",\"description\":\"Return child node identifiers as a thin convenience traversal surface.\",\"arguments\":[{\"name\":\"node_id\",\"description\":\"Node identifier to traverse from.\",\"required\":true,\"value_type\":\"string\"},{\"name\":\"top_k\",\"description\":\"Maximum number of traversed node identifiers to return.\",\"required\":false,\"value_type\":\"integer\",\"default\":10}],\"result_fields\":[{\"name\":\"reasoning_mode\",\"required\":true,\"value_type\":\"string\"},{\"name\":\"identification_status\",\"required\":true,\"value_type\":\"string\"},{\"name\":\"assumptions\",\"required\":false,\"value_type\":\"array\",\"items_type\":\"string\"},{\"name\":\"node_id\",\"description\":\"Queried node identifier.\",\"required\":true,\"value_type\":\"string\"},{\"name\":\"direction\",\"description\":\"Traversal direction used to produce the returned node list.\",\"required\":true,\"value_type\":\"string\",\"enum\":[\"parents\",\"children\"]},{\"name\":\"nodes\",\"description\":\"Traversed node identifiers in the returned order.\",\"required\":false,\"value_type\":\"array\",\"items_type\":\"string\"}]},{\"verb\":\"traverse.parents\",\"surface\":\"convenience\",\"description\":\"Return parent node identifiers as a thin convenience traversal surface.\",\"arguments\":[{\"name\":\"node_id\",\"description\":\"Node identifier to traverse from.\",\"required\":true,\"value_type\":\"string\"},{\"name\":\"top_k\",\"description\":\"Maximum number of traversed node identifiers to return.\",\"required\":false,\"value_type\":\"integer\",\"default\":10}],\"result_fields\":[{\"name\":\"reasoning_mode\",\"required\":true,\"value_type\":\"string\"},{\"name\":\"identification_status\",\"required\":true,\"value_type\":\"string\"},{\"name\":\"assumptions\",\"required\":false,\"value_type\":\"array\",\"items_type\":\"string\"},{\"name\":\"node_id\",\"description\":\"Queried node identifier.\",\"required\":true,\"value_type\":\"string\"},{\"name\":\"direction\",\"description\":\"Traversal direction used to produce the returned node list.\",\"required\":true,\"value_type\":\"string\",\"enum\":[\"parents\",\"children\"]},{\"name\":\"nodes\",\"description\":\"Traversed node identifiers in the returned order.\",\"required\":false,\"value_type\":\"array\",\"items_type\":\"string\"}]}]}}\ncodex\n{\"required_arguments\":[\"source_node_id\",\"target_node_id\"]}\ntokens used\n18,109\n",
+            "raw_output": "{\"required_arguments\":[\"source_node_id\",\"target_node_id\"]}",
+            "parsed_output": {
+              "required_arguments": [
+                "source_node_id",
+                "target_node_id"
+              ]
+            },
+            "parse_error": null
+          }
+        },
+        {
+          "task_id": "nvda_parent_neighbors",
+          "score": {
+            "points": 1,
+            "max_points": 1,
+            "field_results": [
+              {
+                "field": "neighbors",
+                "expected": [
+                  "AGNCO_close",
+                  "MBPUSD_close",
+                  "PEAKUSD_close"
+                ],
+                "actual": [
+                  "AGNCO_close",
+                  "MBPUSD_close",
+                  "PEAKUSD_close"
+                ],
+                "correct": true
+              }
+            ]
+          },
+          "result": {
+            "task_id": "nvda_parent_neighbors",
+            "returncode": 0,
+            "duration_seconds": 130.44,
+            "stdout": "{\"neighbors\":[\"AGNCO_close\",\"MBPUSD_close\",\"PEAKUSD_close\"]}\n",
+            "stderr": "cope\": \"parents\",\n succeeded in 917ms:\n{\n  \"cap_version\": \"0.2.2\",\n  \"request_id\": \"2576359e-9d3f-4fd5-b6ae-35aad406a892\",\n  \"verb\": \"traverse.parents\",\n  \"status\": \"error\",\n  \"error\": {\n    \"code\": \"invalid_request\",\n    \"message\": \"CAP request validation failed.\",\n    \"details\": {\n      \"errors\": [\n        {\n          \"type\": \"missing\",\n          \"loc\": [\n            \"params\"\n          ],\n          \"msg\": \"Field required\",\n          \"input\": {\n            \"verb\": \"traverse.parents\",\n            \"node_id\": \"NVDA_close\",\n            \"top_k\": 1000\ncodex\nThe dispatcher expects arguments under `params`. I have the live validation error now, so I’m retrying with the correct CAP envelope and then checking for truncation.\nexec\n/bin/zsh -lc \"curl -sS https://cap.abel.ai/cap -H 'Content-Type: application/json' -d '{\\\"verb\\\":\\\"graph.neighbors\\\",\\\"params\\\":{\\\"node_id\\\":\\\"NVDA_close\\\",\\\"scope\\\":\\\"parents\\\",\\\"max_neighbors\\\":1000}}' | jq .\" in /Users/zeyu/Documents/bach_private_cacheexec\n/bin/zsh -lc \"curl -sS https://cap.abel.ai/cap -H 'Content-Type: application/json' -d '{\\\"verb\\\":\\\"traverse.parents\\\",\\\"params\\\":{\\\"node_id\\\":\\\"NVDA_close\\\",\\\"top_k\\\":1000}}' | jq .\" in /Users/zeyu/Documents/bach_private_cache succeeded in 895ms:\n{\n  \"cap_version\": \"0.2.2\",\n  \"request_id\": \"4bd41ec6-50b5-4a52-8ee9-56063ef34c4b\",\n  \"verb\": \"traverse.parents\",\n  \"status\": \"error\",\n  \"error\": {\n    \"code\": \"invalid_request\",\n    \"message\": \"CAP request validation failed.\",\n    \"details\": {\n      \"errors\": [\n        {\n          \"type\": \"less_than_equal\",\n          \"loc\": [\n            \"params\",\n            \"top_k\"\n          ],\n          \"msg\": \"Input should be less than or equal to 100\",\n          \"input\": 1000,\n          \"ctx\": {\n            \"le\": 100\n succeeded in 898ms:\n{\n  \"cap_version\": \"0.2.2\",\n  \"request_id\": \"d40955c4-eb0e-49c9-b695-c49920b7c384\",\n  \"verb\": \"graph.neighbors\",\n  \"status\": \"error\",\n  \"error\": {\n    \"code\": \"invalid_request\",\n    \"message\": \"CAP request validation failed.\",\n    \"details\": {\n      \"errors\": [\n        {\n          \"type\": \"less_than_equal\",\n          \"loc\": [\n            \"params\",\n            \"max_neighbors\"\n          ],\n          \"msg\": \"Input should be less than or equal to 100\",\n          \"input\": 1000,\n          \"ctx\": {\n            \"le\": 100\nexec\n/bin/zsh -lc \"curl -sS https://cap.abel.ai/cap -H 'Content-Type: application/json' -d '{\\\"verb\\\":\\\"traverse.parents\\\",\\\"params\\\":{\\\"node_id\\\":\\\"NVDA_close\\\",\\\"top_k\\\":100}}' | jq .\" in /Users/zeyu/Documents/bach_private_cacheexec\n/bin/zsh -lc \"curl -sS https://cap.abel.ai/cap -H 'Content-Type: application/json' -d '{\\\"verb\\\":\\\"graph.neighbors\\\",\\\"params\\\":{\\\"node_id\\\":\\\"NVDA_close\\\",\\\"scope\\\":\\\"parents\\\",\\\"max_neighbors\\\":100}}' | jq .\" in /Users/zeyu/Documents/bach_private_cache succeeded in 1.21s:\n{\n  \"cap_version\": \"0.2.2\",\n  \"request_id\": \"00bfafbb-ee0c-47f1-84c3-97289fdf0e0e\",\n  \"verb\": \"graph.neighbors\",\n  \"status\": \"success\",\n  \"result\": {\n    \"reasoning_mode\": \"identified_causal_effect\",\n    \"identification_status\": \"identified\",\n    \"assumptions\": [\n      \"causal_sufficiency\",\n      \"faithfulness\",\n      \"no_instantaneous_effects\",\n      \"no_latent_confounders_addressed\",\n      \"abel_structural_summary_only\",\n      \"abel_hidden_field_policy\"\n    ],\n    \"node_id\": \"NVDA_close\",\n    \"scope\": \"parents\",\n    \"neighbors\": [\n      {\n succeeded in 1.22s:\n{\n  \"cap_version\": \"0.2.2\",\n  \"request_id\": \"9fbce15e-7c01-4e74-8232-032a85007ecf\",\n  \"verb\": \"traverse.parents\",\n  \"status\": \"success\",\n  \"result\": {\n    \"reasoning_mode\": \"identified_causal_effect\",\n    \"identification_status\": \"identified\",\n    \"assumptions\": [\n      \"causal_sufficiency\",\n      \"faithfulness\",\n      \"no_instantaneous_effects\",\n      \"no_latent_confounders_addressed\",\n      \"abel_structural_summary_only\",\n      \"abel_hidden_field_policy\"\n    ],\n    \"node_id\": \"NVDA_close\",\n    \"direction\": \"parents\",\n    \"nodes\": []\n  },\ncodex\n{\"neighbors\":[\"AGNCO_close\",\"MBPUSD_close\",\"PEAKUSD_close\"]}\ntokens used\n41,050\n",
+            "raw_output": "{\"neighbors\":[\"AGNCO_close\",\"MBPUSD_close\",\"PEAKUSD_close\"]}",
+            "parsed_output": {
+              "neighbors": [
+                "AGNCO_close",
+                "MBPUSD_close",
+                "PEAKUSD_close"
+              ]
+            },
+            "parse_error": null
+          }
+        },
+        {
+          "task_id": "path_nvda_amd",
+          "score": {
+            "points": 2,
+            "max_points": 2,
+            "field_results": [
+              {
+                "field": "connected",
+                "expected": true,
+                "actual": true,
+                "correct": true
+              },
+              {
+                "field": "path_count",
+                "expected": 1,
+                "actual": 1,
+                "correct": true
+              }
+            ]
+          },
+          "result": {
+            "task_id": "path_nvda_amd",
+            "returncode": 0,
+            "duration_seconds": 72.82,
+            "stdout": "{\"connected\":true,\"path_count\":1}\n",
+            "stderr": "in /Users/zeyu/Documents/bach_private_cacheexec\n/bin/zsh -lc \"curl -sS -X POST https://cap.abel.ai/cap -H 'Content-Type: application/json' -d '{\\\"verb\\\":\\\"meta.capabilities\\\"}' | jq '.'\" in /Users/zeyu/Documents/bach_private_cache succeeded in 1.13s:\n{\n  \"cap_version\": \"0.2.2\",\n  \"request_id\": \"bf4bf6fd-2fab-4daa-b054-3fb9b6b2845f\",\n  \"verb\": \"meta.capabilities\",\n  \"status\": \"success\",\n  \"result\": {\n    \"$schema\": \"https://causalagentprotocol.org/schema/capability-card/v0.2.2.json\",\n    \"name\": \"Abel CAP Primitive Adapter\",\n    \"description\": \"CAP 0.2.2 adapter over Abel Graph Computer primitives. This service treats the primitive layer as the execution substrate, preserves its hidden-field policy by default, and exposes intervention results using the server's default linear SCM rollout over the public time-lagged graph. The current public graph profile is abel-main on CausalNodeV2; semantic node types include close_price and volume, while public node ids are expected in '<ticker>_close' or '<ticker>_volume' form.\",\n    \"version\": \"0.1.0\",\n    \"cap_spec_version\": \"0.2.2\",\n    \"provider\": {\n      \"name\": \"Abel AI\",\n      \"url\": \"https://abel.ai\"\n    },\n    \"endpoint\": \"http://cap.abel.ai/cap\",\n    \"conformance_level\": 2,\n    \"supported_verbs\": {\n      \"core\": [\n        \"meta.capabilities\",\n succeeded in 1.21s:\n{\n  \"cap_version\": \"0.2.2\",\n  \"request_id\": \"f11acf1f-b756-4230-a78f-1455825947b7\",\n  \"verb\": \"meta.methods\",\n  \"status\": \"success\",\n  \"result\": {\n    \"methods\": [\n      {\n        \"verb\": \"extensions.abel.counterfactual_preview\",\n        \"surface\": \"extension\",\n        \"description\": \"Return a preview counterfactual-style rollout summary over the Abel extension surface.\",\n        \"arguments\": [\n          {\n            \"name\": \"intervene_node\",\n            \"description\": \"Node identifier to perturb in the preview rollout.\",\n            \"required\": true,\n            \"value_type\": \"string\"\n          },\n          {\n            \"name\": \"intervene_time\",\ncodex\nI have the live request shape. I’m issuing the actual `graph.paths` call now against `NVDA_close -> AMD_close` with `max_paths=3`.\nexec\n/bin/zsh -lc \"curl -sS -X POST https://cap.abel.ai/cap -H 'Content-Type: application/json' -d '{\\\"verb\\\":\\\"graph.paths\\\",\\\"source_node_id\\\":\\\"NVDA_close\\\",\\\"target_node_id\\\":\\\"AMD_close\\\",\\\"max_paths\\\":3}' | jq '.'\" in /Users/zeyu/Documents/bach_private_cache succeeded in 922ms:\n{\n  \"cap_version\": \"0.2.2\",\n  \"request_id\": \"1da97131-9f1a-4ffc-8915-5b273fffdc34\",\n  \"verb\": \"graph.paths\",\n  \"status\": \"error\",\n  \"error\": {\n    \"code\": \"invalid_request\",\n    \"message\": \"CAP request validation failed.\",\n    \"details\": {\n      \"errors\": [\n        {\n          \"type\": \"missing\",\n          \"loc\": [\n            \"params\"\n          ],\n          \"msg\": \"Field required\",\n          \"input\": {\n            \"verb\": \"graph.paths\",\n            \"source_node_id\": \"NVDA_close\",\n            \"target_node_id\": \"AMD_close\",\ncodex\nThe endpoint requires arguments under a `params` object, not top-level fields. I’m retrying with the validated envelope.\nexec\n/bin/zsh -lc \"curl -sS -X POST https://cap.abel.ai/cap -H 'Content-Type: application/json' -d '{\\\"verb\\\":\\\"graph.paths\\\",\\\"params\\\":{\\\"source_node_id\\\":\\\"NVDA_close\\\",\\\"target_node_id\\\":\\\"AMD_close\\\",\\\"max_paths\\\":3}}' | jq '.'\" in /Users/zeyu/Documents/bach_private_cache succeeded in 936ms:\n{\n  \"cap_version\": \"0.2.2\",\n  \"request_id\": \"7d139143-f7d8-4293-ac41-04e56facd74a\",\n  \"verb\": \"graph.paths\",\n  \"status\": \"success\",\n  \"result\": {\n    \"reasoning_mode\": \"structural_semantics\",\n    \"identification_status\": \"not_applicable\",\n    \"assumptions\": [\n      \"causal_sufficiency\",\n      \"faithfulness\",\n      \"no_instantaneous_effects\",\n      \"no_latent_confounders_addressed\",\n      \"abel_structural_summary_only\",\n      \"abel_hidden_field_policy\"\n    ],\n    \"source_node_id\": \"NVDA_close\",\n    \"target_node_id\": \"AMD_close\",\n    \"connected\": true,\n    \"path_count\": 1,\ncodex\n{\"connected\":true,\"path_count\":1}\ntokens used\n19,988\n",
+            "raw_output": "{\"connected\":true,\"path_count\":1}",
+            "parsed_output": {
+              "connected": true,
+              "path_count": 1
+            },
+            "parse_error": null
+          }
+        },
+        {
+          "task_id": "validate_connectivity",
+          "score": {
+            "points": 2,
+            "max_points": 2,
+            "field_results": [
+              {
+                "field": "passed",
+                "expected": false,
+                "actual": false,
+                "correct": true
+              },
+              {
+                "field": "connected_pairs",
+                "expected": [
+                  "AMD_close|NVDA_close"
+                ],
+                "actual": [
+                  "AMD_close|NVDA_close"
+                ],
+                "correct": true
+              }
+            ]
+          },
+          "result": {
+            "task_id": "validate_connectivity",
+            "returncode": 0,
+            "duration_seconds": 72.14,
+            "stdout": "{\"passed\":false,\"connected_pairs\":[\"AMD_close|NVDA_close\"]}\n",
+            "stderr": "e, so I’m retrying with the server’s actual request shape rather than the method metadata shorthand.\nexec\n/bin/zsh -lc \"curl -sS -X POST https://cap.abel.ai/cap -H 'Content-Type: application/json' -d '{\\\"verb\\\":\\\"extensions.abel.validate_connectivity\\\",\\\"params\\\":{\\\"variables\\\":[\\\"NVDA_close\\\",\\\"AMD_close\\\",\\\"SOXX_close\\\"]}}'\" in /Users/zeyu/Documents/bach_private_cacheexec\n/bin/zsh -lc \"curl -sS -X POST https://cap.abel.ai/cap -H 'Content-Type: application/json' -d '{\\\"verb\\\":\\\"meta.methods\\\",\\\"params\\\":{\\\"verbs\\\":[\\\"extensions.abel.validate_connectivity\\\"],\\\"detail\\\":\\\"full\\\",\\\"include_examples\\\":true}}'\" in /Users/zeyu/Documents/bach_private_cache succeeded in 909ms:\n{\"cap_version\":\"0.2.2\",\"request_id\":\"c5cf4e76-bced-453c-a473-59494647cd85\",\"verb\":\"meta.methods\",\"status\":\"success\",\"result\":{\"methods\":[{\"verb\":\"extensions.abel.validate_connectivity\",\"surface\":\"extension\",\"description\":\"Validate connectivity across a small variable set using the Abel extension surface.\",\"arguments\":[{\"name\":\"variables\",\"description\":\"Node identifiers to check for pairwise connectivity across the Abel graph.\",\"required\":true,\"value_type\":\"array\",\"items_type\":\"string\",\"examples\":[[\"NVDA_close\",\"AMD_close\",\"SOXX_close\"]]}],\"result_fields\":[{\"name\":\"reasoning_mode\",\"required\":true,\"value_type\":\"string\"},{\"name\":\"identification_status\",\"required\":true,\"value_type\":\"string\"},{\"name\":\"assumptions\",\"required\":false,\"value_type\":\"array\",\"items_type\":\"string\"},{\"name\":\"validation_method\",\"description\":\"Validation procedure name disclosed by the Abel extension surface.\",\"required\":true,\"value_type\":\"string\"},{\"name\":\"proxy_only\",\"description\":\"Whether the validation result is only a proxy connectivity signal rather than a formal causal guarantee.\",\"required\":false,\"value_type\":\"boolean\",\"default\":true},{\"name\":\"connectivity_semantics\",\"description\":\"Interpretation of the connectivity signal used for this extension result.\",\"required\":false,\"value_type\":\"string\",\"default\":\"undirected_shortest_path_proxy\"},{\"name\":\"passed\",\"description\":\"Whether the requested variable set passed the extension connectivity check.\",\"required\":true,\"value_type\":\"boolean\"},{\"name\":\"valid_variables\",\"description\":\"Input node identifiers accepted for connectivity evaluation.\",\"required\":false,\"value_type\":\"array\",\"items_type\":\"string\"},{\"name\":\"invalid_variables\",\"description\":\"Input node identifiers rejected by validation.\",\"required\":false,\"value_type\":\"array\",\"items_type\":\"object\"},{\"name\":\"pair_results\",\"description\":\"Per-pair connectivity outcomes returned by the validator.\",\"required\":false,\"value_type\":\"array\",\"items_type\":\"object\"}]}]}}\n succeeded in 3.56s:\n{\"cap_version\":\"0.2.2\",\"request_id\":\"4aa201c2-52cf-453c-ad7f-ecea93e84932\",\"verb\":\"extensions.abel.validate_connectivity\",\"status\":\"success\",\"result\":{\"reasoning_mode\":\"validation_gate\",\"identification_status\":\"not_applicable\",\"assumptions\":[\"abel_connectivity_proxy_not_strict_d_separation\",\"abel_hidden_field_policy\"],\"validation_method\":\"shortest_path_connectivity_proxy\",\"proxy_only\":true,\"connectivity_semantics\":\"undirected_shortest_path_proxy\",\"passed\":false,\"valid_variables\":[],\"invalid_variables\":[{\"node\":\"AMD_close\",\"reason\":\"No undirected shortest path found to at least one peer variable within max_depth=10.\"},{\"node\":\"NVDA_close\",\"reason\":\"No undirected shortest path found to at least one peer variable within max_depth=10.\"},{\"node\":\"SOXX_close\",\"reason\":\"No undirected shortest path found to at least one peer variable within max_depth=10.\"}],\"pair_results\":[{\"node_a\":\"NVDA_close\",\"node_b\":\"AMD_close\",\"connected\":true},{\"node_a\":\"NVDA_close\",\"node_b\":\"SOXX_close\",\"connected\":false},{\"node_a\":\"AMD_close\",\"node_b\":\"SOXX_close\",\"connected\":false}]},\"provenance\":{\"algorithm\":\"primitive.validate\",\"graph_version\":\"CausalNodeV2\",\"computation_time_ms\":2591,\"server_name\":\"abel-cap\",\"server_version\":\"0.1.0\",\"cap_spec_version\":\"0.2.2\"}}\ncodex\n{\"passed\":false,\"connected_pairs\":[\"AMD_close|NVDA_close\"]}\ntokens used\n20,075\n",
+            "raw_output": "{\"passed\":false,\"connected_pairs\":[\"AMD_close|NVDA_close\"]}",
+            "parsed_output": {
+              "passed": false,
+              "connected_pairs": [
+                "AMD_close|NVDA_close"
+              ]
+            },
+            "parse_error": null
+          }
+        },
+        {
+          "task_id": "intervene_nvda_amd",
+          "score": {
+            "points": 4,
+            "max_points": 4,
+            "field_results": [
+              {
+                "field": "path_exists",
+                "expected": true,
+                "actual": true,
+                "correct": true
+              },
+              {
+                "field": "effect_returned",
+                "expected": false,
+                "actual": false,
+                "correct": true
+              },
+              {
+                "field": "intervention_skipped",
+                "expected": false,
+                "actual": false,
+                "correct": true
+              },
+              {
+                "field": "error_code",
+                "expected": "invalid_intervention",
+                "actual": "invalid_intervention",
+                "correct": true
+              }
+            ]
+          },
+          "result": {
+            "task_id": "intervene_nvda_amd",
+            "returncode": 0,
+            "duration_seconds": 170.31,
+            "stdout": "{\"path_exists\":true,\"effect_returned\":false,\"intervention_skipped\":false,\"error_code\":\"invalid_intervention\"}\n",
+            "stderr": "4dd-fa56d058b69a\",\n  \"verb\": \"extensions.abel.validate_connectivity\",\n  \"status\": \"success\",\n  \"result\": {\n    \"reasoning_mode\": \"validation_gate\",\n    \"identification_status\": \"not_applicable\",\n    \"assumptions\": [\n      \"abel_connectivity_proxy_not_strict_d_separation\",\n      \"abel_hidden_field_policy\"\n    ],\n    \"validation_method\": \"shortest_path_connectivity_proxy\",\n    \"proxy_only\": true,\n    \"connectivity_semantics\": \"undirected_shortest_path_proxy\",\n    \"passed\": true,\n    \"valid_variables\": [\n      \"NVDA_close\",\n      \"AMD_close\"\n    ],\ncodex\nThe direct `intervene.do` call came back with `invalid_intervention` and no `result.effect`. I’m checking the raw response once and a closely related intervention surface to distinguish “no returned effect” from “skipped before rollout.”\nexec\n/bin/zsh -lc \"curl -sS -D - https://cap.abel.ai/cap -H 'Content-Type: application/json' -d '{\\\"verb\\\":\\\"intervene.do\\\",\\\"params\\\":{\\\"treatment_node\\\":\\\"NVDA_close\\\",\\\"treatment_value\\\":0.05,\\\"outcome_node\\\":\\\"AMD_close\\\"}}' -o /tmp/abel_intervene_raw && echo '---BODY---' && cat /tmp/abel_intervene_raw\" in /Users/zeyu/Documents/bach_private_cacheexec\n/bin/zsh -lc \"curl -sS https://cap.abel.ai/cap -H 'Content-Type: application/json' -d '{\\\"verb\\\":\\\"extensions.abel.intervene_time_lag\\\",\\\"params\\\":{\\\"treatment_node\\\":\\\"NVDA_close\\\",\\\"treatment_value\\\":0.05,\\\"outcome_node\\\":\\\"AMD_close\\\",\\\"horizon_steps\\\":4}}' | jq .\" in /Users/zeyu/Documents/bach_private_cache succeeded in 973ms:\n{\n  \"cap_version\": \"0.2.2\",\n  \"request_id\": \"d72fd420-0bd8-4925-a719-aed5085722da\",\n  \"verb\": \"extensions.abel.intervene_time_lag\",\n  \"status\": \"error\",\n  \"error\": {\n    \"code\": \"invalid_intervention\",\n    \"message\": \"{\\\"message\\\":\\\"No propagated effect was returned for outcome_node='AMD_close'.\\\"}\",\n    \"details\": {}\n  }\n}\n succeeded in 1.04s:\nHTTP/2 400 \ndate: Tue, 24 Mar 2026 03:09:31 GMT\ncontent-type: application/json\ncontent-length: 261\nx-request-id: 4563aeff9775292a654796998088cdc1\nstrict-transport-security: max-age=31536000; includeSubDomains\n\n---BODY---\n{\"cap_version\":\"0.2.2\",\"request_id\":\"df5c4490-2b6f-4a4a-a43d-9d7ca20bdf8f\",\"verb\":\"intervene.do\",\"status\":\"error\",\"error\":{\"code\":\"invalid_intervention\",\"message\":\"{\\\"message\\\":\\\"No propagated effect was returned for outcome_node='AMD_close'.\\\"}\",\"details\":{}}}\ncodex\nI haven’t found any explicit `skipped` flag on the public surface. I’m doing one last check with common API-key headers in case the authenticated response exposes richer diagnostics; otherwise I’ll rely on the live public error plus the explicit path endpoints.\nexec\n/bin/zsh -lc \"curl -sS https://cap.abel.ai/cap -H 'Content-Type: application/json' -H \\\"Authorization: Bearer \"'$ABEL_API_KEY\" -d '\"'{\\\"verb\\\":\\\"intervene.do\\\",\\\"params\\\":{\\\"treatment_node\\\":\\\"NVDA_close\\\",\\\"treatment_value\\\":0.05,\\\"outcome_node\\\":\\\"AMD_close\\\"}}' | jq .\" in /Users/zeyu/Documents/bach_private_cacheexec\n/bin/zsh -lc \"curl -sS https://cap.abel.ai/cap -H 'Content-Type: application/json' -H \\\"x-api-key: \"'$ABEL_API_KEY\" -d '\"'{\\\"verb\\\":\\\"intervene.do\\\",\\\"params\\\":{\\\"treatment_node\\\":\\\"NVDA_close\\\",\\\"treatment_value\\\":0.05,\\\"outcome_node\\\":\\\"AMD_close\\\"}}' | jq .\" in /Users/zeyu/Documents/bach_private_cache succeeded in 1.05s:\n{\n  \"cap_version\": \"0.2.2\",\n  \"request_id\": \"9e4192a0-0938-4098-89d2-31277687409a\",\n  \"verb\": \"intervene.do\",\n  \"status\": \"error\",\n  \"error\": {\n    \"code\": \"invalid_intervention\",\n    \"message\": \"{\\\"message\\\":\\\"No propagated effect was returned for outcome_node='AMD_close'.\\\"}\",\n    \"details\": {}\n  }\n}\n succeeded in 975ms:\n{\n  \"cap_version\": \"0.2.2\",\n  \"request_id\": \"282b994d-c0ac-4d3e-bccc-3c9877ceec40\",\n  \"verb\": \"intervene.do\",\n  \"status\": \"error\",\n  \"error\": {\n    \"code\": \"invalid_intervention\",\n    \"message\": \"{\\\"message\\\":\\\"No propagated effect was returned for outcome_node='AMD_close'.\\\"}\",\n    \"details\": {}\n  }\n}\ncodex\n{\"path_exists\":true,\"effect_returned\":false,\"intervention_skipped\":false,\"error_code\":\"invalid_intervention\"}\ntokens used\n27,129\n",
+            "raw_output": "{\"path_exists\":true,\"effect_returned\":false,\"intervention_skipped\":false,\"error_code\":\"invalid_intervention\"}",
+            "parsed_output": {
+              "path_exists": true,
+              "effect_returned": false,
+              "intervention_skipped": false,
+              "error_code": "invalid_intervention"
+            },
+            "parse_error": null
+          }
+        },
+        {
+          "task_id": "intervene_soxx_amd",
+          "score": {
+            "points": 3,
+            "max_points": 4,
+            "field_results": [
+              {
+                "field": "path_exists",
+                "expected": false,
+                "actual": false,
+                "correct": true
+              },
+              {
+                "field": "effect_returned",
+                "expected": false,
+                "actual": false,
+                "correct": true
+              },
+              {
+                "field": "intervention_skipped",
+                "expected": true,
+                "actual": true,
+                "correct": true
+              },
+              {
+                "field": "skip_reason",
+                "expected": "no_directed_path_found",
+                "actual": "no_structural_path",
+                "correct": false
+              }
+            ]
+          },
+          "result": {
+            "task_id": "intervene_soxx_amd",
+            "returncode": 0,
+            "duration_seconds": 236.45,
+            "stdout": "{\"path_exists\":false,\"effect_returned\":false,\"intervention_skipped\":true,\"skip_reason\":\"no_structural_path\"}\n",
+            "stderr": "fect\",\n    \"identification_status\": \"identified\",\n    \"assumptions\": [\n      \"causal_sufficiency\",\n      \"faithfulness\",\n      \"no_instantaneous_effects\",\n      \"no_latent_confounders_addressed\",\n      \"abel_structural_summary_only\",\n      \"abel_hidden_field_policy\"\n    ],\n    \"node_id\": \"SOXX_close\",\n    \"scope\": \"children\",\n    \"neighbors\": [],\n    \"total_candidate_count\": 0,\ncodex\nI found one strong clue in the live method metadata: Abel already uses the label `no_structural_path` on its preview surface. I’m scanning the exposed method metadata for any explicit `skip_reason` field before I finalize that mapping.\nexec\n/bin/zsh -lc \"curl -sS https://cap.abel.ai/cap -H 'Content-Type: application/json' -d '{\\\"verb\\\":\\\"meta.methods\\\",\\\"params\\\":{\\\"detail\\\":\\\"full\\\"}}' | jq -r '.. | strings' | rg 'skip|reason|no_structural_path|reachable'\" in /Users/zeyu/Documents/bach_private_cache succeeded in 1.20s:\nreasoning_mode\nreachable\nno_structural_path\nreachable\nWhether the observe node is structurally reachable from the intervene node.\nreasoning_mode\nreasoning_mode\nreasoning_mode\nreasoning_mode\nreasoning_mode\nreasoning_mode\nreasoning_mode\nreasoning_modes_supported\nreasoning_mode\nreasoning_mode\ncodex\nI don’t see an exposed `skip_reason` field anywhere in the public method schema. I’m doing one last live check against Abel’s preview surface, because it may disclose the exact no-path label on an actual result rather than just in metadata.\nexec\n/bin/zsh -lc \"curl -sS https://cap.abel.ai/cap -H 'Content-Type: application/json' -d '{\\\"verb\\\":\\\"extensions.abel.observe_predict_resolved_time\\\",\\\"params\\\":{\\\"target_node\\\":\\\"AMD_close\\\"}}' | jq .\" in /Users/zeyu/Documents/bach_private_cacheexec\n/bin/zsh -lc \"curl -sS https://cap.abel.ai/cap -H 'Content-Type: application/json' -d '{\\\"verb\\\":\\\"extensions.abel.observe_predict_resolved_time\\\",\\\"params\\\":{\\\"target_node\\\":\\\"SOXX_close\\\"}}' | jq .\" in /Users/zeyu/Documents/bach_private_cache succeeded in 1.14s:\n{\n  \"cap_version\": \"0.2.2\",\n  \"request_id\": \"1f8fc99c-d0ad-410d-93f7-b59905e93502\",\n  \"verb\": \"extensions.abel.observe_predict_resolved_time\",\n  \"status\": \"success\",\n  \"result\": {\n    \"target_node\": \"AMD_close\",\n    \"resolved_target_time\": \"2026-03-30T16:00:00Z\",\n    \"prediction\": 0.0008416707104027912,\n    \"drivers\": [\n      \"MLNUSD_close\",\n      \"PEAKUSD_close\"\n    ]\n  },\n  \"provenance\": {\n    \"algorithm\": \"primitive.predict\",\n    \"graph_version\": \"CausalNodeV2\",\n    \"computation_time_ms\": 226,\n    \"server_name\": \"abel-cap\",\n    \"server_version\": \"0.1.0\",\n succeeded in 1.15s:\n{\n  \"cap_version\": \"0.2.2\",\n  \"request_id\": \"72d28a54-8389-4c1c-ae70-da39d4b2412b\",\n  \"verb\": \"extensions.abel.observe_predict_resolved_time\",\n  \"status\": \"error\",\n  \"error\": {\n    \"code\": \"service_unavailable\",\n    \"message\": \"Abel primitive service is unavailable.\",\n    \"details\": {\n      \"upstream_detail\": \"{\\\"message\\\":\\\"No materialized prediction history available for target_node=SOXX_close\\\"}\"\n    }\n  }\n}\ncodex\nI have enough to answer, but I’m probing the preview verb once with the AMD resolved time to see whether Abel emits the exact `no_structural_path` label on a live result for this pair.\nexec\n/bin/zsh -lc \"curl -sS https://cap.abel.ai/cap -H 'Content-Type: application/json' -d '{\\\"verb\\\":\\\"extensions.abel.counterfactual_preview\\\",\\\"params\\\":{\\\"intervene_node\\\":\\\"SOXX_close\\\",\\\"intervene_time\\\":\\\"2026-03-30T16:00:00Z\\\",\\\"observe_node\\\":\\\"AMD_close\\\",\\\"observe_time\\\":\\\"2026-03-30T16:00:00Z\\\",\\\"intervene_new_value\\\":0.05}}' | jq .\" in /Users/zeyu/Documents/bach_private_cache succeeded in 1.10s:\n{\n  \"cap_version\": \"0.2.2\",\n  \"request_id\": \"1976a5bc-5826-4730-b12e-1d3649c1021b\",\n  \"verb\": \"extensions.abel.counterfactual_preview\",\n  \"status\": \"error\",\n  \"error\": {\n    \"code\": \"node_not_found\",\n    \"message\": \"{\\\"message\\\":\\\"Target node not found: SOXX_close\\\"}\",\n    \"details\": {}\n  }\n}\ncodex\n{\"path_exists\":false,\"effect_returned\":false,\"intervention_skipped\":true,\"skip_reason\":\"no_structural_path\"}\ntokens used\n38,217\n",
+            "raw_output": "{\"path_exists\":false,\"effect_returned\":false,\"intervention_skipped\":true,\"skip_reason\":\"no_structural_path\"}",
+            "parsed_output": {
+              "path_exists": false,
+              "effect_returned": false,
+              "intervention_skipped": true,
+              "skip_reason": "no_structural_path"
+            },
+            "parse_error": null
+          }
+        }
+      ]
+    },
+    "skill": {
+      "total_points": 14,
+      "max_points": 14,
+      "accuracy": 1.0,
+      "tasks": [
+        {
+          "task_id": "methods_graph_paths",
+          "score": {
+            "points": 1,
+            "max_points": 1,
+            "field_results": [
+              {
+                "field": "required_arguments",
+                "expected": [
+                  "source_node_id",
+                  "target_node_id"
+                ],
+                "actual": [
+                  "source_node_id",
+                  "target_node_id"
+                ],
+                "correct": true
+              }
+            ]
+          },
+          "result": {
+            "task_id": "methods_graph_paths",
+            "returncode": 0,
+            "duration_seconds": 57.23,
+            "stdout": "{\"required_arguments\":[\"source_node_id\",\"target_node_id\"]}\n",
+            "stderr": "ods\",\n402:def _cmd_methods(args: argparse.Namespace) -> dict[str, Any]:\n410:    return _call_verb(args, \"meta.methods\", params or None)\n714:    methods = sub.add_parser(\n715:        \"methods\",\n716:        help=\"Call meta.methods, optionally narrowed to specific verbs.\",\n718:    methods.add_argument(\n723:    methods.add_argument(\n729:    methods.add_argument(\n734:    methods.set_defaults(func=_cmd_methods)\nexec\n/bin/zsh -lc \"sed -n '390,445p' /Users/zeyu/Documents/bach_private_cache/.bench/codex_home_skill/skills/causal-abel/scripts/cap_probe.py\" in /Users/zeyu/Documents/bach_private_cache succeeded in 0ms:\n        args.input_value,\n        default_suffix=args.default_suffix,\n    )\n    return {\n        \"ok\": True,\n        \"status_code\": 0,\n        \"input\": args.input_value,\n        \"normalized_node_id\": normalized,\n        \"default_suffix\": args.default_suffix,\n    }\n\n\ndef _cmd_methods(args: argparse.Namespace) -> dict[str, Any]:\n    params: dict[str, Any] = {}\n    if args.verbs:\n        params[\"verbs\"] = args.verbs\n    if args.detail != \"compact\":\n        params[\"detail\"] = args.detail\n    if args.include_examples:\n        params[\"include_examples\"] = True\nexec\n/bin/zsh -lc \"sed -n '445,490p' /Users/zeyu/Documents/bach_private_cache/.bench/codex_home_skill/skills/causal-abel/scripts/cap_probe.py\" in /Users/zeyu/Documents/bach_private_cache succeeded in 0ms:\n        {\n            \"source_node_id\": _normalize_public_node_id(\n                args.source_node_id,\n                default_suffix=args.default_suffix,\n            ),\n            \"target_node_id\": _normalize_public_node_id(\n                args.target_node_id,\n                default_suffix=args.default_suffix,\n            ),\n            \"max_paths\": args.max_paths,\n        },\n    )\n\n\ndef _cmd_markov_blanket(args: argparse.Namespace) -> dict[str, Any]:\n    return _call_verb(\n        args,\n        \"graph.markov_blanket\",\n        {\n            \"node_id\": _normalize_public_node_id(\ncodex\nI’ve confirmed the probe script supports targeted `meta.methods` reads for specific verbs. I’m using that against the live server now so the answer comes from the server contract, not the local helper code.\nexec\n/bin/zsh -lc 'python3 /Users/zeyu/Documents/bach_private_cache/.bench/codex_home_skill/skills/causal-abel/scripts/cap_probe.py --base-url https://cap.abel.ai methods graph.paths --pick-fields result.methods --compact' in /Users/zeyu/Documents/bach_private_cache succeeded in 1.16s:\n{\"ok\":true,\"status_code\":200,\"verb\":\"meta.methods\",\"request_id\":\"4b6fdeaa-0194-4d39-8364-3d159b48a543\",\"result\":{\"methods\":[{\"verb\":\"graph.paths\",\"surface\":\"core\",\"description\":\"Return causal paths between two nodes.\",\"arguments\":[{\"name\":\"source_node_id\",\"description\":\"Start node identifier for the path query.\",\"required\":true,\"value_type\":\"string\"},{\"name\":\"target_node_id\",\"description\":\"End node identifier for the path query.\",\"required\":true,\"value_type\":\"string\"},{\"name\":\"max_paths\",\"description\":\"Maximum number of paths to return.\",\"required\":false,\"value_type\":\"integer\",\"default\":3}],\"result_fields\":[{\"name\":\"reasoning_mode\",\"required\":true,\"value_type\":\"string\"},{\"name\":\"identification_status\",\"required\":true,\"value_type\":\"string\"},{\"name\":\"assumptions\",\"required\":false,\"value_type\":\"array\",\"items_type\":\"string\"},{\"name\":\"source_node_id\",\"description\":\"Requested source node identifier.\",\"required\":true,\"value_type\":\"string\"},{\"name\":\"target_node_id\",\"description\":\"Requested target node identifier.\",\"required\":true,\"value_type\":\"string\"},{\"name\":\"connected\",\"description\":\"Whether the server found at least one path between the requested nodes.\",\"required\":true,\"value_type\":\"boolean\"},{\"name\":\"path_count\",\"description\":\"Number of returned paths or discovered paths, depending on server disclosure.\",\"required\":true,\"value_type\":\"integer\"},{\"name\":\"paths\",\"required\":false,\"value_type\":\"array\",\"items_type\":\"object\"}]}]}}\ncodex\n{\"required_arguments\":[\"source_node_id\",\"target_node_id\"]}\ntokens used\n12,124\n",
+            "raw_output": "{\"required_arguments\":[\"source_node_id\",\"target_node_id\"]}",
+            "parsed_output": {
+              "required_arguments": [
+                "source_node_id",
+                "target_node_id"
+              ]
+            },
+            "parse_error": null
+          }
+        },
+        {
+          "task_id": "nvda_parent_neighbors",
+          "score": {
+            "points": 1,
+            "max_points": 1,
+            "field_results": [
+              {
+                "field": "neighbors",
+                "expected": [
+                  "AGNCO_close",
+                  "MBPUSD_close",
+                  "PEAKUSD_close"
+                ],
+                "actual": [
+                  "AGNCO_close",
+                  "MBPUSD_close",
+                  "PEAKUSD_close"
+                ],
+                "correct": true
+              }
+            ]
+          },
+          "result": {
+            "task_id": "nvda_parent_neighbors",
+            "returncode": 0,
+            "duration_seconds": 63.53,
+            "stdout": "{\"neighbors\":[\"AGNCO_close\",\"MBPUSD_close\",\"PEAKUSD_close\"]}\n",
+            "stderr": "{\"verb\":\"graph.neighbors\",\"surface\":\"core\",\"description\":\"Return immediate structural neighbors for a requested node.\",\"arguments\":[{\"name\":\"node_id\",\"description\":\"Node identifier whose immediate neighbors should be listed.\",\"required\":true,\"value_type\":\"string\",\"min_length\":1},{\"name\":\"scope\",\"description\":\"Which immediate structural side of the node to inspect.\",\"required\":true,\"value_type\":\"string\",\"enum\":[\"parents\",\"children\"]},{\"name\":\"max_neighbors\",\"description\":\"Maximum number of neighbor entries to return.\",\"required\":false,\"value_type\":\"integer\",\"default\":10,\"minimum\":0,\"maximum\":100}],\"result_fields\":[{\"name\":\"reasoning_mode\",\"required\":true,\"value_type\":\"string\"},{\"name\":\"identification_status\",\"required\":true,\"value_type\":\"string\"},{\"name\":\"assumptions\",\"required\":false,\"value_type\":\"array\",\"items_type\":\"string\"},{\"name\":\"node_id\",\"description\":\"Queried node identifier.\",\"required\":true,\"value_type\":\"string\"},{\"name\":\"scope\",\"description\":\"Structural direction used for the lookup.\",\"required\":true,\"value_type\":\"string\",\"enum\":[\"parents\",\"children\"]},{\"name\":\"neighbors\",\"description\":\"Neighbor entries returned by the server.\",\"required\":false,\"value_type\":\"array\",\"items_type\":\"object\"},{\"name\":\"total_candidate_count\",\"description\":\"Total number of candidate neighbors before truncation, when disclosed.\",\"required\":false,\"value_type\":\"integer\"},{\"name\":\"truncated\",\"description\":\"Whether the returned neighbor list was truncated by server-side limits.\",\"required\":false,\"value_type\":\"boolean\",\"default\":false},{\"name\":\"edge_semantics\",\"description\":\"Server disclosure for how to interpret the returned edge relation.\",\"required\":false,\"value_type\":\"string\"}]},{\"verb\":\"traverse.parents\",\"surface\":\"convenience\",\"description\":\"Return parent node identifiers as a thin convenience traversal surface.\",\"arguments\":[{\"name\":\"node_id\",\"description\":\"Node identifier to traverse from.\",\"required\":true,\"value_type\":\"string\",\"min_length\":1},{\"name\":\"top_k\",\"description\":\"Maximum number of traversed node identifiers to return.\",\"required\":false,\"value_type\":\"integer\",\"default\":10,\"minimum\":0,\"maximum\":100}],\"result_fields\":[{\"name\":\"reasoning_mode\",\"required\":true,\"value_type\":\"string\"},{\"name\":\"identification_status\",\"required\":true,\"value_type\":\"string\"},{\"name\":\"assumptions\",\"required\":false,\"value_type\":\"array\",\"items_type\":\"string\"},{\"name\":\"node_id\",\"description\":\"Queried node identifier.\",\"required\":true,\"value_type\":\"string\"},{\"name\":\"direction\",\"description\":\"Traversal direction used to produce the returned node list.\",\"required\":true,\"value_type\":\"string\",\"enum\":[\"parents\",\"children\"]},{\"name\":\"nodes\",\"description\":\"Traversed node identifiers in the returned order.\",\"required\":false,\"value_type\":\"array\",\"items_type\":\"string\"}]}]}}\n succeeded in 1.31s:\n{\"ok\":true,\"status_code\":200,\"cap_version\":\"0.2.2\",\"request_id\":\"6a4b9687-6db7-43bc-9e0b-0f7bee67a829\",\"verb\":\"graph.neighbors\",\"status\":\"success\",\"result\":{\"reasoning_mode\":\"identified_causal_effect\",\"identification_status\":\"identified\",\"assumptions\":[\"causal_sufficiency\",\"faithfulness\",\"no_instantaneous_effects\",\"no_latent_confounders_addressed\",\"abel_structural_summary_only\",\"abel_hidden_field_policy\"],\"node_id\":\"NVDA_close\",\"scope\":\"parents\",\"neighbors\":[{\"node_id\":\"AGNCO_close\",\"roles\":[\"parent\"]},{\"node_id\":\"MBPUSD_close\",\"roles\":[\"parent\"]},{\"node_id\":\"PEAKUSD_close\",\"roles\":[\"parent\"]}],\"total_candidate_count\":3,\"truncated\":false,\"edge_semantics\":\"identified_causal_effect\"},\"provenance\":{\"algorithm\":\"primitive.explain\",\"graph_version\":\"CausalNodeV2\",\"computation_time_ms\":335,\"server_name\":\"abel-cap\",\"server_version\":\"0.1.0\",\"cap_spec_version\":\"0.2.2\"}}\ncodex\n`graph.neighbors` is the authoritative core verb for immediate parent neighbors, so I’m using that result rather than the thinner convenience traversal. I’m polling the live call now and will return only the sorted unique node IDs.\ncodex\n{\"neighbors\":[\"AGNCO_close\",\"MBPUSD_close\",\"PEAKUSD_close\"]}\ntokens used\n18,351\n",
+            "raw_output": "{\"neighbors\":[\"AGNCO_close\",\"MBPUSD_close\",\"PEAKUSD_close\"]}",
+            "parsed_output": {
+              "neighbors": [
+                "AGNCO_close",
+                "MBPUSD_close",
+                "PEAKUSD_close"
+              ]
+            },
+            "parse_error": null
+          }
+        },
+        {
+          "task_id": "path_nvda_amd",
+          "score": {
+            "points": 2,
+            "max_points": 2,
+            "field_results": [
+              {
+                "field": "connected",
+                "expected": true,
+                "actual": true,
+                "correct": true
+              },
+              {
+                "field": "path_count",
+                "expected": 1,
+                "actual": 1,
+                "correct": true
+              }
+            ]
+          },
+          "result": {
+            "task_id": "path_nvda_amd",
+            "returncode": 0,
+            "duration_seconds": 52.44,
+            "stdout": "{\"connected\":true,\"path_count\":1}\n",
+            "stderr": "n,validate-connectivity,abel-markov-blanket,counterfactual-preview,intervene-time-lag,verb,route}\n                    ...\n\nProbe Abel CAP server verbs as atomic operations.\n\npositional arguments:\n  {capabilities,normalize-node,methods,observe,neighbors,paths,markov-blanket,intervene-do,traverse-parents,traverse-children,validate-connectivity,abel-markov-blanket,counterfactual-preview,intervene-time-lag,verb,route}\n    capabilities        Call meta.capabilities.\n    normalize-node      Normalize a ticker or node candidate to Abel public\n                        node-id form.\n    methods             Call meta.methods, optionally narrowed to specific\n                        verbs.\n    observe             Call observe.predict.\n    neighbors           Call graph.neighbors.\n    paths               Call graph.paths.\n    markov-blanket      Call graph.markov_blanket.\nexec\n/bin/zsh -lc 'python3 /Users/zeyu/Documents/bach_private_cache/.bench/codex_home_skill/skills/causal-abel/scripts/check_skill_update.py' in /Users/zeyu/Documents/bach_private_cache succeeded in 125ms:\n{\n  \"ok\": false,\n  \"checked\": false,\n  \"skill_name\": \"causal-abel\",\n  \"current_version\": \"1.0.2\",\n  \"remote_version\": null,\n  \"update_available\": false,\n  \"scope\": null,\n  \"warning\": \"This refresh command targets only `causal-abel`.\",\n  \"next_command\": null,\n  \"error\": \"No lock entry was found for `causal-abel`. The skill may need to be installed with the public skills CLI.\"\n}\ncodex\nThe update check was attempted and failed non-blockingly because this skill wasn’t installed through the public skills CLI. I have the probe script available, so I’m querying `graph.paths` on the live CAP server next and will extract the exact connectivity and returned path count.\nexec\n/bin/zsh -lc \"env | rg '\"'^ABEL_API_KEY='\"' >/dev/null && python3 /Users/zeyu/Documents/bach_private_cache/.bench/codex_home_skill/skills/causal-abel/scripts/cap_probe.py --base-url https://cap.abel.ai --api-key \\\"\"'$ABEL_API_KEY\" paths NVDA_close AMD_close --max-paths 3 --compact' in /Users/zeyu/Documents/bach_private_cache succeeded in 1.07s:\n{\"ok\":true,\"status_code\":200,\"cap_version\":\"0.2.2\",\"request_id\":\"65d7a74f-754d-4a90-94ca-afaacecfbff2\",\"verb\":\"graph.paths\",\"status\":\"success\",\"result\":{\"reasoning_mode\":\"structural_semantics\",\"identification_status\":\"not_applicable\",\"assumptions\":[\"causal_sufficiency\",\"faithfulness\",\"no_instantaneous_effects\",\"no_latent_confounders_addressed\",\"abel_structural_summary_only\",\"abel_hidden_field_policy\"],\"source_node_id\":\"NVDA_close\",\"target_node_id\":\"AMD_close\",\"connected\":true,\"path_count\":1,\"paths\":[{\"distance\":4,\"nodes\":[{\"node_id\":\"NVDA_close\",\"node_name\":\"NVIDIA Corporation close price\",\"node_type\":\"close_price\",\"domain\":\"equities\"},{\"node_id\":\"MBPUSD_close\",\"node_name\":\"Mobipad USD close price\",\"node_type\":\"close_price\",\"domain\":\"crypto\"},{\"node_id\":\"SIM_volume\",\"node_name\":\"Grupo Simec, S.A.B. de C.V. volume\",\"node_type\":\"volume\",\"domain\":\"equities\"},{\"node_id\":\"MLNUSD_close\",\"node_name\":\"Enzyme USD close price\",\"node_type\":\"close_price\",\"domain\":\"crypto\"},{\"node_id\":\"AMD_close\",\"node_name\":\"Advanced Micro Devices, Inc. close price\",\"node_type\":\"close_price\",\"domain\":\"equities\"}],\"edges\":[{\"from_node_id\":\"NVDA_close\",\"to_node_id\":\"MBPUSD_close\",\"edge_type\":\"causes\",\"tau\":35,\"tau_duration\":\"PT35H\"},{\"from_node_id\":\"MBPUSD_close\",\"to_node_id\":\"SIM_volume\",\"edge_type\":\"causes\",\"tau\":57,\"tau_duration\":\"PT57H\"},{\"from_node_id\":\"SIM_volume\",\"to_node_id\":\"MLNUSD_close\",\"edge_type\":\"causes\",\"tau\":45,\"tau_duration\":\"PT45H\"},{\"from_node_id\":\"MLNUSD_close\",\"to_node_id\":\"AMD_close\",\"edge_type\":\"causes\",\"tau\":45,\"tau_duration\":\"PT45H\"}]}]},\"provenance\":{\"algorithm\":\"PCMCI\",\"graph_version\":\"CausalNodeV2\",\"computation_time_ms\":25,\"server_name\":\"abel-cap\",\"server_version\":\"0.1.0\",\"cap_spec_version\":\"0.2.2\"}}\ncodex\nThe live path probe is still running. I’m waiting for the server response rather than falling back to a guess.\ncodex\n{\"connected\":true,\"path_count\":1}\ntokens used\n14,087\n",
+            "raw_output": "{\"connected\":true,\"path_count\":1}",
+            "parsed_output": {
+              "connected": true,
+              "path_count": 1
+            },
+            "parse_error": null
+          }
+        },
+        {
+          "task_id": "validate_connectivity",
+          "score": {
+            "points": 2,
+            "max_points": 2,
+            "field_results": [
+              {
+                "field": "passed",
+                "expected": false,
+                "actual": false,
+                "correct": true
+              },
+              {
+                "field": "connected_pairs",
+                "expected": [
+                  "AMD_close|NVDA_close"
+                ],
+                "actual": [
+                  "AMD_close|NVDA_close"
+                ],
+                "correct": true
+              }
+            ]
+          },
+          "result": {
+            "task_id": "validate_connectivity",
+            "returncode": 0,
+            "duration_seconds": 60.82,
+            "stdout": "{\"passed\":false,\"connected_pairs\":[\"AMD_close|NVDA_close\"]}\n",
+            "stderr": "\n    base_url: str, verb: str, params: dict[str, Any] | None, headers: dict[str, str]\n) -> dict[str, Any]:\n    payload = _build_payload(verb, params)\n    data = json.dumps(payload).encode(\"utf-8\")\n    req = urllib.request.Request(\n        _cap_endpoint(base_url),\nexec\n/bin/zsh -lc 'rg -n \"validate-connectivity|validate_connectivity|variables\" /Users/zeyu/Documents/bach_private_cache/.bench/codex_home_skill/skills/causal-abel/scripts/cap_probe.py' in /Users/zeyu/Documents/bach_private_cache succeeded in 0ms:\n45:    \"validate-connectivity\",\n584:def _cmd_validate_connectivity(args: argparse.Namespace) -> dict[str, Any]:\n587:        \"extensions.abel.validate_connectivity\",\n589:            \"variables\": _normalize_node_list(\n590:                args.variables,\n787:        \"validate-connectivity\", help=\"Call extensions.abel.validate_connectivity.\"\n790:        \"variables\", nargs=\"+\", help=\"At least two variable node IDs.\"\n792:    validate.set_defaults(func=_cmd_validate_connectivity)\nexec\n/bin/zsh -lc \"sed -n '560,640p' /Users/zeyu/Documents/bach_private_cache/.bench/codex_home_skill/skills/causal-abel/scripts/cap_probe.py\" in /Users/zeyu/Documents/bach_private_cache succeeded in 0ms:\n        {\n            \"node_id\": _normalize_public_node_id(\n                args.node_id,\n                default_suffix=args.default_suffix,\n            ),\n            \"top_k\": args.top_k,\n        },\n    )\n\n\ndef _cmd_traverse_children(args: argparse.Namespace) -> dict[str, Any]:\n    return _call_verb(\n        args,\n        \"traverse.children\",\n        {\n            \"node_id\": _normalize_public_node_id(\n                args.node_id,\n                default_suffix=args.default_suffix,\n            ),\n            \"top_k\": args.top_k,\ncodex\nThe update check failed softly because only `python3` is present, so I’m continuing with the installed skill as instructed. I’m now inspecting the live CAP surface for the exact `extensions.abel.validate_connectivity` contract and then invoking it on the three nodes.\nexec\n/bin/zsh -lc 'python3 /Users/zeyu/Documents/bach_private_cache/.bench/codex_home_skill/skills/causal-abel/scripts/cap_probe.py --base-url https://cap.abel.ai methods extensions.abel.validate_connectivity --detail full --include-examples' in /Users/zeyu/Documents/bach_private_cacheexec\n/bin/zsh -lc 'python3 /Users/zeyu/Documents/bach_private_cache/.bench/codex_home_skill/skills/causal-abel/scripts/cap_probe.py --base-url https://cap.abel.ai validate-connectivity NVDA_close AMD_close SOXX_close' in /Users/zeyu/Documents/bach_private_cache succeeded in 1.03s:\n{\n  \"ok\": true,\n  \"status_code\": 200,\n  \"cap_version\": \"0.2.2\",\n  \"request_id\": \"9880ab51-e618-4856-83e0-d34014b28ec3\",\n  \"verb\": \"meta.methods\",\n  \"status\": \"success\",\n  \"result\": {\n    \"methods\": [\n      {\n        \"verb\": \"extensions.abel.validate_connectivity\",\n        \"surface\": \"extension\",\n        \"description\": \"Validate connectivity across a small variable set using the Abel extension surface.\",\n        \"arguments\": [\n          {\n            \"name\": \"variables\",\n            \"description\": \"Node identifiers to check for pairwise connectivity across the Abel graph.\",\n            \"required\": true,\n            \"value_type\": \"array\",\n            \"items_type\": \"string\",\n succeeded in 3.54s:\n{\n  \"ok\": true,\n  \"status_code\": 200,\n  \"cap_version\": \"0.2.2\",\n  \"request_id\": \"af4eb87e-a0dd-4f95-b6d2-797cbdf707be\",\n  \"verb\": \"extensions.abel.validate_connectivity\",\n  \"status\": \"success\",\n  \"result\": {\n    \"reasoning_mode\": \"validation_gate\",\n    \"identification_status\": \"not_applicable\",\n    \"assumptions\": [\n      \"abel_connectivity_proxy_not_strict_d_separation\",\n      \"abel_hidden_field_policy\"\n    ],\n    \"validation_method\": \"shortest_path_connectivity_proxy\",\n    \"proxy_only\": true,\n    \"connectivity_semantics\": \"undirected_shortest_path_proxy\",\n    \"passed\": false,\n    \"valid_variables\": [],\n    \"invalid_variables\": [\ncodex\n{\"passed\":false,\"connected_pairs\":[\"AMD_close|NVDA_close\"]}\ntokens used\n18,726\n",
+            "raw_output": "{\"passed\":false,\"connected_pairs\":[\"AMD_close|NVDA_close\"]}",
+            "parsed_output": {
+              "passed": false,
+              "connected_pairs": [
+                "AMD_close|NVDA_close"
+              ]
+            },
+            "parse_error": null
+          }
+        },
+        {
+          "task_id": "intervene_nvda_amd",
+          "score": {
+            "points": 4,
+            "max_points": 4,
+            "field_results": [
+              {
+                "field": "path_exists",
+                "expected": true,
+                "actual": true,
+                "correct": true
+              },
+              {
+                "field": "effect_returned",
+                "expected": false,
+                "actual": false,
+                "correct": true
+              },
+              {
+                "field": "intervention_skipped",
+                "expected": false,
+                "actual": false,
+                "correct": true
+              },
+              {
+                "field": "error_code",
+                "expected": "invalid_intervention",
+                "actual": "invalid_intervention",
+                "correct": true
+              }
+            ]
+          },
+          "result": {
+            "task_id": "intervene_nvda_amd",
+            "returncode": 0,
+            "duration_seconds": 74.2,
+            "stdout": "{\"path_exists\":true,\"effect_returned\":false,\"intervention_skipped\":false,\"error_code\":\"invalid_intervention\"}\n",
+            "stderr": "ll/skills/causal-abel/scripts/cap_probe.py\" in /Users/zeyu/Documents/bach_private_cache succeeded in 0ms:\n#!/usr/bin/env python\n\"\"\"Probe Abel CAP server verbs with no third-party dependencies.\"\"\"\n\nfrom __future__ import annotations\n\nimport argparse\nimport json\nimport os\nimport sys\nimport uuid\nimport urllib.error\nimport urllib.parse\nimport urllib.request\nfrom pathlib import Path\nfrom typing import Any\n\nDEFAULT_BASE_URL = \"https://cap.abel.ai\"\nCAP_VERSION = \"0.2.2\"\nTEXT_TRUNCATE_EXACT_KEYS = {\n    \"description\",\nexec\n/bin/zsh -lc 'command -v python3 && python3 --version && printenv ABEL_API_KEY | wc -c' in /Users/zeyu/Documents/bach_private_cache succeeded in 6ms:\n      33\nexec\n/bin/zsh -lc \"sed -n '430,570p' /Users/zeyu/Documents/bach_private_cache/.bench/codex_home_skill/skills/causal-abel/scripts/cap_probe.py\" in /Users/zeyu/Documents/bach_private_cacheexec\n/bin/zsh -lc \"sed -n '220,430p' /Users/zeyu/Documents/bach_private_cache/.bench/codex_home_skill/skills/causal-abel/scripts/cap_probe.py\" in /Users/zeyu/Documents/bach_private_cache succeeded in 0ms:\n        {\n            \"node_id\": _normalize_public_node_id(\n                args.node_id,\n                default_suffix=args.default_suffix,\n            ),\n            \"scope\": args.scope,\n            \"max_neighbors\": args.max_neighbors,\n        },\n    )\n\n\ndef _cmd_paths(args: argparse.Namespace) -> dict[str, Any]:\n    return _call_verb(\n        args,\n        \"graph.paths\",\n        {\n            \"source_node_id\": _normalize_public_node_id(\n                args.source_node_id,\n                default_suffix=args.default_suffix,\n            ),\n succeeded in 0ms:\ndef _normalize_public_node_id(value: str, *, default_suffix: str = \"close\") -> str:\n    raw = value.strip()\n    if not raw:\n        raise ValueError(\"Node input cannot be empty.\")\n\n    if default_suffix not in SUPPORTED_NODE_SUFFIXES:\n        raise ValueError(\n            f\"Unsupported default suffix {default_suffix!r}; expected one of {sorted(SUPPORTED_NODE_SUFFIXES)}.\"\n        )\n\n    normalized = raw.upper()\n    ticker, separator, suffix = normalized.partition(\"_\")\n    if separator:\n        if not ticker or not suffix:\n            raise ValueError(\n                \"Node input must use '<ticker>_<field>' when an underscore is present.\"\n            )\n        suffix = suffix.lower()\n        if suffix not in SUPPORTED_NODE_SUFFIXES:\n            if suffix == \"close_price\":\ncodex\nI have `python3` and the API key, so I’m using the bundled live probe rather than hand-assembling a request. I’m capturing the full `intervene-do` response first so I can pull the exact path verdict, skip flag, effect presence, and returned error code from the server payload.\nexec\n/bin/zsh -lc 'python3 /Users/zeyu/Documents/bach_private_cache/.bench/codex_home_skill/skills/causal-abel/scripts/cap_probe.py --base-url https://cap.abel.ai intervene-do NVDA_close 0.05 --outcome-node AMD_close' in /Users/zeyu/Documents/bach_private_cache exited 1 in 2.15s:\n{\n  \"ok\": false,\n  \"status_code\": 400,\n  \"message\": \"{\\\"message\\\":\\\"No propagated effect was returned for outcome_node='AMD_close'.\\\"}\",\n  \"error\": {\n    \"code\": \"invalid_intervention\",\n    \"message\": \"{\\\"message\\\":\\\"No propagated effect was returned for outcome_node='AMD_close'.\\\"}\",\n    \"details\": {}\n  },\n  \"response_payload\": {\n    \"cap_version\": \"0.2.2\",\n    \"request_id\": \"ad15e4c2-cb3c-43c8-a9c2-e49c1f1a1e49\",\n    \"verb\": \"intervene.do\",\n    \"status\": \"error\",\n    \"error\": {\n      \"code\": \"invalid_intervention\",\n      \"message\": \"{\\\"message\\\":\\\"No propagated effect was returned for outcome_node='AMD_close'.\\\"}\",\n      \"details\": {}\n    }\n  },\nPlan update\n  ✓ Read causal-abel skill instructions relevant to live CAP interventions\n  → Inspect the live Abel CAP server and run the requested intervene-do query\n  • Extract the four requested fields and return exact JSON\ncodex\n{\"path_exists\":true,\"effect_returned\":false,\"intervention_skipped\":false,\"error_code\":\"invalid_intervention\"}\ntokens used\n20,116\n",
+            "raw_output": "{\"path_exists\":true,\"effect_returned\":false,\"intervention_skipped\":false,\"error_code\":\"invalid_intervention\"}",
+            "parsed_output": {
+              "path_exists": true,
+              "effect_returned": false,
+              "intervention_skipped": false,
+              "error_code": "invalid_intervention"
+            },
+            "parse_error": null
+          }
+        },
+        {
+          "task_id": "intervene_soxx_amd",
+          "score": {
+            "points": 4,
+            "max_points": 4,
+            "field_results": [
+              {
+                "field": "path_exists",
+                "expected": false,
+                "actual": false,
+                "correct": true
+              },
+              {
+                "field": "effect_returned",
+                "expected": false,
+                "actual": false,
+                "correct": true
+              },
+              {
+                "field": "intervention_skipped",
+                "expected": true,
+                "actual": true,
+                "correct": true
+              },
+              {
+                "field": "skip_reason",
+                "expected": "no_directed_path_found",
+                "actual": "no_directed_path_found",
+                "correct": true
+              }
+            ]
+          },
+          "result": {
+            "task_id": "intervene_soxx_amd",
+            "returncode": 0,
+            "duration_seconds": 67.28,
+            "stdout": "{\"path_exists\":false,\"effect_returned\":false,\"intervention_skipped\":true,\"skip_reason\":\"no_directed_path_found\"}\n",
+            "stderr": "rror:\n        return {\"raw\": text}\n\n\ndef _post_cap(\n    base_url: str, verb: str, params: dict[str, Any] | None, headers: dict[str, str]\n) -> dict[str, Any]:\n    payload = _build_payload(verb, params)\n    data = json.dumps(payload).encode(\"utf-8\")\n    req = urllib.request.Request(\n        _cap_endpoint(base_url),\nexec\n/bin/zsh -lc \"sed -n '520,760p' '/Users/zeyu/Documents/bach_private_cache/.bench/codex_home_skill/skills/causal-abel/scripts/cap_probe.py'\" in /Users/zeyu/Documents/bach_private_cache succeeded in 0ms:\n            \"treatment_value\": args.treatment_value,\n            \"intervention_skipped\": True,\n            \"skip_reason\": \"structural_check_unrecognized\",\n            \"structural_check\": structural_check,\n        }\n\n    if not structural_ok:\n        return {\n            \"ok\": False,\n            \"status_code\": structural_check.get(\"status_code\", 0),\n            \"verb\": \"intervene.do\",\n            \"message\": (\n                \"No directed path found between treatment and outcome nodes; intervention skipped.\"\n            ),\n            \"treatment_node\": treatment_node,\n            \"outcome_node\": outcome_node,\n            \"treatment_value\": args.treatment_value,\n            \"intervention_skipped\": True,\n            \"skip_reason\": \"no_directed_path_found\",\n            \"structural_check\": structural_check,\ncodex\n`python` is not installed here, so I’m retrying the bundled check with `python3` and confirming the Abel key is present before the first live request. After that I’ll run the exact `intervene-do` probe against `https://cap.abel.ai`.\nexec\n/bin/zsh -lc 'if [ -n \"$ABEL_API_KEY\" ]; then echo present; else echo missing; fi' in /Users/zeyu/Documents/bach_private_cache succeeded in 0ms:\npresent\nexec\n/bin/zsh -lc \"python3 '/Users/zeyu/Documents/bach_private_cache/.bench/codex_home_skill/skills/causal-abel/scripts/check_skill_update.py'\" in /Users/zeyu/Documents/bach_private_cache succeeded in 164ms:\n{\n  \"ok\": false,\n  \"checked\": false,\n  \"skill_name\": \"causal-abel\",\n  \"current_version\": \"1.0.2\",\n  \"remote_version\": null,\n  \"update_available\": false,\n  \"scope\": null,\n  \"warning\": \"This refresh command targets only `causal-abel`.\",\n  \"next_command\": null,\n  \"error\": \"No lock entry was found for `causal-abel`. The skill may need to be installed with the public skills CLI.\"\n}\ncodex\nThe session has a usable `ABEL_API_KEY`, and the bundled update check completed with no available upgrade path. I’m issuing the live `intervene-do` probe now, which includes the required structural gate on `graph.paths` before any intervention call.\nexec\n/bin/zsh -lc \"python3 '/Users/zeyu/Documents/bach_private_cache/.bench/codex_home_skill/skills/causal-abel/scripts/cap_probe.py' --base-url 'https://cap.abel.ai' --compact intervene-do SOXX_close 0.05 --outcome-node AMD_close\" in /Users/zeyu/Documents/bach_private_cache exited 1 in 1.08s:\n{\"ok\":false,\"status_code\":200,\"verb\":\"intervene.do\",\"message\":\"No directed path found between treatment and outcome nodes; intervention skipped.\",\"treatment_node\":\"SOXX_close\",\"outcome_node\":\"AMD_close\",\"treatment_value\":0.05,\"intervention_skipped\":true,\"skip_reason\":\"no_directed_path_found\",\"structural_check\":{\"ok\":true,\"status_code\":200,\"cap_version\":\"0.2.2\",\"request_id\":\"c3963614-4bc4-4ae0-9641-e87d10d1115f\",\"verb\":\"graph.paths\",\"status\":\"success\",\"result\":{\"reasoning_mode\":\"structural_semantics\",\"identification_status\":\"not_applicable\",\"assumptions\":[\"causal_sufficiency\",\"faithfulness\",\"no_instantaneous_effects\",\"no_latent_confounders_addressed\",\"abel_structural_summary_only\",\"abel_hidden_field_policy\"],\"source_node_id\":\"SOXX_close\",\"target_node_id\":\"AMD_close\",\"connected\":false,\"path_count\":0,\"paths\":[]},\"provenance\":{\"algorithm\":\"PCMCI\",\"graph_version\":\"CausalNodeV2\",\"computation_time_ms\":25,\"server_name\":\"abel-cap\",\"server_version\":\"0.1.0\",\"cap_spec_version\":\"0.2.2\"}}}\ncodex\n{\"path_exists\":false,\"effect_returned\":false,\"intervention_skipped\":true,\"skip_reason\":\"no_directed_path_found\"}\ntokens used\n15,228\n",
+            "raw_output": "{\"path_exists\":false,\"effect_returned\":false,\"intervention_skipped\":true,\"skip_reason\":\"no_directed_path_found\"}",
+            "parsed_output": {
+              "path_exists": false,
+              "effect_returned": false,
+              "intervention_skipped": true,
+              "skip_reason": "no_directed_path_found"
+            },
+            "parse_error": null
+          }
+        }
+      ]
+    }
+  }
+}

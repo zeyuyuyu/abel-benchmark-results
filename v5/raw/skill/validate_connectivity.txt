@@ -1,0 +1,1 @@
+{"passed":false,"connected_pairs":["AMD_close|NVDA_close"]}

@@ -1,0 +1,1 @@
+{"path_exists":false,"effect_returned":false,"intervention_skipped":true,"skip_reason":"no_structural_path"}

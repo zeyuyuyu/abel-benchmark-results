@@ -1,0 +1,189 @@
+{
+  "timestamp": "20260324-105731",
+  "version": "v5-live-cap-ablation",
+  "model": "gpt-5.4",
+  "reasoning_effort": "low",
+  "base_url": "https://cap.abel.ai",
+  "ground_truth": {
+    "required_arguments": [
+      "source_node_id",
+      "target_node_id"
+    ],
+    "nvda_parents": [
+      "AGNCO_close",
+      "MBPUSD_close",
+      "PEAKUSD_close"
+    ],
+    "nvda_children": [
+      "MBPUSD_close",
+      "WDCUSD_close"
+    ],
+    "path_nvda_amd": {
+      "connected": true,
+      "path_count": 1
+    },
+    "path_soxx_amd": {
+      "connected": false,
+      "path_count": 0
+    },
+    "observe_nvda_drivers": [
+      "AGNCO_close",
+      "MBPUSD_close",
+      "PEAKUSD_close"
+    ],
+    "connectivity": {
+      "passed": false,
+      "connected_pairs": [
+        "AMD_close|NVDA_close"
+      ]
+    },
+    "intervene_nvda_amd": {
+      "path_exists": true,
+      "effect_returned": false,
+      "intervention_skipped": false,
+      "error_code": "invalid_intervention"
+    },
+    "intervene_soxx_amd": {
+      "path_exists": false,
+      "effect_returned": false,
+      "intervention_skipped": true,
+      "skip_reason": "no_directed_path_found"
+    }
+  },
+  "summary": {
+    "base_accuracy": 0.9286,
+    "base_points": "13/14",
+    "base_total_duration_seconds": 734.96,
+    "skill_accuracy": 1.0,
+    "skill_points": "14/14",
+    "skill_total_duration_seconds": 375.5,
+    "accuracy_delta": 0.0714,
+    "duration_delta_seconds": -359.46
+  },
+  "tasks": [
+    {
+      "task_id": "methods_graph_paths",
+      "base_points": 1,
+      "base_max_points": 1,
+      "base_duration_seconds": 52.8,
+      "base_output": {
+        "required_arguments": [
+          "source_node_id",
+          "target_node_id"
+        ]
+      },
+      "skill_points": 1,
+      "skill_max_points": 1,
+      "skill_duration_seconds": 57.23,
+      "skill_output": {
+        "required_arguments": [
+          "source_node_id",
+          "target_node_id"
+        ]
+      }
+    },
+    {
+      "task_id": "nvda_parent_neighbors",
+      "base_points": 1,
+      "base_max_points": 1,
+      "base_duration_seconds": 130.44,
+      "base_output": {
+        "neighbors": [
+          "AGNCO_close",
+          "MBPUSD_close",
+          "PEAKUSD_close"
+        ]
+      },
+      "skill_points": 1,
+      "skill_max_points": 1,
+      "skill_duration_seconds": 63.53,
+      "skill_output": {
+        "neighbors": [
+          "AGNCO_close",
+          "MBPUSD_close",
+          "PEAKUSD_close"
+        ]
+      }
+    },
+    {
+      "task_id": "path_nvda_amd",
+      "base_points": 2,
+      "base_max_points": 2,
+      "base_duration_seconds": 72.82,
+      "base_output": {
+        "connected": true,
+        "path_count": 1
+      },
+      "skill_points": 2,
+      "skill_max_points": 2,
+      "skill_duration_seconds": 52.44,
+      "skill_output": {
+        "connected": true,
+        "path_count": 1
+      }
+    },
+    {
+      "task_id": "validate_connectivity",
+      "base_points": 2,
+      "base_max_points": 2,
+      "base_duration_seconds": 72.14,
+      "base_output": {
+        "passed": false,
+        "connected_pairs": [
+          "AMD_close|NVDA_close"
+        ]
+      },
+      "skill_points": 2,
+      "skill_max_points": 2,
+      "skill_duration_seconds": 60.82,
+      "skill_output": {
+        "passed": false,
+        "connected_pairs": [
+          "AMD_close|NVDA_close"
+        ]
+      }
+    },
+    {
+      "task_id": "intervene_nvda_amd",
+      "base_points": 4,
+      "base_max_points": 4,
+      "base_duration_seconds": 170.31,
+      "base_output": {
+        "path_exists": true,
+        "effect_returned": false,
+        "intervention_skipped": false,
+        "error_code": "invalid_intervention"
+      },
+      "skill_points": 4,
+      "skill_max_points": 4,
+      "skill_duration_seconds": 74.2,
+      "skill_output": {
+        "path_exists": true,
+        "effect_returned": false,
+        "intervention_skipped": false,
+        "error_code": "invalid_intervention"
+      }
+    },
+    {
+      "task_id": "intervene_soxx_amd",
+      "base_points": 3,
+      "base_max_points": 4,
+      "base_duration_seconds": 236.45,
+      "base_output": {
+        "path_exists": false,
+        "effect_returned": false,
+        "intervention_skipped": true,
+        "skip_reason": "no_structural_path"
+      },
+      "skill_points": 4,
+      "skill_max_points": 4,
+      "skill_duration_seconds": 67.28,
+      "skill_output": {
+        "path_exists": false,
+        "effect_returned": false,
+        "intervention_skipped": true,
+        "skip_reason": "no_directed_path_found"
+      }
+    }
+  ]
+}
