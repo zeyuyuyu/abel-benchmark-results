@@ -60,6 +60,24 @@
       "skill_prediction": "\\boxed{F, I, J}",
       "base_valid": true,
       "skill_valid": true,
+      "resolved": false,
+      "ground_truth_raw": null,
+      "ground_truth_display": "pending",
+      "expected_tokens": [],
+      "base_tokens": [
+        "f",
+        "i",
+        "j"
+      ],
+      "skill_tokens": [
+        "f",
+        "i",
+        "j"
+      ],
+      "base_correct": null,
+      "skill_correct": null,
+      "resolution_source": null,
+      "end_time": "2026-03-31",
       "differed": false
     },
     {
@@ -69,6 +87,40 @@
       "skill_prediction": "\\boxed{B, C, D, E, F, J, K, L, M}",
       "base_valid": true,
       "skill_valid": true,
+      "resolved": false,
+      "ground_truth_raw": null,
+      "ground_truth_display": "pending",
+      "expected_tokens": [],
+      "base_tokens": [
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o"
+      ],
+      "skill_tokens": [
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "j",
+        "k",
+        "l",
+        "m"
+      ],
+      "base_correct": null,
+      "skill_correct": null,
+      "resolution_source": null,
+      "end_time": "2026-03-31",
       "differed": true
     },
     {
@@ -78,6 +130,20 @@
       "skill_prediction": "\\boxed{A}",
       "base_valid": true,
       "skill_valid": true,
+      "resolved": false,
+      "ground_truth_raw": null,
+      "ground_truth_display": "pending",
+      "expected_tokens": [],
+      "base_tokens": [
+        "a"
+      ],
+      "skill_tokens": [
+        "a"
+      ],
+      "base_correct": null,
+      "skill_correct": null,
+      "resolution_source": null,
+      "end_time": "2026-03-31",
       "differed": false
     },
     {
@@ -87,6 +153,28 @@
       "skill_prediction": "\\boxed{A, C, F, G, H}",
       "base_valid": true,
       "skill_valid": true,
+      "resolved": false,
+      "ground_truth_raw": null,
+      "ground_truth_display": "pending",
+      "expected_tokens": [],
+      "base_tokens": [
+        "a",
+        "c",
+        "f",
+        "g",
+        "h"
+      ],
+      "skill_tokens": [
+        "a",
+        "c",
+        "f",
+        "g",
+        "h"
+      ],
+      "base_correct": null,
+      "skill_correct": null,
+      "resolution_source": null,
+      "end_time": "2026-03-31",
       "differed": false
     },
     {
@@ -96,6 +184,18 @@
       "skill_prediction": "\\boxed{A}",
       "base_valid": false,
       "skill_valid": true,
+      "resolved": false,
+      "ground_truth_raw": null,
+      "ground_truth_display": "pending",
+      "expected_tokens": [],
+      "base_tokens": [],
+      "skill_tokens": [
+        "a"
+      ],
+      "base_correct": null,
+      "skill_correct": null,
+      "resolution_source": null,
+      "end_time": "2026-03-31",
       "differed": true
     },
     {
@@ -105,6 +205,20 @@
       "skill_prediction": "\\boxed{A}",
       "base_valid": true,
       "skill_valid": true,
+      "resolved": false,
+      "ground_truth_raw": null,
+      "ground_truth_display": "pending",
+      "expected_tokens": [],
+      "base_tokens": [
+        "b"
+      ],
+      "skill_tokens": [
+        "a"
+      ],
+      "base_correct": null,
+      "skill_correct": null,
+      "resolution_source": null,
+      "end_time": "2026-03-26",
       "differed": true
     },
     {
@@ -114,7 +228,70 @@
       "skill_prediction": "\\boxed{No}",
       "base_valid": true,
       "skill_valid": true,
+      "resolved": false,
+      "ground_truth_raw": null,
+      "ground_truth_display": "pending",
+      "expected_tokens": [],
+      "base_tokens": [
+        "no"
+      ],
+      "skill_tokens": [
+        "no"
+      ],
+      "base_correct": null,
+      "skill_correct": null,
+      "resolution_source": null,
+      "end_time": "2026-03-31",
       "differed": false
     }
-  ]
+  ],
+  "skill_invalid_predictions": [],
+  "scoring": {
+    "rescored_at": "2026-03-24",
+    "ground_truth_dataset": "futurex-ai/Futurex-Past",
+    "resolved_task_count": 0,
+    "pending_task_count": 7,
+    "pending_tasks": [
+      {
+        "id": "69a2e39e5692ef005cdbf2d9",
+        "title": "S&P 500 Single-Day Gains and Losses (%) in Q1",
+        "end_time": "2026-03-31"
+      },
+      {
+        "id": "69a2e39e5692ef005cdbf2e9",
+        "title": "What will KOSPI (^KS11) hit in Q1 2026?",
+        "end_time": "2026-03-31"
+      },
+      {
+        "id": "69a2e39e5692ef005cdbf2d8",
+        "title": "Q1 S&P 500 Performance",
+        "end_time": "2026-03-31"
+      },
+      {
+        "id": "69a2e39e5692ef005cdbf2e8",
+        "title": "Will KOSPI (KS11) close above __ end of Q1?",
+        "end_time": "2026-03-31"
+      },
+      {
+        "id": "69a4319df2cb3b006875e9d0",
+        "title": "What price will Bitcoin hit by March 2026? (add your prediction)",
+        "end_time": "2026-03-31"
+      },
+      {
+        "id": "699c4887d1d3cf005c1e48ad",
+        "title": "Banxico interest rate decision in March",
+        "end_time": "2026-03-26"
+      },
+      {
+        "id": "69a2e39e5692ef005cdbf27c",
+        "title": "Robinhood launches prediction market through MIAXdx by March 31?",
+        "end_time": "2026-03-31"
+      }
+    ],
+    "base_correct_count": 0,
+    "skill_correct_count": 0,
+    "base_accuracy": null,
+    "skill_accuracy": null,
+    "all_tasks_resolved": false
+  }
 }
