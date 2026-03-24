@@ -233,11 +233,11 @@ No Abel data available for this question.
 
 No Abel data available for this question.
 
-### LLM Only Response — CORRECT
+### LLM Only Response — INCORRECT
 
 > Gold (GC) is expected to be above 'K' at the end of January, driven by ongoing economic uncertainties and potential shifts in monetary policy.
 
-### LLM + Abel Skill Response — CORRECT
+### LLM + Abel Skill Response — INCORRECT
 
 > (Same as LLM Only — no Abel data)
 
