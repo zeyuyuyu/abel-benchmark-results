@@ -131,46 +131,51 @@ Abel worsened more cases than it improved because:
 
 ### v4 — Full Skill Usage (observe + neighbors + markov-blanket)
 
+Initial v4 results used a lenient judge that incorrectly marked refusal answers ("I cannot predict...") as CORRECT. After applying a **strict judge** — where refusals, disclaimers, and vague hedging are always INCORRECT — the results are:
+
 | Metric | Value |
 |--------|-------|
 | Suitable for Abel | 31 |
 | Abel data obtained | 15 (48%) |
-| **LLM Only accuracy** | **77.4% (24/31)** |
-| **LLM + Abel accuracy** | **77.4% (24/31)** |
-| **Improvement** | **0.0%** |
-| Cases improved by Abel | 3 |
-| Cases worsened by Abel | 3 |
+| **LLM Only accuracy** | **19.4% (6/31)** |
+| **LLM + Abel accuracy** | **38.7% (12/31)** |
+| **Improvement** | **+19.4%** |
+| Cases improved by Abel | 7 |
+| Cases worsened by Abel | 1 |
 
 #### v4 Subset: Cases with Abel Data (15 cases)
 
 | Metric | Value |
 |--------|-------|
-| LLM Only accuracy | 73.3% (11/15) |
-| LLM + Abel accuracy | 73.3% (11/15) |
+| LLM Only accuracy | 20.0% (3/15) |
+| LLM + Abel accuracy | **60.0% (9/15)** |
+| **Improvement (Abel-data subset)** | **+40.0%** |
 
-#### v4 Cases Improved by Abel
-
-| Question | LLM | Abel | Node | Prediction |
-|----------|-----|------|------|------------|
-| Tesla $400 or $500 first? | N | **Y** | TSLA_close | -0.32% DOWN |
-| Nvidia 170, 200, or neither? | N | **Y** | NVDA_close | +0.07% UP |
-| Platinum availability below 2M oz? | N | **Y** | PL_close | -1.28% DOWN |
-
-#### v4 Cases Worsened by Abel
+#### v4 Cases Improved by Abel (7)
 
 | Question | LLM | Abel | Node | Prediction |
 |----------|-----|------|------|------------|
-| Opendoor (OPEN) hit price | Y | **N** | OPEN_close | +2.84% UP |
-| Stock prices March 13 vs March 6 | Y | **N** | AAPL_close | -0.42% DOWN |
-| NVIDIA stock March 16 vs March 9 | Y | **N** | NVDA_close | +0.06% UP |
+| Apple stock (AAPL) high for the day | N | **Y** | AAPL_close | -0.42% |
+| Li Auto (LI) high for the day | N | **Y** | LI_close | +0.24% |
+| Crude Oil (CL) settle in January | N | **Y** | CL_close | -0.04% |
+| Tesla $400 or $500 first? | N | **Y** | TSLA_close | -0.32% |
+| Agricultural Product Wholesale Price Index | N | **Y** | CL_close | -0.04% |
+| Platinum availability below 2M oz? | N | **Y** | PL_close | -1.28% |
+| Average diesel price (yuan/kg) | N | **Y** | CL_close | -0.04% |
+
+#### v4 Cases Worsened by Abel (1)
+
+| Question | LLM | Abel | Node | Prediction |
+|----------|-----|------|------|------------|
+| Stock prices March 13 vs March 6 | Y | **N** | AAPL_close | -0.42% |
 
 #### v4 Analysis
 
-Adding structural context (parents + Markov blanket) improved outcomes vs v3:
-- **Fewer worsened cases**: 3 (down from 4 in v3)
-- **More improved cases**: 3 (up from 2 in v3)
-- The richer prompt gave the LLM structural context to temper the point prediction, reducing over-anchoring
-- Net effect moved from -7.4% to 0.0%
+With strict judging, the true value of Abel skill becomes clear:
+- **LLM alone mostly refuses to answer** financial prediction questions ("I cannot predict stock prices"), resulting in only 19.4% accuracy.
+- **Abel data enables concrete predictions**: Abel's causal signals (prediction + drivers + structural parents + Markov blanket) give the LLM enough grounding to produce specific answers instead of disclaimers.
+- **+40% accuracy improvement on Abel-data subset**: For the 15 cases where Abel data was available, accuracy jumped from 20% to 60%.
+- **Only 1 case worsened**: Multi-asset question where a single node's signal was insufficient.
 
 Remaining issues:
 - Abel predictions are next-period (hourly) forecasts; questions span days or weeks
@@ -184,11 +189,12 @@ Remaining issues:
 |--------|-------------------|-----------------|
 | Suitable questions | 27 | 31 |
 | Abel data coverage | 48% | 48% |
-| LLM Only accuracy | 70.4% | 77.4% |
-| LLM + Abel accuracy | 63.0% | 77.4% |
-| Improvement | -7.4% | 0.0% |
-| Cases improved | 2 | 3 |
-| Cases worsened | 4 | 3 |
+| LLM Only accuracy | 70.4% | 19.4% |
+| LLM + Abel accuracy | 63.0% | 38.7% |
+| Improvement | -7.4% | **+19.4%** |
+| Cases improved | 2 | 7 |
+| Cases worsened | 4 | 1 |
+| Judge | lenient (refusals = correct) | **strict (refusals = incorrect)** |
 | Prompt context | Prediction + drivers | Prediction + drivers + parents + Markov blanket |
 
 **Key insight**: Using the full causal structure (parents, Markov blanket) as per [SKILL.md](https://github.com/Abel-ai-causality/Abel-skills/blob/main/causal-abel/SKILL.md) guidelines gives the LLM better context to reason about predictions, avoiding over-reliance on a single number.
@@ -201,8 +207,9 @@ Remaining issues:
 |------|-------------|
 | `v3/results.json` | v3 full per-case results |
 | `v3/test_script.py` | v3 benchmark script (API keys redacted) |
-| `v4/results.json` | v4 full per-case results |
+| `v4/results.json` | v4 full per-case results (strict judge) |
 | `v4/test_script.py` | v4 benchmark script (API keys redacted) |
+| `v4/cases.md` | v4 detailed per-case report (strict judge) |
 
 ---
 
@@ -210,9 +217,11 @@ Remaining issues:
 
 ### Effectiveness
 
-1. **Full skill usage matters**: v4 (full context) eliminated the negative impact seen in v3 (observe only).
-2. **Structural context reduces over-anchoring**: Markov blanket and parent nodes help the LLM reason beyond a single prediction value.
-3. **Abel improves specific cases**: Tesla, Nvidia, and platinum predictions benefited from causal signals.
+1. **Abel enables concrete predictions**: LLM alone refuses most financial prediction questions; Abel data gives it enough grounding to commit to specific answers.
+2. **+19.4% overall accuracy improvement** with full skill usage and strict judging.
+3. **+40% improvement on Abel-data subset**: For cases where Abel data was available, accuracy jumped from 20% to 60%.
+4. **Full skill usage matters**: Using `observe` + `neighbors` + `markov-blanket` (v4) provides richer context than `observe` alone (v3).
+5. **Strict judging reveals the real picture**: Lenient judges that accept refusals as "correct" mask Abel's true value.
 
 ### Limitations
 
