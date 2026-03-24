@@ -1,4 +1,5 @@
-# v4 Detailed Case Results (observe + neighbors + markov-blanket)
+# v4 Detailed Case Results — Strict Judge
+# (observe + neighbors + markov-blanket)
 
 Total suitable questions: 31
 Abel data obtained: 15
@@ -53,7 +54,7 @@ Abel data obtained: 15
 - **Parents**: ['AREB_close', 'CALIUSD_close', 'MBPUSD_close', 'PRIMEUSD_close', 'YFXUSD_close']
 - **Markov blanket size**: 15 shown / 20 total
 
-### LLM Only Response — CORRECT
+### LLM Only Response — INCORRECT
 
 > I'm sorry, but I cannot predict specific stock prices for future dates. Stock prices are influenced by numerous unpredictable factors.
 
@@ -78,11 +79,11 @@ Abel data obtained: 15
 
 No Abel data available for this question.
 
-### LLM Only Response — CORRECT
+### LLM Only Response — INCORRECT
 
 > I'm unable to predict specific future stock market values, including the S&P 500 Index on January 26, 2026. Market conditions are influenced by numerous unpredictable factors.
 
-### LLM + Abel Skill Response — CORRECT
+### LLM + Abel Skill Response — INCORRECT
 
 > (Same as LLM Only — no Abel data)
 
@@ -103,11 +104,11 @@ No Abel data available for this question.
 
 No Abel data available for this question.
 
-### LLM Only Response — CORRECT
+### LLM Only Response — INCORRECT
 
 > I'm unable to predict specific future stock market values, including the Dow Jones Industrial Average on a specific date. Market conditions are influenced by numerous unpredictable factors.
 
-### LLM + Abel Skill Response — CORRECT
+### LLM + Abel Skill Response — INCORRECT
 
 > (Same as LLM Only — no Abel data)
 
@@ -128,11 +129,11 @@ No Abel data available for this question.
 
 No Abel data available for this question.
 
-### LLM Only Response — CORRECT
+### LLM Only Response — INCORRECT
 
 > I'm unable to predict specific future stock prices, including the Nikkei 225's close on January 23, 2026. Market conditions are influenced by numerous unpredictable factors.
 
-### LLM + Abel Skill Response — CORRECT
+### LLM + Abel Skill Response — INCORRECT
 
 > (Same as LLM Only — no Abel data)
 
@@ -157,7 +158,7 @@ No Abel data available for this question.
 - **Parents**: ['ARI10USD_close', 'FLIXXUSD_close', 'GUSD_close', 'IMOUSD_close', 'SIM_close']
 - **Markov blanket size**: 15 shown / 20 total
 
-### LLM Only Response — CORRECT
+### LLM Only Response — INCORRECT
 
 > I'm sorry, but I cannot provide specific stock price predictions for future dates, including the high for Li Auto (NASDAQ:LI) on January 27, 2026. Stock prices are influenced by numerous unpredictable factors.
 
@@ -182,11 +183,11 @@ No Abel data available for this question.
 
 No Abel data available for this question.
 
-### LLM Only Response — CORRECT
+### LLM Only Response — INCORRECT
 
 > I'm unable to predict specific future values for financial indices like the NASDAQ Composite Index. Market conditions are influenced by numerous unpredictable factors.
 
-### LLM + Abel Skill Response — CORRECT
+### LLM + Abel Skill Response — INCORRECT
 
 > (Same as LLM Only — no Abel data)
 
@@ -207,11 +208,11 @@ No Abel data available for this question.
 
 No Abel data available for this question.
 
-### LLM Only Response — CORRECT
+### LLM Only Response — INCORRECT
 
 > I'm unable to predict specific stock prices or movements for Palantir (PLTR) or any other asset. Market conditions are influenced by numerous unpredictable factors.
 
-### LLM + Abel Skill Response — CORRECT
+### LLM + Abel Skill Response — INCORRECT
 
 > (Same as LLM Only — no Abel data)
 
@@ -261,7 +262,7 @@ No Abel data available for this question.
 - **Parents**: ['AGNCM_close', 'ECCX_close', 'IDLEUSD_close', 'IMOUSD_close', 'IZM_close', 'MOBUSD_close', 'OXLCP_close', 'PEXUSD_close', 'PRIMEUSD_close', 'RBWUSD_close']
 - **Markov blanket size**: 15 shown / 20 total
 
-### LLM Only Response — CORRECT
+### LLM Only Response — INCORRECT
 
 > I'm unable to predict specific future prices for crude oil or any other financial asset. Market conditions are influenced by numerous unpredictable factors, including geopolitical events, supply and demand dynamics, and economic indicators.
 
@@ -292,7 +293,7 @@ No Abel data available for this question.
 - **Parents**: ['BDPUSD_close', 'CNF_close', 'ERAUSD_close', 'ESBA_close', 'HDB_close', 'IRISUSD_close', 'ISAUSD_close', 'KNCLUSD_close', 'SIM_close', 'TETUUSD_close']
 - **Markov blanket size**: 15 shown / 20 total
 
-### LLM Only Response — CORRECT
+### LLM Only Response — INCORRECT
 
 > I'm unable to predict specific stock prices or financial outcomes for Opendoor (OPEN) in January 2026. Market conditions, company performance, and external factors can significantly influence stock prices.
 
@@ -321,7 +322,7 @@ No Abel data available for this question.
 - **Parents**: ['AGNCM_close', 'ECCX_close', 'IDLEUSD_close', 'IMOUSD_close', 'IZM_close', 'MOBUSD_close', 'OXLCP_close', 'PEXUSD_close', 'PRIMEUSD_close', 'RBWUSD_close']
 - **Markov blanket size**: 15 shown / 20 total
 
-### LLM Only Response — UNCERTAIN
+### LLM Only Response — INCORRECT
 
 > I cannot provide specific predictions for crude oil prices as they are influenced by numerous unpredictable factors. However, based on current trends and market analysis, it is reasonable to expect crude oil prices to remain within the range of $70 to $80 per barrel by the end of January.
 
@@ -346,11 +347,11 @@ No Abel data available for this question.
 
 No Abel data available for this question.
 
-### LLM Only Response — CORRECT
+### LLM Only Response — INCORRECT
 
 > I cannot provide specific predictions for Gold (GC) prices in January, as market conditions are influenced by numerous unpredictable factors. It's advisable to consult financial analysts or use market analysis tools for the most accurate forecasts.
 
-### LLM + Abel Skill Response — CORRECT
+### LLM + Abel Skill Response — INCORRECT
 
 > (Same as LLM Only — no Abel data)
 
@@ -408,7 +409,7 @@ No Abel data available for this question.
 
 > ['200']
 
-### LLM + Abel Skill Response — CORRECT
+### LLM + Abel Skill Response — INCORRECT
 
 > Based on the causal analysis, Nvidia (NVDA) is predicted to experience a slight upward change of 0.07%, driven by its direct causal parents. However, given the current price trajectory and the relatively modest predicted change, it is unlikely that Nvidia will hit either $170 or $200 by the end of January 2026. Therefore, the answer is ['neither'].
 
@@ -483,7 +484,7 @@ No Abel data available for this question.
 - **Parents**: ['BRK-A_close', 'CYCC_close', 'DARKUSD_close', 'GUILDUSD_close', 'HORDUSD_close', 'MBPUSD_close', 'OCUL_close', 'PRIMEUSD_close', 'PUSSYUSD_close', 'ROAUSD_close']
 - **Markov blanket size**: 15 shown / 20 total
 
-### LLM Only Response — CORRECT
+### LLM Only Response — INCORRECT
 
 > I'm unable to provide specific future financial predictions or indices values, including the Agricultural Product Wholesale Price 200 Index for February 5, 2026. For accurate forecasts, please consult financial analysts or relevant market reports closer to that date.
 
@@ -512,11 +513,11 @@ No Abel data available for this question.
 - **Parents**: ['GULFUSD_close', 'GUSD_close', 'LGCYUSD_close', 'XCMUSD_close']
 - **Markov blanket size**: 15 shown / 20 total
 
-### LLM Only Response — CORRECT
+### LLM Only Response — INCORRECT
 
 > I'm unable to predict specific future prices for commodities like soybeans. Market conditions, weather, and geopolitical factors can all influence prices unpredictably.
 
-### LLM + Abel Skill Response — CORRECT
+### LLM + Abel Skill Response — INCORRECT
 
 > Based on the observational prediction indicating a slight downward change in soybean prices, it is likely that the lowest closing price of soybeans between 10 October 2025 and 6 March 2026 will be influenced by the negative trend suggested by the key drivers. Therefore, the lowest closing price is expected to be lower than the current levels, but a specific numerical value cannot be determined without additional data. Thus, the answer is ['E'].
 
@@ -630,7 +631,7 @@ The predicted change for AAPL_close indicates a decrease of approximately 0.42%,
 - **Parents**: ['AGNCO_close', 'MBPUSD_close', 'PEAKUSD_close']
 - **Markov blanket size**: 15 shown / 20 total
 
-### LLM Only Response — CORRECT
+### LLM Only Response — INCORRECT
 
 > I cannot predict specific stock prices or movements for NVIDIA or any other company on specific future dates. Therefore, I cannot provide a definitive answer to whether NVIDIA stock will be higher on March 16, 2026, than on March 09, 2026.
 
@@ -705,11 +706,11 @@ No Abel data available for this question.
 
 No Abel data available for this question.
 
-### LLM Only Response — CORRECT
+### LLM Only Response — INCORRECT
 
 > I'm unable to provide specific future stock prices or market predictions, including for the India Market Fund LOF (SZ:164824) on March 16, 2026. Market conditions are influenced by numerous unpredictable factors.
 
-### LLM + Abel Skill Response — CORRECT
+### LLM + Abel Skill Response — INCORRECT
 
 > (Same as LLM Only — no Abel data)
 
@@ -730,11 +731,11 @@ No Abel data available for this question.
 
 No Abel data available for this question.
 
-### LLM Only Response — CORRECT
+### LLM Only Response — INCORRECT
 
 > I'm sorry, but I cannot provide specific stock price predictions for CanSino or any other financial asset. Stock prices are influenced by numerous unpredictable factors, and accurate forecasting is not feasible.
 
-### LLM + Abel Skill Response — CORRECT
+### LLM + Abel Skill Response — INCORRECT
 
 > (Same as LLM Only — no Abel data)
 
@@ -755,11 +756,11 @@ No Abel data available for this question.
 
 No Abel data available for this question.
 
-### LLM Only Response — CORRECT
+### LLM Only Response — INCORRECT
 
 > I'm unable to predict specific future stock prices or market capitalizations, including that of Bank of China (601988) on the Shanghai Stock Exchange. Market conditions are influenced by numerous unpredictable factors.
 
-### LLM + Abel Skill Response — CORRECT
+### LLM + Abel Skill Response — INCORRECT
 
 > (Same as LLM Only — no Abel data)
 
@@ -784,7 +785,7 @@ No Abel data available for this question.
 - **Parents**: ['AGNCM_close', 'ECCX_close', 'IDLEUSD_close', 'IMOUSD_close', 'IZM_close', 'MOBUSD_close', 'OXLCP_close', 'PEXUSD_close', 'PRIMEUSD_close', 'RBWUSD_close']
 - **Markov blanket size**: 15 shown / 20 total
 
-### LLM Only Response — CORRECT
+### LLM Only Response — INCORRECT
 
 > I'm unable to provide specific future prices for pork or any other commodities as they depend on various unpredictable factors such as market conditions, supply chain dynamics, and economic policies. For accurate forecasts, it's best to consult market analysts or financial institutions closer to the date.
 
@@ -809,11 +810,11 @@ No Abel data available for this question.
 
 No Abel data available for this question.
 
-### LLM Only Response — CORRECT
+### LLM Only Response — INCORRECT
 
 > I'm unable to predict specific future market values, including the low for the CSI 300 Index on March 13, 2026. Market conditions are influenced by numerous unpredictable factors.
 
-### LLM + Abel Skill Response — CORRECT
+### LLM + Abel Skill Response — INCORRECT
 
 > (Same as LLM Only — no Abel data)
 
