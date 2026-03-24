@@ -1,18 +1,19 @@
 {
   "timestamp": "20260324_095121",
-  "version": "v4-full-skill",
+  "version": "v4-strict-judge",
   "total_dataset": 244,
   "suitable": 31,
   "summary": {
     "abel_data_count": 15,
     "abel_data_rate": 48.38709677419355,
-    "llm_accuracy": 77.41935483870968,
-    "abel_accuracy": 77.41935483870968,
-    "improvement": 0.0,
-    "improved": 3,
-    "worsened": 3,
-    "abel_only_llm_acc": 73.33333333333333,
-    "abel_only_abel_acc": 73.33333333333333
+    "llm_accuracy": 19.35483870967742,
+    "abel_accuracy": 38.70967741935484,
+    "improvement": 19.35483870967742,
+    "improved": 7,
+    "worsened": 1,
+    "abel_only_llm_acc": 20.0,
+    "abel_only_abel_acc": 60.0,
+    "judge_version": "strict-v2"
   },
   "results": [
     {
@@ -73,8 +74,8 @@
         "AAPL_close"
       ],
       "llm_response": "I'm sorry, but I cannot predict specific stock prices for future dates. Stock prices are influenced by numerous unpredictable factors.",
-      "llm_correct": true,
-      "llm_judge": "CORRECT",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
       "abel_context": {
         "node": "AAPL_close",
         "prediction": -0.0042334447531580085,
@@ -110,12 +111,12 @@
         "INDEXSP:.INX_close"
       ],
       "llm_response": "I'm unable to predict specific future stock market values, including the S&P 500 Index on January 26, 2026. Market conditions are influenced by numerous unpredictable factors.",
-      "llm_correct": true,
-      "llm_judge": "CORRECT",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
       "abel_context": null,
       "abel_response": "I'm unable to predict specific future stock market values, including the S&P 500 Index on January 26, 2026. Market conditions are influenced by numerous unpredictable factors.",
-      "abel_correct": true,
-      "abel_judge": "No Abel data"
+      "abel_correct": false,
+      "abel_judge": "No Abel data - same as LLM"
     },
     {
       "id": "685173d659f71f006037a1eb",
@@ -128,12 +129,12 @@
         "DJI_close"
       ],
       "llm_response": "I'm unable to predict specific future stock market values, including the Dow Jones Industrial Average on a specific date. Market conditions are influenced by numerous unpredictable factors.",
-      "llm_correct": true,
-      "llm_judge": "CORRECT",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
       "abel_context": null,
       "abel_response": "I'm unable to predict specific future stock market values, including the Dow Jones Industrial Average on a specific date. Market conditions are influenced by numerous unpredictable factors.",
-      "abel_correct": true,
-      "abel_judge": "No Abel data"
+      "abel_correct": false,
+      "abel_judge": "No Abel data - same as LLM"
     },
     {
       "id": "6851741059f71f006037a1ee",
@@ -146,12 +147,12 @@
         "NIKKEI_close"
       ],
       "llm_response": "I'm unable to predict specific future stock prices, including the Nikkei 225's close on January 23, 2026. Market conditions are influenced by numerous unpredictable factors.",
-      "llm_correct": true,
-      "llm_judge": "CORRECT",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
       "abel_context": null,
       "abel_response": "I'm unable to predict specific future stock prices, including the Nikkei 225's close on January 23, 2026. Market conditions are influenced by numerous unpredictable factors.",
-      "abel_correct": true,
-      "abel_judge": "No Abel data"
+      "abel_correct": false,
+      "abel_judge": "No Abel data - same as LLM"
     },
     {
       "id": "68528da19193260061abd8f6",
@@ -164,8 +165,8 @@
         "LI_close"
       ],
       "llm_response": "I'm sorry, but I cannot provide specific stock price predictions for future dates, including the high for Li Auto (NASDAQ:LI) on January 27, 2026. Stock prices are influenced by numerous unpredictable factors.",
-      "llm_correct": true,
-      "llm_judge": "CORRECT",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
       "abel_context": {
         "node": "LI_close",
         "prediction": -0.01799029592878681,
@@ -201,12 +202,12 @@
         ".IXIC_close"
       ],
       "llm_response": "I'm unable to predict specific future values for financial indices like the NASDAQ Composite Index. Market conditions are influenced by numerous unpredictable factors.",
-      "llm_correct": true,
-      "llm_judge": "CORRECT",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
       "abel_context": null,
       "abel_response": "I'm unable to predict specific future values for financial indices like the NASDAQ Composite Index. Market conditions are influenced by numerous unpredictable factors.",
-      "abel_correct": true,
-      "abel_judge": "No Abel data"
+      "abel_correct": false,
+      "abel_judge": "No Abel data - same as LLM"
     },
     {
       "id": "695bb4008b62560069adce4b",
@@ -219,12 +220,12 @@
         "PLTR_close"
       ],
       "llm_response": "I'm unable to predict specific stock prices or movements for Palantir (PLTR) or any other asset. Market conditions are influenced by numerous unpredictable factors.",
-      "llm_correct": true,
-      "llm_judge": "CORRECT",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
       "abel_context": null,
       "abel_response": "I'm unable to predict specific stock prices or movements for Palantir (PLTR) or any other asset. Market conditions are influenced by numerous unpredictable factors.",
-      "abel_correct": true,
-      "abel_judge": "No Abel data"
+      "abel_correct": false,
+      "abel_judge": "No Abel data - same as LLM"
     },
     {
       "id": "695bb4008b62560069adce53",
@@ -242,7 +243,7 @@
       "abel_context": null,
       "abel_response": "Gold (GC) is expected to be above 'K' at the end of January, driven by ongoing economic uncertainties and potential shifts in monetary policy.",
       "abel_correct": true,
-      "abel_judge": "No Abel data"
+      "abel_judge": "No Abel data - same as LLM"
     },
     {
       "id": "695bb4008b62560069adce59",
@@ -255,8 +256,8 @@
         "CL_close"
       ],
       "llm_response": "I'm unable to predict specific future prices for crude oil or any other financial asset. Market conditions are influenced by numerous unpredictable factors, including geopolitical events, supply and demand dynamics, and economic indicators.",
-      "llm_correct": true,
-      "llm_judge": "CORRECT",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
       "abel_context": {
         "node": "CL_close",
         "prediction": -0.00041327528685927294,
@@ -302,8 +303,8 @@
         "OPEN_close"
       ],
       "llm_response": "I'm unable to predict specific stock prices or financial outcomes for Opendoor (OPEN) in January 2026. Market conditions, company performance, and external factors can significantly influence stock prices.",
-      "llm_correct": true,
-      "llm_judge": "CORRECT",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
       "abel_context": {
         "node": "OPEN_close",
         "prediction": 0.012948665695915806,
@@ -349,8 +350,8 @@
         "CL_close"
       ],
       "llm_response": "I cannot provide specific predictions for crude oil prices as they are influenced by numerous unpredictable factors. However, based on current trends and market analysis, it is reasonable to expect crude oil prices to remain within the range of $70 to $80 per barrel by the end of January.",
-      "llm_correct": null,
-      "llm_judge": "UNCERTAIN",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
       "abel_context": {
         "node": "CL_close",
         "prediction": -0.00041327528685927294,
@@ -396,12 +397,12 @@
         "GC_close"
       ],
       "llm_response": "I cannot provide specific predictions for Gold (GC) prices in January, as market conditions are influenced by numerous unpredictable factors. It's advisable to consult financial analysts or use market analysis tools for the most accurate forecasts.",
-      "llm_correct": true,
-      "llm_judge": "CORRECT",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
       "abel_context": null,
       "abel_response": "I cannot provide specific predictions for Gold (GC) prices in January, as market conditions are influenced by numerous unpredictable factors. It's advisable to consult financial analysts or use market analysis tools for the most accurate forecasts.",
-      "abel_correct": true,
-      "abel_judge": "No Abel data"
+      "abel_correct": false,
+      "abel_judge": "No Abel data - same as LLM"
     },
     {
       "id": "6957ba8a03568a006853e82e",
@@ -478,8 +479,8 @@
         "blanket_total": 20
       },
       "abel_response": "Based on the causal analysis, Nvidia (NVDA) is predicted to experience a slight upward change of 0.07%, driven by its direct causal parents. However, given the current price trajectory and the relatively modest predicted change, it is unlikely that Nvidia will hit either $170 or $200 by the end of January 2026. Therefore, the answer is ['neither'].",
-      "abel_correct": true,
-      "abel_judge": "CORRECT"
+      "abel_correct": false,
+      "abel_judge": "INCORRECT"
     },
     {
       "id": "69590c18deacd00066876763",
@@ -497,7 +498,7 @@
       "abel_context": null,
       "abel_response": "['No']",
       "abel_correct": true,
-      "abel_judge": "No Abel data"
+      "abel_judge": "No Abel data - same as LLM"
     },
     {
       "id": "69590c18deacd00066876764",
@@ -515,7 +516,7 @@
       "abel_context": null,
       "abel_response": "['Yes']",
       "abel_correct": true,
-      "abel_judge": "No Abel data"
+      "abel_judge": "No Abel data - same as LLM"
     },
     {
       "id": "6851735859f71f006037a1e2",
@@ -528,8 +529,8 @@
         "AGRI_close"
       ],
       "llm_response": "I'm unable to provide specific future financial predictions or indices values, including the Agricultural Product Wholesale Price 200 Index for February 5, 2026. For accurate forecasts, please consult financial analysts or relevant market reports closer to that date.",
-      "llm_correct": true,
-      "llm_judge": "CORRECT",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
       "abel_context": {
         "node": "AGRI_close",
         "prediction": 0.00011649878032535038,
@@ -575,8 +576,8 @@
         "ZS_close"
       ],
       "llm_response": "I'm unable to predict specific future prices for commodities like soybeans. Market conditions, weather, and geopolitical factors can all influence prices unpredictably.",
-      "llm_correct": true,
-      "llm_judge": "CORRECT",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
       "abel_context": {
         "node": "ZS_close",
         "prediction": -8.527963069775683e-05,
@@ -596,8 +597,8 @@
         "blanket_total": 20
       },
       "abel_response": "Based on the observational prediction indicating a slight downward change in soybean prices, it is likely that the lowest closing price of soybeans between 10 October 2025 and 6 March 2026 will be influenced by the negative trend suggested by the key drivers. Therefore, the lowest closing price is expected to be lower than the current levels, but a specific numerical value cannot be determined without additional data. Thus, the answer is ['E'].",
-      "abel_correct": true,
-      "abel_judge": "CORRECT"
+      "abel_correct": false,
+      "abel_judge": "INCORRECT"
     },
     {
       "id": "6981ea9930057a005cdb9e46",
@@ -741,8 +742,8 @@
         "NVDA_close"
       ],
       "llm_response": "I cannot predict specific stock prices or movements for NVIDIA or any other company on specific future dates. Therefore, I cannot provide a definitive answer to whether NVIDIA stock will be higher on March 16, 2026, than on March 09, 2026.",
-      "llm_correct": true,
-      "llm_judge": "CORRECT",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
       "abel_context": {
         "node": "NVDA_close",
         "prediction": 0.0005899752885889674,
@@ -779,7 +780,7 @@
       "abel_context": null,
       "abel_response": "I'm unable to provide specific future price index predictions for agricultural products, including fruits, as they depend on various unpredictable factors such as market conditions, weather, and economic policies. For accurate forecasts, please consult relevant financial analysis tools or experts closer to the date.",
       "abel_correct": false,
-      "abel_judge": "No Abel data"
+      "abel_judge": "No Abel data - same as LLM"
     },
     {
       "id": "685173c159f71f006037a1e9",
@@ -797,7 +798,7 @@
       "abel_context": null,
       "abel_response": "I'm unable to provide real-time financial predictions or specific future exchange rates. For the most accurate and up-to-date information, please consult a financial institution or currency exchange service closer to the date in question.",
       "abel_correct": false,
-      "abel_judge": "No Abel data"
+      "abel_judge": "No Abel data - same as LLM"
     },
     {
       "id": "6851740359f71f006037a1ed",
@@ -810,12 +811,12 @@
         "SZ:164824_close"
       ],
       "llm_response": "I'm unable to provide specific future stock prices or market predictions, including for the India Market Fund LOF (SZ:164824) on March 16, 2026. Market conditions are influenced by numerous unpredictable factors.",
-      "llm_correct": true,
-      "llm_judge": "CORRECT",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
       "abel_context": null,
       "abel_response": "I'm unable to provide specific future stock prices or market predictions, including for the India Market Fund LOF (SZ:164824) on March 16, 2026. Market conditions are influenced by numerous unpredictable factors.",
-      "abel_correct": true,
-      "abel_judge": "No Abel data"
+      "abel_correct": false,
+      "abel_judge": "No Abel data - same as LLM"
     },
     {
       "id": "687df3a41d972f003b8ba68c",
@@ -828,12 +829,12 @@
         "688185_close"
       ],
       "llm_response": "I'm sorry, but I cannot provide specific stock price predictions for CanSino or any other financial asset. Stock prices are influenced by numerous unpredictable factors, and accurate forecasting is not feasible.",
-      "llm_correct": true,
-      "llm_judge": "CORRECT",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
       "abel_context": null,
       "abel_response": "I'm sorry, but I cannot provide specific stock price predictions for CanSino or any other financial asset. Stock prices are influenced by numerous unpredictable factors, and accurate forecasting is not feasible.",
-      "abel_correct": true,
-      "abel_judge": "No Abel data"
+      "abel_correct": false,
+      "abel_judge": "No Abel data - same as LLM"
     },
     {
       "id": "685171b65b1af900600a3306",
@@ -846,12 +847,12 @@
         "601988_close"
       ],
       "llm_response": "I'm unable to predict specific future stock prices or market capitalizations, including that of Bank of China (601988) on the Shanghai Stock Exchange. Market conditions are influenced by numerous unpredictable factors.",
-      "llm_correct": true,
-      "llm_judge": "CORRECT",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
       "abel_context": null,
       "abel_response": "I'm unable to predict specific future stock prices or market capitalizations, including that of Bank of China (601988) on the Shanghai Stock Exchange. Market conditions are influenced by numerous unpredictable factors.",
-      "abel_correct": true,
-      "abel_judge": "No Abel data"
+      "abel_correct": false,
+      "abel_judge": "No Abel data - same as LLM"
     },
     {
       "id": "6851743b59f71f006037a1f1",
@@ -864,8 +865,8 @@
         "CL_close"
       ],
       "llm_response": "I'm unable to provide specific future prices for pork or any other commodities as they depend on various unpredictable factors such as market conditions, supply chain dynamics, and economic policies. For accurate forecasts, it's best to consult market analysts or financial institutions closer to the date.",
-      "llm_correct": true,
-      "llm_judge": "CORRECT",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
       "abel_context": {
         "node": "CL_close",
         "prediction": -0.00041327528685927294,
@@ -911,12 +912,12 @@
         "CSI300_close"
       ],
       "llm_response": "I'm unable to predict specific future market values, including the low for the CSI 300 Index on March 13, 2026. Market conditions are influenced by numerous unpredictable factors.",
-      "llm_correct": true,
-      "llm_judge": "CORRECT",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
       "abel_context": null,
       "abel_response": "I'm unable to predict specific future market values, including the low for the CSI 300 Index on March 13, 2026. Market conditions are influenced by numerous unpredictable factors.",
-      "abel_correct": true,
-      "abel_judge": "No Abel data"
+      "abel_correct": false,
+      "abel_judge": "No Abel data - same as LLM"
     },
     {
       "id": "68774ddd3083b1003c629ca8",
@@ -930,7 +931,7 @@
       "abel_context": null,
       "abel_response": "I'm unable to provide specific financial predictions for future dates, including the Daily Total Turnover of Shanghai-Hong Kong Stock Connect's Southbound Trading on March 16, 2026. Financial markets are influenced by numerous unpredictable factors, making precise forecasts challenging.",
       "abel_correct": false,
-      "abel_judge": "No Abel data"
+      "abel_judge": "No Abel data - same as LLM"
     }
   ]
 }
