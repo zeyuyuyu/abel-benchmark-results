@@ -1,0 +1,2479 @@
+{
+  "timestamp": "20260324_093313",
+  "version": "v3",
+  "total_dataset": 244,
+  "suitable": 27,
+  "summary": {
+    "abel_data_count": 13,
+    "abel_data_rate": 48.148148148148145,
+    "llm_accuracy": 70.37037037037037,
+    "abel_accuracy": 62.96296296296296,
+    "improvement": -7.4074074074074066,
+    "improved": 2,
+    "worsened": 4
+  },
+  "classifications": [
+    {
+      "i": 0,
+      "suitable": false,
+      "reason": "The question pertains to a puzzle and does not involve any financial asset or market prediction.",
+      "tickers": [],
+      "title": "Right approach to @bens puzzle (#2) / Collaboration space"
+    },
+    {
+      "i": 1,
+      "suitable": false,
+      "reason": "The question is about a puzzle outcome, not a financial asset.",
+      "tickers": [],
+      "title": "How many characters in the solution to @bens puzzle (round 2)"
+    },
+    {
+      "i": 2,
+      "suitable": false,
+      "reason": "The question pertains to a political event, not a financial asset.",
+      "tickers": [],
+      "title": "Which candidates will make it to the second round of the Portuguese Presidential elections on 18 Jan 2026?"
+    },
+    {
+      "i": 3,
+      "suitable": false,
+      "reason": "The question pertains to a political event, not a financial asset.",
+      "tickers": [],
+      "title": "Who will qualify for the second round of the Portugal Presidential Election?"
+    },
+    {
+      "i": 4,
+      "suitable": false,
+      "reason": "The question pertains to a sports event outcome, which is not a financial asset.",
+      "tickers": [],
+      "title": "2025 CAF Cup of Nations (AFCON) Winner"
+    },
+    {
+      "i": 5,
+      "suitable": false,
+      "reason": "The question pertains to global average temperature predictions, which are not related to financial assets.",
+      "tickers": [],
+      "title": "Global Average Temperature Dec 2025 per LOTI v4 vs 1951-1980 base period (NASA Gistemp)"
+    },
+    {
+      "i": 6,
+      "suitable": false,
+      "reason": "The question pertains to a gaming event outcome, not a financial asset.",
+      "tickers": [],
+      "title": "MCSR Ranked Playoffs Season 9 Winner"
+    },
+    {
+      "i": 7,
+      "suitable": false,
+      "reason": "The question pertains to a prediction about a puzzle outcome, not a financial asset.",
+      "tickers": [],
+      "title": "Who will post the winning guess in Ben\u2019s puzzle (round 2) as yourself!"
+    },
+    {
+      "i": 8,
+      "suitable": false,
+      "reason": "The question pertains to an economic indicator (unemployment rate) rather than a specific financial asset.",
+      "tickers": [],
+      "title": "Sept-Nov Unemployment Rate - U.K."
+    },
+    {
+      "i": 9,
+      "suitable": false,
+      "reason": "The question pertains to an oil tanker and its potential future events, not a specific financial asset's price or value.",
+      "tickers": [],
+      "title": "What will be true of the oil tanker Marinera on 14th January?"
+    },
+    {
+      "i": 10,
+      "suitable": false,
+      "reason": "The question pertains to a sports event and not a financial asset.",
+      "tickers": [],
+      "title": "Which team will win the 2025-2026 College Football Playoff National Championship?"
+    },
+    {
+      "i": 11,
+      "suitable": false,
+      "reason": "The question pertains to inflation data, which is an economic indicator, not a specific financial asset.",
+      "tickers": [],
+      "title": "December Inflation Canada - Annual"
+    },
+    {
+      "i": 12,
+      "suitable": false,
+      "reason": "The question pertains to inflation rates in the Eurozone, which is an economic indicator, not a specific financial asset.",
+      "tickers": [],
+      "title": "December Inflation Eurozone - Annual"
+    },
+    {
+      "i": 13,
+      "suitable": false,
+      "reason": "The question is about a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "Coventry City FC vs. Leicester City FC"
+    },
+    {
+      "i": 14,
+      "suitable": false,
+      "reason": "The question pertains to a television program airing date, which is not related to financial markets or assets.",
+      "tickers": [],
+      "title": "\u201cInside CECOT\u201d airs on 60 Minutes by January 18?"
+    },
+    {
+      "i": 15,
+      "suitable": false,
+      "reason": "The question is about a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "Islanders vs. Oilers"
+    },
+    {
+      "i": 16,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "Lightning vs. Blues"
+    },
+    {
+      "i": 17,
+      "suitable": false,
+      "reason": "The question is about a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "Southampton FC vs. Hull City AFC"
+    },
+    {
+      "i": 18,
+      "suitable": false,
+      "reason": "The question is about a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "Quer\u00e9taro FC vs. Club Tijuana"
+    },
+    {
+      "i": 19,
+      "suitable": false,
+      "reason": "The question is about a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "Golden Knights vs. Kings"
+    },
+    {
+      "i": 20,
+      "suitable": false,
+      "reason": "The question is about a sports match, not a financial asset.",
+      "tickers": [],
+      "title": "CF Am\u00e9rica vs. Atl\u00e9tico San Luis"
+    },
+    {
+      "i": 21,
+      "suitable": false,
+      "reason": "The question is about a sports match, not a financial asset.",
+      "tickers": [],
+      "title": "Rams Ba\u015fak\u015fehir FK vs. Fatih Karag\u00fcmr\u00fck SK"
+    },
+    {
+      "i": 22,
+      "suitable": false,
+      "reason": "The question pertains to a puzzle event, not a financial asset.",
+      "tickers": [],
+      "title": "Will @bens puzzle (round 2) get below 10%?"
+    },
+    {
+      "i": 23,
+      "suitable": false,
+      "reason": "The question is about a sports match, not a financial asset.",
+      "tickers": [],
+      "title": "Melbourne City FC vs. Auckland FC"
+    },
+    {
+      "i": 24,
+      "suitable": false,
+      "reason": "The question is about a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "Sharks vs. Red Wings"
+    },
+    {
+      "i": 25,
+      "suitable": false,
+      "reason": "The question pertains to a sports match and not a financial asset.",
+      "tickers": [],
+      "title": "NAC Breda vs. NEC"
+    },
+    {
+      "i": 26,
+      "suitable": false,
+      "reason": "The question is about a sports match, not a financial asset.",
+      "tickers": [],
+      "title": "Al Ittihad Saudi Club vs. Al Ettifaq Saudi Club"
+    },
+    {
+      "i": 27,
+      "suitable": false,
+      "reason": "The question is about a future event related to a location, not a financial asset.",
+      "tickers": [],
+      "title": "In which city will Tetra be on January 15th 2026?"
+    },
+    {
+      "i": 28,
+      "suitable": false,
+      "reason": "The question is about a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "Sharks vs. Panthers"
+    },
+    {
+      "i": 29,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "Deportivo Toluca FC vs. Club Santos Laguna"
+    },
+    {
+      "i": 30,
+      "suitable": false,
+      "reason": "The question is about a sports match outcome, not a financial asset.",
+      "tickers": [],
+      "title": "FC K\u00f6ln vs. FC Bayern M\u00fcnchen"
+    },
+    {
+      "i": 31,
+      "suitable": false,
+      "reason": "The question pertains to a movie's box office gross, which is not a financial asset.",
+      "tickers": [],
+      "title": "What will be the domestic box office gross in the opening weekend for \"28 Years Later: The Bone Temple,\" according to Box Office Mojo?"
+    },
+    {
+      "i": 32,
+      "suitable": false,
+      "reason": "The question is about book rankings, which are not financial assets.",
+      "tickers": [],
+      "title": "2026-01-19, what will be the books from rank 4 to 6 on the latest Amazon Charts of Most Read Fiction list? (Give the book titles only)"
+    },
+    {
+      "i": 33,
+      "suitable": false,
+      "reason": "The question is about a gaming event and not a financial asset.",
+      "tickers": [],
+      "title": "How much money will ClaudePlaysPokemon have left after completing Safari Zone?"
+    },
+    {
+      "i": 34,
+      "suitable": false,
+      "reason": "The question is about movie award nominees, which is not related to financial assets.",
+      "tickers": [],
+      "title": "Best Actress nominees? (2026 Oscars)"
+    },
+    {
+      "i": 35,
+      "suitable": false,
+      "reason": "The question pertains to a political event, not a financial asset.",
+      "tickers": [],
+      "title": "Portugal Presidential Election First Round Head to Heads"
+    },
+    {
+      "i": 36,
+      "suitable": false,
+      "reason": "The question pertains to movie award nominations, which are not related to financial assets.",
+      "tickers": [],
+      "title": "Oscars 2026: Achievement in Casting Nominations"
+    },
+    {
+      "i": 37,
+      "suitable": false,
+      "reason": "The question pertains to movie awards and nominations, which are not financial assets.",
+      "tickers": [],
+      "title": "Oscars 2026: Best Director Nominations"
+    },
+    {
+      "i": 38,
+      "suitable": false,
+      "reason": "The question pertains to sports betting outcomes, which are not financial assets.",
+      "tickers": [],
+      "title": "UEFA Champions League Week Prop Bets, Jan 20th-21st (Matchday 7)"
+    },
+    {
+      "i": 39,
+      "suitable": false,
+      "reason": "The question pertains to movie nominations, which are not related to financial assets.",
+      "tickers": [],
+      "title": "Oscars 2026: Best Documentary Feature Nominations"
+    },
+    {
+      "i": 40,
+      "suitable": false,
+      "reason": "The question is about movie nominations, which is not related to financial assets.",
+      "tickers": [],
+      "title": "Best Picture nominees? (2026 Oscars)"
+    },
+    {
+      "i": 41,
+      "suitable": false,
+      "reason": "The question is about a sports event and not a financial asset.",
+      "tickers": [],
+      "title": "Who will win the main event of UFC 324? (Gaethje vs Pimblett)"
+    },
+    {
+      "i": 42,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "MLBB: M7 World Championship Winner"
+    },
+    {
+      "i": 43,
+      "suitable": false,
+      "reason": "The question pertains to movie awards and nominees, which are not related to financial assets.",
+      "tickers": [],
+      "title": "Best Supporting Actress nominees? (2026 Oscars)"
+    },
+    {
+      "i": 44,
+      "suitable": false,
+      "reason": "The question pertains to movie awards, which are not financial events.",
+      "tickers": [],
+      "title": "Best Director nominees? (2026 Oscars)"
+    },
+    {
+      "i": 45,
+      "suitable": false,
+      "reason": "The question is about a climbing event and not related to financial markets or assets.",
+      "tickers": [],
+      "title": "How long will it take Alex Honnold to free solo Taipei 101?"
+    },
+    {
+      "i": 46,
+      "suitable": false,
+      "reason": "The question is about a science competition outcome, not a financial asset.",
+      "tickers": [],
+      "title": "Who will win the 2026 MIT Science Olympiad Invitational?"
+    },
+    {
+      "i": 47,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "NFC Champion"
+    },
+    {
+      "i": 48,
+      "suitable": false,
+      "reason": "The question is about movie award nominees, which is not related to financial assets.",
+      "tickers": [],
+      "title": "Best Actor nominees? (2026 Oscars)"
+    },
+    {
+      "i": 49,
+      "suitable": false,
+      "reason": "The question pertains to a fictional event and does not involve a financial asset.",
+      "tickers": [],
+      "title": "Will Polo gram be revealed to be Marco's dad within 1 month"
+    },
+    {
+      "i": 50,
+      "suitable": false,
+      "reason": "The question pertains to a movie award, which is not a financial asset.",
+      "tickers": [],
+      "title": "Will Bugonia get an Oscar nomination for best picture?"
+    },
+    {
+      "i": 51,
+      "suitable": false,
+      "reason": "The question does not pertain to a specific financial asset or its price/value.",
+      "tickers": [],
+      "title": "The No-Bots Market. Which side will be automated-bots-free market close?"
+    },
+    {
+      "i": 52,
+      "suitable": false,
+      "reason": "The question pertains to a monetary policy decision rather than a specific financial asset's price or value.",
+      "tickers": [],
+      "title": "Bank of Brazil decision in January?"
+    },
+    {
+      "i": 53,
+      "suitable": false,
+      "reason": "The question pertains to an interest rate decision by the Bank of Japan, not a specific financial asset's price or value.",
+      "tickers": [],
+      "title": "At close of business on 23 January 2026, will the most recently announced Bank of Japan (BOJ) \"uncollateralized overnight call [interest] rate\" be lower, the same, or higher than it was at close of business on 19 December 2025?"
+    },
+    {
+      "i": 54,
+      "suitable": false,
+      "reason": "The question pertains to movie awards and nominations, which are not financial assets.",
+      "tickers": [],
+      "title": "RAS2026: Will One Battle After Another gather more Oscars nominations than Marty Supreme?"
+    },
+    {
+      "i": 55,
+      "suitable": false,
+      "reason": "The question pertains to a climbing event and not a financial asset.",
+      "tickers": [],
+      "title": "Will Alex Honnold successfully free solo Taipei 101 on January 23, 2026?"
+    },
+    {
+      "i": 56,
+      "suitable": true,
+      "reason": "The question pertains to a potential acquisition offer involving shares of Warner Bros. Discovery, which is a financial asset.",
+      "tickers": [
+        "WBD"
+      ],
+      "title": "Before 24 January 2026, will Paramount Skydance (Paramount) increase its offer to pay $30.00 per share for outstanding Warner Bros. Discovery (Warner Bros.) shares?"
+    },
+    {
+      "i": 57,
+      "suitable": false,
+      "reason": "The question pertains to a weather event and not a financial asset.",
+      "tickers": [],
+      "title": "Will the US Storm Prediction Center issue a Tornado Watch between 12:00 am EST 1/18/26 and 11:59 pm EST 1/24/26?"
+    },
+    {
+      "i": 58,
+      "suitable": false,
+      "reason": "The question is about a sports match, not a financial asset.",
+      "tickers": [],
+      "title": "Juventus beats SSC Napoli | Soccer Serie A match 25th Jan 2026"
+    },
+    {
+      "i": 59,
+      "suitable": false,
+      "reason": "The question pertains to a legal trial and not a financial asset.",
+      "tickers": [],
+      "title": "Will Adrian Gonzales be found guilty in Uvalde school shooting response trial?"
+    },
+    {
+      "i": 60,
+      "suitable": false,
+      "reason": "The question pertains to a political event and does not involve a financial asset.",
+      "tickers": [],
+      "title": "How will the winner of the portugal presidential election win"
+    },
+    {
+      "i": 61,
+      "suitable": false,
+      "reason": "The question pertains to a political event and not a financial asset.",
+      "tickers": [],
+      "title": "Will Pam Bondi be arrested over defying the Epstein Files Transparency Act"
+    },
+    {
+      "i": 62,
+      "suitable": false,
+      "reason": "The question pertains to a legal event and not a financial asset.",
+      "tickers": [],
+      "title": "nasry Asfuras win overturned by a court?"
+    },
+    {
+      "i": 63,
+      "suitable": false,
+      "reason": "The question pertains to a movie award event, which is not a financial asset.",
+      "tickers": [],
+      "title": "Will there be a surprising Best Picture nomination? (2026 Oscars)"
+    },
+    {
+      "i": 64,
+      "suitable": false,
+      "reason": "The question is about a sports match, not a financial asset.",
+      "tickers": [],
+      "title": "Al Hilal Saudi Club vs. Al Fayha Saudi Club"
+    },
+    {
+      "i": 65,
+      "suitable": false,
+      "reason": "The question is about a sports match, not a financial asset.",
+      "tickers": [],
+      "title": "FC Arouca vs. Sporting CP"
+    },
+    {
+      "i": 66,
+      "suitable": false,
+      "reason": "The question is about a sports match, not a financial asset.",
+      "tickers": [],
+      "title": "Auckland FC vs. Central Coast Mariners FC"
+    },
+    {
+      "i": 67,
+      "suitable": false,
+      "reason": "The question is about golf player rankings, which is not a financial asset.",
+      "tickers": [],
+      "title": "2026-01-27, who will be the players ranked from 12 to 14 in the latest Official World Golf Ranking? (Give the names only)"
+    },
+    {
+      "i": 68,
+      "suitable": false,
+      "reason": "The question is about book rankings, which are not financial assets.",
+      "tickers": [],
+      "title": "2026-01-26, what will be the books from rank 13 to 15 on the latest Amazon Charts of Most Read Fiction list? (Give the book titles only)"
+    },
+    {
+      "i": 69,
+      "suitable": true,
+      "reason": "The question is about the future price of a specific financial asset, which is Apple stock.",
+      "tickers": [
+        "AAPL"
+      ],
+      "title": "2026-01-23, what will the high of Apple stock (AAPL) be for the day (in US$)?"
+    },
+    {
+      "i": 70,
+      "suitable": true,
+      "reason": "The question is about the future value of a specific financial index, the S&P 500 Index.",
+      "tickers": [
+        "INDEXSP:.INX"
+      ],
+      "title": "2026-01-26, what will be the day's open of the S&P 500 Index (INDEXSP:.INX)?"
+    },
+    {
+      "i": 71,
+      "suitable": true,
+      "reason": "The question is about the future value of a specific financial index, the Dow Jones Industrial Average.",
+      "tickers": [
+        ".DJI"
+      ],
+      "title": "2026-01-22, what will be the day's close for the Dow Jones Industrial Average (INDEXDJX:.DJI)?"
+    },
+    {
+      "i": 72,
+      "suitable": true,
+      "reason": "The question is about the future value of a specific financial index, the Nikkei 225.",
+      "tickers": [
+        "NIKKEI"
+      ],
+      "title": "2026-01-23, what will be the Nikkei Stock Average (Nikkei 225)'s close for the day?"
+    },
+    {
+      "i": 73,
+      "suitable": true,
+      "reason": "The question is about the future price of a specific financial asset, Li Auto.",
+      "tickers": [
+        "LI"
+      ],
+      "title": "2026-01-27, what will be the high for Li Auto (NASDAQ:LI) for the day (in US$)?"
+    },
+    {
+      "i": 74,
+      "suitable": true,
+      "reason": "The question is about the future value of a specific financial index, the NASDAQ Composite Index.",
+      "tickers": [
+        ".IXIC"
+      ],
+      "title": "2026-01-27, what will the NASDAQ Composite Index (.IXIC)'s open be for the day?"
+    },
+    {
+      "i": 75,
+      "suitable": true,
+      "reason": "The question is about the future price of a specific financial asset, Palantir Technologies Inc.",
+      "tickers": [
+        "PLTR"
+      ],
+      "title": "Will Palantir (PLTR) close above ___ end of January?"
+    },
+    {
+      "i": 76,
+      "suitable": false,
+      "reason": "The question pertains to a political event and not a financial asset.",
+      "tickers": [],
+      "title": "What will Trump say in January?"
+    },
+    {
+      "i": 77,
+      "suitable": false,
+      "reason": "The question pertains to the price of a specific type of RAM, which is not a financial asset like stocks, crypto, or commodities.",
+      "tickers": [],
+      "title": "Price of DDR5-6000 2x16GB RAM at the end of January 2026"
+    },
+    {
+      "i": 78,
+      "suitable": false,
+      "reason": "The question pertains to a political event and not a financial asset.",
+      "tickers": [],
+      "title": "Turnout in 2026 Costa Rica Presidential Election First Round"
+    },
+    {
+      "i": 79,
+      "suitable": false,
+      "reason": "The question pertains to a prediction about a specific event (GPT 5.2 METR time horizon) rather than a financial asset's price or value.",
+      "tickers": [],
+      "title": "GPT 5.2 METR time horizon"
+    },
+    {
+      "i": 80,
+      "suitable": false,
+      "reason": "The question is about weather prediction, not a financial asset.",
+      "tickers": [],
+      "title": "Precipitation in NYC in January?"
+    },
+    {
+      "i": 81,
+      "suitable": false,
+      "reason": "The question pertains to a fictional event in a game and does not involve any financial asset.",
+      "tickers": [],
+      "title": "Which nation will be the focus of Stellaris Invicta Season 3?"
+    },
+    {
+      "i": 82,
+      "suitable": true,
+      "reason": "The question is about the future price of gold, which is a financial asset.",
+      "tickers": [
+        "GC"
+      ],
+      "title": "Gold (GC) above ___ end of January?"
+    },
+    {
+      "i": 83,
+      "suitable": true,
+      "reason": "The question is about the future price of a specific financial asset, which is Crude Oil.",
+      "tickers": [
+        "CL"
+      ],
+      "title": "What will Crude Oil (CL) settle at in January?"
+    },
+    {
+      "i": 84,
+      "suitable": false,
+      "reason": "The question pertains to soccer player transfers, which is not related to financial assets.",
+      "tickers": [],
+      "title": "Which soccer players will sign with new clubs in winter window?"
+    },
+    {
+      "i": 85,
+      "suitable": false,
+      "reason": "The question pertains to measles cases, which is a health-related query and not about a financial asset.",
+      "tickers": [],
+      "title": "Measles cases in U.S. by January 31?"
+    },
+    {
+      "i": 86,
+      "suitable": false,
+      "reason": "The question pertains to a music award event and does not involve financial assets or their prices.",
+      "tickers": [],
+      "title": "Grammys: Songwriter of the Year Winner"
+    },
+    {
+      "i": 87,
+      "suitable": true,
+      "reason": "The question is about the future price of a specific financial asset, Opendoor (OPEN).",
+      "tickers": [
+        "OPEN"
+      ],
+      "title": "What will Opendoor (OPEN) hit in January 2026?"
+    },
+    {
+      "i": 88,
+      "suitable": true,
+      "reason": "The question is about the future price of Crude Oil, which is a financial asset.",
+      "tickers": [
+        "CL"
+      ],
+      "title": "What will Crude Oil (CL) hit__ by end of January?"
+    },
+    {
+      "i": 89,
+      "suitable": true,
+      "reason": "The question is about the future price of a specific financial asset, which is gold.",
+      "tickers": [
+        "GC"
+      ],
+      "title": "What will Gold (GC) settle at in January?"
+    },
+    {
+      "i": 90,
+      "suitable": false,
+      "reason": "The question pertains to a card game and not a financial asset.",
+      "tickers": [],
+      "title": "[January 2026] Top 10 cards in the MTG Arena Powered Cube (by 17Lands GIH WR)"
+    },
+    {
+      "i": 91,
+      "suitable": false,
+      "reason": "The question pertains to a geopolitical event and does not involve a financial asset.",
+      "tickers": [],
+      "title": "Will Israel strike Gaza on...?"
+    },
+    {
+      "i": 92,
+      "suitable": false,
+      "reason": "The question is about school cancellations, which is not related to financial markets or assets.",
+      "tickers": [],
+      "title": "How Many Days will Arlington Virginia Public Schools be Cancelled Next Week?"
+    },
+    {
+      "i": 93,
+      "suitable": false,
+      "reason": "The question is about a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "Which tennis player will win the Women's Singles Final at the 2026 Australian Open?"
+    },
+    {
+      "i": 94,
+      "suitable": false,
+      "reason": "The question pertains to a music award and not a financial asset.",
+      "tickers": [],
+      "title": "Who will win the 2026 Grammy for Best Pop Vocal Album?"
+    },
+    {
+      "i": 95,
+      "suitable": false,
+      "reason": "The question is about a music award and not related to financial assets.",
+      "tickers": [],
+      "title": "Who will win the 2026 Grammy for Record of the Year?"
+    },
+    {
+      "i": 96,
+      "suitable": true,
+      "reason": "The question is about the future price of Tesla stock.",
+      "tickers": [
+        "TSLA"
+      ],
+      "title": "Tesla hits $400 or $500 first before end of January 2026?"
+    },
+    {
+      "i": 97,
+      "suitable": false,
+      "reason": "The question pertains to a monetary policy decision rather than a specific financial asset's price or value.",
+      "tickers": [],
+      "title": "Reserve Bank of Australia Decision in February"
+    },
+    {
+      "i": 98,
+      "suitable": false,
+      "reason": "The question pertains to user growth of a website, not a financial asset.",
+      "tickers": [],
+      "title": "Will thealignedapp.com have 100+ users by Jan 31, 2026?"
+    },
+    {
+      "i": 99,
+      "suitable": true,
+      "reason": "The question is about the future price of Nvidia's stock, which is a financial asset.",
+      "tickers": [
+        "NVDA"
+      ],
+      "title": "Nvidia hits 170, 200 or neither first by end of January 2026?"
+    },
+    {
+      "i": 100,
+      "suitable": false,
+      "reason": "The question pertains to a political event and not a financial asset.",
+      "tickers": [],
+      "title": "Reeves or Lammy out first?"
+    },
+    {
+      "i": 101,
+      "suitable": false,
+      "reason": "The question does not pertain to a specific financial asset's price or value.",
+      "tickers": [],
+      "title": "New METR SOTA by end of January, 2026?"
+    },
+    {
+      "i": 102,
+      "suitable": false,
+      "reason": "The question pertains to a non-financial event (the Doomsday Clock), not a specific financial asset.",
+      "tickers": [],
+      "title": "Will the Doomsday Clock move by ten seconds or more?"
+    },
+    {
+      "i": 103,
+      "suitable": false,
+      "reason": "The question pertains to a political event and does not involve a specific financial asset.",
+      "tickers": [],
+      "title": "Will they pull a Nasrallah on Khamenei by end of January 2025?"
+    },
+    {
+      "i": 104,
+      "suitable": false,
+      "reason": "The question pertains to a political event rather than a financial asset.",
+      "tickers": [],
+      "title": "2026 a dream year for trump?"
+    },
+    {
+      "i": 105,
+      "suitable": true,
+      "reason": "The question is about the future price of Bitcoin, which is a financial asset.",
+      "tickers": [
+        "BTC"
+      ],
+      "title": "Will Bitcoin close above USD $100,000 on 31 January 2026 (UTC)?"
+    },
+    {
+      "i": 106,
+      "suitable": false,
+      "reason": "The question pertains to a geopolitical event and not a financial asset.",
+      "tickers": [],
+      "title": "North Korea missile launch by January 31?"
+    },
+    {
+      "i": 107,
+      "suitable": true,
+      "reason": "The question pertains to the future price of Bitcoin, which is a financial asset.",
+      "tickers": [
+        "BTC"
+      ],
+      "title": "Bitcoin below $82K in January?"
+    },
+    {
+      "i": 108,
+      "suitable": false,
+      "reason": "The question pertains to a political event and does not involve a financial asset.",
+      "tickers": [],
+      "title": "Nicol\u00e1s Maduro released from custody by...?"
+    },
+    {
+      "i": 109,
+      "suitable": false,
+      "reason": "The question does not pertain to a specific financial asset or its future price/value.",
+      "tickers": [],
+      "title": "Will something CRAZY happen in January (again)?"
+    },
+    {
+      "i": 110,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "Kings vs. Hurricanes"
+    },
+    {
+      "i": 111,
+      "suitable": false,
+      "reason": "The question pertains to a sports match, not a financial asset.",
+      "tickers": [],
+      "title": "Al Fateh Saudi Club vs. Al Hazem SC"
+    },
+    {
+      "i": 112,
+      "suitable": false,
+      "reason": "The question is about a sports match, not a financial asset.",
+      "tickers": [],
+      "title": "CA Tucum\u00e1n vs. CA Hurac\u00e1n"
+    },
+    {
+      "i": 113,
+      "suitable": false,
+      "reason": "The question is about movie rankings, which is not related to financial assets.",
+      "tickers": [],
+      "title": "2026-01-30, what will be the movies ranked from 4 to 6 on the latest weekly word-of-mouth movie ranking (\u4e00\u5468\u53e3\u7891\u7535\u5f71\u699c) published by Douban (\u8c46\u74e3)? (Give the movie titles only)"
+    },
+    {
+      "i": 114,
+      "suitable": false,
+      "reason": "The question is about a sports event and not related to financial assets.",
+      "tickers": [],
+      "title": "Who will win Super Bowl LX MVP?"
+    },
+    {
+      "i": 115,
+      "suitable": false,
+      "reason": "The question pertains to NBA player trades, which is not related to financial markets or specific financial assets.",
+      "tickers": [],
+      "title": "Which NBA players will be traded during the 2025-26 season before the Feb. 5 Trade Deadline?"
+    },
+    {
+      "i": 116,
+      "suitable": false,
+      "reason": "The question is about companies running ads during a sports event, not about specific financial asset prices or values.",
+      "tickers": [],
+      "title": "Which companies will run ads during Super Bowl LX?"
+    },
+    {
+      "i": 117,
+      "suitable": false,
+      "reason": "The question is about a Super Bowl halftime show, which is not related to financial markets or assets.",
+      "tickers": [],
+      "title": "Who will make an appearance at the Super Bowl halftime show? Super Bowl LX"
+    },
+    {
+      "i": 118,
+      "suitable": false,
+      "reason": "The question pertains to music streaming and not to financial assets.",
+      "tickers": [],
+      "title": "Most streamed album of 2025"
+    },
+    {
+      "i": 119,
+      "suitable": false,
+      "reason": "The question pertains to a chess tournament outcome, which is not a financial asset.",
+      "tickers": [],
+      "title": "Who will win the Masters section of the 2026 Tata Steel Chess Tournament?"
+    },
+    {
+      "i": 120,
+      "suitable": false,
+      "reason": "The question is about a music award and not related to financial assets.",
+      "tickers": [],
+      "title": "Best New Artist at the 2026 Grammy Awards?"
+    },
+    {
+      "i": 121,
+      "suitable": false,
+      "reason": "The question pertains to the percentage of positive reviews for a product, not a financial asset.",
+      "tickers": [],
+      "title": "What will the percentage of positive reviews on Highguard be by Feb 9th?"
+    },
+    {
+      "i": 122,
+      "suitable": false,
+      "reason": "The question pertains to a sports event and player trades, not a financial asset.",
+      "tickers": [],
+      "title": "For which team will Giannis Antetokounmpo play for after the 2026 trade deadline?"
+    },
+    {
+      "i": 123,
+      "suitable": false,
+      "reason": "The question is about a sports event and not a financial asset.",
+      "tickers": [],
+      "title": "Which team will be the 2026 Super Bowl Champion?"
+    },
+    {
+      "i": 124,
+      "suitable": false,
+      "reason": "The question pertains to sports event predictions, which are not related to financial assets.",
+      "tickers": [],
+      "title": "SUPER BOWL STATS PREDICTIONS"
+    },
+    {
+      "i": 125,
+      "suitable": false,
+      "reason": "The question is about a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "Who will win the 2026 Superbowl?"
+    },
+    {
+      "i": 126,
+      "suitable": false,
+      "reason": "The question pertains to job additions in the US economy, which is not a specific financial asset.",
+      "tickers": [],
+      "title": "How many jobs added in January?"
+    },
+    {
+      "i": 127,
+      "suitable": false,
+      "reason": "The question is about the Sharpe ratio of users, not a specific financial asset.",
+      "tickers": [],
+      "title": "What is the highest Sharpe ratio of any Manifold user?"
+    },
+    {
+      "i": 128,
+      "suitable": false,
+      "reason": "The question pertains to a sports event and not a financial asset.",
+      "tickers": [],
+      "title": "Who will win NFL Coach of the Year?"
+    },
+    {
+      "i": 129,
+      "suitable": false,
+      "reason": "The question pertains to a political event and not a financial asset.",
+      "tickers": [],
+      "title": "\u30c1\u30fc\u30e0\u307f\u3089\u3044\u304c\u8846\u9662\u9078\u3067\u7372\u5f97\u3059\u308b\u8b70\u5e2d\u6570\u306f\uff1f(How many seats will Team Mirai win in the Feb 2026 Japan lower house election?)"
+    },
+    {
+      "i": 130,
+      "suitable": false,
+      "reason": "The question is about a Super Bowl halftime show performance, which is not related to financial assets.",
+      "tickers": [],
+      "title": "Who will perform at the Super Bowl LX halftime show?"
+    },
+    {
+      "i": 131,
+      "suitable": false,
+      "reason": "The question is about a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "Who will win the NFL Most Valuable Player Award for the 2025 season?"
+    },
+    {
+      "i": 132,
+      "suitable": false,
+      "reason": "The question pertains to a political event, not a financial asset.",
+      "tickers": [],
+      "title": "Who will win the Democratic Party primary for New Jersey's 11th Congressional District special election in 2026?"
+    },
+    {
+      "i": 133,
+      "suitable": false,
+      "reason": "The question is about a political event, not a financial asset.",
+      "tickers": [],
+      "title": "Which party will win Thailand\u2019s legislative election?"
+    },
+    {
+      "i": 134,
+      "suitable": false,
+      "reason": "The question is about a sports match, which is not a financial asset.",
+      "tickers": [],
+      "title": "United Rugby Championship: Ospreys vs Dragons"
+    },
+    {
+      "i": 135,
+      "suitable": false,
+      "reason": "The question is about a game outcome, not a financial asset.",
+      "tickers": [],
+      "title": "Who will win Jet Lag: The Game Season 16?"
+    },
+    {
+      "i": 136,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "United Rugby Championship: Leinster vs Edinburgh"
+    },
+    {
+      "i": 137,
+      "suitable": false,
+      "reason": "The question pertains to a political event, not a financial asset.",
+      "tickers": [],
+      "title": "Will Indiana change its congressional voting map for the 2026 elections?"
+    },
+    {
+      "i": 138,
+      "suitable": false,
+      "reason": "The question pertains to an interest rate decision by the European Central Bank, not a specific financial asset's price or value.",
+      "tickers": [],
+      "title": "At close of business on 5 February 2026, will the most recently announced European Central Bank (ECB) \"Deposit facility\" interest rate be lower, the same, or higher than it was at close of business on 18 December 2025?"
+    },
+    {
+      "i": 139,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "United Rugby Championship: Ulster vs Cardiff Rugby"
+    },
+    {
+      "i": 140,
+      "suitable": false,
+      "reason": "The question pertains to an individual's emotional response at a meeting, not a financial asset.",
+      "tickers": [],
+      "title": "Will Dave Cole get angry at any KOH 26 Driver's meetings?"
+    },
+    {
+      "i": 141,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "A team from the NFC West will win Super Bowl LX"
+    },
+    {
+      "i": 142,
+      "suitable": false,
+      "reason": "The question is about a sports match, not a financial asset.",
+      "tickers": [],
+      "title": "Manchester City FC vs Newcastle United FC"
+    },
+    {
+      "i": 143,
+      "suitable": false,
+      "reason": "The question is about a sports match, which is not a financial asset.",
+      "tickers": [],
+      "title": "Top 14: Racing 92 vs Perpignan"
+    },
+    {
+      "i": 144,
+      "suitable": false,
+      "reason": "The question pertains to a sports event and not a financial asset.",
+      "tickers": [],
+      "title": "Transgender women be banned from the Olympics before Winter Games?"
+    },
+    {
+      "i": 145,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "United Rugby Championship: Glasgow Warriors vs Munster"
+    },
+    {
+      "i": 146,
+      "suitable": false,
+      "reason": "The question pertains to a political event and not a financial asset.",
+      "tickers": [],
+      "title": "Will Gustavo Petro stay in the U.S. longer than 5 consecutive days starting Feb 3, 2026?"
+    },
+    {
+      "i": 147,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "Will the Seahawks beat the Patriots in the 2026 Superbowl?"
+    },
+    {
+      "i": 148,
+      "suitable": false,
+      "reason": "The question is about a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "West Bromwich Albion FC vs. Stoke City FC"
+    },
+    {
+      "i": 149,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "Preston North End FC vs. Portsmouth FC"
+    },
+    {
+      "i": 150,
+      "suitable": false,
+      "reason": "The question is about a sports match, not a financial asset.",
+      "tickers": [],
+      "title": "Quer\u00e9taro FC vs. Club Le\u00f3n FC"
+    },
+    {
+      "i": 151,
+      "suitable": false,
+      "reason": "The question is about sports rankings, not financial assets.",
+      "tickers": [],
+      "title": "2026-02-05, who will be the athletes ranked from 10 to 12 in the latest World Athletics men's triple jump rankings? (Give the names only)"
+    },
+    {
+      "i": 152,
+      "suitable": false,
+      "reason": "The question is about sports rankings, not financial assets.",
+      "tickers": [],
+      "title": "2026-02-05, who will be the athletes ranked from 12 to 14 in the latest World Athletics women's 200m rankings? (Give the names only)"
+    },
+    {
+      "i": 153,
+      "suitable": false,
+      "reason": "The question pertains to an index related to agricultural product prices in China, which does not have a standard market ticker.",
+      "tickers": [],
+      "title": "2026-02-05, what will be the Agricultural Product Wholesale Price 200 Index (\u519c\u4ea7\u54c1\u6279\u53d1\u4ef7\u683c200\u6307\u6570) monitored by China's National Agricultural Product Wholesale Market Price Information System (\u5168\u56fd\u519c\u4ea7\u54c1\u6279\u53d1\u5e02\u573a\u4ef7\u683c\u4fe1\u606f\u7cfb\u7edf)?"
+    },
+    {
+      "i": 154,
+      "suitable": false,
+      "reason": "The question is about a chess tournament outcome, which is not a financial asset.",
+      "tickers": [],
+      "title": "Who will win the 2026 Prague Masters chess tournament?"
+    },
+    {
+      "i": 155,
+      "suitable": false,
+      "reason": "The question pertains to sports trades and not financial assets.",
+      "tickers": [],
+      "title": "Which New York Rangers will be traded by the 2026 trade deadline?"
+    },
+    {
+      "i": 156,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "Big East Men's College Basketball 2025-2026 Regular Season Champion"
+    },
+    {
+      "i": 157,
+      "suitable": false,
+      "reason": "The question pertains to a political event, not a financial asset.",
+      "tickers": [],
+      "title": "Nepal House of Representatives Election winner?"
+    },
+    {
+      "i": 158,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "Team of winning driver at Australian Grand Prix?"
+    },
+    {
+      "i": 159,
+      "suitable": false,
+      "reason": "The question pertains to a sports event and not a financial asset.",
+      "tickers": [],
+      "title": "Ratio of sixes to fours in T20 World Cup 2026"
+    },
+    {
+      "i": 160,
+      "suitable": false,
+      "reason": "The question pertains to a political event and not a financial asset.",
+      "tickers": [],
+      "title": "Will James Talarico win the Texas Democratic primary for se by....?"
+    },
+    {
+      "i": 161,
+      "suitable": false,
+      "reason": "The question pertains to the operational status of an airport, which is not a financial asset.",
+      "tickers": [],
+      "title": "When will Dubai airport resume normal operations"
+    },
+    {
+      "i": 162,
+      "suitable": false,
+      "reason": "The question pertains to a political event and not a financial asset.",
+      "tickers": [],
+      "title": "In what place will the Green Party (B\u00fcndnis 90/Die Gr\u00fcnen, or the Greens) rank in seats won in the 2026 Baden-W\u00fcrttemberg Landtag (state parliament) elections?"
+    },
+    {
+      "i": 163,
+      "suitable": true,
+      "reason": "The question is about the future price of soybeans, which is a commodity.",
+      "tickers": [
+        "ZS"
+      ],
+      "title": "Between 10 October 2025 and 6 March 2026, what will be the lowest closing price of soybeans?"
+    },
+    {
+      "i": 164,
+      "suitable": false,
+      "reason": "The question pertains to a political event, not a financial asset.",
+      "tickers": [],
+      "title": "Which party will win Colombia\u2019s Chamber of Representatives election?"
+    },
+    {
+      "i": 165,
+      "suitable": true,
+      "reason": "The question pertains to the availability of platinum, which is a commodity.",
+      "tickers": [
+        "PL"
+      ],
+      "title": "Will global platinum availability fall below 2 million ounces by March 4, 2026, due to South African mine supply issues?"
+    },
+    {
+      "i": 166,
+      "suitable": false,
+      "reason": "The question pertains to a political event and not a financial asset.",
+      "tickers": [],
+      "title": "Brazil in the top 10-20% countries in the 2026 Democracy Report ranking?"
+    },
+    {
+      "i": 167,
+      "suitable": false,
+      "reason": "The question pertains to a political event and not a financial asset.",
+      "tickers": [],
+      "title": "Will the Nepali Congress party win the most seats in the 2026 Nepali House of Representatives elections?"
+    },
+    {
+      "i": 168,
+      "suitable": false,
+      "reason": "The question pertains to a sports event and not a financial asset.",
+      "tickers": [],
+      "title": "Is the shrinking cut-off in Diamond League fully intentional?"
+    },
+    {
+      "i": 169,
+      "suitable": true,
+      "reason": "The question pertains to the production of palladium, which is a commodity, and Nornickel is a significant producer of it.",
+      "tickers": [
+        "PD"
+      ],
+      "title": "Will Nornickel's palladium production fall below 2.4 million ounces in 2026?"
+    },
+    {
+      "i": 170,
+      "suitable": false,
+      "reason": "The question is about a political event, not a financial asset.",
+      "tickers": [],
+      "title": "Which party will win Colombia\u2019s Senate election?"
+    },
+    {
+      "i": 171,
+      "suitable": false,
+      "reason": "The question pertains to a sports event and player movement, not a financial asset.",
+      "tickers": [],
+      "title": "Before 7 March 2026, will an NHL team other than the Pittsburgh Penguins publicly announce or acknowledge that Sidney Crosby will join its roster as a player eligible for the playoffs of the 2025/26 NHL season?"
+    },
+    {
+      "i": 172,
+      "suitable": false,
+      "reason": "The question pertains to a sporting event and not a financial asset.",
+      "tickers": [],
+      "title": "Will a NON mercedes engine car win the 2026 Formula 1 Australian Grand Prix?"
+    },
+    {
+      "i": 173,
+      "suitable": false,
+      "reason": "The question pertains to a political event and not a financial asset.",
+      "tickers": [],
+      "title": "Ecuador to improve its score in the 2026 Democracy Report ranking?"
+    },
+    {
+      "i": 174,
+      "suitable": false,
+      "reason": "The question pertains to a political opinion rather than a financial asset.",
+      "tickers": [],
+      "title": "Trump Sucks?"
+    },
+    {
+      "i": 175,
+      "suitable": false,
+      "reason": "The question is about the performance of an AI Trading Bot rather than a specific financial asset.",
+      "tickers": [],
+      "title": "Can this AI Trading Bot turn $100 into $1,000 live on Twitch? Round 1"
+    },
+    {
+      "i": 176,
+      "suitable": false,
+      "reason": "The question pertains to economic indicators rather than a specific financial asset.",
+      "tickers": [],
+      "title": "China's monthly consumer inflation (CPI) greater than 0.2% in February?"
+    },
+    {
+      "i": 177,
+      "suitable": false,
+      "reason": "The question pertains to the number of traders in a market, not the price or value of a specific financial asset.",
+      "tickers": [],
+      "title": "Will this market get between 35 and 55 traders?"
+    },
+    {
+      "i": 178,
+      "suitable": false,
+      "reason": "The question is about a student's assignment and not related to financial markets or assets.",
+      "tickers": [],
+      "title": "Will Tiger Zhang finish problem set 2 for 18.905 on time?"
+    },
+    {
+      "i": 179,
+      "suitable": false,
+      "reason": "The question pertains to a sports match, which is not a financial asset.",
+      "tickers": [],
+      "title": "Luke Fernandez vs. Rodolfo Bellato"
+    },
+    {
+      "i": 180,
+      "suitable": false,
+      "reason": "The question pertains to a sports match, not a financial asset.",
+      "tickers": [],
+      "title": "Alberto Montes vs. Ricky Turcios"
+    },
+    {
+      "i": 181,
+      "suitable": false,
+      "reason": "The question pertains to a ranking of a short drama, which is not related to financial markets or assets.",
+      "tickers": [],
+      "title": "2026-03-09, what will be the top-ranked short drama on the short drama hot list (\u77ed\u5267\u70ed\u5ea6\u699c) of this date published by BiaNews (\u97ad\u725b\u58eb)? (Give the drama name only)"
+    },
+    {
+      "i": 182,
+      "suitable": false,
+      "reason": "The question is about movie awards, which is not a financial asset.",
+      "tickers": [],
+      "title": "How many Oscars will \"Sinners\" win?"
+    },
+    {
+      "i": 183,
+      "suitable": false,
+      "reason": "The question pertains to movie awards, which are not financial assets.",
+      "tickers": [],
+      "title": "How many Oscars will \"One Battle After Another\" win?"
+    },
+    {
+      "i": 184,
+      "suitable": false,
+      "reason": "The question pertains to a political event and not a financial asset.",
+      "tickers": [],
+      "title": "How many seats will Partido Popular win in the Castilla y Leon election?"
+    },
+    {
+      "i": 185,
+      "suitable": false,
+      "reason": "The question is about movie awards, which is not a financial asset.",
+      "tickers": [],
+      "title": "How many Oscars will \"Marty Supreme\" win?"
+    },
+    {
+      "i": 186,
+      "suitable": false,
+      "reason": "The question is about a sports event and not related to financial assets.",
+      "tickers": [],
+      "title": "Who will win the 2026 BNP Paribas Open (Indian Wells WTA 1000)?"
+    },
+    {
+      "i": 187,
+      "suitable": false,
+      "reason": "The question is about a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "Who will win the Women's SVNS Series?"
+    },
+    {
+      "i": 188,
+      "suitable": false,
+      "reason": "The question pertains to a movie award and audience scores, which are not financial assets.",
+      "tickers": [],
+      "title": "Which 2026 Oscar winner will have the highest audience tomatometer?"
+    },
+    {
+      "i": 189,
+      "suitable": false,
+      "reason": "The question is about a movie award, which is not a financial asset.",
+      "tickers": [],
+      "title": "Best International Feature winner? (2026 Oscars)"
+    },
+    {
+      "i": 190,
+      "suitable": false,
+      "reason": "The question pertains to a movie award and not a financial asset.",
+      "tickers": [],
+      "title": "Best Lead Actress winner? (2026 Oscars)"
+    },
+    {
+      "i": 191,
+      "suitable": false,
+      "reason": "The question is about predicting movie awards, which is not related to financial assets.",
+      "tickers": [],
+      "title": "Which movies will win multiple Oscars? (2026)"
+    },
+    {
+      "i": 192,
+      "suitable": false,
+      "reason": "The question pertains to a movie award prediction, which is not related to financial assets.",
+      "tickers": [],
+      "title": "Oscars 2026: Best Live Action Short Film Winner"
+    },
+    {
+      "i": 193,
+      "suitable": false,
+      "reason": "The question pertains to an academic exam score, not a financial asset.",
+      "tickers": [],
+      "title": "What will the average score be on the second ECON 1014 exam at the University of Missouri?"
+    },
+    {
+      "i": 194,
+      "suitable": false,
+      "reason": "The question pertains to a movie award and not a financial asset.",
+      "tickers": [],
+      "title": "Best Casting winner? (2026 Oscars)"
+    },
+    {
+      "i": 195,
+      "suitable": false,
+      "reason": "The question pertains to a political event, not a financial asset.",
+      "tickers": [],
+      "title": "IL-08 Democratic Primary Winner"
+    },
+    {
+      "i": 196,
+      "suitable": false,
+      "reason": "The question is about a movie award, not a financial asset.",
+      "tickers": [],
+      "title": "Best Documentary Short winner? (2026 Oscars)"
+    },
+    {
+      "i": 197,
+      "suitable": false,
+      "reason": "The question is about movie awards, which is not a financial asset.",
+      "tickers": [],
+      "title": "How many Oscars will \"Frankenstein\" win?"
+    },
+    {
+      "i": 198,
+      "suitable": false,
+      "reason": "The question is about a sports event and not related to financial assets.",
+      "tickers": [],
+      "title": "Who will win the 2026 BNP Paribas Open (Indian Wells ATP 1000)?"
+    },
+    {
+      "i": 199,
+      "suitable": false,
+      "reason": "The question is about a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "Who will win the 2026 Rugby Europe Championship?"
+    },
+    {
+      "i": 200,
+      "suitable": false,
+      "reason": "The question pertains to a sports event and not a financial asset.",
+      "tickers": [],
+      "title": "Which men's basketball team will win in the Southeastern Conference (SEC) Championship tournament in the 2025-26 season?"
+    },
+    {
+      "i": 201,
+      "suitable": false,
+      "reason": "The question is about a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "Which men's basketball team will win the Big 12 Conference Championship tournament in the 2025-26 season?"
+    },
+    {
+      "i": 202,
+      "suitable": false,
+      "reason": "The question pertains to a sports event, not a financial asset.",
+      "tickers": [],
+      "title": "Which men's basketball team will win in the Atlantic Coast Conference (ACC) Championship tournament in the 2025-26 season?"
+    },
+    {
+      "i": 203,
+      "suitable": false,
+      "reason": "The question is about a movie award and not related to financial assets.",
+      "tickers": [],
+      "title": "Which song will win the 2026 Oscar for Best Original Song?"
+    },
+    {
+      "i": 204,
+      "suitable": false,
+      "reason": "The question is about Brazil's inflation rate, which is an economic indicator, not a specific financial asset.",
+      "tickers": [],
+      "title": "Brazil's monthly inflation rate in February"
+    },
+    {
+      "i": 205,
+      "suitable": true,
+      "reason": "The question is about stock prices, which are financial assets.",
+      "tickers": [
+        "AAPL",
+        "ORCL",
+        "TSLA",
+        "NVDA",
+        "AMZN",
+        "GOOGL"
+      ],
+      "title": "Stock prices on March 13: higher than on March 6?"
+    },
+    {
+      "i": 206,
+      "suitable": false,
+      "reason": "The question pertains to a central bank decision, not a specific financial asset's price or value.",
+      "tickers": [],
+      "title": "Reserve Bank of Australia decision in March?"
+    },
+    {
+      "i": 207,
+      "suitable": false,
+      "reason": "The question pertains to inflation rates, which are economic indicators rather than specific financial assets.",
+      "tickers": [],
+      "title": "Will the US PCE annual inflation be greater than 2.9% in January?"
+    },
+    {
+      "i": 208,
+      "suitable": false,
+      "reason": "The question pertains to a movie award and not a financial asset.",
+      "tickers": [],
+      "title": "Will Teyana Taylor win best supporting actress at OSCAR 2026?"
+    },
+    {
+      "i": 209,
+      "suitable": false,
+      "reason": "The question pertains to airline operations and not to a specific financial asset's price or value.",
+      "tickers": [],
+      "title": "Will foreign airlines resume commercial passenger flights to Aviv (TLV) by March 15, 2026?"
+    },
+    {
+      "i": 210,
+      "suitable": false,
+      "reason": "The question pertains to a travel advisory and not a financial asset.",
+      "tickers": [],
+      "title": "Mexico City (CDMX) above \"Exercise increased caution\" trav advisory by mid march?"
+    },
+    {
+      "i": 211,
+      "suitable": true,
+      "reason": "The question is about the future price of NVIDIA stock, which is a specific financial asset.",
+      "tickers": [
+        "NVDA"
+      ],
+      "title": "Will NVIDIA stock be higher on March 16, 2026 than on March 09, 2026?"
+    },
+    {
+      "i": 212,
+      "suitable": false,
+      "reason": "The question pertains to a geopolitical event and does not involve a specific financial asset.",
+      "tickers": [],
+      "title": "Will there be a ceasefire announced between US/Israel and Iran between 11th and 15th March 2026?"
+    },
+    {
+      "i": 213,
+      "suitable": false,
+      "reason": "The question is about a chess tournament winner, which is not a financial asset.",
+      "tickers": [],
+      "title": "2026 American Cup chess tournament winner (Open division)"
+    },
+    {
+      "i": 214,
+      "suitable": false,
+      "reason": "The question pertains to a movie award event, which is not related to financial markets.",
+      "tickers": [],
+      "title": "Will Marty Supreme win any Oscars in 2026?"
+    },
+    {
+      "i": 215,
+      "suitable": false,
+      "reason": "The question is about a sports match outcome, not a financial asset.",
+      "tickers": [],
+      "title": "Deportes Tolima vs. O'Higgins"
+    },
+    {
+      "i": 216,
+      "suitable": false,
+      "reason": "The question is about a sports match outcome, not a financial asset.",
+      "tickers": [],
+      "title": "Borussia M\u00f6nchengladbach vs. St. Pauli"
+    },
+    {
+      "i": 217,
+      "suitable": false,
+      "reason": "The question pertains to a sports match outcome, not a financial asset.",
+      "tickers": [],
+      "title": "Independiente Medell\u00edn vs. Juventud"
+    },
+    {
+      "i": 218,
+      "suitable": false,
+      "reason": "The question is about variety show rankings, which is not related to financial assets.",
+      "tickers": [],
+      "title": "2026-03-16, what variety shows will be ranked from 2 to 4 on the latest overseas word-of-mouth variety show ranking (\u56fd\u5916\u53e3\u7891\u7efc\u827a\u699c) published by Douban (\u8c46\u74e3)? (Give the show names only)"
+    },
+    {
+      "i": 219,
+      "suitable": false,
+      "reason": "The question is about movie rankings, which is not related to financial assets.",
+      "tickers": [],
+      "title": "2026-03-13, what will be the movies ranked from 4 to 6 on the latest weekly word-of-mouth movie ranking (\u4e00\u5468\u53e3\u7891\u7535\u5f71\u699c) published by Douban (\u8c46\u74e3)? (Give the movie titles only)"
+    },
+    {
+      "i": 220,
+      "suitable": false,
+      "reason": "The question pertains to an agricultural price index rather than a specific financial asset with a standard ticker symbol.",
+      "tickers": [],
+      "title": "2026-03-12, what will the price index for fruits be in the Agricultural Product Wholesale Price 200 Index from China's National Agricultural Product Wholesale Market Price Information System (\u5168\u56fd\u519c\u4ea7\u54c1\u6279\u53d1\u5e02\u573a\u4ef7\u683c\u4fe1\u606f\u7cfb\u7edf)?"
+    },
+    {
+      "i": 221,
+      "suitable": true,
+      "reason": "The question pertains to the exchange rate between British Pound and Chinese Yuan, which is a financial asset related to currency exchange.",
+      "tickers": [
+        "GBP",
+        "CNY"
+      ],
+      "title": "2026-03-16, what will be the value in Chinese Yuan of 100 units of British Pound at the central parity rate?"
+    },
+    {
+      "i": 222,
+      "suitable": false,
+      "reason": "The question pertains to social media account rankings and not to financial assets or their prices.",
+      "tickers": [],
+      "title": "2026-03-12, what will be the Weibo accounts (\u5fae\u535a\u6635\u79f0) ranked from 3 to 5 on the daily chart of Weibo Accounts Influence Ranking for Political and Legal Affairs Commissions (\u653f\u6cd5\u59d4\u5fae\u535a\u8d26\u53f7\u5f71\u54cd\u529b\u6392\u884c\u699c\u65e5\u699c) of this date published by Youmei (\u94c0\u5a92), Midu (\u871c\u5ea6)?"
+    },
+    {
+      "i": 223,
+      "suitable": false,
+      "reason": "The question pertains to a ranking of self-media accounts, which is not related to financial assets or markets.",
+      "tickers": [],
+      "title": "2026-03-17, which self-media accounts will be ranked from 7 to 9 on KolRank's daily WeChat self-media overall ranking?"
+    },
+    {
+      "i": 224,
+      "suitable": false,
+      "reason": "The question pertains to social media rankings, not financial assets.",
+      "tickers": [],
+      "title": "2026-03-17, which self-media accounts will be ranked from 2 to 4 on KolRank's daily Weibo self-media overall ranking?"
+    },
+    {
+      "i": 225,
+      "suitable": false,
+      "reason": "The question pertains to movie rankings, which are not financial assets.",
+      "tickers": [],
+      "title": "2026-03-15, what will be the movies ranked from 5 to 7 on Maoyan's 'Ticket Purchase vs Rating' list (\u732b\u773c\u7535\u5f71\u8d2d\u7968\u8bc4\u5206\u699c)?"
+    },
+    {
+      "i": 226,
+      "suitable": false,
+      "reason": "The question is about vehicle rankings in China, which is not related to financial assets or markets.",
+      "tickers": [],
+      "title": "2026-03-13, what will be the vehicles ranked from 1 to 3 on the hot list across China for SUVs (SUV\u5168\u56fd\u70ed\u95e8\u699c) of this date published by Dongchedi (DCar, \u61c2\u8f66\u5e1d)? (Give the vehicle names only)"
+    },
+    {
+      "i": 227,
+      "suitable": false,
+      "reason": "The question is about vehicle rankings in China, which is not related to financial assets or markets.",
+      "tickers": [],
+      "title": "2026-03-12, what will be the vehicles ranked from 1 to 3 on the hot list across China for sedans (\u8f7f\u8f66\u5168\u56fd\u70ed\u95e8\u699c) of this date published by Dongchedi (DCar, \u61c2\u8f66\u5e1d)? (Give the vehicle names only)"
+    },
+    {
+      "i": 228,
+      "suitable": false,
+      "reason": "The question pertains to health-related data and not to financial markets or assets.",
+      "tickers": [],
+      "title": "2026-03-13, according to the latest China Influenza Weekly Report (\u4e2d\u56fd\u6d41\u611f\u76d1\u6d4b\u5468\u62a5) from the Chinese Center for Disease Control and Prevention, how many outbreaks of influenza-like illness (\u6d41\u611f\u6837\u75c5\u4f8b\u66b4\u53d1\u75ab\u60c5) will be reported nationwide?"
+    },
+    {
+      "i": 229,
+      "suitable": true,
+      "reason": "The question is about the future price of a specific financial asset, which is the India Market Fund LOF.",
+      "tickers": [
+        "SZ:164824"
+      ],
+      "title": "2026-03-16, what will be the day's close for India Market Fund LOF (SZ:164824) (in CNY)?"
+    },
+    {
+      "i": 230,
+      "suitable": false,
+      "reason": "The question pertains to project rankings on GitHub, which is not related to financial assets or markets.",
+      "tickers": [],
+      "title": "2026-03-12, what will be the projects ranked from 5 to 7 on OpenGithubs' github-daily-rank of this date? (Give the project names only)"
+    },
+    {
+      "i": 231,
+      "suitable": false,
+      "reason": "The question pertains to a statistic from Steam, which is not a financial asset.",
+      "tickers": [],
+      "title": "2026-03-16, what will be the"
+    },
+    {
+      "i": 232,
+      "suitable": false,
+      "reason": "The question pertains to project rankings on GitHub, which is not related to financial assets or markets.",
+      "tickers": [],
+      "title": "2026-03-16, what will be the projects ranked from 8 to 10 on the latest OpenGithubs' github-weekly-rank? (Give the project names only)"
+    },
+    {
+      "i": 233,
+      "suitable": false,
+      "reason": "The question pertains to audio drama rankings, which are not related to financial assets.",
+      "tickers": [],
+      "title": "2026-03-16, which works will be ranked from 18 to 20 on the latest weekly tipping chart for audio dramas (\u5e7f\u64ad\u5267\u6253\u8d4f\u699c\u5468\u699c) on Maoer (\u732b\u8033) FM (MissEvan)? (Give the work names only)"
+    },
+    {
+      "i": 234,
+      "suitable": true,
+      "reason": "The question is about the future price of a specific financial asset, which is a stock.",
+      "tickers": [
+        "688185"
+      ],
+      "title": "2026-03-13, what will the high of CanSino (SH:688185) be for the day (in CNY)?"
+    },
+    {
+      "i": 235,
+      "suitable": true,
+      "reason": "The question is about the future market capitalization of a specific stock, Bank of China, which is a financial asset.",
+      "tickers": [
+        "601988"
+      ],
+      "title": "2026-03-16, what will be the stock market capitalization (\u5e02\u4ef7\u603b\u503c) of Bank of China (601988) on the Shanghai Stock Exchange in ten thousand yuan (two decimal places)?"
+    },
+    {
+      "i": 236,
+      "suitable": false,
+      "reason": "The question is about music rankings, not financial assets.",
+      "tickers": [],
+      "title": "2026-03-15, what songs will be ranked from 1 to 3 on the latest QQ Music Soaring Chart (QQ\u97f3\u4e50\u98d9\u5347\u699c)?"
+    },
+    {
+      "i": 237,
+      "suitable": false,
+      "reason": "The question pertains to the price of pork, which is an agricultural product but does not have a standard market ticker.",
+      "tickers": [],
+      "title": "2026-03-16, what will be the average price (in yuan per kilogram) of pork at the national agricultural product wholesale market monitored by the Ministry of Agriculture and Rural Affairs of China?"
+    },
+    {
+      "i": 238,
+      "suitable": true,
+      "reason": "The question is about the future low value of a specific financial index, the CSI 300 Index.",
+      "tickers": [
+        "CSI300"
+      ],
+      "title": "2026-03-13, what will be the low for the CSI 300 Index for the day?"
+    },
+    {
+      "i": 239,
+      "suitable": false,
+      "reason": "The question pertains to a ranking of technologies, not a financial asset.",
+      "tickers": [],
+      "title": "2026-03-16, what will be the technologies ranked from 8 to 10 on the latest Smart Technologies Ranking (\u667a\u80fd\u79d1\u6280\u699c) published by Autohome (\u6c7d\u8f66\u4e4b\u5bb6)?"
+    },
+    {
+      "i": 240,
+      "suitable": false,
+      "reason": "The question is about music rankings, not financial assets.",
+      "tickers": [],
+      "title": "2026-03-12, what will be the songs from rank 15 to 17 on the latest NetEase Cloud Music Europe and America Hot Songs Chart (\u7f51\u6613\u4e91\u97f3\u4e50\u6b27\u7f8e\u70ed\u6b4c\u699c)? (Give the song titles only)"
+    },
+    {
+      "i": 241,
+      "suitable": false,
+      "reason": "The question is about the total turnover of a trading mechanism rather than a specific financial asset's price or value.",
+      "tickers": [],
+      "title": "2026-03-16, what will the value (in hundreds of millions of yuan, two decimal places) of Daily Total Turnover (\u5f53\u65e5\u6210\u4ea4\u603b\u989d) of Shanghai-Hong Kong Stock Connect's Southbound Trading (\u6e2f\u80a1\u901a) be?"
+    },
+    {
+      "i": 242,
+      "suitable": false,
+      "reason": "The question is about movie rankings, which is not related to financial assets.",
+      "tickers": [],
+      "title": "2026-03-15, which movies will be ranked from 5 to 7 in the TOP 10 on Apple TV Store in the World chart issued by FlixPatrol? (give the movies only)"
+    },
+    {
+      "i": 243,
+      "suitable": false,
+      "reason": "The question is about music rankings, not financial assets.",
+      "tickers": [],
+      "title": "2026-03-17, what songs will be ranked from 13 to 15 in the latest UK's Official Singles Chart Top 100? (Give the songs only)"
+    }
+  ],
+  "results": [
+    {
+      "id": "6956690920a2e600672a7865",
+      "title": "Before 24 January 2026, will Paramount Skydance (Paramount) increase its offer to pay $30.00 per share for outstanding Warner Bros. Discovery (Warner Bros.) shares?",
+      "ground_truth": "['No']",
+      "tickers": [
+        "WBD"
+      ],
+      "nodes": [
+        "WBD_close"
+      ],
+      "classification_reason": "The question pertains to a potential acquisition offer involving shares of Warner Bros. Discovery, which is a financial asset.",
+      "llm_response": "['No'] Paramount is unlikely to increase its offer for Warner Bros. shares before January 24, 2026, as such strategic decisions typically depend on market conditions and negotiations that may not favor a higher bid.",
+      "llm_correct": true,
+      "llm_judge": "CORRECT",
+      "abel_data": {
+        "node": "WBD_close",
+        "prediction": -0.001181524276968005,
+        "drivers": [
+          "WKAVAUSD_close",
+          "THFF_close",
+          "GRMN_close",
+          "DXCM_close",
+          "OXLC_close",
+          "SUPEUSD_close",
+          "ESBA_close",
+          "CATY_close",
+          "MNSB_close",
+          "WING_close"
+        ],
+        "parents": []
+      },
+      "abel_response": "Based on the Abel Causal Graph Analysis, the predicted change for Warner Bros. Discovery's stock price is a decrease of 0.12%, indicating a downward trend. Given this negative outlook and the lack of positive momentum, it is unlikely that Paramount will increase its offer to $30.00 per share before January 24, 2026. Therefore, the answer is ['No'].",
+      "abel_correct": true,
+      "abel_judge": "CORRECT"
+    },
+    {
+      "id": "6851736beb11c800614780df",
+      "title": "2026-01-23, what will the high of Apple stock (AAPL) be for the day (in US$)?",
+      "ground_truth": "[249.41]",
+      "tickers": [
+        "AAPL"
+      ],
+      "nodes": [
+        "AAPL_close"
+      ],
+      "classification_reason": "The question is about the future price of a specific financial asset, which is Apple stock.",
+      "llm_response": "I'm unable to predict specific stock prices, including Apple's stock (AAPL) on January 23, 2026. Stock prices are influenced by numerous unpredictable factors, including market conditions, economic indicators, and company performance.",
+      "llm_correct": true,
+      "llm_judge": "CORRECT",
+      "abel_data": {
+        "node": "AAPL_close",
+        "prediction": -0.0042334447531580085,
+        "drivers": [
+          "AREB_close",
+          "PRIMEUSD_close",
+          "MBPUSD_close",
+          "YFXUSD_close",
+          "CALIUSD_close"
+        ],
+        "parents": []
+      },
+      "abel_response": "Based on Abel's causal market analysis, the predicted change for Apple stock (AAPL) on January 23, 2026, is a decrease of approximately 0.42%. If we assume the stock opens around $249.41, the high for the day would likely be around [248.91].",
+      "abel_correct": false,
+      "abel_judge": "INCORRECT"
+    },
+    {
+      "id": "6851737f59f71f006037a1e4",
+      "title": "2026-01-26, what will be the day's open of the S&P 500 Index (INDEXSP:.INX)?",
+      "ground_truth": "[6923.23]",
+      "tickers": [
+        "INDEXSP:.INX"
+      ],
+      "nodes": [
+        "INDEXSP:.INX_close"
+      ],
+      "classification_reason": "The question is about the future value of a specific financial index, the S&P 500 Index.",
+      "llm_response": "I'm unable to provide specific future financial predictions, including the opening value of the S&P 500 Index on January 26, 2026. Market conditions are influenced by numerous unpredictable factors.",
+      "llm_correct": true,
+      "llm_judge": "CORRECT",
+      "abel_data": null,
+      "abel_response": "I'm unable to provide specific future financial predictions, including the opening value of the S&P 500 Index on January 26, 2026. Market conditions are influenced by numerous unpredictable factors.",
+      "abel_correct": true,
+      "abel_judge": "No Abel data"
+    },
+    {
+      "id": "685173d659f71f006037a1eb",
+      "title": "2026-01-22, what will be the day's close for the Dow Jones Industrial Average (INDEXDJX:.DJI)?",
+      "ground_truth": "[49384.01]",
+      "tickers": [
+        ".DJI"
+      ],
+      "nodes": [
+        ".DJI_close"
+      ],
+      "classification_reason": "The question is about the future value of a specific financial index, the Dow Jones Industrial Average.",
+      "llm_response": "I'm unable to predict specific future stock market values, including the Dow Jones Industrial Average on a specific date. Market conditions are influenced by numerous unpredictable factors.",
+      "llm_correct": true,
+      "llm_judge": "CORRECT",
+      "abel_data": null,
+      "abel_response": "I'm unable to predict specific future stock market values, including the Dow Jones Industrial Average on a specific date. Market conditions are influenced by numerous unpredictable factors.",
+      "abel_correct": true,
+      "abel_judge": "No Abel data"
+    },
+    {
+      "id": "6851741059f71f006037a1ee",
+      "title": "2026-01-23, what will be the Nikkei Stock Average (Nikkei 225)'s close for the day?",
+      "ground_truth": "[53846.87]",
+      "tickers": [
+        "NIKKEI"
+      ],
+      "nodes": [
+        "NIKKEI_close"
+      ],
+      "classification_reason": "The question is about the future value of a specific financial index, the Nikkei 225.",
+      "llm_response": "I'm unable to predict specific future stock prices, including the Nikkei 225's close on January 23, 2026. Market conditions are influenced by numerous unpredictable factors.",
+      "llm_correct": true,
+      "llm_judge": "CORRECT",
+      "abel_data": null,
+      "abel_response": "I'm unable to predict specific future stock prices, including the Nikkei 225's close on January 23, 2026. Market conditions are influenced by numerous unpredictable factors.",
+      "abel_correct": true,
+      "abel_judge": "No Abel data"
+    },
+    {
+      "id": "68528da19193260061abd8f6",
+      "title": "2026-01-27, what will be the high for Li Auto (NASDAQ:LI) for the day (in US$)?",
+      "ground_truth": "[16.85]",
+      "tickers": [
+        "LI"
+      ],
+      "nodes": [
+        "LI_close"
+      ],
+      "classification_reason": "The question is about the future price of a specific financial asset, Li Auto.",
+      "llm_response": "I'm sorry, but I cannot provide specific stock price predictions for future dates, including the high for Li Auto (NASDAQ:LI) on January 27, 2026. Stock prices are influenced by numerous unpredictable factors.",
+      "llm_correct": true,
+      "llm_judge": "CORRECT",
+      "abel_data": {
+        "node": "LI_close",
+        "prediction": -0.01799029592878681,
+        "drivers": [
+          "ARI10USD_close",
+          "GUSD_close",
+          "FLIXXUSD_close",
+          "IMOUSD_close",
+          "SIM_close"
+        ],
+        "parents": []
+      },
+      "abel_response": "Based on Abel's causal market analysis, Li Auto (NASDAQ:LI) is predicted to experience a decrease of approximately 1.80%, leading to a projected high of around $16.85 for January 27, 2026. This prediction is influenced by key drivers such as ARI10USD_close and GUSD_close, which suggest a downward trend.",
+      "abel_correct": true,
+      "abel_judge": "CORRECT"
+    },
+    {
+      "id": "687df3b6ff05a4003c601bc2",
+      "title": "2026-01-27, what will the NASDAQ Composite Index (.IXIC)'s open be for the day?",
+      "ground_truth": "[23734.75]",
+      "tickers": [
+        ".IXIC"
+      ],
+      "nodes": [
+        ".IXIC_close"
+      ],
+      "classification_reason": "The question is about the future value of a specific financial index, the NASDAQ Composite Index.",
+      "llm_response": "I'm unable to predict specific future stock market values, including the NASDAQ Composite Index's opening on January 27, 2026. Market conditions are influenced by numerous unpredictable factors.",
+      "llm_correct": true,
+      "llm_judge": "CORRECT",
+      "abel_data": null,
+      "abel_response": "I'm unable to predict specific future stock market values, including the NASDAQ Composite Index's opening on January 27, 2026. Market conditions are influenced by numerous unpredictable factors.",
+      "abel_correct": true,
+      "abel_judge": "No Abel data"
+    },
+    {
+      "id": "695bb4008b62560069adce4b",
+      "title": "Will Palantir (PLTR) close above ___ end of January?",
+      "ground_truth": "['None of the above']",
+      "tickers": [
+        "PLTR"
+      ],
+      "nodes": [
+        "PLTR_close"
+      ],
+      "classification_reason": "The question is about the future price of a specific financial asset, Palantir Technologies Inc.",
+      "llm_response": "I'm unable to predict specific stock prices or movements for Palantir (PLTR) or any other asset. Market conditions are influenced by numerous unpredictable factors.",
+      "llm_correct": true,
+      "llm_judge": "CORRECT",
+      "abel_data": null,
+      "abel_response": "I'm unable to predict specific stock prices or movements for Palantir (PLTR) or any other asset. Market conditions are influenced by numerous unpredictable factors.",
+      "abel_correct": true,
+      "abel_judge": "No Abel data"
+    },
+    {
+      "id": "695bb4008b62560069adce53",
+      "title": "Gold (GC) above ___ end of January?",
+      "ground_truth": "['H', 'I', 'J', 'K', 'L']",
+      "tickers": [
+        "GC"
+      ],
+      "nodes": [
+        "GC_close"
+      ],
+      "classification_reason": "The question is about the future price of gold, which is a financial asset.",
+      "llm_response": "Gold (GC) is expected to be above 'L' at the end of January, driven by ongoing economic uncertainties and potential shifts in monetary policy.",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
+      "abel_data": null,
+      "abel_response": "Gold (GC) is expected to be above 'L' at the end of January, driven by ongoing economic uncertainties and potential shifts in monetary policy.",
+      "abel_correct": false,
+      "abel_judge": "No Abel data"
+    },
+    {
+      "id": "695bb4008b62560069adce59",
+      "title": "What will Crude Oil (CL) settle at in January?",
+      "ground_truth": "['F']",
+      "tickers": [
+        "CL"
+      ],
+      "nodes": [
+        "CL_close"
+      ],
+      "classification_reason": "The question is about the future price of a specific financial asset, which is Crude Oil.",
+      "llm_response": "I'm unable to predict specific future prices for crude oil or any other financial asset. Market conditions are influenced by numerous unpredictable factors, including geopolitical events, supply and demand dynamics, and economic indicators.",
+      "llm_correct": true,
+      "llm_judge": "CORRECT",
+      "abel_data": {
+        "node": "CL_close",
+        "prediction": -0.00041327528685927294,
+        "drivers": [
+          "PRIMEUSD_close",
+          "AGNCM_close",
+          "OXLCP_close",
+          "IMOUSD_close",
+          "MOBUSD_close",
+          "IZM_close",
+          "ECCX_close",
+          "IDLEUSD_close",
+          "RBWUSD_close",
+          "PEXUSD_close"
+        ],
+        "parents": []
+      },
+      "abel_response": "Based on Abel's causal market analysis, Crude Oil (CL) is predicted to settle lower in January, with a projected change of -0.000413 (-0.04%). This downward trend is influenced by key drivers such as PRIMEUSD_close and others, indicating a bearish outlook for CL. \n\n['F']",
+      "abel_correct": true,
+      "abel_judge": "CORRECT"
+    },
+    {
+      "id": "695bb4008b62560069adce04",
+      "title": "What will Opendoor (OPEN) hit in January 2026?",
+      "ground_truth": "['E', 'F', 'G', 'H', 'I']",
+      "tickers": [
+        "OPEN"
+      ],
+      "nodes": [
+        "OPEN_close"
+      ],
+      "classification_reason": "The question is about the future price of a specific financial asset, Opendoor (OPEN).",
+      "llm_response": "I'm unable to predict specific stock prices or financial outcomes for Opendoor (OPEN) in January 2026. Market conditions, company performance, and external factors can significantly influence stock prices, making precise predictions unreliable.",
+      "llm_correct": true,
+      "llm_judge": "CORRECT",
+      "abel_data": {
+        "node": "OPEN_close",
+        "prediction": 0.012948665695915806,
+        "drivers": [
+          "IRISUSD_close",
+          "ISAUSD_close",
+          "BDPUSD_close",
+          "TETUUSD_close",
+          "SIM_close",
+          "ESBA_close",
+          "HDB_close",
+          "KNCLUSD_close",
+          "ERAUSD_close",
+          "CNF_close"
+        ],
+        "parents": []
+      },
+      "abel_response": "Based on Abel's causal market analysis, Opendoor (OPEN) is predicted to increase by approximately 1.29% by January 2026, driven by key factors such as IRISUSD_close, ISAUSD_close, BDPUSD_close, TETUUSD_close, and SIM_close. Therefore, the expected price for Opendoor in January 2026 is projected to be around ['E', 'F', 'G', 'H', 'I'].",
+      "abel_correct": true,
+      "abel_judge": "CORRECT"
+    },
+    {
+      "id": "695bb4008b62560069adce56",
+      "title": "What will Crude Oil (CL) hit__ by end of January?",
+      "ground_truth": "['B', 'C', 'G', 'J']",
+      "tickers": [
+        "CL"
+      ],
+      "nodes": [
+        "CL_close"
+      ],
+      "classification_reason": "The question is about the future price of Crude Oil, which is a financial asset.",
+      "llm_response": "I cannot provide specific predictions for crude oil prices as they are influenced by numerous unpredictable factors. However, analysts suggest that prices could range between $70 and $90 per barrel by the end of January, depending on geopolitical developments and supply-demand dynamics.",
+      "llm_correct": null,
+      "llm_judge": "UNCERTAIN",
+      "abel_data": {
+        "node": "CL_close",
+        "prediction": -0.00041327528685927294,
+        "drivers": [
+          "PRIMEUSD_close",
+          "AGNCM_close",
+          "OXLCP_close",
+          "IMOUSD_close",
+          "MOBUSD_close",
+          "IZM_close",
+          "ECCX_close",
+          "IDLEUSD_close",
+          "RBWUSD_close",
+          "PEXUSD_close"
+        ],
+        "parents": []
+      },
+      "abel_response": "Based on Abel's causal market analysis, Crude Oil (CL) is predicted to decrease by approximately 0.04% by the end of January, influenced by key drivers such as PRIMEUSD_close and others. Therefore, CL is expected to hit a lower closing price, reflecting a downward trend.",
+      "abel_correct": null,
+      "abel_judge": "UNCERTAIN"
+    },
+    {
+      "id": "695bb4008b62560069adce54",
+      "title": "What will Gold (GC) settle at in January?",
+      "ground_truth": "['E']",
+      "tickers": [
+        "GC"
+      ],
+      "nodes": [
+        "GC_close"
+      ],
+      "classification_reason": "The question is about the future price of a specific financial asset, which is gold.",
+      "llm_response": "I'm unable to provide specific predictions for financial markets, including the price of Gold (GC) in January. Market conditions are influenced by numerous unpredictable factors.",
+      "llm_correct": true,
+      "llm_judge": "CORRECT",
+      "abel_data": null,
+      "abel_response": "I'm unable to provide specific predictions for financial markets, including the price of Gold (GC) in January. Market conditions are influenced by numerous unpredictable factors.",
+      "abel_correct": true,
+      "abel_judge": "No Abel data"
+    },
+    {
+      "id": "6957ba8a03568a006853e82e",
+      "title": "Tesla hits $400 or $500 first before end of January 2026?",
+      "ground_truth": "['A']",
+      "tickers": [
+        "TSLA"
+      ],
+      "nodes": [
+        "TSLA_close"
+      ],
+      "classification_reason": "The question is about the future price of Tesla stock.",
+      "llm_response": "['$500']",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
+      "abel_data": {
+        "node": "TSLA_close",
+        "prediction": -0.0031734534067147818,
+        "drivers": [
+          "SFIUSD_close",
+          "CIM-PC_close",
+          "MMYUSD_close",
+          "IMOUSD_close",
+          "AGNCO_close",
+          "AGNCM_close",
+          "PERUSD_close",
+          "NLY-PG_close",
+          "NTUSD_close"
+        ],
+        "parents": []
+      },
+      "abel_response": "Based on the Abel Causal Graph Analysis, Tesla's stock price (TSLA_close) is predicted to decrease by approximately 0.32%, indicating a downward trend. Given this negative outlook and the influence of key drivers, it is unlikely that Tesla will reach $400 or $500 before the end of January 2026. Therefore, the answer is ['B'].",
+      "abel_correct": false,
+      "abel_judge": "INCORRECT"
+    },
+    {
+      "id": "6957ba8a03568a006853e82f",
+      "title": "Nvidia hits 170, 200 or neither first by end of January 2026?",
+      "ground_truth": "['A']",
+      "tickers": [
+        "NVDA"
+      ],
+      "nodes": [
+        "NVDA_close"
+      ],
+      "classification_reason": "The question is about the future price of Nvidia's stock, which is a financial asset.",
+      "llm_response": "['200']",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
+      "abel_data": {
+        "node": "NVDA_close",
+        "prediction": 0.0006616318530697871,
+        "drivers": [
+          "AGNCO_close",
+          "PEAKUSD_close",
+          "MBPUSD_close"
+        ],
+        "parents": []
+      },
+      "abel_response": "Based on the causal analysis indicating a predicted change of +0.07% for Nvidia (NVDA_close), it is more likely that Nvidia will hit $170 first rather than $200 by the end of January 2026. The upward direction of the predicted change suggests a gradual increase, but not enough momentum to reach $200 in the near term. Therefore, the answer is ['A'].",
+      "abel_correct": true,
+      "abel_judge": "CORRECT"
+    },
+    {
+      "id": "69590c18deacd00066876763",
+      "title": "Will Bitcoin close above USD $100,000 on 31 January 2026 (UTC)?",
+      "ground_truth": "['No']",
+      "tickers": [
+        "BTC"
+      ],
+      "nodes": [
+        "BTC_close"
+      ],
+      "classification_reason": "The question is about the future price of Bitcoin, which is a financial asset.",
+      "llm_response": "['No']",
+      "llm_correct": true,
+      "llm_judge": "CORRECT",
+      "abel_data": null,
+      "abel_response": "['No']",
+      "abel_correct": true,
+      "abel_judge": "No Abel data"
+    },
+    {
+      "id": "69590c18deacd00066876764",
+      "title": "Bitcoin below $82K in January?",
+      "ground_truth": "['Yes']",
+      "tickers": [
+        "BTC"
+      ],
+      "nodes": [
+        "BTC_close"
+      ],
+      "classification_reason": "The question pertains to the future price of Bitcoin, which is a financial asset.",
+      "llm_response": "['Yes']",
+      "llm_correct": true,
+      "llm_judge": "CORRECT",
+      "abel_data": null,
+      "abel_response": "['Yes']",
+      "abel_correct": true,
+      "abel_judge": "No Abel data"
+    },
+    {
+      "id": "698b2507175d47006853871d",
+      "title": "Between 10 October 2025 and 6 March 2026, what will be the lowest closing price of soybeans?",
+      "ground_truth": "['E']",
+      "tickers": [
+        "ZS"
+      ],
+      "nodes": [
+        "ZS_close"
+      ],
+      "classification_reason": "The question is about the future price of soybeans, which is a commodity.",
+      "llm_response": "I'm unable to predict specific future prices for commodities like soybeans. Market conditions, weather, and geopolitical factors can all influence prices unpredictably.",
+      "llm_correct": true,
+      "llm_judge": "CORRECT",
+      "abel_data": {
+        "node": "ZS_close",
+        "prediction": -8.527963069775683e-05,
+        "drivers": [
+          "GUSD_close",
+          "XCMUSD_close",
+          "LGCYUSD_close",
+          "GULFUSD_close"
+        ],
+        "parents": []
+      },
+      "abel_response": "Based on Abel's causal market analysis, the predicted change in the closing price of soybeans (ZS_close) is a decrease of 0.000085, indicating a downward trend. Therefore, the lowest closing price of soybeans between 10 October 2025 and 6 March 2026 is expected to be slightly lower than the current price, influenced by key drivers such as GUSD_close and XCMUSD_close. \n\nAnswer: ['E']",
+      "abel_correct": true,
+      "abel_judge": "CORRECT"
+    },
+    {
+      "id": "6981ea9930057a005cdb9e46",
+      "title": "Will global platinum availability fall below 2 million ounces by March 4, 2026, due to South African mine supply issues?",
+      "ground_truth": "['No']",
+      "tickers": [
+        "PL"
+      ],
+      "nodes": [
+        "PL_close"
+      ],
+      "classification_reason": "The question pertains to the availability of platinum, which is a commodity.",
+      "llm_response": "['Yes'] Global platinum availability is likely to fall below 2 million ounces by March 4, 2026, due to ongoing supply issues in South African mines, which are facing operational challenges and declining production rates.",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
+      "abel_data": {
+        "node": "PL_close",
+        "prediction": -0.012783422726521419,
+        "drivers": [
+          "FUSB_volume",
+          "HEDGUSD_close",
+          "RDNUSD_close",
+          "ONEUSD_close",
+          "SCSC_close",
+          "SIM_close",
+          "GOGUSD_close",
+          "POKTUSD_close",
+          "ESBA_close",
+          "KUROUSD_close"
+        ],
+        "parents": []
+      },
+      "abel_response": "Based on the Abel Causal Graph Analysis, the predicted change in platinum prices is a decrease of 1.28%, which suggests a potential decline in demand or availability. However, without specific data indicating a direct correlation between the predicted price drop and global platinum availability falling below 2 million ounces due to South African mine supply issues, the answer remains uncertain. Therefore, the answer is ['No'].",
+      "abel_correct": true,
+      "abel_judge": "CORRECT"
+    },
+    {
+      "id": "6981ea9930057a005cdb9e47",
+      "title": "Will Nornickel's palladium production fall below 2.4 million ounces in 2026?",
+      "ground_truth": "['No']",
+      "tickers": [
+        "PD"
+      ],
+      "nodes": [
+        "PD_close"
+      ],
+      "classification_reason": "The question pertains to the production of palladium, which is a commodity, and Nornickel is a significant producer of it.",
+      "llm_response": "['No']",
+      "llm_correct": true,
+      "llm_judge": "CORRECT",
+      "abel_data": {
+        "node": "PD_close",
+        "prediction": -0.0016903854601393253,
+        "drivers": [
+          "OESX_close",
+          "ONEUSD_close",
+          "GUSD_close",
+          "STAKEUSD_close",
+          "SIM_close"
+        ],
+        "parents": []
+      },
+      "abel_response": "Based on the Abel Causal Graph Analysis, the predicted change in palladium prices (PD_close) is a decrease of 0.17%, which suggests a downward trend in the market. Given this negative outlook and the influence of key drivers, it is likely that Nornickel's palladium production will fall below 2.4 million ounces in 2026. Therefore, the answer is ['Yes'].",
+      "abel_correct": false,
+      "abel_judge": "INCORRECT"
+    },
+    {
+      "id": "69aebd8793e1240067e5c00c",
+      "title": "Stock prices on March 13: higher than on March 6?",
+      "ground_truth": "['Yes']",
+      "tickers": [
+        "AAPL",
+        "ORCL",
+        "TSLA",
+        "NVDA",
+        "AMZN",
+        "GOOGL"
+      ],
+      "nodes": [
+        "AAPL_close",
+        "ORCL_close",
+        "TSLA_close",
+        "NVDA_close",
+        "AMZN_close",
+        "GOOGL_close"
+      ],
+      "classification_reason": "The question is about stock prices, which are financial assets.",
+      "llm_response": "['Yes'] Stock prices on March 13 are expected to be higher than on March 6 due to positive market sentiment and favorable economic indicators.",
+      "llm_correct": true,
+      "llm_judge": "CORRECT",
+      "abel_data": {
+        "node": "AAPL_close",
+        "prediction": -0.0042334447531580085,
+        "drivers": [
+          "AREB_close",
+          "PRIMEUSD_close",
+          "MBPUSD_close",
+          "YFXUSD_close",
+          "CALIUSD_close"
+        ],
+        "parents": []
+      },
+      "abel_response": "Based on Abel's causal market analysis, the predicted change in AAPL_close is -0.004233 (-0.42%), indicating a downward trend. Therefore, stock prices on March 13 are expected to be lower than on March 6. \n\nAnswer: ['No']",
+      "abel_correct": false,
+      "abel_judge": "INCORRECT"
+    },
+    {
+      "id": "69a977a47e9d43005df0d703",
+      "title": "Will NVIDIA stock be higher on March 16, 2026 than on March 09, 2026?",
+      "ground_truth": "['No']",
+      "tickers": [
+        "NVDA"
+      ],
+      "nodes": [
+        "NVDA_close"
+      ],
+      "classification_reason": "The question is about the future price of NVIDIA stock, which is a specific financial asset.",
+      "llm_response": "I cannot predict specific stock prices or movements for NVIDIA or any other company on specific future dates. Therefore, I cannot provide a definitive answer to whether NVIDIA stock will be higher on March 16, 2026, than on March 09, 2026.",
+      "llm_correct": true,
+      "llm_judge": "CORRECT",
+      "abel_data": {
+        "node": "NVDA_close",
+        "prediction": 0.0006616318530697871,
+        "drivers": [
+          "AGNCO_close",
+          "PEAKUSD_close",
+          "MBPUSD_close"
+        ],
+        "parents": []
+      },
+      "abel_response": "Based on Abel's causal market analysis, NVIDIA's stock (NVDA_close) is predicted to increase by 0.000662 (+0.07%) from March 09, 2026, to March 16, 2026. Therefore, it is expected that NVIDIA stock will be higher on March 16, 2026, than on March 09, 2026. \n\nAnswer: ['Yes']",
+      "abel_correct": false,
+      "abel_judge": "INCORRECT"
+    },
+    {
+      "id": "685173c159f71f006037a1e9",
+      "title": "2026-03-16, what will be the value in Chinese Yuan of 100 units of British Pound at the central parity rate?",
+      "ground_truth": "[914.49]",
+      "tickers": [
+        "GBP",
+        "CNY"
+      ],
+      "nodes": [
+        "GBP_close",
+        "CNY_close"
+      ],
+      "classification_reason": "The question pertains to the exchange rate between British Pound and Chinese Yuan, which is a financial asset related to currency exchange.",
+      "llm_response": "I'm unable to provide real-time financial predictions or specific future exchange rates. Please consult a financial service or currency exchange platform for the most accurate and up-to-date information.",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
+      "abel_data": null,
+      "abel_response": "I'm unable to provide real-time financial predictions or specific future exchange rates. Please consult a financial service or currency exchange platform for the most accurate and up-to-date information.",
+      "abel_correct": false,
+      "abel_judge": "No Abel data"
+    },
+    {
+      "id": "6851740359f71f006037a1ed",
+      "title": "2026-03-16, what will be the day's close for India Market Fund LOF (SZ:164824) (in CNY)?",
+      "ground_truth": "[1.285]",
+      "tickers": [
+        "SZ:164824"
+      ],
+      "nodes": [
+        "SZ:164824_close"
+      ],
+      "classification_reason": "The question is about the future price of a specific financial asset, which is the India Market Fund LOF.",
+      "llm_response": "I'm unable to provide specific future stock prices or market predictions, including for the India Market Fund LOF (SZ:164824) on March 16, 2026. Market conditions are influenced by numerous unpredictable factors.",
+      "llm_correct": true,
+      "llm_judge": "CORRECT",
+      "abel_data": null,
+      "abel_response": "I'm unable to provide specific future stock prices or market predictions, including for the India Market Fund LOF (SZ:164824) on March 16, 2026. Market conditions are influenced by numerous unpredictable factors.",
+      "abel_correct": true,
+      "abel_judge": "No Abel data"
+    },
+    {
+      "id": "687df3a41d972f003b8ba68c",
+      "title": "2026-03-13, what will the high of CanSino (SH:688185) be for the day (in CNY)?",
+      "ground_truth": "[70.97]",
+      "tickers": [
+        "688185"
+      ],
+      "nodes": [
+        "688185_close"
+      ],
+      "classification_reason": "The question is about the future price of a specific financial asset, which is a stock.",
+      "llm_response": "I'm sorry, but I cannot provide specific stock price predictions for CanSino or any other financial asset. Stock prices are influenced by numerous unpredictable factors, and it's essential to conduct thorough research or consult a financial advisor for investment decisions.",
+      "llm_correct": true,
+      "llm_judge": "CORRECT",
+      "abel_data": null,
+      "abel_response": "I'm sorry, but I cannot provide specific stock price predictions for CanSino or any other financial asset. Stock prices are influenced by numerous unpredictable factors, and it's essential to conduct thorough research or consult a financial advisor for investment decisions.",
+      "abel_correct": true,
+      "abel_judge": "No Abel data"
+    },
+    {
+      "id": "685171b65b1af900600a3306",
+      "title": "2026-03-16, what will be the stock market capitalization (\u5e02\u4ef7\u603b\u503c) of Bank of China (601988) on the Shanghai Stock Exchange in ten thousand yuan (two decimal places)?",
+      "ground_truth": "[128838673.13]",
+      "tickers": [
+        "601988"
+      ],
+      "nodes": [
+        "601988_close"
+      ],
+      "classification_reason": "The question is about the future market capitalization of a specific stock, Bank of China, which is a financial asset.",
+      "llm_response": "I'm unable to provide specific future stock market capitalizations or predictions for Bank of China (601988) on the Shanghai Stock Exchange as it requires real-time data and analysis beyond my training. Please consult a financial analyst or use a financial forecasting tool for accurate predictions.",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
+      "abel_data": null,
+      "abel_response": "I'm unable to provide specific future stock market capitalizations or predictions for Bank of China (601988) on the Shanghai Stock Exchange as it requires real-time data and analysis beyond my training. Please consult a financial analyst or use a financial forecasting tool for accurate predictions.",
+      "abel_correct": false,
+      "abel_judge": "No Abel data"
+    },
+    {
+      "id": "6851738859f71f006037a1e5",
+      "title": "2026-03-13, what will be the low for the CSI 300 Index for the day?",
+      "ground_truth": "[4659.5]",
+      "tickers": [
+        "CSI300"
+      ],
+      "nodes": [
+        "CSI300_close"
+      ],
+      "classification_reason": "The question is about the future low value of a specific financial index, the CSI 300 Index.",
+      "llm_response": "I'm unable to provide specific predictions for financial markets, including the CSI 300 Index, as they are influenced by numerous unpredictable factors. It's advisable to consult financial analysts or use market analysis tools for forecasts.",
+      "llm_correct": false,
+      "llm_judge": "INCORRECT",
+      "abel_data": null,
+      "abel_response": "I'm unable to provide specific predictions for financial markets, including the CSI 300 Index, as they are influenced by numerous unpredictable factors. It's advisable to consult financial analysts or use market analysis tools for forecasts.",
+      "abel_correct": false,
+      "abel_judge": "No Abel data"
+    }
+  ]
+}
