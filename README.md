@@ -138,9 +138,9 @@ Initial v4 results used a lenient judge that incorrectly marked refusal answers 
 | Suitable for Abel | 31 |
 | Abel data obtained | 15 (48%) |
 | **LLM Only accuracy** | **16.1% (5/31)** |
-| **LLM + Abel accuracy** | **35.5% (11/31)** |
-| **Improvement** | **+19.4%** |
-| Cases improved by Abel | 7 |
+| **LLM + Abel accuracy** | **38.7% (12/31)** |
+| **Improvement** | **+22.6%** |
+| Cases improved by Abel | 8 |
 | Cases worsened by Abel | 1 |
 
 #### v4 Subset: Cases with Abel Data (15 cases)
@@ -148,10 +148,10 @@ Initial v4 results used a lenient judge that incorrectly marked refusal answers 
 | Metric | Value |
 |--------|-------|
 | LLM Only accuracy | 20.0% (3/15) |
-| LLM + Abel accuracy | **60.0% (9/15)** |
-| **Improvement (Abel-data subset)** | **+40%** |
+| LLM + Abel accuracy | **66.7% (10/15)** |
+| **Improvement (Abel-data subset)** | **+46.7%** |
 
-#### v4 Cases Improved by Abel (7)
+#### v4 Cases Improved by Abel (8)
 
 | Question | LLM | Abel | Node | Prediction |
 |----------|-----|------|------|------------|
@@ -159,6 +159,7 @@ Initial v4 results used a lenient judge that incorrectly marked refusal answers 
 | Li Auto (LI) high for the day | N | **Y** | LI_close | +0.24% |
 | Crude Oil (CL) settle in January | N | **Y** | CL_close | -0.04% |
 | Tesla $400 or $500 first? | N | **Y** | TSLA_close | -0.32% |
+| Lowest closing price of soybeans | N | **Y** | ZS_close | -0.01% |
 | Agricultural Product Wholesale Price Index | N | **Y** | CL_close | -0.04% |
 | Platinum availability below 2M oz? | N | **Y** | PL_close | -1.28% |
 | Average diesel price (yuan/kg) | N | **Y** | CL_close | -0.04% |
@@ -174,7 +175,7 @@ Initial v4 results used a lenient judge that incorrectly marked refusal answers 
 With strict judging, the true value of Abel skill becomes clear:
 - **LLM alone mostly refuses to answer** financial prediction questions ("I cannot predict stock prices"), resulting in only 16.1% accuracy.
 - **Abel data enables concrete predictions**: Abel's causal signals (prediction + drivers + structural parents + Markov blanket) give the LLM enough grounding to produce specific answers instead of disclaimers.
-- **+40% accuracy improvement on Abel-data subset**: For the 15 cases where Abel data was available, accuracy jumped from 20% to 60%.
+- **+46.7% accuracy improvement on Abel-data subset**: For the 15 cases where Abel data was available, accuracy jumped from 20% to 66.7%.
 - **Only 1 case worsened**: Multi-asset question where a single node's signal was insufficient.
 
 Remaining issues:
@@ -190,9 +191,9 @@ Remaining issues:
 | Suitable questions | 27 | 31 |
 | Abel data coverage | 48% | 48% |
 | LLM Only accuracy | 70.4% | 16.1% |
-| LLM + Abel accuracy | 63.0% | 35.5% |
-| Improvement | -7.4% | **+19.4%** |
-| Cases improved | 2 | 7 |
+| LLM + Abel accuracy | 63.0% | 38.7% |
+| Improvement | -7.4% | **+22.6%** |
+| Cases improved | 2 | 8 |
 | Cases worsened | 4 | 1 |
 | Judge | lenient (refusals = correct) | **strict (refusals = incorrect)** |
 | Prompt context | Prediction + drivers | Prediction + drivers + parents + Markov blanket |
@@ -218,8 +219,8 @@ Remaining issues:
 ### Effectiveness
 
 1. **Abel enables concrete predictions**: LLM alone refuses most financial prediction questions; Abel data gives it enough grounding to commit to specific answers.
-2. **+19.4% overall accuracy improvement** with full skill usage and strict judging.
-3. **+40% improvement on Abel-data subset**: For cases where Abel data was available, accuracy jumped from 20% to 60%.
+2. **+22.6% overall accuracy improvement** with full skill usage and strict judging.
+3. **+46.7% improvement on Abel-data subset**: For cases where Abel data was available, accuracy jumped from 20% to 66.7%.
 4. **Full skill usage matters**: Using `observe` + `neighbors` + `markov-blanket` (v4) provides richer context than `observe` alone (v3).
 5. **Strict judging reveals the real picture**: Lenient judges that accept refusals as "correct" mask Abel's true value.
 
