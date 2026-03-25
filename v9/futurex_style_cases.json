@@ -1,0 +1,1591 @@
+{
+  "summary": {
+    "version": "v9-futurex-style-llm-casebook",
+    "generation_method": "llm_authored_with_live_snapshot",
+    "snapshot_date": "2026-03-25",
+    "timezone": "GMT+8",
+    "skill_version": "1.0.7",
+    "sources": [
+      "https://github.com/Abel-ai-causality/Abel-skills/blob/main/causal-abel/SKILL.md",
+      "https://huggingface.co/datasets/futurex-ai/Futurex-Online",
+      "https://huggingface.co/datasets/futurex-ai/Futurex-Past",
+      "https://arxiv.org/abs/2508.11987"
+    ],
+    "case_count": 36,
+    "pattern_counts": {
+      "interval bin": 9,
+      "roster membership": 9,
+      "statement-truth set": 8,
+      "threshold ladder": 6,
+      "top-k membership": 2,
+      "winner market": 2
+    },
+    "category_counts": {
+      "counterfactual_preview": 2,
+      "graph_neighbors": 3,
+      "graph_paths": 2,
+      "intervention": 2,
+      "normalization_and_crypto": 2,
+      "observation_availability": 3,
+      "observe_drivers": 3,
+      "observe_prediction": 15,
+      "observe_ranking": 4
+    }
+  },
+  "cases": [
+    {
+      "id": "fxcausal_001",
+      "futurex_pattern": "interval bin",
+      "category": "observe_prediction",
+      "title": "What range will Abel's next-step observational move for AAPL_close fall into?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"What range will Abel's next-step observational move for AAPL_close fall into? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  AAPL_close be less than or equal to -0.30%\nB.  AAPL_close be above -0.30% and less than or equal to -0.10%\nC.  AAPL_close be above -0.10% and below 0.10%\nD.  AAPL_close be at least 0.10% and below 0.20%\nE.  AAPL_close be at least 0.20%\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "AAPL_close be less than or equal to -0.30%"
+        },
+        {
+          "label": "B",
+          "text": "AAPL_close be above -0.30% and less than or equal to -0.10%"
+        },
+        {
+          "label": "C",
+          "text": "AAPL_close be above -0.10% and below 0.10%"
+        },
+        {
+          "label": "D",
+          "text": "AAPL_close be at least 0.10% and below 0.20%"
+        },
+        {
+          "label": "E",
+          "text": "AAPL_close be at least 0.20%"
+        }
+      ],
+      "answer_letters": [
+        "C"
+      ],
+      "answer_box": "\\boxed{C}",
+      "supporting_facts": {
+        "prediction_pct": 0.09639149017599172
+      },
+      "why_it_fits_causal_abel": "FutureX often uses numeric interval buckets; here the bucket is anchored to live observe.predict."
+    },
+    {
+      "id": "fxcausal_002",
+      "futurex_pattern": "interval bin",
+      "category": "observe_prediction",
+      "title": "What range will Abel's next-step observational move for TSLA_close fall into?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"What range will Abel's next-step observational move for TSLA_close fall into? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  TSLA_close be less than or equal to -0.30%\nB.  TSLA_close be above -0.30% and less than or equal to -0.10%\nC.  TSLA_close be above -0.10% and below 0.10%\nD.  TSLA_close be at least 0.10% and below 0.20%\nE.  TSLA_close be at least 0.20%\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "TSLA_close be less than or equal to -0.30%"
+        },
+        {
+          "label": "B",
+          "text": "TSLA_close be above -0.30% and less than or equal to -0.10%"
+        },
+        {
+          "label": "C",
+          "text": "TSLA_close be above -0.10% and below 0.10%"
+        },
+        {
+          "label": "D",
+          "text": "TSLA_close be at least 0.10% and below 0.20%"
+        },
+        {
+          "label": "E",
+          "text": "TSLA_close be at least 0.20%"
+        }
+      ],
+      "answer_letters": [
+        "B"
+      ],
+      "answer_box": "\\boxed{B}",
+      "supporting_facts": {
+        "prediction_pct": -0.2406296289655383
+      },
+      "why_it_fits_causal_abel": "Same scoring shape as FutureX rate/settle buckets, but using Abel observational pressure."
+    },
+    {
+      "id": "fxcausal_003",
+      "futurex_pattern": "interval bin",
+      "category": "observe_prediction",
+      "title": "What range will Abel's next-step observational move for AMD_close fall into?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"What range will Abel's next-step observational move for AMD_close fall into? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  AMD_close be less than or equal to -0.30%\nB.  AMD_close be above -0.30% and less than or equal to -0.10%\nC.  AMD_close be above -0.10% and below 0.10%\nD.  AMD_close be at least 0.10% and below 0.20%\nE.  AMD_close be at least 0.20%\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "AMD_close be less than or equal to -0.30%"
+        },
+        {
+          "label": "B",
+          "text": "AMD_close be above -0.30% and less than or equal to -0.10%"
+        },
+        {
+          "label": "C",
+          "text": "AMD_close be above -0.10% and below 0.10%"
+        },
+        {
+          "label": "D",
+          "text": "AMD_close be at least 0.10% and below 0.20%"
+        },
+        {
+          "label": "E",
+          "text": "AMD_close be at least 0.20%"
+        }
+      ],
+      "answer_letters": [
+        "E"
+      ],
+      "answer_box": "\\boxed{E}",
+      "supporting_facts": {
+        "prediction_pct": 0.20931723421453705
+      },
+      "why_it_fits_causal_abel": "Single-answer interval market based on a live node with materialized prediction history."
+    },
+    {
+      "id": "fxcausal_004",
+      "futurex_pattern": "interval bin",
+      "category": "observe_prediction",
+      "title": "What range will Abel's next-step observational move for NVDA_close fall into?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"What range will Abel's next-step observational move for NVDA_close fall into? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  NVDA_close be less than or equal to -0.30%\nB.  NVDA_close be above -0.30% and less than or equal to -0.10%\nC.  NVDA_close be above -0.10% and below 0.10%\nD.  NVDA_close be at least 0.10% and below 0.20%\nE.  NVDA_close be at least 0.20%\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "NVDA_close be less than or equal to -0.30%"
+        },
+        {
+          "label": "B",
+          "text": "NVDA_close be above -0.30% and less than or equal to -0.10%"
+        },
+        {
+          "label": "C",
+          "text": "NVDA_close be above -0.10% and below 0.10%"
+        },
+        {
+          "label": "D",
+          "text": "NVDA_close be at least 0.10% and below 0.20%"
+        },
+        {
+          "label": "E",
+          "text": "NVDA_close be at least 0.20%"
+        }
+      ],
+      "answer_letters": [
+        "C"
+      ],
+      "answer_box": "\\boxed{C}",
+      "supporting_facts": {
+        "prediction_pct": 0.04359642834965821
+      },
+      "why_it_fits_causal_abel": "FutureX-style bucket, but for a graph-grounded observation target."
+    },
+    {
+      "id": "fxcausal_005",
+      "futurex_pattern": "interval bin",
+      "category": "observe_prediction",
+      "title": "What range will Abel's next-step observational move for ETHUSD_close fall into?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"What range will Abel's next-step observational move for ETHUSD_close fall into? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  ETHUSD_close be less than or equal to -0.30%\nB.  ETHUSD_close be above -0.30% and less than or equal to -0.10%\nC.  ETHUSD_close be above -0.10% and below 0.10%\nD.  ETHUSD_close be at least 0.10% and below 0.20%\nE.  ETHUSD_close be at least 0.20%\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "ETHUSD_close be less than or equal to -0.30%"
+        },
+        {
+          "label": "B",
+          "text": "ETHUSD_close be above -0.30% and less than or equal to -0.10%"
+        },
+        {
+          "label": "C",
+          "text": "ETHUSD_close be above -0.10% and below 0.10%"
+        },
+        {
+          "label": "D",
+          "text": "ETHUSD_close be at least 0.10% and below 0.20%"
+        },
+        {
+          "label": "E",
+          "text": "ETHUSD_close be at least 0.20%"
+        }
+      ],
+      "answer_letters": [
+        "B"
+      ],
+      "answer_box": "\\boxed{B}",
+      "supporting_facts": {
+        "prediction_pct": -0.1634334446580476
+      },
+      "why_it_fits_causal_abel": "Uses the latest skill crypto normalization rule with ETHUSD_close, not ETH_close."
+    },
+    {
+      "id": "fxcausal_006",
+      "futurex_pattern": "interval bin",
+      "category": "observe_prediction",
+      "title": "What range will Abel's next-step observational move for AVGO_close fall into?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"What range will Abel's next-step observational move for AVGO_close fall into? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  AVGO_close be less than or equal to -0.30%\nB.  AVGO_close be above -0.30% and less than or equal to -0.10%\nC.  AVGO_close be above -0.10% and below 0.10%\nD.  AVGO_close be at least 0.10% and below 0.20%\nE.  AVGO_close be at least 0.20%\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "AVGO_close be less than or equal to -0.30%"
+        },
+        {
+          "label": "B",
+          "text": "AVGO_close be above -0.30% and less than or equal to -0.10%"
+        },
+        {
+          "label": "C",
+          "text": "AVGO_close be above -0.10% and below 0.10%"
+        },
+        {
+          "label": "D",
+          "text": "AVGO_close be at least 0.10% and below 0.20%"
+        },
+        {
+          "label": "E",
+          "text": "AVGO_close be at least 0.20%"
+        }
+      ],
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "supporting_facts": {
+        "prediction_pct": -0.4278362474926455
+      },
+      "why_it_fits_causal_abel": "A sharper negative-move bucket gives variation across the interval template."
+    },
+    {
+      "id": "fxcausal_007",
+      "futurex_pattern": "interval bin",
+      "category": "observe_prediction",
+      "title": "What range will Abel's next-step observational move for INTC_close fall into?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"What range will Abel's next-step observational move for INTC_close fall into? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  INTC_close be less than or equal to -0.30%\nB.  INTC_close be above -0.30% and less than or equal to -0.10%\nC.  INTC_close be above -0.10% and below 0.10%\nD.  INTC_close be at least 0.10% and below 0.20%\nE.  INTC_close be at least 0.20%\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "INTC_close be less than or equal to -0.30%"
+        },
+        {
+          "label": "B",
+          "text": "INTC_close be above -0.30% and less than or equal to -0.10%"
+        },
+        {
+          "label": "C",
+          "text": "INTC_close be above -0.10% and below 0.10%"
+        },
+        {
+          "label": "D",
+          "text": "INTC_close be at least 0.10% and below 0.20%"
+        },
+        {
+          "label": "E",
+          "text": "INTC_close be at least 0.20%"
+        }
+      ],
+      "answer_letters": [
+        "B"
+      ],
+      "answer_box": "\\boxed{B}",
+      "supporting_facts": {
+        "prediction_pct": -0.14087294122588326
+      },
+      "why_it_fits_causal_abel": "Another interval-bin case, closer to the kind of repeated market ranges FutureX uses."
+    },
+    {
+      "id": "fxcausal_008",
+      "futurex_pattern": "interval bin",
+      "category": "observe_prediction",
+      "title": "What range will Abel's next-step observational move for CL_close fall into?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"What range will Abel's next-step observational move for CL_close fall into? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  CL_close be less than or equal to -0.30%\nB.  CL_close be above -0.30% and less than or equal to -0.10%\nC.  CL_close be above -0.10% and below 0.10%\nD.  CL_close be at least 0.10% and below 0.20%\nE.  CL_close be at least 0.20%\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "CL_close be less than or equal to -0.30%"
+        },
+        {
+          "label": "B",
+          "text": "CL_close be above -0.30% and less than or equal to -0.10%"
+        },
+        {
+          "label": "C",
+          "text": "CL_close be above -0.10% and below 0.10%"
+        },
+        {
+          "label": "D",
+          "text": "CL_close be at least 0.10% and below 0.20%"
+        },
+        {
+          "label": "E",
+          "text": "CL_close be at least 0.20%"
+        }
+      ],
+      "answer_letters": [
+        "B"
+      ],
+      "answer_box": "\\boxed{B}",
+      "supporting_facts": {
+        "prediction_pct": -0.1050836626590292
+      },
+      "why_it_fits_causal_abel": "Keeps a commodity-linked node in the observational bucket family."
+    },
+    {
+      "id": "fxcausal_009",
+      "futurex_pattern": "threshold ladder",
+      "category": "observe_prediction",
+      "title": "Which thresholds will Abel's next-step observational move for AAPL_close clear?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Which thresholds will Abel's next-step observational move for AAPL_close clear? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  AAPL_close be at least -0.50%\nB.  AAPL_close be at least -0.30%\nC.  AAPL_close be at least -0.10%\nD.  AAPL_close be at least 0.00%\nE.  AAPL_close be at least 0.10%\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "AAPL_close be at least -0.50%"
+        },
+        {
+          "label": "B",
+          "text": "AAPL_close be at least -0.30%"
+        },
+        {
+          "label": "C",
+          "text": "AAPL_close be at least -0.10%"
+        },
+        {
+          "label": "D",
+          "text": "AAPL_close be at least 0.00%"
+        },
+        {
+          "label": "E",
+          "text": "AAPL_close be at least 0.10%"
+        }
+      ],
+      "answer_letters": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_box": "\\boxed{A, B, C, D}",
+      "supporting_facts": {
+        "prediction_pct": 0.09639149017599172
+      },
+      "why_it_fits_causal_abel": "This mirrors FutureX monotonic “at least X” ladders exactly."
+    },
+    {
+      "id": "fxcausal_010",
+      "futurex_pattern": "threshold ladder",
+      "category": "observe_prediction",
+      "title": "Which thresholds will Abel's next-step observational move for TSLA_close clear?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Which thresholds will Abel's next-step observational move for TSLA_close clear? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  TSLA_close be at least -0.50%\nB.  TSLA_close be at least -0.30%\nC.  TSLA_close be at least -0.10%\nD.  TSLA_close be at least 0.00%\nE.  TSLA_close be at least 0.10%\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "TSLA_close be at least -0.50%"
+        },
+        {
+          "label": "B",
+          "text": "TSLA_close be at least -0.30%"
+        },
+        {
+          "label": "C",
+          "text": "TSLA_close be at least -0.10%"
+        },
+        {
+          "label": "D",
+          "text": "TSLA_close be at least 0.00%"
+        },
+        {
+          "label": "E",
+          "text": "TSLA_close be at least 0.10%"
+        }
+      ],
+      "answer_letters": [
+        "A",
+        "B"
+      ],
+      "answer_box": "\\boxed{A, B}",
+      "supporting_facts": {
+        "prediction_pct": -0.2406296289655383
+      },
+      "why_it_fits_causal_abel": "A negative example where only the first two thresholds survive."
+    },
+    {
+      "id": "fxcausal_011",
+      "futurex_pattern": "threshold ladder",
+      "category": "observe_prediction",
+      "title": "Which thresholds will Abel's next-step observational move for AMD_close clear?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Which thresholds will Abel's next-step observational move for AMD_close clear? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  AMD_close be at least -0.50%\nB.  AMD_close be at least -0.30%\nC.  AMD_close be at least -0.10%\nD.  AMD_close be at least 0.00%\nE.  AMD_close be at least 0.10%\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "AMD_close be at least -0.50%"
+        },
+        {
+          "label": "B",
+          "text": "AMD_close be at least -0.30%"
+        },
+        {
+          "label": "C",
+          "text": "AMD_close be at least -0.10%"
+        },
+        {
+          "label": "D",
+          "text": "AMD_close be at least 0.00%"
+        },
+        {
+          "label": "E",
+          "text": "AMD_close be at least 0.10%"
+        }
+      ],
+      "answer_letters": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer_box": "\\boxed{A, B, C, D, E}",
+      "supporting_facts": {
+        "prediction_pct": 0.20931723421453705
+      },
+      "why_it_fits_causal_abel": "A full-sweep ladder gives a clean monotonic positive case."
+    },
+    {
+      "id": "fxcausal_012",
+      "futurex_pattern": "threshold ladder",
+      "category": "observe_prediction",
+      "title": "Which thresholds will Abel's next-step observational move for AVGO_close clear?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Which thresholds will Abel's next-step observational move for AVGO_close clear? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  AVGO_close be at least -0.50%\nB.  AVGO_close be at least -0.30%\nC.  AVGO_close be at least -0.10%\nD.  AVGO_close be at least 0.00%\nE.  AVGO_close be at least 0.10%\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "AVGO_close be at least -0.50%"
+        },
+        {
+          "label": "B",
+          "text": "AVGO_close be at least -0.30%"
+        },
+        {
+          "label": "C",
+          "text": "AVGO_close be at least -0.10%"
+        },
+        {
+          "label": "D",
+          "text": "AVGO_close be at least 0.00%"
+        },
+        {
+          "label": "E",
+          "text": "AVGO_close be at least 0.10%"
+        }
+      ],
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "supporting_facts": {
+        "prediction_pct": -0.4278362474926455
+      },
+      "why_it_fits_causal_abel": "Single-hit threshold sets are common in FutureX and useful here too."
+    },
+    {
+      "id": "fxcausal_013",
+      "futurex_pattern": "threshold ladder",
+      "category": "observe_prediction",
+      "title": "Which thresholds will Abel's next-step observational move for CL_close clear?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Which thresholds will Abel's next-step observational move for CL_close clear? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  CL_close be at least -0.50%\nB.  CL_close be at least -0.30%\nC.  CL_close be at least -0.10%\nD.  CL_close be at least 0.00%\nE.  CL_close be at least 0.10%\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "CL_close be at least -0.50%"
+        },
+        {
+          "label": "B",
+          "text": "CL_close be at least -0.30%"
+        },
+        {
+          "label": "C",
+          "text": "CL_close be at least -0.10%"
+        },
+        {
+          "label": "D",
+          "text": "CL_close be at least 0.00%"
+        },
+        {
+          "label": "E",
+          "text": "CL_close be at least 0.10%"
+        }
+      ],
+      "answer_letters": [
+        "A",
+        "B"
+      ],
+      "answer_box": "\\boxed{A, B}",
+      "supporting_facts": {
+        "prediction_pct": -0.1050836626590292
+      },
+      "why_it_fits_causal_abel": "Commodity-linked threshold ladder with a modest negative move."
+    },
+    {
+      "id": "fxcausal_014",
+      "futurex_pattern": "threshold ladder",
+      "category": "observe_prediction",
+      "title": "Which thresholds will Abel's next-step observational move for ETHUSD_close clear?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Which thresholds will Abel's next-step observational move for ETHUSD_close clear? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  ETHUSD_close be at least -0.50%\nB.  ETHUSD_close be at least -0.30%\nC.  ETHUSD_close be at least -0.10%\nD.  ETHUSD_close be at least 0.00%\nE.  ETHUSD_close be at least 0.10%\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "ETHUSD_close be at least -0.50%"
+        },
+        {
+          "label": "B",
+          "text": "ETHUSD_close be at least -0.30%"
+        },
+        {
+          "label": "C",
+          "text": "ETHUSD_close be at least -0.10%"
+        },
+        {
+          "label": "D",
+          "text": "ETHUSD_close be at least 0.00%"
+        },
+        {
+          "label": "E",
+          "text": "ETHUSD_close be at least 0.10%"
+        }
+      ],
+      "answer_letters": [
+        "A",
+        "B"
+      ],
+      "answer_box": "\\boxed{A, B}",
+      "supporting_facts": {
+        "prediction_pct": -0.1634334446580476
+      },
+      "why_it_fits_causal_abel": "Uses the new crypto node naming rule and keeps the FutureX ladder style."
+    },
+    {
+      "id": "fxcausal_015",
+      "futurex_pattern": "winner market",
+      "category": "observe_ranking",
+      "title": "Who will lead the semis basket by Abel next-step observational move?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Who will lead the semis basket by Abel next-step observational move? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  NVDA_close have the highest observational move in the basket\nB.  AMD_close have the highest observational move in the basket\nC.  INTC_close have the highest observational move in the basket\nD.  AVGO_close have the highest observational move in the basket\nE.  TSM_close have the highest observational move in the basket\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "NVDA_close have the highest observational move in the basket"
+        },
+        {
+          "label": "B",
+          "text": "AMD_close have the highest observational move in the basket"
+        },
+        {
+          "label": "C",
+          "text": "INTC_close have the highest observational move in the basket"
+        },
+        {
+          "label": "D",
+          "text": "AVGO_close have the highest observational move in the basket"
+        },
+        {
+          "label": "E",
+          "text": "TSM_close have the highest observational move in the basket"
+        }
+      ],
+      "answer_letters": [
+        "B"
+      ],
+      "answer_box": "\\boxed{B}",
+      "supporting_facts": {
+        "basket_pct": {
+          "NVDA_close": 0.04359642834965821,
+          "AMD_close": 0.20931723421453705,
+          "INTC_close": -0.14087294122588326,
+          "AVGO_close": -0.4278362474926455,
+          "TSM_close": -0.0688548762169393
+        }
+      },
+      "why_it_fits_causal_abel": "Direct analogue of a FutureX winner market, but over a live Abel prediction basket."
+    },
+    {
+      "id": "fxcausal_016",
+      "futurex_pattern": "winner market",
+      "category": "observe_ranking",
+      "title": "Who will lead the mega-cap basket by Abel next-step observational move?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Who will lead the mega-cap basket by Abel next-step observational move? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  AAPL_close have the highest observational move in the basket\nB.  TSLA_close have the highest observational move in the basket\nC.  NVDA_close have the highest observational move in the basket\nD.  AVGO_close have the highest observational move in the basket\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "AAPL_close have the highest observational move in the basket"
+        },
+        {
+          "label": "B",
+          "text": "TSLA_close have the highest observational move in the basket"
+        },
+        {
+          "label": "C",
+          "text": "NVDA_close have the highest observational move in the basket"
+        },
+        {
+          "label": "D",
+          "text": "AVGO_close have the highest observational move in the basket"
+        }
+      ],
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "supporting_facts": {
+        "basket_pct": {
+          "AAPL_close": 0.09639149017599172,
+          "TSLA_close": -0.2406296289655383,
+          "NVDA_close": 0.04359642834965821,
+          "AVGO_close": -0.4278362474926455
+        }
+      },
+      "why_it_fits_causal_abel": "A second winner market so the casebook is not overfit to one basket."
+    },
+    {
+      "id": "fxcausal_017",
+      "futurex_pattern": "top-k membership",
+      "category": "observe_ranking",
+      "title": "Which names will finish in the top 3 by Abel next-step observational move?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Which names will finish in the top 3 by Abel next-step observational move? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  AAPL_close be in the top 3\nB.  TSLA_close be in the top 3\nC.  AMD_close be in the top 3\nD.  NVDA_close be in the top 3\nE.  INTC_close be in the top 3\nF.  AVGO_close be in the top 3\nG.  TSM_close be in the top 3\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "AAPL_close be in the top 3"
+        },
+        {
+          "label": "B",
+          "text": "TSLA_close be in the top 3"
+        },
+        {
+          "label": "C",
+          "text": "AMD_close be in the top 3"
+        },
+        {
+          "label": "D",
+          "text": "NVDA_close be in the top 3"
+        },
+        {
+          "label": "E",
+          "text": "INTC_close be in the top 3"
+        },
+        {
+          "label": "F",
+          "text": "AVGO_close be in the top 3"
+        },
+        {
+          "label": "G",
+          "text": "TSM_close be in the top 3"
+        }
+      ],
+      "answer_letters": [
+        "A",
+        "C",
+        "D"
+      ],
+      "answer_box": "\\boxed{A, C, D}",
+      "supporting_facts": {
+        "top3": [
+          "AMD_close",
+          "AAPL_close",
+          "NVDA_close"
+        ]
+      },
+      "why_it_fits_causal_abel": "Maps the FutureX top-3 style directly onto ranked observational pressure."
+    },
+    {
+      "id": "fxcausal_018",
+      "futurex_pattern": "top-k membership",
+      "category": "observe_ranking",
+      "title": "Which names will finish in the bottom 3 by Abel next-step observational move?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Which names will finish in the bottom 3 by Abel next-step observational move? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  AAPL_close be in the bottom 3\nB.  TSLA_close be in the bottom 3\nC.  AMD_close be in the bottom 3\nD.  NVDA_close be in the bottom 3\nE.  INTC_close be in the bottom 3\nF.  AVGO_close be in the bottom 3\nG.  TSM_close be in the bottom 3\nH.  CL_close be in the bottom 3\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "AAPL_close be in the bottom 3"
+        },
+        {
+          "label": "B",
+          "text": "TSLA_close be in the bottom 3"
+        },
+        {
+          "label": "C",
+          "text": "AMD_close be in the bottom 3"
+        },
+        {
+          "label": "D",
+          "text": "NVDA_close be in the bottom 3"
+        },
+        {
+          "label": "E",
+          "text": "INTC_close be in the bottom 3"
+        },
+        {
+          "label": "F",
+          "text": "AVGO_close be in the bottom 3"
+        },
+        {
+          "label": "G",
+          "text": "TSM_close be in the bottom 3"
+        },
+        {
+          "label": "H",
+          "text": "CL_close be in the bottom 3"
+        }
+      ],
+      "answer_letters": [
+        "B",
+        "E",
+        "F"
+      ],
+      "answer_box": "\\boxed{B, E, F}",
+      "supporting_facts": {
+        "bottom3": [
+          "AVGO_close",
+          "TSLA_close",
+          "INTC_close"
+        ]
+      },
+      "why_it_fits_causal_abel": "Still FutureX-like, but stresses relative ranking on an Abel basket rather than a sports podium."
+    },
+    {
+      "id": "fxcausal_019",
+      "futurex_pattern": "roster membership",
+      "category": "observe_drivers",
+      "title": "Which nodes will Abel surface as observe.predict drivers for NVDA_close?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Which nodes will Abel surface as observe.predict drivers for NVDA_close? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  the outcome be AGNCO_close\nB.  the outcome be PEAKUSD_close\nC.  the outcome be MBPUSD_close\nD.  the outcome be PRIMEUSD_close\nE.  the outcome be CALIUSD_close\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "the outcome be AGNCO_close"
+        },
+        {
+          "label": "B",
+          "text": "the outcome be PEAKUSD_close"
+        },
+        {
+          "label": "C",
+          "text": "the outcome be MBPUSD_close"
+        },
+        {
+          "label": "D",
+          "text": "the outcome be PRIMEUSD_close"
+        },
+        {
+          "label": "E",
+          "text": "the outcome be CALIUSD_close"
+        }
+      ],
+      "answer_letters": [
+        "A",
+        "B",
+        "C"
+      ],
+      "answer_box": "\\boxed{A, B, C}",
+      "supporting_facts": {
+        "drivers": [
+          "AGNCO_close",
+          "PEAKUSD_close",
+          "MBPUSD_close"
+        ]
+      },
+      "why_it_fits_causal_abel": "This copies FutureX semifinal-membership scoring, but over live driver sets."
+    },
+    {
+      "id": "fxcausal_020",
+      "futurex_pattern": "roster membership",
+      "category": "observe_drivers",
+      "title": "Which nodes will Abel surface as observe.predict drivers for AAPL_close?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Which nodes will Abel surface as observe.predict drivers for AAPL_close? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  the outcome be AREB_close\nB.  the outcome be PRIMEUSD_close\nC.  the outcome be MBPUSD_close\nD.  the outcome be AGNCO_close\nE.  the outcome be PEAKUSD_close\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "the outcome be AREB_close"
+        },
+        {
+          "label": "B",
+          "text": "the outcome be PRIMEUSD_close"
+        },
+        {
+          "label": "C",
+          "text": "the outcome be MBPUSD_close"
+        },
+        {
+          "label": "D",
+          "text": "the outcome be AGNCO_close"
+        },
+        {
+          "label": "E",
+          "text": "the outcome be PEAKUSD_close"
+        }
+      ],
+      "answer_letters": [
+        "A",
+        "B",
+        "C"
+      ],
+      "answer_box": "\\boxed{A, B, C}",
+      "supporting_facts": {
+        "drivers": [
+          "AREB_close",
+          "PRIMEUSD_close",
+          "MBPUSD_close",
+          "YFXUSD_close",
+          "CALIUSD_close"
+        ]
+      },
+      "why_it_fits_causal_abel": "Another driver-membership market with mixed true and false candidates."
+    },
+    {
+      "id": "fxcausal_021",
+      "futurex_pattern": "roster membership",
+      "category": "graph_neighbors",
+      "title": "Which nodes are immediate parent neighbors of TSLA_close on public CAP?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Which nodes are immediate parent neighbors of TSLA_close on public CAP? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  the outcome be AGNCM_close\nB.  the outcome be AGNCO_close\nC.  the outcome be CIM-PC_close\nD.  the outcome be AREB_close\nE.  the outcome be PRIMEUSD_close\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "the outcome be AGNCM_close"
+        },
+        {
+          "label": "B",
+          "text": "the outcome be AGNCO_close"
+        },
+        {
+          "label": "C",
+          "text": "the outcome be CIM-PC_close"
+        },
+        {
+          "label": "D",
+          "text": "the outcome be AREB_close"
+        },
+        {
+          "label": "E",
+          "text": "the outcome be PRIMEUSD_close"
+        }
+      ],
+      "answer_letters": [
+        "A",
+        "B",
+        "C"
+      ],
+      "answer_box": "\\boxed{A, B, C}",
+      "supporting_facts": {
+        "parents": [
+          "AGNCM_close",
+          "AGNCO_close",
+          "CIM-PC_close",
+          "IMOUSD_close",
+          "MMYUSD_close",
+          "NLY-PG_close"
+        ]
+      },
+      "why_it_fits_causal_abel": "This turns a parent-neighbor read into a clean multi-select benchmark market."
+    },
+    {
+      "id": "fxcausal_022",
+      "futurex_pattern": "roster membership",
+      "category": "graph_neighbors",
+      "title": "Which nodes are immediate parent neighbors of AVGO_close on public CAP?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Which nodes are immediate parent neighbors of AVGO_close on public CAP? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  the outcome be AVAUSD_close\nB.  the outcome be CHAMPUSD_close\nC.  the outcome be DESUUSD_close\nD.  the outcome be AGNCO_close\nE.  the outcome be PEAKUSD_close\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "the outcome be AVAUSD_close"
+        },
+        {
+          "label": "B",
+          "text": "the outcome be CHAMPUSD_close"
+        },
+        {
+          "label": "C",
+          "text": "the outcome be DESUUSD_close"
+        },
+        {
+          "label": "D",
+          "text": "the outcome be AGNCO_close"
+        },
+        {
+          "label": "E",
+          "text": "the outcome be PEAKUSD_close"
+        }
+      ],
+      "answer_letters": [
+        "A",
+        "B",
+        "C"
+      ],
+      "answer_box": "\\boxed{A, B, C}",
+      "supporting_facts": {
+        "parents": [
+          "AVAUSD_close",
+          "CHAMPUSD_close",
+          "DESUUSD_close",
+          "HOTCROSSUSD_close",
+          "LTXUSD_close",
+          "MBPUSD_close"
+        ]
+      },
+      "why_it_fits_causal_abel": "Same structure as FutureX roster markets, grounded in graph.neighbors(scope=parents)."
+    },
+    {
+      "id": "fxcausal_023",
+      "futurex_pattern": "roster membership",
+      "category": "observe_drivers",
+      "title": "Which nodes will Abel surface as observe.predict drivers for ETHUSD_close?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Which nodes will Abel surface as observe.predict drivers for ETHUSD_close? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  the outcome be SSTK_close\nB.  the outcome be AGNCO_close\nC.  the outcome be NVDA_close\nD.  the outcome be MBPUSD_close\nE.  the outcome be PRIMEUSD_close\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "the outcome be SSTK_close"
+        },
+        {
+          "label": "B",
+          "text": "the outcome be AGNCO_close"
+        },
+        {
+          "label": "C",
+          "text": "the outcome be NVDA_close"
+        },
+        {
+          "label": "D",
+          "text": "the outcome be MBPUSD_close"
+        },
+        {
+          "label": "E",
+          "text": "the outcome be PRIMEUSD_close"
+        }
+      ],
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "supporting_facts": {
+        "drivers": [
+          "SSTK_close"
+        ]
+      },
+      "why_it_fits_causal_abel": "This is a latest-skill crypto case using ETHUSD_close rather than the old ETH_close form."
+    },
+    {
+      "id": "fxcausal_024",
+      "futurex_pattern": "roster membership",
+      "category": "graph_neighbors",
+      "title": "Which nodes are immediate parent neighbors of AAPL_close on public CAP?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Which nodes are immediate parent neighbors of AAPL_close on public CAP? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  the outcome be AREB_close\nB.  the outcome be CALIUSD_close\nC.  the outcome be MBPUSD_close\nD.  the outcome be AGNCO_close\nE.  the outcome be PEAKUSD_close\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "the outcome be AREB_close"
+        },
+        {
+          "label": "B",
+          "text": "the outcome be CALIUSD_close"
+        },
+        {
+          "label": "C",
+          "text": "the outcome be MBPUSD_close"
+        },
+        {
+          "label": "D",
+          "text": "the outcome be AGNCO_close"
+        },
+        {
+          "label": "E",
+          "text": "the outcome be PEAKUSD_close"
+        }
+      ],
+      "answer_letters": [
+        "A",
+        "B",
+        "C"
+      ],
+      "answer_box": "\\boxed{A, B, C}",
+      "supporting_facts": {
+        "parents": [
+          "AREB_close",
+          "CALIUSD_close",
+          "MBPUSD_close",
+          "PRIMEUSD_close",
+          "YFXUSD_close"
+        ]
+      },
+      "why_it_fits_causal_abel": "A second parent-membership market keeps the graph-local part of the suite broad enough."
+    },
+    {
+      "id": "fxcausal_025",
+      "futurex_pattern": "statement-truth set",
+      "category": "graph_paths",
+      "title": "Which directed paths currently exist on public CAP? (set 1)",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Which directed paths currently exist on public CAP? (set 1) (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  a directed path exist from NVDA_close to AMD_close\nB.  a directed path exist from SOXX_close to AMD_close\nC.  a directed path exist from AVGO_close to NVDA_close\nD.  a directed path exist from QQQ_close to NVDA_close\nE.  a directed path exist from TSM_close to NVDA_close\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "a directed path exist from NVDA_close to AMD_close"
+        },
+        {
+          "label": "B",
+          "text": "a directed path exist from SOXX_close to AMD_close"
+        },
+        {
+          "label": "C",
+          "text": "a directed path exist from AVGO_close to NVDA_close"
+        },
+        {
+          "label": "D",
+          "text": "a directed path exist from QQQ_close to NVDA_close"
+        },
+        {
+          "label": "E",
+          "text": "a directed path exist from TSM_close to NVDA_close"
+        }
+      ],
+      "answer_letters": [
+        "A",
+        "C",
+        "E"
+      ],
+      "answer_box": "\\boxed{A, C, E}",
+      "supporting_facts": {
+        "paths": {
+          "NVDA_close->AMD_close": {
+            "connected": true,
+            "path_count": 1
+          },
+          "SOXX_close->AMD_close": {
+            "connected": false,
+            "path_count": 0
+          },
+          "AVGO_close->NVDA_close": {
+            "connected": true,
+            "path_count": 1
+          },
+          "QQQ_close->NVDA_close": {
+            "connected": false,
+            "path_count": 0
+          },
+          "TSM_close->NVDA_close": {
+            "connected": true,
+            "path_count": 1
+          }
+        }
+      },
+      "why_it_fits_causal_abel": "This mirrors FutureX multi-select truth markets, but the truth criterion is graph reachability."
+    },
+    {
+      "id": "fxcausal_026",
+      "futurex_pattern": "statement-truth set",
+      "category": "graph_paths",
+      "title": "Which directed paths currently exist on public CAP? (set 2)",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Which directed paths currently exist on public CAP? (set 2) (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  a directed path exist from AMD_close to NVDA_close\nB.  a directed path exist from SPY_close to NVDA_close\nC.  a directed path exist from BTCUSD_close to ETHUSD_close\nD.  a directed path exist from XLK_close to AAPL_close\nE.  a directed path exist from GC_close to GLD_close\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "a directed path exist from AMD_close to NVDA_close"
+        },
+        {
+          "label": "B",
+          "text": "a directed path exist from SPY_close to NVDA_close"
+        },
+        {
+          "label": "C",
+          "text": "a directed path exist from BTCUSD_close to ETHUSD_close"
+        },
+        {
+          "label": "D",
+          "text": "a directed path exist from XLK_close to AAPL_close"
+        },
+        {
+          "label": "E",
+          "text": "a directed path exist from GC_close to GLD_close"
+        }
+      ],
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "supporting_facts": {
+        "paths": {
+          "AMD_close->NVDA_close": {
+            "connected": true,
+            "path_count": 1
+          },
+          "SPY_close->NVDA_close": {
+            "connected": false,
+            "path_count": 0
+          },
+          "BTCUSD_close->ETHUSD_close": {
+            "connected": false,
+            "path_count": 0
+          },
+          "XLK_close->AAPL_close": {
+            "connected": false,
+            "path_count": 0
+          },
+          "GC_close->GLD_close": {
+            "connected": false,
+            "path_count": 0
+          }
+        }
+      },
+      "why_it_fits_causal_abel": "Mixes one positive and four negatives, including a latest-skill crypto pair."
+    },
+    {
+      "id": "fxcausal_027",
+      "futurex_pattern": "statement-truth set",
+      "category": "intervention",
+      "title": "Which statements will be true for Abel intervene-do on NVDA_close -> AMD_close?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Which statements will be true for Abel intervene-do on NVDA_close -> AMD_close? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  the structural path check pass\nB.  the call be skipped before intervention execution\nC.  the skip_reason be no_directed_path_found\nD.  the error_code be invalid_intervention\nE.  the call return an effect value\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "the structural path check pass"
+        },
+        {
+          "label": "B",
+          "text": "the call be skipped before intervention execution"
+        },
+        {
+          "label": "C",
+          "text": "the skip_reason be no_directed_path_found"
+        },
+        {
+          "label": "D",
+          "text": "the error_code be invalid_intervention"
+        },
+        {
+          "label": "E",
+          "text": "the call return an effect value"
+        }
+      ],
+      "answer_letters": [
+        "A",
+        "D"
+      ],
+      "answer_box": "\\boxed{A, D}",
+      "supporting_facts": {
+        "path_exists": true,
+        "intervention_skipped": false,
+        "skip_reason": null,
+        "error_code": "invalid_intervention",
+        "effect_returned": false
+      },
+      "why_it_fits_causal_abel": "This is a causal pressure-test market rather than a plain path read."
+    },
+    {
+      "id": "fxcausal_028",
+      "futurex_pattern": "statement-truth set",
+      "category": "intervention",
+      "title": "Which statements will be true for Abel intervene-do on SOXX_close -> AMD_close?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Which statements will be true for Abel intervene-do on SOXX_close -> AMD_close? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  the structural path check pass\nB.  the call be skipped before intervention execution\nC.  the skip_reason be no_directed_path_found\nD.  the error_code be invalid_intervention\nE.  the call return an effect value\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "the structural path check pass"
+        },
+        {
+          "label": "B",
+          "text": "the call be skipped before intervention execution"
+        },
+        {
+          "label": "C",
+          "text": "the skip_reason be no_directed_path_found"
+        },
+        {
+          "label": "D",
+          "text": "the error_code be invalid_intervention"
+        },
+        {
+          "label": "E",
+          "text": "the call return an effect value"
+        }
+      ],
+      "answer_letters": [
+        "B",
+        "C"
+      ],
+      "answer_box": "\\boxed{B, C}",
+      "supporting_facts": {
+        "path_exists": false,
+        "intervention_skipped": true,
+        "skip_reason": "no_directed_path_found",
+        "error_code": null,
+        "effect_returned": false
+      },
+      "why_it_fits_causal_abel": "A skip-boundary intervention case is important for the updated skill, which emphasizes pressure testing only after structure is clear."
+    },
+    {
+      "id": "fxcausal_029",
+      "futurex_pattern": "statement-truth set",
+      "category": "counterfactual_preview",
+      "title": "Which statements will be true for Abel counterfactual-preview on NVDA_close -> AMD_close?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Which statements will be true for Abel counterfactual-preview on NVDA_close -> AMD_close? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  the call mark reachable false\nB.  the call report effect_support no_structural_path\nC.  the call report path_count equal to 0\nD.  the call mark preview_only true\nE.  the call mark reachable true\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "the call mark reachable false"
+        },
+        {
+          "label": "B",
+          "text": "the call report effect_support no_structural_path"
+        },
+        {
+          "label": "C",
+          "text": "the call report path_count equal to 0"
+        },
+        {
+          "label": "D",
+          "text": "the call mark preview_only true"
+        },
+        {
+          "label": "E",
+          "text": "the call mark reachable true"
+        }
+      ],
+      "answer_letters": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_box": "\\boxed{A, B, C, D}",
+      "supporting_facts": {
+        "status": "ok",
+        "reachable": false,
+        "effect_support": "no_structural_path",
+        "path_count": 0,
+        "preview_only": true
+      },
+      "why_it_fits_causal_abel": "This uses the updated skill’s counterfactual-preview framing directly."
+    },
+    {
+      "id": "fxcausal_030",
+      "futurex_pattern": "statement-truth set",
+      "category": "counterfactual_preview",
+      "title": "Which statements will be true for Abel counterfactual-preview on SOXX_close -> AMD_close?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Which statements will be true for Abel counterfactual-preview on SOXX_close -> AMD_close? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  the call return error_code node_not_found\nB.  the call succeed and mark preview_only true\nC.  the call mark reachable true\nD.  the call report effect_support no_structural_path\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "the call return error_code node_not_found"
+        },
+        {
+          "label": "B",
+          "text": "the call succeed and mark preview_only true"
+        },
+        {
+          "label": "C",
+          "text": "the call mark reachable true"
+        },
+        {
+          "label": "D",
+          "text": "the call report effect_support no_structural_path"
+        }
+      ],
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "supporting_facts": {
+        "status": "error",
+        "error_code": "node_not_found",
+        "status_code": 404
+      },
+      "why_it_fits_causal_abel": "A hard-boundary error case helps test whether the model respects extension semantics instead of guessing."
+    },
+    {
+      "id": "fxcausal_031",
+      "futurex_pattern": "roster membership",
+      "category": "observation_availability",
+      "title": "Which observe.predict calls currently fail because public CAP has no materialized prediction history? (set 1)",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Which observe.predict calls currently fail because public CAP has no materialized prediction history? (set 1) (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  observe.predict on SOXX_close currently return service_unavailable\nB.  observe.predict on QQQ_close currently return service_unavailable\nC.  observe.predict on SPY_close currently return service_unavailable\nD.  observe.predict on AAPL_close currently return service_unavailable\nE.  observe.predict on NVDA_close currently return service_unavailable\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "observe.predict on SOXX_close currently return service_unavailable"
+        },
+        {
+          "label": "B",
+          "text": "observe.predict on QQQ_close currently return service_unavailable"
+        },
+        {
+          "label": "C",
+          "text": "observe.predict on SPY_close currently return service_unavailable"
+        },
+        {
+          "label": "D",
+          "text": "observe.predict on AAPL_close currently return service_unavailable"
+        },
+        {
+          "label": "E",
+          "text": "observe.predict on NVDA_close currently return service_unavailable"
+        }
+      ],
+      "answer_letters": [
+        "A",
+        "B",
+        "C"
+      ],
+      "answer_box": "\\boxed{A, B, C}",
+      "supporting_facts": {
+        "SOXX_close": {
+          "status": "error",
+          "error_code": "service_unavailable"
+        },
+        "QQQ_close": {
+          "status": "error",
+          "error_code": "service_unavailable"
+        },
+        "SPY_close": {
+          "status": "error",
+          "error_code": "service_unavailable"
+        },
+        "AAPL_close": {
+          "status": "ok"
+        },
+        "NVDA_close": {
+          "status": "ok"
+        }
+      },
+      "why_it_fits_causal_abel": "The updated skill cares about observation availability boundaries, so these belong in the benchmark."
+    },
+    {
+      "id": "fxcausal_032",
+      "futurex_pattern": "roster membership",
+      "category": "observation_availability",
+      "title": "Which observe.predict calls currently fail because public CAP has no materialized prediction history? (set 2)",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Which observe.predict calls currently fail because public CAP has no materialized prediction history? (set 2) (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  observe.predict on BTCUSD_close currently return service_unavailable\nB.  observe.predict on ETHUSD_close currently return service_unavailable\nC.  observe.predict on GC_close currently return service_unavailable\nD.  observe.predict on GLD_close currently return service_unavailable\nE.  observe.predict on CL_close currently return service_unavailable\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "observe.predict on BTCUSD_close currently return service_unavailable"
+        },
+        {
+          "label": "B",
+          "text": "observe.predict on ETHUSD_close currently return service_unavailable"
+        },
+        {
+          "label": "C",
+          "text": "observe.predict on GC_close currently return service_unavailable"
+        },
+        {
+          "label": "D",
+          "text": "observe.predict on GLD_close currently return service_unavailable"
+        },
+        {
+          "label": "E",
+          "text": "observe.predict on CL_close currently return service_unavailable"
+        }
+      ],
+      "answer_letters": [
+        "A",
+        "C",
+        "D"
+      ],
+      "answer_box": "\\boxed{A, C, D}",
+      "supporting_facts": {
+        "BTCUSD_close": {
+          "status": "error",
+          "error_code": "service_unavailable"
+        },
+        "ETHUSD_close": {
+          "status": "ok"
+        },
+        "GC_close": {
+          "status": "error",
+          "error_code": "service_unavailable"
+        },
+        "GLD_close": {
+          "status": "error",
+          "error_code": "service_unavailable"
+        },
+        "CL_close": {
+          "status": "ok"
+        }
+      },
+      "why_it_fits_causal_abel": "This explicitly follows the latest crypto node naming rule and keeps failure boundaries benchmark-visible."
+    },
+    {
+      "id": "fxcausal_033",
+      "futurex_pattern": "roster membership",
+      "category": "observation_availability",
+      "title": "Which names currently have materialized observation history on public CAP? (set 3)",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Which names currently have materialized observation history on public CAP? (set 3) (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  SOXX_close currently have materialized observation history\nB.  BTCUSD_close currently have materialized observation history\nC.  ETHUSD_close currently have materialized observation history\nD.  AAPL_close currently have materialized observation history\nE.  NVDA_close currently have materialized observation history\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "SOXX_close currently have materialized observation history"
+        },
+        {
+          "label": "B",
+          "text": "BTCUSD_close currently have materialized observation history"
+        },
+        {
+          "label": "C",
+          "text": "ETHUSD_close currently have materialized observation history"
+        },
+        {
+          "label": "D",
+          "text": "AAPL_close currently have materialized observation history"
+        },
+        {
+          "label": "E",
+          "text": "NVDA_close currently have materialized observation history"
+        }
+      ],
+      "answer_letters": [
+        "C",
+        "D",
+        "E"
+      ],
+      "answer_box": "\\boxed{C, D, E}",
+      "supporting_facts": {
+        "SOXX_close": {
+          "status": "error",
+          "error_code": "service_unavailable"
+        },
+        "BTCUSD_close": {
+          "status": "error",
+          "error_code": "service_unavailable"
+        },
+        "ETHUSD_close": {
+          "status": "ok"
+        },
+        "AAPL_close": {
+          "status": "ok"
+        },
+        "NVDA_close": {
+          "status": "ok"
+        }
+      },
+      "why_it_fits_causal_abel": "The positive complement of the failure markets makes the availability boundary easier to diagnose."
+    },
+    {
+      "id": "fxcausal_034",
+      "futurex_pattern": "statement-truth set",
+      "category": "normalization_and_crypto",
+      "title": "Which statements are true about latest-skill crypto normalization?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Which statements are true about latest-skill crypto normalization? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  bare BTC normalize to BTCUSD_close\nB.  bare ETH normalize to ETHUSD_close\nC.  bare BTC normalize to BTC_close\nD.  bare ETH normalize to ETH_close\nE.  bare SOL normalize to SOL_close\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "bare BTC normalize to BTCUSD_close"
+        },
+        {
+          "label": "B",
+          "text": "bare ETH normalize to ETHUSD_close"
+        },
+        {
+          "label": "C",
+          "text": "bare BTC normalize to BTC_close"
+        },
+        {
+          "label": "D",
+          "text": "bare ETH normalize to ETH_close"
+        },
+        {
+          "label": "E",
+          "text": "bare SOL normalize to SOL_close"
+        }
+      ],
+      "answer_letters": [
+        "A",
+        "B"
+      ],
+      "answer_box": "\\boxed{A, B}",
+      "supporting_facts": {
+        "BTC": "BTCUSD_close",
+        "ETH": "ETHUSD_close",
+        "SOL": "SOLUSD_close"
+      },
+      "why_it_fits_causal_abel": "This case exists because the updated skill changed a benchmark-relevant normalization rule."
+    },
+    {
+      "id": "fxcausal_035",
+      "futurex_pattern": "statement-truth set",
+      "category": "normalization_and_crypto",
+      "title": "Which statements are true about the current BTCUSD / ETHUSD live snapshot?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"Which statements are true about the current BTCUSD / ETHUSD live snapshot? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  observe.predict on BTCUSD_close currently return service_unavailable\nB.  observe.predict on ETHUSD_close currently return success\nC.  a directed path exist from BTCUSD_close to ETHUSD_close\nD.  bare BTC currently normalize to BTCUSD_close under the skill rules\nE.  the path_count from BTCUSD_close to ETHUSD_close be 1\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "observe.predict on BTCUSD_close currently return service_unavailable"
+        },
+        {
+          "label": "B",
+          "text": "observe.predict on ETHUSD_close currently return success"
+        },
+        {
+          "label": "C",
+          "text": "a directed path exist from BTCUSD_close to ETHUSD_close"
+        },
+        {
+          "label": "D",
+          "text": "bare BTC currently normalize to BTCUSD_close under the skill rules"
+        },
+        {
+          "label": "E",
+          "text": "the path_count from BTCUSD_close to ETHUSD_close be 1"
+        }
+      ],
+      "answer_letters": [
+        "A",
+        "B",
+        "D"
+      ],
+      "answer_box": "\\boxed{A, B, D}",
+      "supporting_facts": {
+        "btc_observe": {
+          "status": "error",
+          "error_code": "service_unavailable"
+        },
+        "eth_observe": {
+          "status": "ok"
+        },
+        "btc_to_eth_path": {
+          "connected": false,
+          "path_count": 0
+        },
+        "normalization": "BTCUSD_close"
+      },
+      "why_it_fits_causal_abel": "A skill-specific crypto case that mixes normalization, availability, and path semantics without reverting to old node forms."
+    },
+    {
+      "id": "fxcausal_036",
+      "futurex_pattern": "interval bin",
+      "category": "observe_prediction",
+      "title": "What range will Abel's next-step observational move for TSM_close fall into?",
+      "prompt": "You are an agent that can answer live causal benchmark questions. The question to be answered: \"What range will Abel's next-step observational move for TSM_close fall into? (resolved against the live Abel CAP snapshot on 2026-03-25 (GMT+8)).\nA.  TSM_close be less than or equal to -0.30%\nB.  TSM_close be above -0.30% and less than or equal to -0.10%\nC.  TSM_close be above -0.10% and below 0.10%\nD.  TSM_close be at least 0.10% and below 0.20%\nE.  TSM_close be at least 0.20%\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to answer. Use the live Abel graph and the current skill rules.",
+      "options": [
+        {
+          "label": "A",
+          "text": "TSM_close be less than or equal to -0.30%"
+        },
+        {
+          "label": "B",
+          "text": "TSM_close be above -0.30% and less than or equal to -0.10%"
+        },
+        {
+          "label": "C",
+          "text": "TSM_close be above -0.10% and below 0.10%"
+        },
+        {
+          "label": "D",
+          "text": "TSM_close be at least 0.10% and below 0.20%"
+        },
+        {
+          "label": "E",
+          "text": "TSM_close be at least 0.20%"
+        }
+      ],
+      "answer_letters": [
+        "C"
+      ],
+      "answer_box": "\\boxed{C}",
+      "supporting_facts": {
+        "prediction_pct": -0.0688548762169393
+      },
+      "why_it_fits_causal_abel": "Adds another moderate-move interval bucket so the suite is not dominated by only extreme outcomes."
+    }
+  ]
+}
