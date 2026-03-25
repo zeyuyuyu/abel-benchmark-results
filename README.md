@@ -17,6 +17,7 @@ Benchmark versions currently included:
 | **v7** | Codex with and without installed `causal-abel` skill | `FutureX-Online` live-only A/B on 7 unresolved finance questions, including output-validity checks and observed skill-use evidence |
 | **v8** | Codex with and without installed `causal-abel` skill | CAP-adapted causalbench aligned to Abel graph, intervention, and extension semantics; designed as a live contract/regression benchmark |
 | **v9** | Casebook input layer for Codex with and without installed `causal-abel` skill | FutureX-style, LLM-authored casebook aligned to the updated `causal-abel` `1.0.7` skill and anchored to a live Abel CAP snapshot |
+| **v10** | Natural-intent casebook input layer for Codex with and without installed `causal-abel` skill | FutureX-inspired but non-tool-facing benchmark cases written as questions a normal user could plausibly ask |
 
 The original `v3` / `v4` pipeline uses **LLM-based question classification** (GPT-4o-mini) to identify suitable financial questions and extract ticker symbols, then **`normalize-node`** from [cap_probe.py](https://github.com/Abel-ai-causality/Abel-skills/blob/main/causal-abel/scripts/cap_probe.py) to resolve correct Abel node IDs.
 
@@ -258,12 +259,32 @@ The benchmark spec is documented in [`v8/benchmark_spec.md`](/Users/zeyu/Documen
 
 Headline properties:
 
-- **36 LLM-authored cases** grounded to a live Abel CAP snapshot from `2026-03-25 (GMT+8)`
-- **FutureX-style question shapes**: interval bins, threshold ladders, winner markets, top-k membership, roster membership, and statement-truth sets
-- **Updated skill behavior baked in**: graph-first framing, observation-availability boundaries, and the new crypto normalization convention such as `BTCUSD_close` and `ETHUSD_close`
-- **Role**: benchmark input set, not yet a scored base-vs-skill result
+- human-authored casebook shapes modeled after FutureX scoring formats
+- grounded to a live `2026-03-25 (GMT+8)` Abel CAP snapshot
+- useful as a diagnostic or internal-skills regression set
+- too tool-facing to serve as the main headline benchmark, because some prompts still read like Abel-aware questions
 
-The casebook files are [`v9/futurex_style_cases.json`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v9/futurex_style_cases.json), [`v9/cases.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v9/cases.md), and [`v9/casebook_spec.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v9/casebook_spec.md).
+---
+
+## v10 — Natural-Intent Casebook
+
+`v10` is the corrected successor to `v9`.
+
+The design goal is simple: every prompt should sound like something a smart user with no knowledge of Abel, CAP verbs, node IDs, or skill internals might naturally ask.
+
+Headline properties:
+
+- **40 cases** anchored to the same `2026-03-25 (GMT+8)` live snapshot
+- **FutureX-inspired scoring shapes**: interval bins, threshold ladders, winner markets, top-k membership, roster membership, and statement-truth sets
+- **Natural-user framing** across seven categories: directional buckets, directional thresholds, ranking, transmission, pressure tests, coverage, and market-story reads
+- **Non-tool-facing prompts**: no direct Abel / CAP / verb-contract questions in the prompt layer
+
+Files:
+
+- Dataset: [`v10/natural_intent_cases.json`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v10/natural_intent_cases.json)
+- Overview: [`v10/cases.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v10/cases.md)
+- Spec: [`v10/casebook_spec.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v10/casebook_spec.md)
+- Generator: [`v10/build_natural_intent_casebook.py`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v10/build_natural_intent_casebook.py)
 
 ---
 
@@ -293,6 +314,10 @@ The casebook files are [`v9/futurex_style_cases.json`](/Users/zeyu/Documents/bac
 | `v9/futurex_style_cases.json` | LLM-authored FutureX-style casebook with snapshot-grounded answer keys |
 | `v9/cases.md` | Compact index of the v9 casebook and answer boxes |
 | `v9/casebook_spec.md` | Why the v9 cases are LLM-authored and how they adapt FutureX formats to Abel |
+| `v10/natural_intent_cases.json` | Natural-intent casebook with snapshot-grounded answer keys and non-tool-facing prompts |
+| `v10/cases.md` | Compact index of the v10 casebook and answer boxes |
+| `v10/casebook_spec.md` | Benchmark design rule for natural-user prompts |
+| `v10/build_natural_intent_casebook.py` | Reproducible generator for the v10 natural-intent casebook |
 
 ---
 
@@ -306,7 +331,7 @@ The casebook files are [`v9/futurex_style_cases.json`](/Users/zeyu/Documents/bac
 4. **Full skill usage matters**: Using `observe` + `neighbors` + `markov-blanket` (v4) provides richer context than `observe` alone (v3).
 5. **Strict judging reveals the real picture**: Lenient judges that accept refusals as "correct" mask Abel's true value.
 6. **Capability-aligned benchmarking is a separate need**: `v8` shows that a benchmark can be well aligned to Abel CAP semantics even if it does not yet create an A/B gap between base and skill.
-7. **Casebook quality matters**: `v9` shifts the input layer closer to how real benchmark markets are written, while still anchoring answers to the live Abel graph and updated skill rules.
+7. **Casebook quality matters**: `v9` revealed the need for a more natural prompt layer, and `v10` is the corrected version that removes most tool-facing wording while keeping exact-scored answers.
 
 ### Limitations
 
@@ -314,7 +339,7 @@ The casebook files are [`v9/futurex_style_cases.json`](/Users/zeyu/Documents/bac
 2. **Graph coverage gaps**: SPY, DJI, BTC, XAUUSD, CSI300, Chinese A-shares not in graph.
 3. **Multi-asset questions**: Current approach uses one node; should aggregate signals across all mentioned assets.
 4. **Explicit prompts reduce separation**: In `v8`, a strong base model can inspect the same live CAP surface and match the skill-assisted run.
-5. **Snapshot drift**: `v9` is intentionally tied to a `2026-03-25` live CAP snapshot, so answers should be refreshed when the graph or public prediction history changes.
+5. **Snapshot drift**: `v9` and `v10` are intentionally tied to a `2026-03-25` live CAP snapshot, so answers should be refreshed when the graph or public prediction history changes.
 
 ### Recommendations
 
@@ -323,7 +348,7 @@ The casebook files are [`v9/futurex_style_cases.json`](/Users/zeyu/Documents/bac
 3. Add time-horizon awareness to prompts: weight short-term Abel signals differently for day-level vs. month-level questions.
 4. For multi-asset questions, query Abel for each mentioned asset and present aggregated signals.
 5. Keep `v8` as the regression core, then add a more natural intent-level benchmark layer where routing, workflow choice, and proxy selection matter.
-6. Use `v9` as the next A/B input layer, since it is closer to real benchmark wording and already reflects the latest skill normalization rules.
+6. Use `v10` as the next A/B input layer, and keep `v9` only as a diagnostic set for explicit skill-surface regressions.
 
 ---
 
