@@ -1,0 +1,1174 @@
+{
+  "summary": {
+    "version": "v11-natural-intent-casebook",
+    "generation_method": "llm_authored_with_live_snapshot",
+    "snapshot_date": "2026-03-25",
+    "timezone": "GMT+8",
+    "case_count": 40,
+    "ground_truth_source": "artifacts/snapshot_facts.json",
+    "artifacts_manifest": "artifacts/manifest.json",
+    "pattern_counts": {
+      "interval bin": 6,
+      "roster membership": 5,
+      "statement-truth set": 4,
+      "threshold ladder": 5,
+      "top-k membership": 2,
+      "winner market": 18
+    },
+    "category_counts": {
+      "coverage": 6,
+      "directional_bucket": 6,
+      "directional_thresholds": 5,
+      "market_story": 5,
+      "pressure_test": 5,
+      "ranking": 6,
+      "transmission": 7
+    }
+  },
+  "cases": [
+    {
+      "id": "v11_001",
+      "futurex_pattern": "interval bin",
+      "category": "directional_bucket",
+      "question": "If you had to bucket AMD's near-term move right now, which range seems most plausible?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you had to bucket AMD's near-term move right now, which range seems most plausible?\nA.  Down more than 0.30%\nB.  Down between 0.10% and 0.30%\nC.  Roughly flat, within +/-0.10%\nD.  Up between 0.10% and 0.20%\nE.  Up at least 0.20%\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Down more than 0.30%"
+        },
+        {
+          "label": "B",
+          "text": "Down between 0.10% and 0.30%"
+        },
+        {
+          "label": "C",
+          "text": "Roughly flat, within +/-0.10%"
+        },
+        {
+          "label": "D",
+          "text": "Up between 0.10% and 0.20%"
+        },
+        {
+          "label": "E",
+          "text": "Up at least 0.20%"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "A trader or PM could naturally ask for a bucketed near-term move."
+    },
+    {
+      "id": "v11_002",
+      "futurex_pattern": "interval bin",
+      "category": "directional_bucket",
+      "question": "If you had to bucket Tesla's near-term move right now, which range seems most plausible?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you had to bucket Tesla's near-term move right now, which range seems most plausible?\nA.  Down more than 0.30%\nB.  Down between 0.10% and 0.30%\nC.  Roughly flat, within +/-0.10%\nD.  Up between 0.10% and 0.20%\nE.  Up at least 0.20%\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Down more than 0.30%"
+        },
+        {
+          "label": "B",
+          "text": "Down between 0.10% and 0.30%"
+        },
+        {
+          "label": "C",
+          "text": "Roughly flat, within +/-0.10%"
+        },
+        {
+          "label": "D",
+          "text": "Up between 0.10% and 0.20%"
+        },
+        {
+          "label": "E",
+          "text": "Up at least 0.20%"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This is a normal market-read question with no tool-internal phrasing."
+    },
+    {
+      "id": "v11_003",
+      "futurex_pattern": "interval bin",
+      "category": "directional_bucket",
+      "question": "If you had to bucket Apple's near-term move right now, which range seems most plausible?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you had to bucket Apple's near-term move right now, which range seems most plausible?\nA.  Down more than 0.30%\nB.  Down between 0.10% and 0.30%\nC.  Roughly flat, within +/-0.10%\nD.  Up between 0.10% and 0.20%\nE.  Up at least 0.20%\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Down more than 0.30%"
+        },
+        {
+          "label": "B",
+          "text": "Down between 0.10% and 0.30%"
+        },
+        {
+          "label": "C",
+          "text": "Roughly flat, within +/-0.10%"
+        },
+        {
+          "label": "D",
+          "text": "Up between 0.10% and 0.20%"
+        },
+        {
+          "label": "E",
+          "text": "Up at least 0.20%"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "A user can naturally ask for a quick bucket rather than a precise point forecast."
+    },
+    {
+      "id": "v11_004",
+      "futurex_pattern": "interval bin",
+      "category": "directional_bucket",
+      "question": "If you need a quick Ethereum read right now, which move bucket looks most plausible?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you need a quick Ethereum read right now, which move bucket looks most plausible?\nA.  Down more than 0.30%\nB.  Down between 0.10% and 0.30%\nC.  Roughly flat, within +/-0.10%\nD.  Up between 0.10% and 0.20%\nE.  Up at least 0.20%\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Down more than 0.30%"
+        },
+        {
+          "label": "B",
+          "text": "Down between 0.10% and 0.30%"
+        },
+        {
+          "label": "C",
+          "text": "Roughly flat, within +/-0.10%"
+        },
+        {
+          "label": "D",
+          "text": "Up between 0.10% and 0.20%"
+        },
+        {
+          "label": "E",
+          "text": "Up at least 0.20%"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "Crypto users ask this kind of bucketed directional question all the time."
+    },
+    {
+      "id": "v11_005",
+      "futurex_pattern": "interval bin",
+      "category": "directional_bucket",
+      "question": "If you need a quick crude oil read right now, which move bucket looks most plausible?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you need a quick crude oil read right now, which move bucket looks most plausible?\nA.  Down more than 0.30%\nB.  Down between 0.10% and 0.30%\nC.  Roughly flat, within +/-0.10%\nD.  Up between 0.10% and 0.20%\nE.  Up at least 0.20%\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Down more than 0.30%"
+        },
+        {
+          "label": "B",
+          "text": "Down between 0.10% and 0.30%"
+        },
+        {
+          "label": "C",
+          "text": "Roughly flat, within +/-0.10%"
+        },
+        {
+          "label": "D",
+          "text": "Up between 0.10% and 0.20%"
+        },
+        {
+          "label": "E",
+          "text": "Up at least 0.20%"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This is a natural energy-market framing rather than an internal tool query."
+    },
+    {
+      "id": "v11_006",
+      "futurex_pattern": "interval bin",
+      "category": "directional_bucket",
+      "question": "If you need a quick Broadcom read right now, which move bucket looks most plausible?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you need a quick Broadcom read right now, which move bucket looks most plausible?\nA.  Down more than 0.30%\nB.  Down between 0.10% and 0.30%\nC.  Roughly flat, within +/-0.10%\nD.  Up between 0.10% and 0.20%\nE.  Up at least 0.20%\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Down more than 0.30%"
+        },
+        {
+          "label": "B",
+          "text": "Down between 0.10% and 0.30%"
+        },
+        {
+          "label": "C",
+          "text": "Roughly flat, within +/-0.10%"
+        },
+        {
+          "label": "D",
+          "text": "Up between 0.10% and 0.20%"
+        },
+        {
+          "label": "E",
+          "text": "Up at least 0.20%"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "It is normal to ask for a rough short-term move bucket on a single name."
+    },
+    {
+      "id": "v11_007",
+      "futurex_pattern": "threshold ladder",
+      "category": "directional_thresholds",
+      "question": "Which of these increasingly bullish claims about Apple still hold on a short-term read right now?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which of these increasingly bullish claims about Apple still hold on a short-term read right now?\nA.  Apple is not worse than -0.50%\nB.  Apple is not worse than -0.30%\nC.  Apple is not worse than -0.10%\nD.  Apple is at least flat\nE.  Apple is up at least 0.10%\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Apple is not worse than -0.50%"
+        },
+        {
+          "label": "B",
+          "text": "Apple is not worse than -0.30%"
+        },
+        {
+          "label": "C",
+          "text": "Apple is not worse than -0.10%"
+        },
+        {
+          "label": "D",
+          "text": "Apple is at least flat"
+        },
+        {
+          "label": "E",
+          "text": "Apple is up at least 0.10%"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This keeps FutureX's monotonic threshold style but makes it read like a human analyst question."
+    },
+    {
+      "id": "v11_008",
+      "futurex_pattern": "threshold ladder",
+      "category": "directional_thresholds",
+      "question": "Which of these increasingly bullish claims about Tesla still hold on a short-term read right now?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which of these increasingly bullish claims about Tesla still hold on a short-term read right now?\nA.  Tesla is not worse than -0.50%\nB.  Tesla is not worse than -0.30%\nC.  Tesla is not worse than -0.10%\nD.  Tesla is at least flat\nE.  Tesla is up at least 0.10%\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tesla is not worse than -0.50%"
+        },
+        {
+          "label": "B",
+          "text": "Tesla is not worse than -0.30%"
+        },
+        {
+          "label": "C",
+          "text": "Tesla is not worse than -0.10%"
+        },
+        {
+          "label": "D",
+          "text": "Tesla is at least flat"
+        },
+        {
+          "label": "E",
+          "text": "Tesla is up at least 0.10%"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This is still a natural user question: how much damage is already implied?"
+    },
+    {
+      "id": "v11_009",
+      "futurex_pattern": "threshold ladder",
+      "category": "directional_thresholds",
+      "question": "Which of these increasingly bullish claims about AMD still hold on a short-term read right now?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which of these increasingly bullish claims about AMD still hold on a short-term read right now?\nA.  AMD is not worse than -0.50%\nB.  AMD is not worse than -0.30%\nC.  AMD is not worse than -0.10%\nD.  AMD is at least flat\nE.  AMD is up at least 0.10%\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "AMD is not worse than -0.50%"
+        },
+        {
+          "label": "B",
+          "text": "AMD is not worse than -0.30%"
+        },
+        {
+          "label": "C",
+          "text": "AMD is not worse than -0.10%"
+        },
+        {
+          "label": "D",
+          "text": "AMD is at least flat"
+        },
+        {
+          "label": "E",
+          "text": "AMD is up at least 0.10%"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "A user can naturally ask how many bullish thresholds are still alive right now."
+    },
+    {
+      "id": "v11_010",
+      "futurex_pattern": "threshold ladder",
+      "category": "directional_thresholds",
+      "question": "Which of these increasingly bullish claims about Broadcom still hold on a short-term read right now?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which of these increasingly bullish claims about Broadcom still hold on a short-term read right now?\nA.  Broadcom is not worse than -0.50%\nB.  Broadcom is not worse than -0.30%\nC.  Broadcom is not worse than -0.10%\nD.  Broadcom is at least flat\nE.  Broadcom is up at least 0.10%\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Broadcom is not worse than -0.50%"
+        },
+        {
+          "label": "B",
+          "text": "Broadcom is not worse than -0.30%"
+        },
+        {
+          "label": "C",
+          "text": "Broadcom is not worse than -0.10%"
+        },
+        {
+          "label": "D",
+          "text": "Broadcom is at least flat"
+        },
+        {
+          "label": "E",
+          "text": "Broadcom is up at least 0.10%"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "The threshold framing stays natural while still producing an exact-scored answer."
+    },
+    {
+      "id": "v11_011",
+      "futurex_pattern": "threshold ladder",
+      "category": "directional_thresholds",
+      "question": "Which of these increasingly bullish claims about Ethereum still hold on a short-term read right now?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which of these increasingly bullish claims about Ethereum still hold on a short-term read right now?\nA.  Ethereum is not worse than -0.50%\nB.  Ethereum is not worse than -0.30%\nC.  Ethereum is not worse than -0.10%\nD.  Ethereum is at least flat\nE.  Ethereum is up at least 0.10%\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Ethereum is not worse than -0.50%"
+        },
+        {
+          "label": "B",
+          "text": "Ethereum is not worse than -0.30%"
+        },
+        {
+          "label": "C",
+          "text": "Ethereum is not worse than -0.10%"
+        },
+        {
+          "label": "D",
+          "text": "Ethereum is at least flat"
+        },
+        {
+          "label": "E",
+          "text": "Ethereum is up at least 0.10%"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This is a natural crypto question that indirectly benefits from the latest skill normalization."
+    },
+    {
+      "id": "v11_012",
+      "futurex_pattern": "winner market",
+      "category": "ranking",
+      "question": "Among Nvidia, AMD, Intel, Broadcom, and TSM, which semiconductor name looks strongest right now?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Among Nvidia, AMD, Intel, Broadcom, and TSM, which semiconductor name looks strongest right now?\nA.  Nvidia\nB.  AMD\nC.  Intel\nD.  Broadcom\nE.  TSM\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nvidia"
+        },
+        {
+          "label": "B",
+          "text": "AMD"
+        },
+        {
+          "label": "C",
+          "text": "Intel"
+        },
+        {
+          "label": "D",
+          "text": "Broadcom"
+        },
+        {
+          "label": "E",
+          "text": "TSM"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "Picking the strongest name in a known basket is a normal user task."
+    },
+    {
+      "id": "v11_013",
+      "futurex_pattern": "winner market",
+      "category": "ranking",
+      "question": "Among Apple, Tesla, Nvidia, and Broadcom, which mega-cap tech name looks strongest right now?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Among Apple, Tesla, Nvidia, and Broadcom, which mega-cap tech name looks strongest right now?\nA.  Apple\nB.  Tesla\nC.  Nvidia\nD.  Broadcom\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Apple"
+        },
+        {
+          "label": "B",
+          "text": "Tesla"
+        },
+        {
+          "label": "C",
+          "text": "Nvidia"
+        },
+        {
+          "label": "D",
+          "text": "Broadcom"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "A PM or trader could naturally ask which large-cap tech name leads the tape."
+    },
+    {
+      "id": "v11_014",
+      "futurex_pattern": "top-k membership",
+      "category": "ranking",
+      "question": "Which three names look strongest right now on a short-term read?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which three names look strongest right now on a short-term read?\nA.  Apple\nB.  Tesla\nC.  AMD\nD.  Nvidia\nE.  Intel\nF.  Broadcom\nG.  TSM\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Apple"
+        },
+        {
+          "label": "B",
+          "text": "Tesla"
+        },
+        {
+          "label": "C",
+          "text": "AMD"
+        },
+        {
+          "label": "D",
+          "text": "Nvidia"
+        },
+        {
+          "label": "E",
+          "text": "Intel"
+        },
+        {
+          "label": "F",
+          "text": "Broadcom"
+        },
+        {
+          "label": "G",
+          "text": "TSM"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "Top-3 membership is a classic benchmark shape and also a plausible natural question."
+    },
+    {
+      "id": "v11_015",
+      "futurex_pattern": "top-k membership",
+      "category": "ranking",
+      "question": "Which three names look weakest right now on a short-term read?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which three names look weakest right now on a short-term read?\nA.  Apple\nB.  Tesla\nC.  AMD\nD.  Nvidia\nE.  Intel\nF.  Broadcom\nG.  TSM\nH.  Crude oil\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Apple"
+        },
+        {
+          "label": "B",
+          "text": "Tesla"
+        },
+        {
+          "label": "C",
+          "text": "AMD"
+        },
+        {
+          "label": "D",
+          "text": "Nvidia"
+        },
+        {
+          "label": "E",
+          "text": "Intel"
+        },
+        {
+          "label": "F",
+          "text": "Broadcom"
+        },
+        {
+          "label": "G",
+          "text": "TSM"
+        },
+        {
+          "label": "H",
+          "text": "Crude oil"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This is the natural inverse of a 'who looks strongest' question."
+    },
+    {
+      "id": "v11_016",
+      "futurex_pattern": "winner market",
+      "category": "transmission",
+      "question": "If you wanted one shock anchor to stress-test AMD today, which starting point is most defensible?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you wanted one shock anchor to stress-test AMD today, which starting point is most defensible?\nA.  Nvidia\nB.  SOXX\nC.  QQQ\nD.  SPY\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nvidia"
+        },
+        {
+          "label": "B",
+          "text": "SOXX"
+        },
+        {
+          "label": "C",
+          "text": "QQQ"
+        },
+        {
+          "label": "D",
+          "text": "SPY"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "Analysts naturally ask which anchor is the cleanest way to stress-test a downstream name."
+    },
+    {
+      "id": "v11_017",
+      "futurex_pattern": "roster membership",
+      "category": "transmission",
+      "question": "If you are trying to explain Nvidia through company channels rather than broad market beta, which names actually look wired in today?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you are trying to explain Nvidia through company channels rather than broad market beta, which names actually look wired in today?\nA.  Broadcom\nB.  TSM\nC.  QQQ\nD.  SPY\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Broadcom"
+        },
+        {
+          "label": "B",
+          "text": "TSM"
+        },
+        {
+          "label": "C",
+          "text": "QQQ"
+        },
+        {
+          "label": "D",
+          "text": "SPY"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This is a normal 'what's really feeding into this name' question."
+    },
+    {
+      "id": "v11_018",
+      "futurex_pattern": "winner market",
+      "category": "transmission",
+      "question": "If you were explaining Nvidia to a PM today, which framing is stronger?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you were explaining Nvidia to a PM today, which framing is stronger?\nA.  Company-level semiconductor channels like Broadcom and TSM\nB.  Broad index beta through QQQ and SPY\nC.  Both frames are equally strong\nD.  Neither frame has meaningful support\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Company-level semiconductor channels like Broadcom and TSM"
+        },
+        {
+          "label": "B",
+          "text": "Broad index beta through QQQ and SPY"
+        },
+        {
+          "label": "C",
+          "text": "Both frames are equally strong"
+        },
+        {
+          "label": "D",
+          "text": "Neither frame has meaningful support"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This is still a normal explanatory question, not an internal graph query."
+    },
+    {
+      "id": "v11_019",
+      "futurex_pattern": "winner market",
+      "category": "transmission",
+      "question": "Which spillover story is easiest to defend right now?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which spillover story is easiest to defend right now?\nA.  Nvidia into AMD\nB.  SOXX into AMD\nC.  Bitcoin into Ethereum\nD.  XLK into Apple\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nvidia into AMD"
+        },
+        {
+          "label": "B",
+          "text": "SOXX into AMD"
+        },
+        {
+          "label": "C",
+          "text": "Bitcoin into Ethereum"
+        },
+        {
+          "label": "D",
+          "text": "XLK into Apple"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "A user could naturally ask which causal spillover story is most grounded today."
+    },
+    {
+      "id": "v11_020",
+      "futurex_pattern": "winner market",
+      "category": "transmission",
+      "question": "If you want company names that seem most relevant for following Nvidia today, which basket is the best starting point?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you want company names that seem most relevant for following Nvidia today, which basket is the best starting point?\nA.  Broadcom, TSM, and AMD\nB.  SOXX, QQQ, and SPY\nC.  Apple, crude oil, and Ethereum\nD.  None of these baskets look meaningfully connected\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Broadcom, TSM, and AMD"
+        },
+        {
+          "label": "B",
+          "text": "SOXX, QQQ, and SPY"
+        },
+        {
+          "label": "C",
+          "text": "Apple, crude oil, and Ethereum"
+        },
+        {
+          "label": "D",
+          "text": "None of these baskets look meaningfully connected"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "It asks for a sensible starting basket, which is how a real analyst might phrase the problem."
+    },
+    {
+      "id": "v11_021",
+      "futurex_pattern": "roster membership",
+      "category": "transmission",
+      "question": "Which of these broad shortcuts look less useful than real company read-throughs for Nvidia right now?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which of these broad shortcuts look less useful than real company read-throughs for Nvidia right now?\nA.  QQQ\nB.  SPY\nC.  Broadcom\nD.  TSM\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "QQQ"
+        },
+        {
+          "label": "B",
+          "text": "SPY"
+        },
+        {
+          "label": "C",
+          "text": "Broadcom"
+        },
+        {
+          "label": "D",
+          "text": "TSM"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This is a natural 'which shortcuts are actually bad anchors' question."
+    },
+    {
+      "id": "v11_022",
+      "futurex_pattern": "winner market",
+      "category": "pressure_test",
+      "question": "You ask for a quick 'what if Nvidia jumps 5%' read on AMD. Which description fits best right now?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: You ask for a quick 'what if Nvidia jumps 5%' read on AMD. Which description fits best right now?\nA.  You get a clean quantified downstream scenario\nB.  There is a reason to care, but you still do not get a clean quantified read-through\nC.  There is clearly no link at all\nD.  The setup is missing the target entirely\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "You get a clean quantified downstream scenario"
+        },
+        {
+          "label": "B",
+          "text": "There is a reason to care, but you still do not get a clean quantified read-through"
+        },
+        {
+          "label": "C",
+          "text": "There is clearly no link at all"
+        },
+        {
+          "label": "D",
+          "text": "The setup is missing the target entirely"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "A user can naturally ask for a quick what-if on a familiar pair like Nvidia and AMD."
+    },
+    {
+      "id": "v11_023",
+      "futurex_pattern": "winner market",
+      "category": "pressure_test",
+      "question": "You ask for the same 'what if' read on AMD, but this time using SOXX as the shock anchor. Which description fits best?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: You ask for the same 'what if' read on AMD, but this time using SOXX as the shock anchor. Which description fits best?\nA.  You get a clean quantified downstream scenario\nB.  The setup breaks before you get a usable downstream scenario\nC.  It behaves the same way as the Nvidia case\nD.  It routes cleanly through broad index beta\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "You get a clean quantified downstream scenario"
+        },
+        {
+          "label": "B",
+          "text": "The setup breaks before you get a usable downstream scenario"
+        },
+        {
+          "label": "C",
+          "text": "It behaves the same way as the Nvidia case"
+        },
+        {
+          "label": "D",
+          "text": "It routes cleanly through broad index beta"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This is still a normal user question about whether a what-if read is usable."
+    },
+    {
+      "id": "v11_024",
+      "futurex_pattern": "winner market",
+      "category": "pressure_test",
+      "question": "Which setup is more likely to fall apart before it becomes a usable downstream scenario?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which setup is more likely to fall apart before it becomes a usable downstream scenario?\nA.  Nvidia into AMD\nB.  SOXX into AMD\nC.  Both\nD.  Neither\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nvidia into AMD"
+        },
+        {
+          "label": "B",
+          "text": "SOXX into AMD"
+        },
+        {
+          "label": "C",
+          "text": "Both"
+        },
+        {
+          "label": "D",
+          "text": "Neither"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "Users often want to know which scenario is worth trying at all."
+    },
+    {
+      "id": "v11_025",
+      "futurex_pattern": "winner market",
+      "category": "pressure_test",
+      "question": "If you want a quick one-hour read-through from Nvidia into AMD, what is closest to the current answer?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you want a quick one-hour read-through from Nvidia into AMD, what is closest to the current answer?\nA.  A clear reachable scenario\nB.  A preview that stays disconnected or unsupported\nC.  A hard target-missing error\nD.  A strong upside estimate\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "A clear reachable scenario"
+        },
+        {
+          "label": "B",
+          "text": "A preview that stays disconnected or unsupported"
+        },
+        {
+          "label": "C",
+          "text": "A hard target-missing error"
+        },
+        {
+          "label": "D",
+          "text": "A strong upside estimate"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This is a plausible user-facing way to ask for a quick preview without naming internal verbs."
+    },
+    {
+      "id": "v11_026",
+      "futurex_pattern": "winner market",
+      "category": "coverage",
+      "question": "If you need a crypto name you can make a more defensible call on right now, which is safer to lean on?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you need a crypto name you can make a more defensible call on right now, which is safer to lean on?\nA.  Bitcoin\nB.  Ethereum\nC.  Both are equally grounded\nD.  Neither is grounded enough\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Bitcoin"
+        },
+        {
+          "label": "B",
+          "text": "Ethereum"
+        },
+        {
+          "label": "C",
+          "text": "Both are equally grounded"
+        },
+        {
+          "label": "D",
+          "text": "Neither is grounded enough"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "A normal user could absolutely ask which of two assets is more supportable right now."
+    },
+    {
+      "id": "v11_027",
+      "futurex_pattern": "winner market",
+      "category": "coverage",
+      "question": "If you need one energy-linked market anchor you can make a defensible call on today, which is the cleanest choice?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you need one energy-linked market anchor you can make a defensible call on today, which is the cleanest choice?\nA.  Crude oil\nB.  XLE\nC.  USO\nD.  Gold\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Crude oil"
+        },
+        {
+          "label": "B",
+          "text": "XLE"
+        },
+        {
+          "label": "C",
+          "text": "USO"
+        },
+        {
+          "label": "D",
+          "text": "Gold"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This is a natural coverage-selection question, not an internal availability query."
+    },
+    {
+      "id": "v11_028",
+      "futurex_pattern": "roster membership",
+      "category": "coverage",
+      "question": "Which of these popular shortcuts look weakest if you need a defensible live read right now?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which of these popular shortcuts look weakest if you need a defensible live read right now?\nA.  SOXX\nB.  QQQ\nC.  SPY\nD.  Nvidia\nE.  Apple\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "SOXX"
+        },
+        {
+          "label": "B",
+          "text": "QQQ"
+        },
+        {
+          "label": "C",
+          "text": "SPY"
+        },
+        {
+          "label": "D",
+          "text": "Nvidia"
+        },
+        {
+          "label": "E",
+          "text": "Apple"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "Users naturally ask which shortcuts are weak anchors today."
+    },
+    {
+      "id": "v11_029",
+      "futurex_pattern": "roster membership",
+      "category": "coverage",
+      "question": "Which of these are easier to support right now with a defensible live read?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which of these are easier to support right now with a defensible live read?\nA.  Ethereum\nB.  Apple\nC.  Nvidia\nD.  SOXX\nE.  Bitcoin\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Ethereum"
+        },
+        {
+          "label": "B",
+          "text": "Apple"
+        },
+        {
+          "label": "C",
+          "text": "Nvidia"
+        },
+        {
+          "label": "D",
+          "text": "SOXX"
+        },
+        {
+          "label": "E",
+          "text": "Bitcoin"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This is the natural positive version of the same supportability question."
+    },
+    {
+      "id": "v11_030",
+      "futurex_pattern": "statement-truth set",
+      "category": "market_story",
+      "question": "Which of these quick takes sound right right now?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which of these quick takes sound right right now?\nA.  AMD looks stronger than Nvidia\nB.  Apple looks stronger than Tesla\nC.  Broadcom looks weaker than Intel\nD.  TSM looks stronger than AMD\nE.  Crude oil looks stronger than Apple\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "AMD looks stronger than Nvidia"
+        },
+        {
+          "label": "B",
+          "text": "Apple looks stronger than Tesla"
+        },
+        {
+          "label": "C",
+          "text": "Broadcom looks weaker than Intel"
+        },
+        {
+          "label": "D",
+          "text": "TSM looks stronger than AMD"
+        },
+        {
+          "label": "E",
+          "text": "Crude oil looks stronger than Apple"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This asks for natural comparative takes instead of raw internal facts."
+    },
+    {
+      "id": "v11_031",
+      "futurex_pattern": "statement-truth set",
+      "category": "market_story",
+      "question": "Which coverage statements sound right today?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which coverage statements sound right today?\nA.  Ethereum is easier to ground than Bitcoin\nB.  Crude oil is easier to ground than XLE\nC.  SOXX is easier to ground than Nvidia\nD.  QQQ is easier to ground than Apple\nE.  Broad index shortcuts are the cleanest anchors today\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Ethereum is easier to ground than Bitcoin"
+        },
+        {
+          "label": "B",
+          "text": "Crude oil is easier to ground than XLE"
+        },
+        {
+          "label": "C",
+          "text": "SOXX is easier to ground than Nvidia"
+        },
+        {
+          "label": "D",
+          "text": "QQQ is easier to ground than Apple"
+        },
+        {
+          "label": "E",
+          "text": "Broad index shortcuts are the cleanest anchors today"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "A user can naturally ask which market handles are more trustworthy right now."
+    },
+    {
+      "id": "v11_032",
+      "futurex_pattern": "winner market",
+      "category": "market_story",
+      "question": "If you want a basket of names that are actually usable for a defensible market read today, which one is best?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you want a basket of names that are actually usable for a defensible market read today, which one is best?\nA.  Apple, Nvidia, and Ethereum\nB.  SOXX, QQQ, and SPY\nC.  Both baskets are equally usable\nD.  Neither basket is usable enough\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Apple, Nvidia, and Ethereum"
+        },
+        {
+          "label": "B",
+          "text": "SOXX, QQQ, and SPY"
+        },
+        {
+          "label": "C",
+          "text": "Both baskets are equally usable"
+        },
+        {
+          "label": "D",
+          "text": "Neither basket is usable enough"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This is a basket-selection question, which is a very common user framing."
+    },
+    {
+      "id": "v11_033",
+      "futurex_pattern": "winner market",
+      "category": "market_story",
+      "question": "If you want one clear leader and one clear laggard from this snapshot, which pair fits best?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you want one clear leader and one clear laggard from this snapshot, which pair fits best?\nA.  AMD and Broadcom\nB.  Nvidia and Apple\nC.  TSM and AMD\nD.  Intel and crude oil\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "AMD and Broadcom"
+        },
+        {
+          "label": "B",
+          "text": "Nvidia and Apple"
+        },
+        {
+          "label": "C",
+          "text": "TSM and AMD"
+        },
+        {
+          "label": "D",
+          "text": "Intel and crude oil"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "A PM could naturally ask for the cleanest leader-laggard pair in a snapshot."
+    },
+    {
+      "id": "v11_034",
+      "futurex_pattern": "statement-truth set",
+      "category": "market_story",
+      "question": "Which of these quick cross-name reads sound right right now?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which of these quick cross-name reads sound right right now?\nA.  Nvidia looks stronger than TSM\nB.  Crude oil looks stronger than Intel\nC.  Apple looks weaker than Nvidia\nD.  Tesla looks stronger than Broadcom\nE.  Ethereum looks stronger than Apple\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nvidia looks stronger than TSM"
+        },
+        {
+          "label": "B",
+          "text": "Crude oil looks stronger than Intel"
+        },
+        {
+          "label": "C",
+          "text": "Apple looks weaker than Nvidia"
+        },
+        {
+          "label": "D",
+          "text": "Tesla looks stronger than Broadcom"
+        },
+        {
+          "label": "E",
+          "text": "Ethereum looks stronger than Apple"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This keeps the FutureX-style truth-set format but makes it feel like a normal trading-desk comparison."
+    },
+    {
+      "id": "v11_035",
+      "futurex_pattern": "winner market",
+      "category": "ranking",
+      "question": "Among Apple, Nvidia, TSM, and crude oil, which looks closest to unchanged right now?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Among Apple, Nvidia, TSM, and crude oil, which looks closest to unchanged right now?\nA.  Apple\nB.  Nvidia\nC.  TSM\nD.  Crude oil\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Apple"
+        },
+        {
+          "label": "B",
+          "text": "Nvidia"
+        },
+        {
+          "label": "C",
+          "text": "TSM"
+        },
+        {
+          "label": "D",
+          "text": "Crude oil"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "Asking which name is closest to flat is a very normal market snapshot question."
+    },
+    {
+      "id": "v11_036",
+      "futurex_pattern": "winner market",
+      "category": "ranking",
+      "question": "Among Tesla, Intel, Broadcom, and crude oil, which looks under the most pressure right now?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Among Tesla, Intel, Broadcom, and crude oil, which looks under the most pressure right now?\nA.  Tesla\nB.  Intel\nC.  Broadcom\nD.  Crude oil\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tesla"
+        },
+        {
+          "label": "B",
+          "text": "Intel"
+        },
+        {
+          "label": "C",
+          "text": "Broadcom"
+        },
+        {
+          "label": "D",
+          "text": "Crude oil"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This is the bearish mirror of a standard 'what looks strongest' question."
+    },
+    {
+      "id": "v11_037",
+      "futurex_pattern": "winner market",
+      "category": "coverage",
+      "question": "If you need one market handle that is most likely to waste your time today, which is it?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you need one market handle that is most likely to waste your time today, which is it?\nA.  SOXX\nB.  Apple\nC.  Nvidia\nD.  Ethereum\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "SOXX"
+        },
+        {
+          "label": "B",
+          "text": "Apple"
+        },
+        {
+          "label": "C",
+          "text": "Nvidia"
+        },
+        {
+          "label": "D",
+          "text": "Ethereum"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "Users often ask which candidate handle is least worth leaning on before doing more work."
+    },
+    {
+      "id": "v11_038",
+      "futurex_pattern": "roster membership",
+      "category": "coverage",
+      "question": "Which of these names are better choices right now than broad shortcut proxies if you need a quick defensible call?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which of these names are better choices right now than broad shortcut proxies if you need a quick defensible call?\nA.  Apple\nB.  Nvidia\nC.  Ethereum\nD.  QQQ\nE.  SPY\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Apple"
+        },
+        {
+          "label": "B",
+          "text": "Nvidia"
+        },
+        {
+          "label": "C",
+          "text": "Ethereum"
+        },
+        {
+          "label": "D",
+          "text": "QQQ"
+        },
+        {
+          "label": "E",
+          "text": "SPY"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This is a natural watchlist-prioritization question rather than an internal availability check."
+    },
+    {
+      "id": "v11_039",
+      "futurex_pattern": "statement-truth set",
+      "category": "pressure_test",
+      "question": "Which what-if statements sound right today?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which what-if statements sound right today?\nA.  Nvidia is at least worth checking as a shock anchor for AMD\nB.  SOXX is a cleaner shock anchor for AMD than Nvidia\nC.  The Nvidia-to-AMD what-if is easier to motivate than the SOXX-to-AMD one\nD.  Both setups give equally clean quantified downstream outputs\nE.  The SOXX-to-AMD setup can fall apart before it becomes usable\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nvidia is at least worth checking as a shock anchor for AMD"
+        },
+        {
+          "label": "B",
+          "text": "SOXX is a cleaner shock anchor for AMD than Nvidia"
+        },
+        {
+          "label": "C",
+          "text": "The Nvidia-to-AMD what-if is easier to motivate than the SOXX-to-AMD one"
+        },
+        {
+          "label": "D",
+          "text": "Both setups give equally clean quantified downstream outputs"
+        },
+        {
+          "label": "E",
+          "text": "The SOXX-to-AMD setup can fall apart before it becomes usable"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "A real user could plausibly ask which scenario is even worth putting on the whiteboard."
+    },
+    {
+      "id": "v11_040",
+      "futurex_pattern": "winner market",
+      "category": "transmission",
+      "question": "If you are trying to tell a company-specific story around Nvidia, which pair is the least convincing place to start?",
+      "prompt": "You are helping a user make a market call. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you are trying to tell a company-specific story around Nvidia, which pair is the least convincing place to start?\nA.  QQQ and SPY\nB.  Broadcom and TSM\nC.  Broadcom and AMD\nD.  TSM and AMD\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "QQQ and SPY"
+        },
+        {
+          "label": "B",
+          "text": "Broadcom and TSM"
+        },
+        {
+          "label": "C",
+          "text": "Broadcom and AMD"
+        },
+        {
+          "label": "D",
+          "text": "TSM and AMD"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "It is natural to ask which explanatory starting point is least persuasive before committing to a story."
+    }
+  ]
+}

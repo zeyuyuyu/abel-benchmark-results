@@ -1,0 +1,21 @@
+{
+  "slug": "normalize_ETH",
+  "captured_at": "2026-03-25T08:42:14.358940+00:00",
+  "command": [
+    "/usr/local/bin/python3",
+    "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+    "normalize-node",
+    "ETH",
+    "--compact"
+  ],
+  "exit_code": 0,
+  "attempt": 1,
+  "stdout": {
+    "ok": true,
+    "status_code": 0,
+    "input": "ETH",
+    "normalized_node_id": "ETHUSD_close",
+    "default_suffix": "close"
+  },
+  "stderr": ""
+}

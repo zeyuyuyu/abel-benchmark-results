@@ -1,0 +1,140 @@
+{
+  "slug": "intervene_NVDA_close__AMD_close",
+  "captured_at": "2026-03-25T08:42:47.192741+00:00",
+  "command": [
+    "/usr/local/bin/python3",
+    "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+    "--base-url",
+    "https://cap.abel.ai",
+    "intervene-do",
+    "NVDA_close",
+    "0.05",
+    "--outcome-node",
+    "AMD_close",
+    "--compact"
+  ],
+  "exit_code": 1,
+  "attempt": 1,
+  "stdout": {
+    "ok": false,
+    "status_code": 400,
+    "message": "{\"message\":\"No propagated effect was returned for outcome_node='AMD_close'.\"}",
+    "error": {
+      "code": "invalid_intervention",
+      "message": "{\"message\":\"No propagated effect was returned for outcome_node='AMD_close'.\"}",
+      "details": {}
+    },
+    "response_payload": {
+      "cap_version": "0.2.2",
+      "request_id": "8c892a27-4202-4a6f-84c8-acc2a778c215",
+      "verb": "intervene.do",
+      "status": "error",
+      "error": {
+        "code": "invalid_intervention",
+        "message": "{\"message\":\"No propagated effect was returned for outcome_node='AMD_close'.\"}",
+        "details": {}
+      }
+    },
+    "structural_check": {
+      "ok": true,
+      "status_code": 200,
+      "cap_version": "0.2.2",
+      "request_id": "944304d4-eb1d-4aeb-b4b9-9e3aff9f1d9d",
+      "verb": "graph.paths",
+      "status": "success",
+      "result": {
+        "reasoning_mode": "structural_semantics",
+        "identification_status": "not_applicable",
+        "assumptions": [
+          "causal_sufficiency",
+          "faithfulness",
+          "no_instantaneous_effects",
+          "no_latent_confounders_addressed",
+          "abel_structural_summary_only",
+          "abel_hidden_field_policy"
+        ],
+        "source_node_id": "NVDA_close",
+        "target_node_id": "AMD_close",
+        "connected": true,
+        "path_count": 1,
+        "paths": [
+          {
+            "distance": 4,
+            "nodes": [
+              {
+                "node_id": "NVDA_close",
+                "node_name": "NVIDIA Corporation close price",
+                "node_type": "close_price",
+                "domain": "equities"
+              },
+              {
+                "node_id": "MBPUSD_close",
+                "node_name": "Mobipad USD close price",
+                "node_type": "close_price",
+                "domain": "crypto"
+              },
+              {
+                "node_id": "SIM_volume",
+                "node_name": "Grupo Simec, S.A.B. de C.V. volume",
+                "node_type": "volume",
+                "domain": "equities"
+              },
+              {
+                "node_id": "MLNUSD_close",
+                "node_name": "Enzyme USD close price",
+                "node_type": "close_price",
+                "domain": "crypto"
+              },
+              {
+                "node_id": "AMD_close",
+                "node_name": "Advanced Micro Devices, Inc. close price",
+                "node_type": "close_price",
+                "domain": "equities"
+              }
+            ],
+            "edges": [
+              {
+                "from_node_id": "NVDA_close",
+                "to_node_id": "MBPUSD_close",
+                "edge_type": "causes",
+                "tau": 35,
+                "tau_duration": "PT35H"
+              },
+              {
+                "from_node_id": "MBPUSD_close",
+                "to_node_id": "SIM_volume",
+                "edge_type": "causes",
+                "tau": 57,
+                "tau_duration": "PT57H"
+              },
+              {
+                "from_node_id": "SIM_volume",
+                "to_node_id": "MLNUSD_close",
+                "edge_type": "causes",
+                "tau": 45,
+                "tau_duration": "PT45H"
+              },
+              {
+                "from_node_id": "MLNUSD_close",
+                "to_node_id": "AMD_close",
+                "edge_type": "causes",
+                "tau": 45,
+                "tau_duration": "PT45H"
+              }
+            ]
+          }
+        ]
+      },
+      "provenance": {
+        "algorithm": "PCMCI",
+        "graph_version": "CausalNodeV2",
+        "computation_time_ms": 20,
+        "server_name": "abel-cap",
+        "server_version": "0.1.0",
+        "cap_spec_version": "0.2.2"
+      }
+    },
+    "intervention_skipped": false
+  },
+  "stderr": ""
+}

@@ -1,0 +1,190 @@
+{
+  "slug": "capabilities",
+  "captured_at": "2026-03-25T08:42:13.828503+00:00",
+  "command": [
+    "/usr/local/bin/python3",
+    "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+    "--base-url",
+    "https://cap.abel.ai",
+    "capabilities",
+    "--compact"
+  ],
+  "exit_code": 0,
+  "attempt": 1,
+  "stdout": {
+    "ok": true,
+    "status_code": 200,
+    "cap_version": "0.2.2",
+    "request_id": "c7bf430c-eebf-4ce3-865f-d2ab45265a53",
+    "verb": "meta.capabilities",
+    "status": "success",
+    "result": {
+      "$schema": "https://causalagentprotocol.org/schema/capability-card/v0.2.2.json",
+      "name": "Abel CAP Primitive Adapter",
+      "description": "CAP 0.2.2 adapter over Abel Graph Computer primitives. This service treats the primitive layer as the execution substrate, preserves its hidden-field policy by default, and exposes intervention results using the server's default linear SCM rollout over the public time-lagged graph. The current public graph profile is abel-main on CausalNodeV2; semantic node types include close_price and volume, while public node ids are expected in '<ticker>_close' or '<ticker>_volume' form.",
+      "version": "0.1.0",
+      "cap_spec_version": "0.2.2",
+      "provider": {
+        "name": "Abel AI",
+        "url": "https://abel.ai"
+      },
+      "endpoint": "http://cap.abel.ai/cap",
+      "conformance_level": 2,
+      "supported_verbs": {
+        "core": [
+          "meta.capabilities",
+          "meta.methods",
+          "observe.predict",
+          "intervene.do",
+          "graph.neighbors",
+          "graph.markov_blanket",
+          "graph.paths"
+        ],
+        "convenience": [
+          "traverse.parents",
+          "traverse.children"
+        ]
+      },
+      "causal_engine": {
+        "family": "abel_primitive_adapter",
+        "algorithm": "abel_graph_primitives",
+        "supports_time_lag": true,
+        "supports_instantaneous": false,
+        "structural_mechanisms": {
+          "available": true,
+          "families": [
+            "linear_scm"
+          ],
+          "mechanism_override_supported": false,
+          "counterfactual_ready": false
+        }
+      },
+      "detailed_capabilities": {
+        "graph_discovery": false,
+        "graph_traversal": true,
+        "temporal_multi_lag": true,
+        "effect_estimation": true,
+        "intervention_simulation": true,
+        "counterfactual_scm": false,
+        "latent_confounding_modeled": false,
+        "partial_identification": false,
+        "uncertainty_quantified": false
+      },
+      "assumptions": [
+        "causal_sufficiency",
+        "faithfulness",
+        "no_instantaneous_effects"
+      ],
+      "reasoning_modes_supported": [
+        "observational_prediction",
+        "identified_causal_effect",
+        "graph_propagation",
+        "structural_semantics",
+        "validation_gate"
+      ],
+      "graph": {
+        "domains": [
+          "equities",
+          "crypto"
+        ],
+        "node_count": 11315,
+        "edge_count": 42105965,
+        "node_types": [
+          "close_price",
+          "volume"
+        ],
+        "edge_types_supported": [
+          "directed_lagged"
+        ],
+        "graph_representation": "time_lagged_dag",
+        "update_frequency": "PT24H",
+        "temporal_resolution": "PT1H",
+        "coverage_description": "Adapter over Abel Graph Computer primitive endpoints backed by the live CausalNodeV2 graph. Semantic node types are close_price and volume; public node ids currently use Abel main graph form '<ticker>_close' or '<ticker>_volume'. Exact weights, taus, conditioning sets, p-values, and CI internals stay hidden by default."
+      },
+      "authentication": {
+        "type": "none",
+        "details": {}
+      },
+      "access_tiers": [
+        {
+          "tier": "public",
+          "verbs": [
+            "meta.capabilities",
+            "meta.methods",
+            "observe.predict",
+            "intervene.do",
+            "graph.neighbors",
+            "graph.markov_blanket",
+            "graph.paths",
+            "traverse.parents",
+            "traverse.children",
+            "extensions.abel.validate_connectivity",
+            "extensions.abel.markov_blanket",
+            "extensions.abel.observe_predict_resolved_time",
+            "extensions.abel.counterfactual_preview",
+            "extensions.abel.intervene_time_lag"
+          ],
+          "response_detail": "summary",
+          "hidden_fields": [
+            "weight",
+            "tau",
+            "conditioning_set",
+            "p_value",
+            "confidence_interval",
+            "ci_lower",
+            "ci_upper"
+          ]
+        }
+      ],
+      "disclosure_policy": {
+        "hidden_fields": [
+          "weight",
+          "tau",
+          "conditioning_set",
+          "p_value",
+          "confidence_interval",
+          "ci_lower",
+          "ci_upper"
+        ],
+        "default_response_detail": "summary",
+        "notes": [
+          "Primitive hidden-field policy is inherited by default.",
+          "intervene.do uses the server's default linear SCM rollout over the public time-lagged graph.",
+          "validate is exposed only as an Abel extension.",
+          "The default public graph profile is abel-main on CausalNodeV2.",
+          "Public Abel node ids are currently expected in '<ticker>_close' or '<ticker>_volume' form.",
+          "The semantic node type close_price maps to the public node-id suffix 'close'."
+        ]
+      },
+      "extensions": {
+        "abel": {
+          "schema_url": "https://abel.ai/cap/extensions/abel/v1.json",
+          "verbs": [
+            "extensions.abel.validate_connectivity",
+            "extensions.abel.markov_blanket",
+            "extensions.abel.observe_predict_resolved_time",
+            "extensions.abel.counterfactual_preview",
+            "extensions.abel.intervene_time_lag"
+          ],
+          "additional_params": {
+            "graph.paths": {
+              "include_edge_signs": "boolean"
+            }
+          },
+          "additional_result_fields": {
+            "extensions.abel.observe_predict_resolved_time": {
+              "resolved_target_time": "string"
+            }
+          },
+          "notes": [
+            "Abel owns the abel extension namespace.",
+            "validate_connectivity uses an undirected shortest-path connectivity proxy rather than strict d-separation or IV identification.",
+            "counterfactual_preview remains a preview interface and does not claim Level 3 CAP conformance.",
+            "counterfactual_preview uses approximate graph propagation rather than full abduction-action-prediction semantics."
+          ]
+        }
+      }
+    }
+  },
+  "stderr": ""
+}

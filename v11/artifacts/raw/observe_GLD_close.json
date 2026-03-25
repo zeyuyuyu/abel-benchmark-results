@@ -1,0 +1,41 @@
+{
+  "slug": "observe_GLD_close",
+  "captured_at": "2026-03-25T08:42:31.994910+00:00",
+  "command": [
+    "/usr/local/bin/python3",
+    "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+    "--base-url",
+    "https://cap.abel.ai",
+    "observe",
+    "GLD_close",
+    "--compact"
+  ],
+  "exit_code": 1,
+  "attempt": 1,
+  "stdout": {
+    "ok": false,
+    "status_code": 503,
+    "message": "Abel primitive service is unavailable.",
+    "error": {
+      "code": "service_unavailable",
+      "message": "Abel primitive service is unavailable.",
+      "details": {
+        "upstream_detail": "{\"message\":\"No materialized prediction history available for target_node=GLD_close\"}"
+      }
+    },
+    "response_payload": {
+      "cap_version": "0.2.2",
+      "request_id": "a0f33b27-30db-4d20-b37d-f0344cdd8592",
+      "verb": "observe.predict",
+      "status": "error",
+      "error": {
+        "code": "service_unavailable",
+        "message": "Abel primitive service is unavailable.",
+        "details": {
+          "upstream_detail": "{\"message\":\"No materialized prediction history available for target_node=GLD_close\"}"
+        }
+      }
+    }
+  },
+  "stderr": ""
+}

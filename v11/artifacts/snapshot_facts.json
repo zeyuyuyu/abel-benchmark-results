@@ -1,0 +1,173 @@
+{
+  "snapshot_meta": {
+    "version": "v11-natural-intent-casebook",
+    "snapshot_label": "March 25, 2026 (GMT+8)",
+    "snapshot_date": "2026-03-25",
+    "timezone": "GMT+8",
+    "captured_at": "2026-03-25T08:42:51.123493+00:00",
+    "base_url": "https://cap.abel.ai",
+    "probe_script": "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+    "artifacts_manifest": "artifacts/manifest.json"
+  },
+  "backing_nodes": {
+    "AAPL": "AAPL_close",
+    "TSLA": "TSLA_close",
+    "AMD": "AMD_close",
+    "NVDA": "NVDA_close",
+    "INTC": "INTC_close",
+    "AVGO": "AVGO_close",
+    "TSM": "TSM_close",
+    "CL": "CL_close",
+    "ETH": "ETHUSD_close",
+    "SOXX": "SOXX_close",
+    "QQQ": "QQQ_close",
+    "SPY": "SPY_close",
+    "BTC": "BTCUSD_close",
+    "GC": "GC_close",
+    "GLD": "GLD_close",
+    "XLE": "XLE_close",
+    "USO": "USO_close"
+  },
+  "observe_pct": {
+    "AAPL": -0.1940669095802393,
+    "TSLA": -0.2406296289655383,
+    "AMD": 0.20931723421453705,
+    "NVDA": 0.04359642834965821,
+    "INTC": -0.14087294122588326,
+    "AVGO": -0.4278362474926455,
+    "TSM": -0.0688548762169393,
+    "CL": -0.10508366265902921,
+    "ETH": -0.1634334446580476
+  },
+  "graph_paths": {
+    "NVDA->AMD": {
+      "connected": true,
+      "path_count": 1
+    },
+    "SOXX->AMD": {
+      "connected": false,
+      "path_count": 0
+    },
+    "AVGO->NVDA": {
+      "connected": true,
+      "path_count": 1
+    },
+    "TSM->NVDA": {
+      "connected": true,
+      "path_count": 1
+    },
+    "AMD->NVDA": {
+      "connected": true,
+      "path_count": 1
+    },
+    "QQQ->NVDA": {
+      "connected": false,
+      "path_count": 0
+    },
+    "SPY->NVDA": {
+      "connected": false,
+      "path_count": 0
+    },
+    "BTC->ETH": {
+      "connected": false,
+      "path_count": 0
+    },
+    "XLK->AAPL": {
+      "connected": false,
+      "path_count": 0
+    }
+  },
+  "interventions": {
+    "NVDA->AMD": {
+      "path_exists": true,
+      "intervention_skipped": false,
+      "skip_reason": null,
+      "error_code": "invalid_intervention",
+      "effect_returned": false
+    },
+    "SOXX->AMD": {
+      "path_exists": false,
+      "intervention_skipped": true,
+      "skip_reason": "no_directed_path_found",
+      "error_code": null,
+      "effect_returned": false
+    }
+  },
+  "counterfactuals": {
+    "NVDA->AMD": {
+      "status": "ok",
+      "reachable": false,
+      "effect_support": "no_structural_path",
+      "path_count": 0,
+      "preview_only": true
+    },
+    "SOXX->AMD": {
+      "status": "error",
+      "error_code": "node_not_found"
+    }
+  },
+  "availability": {
+    "AAPL": "ok",
+    "TSLA": "ok",
+    "AMD": "ok",
+    "NVDA": "ok",
+    "INTC": "ok",
+    "AVGO": "ok",
+    "TSM": "ok",
+    "CL": "ok",
+    "ETH": "ok",
+    "SOXX": "unavailable",
+    "QQQ": "unavailable",
+    "SPY": "unavailable",
+    "BTC": "unavailable",
+    "GC": "unavailable",
+    "GLD": "unavailable",
+    "XLE": "unavailable",
+    "USO": "unavailable"
+  },
+  "artifact_refs": {
+    "capabilities": "artifacts/raw/capabilities.json",
+    "normalize": {
+      "BTC": "artifacts/raw/normalize_BTC.json",
+      "ETH": "artifacts/raw/normalize_ETH.json"
+    },
+    "observe": {
+      "AAPL": "artifacts/raw/observe_AAPL_close.json",
+      "TSLA": "artifacts/raw/observe_TSLA_close.json",
+      "AMD": "artifacts/raw/observe_AMD_close.json",
+      "NVDA": "artifacts/raw/observe_NVDA_close.json",
+      "INTC": "artifacts/raw/observe_INTC_close.json",
+      "AVGO": "artifacts/raw/observe_AVGO_close.json",
+      "TSM": "artifacts/raw/observe_TSM_close.json",
+      "CL": "artifacts/raw/observe_CL_close.json",
+      "ETH": "artifacts/raw/observe_ETHUSD_close.json",
+      "SOXX": "artifacts/raw/observe_SOXX_close.json",
+      "QQQ": "artifacts/raw/observe_QQQ_close.json",
+      "SPY": "artifacts/raw/observe_SPY_close.json",
+      "BTC": "artifacts/raw/observe_BTCUSD_close.json",
+      "GC": "artifacts/raw/observe_GC_close.json",
+      "GLD": "artifacts/raw/observe_GLD_close.json",
+      "XLE": "artifacts/raw/observe_XLE_close.json",
+      "USO": "artifacts/raw/observe_USO_close.json"
+    },
+    "paths": {
+      "NVDA->AMD": "artifacts/raw/path_NVDA_close__AMD_close.json",
+      "SOXX->AMD": "artifacts/raw/path_SOXX_close__AMD_close.json",
+      "AVGO->NVDA": "artifacts/raw/path_AVGO_close__NVDA_close.json",
+      "TSM->NVDA": "artifacts/raw/path_TSM_close__NVDA_close.json",
+      "AMD->NVDA": "artifacts/raw/path_AMD_close__NVDA_close.json",
+      "QQQ->NVDA": "artifacts/raw/path_QQQ_close__NVDA_close.json",
+      "SPY->NVDA": "artifacts/raw/path_SPY_close__NVDA_close.json",
+      "BTC->ETH": "artifacts/raw/path_BTCUSD_close__ETHUSD_close.json",
+      "XLK->AAPL": "artifacts/raw/path_XLK_close__AAPL_close.json"
+    },
+    "interventions": {
+      "NVDA->AMD": "artifacts/raw/intervene_NVDA_close__AMD_close.json",
+      "SOXX->AMD": "artifacts/raw/intervene_SOXX_close__AMD_close.json"
+    },
+    "counterfactuals": {
+      "NVDA->AMD": "artifacts/raw/counterfactual_NVDA_close__AMD_close.json",
+      "SOXX->AMD": "artifacts/raw/counterfactual_SOXX_close__AMD_close.json"
+    }
+  }
+}

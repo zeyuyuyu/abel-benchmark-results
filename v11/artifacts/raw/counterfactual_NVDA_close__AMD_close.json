@@ -1,0 +1,70 @@
+{
+  "slug": "counterfactual_NVDA_close__AMD_close",
+  "captured_at": "2026-03-25T08:42:49.735659+00:00",
+  "command": [
+    "/usr/local/bin/python3",
+    "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+    "--base-url",
+    "https://cap.abel.ai",
+    "counterfactual-preview",
+    "--intervene-node",
+    "NVDA_close",
+    "--intervene-time",
+    "2026-03-24T00:00:00Z",
+    "--observe-node",
+    "AMD_close",
+    "--observe-time",
+    "2026-03-24T01:00:00Z",
+    "--intervene-new-value",
+    "0.05",
+    "--compact"
+  ],
+  "exit_code": 0,
+  "attempt": 1,
+  "stdout": {
+    "ok": true,
+    "status_code": 200,
+    "cap_version": "0.2.2",
+    "request_id": "16e6c932-260f-4cda-b0f8-f34ea69bb548",
+    "verb": "extensions.abel.counterfactual_preview",
+    "status": "success",
+    "result": {
+      "reasoning_mode": "graph_propagation",
+      "identification_status": "not_formally_identified",
+      "assumptions": [
+        "causal_sufficiency",
+        "faithfulness",
+        "no_instantaneous_effects",
+        "linearity",
+        "no_latent_confounders_addressed",
+        "abel_graph_propagation_approximation",
+        "abel_single_pulse_intervention",
+        "abel_hidden_field_policy",
+        "abel_counterfactual_preview_not_abduction_action_prediction"
+      ],
+      "intervene_node": "NVDA_close",
+      "observe_node": "AMD_close",
+      "intervene": {
+        "value": 0.05
+      },
+      "observe": {
+        "change": 0.0
+      },
+      "preview_only": true,
+      "counterfactual_semantics": "approximate_graph_propagation",
+      "effect_support": "no_structural_path",
+      "reachable": false,
+      "path_count": 0
+    },
+    "provenance": {
+      "algorithm": "PCMCI",
+      "graph_version": "CausalNodeV2",
+      "computation_time_ms": 54,
+      "mechanism_family_used": "linear_scm",
+      "server_name": "abel-cap",
+      "server_version": "0.1.0",
+      "cap_spec_version": "0.2.2"
+    }
+  },
+  "stderr": ""
+}

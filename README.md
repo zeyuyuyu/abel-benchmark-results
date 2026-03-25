@@ -18,6 +18,7 @@ Benchmark versions currently included:
 | **v8** | Codex with and without installed `causal-abel` skill | CAP-adapted causalbench aligned to Abel graph, intervention, and extension semantics; designed as a live contract/regression benchmark |
 | **v9** | Casebook input layer for Codex with and without installed `causal-abel` skill | FutureX-style, LLM-authored casebook aligned to the updated `causal-abel` `1.0.7` skill and anchored to a live Abel CAP snapshot |
 | **v10** | Natural-intent casebook input layer for Codex with and without installed `causal-abel` skill | FutureX-inspired but non-tool-facing benchmark cases written as questions a normal user could plausibly ask |
+| **v11** | Natural-intent benchmark package with separated prompts, answers, and evidence | Successor to `v10` that splits `questions.json`, `ground_truth.json`, and raw Abel snapshot artifacts for cleaner evaluation |
 
 The original `v3` / `v4` pipeline uses **LLM-based question classification** (GPT-4o-mini) to identify suitable financial questions and extract ticker symbols, then **`normalize-node`** from [cap_probe.py](https://github.com/Abel-ai-causality/Abel-skills/blob/main/causal-abel/scripts/cap_probe.py) to resolve correct Abel node IDs.
 
@@ -288,6 +289,33 @@ Files:
 
 ---
 
+## v11 — Split Benchmark Package
+
+`v11` keeps the same natural-intent benchmark direction as `v10`, but repackages it into a cleaner dataset layout:
+
+- `questions.json` contains only prompts, options, and metadata
+- `ground_truth.json` contains only answer keys and grounding
+- `artifacts/` stores the raw Abel snapshot evidence used to derive the ground truth
+
+Why this matters:
+
+- it avoids leaking answer keys in the main question file
+- it makes evaluation harnesses cleaner
+- it preserves the original live snapshot evidence instead of only keeping derived labels
+
+Files:
+
+- Questions: [`v11/questions.json`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v11/questions.json)
+- Ground Truth: [`v11/ground_truth.json`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v11/ground_truth.json)
+- Overview: [`v11/cases.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v11/cases.md)
+- Spec: [`v11/casebook_spec.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v11/casebook_spec.md)
+- Snapshot Facts: [`v11/artifacts/snapshot_facts.json`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v11/artifacts/snapshot_facts.json)
+- Artifact Manifest: [`v11/artifacts/manifest.json`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v11/artifacts/manifest.json)
+- Builder: [`v11/build_natural_intent_casebook.py`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v11/build_natural_intent_casebook.py)
+- Capture: [`v11/capture_snapshot_artifacts.py`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v11/capture_snapshot_artifacts.py)
+
+---
+
 ## Files
 
 | File | Description |
@@ -318,6 +346,14 @@ Files:
 | `v10/cases.md` | Compact index of the v10 casebook and answer boxes |
 | `v10/casebook_spec.md` | Benchmark design rule for natural-user prompts |
 | `v10/build_natural_intent_casebook.py` | Reproducible generator for the v10 natural-intent casebook |
+| `v11/questions.json` | Prompt-only benchmark input file |
+| `v11/ground_truth.json` | Answer keys and grounding for the v11 casebook |
+| `v11/cases.md` | Compact prompt index without exposed answer keys |
+| `v11/casebook_spec.md` | Packaging rule for the split natural-intent benchmark |
+| `v11/build_natural_intent_casebook.py` | Reproducible builder for `questions.json` and `ground_truth.json` |
+| `v11/capture_snapshot_artifacts.py` | Live Abel capture script for raw snapshot evidence |
+| `v11/artifacts/snapshot_facts.json` | Derived snapshot facts used by the v11 builder |
+| `v11/artifacts/manifest.json` | Raw artifact index and capture commands |
 
 ---
 
@@ -331,7 +367,7 @@ Files:
 4. **Full skill usage matters**: Using `observe` + `neighbors` + `markov-blanket` (v4) provides richer context than `observe` alone (v3).
 5. **Strict judging reveals the real picture**: Lenient judges that accept refusals as "correct" mask Abel's true value.
 6. **Capability-aligned benchmarking is a separate need**: `v8` shows that a benchmark can be well aligned to Abel CAP semantics even if it does not yet create an A/B gap between base and skill.
-7. **Casebook quality matters**: `v9` revealed the need for a more natural prompt layer, and `v10` is the corrected version that removes most tool-facing wording while keeping exact-scored answers.
+7. **Casebook quality matters**: `v9` revealed the need for a more natural prompt layer, `v10` corrected the prompt style, and `v11` turns that into a cleaner benchmark package with separated prompts, answers, and raw evidence.
 
 ### Limitations
 
@@ -339,7 +375,7 @@ Files:
 2. **Graph coverage gaps**: SPY, DJI, BTC, XAUUSD, CSI300, Chinese A-shares not in graph.
 3. **Multi-asset questions**: Current approach uses one node; should aggregate signals across all mentioned assets.
 4. **Explicit prompts reduce separation**: In `v8`, a strong base model can inspect the same live CAP surface and match the skill-assisted run.
-5. **Snapshot drift**: `v9` and `v10` are intentionally tied to a `2026-03-25` live CAP snapshot, so answers should be refreshed when the graph or public prediction history changes.
+5. **Snapshot drift**: `v9`, `v10`, and `v11` are intentionally tied to a `2026-03-25` live CAP snapshot, so answers should be refreshed when the graph or public prediction history changes.
 
 ### Recommendations
 
@@ -348,7 +384,7 @@ Files:
 3. Add time-horizon awareness to prompts: weight short-term Abel signals differently for day-level vs. month-level questions.
 4. For multi-asset questions, query Abel for each mentioned asset and present aggregated signals.
 5. Keep `v8` as the regression core, then add a more natural intent-level benchmark layer where routing, workflow choice, and proxy selection matter.
-6. Use `v10` as the next A/B input layer, and keep `v9` only as a diagnostic set for explicit skill-surface regressions.
+6. Use `v11` as the next A/B input layer, keep `v10` as the readable natural-intent predecessor, and keep `v9` only as a diagnostic set for explicit skill-surface regressions.
 
 ---
 

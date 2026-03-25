@@ -1,0 +1,41 @@
+{
+  "slug": "observe_QQQ_close",
+  "captured_at": "2026-03-25T08:42:27.438229+00:00",
+  "command": [
+    "/usr/local/bin/python3",
+    "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+    "--base-url",
+    "https://cap.abel.ai",
+    "observe",
+    "QQQ_close",
+    "--compact"
+  ],
+  "exit_code": 1,
+  "attempt": 1,
+  "stdout": {
+    "ok": false,
+    "status_code": 503,
+    "message": "Abel primitive service is unavailable.",
+    "error": {
+      "code": "service_unavailable",
+      "message": "Abel primitive service is unavailable.",
+      "details": {
+        "upstream_detail": "{\"message\":\"No materialized prediction history available for target_node=QQQ_close\"}"
+      }
+    },
+    "response_payload": {
+      "cap_version": "0.2.2",
+      "request_id": "b0d4b72d-c135-44a2-89e9-052f0833748a",
+      "verb": "observe.predict",
+      "status": "error",
+      "error": {
+        "code": "service_unavailable",
+        "message": "Abel primitive service is unavailable.",
+        "details": {
+          "upstream_detail": "{\"message\":\"No materialized prediction history available for target_node=QQQ_close\"}"
+        }
+      }
+    }
+  },
+  "stderr": ""
+}

@@ -1,0 +1,48 @@
+{
+  "slug": "observe_TSM_close",
+  "captured_at": "2026-03-25T08:42:22.825395+00:00",
+  "command": [
+    "/usr/local/bin/python3",
+    "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+    "--base-url",
+    "https://cap.abel.ai",
+    "observe",
+    "TSM_close",
+    "--compact"
+  ],
+  "exit_code": 0,
+  "attempt": 1,
+  "stdout": {
+    "ok": true,
+    "status_code": 200,
+    "cap_version": "0.2.2",
+    "request_id": "cc39ab74-1350-43b9-8fd1-d4b347b9efc1",
+    "verb": "observe.predict",
+    "status": "success",
+    "result": {
+      "target_node": "TSM_close",
+      "prediction": -0.0006885487621693929,
+      "drivers": [
+        "OCTO_close",
+        "PZPUSD_close",
+        "XBPUSD_close",
+        "MBPUSD_close",
+        "ALZN_close",
+        "HUNNYUSD_close",
+        "GINZAUSD_close",
+        "DMDUSD_close",
+        "FOA_close",
+        "KUBUSD_close"
+      ]
+    },
+    "provenance": {
+      "algorithm": "primitive.predict",
+      "graph_version": "CausalNodeV2",
+      "computation_time_ms": 30,
+      "server_name": "abel-cap",
+      "server_version": "0.1.0",
+      "cap_spec_version": "0.2.2"
+    }
+  },
+  "stderr": ""
+}

@@ -1,0 +1,896 @@
+{
+  "summary": {
+    "version": "v11-natural-intent-casebook",
+    "generation_method": "llm_authored_with_live_snapshot",
+    "snapshot_date": "2026-03-25",
+    "timezone": "GMT+8",
+    "case_count": 40,
+    "ground_truth_source": "artifacts/snapshot_facts.json",
+    "artifacts_manifest": "artifacts/manifest.json",
+    "pattern_counts": {
+      "interval bin": 6,
+      "roster membership": 5,
+      "statement-truth set": 4,
+      "threshold ladder": 5,
+      "top-k membership": 2,
+      "winner market": 18
+    },
+    "category_counts": {
+      "coverage": 6,
+      "directional_bucket": 6,
+      "directional_thresholds": 5,
+      "market_story": 5,
+      "pressure_test": 5,
+      "ranking": 6,
+      "transmission": 7
+    }
+  },
+  "cases": [
+    {
+      "id": "v11_001",
+      "futurex_pattern": "interval bin",
+      "category": "directional_bucket",
+      "answer_letters": [
+        "E"
+      ],
+      "answer_box": "\\boxed{E}",
+      "abel_grounding": {
+        "asset": "AMD",
+        "prediction_pct": 0.20931723421453705,
+        "backing_node": "AMD_close"
+      }
+    },
+    {
+      "id": "v11_002",
+      "futurex_pattern": "interval bin",
+      "category": "directional_bucket",
+      "answer_letters": [
+        "B"
+      ],
+      "answer_box": "\\boxed{B}",
+      "abel_grounding": {
+        "asset": "TSLA",
+        "prediction_pct": -0.2406296289655383,
+        "backing_node": "TSLA_close"
+      }
+    },
+    {
+      "id": "v11_003",
+      "futurex_pattern": "interval bin",
+      "category": "directional_bucket",
+      "answer_letters": [
+        "B"
+      ],
+      "answer_box": "\\boxed{B}",
+      "abel_grounding": {
+        "asset": "AAPL",
+        "prediction_pct": -0.1940669095802393,
+        "backing_node": "AAPL_close"
+      }
+    },
+    {
+      "id": "v11_004",
+      "futurex_pattern": "interval bin",
+      "category": "directional_bucket",
+      "answer_letters": [
+        "B"
+      ],
+      "answer_box": "\\boxed{B}",
+      "abel_grounding": {
+        "asset": "ETH",
+        "prediction_pct": -0.1634334446580476,
+        "backing_node": "ETHUSD_close"
+      }
+    },
+    {
+      "id": "v11_005",
+      "futurex_pattern": "interval bin",
+      "category": "directional_bucket",
+      "answer_letters": [
+        "B"
+      ],
+      "answer_box": "\\boxed{B}",
+      "abel_grounding": {
+        "asset": "CL",
+        "prediction_pct": -0.10508366265902921,
+        "backing_node": "CL_close"
+      }
+    },
+    {
+      "id": "v11_006",
+      "futurex_pattern": "interval bin",
+      "category": "directional_bucket",
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "abel_grounding": {
+        "asset": "AVGO",
+        "prediction_pct": -0.4278362474926455,
+        "backing_node": "AVGO_close"
+      }
+    },
+    {
+      "id": "v11_007",
+      "futurex_pattern": "threshold ladder",
+      "category": "directional_thresholds",
+      "answer_letters": [
+        "A",
+        "B"
+      ],
+      "answer_box": "\\boxed{A, B}",
+      "abel_grounding": {
+        "asset": "AAPL",
+        "prediction_pct": -0.1940669095802393,
+        "backing_node": "AAPL_close"
+      }
+    },
+    {
+      "id": "v11_008",
+      "futurex_pattern": "threshold ladder",
+      "category": "directional_thresholds",
+      "answer_letters": [
+        "A",
+        "B"
+      ],
+      "answer_box": "\\boxed{A, B}",
+      "abel_grounding": {
+        "asset": "TSLA",
+        "prediction_pct": -0.2406296289655383,
+        "backing_node": "TSLA_close"
+      }
+    },
+    {
+      "id": "v11_009",
+      "futurex_pattern": "threshold ladder",
+      "category": "directional_thresholds",
+      "answer_letters": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer_box": "\\boxed{A, B, C, D, E}",
+      "abel_grounding": {
+        "asset": "AMD",
+        "prediction_pct": 0.20931723421453705,
+        "backing_node": "AMD_close"
+      }
+    },
+    {
+      "id": "v11_010",
+      "futurex_pattern": "threshold ladder",
+      "category": "directional_thresholds",
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "abel_grounding": {
+        "asset": "AVGO",
+        "prediction_pct": -0.4278362474926455,
+        "backing_node": "AVGO_close"
+      }
+    },
+    {
+      "id": "v11_011",
+      "futurex_pattern": "threshold ladder",
+      "category": "directional_thresholds",
+      "answer_letters": [
+        "A",
+        "B"
+      ],
+      "answer_box": "\\boxed{A, B}",
+      "abel_grounding": {
+        "asset": "ETH",
+        "prediction_pct": -0.1634334446580476,
+        "backing_node": "ETHUSD_close"
+      }
+    },
+    {
+      "id": "v11_012",
+      "futurex_pattern": "winner market",
+      "category": "ranking",
+      "answer_letters": [
+        "B"
+      ],
+      "answer_box": "\\boxed{B}",
+      "abel_grounding": {
+        "basket": [
+          "NVDA",
+          "AMD",
+          "INTC",
+          "AVGO",
+          "TSM"
+        ],
+        "prediction_pct": {
+          "NVDA": 0.04359642834965821,
+          "AMD": 0.20931723421453705,
+          "INTC": -0.14087294122588326,
+          "AVGO": -0.4278362474926455,
+          "TSM": -0.0688548762169393
+        }
+      }
+    },
+    {
+      "id": "v11_013",
+      "futurex_pattern": "winner market",
+      "category": "ranking",
+      "answer_letters": [
+        "C"
+      ],
+      "answer_box": "\\boxed{C}",
+      "abel_grounding": {
+        "basket": [
+          "AAPL",
+          "TSLA",
+          "NVDA",
+          "AVGO"
+        ],
+        "prediction_pct": {
+          "AAPL": -0.1940669095802393,
+          "TSLA": -0.2406296289655383,
+          "NVDA": 0.04359642834965821,
+          "AVGO": -0.4278362474926455
+        }
+      }
+    },
+    {
+      "id": "v11_014",
+      "futurex_pattern": "top-k membership",
+      "category": "ranking",
+      "answer_letters": [
+        "C",
+        "D",
+        "G"
+      ],
+      "answer_box": "\\boxed{C, D, G}",
+      "abel_grounding": {
+        "top3": [
+          "AMD",
+          "NVDA",
+          "TSM"
+        ],
+        "prediction_pct": {
+          "AAPL": -0.1940669095802393,
+          "TSLA": -0.2406296289655383,
+          "AMD": 0.20931723421453705,
+          "NVDA": 0.04359642834965821,
+          "INTC": -0.14087294122588326,
+          "AVGO": -0.4278362474926455,
+          "TSM": -0.0688548762169393
+        }
+      }
+    },
+    {
+      "id": "v11_015",
+      "futurex_pattern": "top-k membership",
+      "category": "ranking",
+      "answer_letters": [
+        "A",
+        "B",
+        "F"
+      ],
+      "answer_box": "\\boxed{A, B, F}",
+      "abel_grounding": {
+        "bottom3": [
+          "AVGO",
+          "TSLA",
+          "AAPL"
+        ],
+        "prediction_pct": {
+          "AAPL": -0.1940669095802393,
+          "TSLA": -0.2406296289655383,
+          "AMD": 0.20931723421453705,
+          "NVDA": 0.04359642834965821,
+          "INTC": -0.14087294122588326,
+          "AVGO": -0.4278362474926455,
+          "TSM": -0.0688548762169393,
+          "CL": -0.10508366265902921
+        }
+      }
+    },
+    {
+      "id": "v11_016",
+      "futurex_pattern": "winner market",
+      "category": "transmission",
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "abel_grounding": {
+        "relevant_paths": {
+          "NVDA->AMD": {
+            "connected": true,
+            "path_count": 1
+          },
+          "SOXX->AMD": {
+            "connected": false,
+            "path_count": 0
+          }
+        },
+        "intervention_support": {
+          "path_exists": true,
+          "intervention_skipped": false,
+          "skip_reason": null,
+          "error_code": "invalid_intervention",
+          "effect_returned": false
+        }
+      }
+    },
+    {
+      "id": "v11_017",
+      "futurex_pattern": "roster membership",
+      "category": "transmission",
+      "answer_letters": [
+        "A",
+        "B"
+      ],
+      "answer_box": "\\boxed{A, B}",
+      "abel_grounding": {
+        "relevant_paths": {
+          "AVGO->NVDA": {
+            "connected": true,
+            "path_count": 1
+          },
+          "TSM->NVDA": {
+            "connected": true,
+            "path_count": 1
+          },
+          "QQQ->NVDA": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SPY->NVDA": {
+            "connected": false,
+            "path_count": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "v11_018",
+      "futurex_pattern": "winner market",
+      "category": "transmission",
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "abel_grounding": {
+        "upstream_company_routes": [
+          "AVGO->NVDA",
+          "TSM->NVDA"
+        ],
+        "broad_beta_routes": [
+          "QQQ->NVDA",
+          "SPY->NVDA"
+        ]
+      }
+    },
+    {
+      "id": "v11_019",
+      "futurex_pattern": "winner market",
+      "category": "transmission",
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "abel_grounding": {
+        "path_snapshot": {
+          "NVDA->AMD": {
+            "connected": true,
+            "path_count": 1
+          },
+          "SOXX->AMD": {
+            "connected": false,
+            "path_count": 0
+          },
+          "BTC->ETH": {
+            "connected": false,
+            "path_count": 0
+          },
+          "XLK->AAPL": {
+            "connected": false,
+            "path_count": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "v11_020",
+      "futurex_pattern": "winner market",
+      "category": "transmission",
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "abel_grounding": {
+        "supporting_paths": {
+          "AVGO->NVDA": {
+            "connected": true,
+            "path_count": 1
+          },
+          "TSM->NVDA": {
+            "connected": true,
+            "path_count": 1
+          },
+          "AMD->NVDA": {
+            "connected": true,
+            "path_count": 1
+          }
+        }
+      }
+    },
+    {
+      "id": "v11_021",
+      "futurex_pattern": "roster membership",
+      "category": "transmission",
+      "answer_letters": [
+        "A",
+        "B"
+      ],
+      "answer_box": "\\boxed{A, B}",
+      "abel_grounding": {
+        "broad_routes": {
+          "QQQ->NVDA": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SPY->NVDA": {
+            "connected": false,
+            "path_count": 0
+          }
+        },
+        "company_routes": {
+          "AVGO->NVDA": {
+            "connected": true,
+            "path_count": 1
+          },
+          "TSM->NVDA": {
+            "connected": true,
+            "path_count": 1
+          }
+        }
+      }
+    },
+    {
+      "id": "v11_022",
+      "futurex_pattern": "winner market",
+      "category": "pressure_test",
+      "answer_letters": [
+        "B"
+      ],
+      "answer_box": "\\boxed{B}",
+      "abel_grounding": {
+        "intervention": {
+          "path_exists": true,
+          "intervention_skipped": false,
+          "skip_reason": null,
+          "error_code": "invalid_intervention",
+          "effect_returned": false
+        },
+        "counterfactual": {
+          "status": "ok",
+          "reachable": false,
+          "effect_support": "no_structural_path",
+          "path_count": 0,
+          "preview_only": true
+        }
+      }
+    },
+    {
+      "id": "v11_023",
+      "futurex_pattern": "winner market",
+      "category": "pressure_test",
+      "answer_letters": [
+        "B"
+      ],
+      "answer_box": "\\boxed{B}",
+      "abel_grounding": {
+        "intervention": {
+          "path_exists": false,
+          "intervention_skipped": true,
+          "skip_reason": "no_directed_path_found",
+          "error_code": null,
+          "effect_returned": false
+        },
+        "counterfactual": {
+          "status": "error",
+          "error_code": "node_not_found"
+        }
+      }
+    },
+    {
+      "id": "v11_024",
+      "futurex_pattern": "winner market",
+      "category": "pressure_test",
+      "answer_letters": [
+        "B"
+      ],
+      "answer_box": "\\boxed{B}",
+      "abel_grounding": {
+        "intervention_nvda": {
+          "path_exists": true,
+          "intervention_skipped": false,
+          "skip_reason": null,
+          "error_code": "invalid_intervention",
+          "effect_returned": false
+        },
+        "intervention_soxx": {
+          "path_exists": false,
+          "intervention_skipped": true,
+          "skip_reason": "no_directed_path_found",
+          "error_code": null,
+          "effect_returned": false
+        }
+      }
+    },
+    {
+      "id": "v11_025",
+      "futurex_pattern": "winner market",
+      "category": "pressure_test",
+      "answer_letters": [
+        "B"
+      ],
+      "answer_box": "\\boxed{B}",
+      "abel_grounding": {
+        "counterfactual": {
+          "status": "ok",
+          "reachable": false,
+          "effect_support": "no_structural_path",
+          "path_count": 0,
+          "preview_only": true
+        }
+      }
+    },
+    {
+      "id": "v11_026",
+      "futurex_pattern": "winner market",
+      "category": "coverage",
+      "answer_letters": [
+        "B"
+      ],
+      "answer_box": "\\boxed{B}",
+      "abel_grounding": {
+        "availability": {
+          "BTC": "unavailable",
+          "ETH": "ok"
+        }
+      }
+    },
+    {
+      "id": "v11_027",
+      "futurex_pattern": "winner market",
+      "category": "coverage",
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "abel_grounding": {
+        "availability": {
+          "CL": "ok",
+          "XLE": "unavailable",
+          "USO": "unavailable",
+          "GC": "unavailable"
+        }
+      }
+    },
+    {
+      "id": "v11_028",
+      "futurex_pattern": "roster membership",
+      "category": "coverage",
+      "answer_letters": [
+        "A",
+        "B",
+        "C"
+      ],
+      "answer_box": "\\boxed{A, B, C}",
+      "abel_grounding": {
+        "availability": {
+          "SOXX": "unavailable",
+          "QQQ": "unavailable",
+          "SPY": "unavailable",
+          "NVDA": "ok",
+          "AAPL": "ok"
+        }
+      }
+    },
+    {
+      "id": "v11_029",
+      "futurex_pattern": "roster membership",
+      "category": "coverage",
+      "answer_letters": [
+        "A",
+        "B",
+        "C"
+      ],
+      "answer_box": "\\boxed{A, B, C}",
+      "abel_grounding": {
+        "availability": {
+          "ETH": "ok",
+          "AAPL": "ok",
+          "NVDA": "ok",
+          "SOXX": "unavailable",
+          "BTC": "unavailable"
+        }
+      }
+    },
+    {
+      "id": "v11_030",
+      "futurex_pattern": "statement-truth set",
+      "category": "market_story",
+      "answer_letters": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "answer_box": "\\boxed{A, B, C, E}",
+      "abel_grounding": {
+        "comparison_set": {
+          "AMD": 0.20931723421453705,
+          "NVDA": 0.04359642834965821,
+          "AAPL": -0.1940669095802393,
+          "TSLA": -0.2406296289655383,
+          "AVGO": -0.4278362474926455,
+          "INTC": -0.14087294122588326,
+          "TSM": -0.0688548762169393,
+          "CL": -0.10508366265902921
+        }
+      }
+    },
+    {
+      "id": "v11_031",
+      "futurex_pattern": "statement-truth set",
+      "category": "market_story",
+      "answer_letters": [
+        "A",
+        "B"
+      ],
+      "answer_box": "\\boxed{A, B}",
+      "abel_grounding": {
+        "availability": {
+          "AAPL": "ok",
+          "TSLA": "ok",
+          "AMD": "ok",
+          "NVDA": "ok",
+          "INTC": "ok",
+          "AVGO": "ok",
+          "TSM": "ok",
+          "CL": "ok",
+          "ETH": "ok",
+          "SOXX": "unavailable",
+          "QQQ": "unavailable",
+          "SPY": "unavailable",
+          "BTC": "unavailable",
+          "GC": "unavailable",
+          "GLD": "unavailable",
+          "XLE": "unavailable",
+          "USO": "unavailable"
+        }
+      }
+    },
+    {
+      "id": "v11_032",
+      "futurex_pattern": "winner market",
+      "category": "market_story",
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "abel_grounding": {
+        "availability": {
+          "AAPL": "ok",
+          "NVDA": "ok",
+          "ETH": "ok",
+          "SOXX": "unavailable",
+          "QQQ": "unavailable",
+          "SPY": "unavailable"
+        }
+      }
+    },
+    {
+      "id": "v11_033",
+      "futurex_pattern": "winner market",
+      "category": "market_story",
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "abel_grounding": {
+        "prediction_pct": {
+          "AMD": 0.20931723421453705,
+          "AVGO": -0.4278362474926455,
+          "NVDA": 0.04359642834965821,
+          "AAPL": -0.1940669095802393,
+          "TSM": -0.0688548762169393,
+          "INTC": -0.14087294122588326,
+          "CL": -0.10508366265902921
+        }
+      }
+    },
+    {
+      "id": "v11_034",
+      "futurex_pattern": "statement-truth set",
+      "category": "market_story",
+      "answer_letters": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer_box": "\\boxed{A, B, C, D, E}",
+      "abel_grounding": {
+        "comparison_set": {
+          "NVDA": 0.04359642834965821,
+          "TSM": -0.0688548762169393,
+          "CL": -0.10508366265902921,
+          "INTC": -0.14087294122588326,
+          "AAPL": -0.1940669095802393,
+          "TSLA": -0.2406296289655383,
+          "AVGO": -0.4278362474926455,
+          "ETH": -0.1634334446580476
+        }
+      }
+    },
+    {
+      "id": "v11_035",
+      "futurex_pattern": "winner market",
+      "category": "ranking",
+      "answer_letters": [
+        "B"
+      ],
+      "answer_box": "\\boxed{B}",
+      "abel_grounding": {
+        "basket": [
+          "AAPL",
+          "NVDA",
+          "TSM",
+          "CL"
+        ],
+        "prediction_pct": {
+          "AAPL": -0.1940669095802393,
+          "NVDA": 0.04359642834965821,
+          "TSM": -0.0688548762169393,
+          "CL": -0.10508366265902921
+        },
+        "absolute_move_order": [
+          "NVDA",
+          "TSM",
+          "CL",
+          "AAPL"
+        ]
+      }
+    },
+    {
+      "id": "v11_036",
+      "futurex_pattern": "winner market",
+      "category": "ranking",
+      "answer_letters": [
+        "C"
+      ],
+      "answer_box": "\\boxed{C}",
+      "abel_grounding": {
+        "basket": [
+          "TSLA",
+          "INTC",
+          "AVGO",
+          "CL"
+        ],
+        "prediction_pct": {
+          "TSLA": -0.2406296289655383,
+          "INTC": -0.14087294122588326,
+          "AVGO": -0.4278362474926455,
+          "CL": -0.10508366265902921
+        }
+      }
+    },
+    {
+      "id": "v11_037",
+      "futurex_pattern": "winner market",
+      "category": "coverage",
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "abel_grounding": {
+        "availability": {
+          "SOXX": "unavailable",
+          "AAPL": "ok",
+          "NVDA": "ok",
+          "ETH": "ok"
+        }
+      }
+    },
+    {
+      "id": "v11_038",
+      "futurex_pattern": "roster membership",
+      "category": "coverage",
+      "answer_letters": [
+        "A",
+        "B",
+        "C"
+      ],
+      "answer_box": "\\boxed{A, B, C}",
+      "abel_grounding": {
+        "availability": {
+          "AAPL": "ok",
+          "NVDA": "ok",
+          "ETH": "ok",
+          "QQQ": "unavailable",
+          "SPY": "unavailable"
+        }
+      }
+    },
+    {
+      "id": "v11_039",
+      "futurex_pattern": "statement-truth set",
+      "category": "pressure_test",
+      "answer_letters": [
+        "A",
+        "C",
+        "E"
+      ],
+      "answer_box": "\\boxed{A, C, E}",
+      "abel_grounding": {
+        "intervention_nvda": {
+          "path_exists": true,
+          "intervention_skipped": false,
+          "skip_reason": null,
+          "error_code": "invalid_intervention",
+          "effect_returned": false
+        },
+        "intervention_soxx": {
+          "path_exists": false,
+          "intervention_skipped": true,
+          "skip_reason": "no_directed_path_found",
+          "error_code": null,
+          "effect_returned": false
+        },
+        "counterfactual_nvda": {
+          "status": "ok",
+          "reachable": false,
+          "effect_support": "no_structural_path",
+          "path_count": 0,
+          "preview_only": true
+        }
+      }
+    },
+    {
+      "id": "v11_040",
+      "futurex_pattern": "winner market",
+      "category": "transmission",
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "abel_grounding": {
+        "broad_routes": {
+          "QQQ->NVDA": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SPY->NVDA": {
+            "connected": false,
+            "path_count": 0
+          }
+        },
+        "company_routes": {
+          "AVGO->NVDA": {
+            "connected": true,
+            "path_count": 1
+          },
+          "TSM->NVDA": {
+            "connected": true,
+            "path_count": 1
+          },
+          "AMD->NVDA": {
+            "connected": true,
+            "path_count": 1
+          }
+        }
+      }
+    }
+  ]
+}

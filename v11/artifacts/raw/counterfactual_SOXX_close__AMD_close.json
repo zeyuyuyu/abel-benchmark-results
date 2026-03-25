@@ -1,0 +1,46 @@
+{
+  "slug": "counterfactual_SOXX_close__AMD_close",
+  "captured_at": "2026-03-25T08:42:51.122366+00:00",
+  "command": [
+    "/usr/local/bin/python3",
+    "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+    "--base-url",
+    "https://cap.abel.ai",
+    "counterfactual-preview",
+    "--intervene-node",
+    "SOXX_close",
+    "--intervene-time",
+    "2026-03-24T00:00:00Z",
+    "--observe-node",
+    "AMD_close",
+    "--observe-time",
+    "2026-03-24T01:00:00Z",
+    "--intervene-new-value",
+    "0.05",
+    "--compact"
+  ],
+  "exit_code": 1,
+  "attempt": 1,
+  "stdout": {
+    "ok": false,
+    "status_code": 404,
+    "message": "{\"message\":\"Target node not found: SOXX_close\"}",
+    "error": {
+      "code": "node_not_found",
+      "message": "{\"message\":\"Target node not found: SOXX_close\"}",
+      "details": {}
+    },
+    "response_payload": {
+      "cap_version": "0.2.2",
+      "request_id": "161e6e8a-7e98-4a51-8f92-ae55200d8a88",
+      "verb": "extensions.abel.counterfactual_preview",
+      "status": "error",
+      "error": {
+        "code": "node_not_found",
+        "message": "{\"message\":\"Target node not found: SOXX_close\"}",
+        "details": {}
+      }
+    }
+  },
+  "stderr": ""
+}
