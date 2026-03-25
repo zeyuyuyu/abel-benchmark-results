@@ -1,0 +1,255 @@
+{
+  "timestamp": "20260325-183929",
+  "version": "v12-general-finance-challenge-high-signal-subset",
+  "model": "gpt-5.4",
+  "reasoning_effort": "low",
+  "case_count": 5,
+  "active_case_ids": [
+    "v12_001",
+    "v12_025",
+    "v12_026",
+    "v12_027",
+    "v12_028"
+  ],
+  "questions_path": "/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v12/questions.json",
+  "ground_truth_path": "/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v12/ground_truth.json",
+  "runs": {
+    "base": {
+      "correct": 0,
+      "case_count": 5,
+      "accuracy": 0.0,
+      "valid_boxed_outputs": 5,
+      "duration_seconds": 65.43,
+      "all_batches_valid": true,
+      "missing_case_ids": [],
+      "category_scores": {
+        "coverage_guardrail": {
+          "correct": 0,
+          "case_count": 2,
+          "accuracy": 0.0
+        },
+        "proxy_selection": {
+          "correct": 0,
+          "case_count": 3,
+          "accuracy": 0.0
+        }
+      },
+      "batches": [
+        {
+          "batch_name": "batch_1",
+          "returncode": 0,
+          "duration_seconds": 65.43,
+          "stdout": "{\"predictions\":[{\"id\":\"v12_001\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"v12_025\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"v12_026\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"v12_027\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"v12_028\",\"prediction\":\"\\\\boxed{B}\"}]}\n",
+          "stderr": "hich side is easier to defend in a graph-grounded crypto note right now?\nOptions:\nA. Bitcoin\nB. Ethereum\nC. Both are equally easy to defend\nD. Neither is easy to defend\n\nCase ID: v12_027\nCategory: coverage_guardrail\nQuestion: Which statement is safest if you want to stay graph-grounded on crypto today?\nOptions:\nA. Bitcoin is supportable right now\nB. Ethereum is supportable right now\nC. Both Bitcoin and Ethereum are supportable right now\nD. Neither Bitcoin nor Ethereum is supportable right now\n\nCase ID: v12_028\nCategory: coverage_guardrail\nQuestion: Which name should make you more nervous if someone claims it is a graph-grounded crypto live read today?\nOptions:\nA. Bitcoin\nB. Ethereum\nC. Both names should make you equally nervous\nD. Neither name should make you nervous\nmcp: playwright starting\n2026-03-25T10:39:36.364294Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at \"/Users/zeyu/Documents/bach_private_cache/.bench/codex_home_base/shell_snapshots/019d2494-0daf-7981-bd79-3a033d6bec0f.tmp-1774435176228245000\": Os { code: 2, kind: NotFound, message: \"No such file or directory\" }\n2026-03-25T10:39:37.700479Z  WARN codex_rmcp_client::rmcp_client: Failed to terminate MCP process group 64104: Operation not permitted (os error 1)\nmcp: playwright failed: MCP client for `playwright` failed to start: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response\nmcp startup: failed: playwright\n2026-03-25T10:39:38.072504Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T10:39:38.072535Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-25T10:39:38.431414Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T10:39:38.431438Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-25T10:39:40.493531Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T10:39:40.493571Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-25T10:39:40.860675Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T10:39:40.860700Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n🌐 Searching the web...\n🌐 Searched: March 2026 Bitcoin dominance Ethereum underperformance crypto market proxy\ncodex\n{\"predictions\":[{\"id\":\"v12_001\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"v12_025\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"v12_026\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"v12_027\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"v12_028\",\"prediction\":\"\\\\boxed{B}\"}]}\ntokens used\n9,751\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v12_001\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"v12_025\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"v12_026\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"v12_027\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"v12_028\",\"prediction\":\"\\\\boxed{B}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v12_001",
+                "prediction": "\\boxed{A}"
+              },
+              {
+                "id": "v12_025",
+                "prediction": "\\boxed{A}"
+              },
+              {
+                "id": "v12_026",
+                "prediction": "\\boxed{A}"
+              },
+              {
+                "id": "v12_027",
+                "prediction": "\\boxed{A}"
+              },
+              {
+                "id": "v12_028",
+                "prediction": "\\boxed{B}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v12_001",
+              "prediction": "\\boxed{A}"
+            },
+            {
+              "id": "v12_025",
+              "prediction": "\\boxed{A}"
+            },
+            {
+              "id": "v12_026",
+              "prediction": "\\boxed{A}"
+            },
+            {
+              "id": "v12_027",
+              "prediction": "\\boxed{A}"
+            },
+            {
+              "id": "v12_028",
+              "prediction": "\\boxed{B}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 5,
+            "prediction_count_returned": 5,
+            "valid_prediction_count": 5,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        }
+      ]
+    },
+    "skill": {
+      "correct": 5,
+      "case_count": 5,
+      "accuracy": 1.0,
+      "valid_boxed_outputs": 5,
+      "duration_seconds": 81.74,
+      "all_batches_valid": true,
+      "missing_case_ids": [],
+      "category_scores": {
+        "coverage_guardrail": {
+          "correct": 2,
+          "case_count": 2,
+          "accuracy": 1.0
+        },
+        "proxy_selection": {
+          "correct": 3,
+          "case_count": 3,
+          "accuracy": 1.0
+        }
+      },
+      "batches": [
+        {
+          "batch_name": "batch_1",
+          "returncode": 0,
+          "duration_seconds": 81.74,
+          "stdout": "{\"predictions\":[{\"id\":\"v12_001\",\"prediction\":\"\\\\boxed{B}\"},{\"id\":\"v12_025\",\"prediction\":\"\\\\boxed{B}\"},{\"id\":\"v12_026\",\"prediction\":\"\\\\boxed{B}\"},{\"id\":\"v12_027\",\"prediction\":\"\\\\boxed{B}\"},{\"id\":\"v12_028\",\"prediction\":\"\\\\boxed{A}\"}]}\n",
+          "stderr": " -n \\\"crypto|BTC|ETH|supportable|supportable right now|guardrail|proxy\\\" '/Users/zeyu/Documents/bach_private_cache/.bench/codex_home_skill/skills/causal-abel/references/question-routing.md'\" in /Users/zeyu/Documents/bach_private_cache/.bench/v12-general-finance-results-20260325-183929/skill/workspace succeeded in 0ms:\n33:Do not stop at \"the graph only has equities and crypto.\" Route the question through proxy tickers that encode the relevant dimensions as market signals, then run CAP exploration on those proxies. Always say clearly that this is a proxy-based causal read, not a direct model of personal aptitude or life satisfaction.\n50:   - `proxy_routed`: map to proxy dimensions and proxy tickers.\n56:   - After the proxy set is stable, run a short-term observational pass on anchors\n66:   - For `proxy_routed` questions, this is the default second stage, not an optional flourish.\n68:   - Search only for a graph-grounded target: one edge, one candidate node, one sector, or one proxy dimension at a time.\n78:7. If search tools are available, use them to explain a known edge, path, or proxy tension.\n86:   - State the weakest link in the graph path, bridge node, or proxy mapping.\n104:2. If the input looks like a real ticker such as `NVDA`, `SPOT`, or `ETHUSD`, default to `<ticker>_close`.\n105:3. If the input is a bare crypto alias such as `BTC`, `ETH`, or `SOL`, expand it to `<alias>USD_close` first.\n107:5. If the input is a company name, brand, or proxy phrase such as `Spotify`, `New York Times`, or `music streaming`, map it to a real ticker first.\n115:- For crypto, the practical executable form is usually `*USD_close` or `*USD_volume`.\n116:- `BTCUSD_close` is currently a bad bridge candidate.\n228:Map the question to decision dimensions, then choose 3-5 proxy tickers that encode those dimensions as market signals.\n230:| Dimension | Proxy tickers | What they proxy |\n245:- Include at least one proxy from the opposite side of the decision when possible.\n247:- For live Abel CAP calls, map proxies to real Abel node ids before probing; the current public graph expects `<ticker>_close` or `<ticker>_volume`, not free-form proxy labels.\n248:- Treat proxy tickers in this table as routing anchors, not as proof that the exact node is present in the current graph. Normalize first, then validate with the live surface if existence is uncertain.\n250:- In user-facing prose, translate proxy nodes into economic roles first.\n251:- If no honest proxy set exists, say so instead of forcing a story.\n252:- In a multi-round loop, do not spread attention evenly. Keep following the proxy, path, or bridge node that most improves the answer.\n2026-03-25T10:40:07.168055Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T10:40:07.168095Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-25T10:40:07.523395Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T10:40:07.523422Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\ncodex\n{\"predictions\":[{\"id\":\"v12_001\",\"prediction\":\"\\\\boxed{B}\"},{\"id\":\"v12_025\",\"prediction\":\"\\\\boxed{B}\"},{\"id\":\"v12_026\",\"prediction\":\"\\\\boxed{B}\"},{\"id\":\"v12_027\",\"prediction\":\"\\\\boxed{B}\"},{\"id\":\"v12_028\",\"prediction\":\"\\\\boxed{A}\"}]}\ntokens used\n16,663\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v12_001\",\"prediction\":\"\\\\boxed{B}\"},{\"id\":\"v12_025\",\"prediction\":\"\\\\boxed{B}\"},{\"id\":\"v12_026\",\"prediction\":\"\\\\boxed{B}\"},{\"id\":\"v12_027\",\"prediction\":\"\\\\boxed{B}\"},{\"id\":\"v12_028\",\"prediction\":\"\\\\boxed{A}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v12_001",
+                "prediction": "\\boxed{B}"
+              },
+              {
+                "id": "v12_025",
+                "prediction": "\\boxed{B}"
+              },
+              {
+                "id": "v12_026",
+                "prediction": "\\boxed{B}"
+              },
+              {
+                "id": "v12_027",
+                "prediction": "\\boxed{B}"
+              },
+              {
+                "id": "v12_028",
+                "prediction": "\\boxed{A}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v12_001",
+              "prediction": "\\boxed{B}"
+            },
+            {
+              "id": "v12_025",
+              "prediction": "\\boxed{B}"
+            },
+            {
+              "id": "v12_026",
+              "prediction": "\\boxed{B}"
+            },
+            {
+              "id": "v12_027",
+              "prediction": "\\boxed{B}"
+            },
+            {
+              "id": "v12_028",
+              "prediction": "\\boxed{A}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 5,
+            "prediction_count_returned": 5,
+            "valid_prediction_count": 5,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        }
+      ]
+    }
+  },
+  "cases": [
+    {
+      "id": "v12_001",
+      "category": "proxy_selection",
+      "question": "If you need one graph-grounded crypto risk proxy for a meeting right now, which is the safest anchor to lean on?",
+      "answer_box": "\\boxed{B}",
+      "base_prediction": "\\boxed{A}",
+      "skill_prediction": "\\boxed{B}",
+      "base_correct": false,
+      "skill_correct": true
+    },
+    {
+      "id": "v12_025",
+      "category": "proxy_selection",
+      "question": "If you could keep only one crypto name on a graph-grounded watchlist today, which one survives the filter?",
+      "answer_box": "\\boxed{B}",
+      "base_prediction": "\\boxed{A}",
+      "skill_prediction": "\\boxed{B}",
+      "base_correct": false,
+      "skill_correct": true
+    },
+    {
+      "id": "v12_026",
+      "category": "proxy_selection",
+      "question": "Which side is easier to defend in a graph-grounded crypto note right now?",
+      "answer_box": "\\boxed{B}",
+      "base_prediction": "\\boxed{A}",
+      "skill_prediction": "\\boxed{B}",
+      "base_correct": false,
+      "skill_correct": true
+    },
+    {
+      "id": "v12_027",
+      "category": "coverage_guardrail",
+      "question": "Which statement is safest if you want to stay graph-grounded on crypto today?",
+      "answer_box": "\\boxed{B}",
+      "base_prediction": "\\boxed{A}",
+      "skill_prediction": "\\boxed{B}",
+      "base_correct": false,
+      "skill_correct": true
+    },
+    {
+      "id": "v12_028",
+      "category": "coverage_guardrail",
+      "question": "Which name should make you more nervous if someone claims it is a graph-grounded crypto live read today?",
+      "answer_box": "\\boxed{A}",
+      "base_prediction": "\\boxed{B}",
+      "skill_prediction": "\\boxed{A}",
+      "base_correct": false,
+      "skill_correct": true
+    }
+  ],
+  "summary": {
+    "prediction_diff_count": 5,
+    "base_accuracy": 0.0,
+    "skill_accuracy": 1.0,
+    "base_correct": 0,
+    "skill_correct": 5,
+    "base_duration_seconds": 65.43,
+    "skill_duration_seconds": 81.74
+  }
+}

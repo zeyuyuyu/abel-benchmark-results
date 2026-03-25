@@ -1,0 +1,814 @@
+{
+  "summary": {
+    "version": "v12-general-finance-challenge",
+    "snapshot_label": "March 25, 2026 (GMT+8)",
+    "case_count": 28,
+    "category_counts": {
+      "coverage_guardrail": 7,
+      "market_story": 2,
+      "proxy_selection": 9,
+      "route_membership": 6,
+      "shortcut_guardrail": 2,
+      "stress_boundary": 2
+    },
+    "notes": [
+      "Natural user-facing finance questions only; no Abel or CAP wording in prompts.",
+      "Ground truth is derived from the live Abel snapshot recorded in artifacts/.",
+      "This is a targeted challenge set meant to expose routing, proxy-choice, and guardrail differences."
+    ]
+  },
+  "cases": [
+    {
+      "id": "v12_001",
+      "futurex_pattern": "winner market",
+      "category": "proxy_selection",
+      "question": "If you need one graph-grounded crypto risk proxy for a meeting right now, which is the safest anchor to lean on?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you need one graph-grounded crypto risk proxy for a meeting right now, which is the safest anchor to lean on?\nA.  Bitcoin\nB.  Ethereum\nC.  Both Bitcoin and Ethereum are equally defensible\nD.  Neither is safe to lean on\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Bitcoin"
+        },
+        {
+          "label": "B",
+          "text": "Ethereum"
+        },
+        {
+          "label": "C",
+          "text": "Both Bitcoin and Ethereum are equally defensible"
+        },
+        {
+          "label": "D",
+          "text": "Neither is safe to lean on"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "A PM or trader can naturally ask which crypto proxy is safer to reference in a live discussion."
+    },
+    {
+      "id": "v12_002",
+      "futurex_pattern": "winner market",
+      "category": "proxy_selection",
+      "question": "If you need one graph-grounded inflation-sensitive commodity anchor today, which is the safest one to lean on?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you need one graph-grounded inflation-sensitive commodity anchor today, which is the safest one to lean on?\nA.  Gold\nB.  Crude oil\nC.  XLE\nD.  Skip this graph for that commodity call\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Gold"
+        },
+        {
+          "label": "B",
+          "text": "Crude oil"
+        },
+        {
+          "label": "C",
+          "text": "XLE"
+        },
+        {
+          "label": "D",
+          "text": "Skip this graph for that commodity call"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This reads like a normal macro desk question about what proxy to trust right now."
+    },
+    {
+      "id": "v12_003",
+      "futurex_pattern": "winner market",
+      "category": "proxy_selection",
+      "question": "If you want a shortcut stand-in for Nvidia today, which is the least misleading choice?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you want a shortcut stand-in for Nvidia today, which is the least misleading choice?\nA.  QQQ\nB.  SPY\nC.  SOXX\nD.  Do not use any of those shortcut proxies\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "QQQ"
+        },
+        {
+          "label": "B",
+          "text": "SPY"
+        },
+        {
+          "label": "C",
+          "text": "SOXX"
+        },
+        {
+          "label": "D",
+          "text": "Do not use any of those shortcut proxies"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "Users often ask whether a broad-market shortcut is good enough for a live conversation."
+    },
+    {
+      "id": "v12_004",
+      "futurex_pattern": "roster membership",
+      "category": "coverage_guardrail",
+      "question": "Which of these shortlists is fully supportable from today's public market graph?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which of these shortlists is fully supportable from today's public market graph?\nA.  Ethereum, crude oil, and Apple\nB.  Bitcoin, gold, and SPY\nC.  XLE, USO, and SOXX\nD.  Bitcoin, Ethereum, and gold\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Ethereum, crude oil, and Apple"
+        },
+        {
+          "label": "B",
+          "text": "Bitcoin, gold, and SPY"
+        },
+        {
+          "label": "C",
+          "text": "XLE, USO, and SOXX"
+        },
+        {
+          "label": "D",
+          "text": "Bitcoin, Ethereum, and gold"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This is a natural 'which list can I safely present' question for a meeting or note."
+    },
+    {
+      "id": "v12_005",
+      "futurex_pattern": "statement-truth set",
+      "category": "coverage_guardrail",
+      "question": "Which of these names can you safely present as graph-grounded live reads today?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which of these names can you safely present as graph-grounded live reads today?\nA.  Apple\nB.  Nvidia\nC.  Ethereum\nD.  Crude oil\nE.  Bitcoin\nF.  Gold\nG.  XLE\nH.  SOXX\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Apple"
+        },
+        {
+          "label": "B",
+          "text": "Nvidia"
+        },
+        {
+          "label": "C",
+          "text": "Ethereum"
+        },
+        {
+          "label": "D",
+          "text": "Crude oil"
+        },
+        {
+          "label": "E",
+          "text": "Bitcoin"
+        },
+        {
+          "label": "F",
+          "text": "Gold"
+        },
+        {
+          "label": "G",
+          "text": "XLE"
+        },
+        {
+          "label": "H",
+          "text": "SOXX"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This is the kind of filter a live analyst uses before naming concrete assets in a deck or call."
+    },
+    {
+      "id": "v12_006",
+      "futurex_pattern": "statement-truth set",
+      "category": "coverage_guardrail",
+      "question": "Which of these \"obvious market proxies\" should make you nervous if someone claims they are graph-grounded live reads today?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which of these \"obvious market proxies\" should make you nervous if someone claims they are graph-grounded live reads today?\nA.  Bitcoin\nB.  Gold\nC.  QQQ\nD.  SPY\nE.  SOXX\nF.  XLE\nG.  USO\nH.  Ethereum\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Bitcoin"
+        },
+        {
+          "label": "B",
+          "text": "Gold"
+        },
+        {
+          "label": "C",
+          "text": "QQQ"
+        },
+        {
+          "label": "D",
+          "text": "SPY"
+        },
+        {
+          "label": "E",
+          "text": "SOXX"
+        },
+        {
+          "label": "F",
+          "text": "XLE"
+        },
+        {
+          "label": "G",
+          "text": "USO"
+        },
+        {
+          "label": "H",
+          "text": "Ethereum"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "The wording stays user-facing while testing whether the model knows which proxies are actually supportable."
+    },
+    {
+      "id": "v12_007",
+      "futurex_pattern": "statement-truth set",
+      "category": "route_membership",
+      "question": "Which of these names actually show directed paths into Nvidia on today's market map?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which of these names actually show directed paths into Nvidia on today's market map?\nA.  Apple\nB.  AMD\nC.  Broadcom\nD.  TSM\nE.  QQQ\nF.  SPY\nG.  SOXX\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Apple"
+        },
+        {
+          "label": "B",
+          "text": "AMD"
+        },
+        {
+          "label": "C",
+          "text": "Broadcom"
+        },
+        {
+          "label": "D",
+          "text": "TSM"
+        },
+        {
+          "label": "E",
+          "text": "QQQ"
+        },
+        {
+          "label": "F",
+          "text": "SPY"
+        },
+        {
+          "label": "G",
+          "text": "SOXX"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "A user can naturally ask which names are real live routes into Nvidia rather than placeholders."
+    },
+    {
+      "id": "v12_008",
+      "futurex_pattern": "statement-truth set",
+      "category": "route_membership",
+      "question": "Which of these names actually show directed paths into AMD on today's market map?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which of these names actually show directed paths into AMD on today's market map?\nA.  Apple\nB.  Nvidia\nC.  Broadcom\nD.  TSM\nE.  QQQ\nF.  SPY\nG.  SOXX\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Apple"
+        },
+        {
+          "label": "B",
+          "text": "Nvidia"
+        },
+        {
+          "label": "C",
+          "text": "Broadcom"
+        },
+        {
+          "label": "D",
+          "text": "TSM"
+        },
+        {
+          "label": "E",
+          "text": "QQQ"
+        },
+        {
+          "label": "F",
+          "text": "SPY"
+        },
+        {
+          "label": "G",
+          "text": "SOXX"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This mirrors a real watchlist-building question around AMD spillovers."
+    },
+    {
+      "id": "v12_009",
+      "futurex_pattern": "roster membership",
+      "category": "route_membership",
+      "question": "If you're building a live watchlist to explain Nvidia through local market structure, which basket is more defensible?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you're building a live watchlist to explain Nvidia through local market structure, which basket is more defensible?\nA.  Apple, AMD, Broadcom, and TSM\nB.  QQQ, SPY, SOXX, and Bitcoin\nC.  Gold, XLE, USO, and SPY\nD.  Ethereum, Bitcoin, gold, and QQQ\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Apple, AMD, Broadcom, and TSM"
+        },
+        {
+          "label": "B",
+          "text": "QQQ, SPY, SOXX, and Bitcoin"
+        },
+        {
+          "label": "C",
+          "text": "Gold, XLE, USO, and SPY"
+        },
+        {
+          "label": "D",
+          "text": "Ethereum, Bitcoin, gold, and QQQ"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This is a natural PM question about what should be on the first live monitoring screen."
+    },
+    {
+      "id": "v12_010",
+      "futurex_pattern": "roster membership",
+      "category": "route_membership",
+      "question": "If you're building a live watchlist to explain AMD through local market structure, which basket is more defensible?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you're building a live watchlist to explain AMD through local market structure, which basket is more defensible?\nA.  Apple, Nvidia, Broadcom, and TSM\nB.  QQQ, SPY, SOXX, and Bitcoin\nC.  Gold, XLE, USO, and SPY\nD.  Ethereum, Bitcoin, gold, and QQQ\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Apple, Nvidia, Broadcom, and TSM"
+        },
+        {
+          "label": "B",
+          "text": "QQQ, SPY, SOXX, and Bitcoin"
+        },
+        {
+          "label": "C",
+          "text": "Gold, XLE, USO, and SPY"
+        },
+        {
+          "label": "D",
+          "text": "Ethereum, Bitcoin, gold, and QQQ"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "It stays natural while testing whether the model prefers real local structure over generic placeholders."
+    },
+    {
+      "id": "v12_011",
+      "futurex_pattern": "statement-truth set",
+      "category": "shortcut_guardrail",
+      "question": "Which of these \"obvious shortcut\" routes into Nvidia should you actually avoid leaning on today?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which of these \"obvious shortcut\" routes into Nvidia should you actually avoid leaning on today?\nA.  QQQ\nB.  SPY\nC.  SOXX\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "QQQ"
+        },
+        {
+          "label": "B",
+          "text": "SPY"
+        },
+        {
+          "label": "C",
+          "text": "SOXX"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "Users naturally ask which shortcuts are acceptable and which ones are too sloppy."
+    },
+    {
+      "id": "v12_012",
+      "futurex_pattern": "statement-truth set",
+      "category": "shortcut_guardrail",
+      "question": "Which of these \"obvious shortcut\" routes into AMD should you actually avoid leaning on today?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which of these \"obvious shortcut\" routes into AMD should you actually avoid leaning on today?\nA.  QQQ\nB.  SPY\nC.  SOXX\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "QQQ"
+        },
+        {
+          "label": "B",
+          "text": "SPY"
+        },
+        {
+          "label": "C",
+          "text": "SOXX"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This is a clean guardrail question for anyone building a quick AMD story."
+    },
+    {
+      "id": "v12_013",
+      "futurex_pattern": "winner market",
+      "category": "market_story",
+      "question": "Which story is better supported today for Nvidia?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which story is better supported today for Nvidia?\nA.  Local single-name transmission exists while the obvious beta shortcuts look weak\nB.  Broad beta proxies are cleaner than single-name routes\nC.  Both stories are equally well supported\nD.  Neither story has useful support\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Local single-name transmission exists while the obvious beta shortcuts look weak"
+        },
+        {
+          "label": "B",
+          "text": "Broad beta proxies are cleaner than single-name routes"
+        },
+        {
+          "label": "C",
+          "text": "Both stories are equally well supported"
+        },
+        {
+          "label": "D",
+          "text": "Neither story has useful support"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "A strategist could naturally ask whether the better story is local transmission or broad beta."
+    },
+    {
+      "id": "v12_014",
+      "futurex_pattern": "winner market",
+      "category": "market_story",
+      "question": "Which story is better supported today for AMD?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which story is better supported today for AMD?\nA.  Local single-name transmission exists while the obvious beta shortcuts look weak\nB.  Broad beta proxies are cleaner than single-name routes\nC.  Both stories are equally well supported\nD.  Neither story has useful support\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Local single-name transmission exists while the obvious beta shortcuts look weak"
+        },
+        {
+          "label": "B",
+          "text": "Broad beta proxies are cleaner than single-name routes"
+        },
+        {
+          "label": "C",
+          "text": "Both stories are equally well supported"
+        },
+        {
+          "label": "D",
+          "text": "Neither story has useful support"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This keeps the question user-facing while still forcing route discrimination."
+    },
+    {
+      "id": "v12_015",
+      "futurex_pattern": "winner market",
+      "category": "stress_boundary",
+      "question": "If you only had bandwidth for one first-pass stress question around AMD today, which is the most defensible place to start?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you only had bandwidth for one first-pass stress question around AMD today, which is the most defensible place to start?\nA.  If Nvidia breaks first, what does that mean for AMD?\nB.  If SOXX breaks first, what does that mean for AMD?\nC.  If SPY breaks first, what does that mean for AMD?\nD.  If Bitcoin breaks first, what does that mean for AMD?\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "If Nvidia breaks first, what does that mean for AMD?"
+        },
+        {
+          "label": "B",
+          "text": "If SOXX breaks first, what does that mean for AMD?"
+        },
+        {
+          "label": "C",
+          "text": "If SPY breaks first, what does that mean for AMD?"
+        },
+        {
+          "label": "D",
+          "text": "If Bitcoin breaks first, what does that mean for AMD?"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "A live risk discussion often starts with a single 'best first stress question'."
+    },
+    {
+      "id": "v12_016",
+      "futurex_pattern": "statement-truth set",
+      "category": "stress_boundary",
+      "question": "Which statements are still safe to say about AMD stress tests today?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which statements are still safe to say about AMD stress tests today?\nA.  Nvidia is structurally connected to AMD\nB.  SOXX is structurally connected to AMD\nC.  The graph already gives a clean quantified \"push Nvidia, get AMD\" estimate\nD.  Nvidia is the more defensible first stress lever for AMD than SOXX\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nvidia is structurally connected to AMD"
+        },
+        {
+          "label": "B",
+          "text": "SOXX is structurally connected to AMD"
+        },
+        {
+          "label": "C",
+          "text": "The graph already gives a clean quantified \"push Nvidia, get AMD\" estimate"
+        },
+        {
+          "label": "D",
+          "text": "Nvidia is the more defensible first stress lever for AMD than SOXX"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "A quant or PM can naturally ask which causal claims are safe versus overstated before presenting them."
+    },
+    {
+      "id": "v12_017",
+      "futurex_pattern": "winner market",
+      "category": "proxy_selection",
+      "question": "If you need one graph-grounded pair-trade lens today, which pair is the cleanest to lean on?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you need one graph-grounded pair-trade lens today, which pair is the cleanest to lean on?\nA.  Ethereum and crude oil\nB.  Bitcoin and gold\nC.  SPY and QQQ\nD.  XLE and USO\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Ethereum and crude oil"
+        },
+        {
+          "label": "B",
+          "text": "Bitcoin and gold"
+        },
+        {
+          "label": "C",
+          "text": "SPY and QQQ"
+        },
+        {
+          "label": "D",
+          "text": "XLE and USO"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This reads like a real pair-selection question for a fast market discussion."
+    },
+    {
+      "id": "v12_018",
+      "futurex_pattern": "winner market",
+      "category": "proxy_selection",
+      "question": "If someone insists on a live \"broad US equity beta\" read from this graph today, what is the safest answer?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If someone insists on a live \"broad US equity beta\" read from this graph today, what is the safest answer?\nA.  Lean on QQQ\nB.  Lean on SPY\nC.  Either is fine\nD.  Do not lean on either one\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Lean on QQQ"
+        },
+        {
+          "label": "B",
+          "text": "Lean on SPY"
+        },
+        {
+          "label": "C",
+          "text": "Either is fine"
+        },
+        {
+          "label": "D",
+          "text": "Do not lean on either one"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "Users often ask for the least-bad broad beta stand-in, and sometimes the right answer is to decline the shortcut."
+    },
+    {
+      "id": "v12_019",
+      "futurex_pattern": "statement-truth set",
+      "category": "route_membership",
+      "question": "Which of these names look like real two-way market neighbors of Nvidia today, rather than one-way or placeholder shortcuts?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which of these names look like real two-way market neighbors of Nvidia today, rather than one-way or placeholder shortcuts?\nA.  AMD\nB.  Broadcom\nC.  TSM\nD.  QQQ\nE.  SPY\nF.  SOXX\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "AMD"
+        },
+        {
+          "label": "B",
+          "text": "Broadcom"
+        },
+        {
+          "label": "C",
+          "text": "TSM"
+        },
+        {
+          "label": "D",
+          "text": "QQQ"
+        },
+        {
+          "label": "E",
+          "text": "SPY"
+        },
+        {
+          "label": "F",
+          "text": "SOXX"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "Two-way neighbor language is natural in a market-monitoring context and harder than one-direction shortcut questions."
+    },
+    {
+      "id": "v12_020",
+      "futurex_pattern": "statement-truth set",
+      "category": "route_membership",
+      "question": "Which of these names look like real two-way market neighbors of AMD today, rather than one-way or placeholder shortcuts?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which of these names look like real two-way market neighbors of AMD today, rather than one-way or placeholder shortcuts?\nA.  Nvidia\nB.  Broadcom\nC.  TSM\nD.  QQQ\nE.  SPY\nF.  SOXX\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nvidia"
+        },
+        {
+          "label": "B",
+          "text": "Broadcom"
+        },
+        {
+          "label": "C",
+          "text": "TSM"
+        },
+        {
+          "label": "D",
+          "text": "QQQ"
+        },
+        {
+          "label": "E",
+          "text": "SPY"
+        },
+        {
+          "label": "F",
+          "text": "SOXX"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This mirrors how a trader asks whether two names really belong in the same local monitoring cluster."
+    },
+    {
+      "id": "v12_021",
+      "futurex_pattern": "winner market",
+      "category": "proxy_selection",
+      "question": "If you need one graph-grounded commodity proxy right now, which is the safest one to cite?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you need one graph-grounded commodity proxy right now, which is the safest one to cite?\nA.  Gold\nB.  Crude oil\nC.  XLE\nD.  USO\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Gold"
+        },
+        {
+          "label": "B",
+          "text": "Crude oil"
+        },
+        {
+          "label": "C",
+          "text": "XLE"
+        },
+        {
+          "label": "D",
+          "text": "USO"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This is a plain market-facing proxy choice question with no product-internal language."
+    },
+    {
+      "id": "v12_022",
+      "futurex_pattern": "statement-truth set",
+      "category": "coverage_guardrail",
+      "question": "Which of these names can you safely present as graph-grounded live reads today?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which of these names can you safely present as graph-grounded live reads today?\nA.  Ethereum\nB.  Crude oil\nC.  Bitcoin\nD.  Gold\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Ethereum"
+        },
+        {
+          "label": "B",
+          "text": "Crude oil"
+        },
+        {
+          "label": "C",
+          "text": "Bitcoin"
+        },
+        {
+          "label": "D",
+          "text": "Gold"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "A PM can naturally ask which names are safe to quote in a graph-grounded note right now."
+    },
+    {
+      "id": "v12_023",
+      "futurex_pattern": "statement-truth set",
+      "category": "coverage_guardrail",
+      "question": "Which of these should make you nervous if someone claims they are graph-grounded live reads today?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which of these should make you nervous if someone claims they are graph-grounded live reads today?\nA.  Bitcoin\nB.  Gold\nC.  Ethereum\nD.  Crude oil\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Bitcoin"
+        },
+        {
+          "label": "B",
+          "text": "Gold"
+        },
+        {
+          "label": "C",
+          "text": "Ethereum"
+        },
+        {
+          "label": "D",
+          "text": "Crude oil"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This is the negative version of a standard supportability question."
+    },
+    {
+      "id": "v12_024",
+      "futurex_pattern": "winner market",
+      "category": "proxy_selection",
+      "question": "If you need one graph-grounded pair-trade lens today, which pair is the cleanest to lean on?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you need one graph-grounded pair-trade lens today, which pair is the cleanest to lean on?\nA.  Ethereum and crude oil\nB.  Bitcoin and gold\nC.  SPY and QQQ\nD.  XLE and USO\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Ethereum and crude oil"
+        },
+        {
+          "label": "B",
+          "text": "Bitcoin and gold"
+        },
+        {
+          "label": "C",
+          "text": "SPY and QQQ"
+        },
+        {
+          "label": "D",
+          "text": "XLE and USO"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This keeps the question fully natural while testing whether the model knows which pair is actually supportable."
+    },
+    {
+      "id": "v12_025",
+      "futurex_pattern": "winner market",
+      "category": "proxy_selection",
+      "question": "If you could keep only one crypto name on a graph-grounded watchlist today, which one survives the filter?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: If you could keep only one crypto name on a graph-grounded watchlist today, which one survives the filter?\nA.  Bitcoin\nB.  Ethereum\nC.  Both Bitcoin and Ethereum\nD.  Neither one survives the filter\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Bitcoin"
+        },
+        {
+          "label": "B",
+          "text": "Ethereum"
+        },
+        {
+          "label": "C",
+          "text": "Both Bitcoin and Ethereum"
+        },
+        {
+          "label": "D",
+          "text": "Neither one survives the filter"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This is a natural watchlist triage question for a trader or PM."
+    },
+    {
+      "id": "v12_026",
+      "futurex_pattern": "winner market",
+      "category": "proxy_selection",
+      "question": "Which side is easier to defend in a graph-grounded crypto note right now?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which side is easier to defend in a graph-grounded crypto note right now?\nA.  Bitcoin\nB.  Ethereum\nC.  Both are equally easy to defend\nD.  Neither is easy to defend\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Bitcoin"
+        },
+        {
+          "label": "B",
+          "text": "Ethereum"
+        },
+        {
+          "label": "C",
+          "text": "Both are equally easy to defend"
+        },
+        {
+          "label": "D",
+          "text": "Neither is easy to defend"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This sounds like a normal editorial question before sending a market note."
+    },
+    {
+      "id": "v12_027",
+      "futurex_pattern": "winner market",
+      "category": "coverage_guardrail",
+      "question": "Which statement is safest if you want to stay graph-grounded on crypto today?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which statement is safest if you want to stay graph-grounded on crypto today?\nA.  Bitcoin is supportable right now\nB.  Ethereum is supportable right now\nC.  Both Bitcoin and Ethereum are supportable right now\nD.  Neither Bitcoin nor Ethereum is supportable right now\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Bitcoin is supportable right now"
+        },
+        {
+          "label": "B",
+          "text": "Ethereum is supportable right now"
+        },
+        {
+          "label": "C",
+          "text": "Both Bitcoin and Ethereum are supportable right now"
+        },
+        {
+          "label": "D",
+          "text": "Neither Bitcoin nor Ethereum is supportable right now"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "This is a realistic wording for a PM checking how far they can safely go in a live note."
+    },
+    {
+      "id": "v12_028",
+      "futurex_pattern": "winner market",
+      "category": "coverage_guardrail",
+      "question": "Which name should make you more nervous if someone claims it is a graph-grounded crypto live read today?",
+      "prompt": "You are helping a user make a market decision. Assume today's date is March 25, 2026 (GMT+8). Answer the user's question below by choosing the best option(s).\n\nUser question: Which name should make you more nervous if someone claims it is a graph-grounded crypto live read today?\nA.  Bitcoin\nB.  Ethereum\nC.  Both names should make you equally nervous\nD.  Neither name should make you nervous\n\nYour final answer must be in boxed format only.\nUse \\boxed{A} for a single option, or \\boxed{B, C} for multiple options.\nDo not add explanation outside the box.",
+      "options": [
+        {
+          "label": "A",
+          "text": "Bitcoin"
+        },
+        {
+          "label": "B",
+          "text": "Ethereum"
+        },
+        {
+          "label": "C",
+          "text": "Both names should make you equally nervous"
+        },
+        {
+          "label": "D",
+          "text": "Neither name should make you nervous"
+        }
+      ],
+      "why_this_is_a_natural_user_question": "It stays user-facing while probing whether the model can spot the weak crypto anchor."
+    }
+  ]
+}

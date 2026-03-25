@@ -1,0 +1,118 @@
+{
+  "slug": "path_AMD_close__NVDA_close",
+  "captured_at": "2026-03-25T09:46:39.102052+00:00",
+  "command": [
+    "/usr/local/bin/python3",
+    "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+    "--base-url",
+    "https://cap.abel.ai",
+    "paths",
+    "AMD_close",
+    "NVDA_close",
+    "--max-paths",
+    "3",
+    "--compact"
+  ],
+  "exit_code": 0,
+  "attempt": 1,
+  "stdout": {
+    "ok": true,
+    "status_code": 200,
+    "cap_version": "0.2.2",
+    "request_id": "1833e07a-41a5-43e0-93f4-e1d3dd14c6d7",
+    "verb": "graph.paths",
+    "status": "success",
+    "result": {
+      "reasoning_mode": "structural_semantics",
+      "identification_status": "not_applicable",
+      "assumptions": [
+        "causal_sufficiency",
+        "faithfulness",
+        "no_instantaneous_effects",
+        "no_latent_confounders_addressed",
+        "abel_structural_summary_only",
+        "abel_hidden_field_policy"
+      ],
+      "source_node_id": "AMD_close",
+      "target_node_id": "NVDA_close",
+      "connected": true,
+      "path_count": 1,
+      "paths": [
+        {
+          "distance": 4,
+          "nodes": [
+            {
+              "node_id": "AMD_close",
+              "node_name": "Advanced Micro Devices, Inc. close price",
+              "node_type": "close_price",
+              "domain": "equities"
+            },
+            {
+              "node_id": "WKAVAUSD_close",
+              "node_name": "Wrapped Kava USD close price",
+              "node_type": "close_price",
+              "domain": "crypto"
+            },
+            {
+              "node_id": "TPX_close",
+              "node_name": "Tempur Sealy International, Inc. close price",
+              "node_type": "close_price",
+              "domain": "equities"
+            },
+            {
+              "node_id": "AGNCO_close",
+              "node_name": "AGNC Investment Corp. close price",
+              "node_type": "close_price",
+              "domain": "equities"
+            },
+            {
+              "node_id": "NVDA_close",
+              "node_name": "NVIDIA Corporation close price",
+              "node_type": "close_price",
+              "domain": "equities"
+            }
+          ],
+          "edges": [
+            {
+              "from_node_id": "AMD_close",
+              "to_node_id": "WKAVAUSD_close",
+              "edge_type": "causes",
+              "tau": 14,
+              "tau_duration": "PT14H"
+            },
+            {
+              "from_node_id": "WKAVAUSD_close",
+              "to_node_id": "TPX_close",
+              "edge_type": "causes",
+              "tau": 77,
+              "tau_duration": "PT77H"
+            },
+            {
+              "from_node_id": "TPX_close",
+              "to_node_id": "AGNCO_close",
+              "edge_type": "causes",
+              "tau": 56,
+              "tau_duration": "PT56H"
+            },
+            {
+              "from_node_id": "AGNCO_close",
+              "to_node_id": "NVDA_close",
+              "edge_type": "causes",
+              "tau": 35,
+              "tau_duration": "PT35H"
+            }
+          ]
+        }
+      ]
+    },
+    "provenance": {
+      "algorithm": "PCMCI",
+      "graph_version": "CausalNodeV2",
+      "computation_time_ms": 19,
+      "server_name": "abel-cap",
+      "server_version": "0.1.0",
+      "cap_spec_version": "0.2.2"
+    }
+  },
+  "stderr": ""
+}

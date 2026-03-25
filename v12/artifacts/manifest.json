@@ -1,0 +1,600 @@
+{
+  "entries": [
+    {
+      "slug": "normalize_BTC",
+      "file": "artifacts/raw/normalize_BTC.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "normalize-node",
+        "BTC",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "normalize_ETH",
+      "file": "artifacts/raw/normalize_ETH.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "normalize-node",
+        "ETH",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "observe_AAPL_close",
+      "file": "artifacts/raw/observe_AAPL_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "observe",
+        "AAPL_close",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "observe_AMD_close",
+      "file": "artifacts/raw/observe_AMD_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "observe",
+        "AMD_close",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "observe_AVGO_close",
+      "file": "artifacts/raw/observe_AVGO_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "observe",
+        "AVGO_close",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "observe_BTCUSD_close",
+      "file": "artifacts/raw/observe_BTCUSD_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "observe",
+        "BTCUSD_close",
+        "--compact"
+      ],
+      "exit_code": 1,
+      "attempt": 1
+    },
+    {
+      "slug": "observe_CL_close",
+      "file": "artifacts/raw/observe_CL_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "observe",
+        "CL_close",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "observe_ETHUSD_close",
+      "file": "artifacts/raw/observe_ETHUSD_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "observe",
+        "ETHUSD_close",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "observe_GC_close",
+      "file": "artifacts/raw/observe_GC_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "observe",
+        "GC_close",
+        "--compact"
+      ],
+      "exit_code": 1,
+      "attempt": 1
+    },
+    {
+      "slug": "observe_NVDA_close",
+      "file": "artifacts/raw/observe_NVDA_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "observe",
+        "NVDA_close",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "observe_QQQ_close",
+      "file": "artifacts/raw/observe_QQQ_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "observe",
+        "QQQ_close",
+        "--compact"
+      ],
+      "exit_code": 1,
+      "attempt": 1
+    },
+    {
+      "slug": "observe_SOXX_close",
+      "file": "artifacts/raw/observe_SOXX_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "observe",
+        "SOXX_close",
+        "--compact"
+      ],
+      "exit_code": 1,
+      "attempt": 1
+    },
+    {
+      "slug": "observe_SPY_close",
+      "file": "artifacts/raw/observe_SPY_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "observe",
+        "SPY_close",
+        "--compact"
+      ],
+      "exit_code": 1,
+      "attempt": 1
+    },
+    {
+      "slug": "observe_TSM_close",
+      "file": "artifacts/raw/observe_TSM_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "observe",
+        "TSM_close",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "observe_USO_close",
+      "file": "artifacts/raw/observe_USO_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "observe",
+        "USO_close",
+        "--compact"
+      ],
+      "exit_code": 1,
+      "attempt": 1
+    },
+    {
+      "slug": "observe_XLE_close",
+      "file": "artifacts/raw/observe_XLE_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "observe",
+        "XLE_close",
+        "--compact"
+      ],
+      "exit_code": 1,
+      "attempt": 1
+    },
+    {
+      "slug": "path_AAPL_close__NVDA_close",
+      "file": "artifacts/raw/path_AAPL_close__NVDA_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "paths",
+        "AAPL_close",
+        "NVDA_close",
+        "--max-paths",
+        "3",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "path_AMD_close__NVDA_close",
+      "file": "artifacts/raw/path_AMD_close__NVDA_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "paths",
+        "AMD_close",
+        "NVDA_close",
+        "--max-paths",
+        "3",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "path_AVGO_close__NVDA_close",
+      "file": "artifacts/raw/path_AVGO_close__NVDA_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "paths",
+        "AVGO_close",
+        "NVDA_close",
+        "--max-paths",
+        "3",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "path_TSM_close__NVDA_close",
+      "file": "artifacts/raw/path_TSM_close__NVDA_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "paths",
+        "TSM_close",
+        "NVDA_close",
+        "--max-paths",
+        "3",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "path_QQQ_close__NVDA_close",
+      "file": "artifacts/raw/path_QQQ_close__NVDA_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "paths",
+        "QQQ_close",
+        "NVDA_close",
+        "--max-paths",
+        "3",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "path_SPY_close__NVDA_close",
+      "file": "artifacts/raw/path_SPY_close__NVDA_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "paths",
+        "SPY_close",
+        "NVDA_close",
+        "--max-paths",
+        "3",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "path_SOXX_close__NVDA_close",
+      "file": "artifacts/raw/path_SOXX_close__NVDA_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "paths",
+        "SOXX_close",
+        "NVDA_close",
+        "--max-paths",
+        "3",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "path_AAPL_close__AMD_close",
+      "file": "artifacts/raw/path_AAPL_close__AMD_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "paths",
+        "AAPL_close",
+        "AMD_close",
+        "--max-paths",
+        "3",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "path_NVDA_close__AMD_close",
+      "file": "artifacts/raw/path_NVDA_close__AMD_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "paths",
+        "NVDA_close",
+        "AMD_close",
+        "--max-paths",
+        "3",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "path_AVGO_close__AMD_close",
+      "file": "artifacts/raw/path_AVGO_close__AMD_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "paths",
+        "AVGO_close",
+        "AMD_close",
+        "--max-paths",
+        "3",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "path_TSM_close__AMD_close",
+      "file": "artifacts/raw/path_TSM_close__AMD_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "paths",
+        "TSM_close",
+        "AMD_close",
+        "--max-paths",
+        "3",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "path_QQQ_close__AMD_close",
+      "file": "artifacts/raw/path_QQQ_close__AMD_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "paths",
+        "QQQ_close",
+        "AMD_close",
+        "--max-paths",
+        "3",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "path_SPY_close__AMD_close",
+      "file": "artifacts/raw/path_SPY_close__AMD_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "paths",
+        "SPY_close",
+        "AMD_close",
+        "--max-paths",
+        "3",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "path_SOXX_close__AMD_close",
+      "file": "artifacts/raw/path_SOXX_close__AMD_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "paths",
+        "SOXX_close",
+        "AMD_close",
+        "--max-paths",
+        "3",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "path_NVDA_close__AVGO_close",
+      "file": "artifacts/raw/path_NVDA_close__AVGO_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "paths",
+        "NVDA_close",
+        "AVGO_close",
+        "--max-paths",
+        "3",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "path_AMD_close__AVGO_close",
+      "file": "artifacts/raw/path_AMD_close__AVGO_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "paths",
+        "AMD_close",
+        "AVGO_close",
+        "--max-paths",
+        "3",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "path_NVDA_close__TSM_close",
+      "file": "artifacts/raw/path_NVDA_close__TSM_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "paths",
+        "NVDA_close",
+        "TSM_close",
+        "--max-paths",
+        "3",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "path_AMD_close__TSM_close",
+      "file": "artifacts/raw/path_AMD_close__TSM_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "paths",
+        "AMD_close",
+        "TSM_close",
+        "--max-paths",
+        "3",
+        "--compact"
+      ],
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "slug": "intervene_NVDA_close__AMD_close",
+      "file": "artifacts/raw/intervene_NVDA_close__AMD_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "intervene-do",
+        "NVDA_close",
+        "0.05",
+        "--outcome-node",
+        "AMD_close",
+        "--compact"
+      ],
+      "exit_code": 1,
+      "attempt": 1
+    },
+    {
+      "slug": "intervene_SOXX_close__AMD_close",
+      "file": "artifacts/raw/intervene_SOXX_close__AMD_close.json",
+      "command": [
+        "/usr/local/bin/python3",
+        "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+        "--base-url",
+        "https://cap.abel.ai",
+        "intervene-do",
+        "SOXX_close",
+        "0.05",
+        "--outcome-node",
+        "AMD_close",
+        "--compact"
+      ],
+      "exit_code": 1,
+      "attempt": 1
+    }
+  ]
+}

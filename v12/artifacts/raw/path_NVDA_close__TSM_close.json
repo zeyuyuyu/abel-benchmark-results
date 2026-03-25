@@ -1,0 +1,92 @@
+{
+  "slug": "path_NVDA_close__TSM_close",
+  "captured_at": "2026-03-25T09:46:55.921292+00:00",
+  "command": [
+    "/usr/local/bin/python3",
+    "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+    "--base-url",
+    "https://cap.abel.ai",
+    "paths",
+    "NVDA_close",
+    "TSM_close",
+    "--max-paths",
+    "3",
+    "--compact"
+  ],
+  "exit_code": 0,
+  "attempt": 1,
+  "stdout": {
+    "ok": true,
+    "status_code": 200,
+    "cap_version": "0.2.2",
+    "request_id": "8fa9be65-a485-43b2-abce-ee610c4a0742",
+    "verb": "graph.paths",
+    "status": "success",
+    "result": {
+      "reasoning_mode": "structural_semantics",
+      "identification_status": "not_applicable",
+      "assumptions": [
+        "causal_sufficiency",
+        "faithfulness",
+        "no_instantaneous_effects",
+        "no_latent_confounders_addressed",
+        "abel_structural_summary_only",
+        "abel_hidden_field_policy"
+      ],
+      "source_node_id": "NVDA_close",
+      "target_node_id": "TSM_close",
+      "connected": true,
+      "path_count": 1,
+      "paths": [
+        {
+          "distance": 2,
+          "nodes": [
+            {
+              "node_id": "NVDA_close",
+              "node_name": "NVIDIA Corporation close price",
+              "node_type": "close_price",
+              "domain": "equities"
+            },
+            {
+              "node_id": "MBPUSD_close",
+              "node_name": "Mobipad USD close price",
+              "node_type": "close_price",
+              "domain": "crypto"
+            },
+            {
+              "node_id": "TSM_close",
+              "node_name": "Taiwan Semiconductor Manufacturing Company Limited close price",
+              "node_type": "close_price",
+              "domain": "equities"
+            }
+          ],
+          "edges": [
+            {
+              "from_node_id": "NVDA_close",
+              "to_node_id": "MBPUSD_close",
+              "edge_type": "causes",
+              "tau": 35,
+              "tau_duration": "PT35H"
+            },
+            {
+              "from_node_id": "MBPUSD_close",
+              "to_node_id": "TSM_close",
+              "edge_type": "causes",
+              "tau": 98,
+              "tau_duration": "PT98H"
+            }
+          ]
+        }
+      ]
+    },
+    "provenance": {
+      "algorithm": "PCMCI",
+      "graph_version": "CausalNodeV2",
+      "computation_time_ms": 17,
+      "server_name": "abel-cap",
+      "server_version": "0.1.0",
+      "cap_spec_version": "0.2.2"
+    }
+  },
+  "stderr": ""
+}

@@ -1,0 +1,41 @@
+{
+  "slug": "observe_SOXX_close",
+  "captured_at": "2026-03-25T09:46:32.400172+00:00",
+  "command": [
+    "/usr/local/bin/python3",
+    "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+    "--base-url",
+    "https://cap.abel.ai",
+    "observe",
+    "SOXX_close",
+    "--compact"
+  ],
+  "exit_code": 1,
+  "attempt": 1,
+  "stdout": {
+    "ok": false,
+    "status_code": 503,
+    "message": "Abel primitive service is unavailable.",
+    "error": {
+      "code": "service_unavailable",
+      "message": "Abel primitive service is unavailable.",
+      "details": {
+        "upstream_detail": "{\"message\":\"No materialized prediction history available for target_node=SOXX_close\"}"
+      }
+    },
+    "response_payload": {
+      "cap_version": "0.2.2",
+      "request_id": "9d351a3a-3bed-4e16-a4d8-308fd9498b4a",
+      "verb": "observe.predict",
+      "status": "error",
+      "error": {
+        "code": "service_unavailable",
+        "message": "Abel primitive service is unavailable.",
+        "details": {
+          "upstream_detail": "{\"message\":\"No materialized prediction history available for target_node=SOXX_close\"}"
+        }
+      }
+    }
+  },
+  "stderr": ""
+}

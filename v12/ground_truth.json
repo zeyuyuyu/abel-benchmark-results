@@ -1,0 +1,789 @@
+{
+  "summary": {
+    "version": "v12-general-finance-challenge",
+    "snapshot_label": "March 25, 2026 (GMT+8)",
+    "case_count": 28,
+    "category_counts": {
+      "coverage_guardrail": 7,
+      "market_story": 2,
+      "proxy_selection": 9,
+      "route_membership": 6,
+      "shortcut_guardrail": 2,
+      "stress_boundary": 2
+    },
+    "notes": [
+      "Natural user-facing finance questions only; no Abel or CAP wording in prompts.",
+      "Ground truth is derived from the live Abel snapshot recorded in artifacts/.",
+      "This is a targeted challenge set meant to expose routing, proxy-choice, and guardrail differences."
+    ]
+  },
+  "cases": [
+    {
+      "id": "v12_001",
+      "category": "proxy_selection",
+      "answer_letters": [
+        "B"
+      ],
+      "answer_box": "\\boxed{B}",
+      "abel_grounding": {
+        "availability": {
+          "BTC": "unavailable",
+          "ETH": "ok"
+        },
+        "normalized_nodes": {
+          "BTC": "BTCUSD_close",
+          "ETH": "ETHUSD_close"
+        }
+      }
+    },
+    {
+      "id": "v12_002",
+      "category": "proxy_selection",
+      "answer_letters": [
+        "B"
+      ],
+      "answer_box": "\\boxed{B}",
+      "abel_grounding": {
+        "availability": {
+          "GC": "unavailable",
+          "CL": "ok",
+          "XLE": "unavailable"
+        }
+      }
+    },
+    {
+      "id": "v12_003",
+      "category": "proxy_selection",
+      "answer_letters": [
+        "D"
+      ],
+      "answer_box": "\\boxed{D}",
+      "abel_grounding": {
+        "path_checks": {
+          "QQQ->NVDA": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SPY->NVDA": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SOXX->NVDA": {
+            "connected": false,
+            "path_count": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "v12_004",
+      "category": "coverage_guardrail",
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "abel_grounding": {
+        "availability": {
+          "ETH": "ok",
+          "CL": "ok",
+          "AAPL": "ok",
+          "BTC": "unavailable",
+          "GC": "unavailable",
+          "SPY": "unavailable",
+          "XLE": "unavailable",
+          "USO": "unavailable",
+          "SOXX": "unavailable"
+        }
+      }
+    },
+    {
+      "id": "v12_005",
+      "category": "coverage_guardrail",
+      "answer_letters": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_box": "\\boxed{A, B, C, D}",
+      "abel_grounding": {
+        "availability": {
+          "AAPL": "ok",
+          "NVDA": "ok",
+          "ETH": "ok",
+          "CL": "ok",
+          "BTC": "unavailable",
+          "GC": "unavailable",
+          "XLE": "unavailable",
+          "SOXX": "unavailable"
+        }
+      }
+    },
+    {
+      "id": "v12_006",
+      "category": "coverage_guardrail",
+      "answer_letters": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "answer_box": "\\boxed{A, B, C, D, E, F, G}",
+      "abel_grounding": {
+        "availability": {
+          "BTC": "unavailable",
+          "GC": "unavailable",
+          "QQQ": "unavailable",
+          "SPY": "unavailable",
+          "SOXX": "unavailable",
+          "XLE": "unavailable",
+          "USO": "unavailable",
+          "ETH": "ok"
+        }
+      }
+    },
+    {
+      "id": "v12_007",
+      "category": "route_membership",
+      "answer_letters": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_box": "\\boxed{A, B, C, D}",
+      "abel_grounding": {
+        "path_checks": {
+          "AAPL->NVDA": {
+            "connected": true,
+            "path_count": 1
+          },
+          "AMD->NVDA": {
+            "connected": true,
+            "path_count": 1
+          },
+          "AVGO->NVDA": {
+            "connected": true,
+            "path_count": 1
+          },
+          "TSM->NVDA": {
+            "connected": true,
+            "path_count": 1
+          },
+          "QQQ->NVDA": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SPY->NVDA": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SOXX->NVDA": {
+            "connected": false,
+            "path_count": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "v12_008",
+      "category": "route_membership",
+      "answer_letters": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_box": "\\boxed{A, B, C, D}",
+      "abel_grounding": {
+        "path_checks": {
+          "AAPL->AMD": {
+            "connected": true,
+            "path_count": 1
+          },
+          "NVDA->AMD": {
+            "connected": true,
+            "path_count": 1
+          },
+          "AVGO->AMD": {
+            "connected": true,
+            "path_count": 1
+          },
+          "TSM->AMD": {
+            "connected": true,
+            "path_count": 1
+          },
+          "QQQ->AMD": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SPY->AMD": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SOXX->AMD": {
+            "connected": false,
+            "path_count": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "v12_009",
+      "category": "route_membership",
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "abel_grounding": {
+        "availability": {
+          "AAPL": "ok",
+          "AMD": "ok",
+          "AVGO": "ok",
+          "TSM": "ok",
+          "QQQ": "unavailable",
+          "SPY": "unavailable",
+          "SOXX": "unavailable",
+          "BTC": "unavailable",
+          "GC": "unavailable",
+          "XLE": "unavailable",
+          "USO": "unavailable",
+          "ETH": "ok"
+        },
+        "path_checks": {
+          "AAPL->NVDA": {
+            "connected": true,
+            "path_count": 1
+          },
+          "AMD->NVDA": {
+            "connected": true,
+            "path_count": 1
+          },
+          "AVGO->NVDA": {
+            "connected": true,
+            "path_count": 1
+          },
+          "TSM->NVDA": {
+            "connected": true,
+            "path_count": 1
+          },
+          "QQQ->NVDA": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SPY->NVDA": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SOXX->NVDA": {
+            "connected": false,
+            "path_count": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "v12_010",
+      "category": "route_membership",
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "abel_grounding": {
+        "availability": {
+          "AAPL": "ok",
+          "NVDA": "ok",
+          "AVGO": "ok",
+          "TSM": "ok",
+          "QQQ": "unavailable",
+          "SPY": "unavailable",
+          "SOXX": "unavailable",
+          "BTC": "unavailable",
+          "GC": "unavailable",
+          "XLE": "unavailable",
+          "USO": "unavailable",
+          "ETH": "ok"
+        },
+        "path_checks": {
+          "AAPL->AMD": {
+            "connected": true,
+            "path_count": 1
+          },
+          "NVDA->AMD": {
+            "connected": true,
+            "path_count": 1
+          },
+          "AVGO->AMD": {
+            "connected": true,
+            "path_count": 1
+          },
+          "TSM->AMD": {
+            "connected": true,
+            "path_count": 1
+          },
+          "QQQ->AMD": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SPY->AMD": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SOXX->AMD": {
+            "connected": false,
+            "path_count": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "v12_011",
+      "category": "shortcut_guardrail",
+      "answer_letters": [
+        "A",
+        "B",
+        "C"
+      ],
+      "answer_box": "\\boxed{A, B, C}",
+      "abel_grounding": {
+        "path_checks": {
+          "QQQ->NVDA": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SPY->NVDA": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SOXX->NVDA": {
+            "connected": false,
+            "path_count": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "v12_012",
+      "category": "shortcut_guardrail",
+      "answer_letters": [
+        "A",
+        "B",
+        "C"
+      ],
+      "answer_box": "\\boxed{A, B, C}",
+      "abel_grounding": {
+        "path_checks": {
+          "QQQ->AMD": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SPY->AMD": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SOXX->AMD": {
+            "connected": false,
+            "path_count": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "v12_013",
+      "category": "market_story",
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "abel_grounding": {
+        "path_checks": {
+          "AAPL->NVDA": {
+            "connected": true,
+            "path_count": 1
+          },
+          "AMD->NVDA": {
+            "connected": true,
+            "path_count": 1
+          },
+          "AVGO->NVDA": {
+            "connected": true,
+            "path_count": 1
+          },
+          "TSM->NVDA": {
+            "connected": true,
+            "path_count": 1
+          },
+          "QQQ->NVDA": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SPY->NVDA": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SOXX->NVDA": {
+            "connected": false,
+            "path_count": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "v12_014",
+      "category": "market_story",
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "abel_grounding": {
+        "path_checks": {
+          "AAPL->AMD": {
+            "connected": true,
+            "path_count": 1
+          },
+          "NVDA->AMD": {
+            "connected": true,
+            "path_count": 1
+          },
+          "AVGO->AMD": {
+            "connected": true,
+            "path_count": 1
+          },
+          "TSM->AMD": {
+            "connected": true,
+            "path_count": 1
+          },
+          "QQQ->AMD": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SPY->AMD": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SOXX->AMD": {
+            "connected": false,
+            "path_count": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "v12_015",
+      "category": "stress_boundary",
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "abel_grounding": {
+        "path_checks": {
+          "NVDA->AMD": {
+            "connected": true,
+            "path_count": 1
+          },
+          "SOXX->AMD": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SPY->AMD": {
+            "connected": false,
+            "path_count": 0
+          }
+        },
+        "availability": {
+          "BTC": "unavailable"
+        }
+      }
+    },
+    {
+      "id": "v12_016",
+      "category": "stress_boundary",
+      "answer_letters": [
+        "A",
+        "D"
+      ],
+      "answer_box": "\\boxed{A, D}",
+      "abel_grounding": {
+        "interventions": {
+          "NVDA->AMD": {
+            "path_exists": true,
+            "intervention_skipped": false,
+            "skip_reason": null,
+            "error_code": "invalid_intervention",
+            "effect_returned": false
+          },
+          "SOXX->AMD": {
+            "path_exists": false,
+            "intervention_skipped": true,
+            "skip_reason": "no_directed_path_found",
+            "error_code": null,
+            "effect_returned": false
+          }
+        }
+      }
+    },
+    {
+      "id": "v12_017",
+      "category": "proxy_selection",
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "abel_grounding": {
+        "availability": {
+          "ETH": "ok",
+          "CL": "ok",
+          "BTC": "unavailable",
+          "GC": "unavailable",
+          "SPY": "unavailable",
+          "QQQ": "unavailable",
+          "XLE": "unavailable",
+          "USO": "unavailable"
+        }
+      }
+    },
+    {
+      "id": "v12_018",
+      "category": "proxy_selection",
+      "answer_letters": [
+        "D"
+      ],
+      "answer_box": "\\boxed{D}",
+      "abel_grounding": {
+        "availability": {
+          "QQQ": "unavailable",
+          "SPY": "unavailable"
+        }
+      }
+    },
+    {
+      "id": "v12_019",
+      "category": "route_membership",
+      "answer_letters": [
+        "A",
+        "B",
+        "C"
+      ],
+      "answer_box": "\\boxed{A, B, C}",
+      "abel_grounding": {
+        "path_checks": {
+          "AMD->NVDA": {
+            "connected": true,
+            "path_count": 1
+          },
+          "NVDA->AMD": {
+            "connected": true,
+            "path_count": 1
+          },
+          "AVGO->NVDA": {
+            "connected": true,
+            "path_count": 1
+          },
+          "NVDA->AVGO": {
+            "connected": true,
+            "path_count": 1
+          },
+          "TSM->NVDA": {
+            "connected": true,
+            "path_count": 1
+          },
+          "NVDA->TSM": {
+            "connected": true,
+            "path_count": 1
+          },
+          "QQQ->NVDA": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SPY->NVDA": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SOXX->NVDA": {
+            "connected": false,
+            "path_count": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "v12_020",
+      "category": "route_membership",
+      "answer_letters": [
+        "A",
+        "B",
+        "C"
+      ],
+      "answer_box": "\\boxed{A, B, C}",
+      "abel_grounding": {
+        "path_checks": {
+          "NVDA->AMD": {
+            "connected": true,
+            "path_count": 1
+          },
+          "AMD->NVDA": {
+            "connected": true,
+            "path_count": 1
+          },
+          "AVGO->AMD": {
+            "connected": true,
+            "path_count": 1
+          },
+          "AMD->AVGO": {
+            "connected": true,
+            "path_count": 1
+          },
+          "TSM->AMD": {
+            "connected": true,
+            "path_count": 1
+          },
+          "AMD->TSM": {
+            "connected": true,
+            "path_count": 1
+          },
+          "QQQ->AMD": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SPY->AMD": {
+            "connected": false,
+            "path_count": 0
+          },
+          "SOXX->AMD": {
+            "connected": false,
+            "path_count": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "v12_021",
+      "category": "proxy_selection",
+      "answer_letters": [
+        "B"
+      ],
+      "answer_box": "\\boxed{B}",
+      "abel_grounding": {
+        "availability": {
+          "GC": "unavailable",
+          "CL": "ok",
+          "XLE": "unavailable",
+          "USO": "unavailable"
+        }
+      }
+    },
+    {
+      "id": "v12_022",
+      "category": "coverage_guardrail",
+      "answer_letters": [
+        "A",
+        "B"
+      ],
+      "answer_box": "\\boxed{A, B}",
+      "abel_grounding": {
+        "availability": {
+          "ETH": "ok",
+          "CL": "ok",
+          "BTC": "unavailable",
+          "GC": "unavailable"
+        }
+      }
+    },
+    {
+      "id": "v12_023",
+      "category": "coverage_guardrail",
+      "answer_letters": [
+        "A",
+        "B"
+      ],
+      "answer_box": "\\boxed{A, B}",
+      "abel_grounding": {
+        "availability": {
+          "BTC": "unavailable",
+          "GC": "unavailable",
+          "ETH": "ok",
+          "CL": "ok"
+        }
+      }
+    },
+    {
+      "id": "v12_024",
+      "category": "proxy_selection",
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "abel_grounding": {
+        "availability": {
+          "ETH": "ok",
+          "CL": "ok",
+          "BTC": "unavailable",
+          "GC": "unavailable",
+          "SPY": "unavailable",
+          "QQQ": "unavailable",
+          "XLE": "unavailable",
+          "USO": "unavailable"
+        }
+      }
+    },
+    {
+      "id": "v12_025",
+      "category": "proxy_selection",
+      "answer_letters": [
+        "B"
+      ],
+      "answer_box": "\\boxed{B}",
+      "abel_grounding": {
+        "availability": {
+          "BTC": "unavailable",
+          "ETH": "ok"
+        }
+      }
+    },
+    {
+      "id": "v12_026",
+      "category": "proxy_selection",
+      "answer_letters": [
+        "B"
+      ],
+      "answer_box": "\\boxed{B}",
+      "abel_grounding": {
+        "availability": {
+          "BTC": "unavailable",
+          "ETH": "ok"
+        }
+      }
+    },
+    {
+      "id": "v12_027",
+      "category": "coverage_guardrail",
+      "answer_letters": [
+        "B"
+      ],
+      "answer_box": "\\boxed{B}",
+      "abel_grounding": {
+        "availability": {
+          "BTC": "unavailable",
+          "ETH": "ok"
+        }
+      }
+    },
+    {
+      "id": "v12_028",
+      "category": "coverage_guardrail",
+      "answer_letters": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "abel_grounding": {
+        "availability": {
+          "BTC": "unavailable",
+          "ETH": "ok"
+        }
+      }
+    }
+  ]
+}

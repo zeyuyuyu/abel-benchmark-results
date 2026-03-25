@@ -1,0 +1,39 @@
+{
+  "slug": "observe_ETHUSD_close",
+  "captured_at": "2026-03-25T09:46:27.887058+00:00",
+  "command": [
+    "/usr/local/bin/python3",
+    "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+    "--base-url",
+    "https://cap.abel.ai",
+    "observe",
+    "ETHUSD_close",
+    "--compact"
+  ],
+  "exit_code": 0,
+  "attempt": 1,
+  "stdout": {
+    "ok": true,
+    "status_code": 200,
+    "cap_version": "0.2.2",
+    "request_id": "3b247d24-20ef-4c2e-9265-00f1d07a05b0",
+    "verb": "observe.predict",
+    "status": "success",
+    "result": {
+      "target_node": "ETHUSD_close",
+      "prediction": -0.001634334446580476,
+      "drivers": [
+        "SSTK_close"
+      ]
+    },
+    "provenance": {
+      "algorithm": "primitive.predict",
+      "graph_version": "CausalNodeV2",
+      "computation_time_ms": 21,
+      "server_name": "abel-cap",
+      "server_version": "0.1.0",
+      "cap_spec_version": "0.2.2"
+    }
+  },
+  "stderr": ""
+}

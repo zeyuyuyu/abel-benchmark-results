@@ -1,0 +1,21 @@
+{
+  "slug": "normalize_BTC",
+  "captured_at": "2026-03-25T09:46:19.598928+00:00",
+  "command": [
+    "/usr/local/bin/python3",
+    "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+    "normalize-node",
+    "BTC",
+    "--compact"
+  ],
+  "exit_code": 0,
+  "attempt": 1,
+  "stdout": {
+    "ok": true,
+    "status_code": 0,
+    "input": "BTC",
+    "normalized_node_id": "BTCUSD_close",
+    "default_suffix": "close"
+  },
+  "stderr": ""
+}

@@ -1,0 +1,41 @@
+{
+  "slug": "observe_XLE_close",
+  "captured_at": "2026-03-25T09:46:36.854139+00:00",
+  "command": [
+    "/usr/local/bin/python3",
+    "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+    "--base-url",
+    "https://cap.abel.ai",
+    "observe",
+    "XLE_close",
+    "--compact"
+  ],
+  "exit_code": 1,
+  "attempt": 1,
+  "stdout": {
+    "ok": false,
+    "status_code": 503,
+    "message": "Abel primitive service is unavailable.",
+    "error": {
+      "code": "service_unavailable",
+      "message": "Abel primitive service is unavailable.",
+      "details": {
+        "upstream_detail": "{\"message\":\"No materialized prediction history available for target_node=XLE_close\"}"
+      }
+    },
+    "response_payload": {
+      "cap_version": "0.2.2",
+      "request_id": "23bfc236-7a11-4d76-b940-b6e6b4b093b7",
+      "verb": "observe.predict",
+      "status": "error",
+      "error": {
+        "code": "service_unavailable",
+        "message": "Abel primitive service is unavailable.",
+        "details": {
+          "upstream_detail": "{\"message\":\"No materialized prediction history available for target_node=XLE_close\"}"
+        }
+      }
+    }
+  },
+  "stderr": ""
+}

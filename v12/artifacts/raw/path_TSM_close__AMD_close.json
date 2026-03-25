@@ -1,0 +1,118 @@
+{
+  "slug": "path_TSM_close__AMD_close",
+  "captured_at": "2026-03-25T09:46:49.176922+00:00",
+  "command": [
+    "/usr/local/bin/python3",
+    "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+    "--base-url",
+    "https://cap.abel.ai",
+    "paths",
+    "TSM_close",
+    "AMD_close",
+    "--max-paths",
+    "3",
+    "--compact"
+  ],
+  "exit_code": 0,
+  "attempt": 1,
+  "stdout": {
+    "ok": true,
+    "status_code": 200,
+    "cap_version": "0.2.2",
+    "request_id": "3f7cd84e-b40b-4d8c-a0d0-b0d799a613b2",
+    "verb": "graph.paths",
+    "status": "success",
+    "result": {
+      "reasoning_mode": "structural_semantics",
+      "identification_status": "not_applicable",
+      "assumptions": [
+        "causal_sufficiency",
+        "faithfulness",
+        "no_instantaneous_effects",
+        "no_latent_confounders_addressed",
+        "abel_structural_summary_only",
+        "abel_hidden_field_policy"
+      ],
+      "source_node_id": "TSM_close",
+      "target_node_id": "AMD_close",
+      "connected": true,
+      "path_count": 1,
+      "paths": [
+        {
+          "distance": 4,
+          "nodes": [
+            {
+              "node_id": "TSM_close",
+              "node_name": "Taiwan Semiconductor Manufacturing Company Limited close price",
+              "node_type": "close_price",
+              "domain": "equities"
+            },
+            {
+              "node_id": "TONICUSD_close",
+              "node_name": "Tectonic USD close price",
+              "node_type": "close_price",
+              "domain": "crypto"
+            },
+            {
+              "node_id": "AAME_volume",
+              "node_name": "Atlantic American Corporation volume",
+              "node_type": "volume",
+              "domain": "equities"
+            },
+            {
+              "node_id": "PEAKUSD_close",
+              "node_name": "PEAKDEFI USD close price",
+              "node_type": "close_price",
+              "domain": "crypto"
+            },
+            {
+              "node_id": "AMD_close",
+              "node_name": "Advanced Micro Devices, Inc. close price",
+              "node_type": "close_price",
+              "domain": "equities"
+            }
+          ],
+          "edges": [
+            {
+              "from_node_id": "TSM_close",
+              "to_node_id": "TONICUSD_close",
+              "edge_type": "causes",
+              "tau": 49,
+              "tau_duration": "PT49H"
+            },
+            {
+              "from_node_id": "TONICUSD_close",
+              "to_node_id": "AAME_volume",
+              "edge_type": "causes",
+              "tau": 69,
+              "tau_duration": "PT69H"
+            },
+            {
+              "from_node_id": "AAME_volume",
+              "to_node_id": "PEAKUSD_close",
+              "edge_type": "causes",
+              "tau": 46,
+              "tau_duration": "PT46H"
+            },
+            {
+              "from_node_id": "PEAKUSD_close",
+              "to_node_id": "AMD_close",
+              "edge_type": "causes",
+              "tau": 72,
+              "tau_duration": "PT72H"
+            }
+          ]
+        }
+      ]
+    },
+    "provenance": {
+      "algorithm": "PCMCI",
+      "graph_version": "CausalNodeV2",
+      "computation_time_ms": 18,
+      "server_name": "abel-cap",
+      "server_version": "0.1.0",
+      "cap_spec_version": "0.2.2"
+    }
+  },
+  "stderr": ""
+}

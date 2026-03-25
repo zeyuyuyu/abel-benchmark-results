@@ -19,6 +19,7 @@ Benchmark versions currently included:
 | **v9** | Casebook input layer for Codex with and without installed `causal-abel` skill | FutureX-style, LLM-authored casebook aligned to the updated `causal-abel` `1.0.7` skill and anchored to a live Abel CAP snapshot |
 | **v10** | Natural-intent casebook input layer for Codex with and without installed `causal-abel` skill | FutureX-inspired but non-tool-facing benchmark cases written as questions a normal user could plausibly ask |
 | **v11** | Natural-intent benchmark package with separated prompts, answers, and evidence | Successor to `v10` that splits `questions.json`, `ground_truth.json`, and raw Abel snapshot artifacts for cleaner evaluation |
+| **v12** | General-finance challenge set plus high-signal proof subset for Codex with and without installed `causal-abel` skill | Adds harder proxy-choice and supportability cases, then evaluates a narrow crypto proxy-routing subset where unrestricted `codex + skill` outperforms unrestricted `codex` |
 
 The original `v3` / `v4` pipeline uses **LLM-based question classification** (GPT-4o-mini) to identify suitable financial questions and extract ticker symbols, then **`normalize-node`** from [cap_probe.py](https://github.com/Abel-ai-causality/Abel-skills/blob/main/causal-abel/scripts/cap_probe.py) to resolve correct Abel node IDs.
 

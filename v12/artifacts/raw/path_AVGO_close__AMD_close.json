@@ -1,0 +1,118 @@
+{
+  "slug": "path_AVGO_close__AMD_close",
+  "captured_at": "2026-03-25T09:46:48.030519+00:00",
+  "command": [
+    "/usr/local/bin/python3",
+    "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+    "--base-url",
+    "https://cap.abel.ai",
+    "paths",
+    "AVGO_close",
+    "AMD_close",
+    "--max-paths",
+    "3",
+    "--compact"
+  ],
+  "exit_code": 0,
+  "attempt": 1,
+  "stdout": {
+    "ok": true,
+    "status_code": 200,
+    "cap_version": "0.2.2",
+    "request_id": "c15bb7af-55ae-4f3c-b5d6-78cd28f655ac",
+    "verb": "graph.paths",
+    "status": "success",
+    "result": {
+      "reasoning_mode": "structural_semantics",
+      "identification_status": "not_applicable",
+      "assumptions": [
+        "causal_sufficiency",
+        "faithfulness",
+        "no_instantaneous_effects",
+        "no_latent_confounders_addressed",
+        "abel_structural_summary_only",
+        "abel_hidden_field_policy"
+      ],
+      "source_node_id": "AVGO_close",
+      "target_node_id": "AMD_close",
+      "connected": true,
+      "path_count": 1,
+      "paths": [
+        {
+          "distance": 4,
+          "nodes": [
+            {
+              "node_id": "AVGO_close",
+              "node_name": "Broadcom Inc. close price",
+              "node_type": "close_price",
+              "domain": "equities"
+            },
+            {
+              "node_id": "NLY-PG_close",
+              "node_name": "Annaly Capital Management, Inc. close price",
+              "node_type": "close_price",
+              "domain": "equities"
+            },
+            {
+              "node_id": "NCSM_close",
+              "node_name": "NCS Multistage Holdings, Inc. close price",
+              "node_type": "close_price",
+              "domain": "equities"
+            },
+            {
+              "node_id": "MLNUSD_close",
+              "node_name": "Enzyme USD close price",
+              "node_type": "close_price",
+              "domain": "crypto"
+            },
+            {
+              "node_id": "AMD_close",
+              "node_name": "Advanced Micro Devices, Inc. close price",
+              "node_type": "close_price",
+              "domain": "equities"
+            }
+          ],
+          "edges": [
+            {
+              "from_node_id": "AVGO_close",
+              "to_node_id": "NLY-PG_close",
+              "edge_type": "causes",
+              "tau": 30,
+              "tau_duration": "PT30H"
+            },
+            {
+              "from_node_id": "NLY-PG_close",
+              "to_node_id": "NCSM_close",
+              "edge_type": "causes",
+              "tau": 14,
+              "tau_duration": "PT14H"
+            },
+            {
+              "from_node_id": "NCSM_close",
+              "to_node_id": "MLNUSD_close",
+              "edge_type": "causes",
+              "tau": 14,
+              "tau_duration": "PT14H"
+            },
+            {
+              "from_node_id": "MLNUSD_close",
+              "to_node_id": "AMD_close",
+              "edge_type": "causes",
+              "tau": 45,
+              "tau_duration": "PT45H"
+            }
+          ]
+        }
+      ]
+    },
+    "provenance": {
+      "algorithm": "PCMCI",
+      "graph_version": "CausalNodeV2",
+      "computation_time_ms": 19,
+      "server_name": "abel-cap",
+      "server_version": "0.1.0",
+      "cap_spec_version": "0.2.2"
+    }
+  },
+  "stderr": ""
+}

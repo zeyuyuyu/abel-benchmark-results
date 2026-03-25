@@ -1,0 +1,48 @@
+{
+  "slug": "observe_AVGO_close",
+  "captured_at": "2026-03-25T09:46:24.559451+00:00",
+  "command": [
+    "/usr/local/bin/python3",
+    "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+    "--base-url",
+    "https://cap.abel.ai",
+    "observe",
+    "AVGO_close",
+    "--compact"
+  ],
+  "exit_code": 0,
+  "attempt": 1,
+  "stdout": {
+    "ok": true,
+    "status_code": 200,
+    "cap_version": "0.2.2",
+    "request_id": "4cebff81-c841-4540-b770-ced901a987f4",
+    "verb": "observe.predict",
+    "status": "success",
+    "result": {
+      "target_node": "AVGO_close",
+      "prediction": -0.004278362474926455,
+      "drivers": [
+        "PLKRUSD_close",
+        "DESUUSD_close",
+        "MBPUSD_close",
+        "AVAUSD_close",
+        "ONEUSD_close",
+        "PRISMUSD_close",
+        "CHAMPUSD_close",
+        "OXLCP_close",
+        "LTXUSD_close",
+        "HOTCROSSUSD_close"
+      ]
+    },
+    "provenance": {
+      "algorithm": "primitive.predict",
+      "graph_version": "CausalNodeV2",
+      "computation_time_ms": 631,
+      "server_name": "abel-cap",
+      "server_version": "0.1.0",
+      "cap_spec_version": "0.2.2"
+    }
+  },
+  "stderr": ""
+}

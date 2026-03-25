@@ -1,0 +1,128 @@
+{
+  "snapshot_meta": {
+    "version": "v12-general-finance-challenge",
+    "snapshot_label": "March 25, 2026 (GMT+8)",
+    "captured_at": "2026-03-25T09:47:00.341775+00:00",
+    "base_url": "https://cap.abel.ai",
+    "artifacts_manifest": "artifacts/manifest.json"
+  },
+  "normalized_nodes": {
+    "BTC": "BTCUSD_close",
+    "ETH": "ETHUSD_close"
+  },
+  "availability": {
+    "AAPL": "ok",
+    "AMD": "ok",
+    "AVGO": "ok",
+    "BTC": "unavailable",
+    "CL": "ok",
+    "ETH": "ok",
+    "GC": "unavailable",
+    "NVDA": "ok",
+    "QQQ": "unavailable",
+    "SOXX": "unavailable",
+    "SPY": "unavailable",
+    "TSM": "ok",
+    "USO": "unavailable",
+    "XLE": "unavailable"
+  },
+  "observe_pct": {
+    "AAPL": -0.1940669095802393,
+    "AMD": 0.20931723421453705,
+    "AVGO": -0.4278362474926455,
+    "CL": -0.10508366265902921,
+    "ETH": -0.1634334446580476,
+    "NVDA": 0.04359642834965821,
+    "TSM": -0.0688548762169393
+  },
+  "graph_paths": {
+    "AAPL->NVDA": {
+      "connected": true,
+      "path_count": 1
+    },
+    "AMD->NVDA": {
+      "connected": true,
+      "path_count": 1
+    },
+    "AVGO->NVDA": {
+      "connected": true,
+      "path_count": 1
+    },
+    "TSM->NVDA": {
+      "connected": true,
+      "path_count": 1
+    },
+    "QQQ->NVDA": {
+      "connected": false,
+      "path_count": 0
+    },
+    "SPY->NVDA": {
+      "connected": false,
+      "path_count": 0
+    },
+    "SOXX->NVDA": {
+      "connected": false,
+      "path_count": 0
+    },
+    "AAPL->AMD": {
+      "connected": true,
+      "path_count": 1
+    },
+    "NVDA->AMD": {
+      "connected": true,
+      "path_count": 1
+    },
+    "AVGO->AMD": {
+      "connected": true,
+      "path_count": 1
+    },
+    "TSM->AMD": {
+      "connected": true,
+      "path_count": 1
+    },
+    "QQQ->AMD": {
+      "connected": false,
+      "path_count": 0
+    },
+    "SPY->AMD": {
+      "connected": false,
+      "path_count": 0
+    },
+    "SOXX->AMD": {
+      "connected": false,
+      "path_count": 0
+    },
+    "NVDA->AVGO": {
+      "connected": true,
+      "path_count": 1
+    },
+    "AMD->AVGO": {
+      "connected": true,
+      "path_count": 1
+    },
+    "NVDA->TSM": {
+      "connected": true,
+      "path_count": 1
+    },
+    "AMD->TSM": {
+      "connected": true,
+      "path_count": 1
+    }
+  },
+  "interventions": {
+    "NVDA->AMD": {
+      "path_exists": true,
+      "intervention_skipped": false,
+      "skip_reason": null,
+      "error_code": "invalid_intervention",
+      "effect_returned": false
+    },
+    "SOXX->AMD": {
+      "path_exists": false,
+      "intervention_skipped": true,
+      "skip_reason": "no_directed_path_found",
+      "error_code": null,
+      "effect_returned": false
+    }
+  }
+}

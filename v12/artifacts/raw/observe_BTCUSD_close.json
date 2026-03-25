@@ -1,0 +1,41 @@
+{
+  "slug": "observe_BTCUSD_close",
+  "captured_at": "2026-03-25T09:46:25.654298+00:00",
+  "command": [
+    "/usr/local/bin/python3",
+    "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+    "--base-url",
+    "https://cap.abel.ai",
+    "observe",
+    "BTCUSD_close",
+    "--compact"
+  ],
+  "exit_code": 1,
+  "attempt": 1,
+  "stdout": {
+    "ok": false,
+    "status_code": 503,
+    "message": "Abel primitive service is unavailable.",
+    "error": {
+      "code": "service_unavailable",
+      "message": "Abel primitive service is unavailable.",
+      "details": {
+        "upstream_detail": "{\"message\":\"No materialized prediction history available for target_node=BTCUSD_close\"}"
+      }
+    },
+    "response_payload": {
+      "cap_version": "0.2.2",
+      "request_id": "e47df5b9-2c2b-42a8-b87e-7cbb4d867e7b",
+      "verb": "observe.predict",
+      "status": "error",
+      "error": {
+        "code": "service_unavailable",
+        "message": "Abel primitive service is unavailable.",
+        "details": {
+          "upstream_detail": "{\"message\":\"No materialized prediction history available for target_node=BTCUSD_close\"}"
+        }
+      }
+    }
+  },
+  "stderr": ""
+}

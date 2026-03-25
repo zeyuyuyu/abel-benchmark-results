@@ -1,0 +1,105 @@
+{
+  "slug": "path_AAPL_close__NVDA_close",
+  "captured_at": "2026-03-25T09:46:37.970960+00:00",
+  "command": [
+    "/usr/local/bin/python3",
+    "/Users/zeyu/.codex/skills/causal-abel/scripts/cap_probe.py",
+    "--base-url",
+    "https://cap.abel.ai",
+    "paths",
+    "AAPL_close",
+    "NVDA_close",
+    "--max-paths",
+    "3",
+    "--compact"
+  ],
+  "exit_code": 0,
+  "attempt": 1,
+  "stdout": {
+    "ok": true,
+    "status_code": 200,
+    "cap_version": "0.2.2",
+    "request_id": "3fc6b62d-e5fc-4bf3-ba1c-6523d62e34b8",
+    "verb": "graph.paths",
+    "status": "success",
+    "result": {
+      "reasoning_mode": "structural_semantics",
+      "identification_status": "not_applicable",
+      "assumptions": [
+        "causal_sufficiency",
+        "faithfulness",
+        "no_instantaneous_effects",
+        "no_latent_confounders_addressed",
+        "abel_structural_summary_only",
+        "abel_hidden_field_policy"
+      ],
+      "source_node_id": "AAPL_close",
+      "target_node_id": "NVDA_close",
+      "connected": true,
+      "path_count": 1,
+      "paths": [
+        {
+          "distance": 3,
+          "nodes": [
+            {
+              "node_id": "AAPL_close",
+              "node_name": "Apple Inc. close price",
+              "node_type": "close_price",
+              "domain": "equities"
+            },
+            {
+              "node_id": "OXLCP_close",
+              "node_name": "Oxford Lane Capital Corp. close price",
+              "node_type": "close_price",
+              "domain": "equities"
+            },
+            {
+              "node_id": "AGNCO_close",
+              "node_name": "AGNC Investment Corp. close price",
+              "node_type": "close_price",
+              "domain": "equities"
+            },
+            {
+              "node_id": "NVDA_close",
+              "node_name": "NVIDIA Corporation close price",
+              "node_type": "close_price",
+              "domain": "equities"
+            }
+          ],
+          "edges": [
+            {
+              "from_node_id": "AAPL_close",
+              "to_node_id": "OXLCP_close",
+              "edge_type": "causes",
+              "tau": 44,
+              "tau_duration": "PT44H"
+            },
+            {
+              "from_node_id": "OXLCP_close",
+              "to_node_id": "AGNCO_close",
+              "edge_type": "causes",
+              "tau": 14,
+              "tau_duration": "PT14H"
+            },
+            {
+              "from_node_id": "AGNCO_close",
+              "to_node_id": "NVDA_close",
+              "edge_type": "causes",
+              "tau": 35,
+              "tau_duration": "PT35H"
+            }
+          ]
+        }
+      ]
+    },
+    "provenance": {
+      "algorithm": "PCMCI",
+      "graph_version": "CausalNodeV2",
+      "computation_time_ms": 20,
+      "server_name": "abel-cap",
+      "server_version": "0.1.0",
+      "cap_spec_version": "0.2.2"
+    }
+  },
+  "stderr": ""
+}
