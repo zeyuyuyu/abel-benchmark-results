@@ -1,0 +1,654 @@
+{
+  "timestamp": "20260325-110611",
+  "version": "v8-cap-causalbench-v1",
+  "benchmark_role": "live capability-aligned contract benchmark for causal-abel",
+  "model": "gpt-5.4",
+  "reasoning_effort": "low",
+  "base_url": "https://cap.abel.ai",
+  "task_count": 15,
+  "category_count": 6,
+  "categories": [
+    "capability_contract",
+    "extension_semantics",
+    "intervention_boundaries",
+    "node_normalization",
+    "reachability_and_validation",
+    "structural_reads"
+  ],
+  "base_points": "31/31",
+  "skill_points": "31/31",
+  "base_accuracy": 1.0,
+  "skill_accuracy": 1.0,
+  "accuracy_delta": 0.0,
+  "base_duration_seconds": 970.7,
+  "skill_duration_seconds": 1017.36,
+  "duration_delta_seconds": 46.66,
+  "discriminative": false,
+  "headline_takeaway": "Both runs achieved 31/31. This v8 suite is useful as a live CAP contract/regression benchmark for graph, intervention, and extension semantics, but it does not yet separate llm-only from llm+skill when prompts are explicit and structured.",
+  "category_scores": [
+    {
+      "category": "capability_contract",
+      "base_points": 4,
+      "base_max_points": 4,
+      "base_accuracy": 1.0,
+      "skill_points": 4,
+      "skill_max_points": 4,
+      "skill_accuracy": 1.0
+    },
+    {
+      "category": "extension_semantics",
+      "base_points": 7,
+      "base_max_points": 7,
+      "base_accuracy": 1.0,
+      "skill_points": 7,
+      "skill_max_points": 7,
+      "skill_accuracy": 1.0
+    },
+    {
+      "category": "intervention_boundaries",
+      "base_points": 8,
+      "base_max_points": 8,
+      "base_accuracy": 1.0,
+      "skill_points": 8,
+      "skill_max_points": 8,
+      "skill_accuracy": 1.0
+    },
+    {
+      "category": "node_normalization",
+      "base_points": 1,
+      "base_max_points": 1,
+      "base_accuracy": 1.0,
+      "skill_points": 1,
+      "skill_max_points": 1,
+      "skill_accuracy": 1.0
+    },
+    {
+      "category": "reachability_and_validation",
+      "base_points": 5,
+      "base_max_points": 5,
+      "base_accuracy": 1.0,
+      "skill_points": 5,
+      "skill_max_points": 5,
+      "skill_accuracy": 1.0
+    },
+    {
+      "category": "structural_reads",
+      "base_points": 6,
+      "base_max_points": 6,
+      "base_accuracy": 1.0,
+      "skill_points": 6,
+      "skill_max_points": 6,
+      "skill_accuracy": 1.0
+    }
+  ],
+  "fastest_skill_gains": [
+    {
+      "task_id": "capability_extension_verbs",
+      "category": "capability_contract",
+      "seconds_faster": 56.91
+    },
+    {
+      "task_id": "capability_core_verbs",
+      "category": "capability_contract",
+      "seconds_faster": 33.93
+    },
+    {
+      "task_id": "intervene_soxx_amd",
+      "category": "intervention_boundaries",
+      "seconds_faster": 19.56
+    },
+    {
+      "task_id": "intervene_time_lag_nvda_amd",
+      "category": "extension_semantics",
+      "seconds_faster": 15.99
+    },
+    {
+      "task_id": "observe_nvda_drivers",
+      "category": "structural_reads",
+      "seconds_faster": 12.51
+    }
+  ],
+  "largest_skill_slowdowns": [
+    {
+      "task_id": "methods_counterfactual_preview_required_arguments",
+      "category": "capability_contract",
+      "seconds_slower": 48.5
+    },
+    {
+      "task_id": "traverse_parents_nvda",
+      "category": "structural_reads",
+      "seconds_slower": 43.62
+    },
+    {
+      "task_id": "normalize_nvda",
+      "category": "node_normalization",
+      "seconds_slower": 28.3
+    },
+    {
+      "task_id": "validate_connectivity",
+      "category": "reachability_and_validation",
+      "seconds_slower": 22.32
+    },
+    {
+      "task_id": "neighbors_parents_nvda",
+      "category": "structural_reads",
+      "seconds_slower": 21.79
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "capability_core_verbs",
+      "category": "capability_contract",
+      "checks": [
+        "verbs"
+      ],
+      "expected_output": {
+        "verbs": [
+          "graph.markov_blanket",
+          "graph.neighbors",
+          "graph.paths",
+          "intervene.do",
+          "meta.capabilities",
+          "meta.methods",
+          "observe.predict"
+        ]
+      },
+      "base_points": 1,
+      "base_max_points": 1,
+      "base_duration_seconds": 84.7,
+      "base_output": {
+        "verbs": [
+          "graph.markov_blanket",
+          "graph.neighbors",
+          "graph.paths",
+          "intervene.do",
+          "meta.capabilities",
+          "meta.methods",
+          "observe.predict"
+        ]
+      },
+      "skill_points": 1,
+      "skill_max_points": 1,
+      "skill_duration_seconds": 50.77,
+      "skill_output": {
+        "verbs": [
+          "graph.markov_blanket",
+          "graph.neighbors",
+          "graph.paths",
+          "intervene.do",
+          "meta.capabilities",
+          "meta.methods",
+          "observe.predict"
+        ]
+      },
+      "duration_delta_seconds": -33.93
+    },
+    {
+      "task_id": "capability_extension_verbs",
+      "category": "capability_contract",
+      "checks": [
+        "verbs"
+      ],
+      "expected_output": {
+        "verbs": [
+          "extensions.abel.counterfactual_preview",
+          "extensions.abel.intervene_time_lag",
+          "extensions.abel.markov_blanket",
+          "extensions.abel.observe_predict_resolved_time",
+          "extensions.abel.validate_connectivity"
+        ]
+      },
+      "base_points": 1,
+      "base_max_points": 1,
+      "base_duration_seconds": 112.87,
+      "base_output": {
+        "verbs": [
+          "extensions.abel.counterfactual_preview",
+          "extensions.abel.intervene_time_lag",
+          "extensions.abel.markov_blanket",
+          "extensions.abel.observe_predict_resolved_time",
+          "extensions.abel.validate_connectivity"
+        ]
+      },
+      "skill_points": 1,
+      "skill_max_points": 1,
+      "skill_duration_seconds": 55.96,
+      "skill_output": {
+        "verbs": [
+          "extensions.abel.counterfactual_preview",
+          "extensions.abel.intervene_time_lag",
+          "extensions.abel.markov_blanket",
+          "extensions.abel.observe_predict_resolved_time",
+          "extensions.abel.validate_connectivity"
+        ]
+      },
+      "duration_delta_seconds": -56.91
+    },
+    {
+      "task_id": "methods_graph_paths_required_arguments",
+      "category": "capability_contract",
+      "checks": [
+        "required_arguments"
+      ],
+      "expected_output": {
+        "required_arguments": [
+          "source_node_id",
+          "target_node_id"
+        ]
+      },
+      "base_points": 1,
+      "base_max_points": 1,
+      "base_duration_seconds": 42.43,
+      "base_output": {
+        "required_arguments": [
+          "source_node_id",
+          "target_node_id"
+        ]
+      },
+      "skill_points": 1,
+      "skill_max_points": 1,
+      "skill_duration_seconds": 51.72,
+      "skill_output": {
+        "required_arguments": [
+          "source_node_id",
+          "target_node_id"
+        ]
+      },
+      "duration_delta_seconds": 9.29
+    },
+    {
+      "task_id": "methods_counterfactual_preview_required_arguments",
+      "category": "capability_contract",
+      "checks": [
+        "required_arguments"
+      ],
+      "expected_output": {
+        "required_arguments": [
+          "intervene_new_value",
+          "intervene_node",
+          "intervene_time",
+          "observe_node",
+          "observe_time"
+        ]
+      },
+      "base_points": 1,
+      "base_max_points": 1,
+      "base_duration_seconds": 37.76,
+      "base_output": {
+        "required_arguments": [
+          "intervene_new_value",
+          "intervene_node",
+          "intervene_time",
+          "observe_node",
+          "observe_time"
+        ]
+      },
+      "skill_points": 1,
+      "skill_max_points": 1,
+      "skill_duration_seconds": 86.26,
+      "skill_output": {
+        "required_arguments": [
+          "intervene_new_value",
+          "intervene_node",
+          "intervene_time",
+          "observe_node",
+          "observe_time"
+        ]
+      },
+      "duration_delta_seconds": 48.5
+    },
+    {
+      "task_id": "normalize_nvda",
+      "category": "node_normalization",
+      "checks": [
+        "normalized_node_id"
+      ],
+      "expected_output": {
+        "normalized_node_id": "NVDA_close"
+      },
+      "base_points": 1,
+      "base_max_points": 1,
+      "base_duration_seconds": 36.27,
+      "base_output": {
+        "normalized_node_id": "NVDA_close"
+      },
+      "skill_points": 1,
+      "skill_max_points": 1,
+      "skill_duration_seconds": 64.57,
+      "skill_output": {
+        "normalized_node_id": "NVDA_close"
+      },
+      "duration_delta_seconds": 28.3
+    },
+    {
+      "task_id": "neighbors_parents_nvda",
+      "category": "structural_reads",
+      "checks": [
+        "neighbors"
+      ],
+      "expected_output": {
+        "neighbors": [
+          "AGNCO_close",
+          "MBPUSD_close",
+          "PEAKUSD_close"
+        ]
+      },
+      "base_points": 1,
+      "base_max_points": 1,
+      "base_duration_seconds": 68.24,
+      "base_output": {
+        "neighbors": [
+          "AGNCO_close",
+          "MBPUSD_close",
+          "PEAKUSD_close"
+        ]
+      },
+      "skill_points": 1,
+      "skill_max_points": 1,
+      "skill_duration_seconds": 90.03,
+      "skill_output": {
+        "neighbors": [
+          "AGNCO_close",
+          "MBPUSD_close",
+          "PEAKUSD_close"
+        ]
+      },
+      "duration_delta_seconds": 21.79
+    },
+    {
+      "task_id": "traverse_parents_nvda",
+      "category": "structural_reads",
+      "checks": [
+        "nodes"
+      ],
+      "expected_output": {
+        "nodes": []
+      },
+      "base_points": 1,
+      "base_max_points": 1,
+      "base_duration_seconds": 63.83,
+      "base_output": {
+        "nodes": []
+      },
+      "skill_points": 1,
+      "skill_max_points": 1,
+      "skill_duration_seconds": 107.45,
+      "skill_output": {
+        "nodes": []
+      },
+      "duration_delta_seconds": 43.62
+    },
+    {
+      "task_id": "abel_markov_blanket_nvda",
+      "category": "structural_reads",
+      "checks": [
+        "drivers",
+        "blanket_size"
+      ],
+      "expected_output": {
+        "drivers": [
+          "AGNCO_close",
+          "MBPUSD_close",
+          "PEAKUSD_close"
+        ],
+        "blanket_size": 20
+      },
+      "base_points": 2,
+      "base_max_points": 2,
+      "base_duration_seconds": 65.38,
+      "base_output": {
+        "drivers": [
+          "AGNCO_close",
+          "MBPUSD_close",
+          "PEAKUSD_close"
+        ],
+        "blanket_size": 20
+      },
+      "skill_points": 2,
+      "skill_max_points": 2,
+      "skill_duration_seconds": 71.03,
+      "skill_output": {
+        "drivers": [
+          "AGNCO_close",
+          "MBPUSD_close",
+          "PEAKUSD_close"
+        ],
+        "blanket_size": 20
+      },
+      "duration_delta_seconds": 5.65
+    },
+    {
+      "task_id": "observe_nvda_drivers",
+      "category": "structural_reads",
+      "checks": [
+        "target_node",
+        "drivers"
+      ],
+      "expected_output": {
+        "target_node": "NVDA_close",
+        "drivers": [
+          "AGNCO_close",
+          "MBPUSD_close",
+          "PEAKUSD_close"
+        ]
+      },
+      "base_points": 2,
+      "base_max_points": 2,
+      "base_duration_seconds": 58.19,
+      "base_output": {
+        "target_node": "NVDA_close",
+        "drivers": [
+          "AGNCO_close",
+          "MBPUSD_close",
+          "PEAKUSD_close"
+        ]
+      },
+      "skill_points": 2,
+      "skill_max_points": 2,
+      "skill_duration_seconds": 45.68,
+      "skill_output": {
+        "target_node": "NVDA_close",
+        "drivers": [
+          "AGNCO_close",
+          "MBPUSD_close",
+          "PEAKUSD_close"
+        ]
+      },
+      "duration_delta_seconds": -12.51
+    },
+    {
+      "task_id": "path_nvda_amd",
+      "category": "reachability_and_validation",
+      "checks": [
+        "connected",
+        "path_count"
+      ],
+      "expected_output": {
+        "connected": true,
+        "path_count": 1
+      },
+      "base_points": 2,
+      "base_max_points": 2,
+      "base_duration_seconds": 55.93,
+      "base_output": {
+        "connected": true,
+        "path_count": 1
+      },
+      "skill_points": 2,
+      "skill_max_points": 2,
+      "skill_duration_seconds": 58.03,
+      "skill_output": {
+        "connected": true,
+        "path_count": 1
+      },
+      "duration_delta_seconds": 2.1
+    },
+    {
+      "task_id": "validate_connectivity",
+      "category": "reachability_and_validation",
+      "checks": [
+        "passed",
+        "connected_pairs",
+        "invalid_variable_count"
+      ],
+      "expected_output": {
+        "passed": false,
+        "connected_pairs": [],
+        "invalid_variable_count": 2
+      },
+      "base_points": 3,
+      "base_max_points": 3,
+      "base_duration_seconds": 41.62,
+      "base_output": {
+        "passed": false,
+        "connected_pairs": [],
+        "invalid_variable_count": 2
+      },
+      "skill_points": 3,
+      "skill_max_points": 3,
+      "skill_duration_seconds": 63.94,
+      "skill_output": {
+        "passed": false,
+        "connected_pairs": [],
+        "invalid_variable_count": 2
+      },
+      "duration_delta_seconds": 22.32
+    },
+    {
+      "task_id": "intervene_nvda_amd",
+      "category": "intervention_boundaries",
+      "checks": [
+        "path_exists",
+        "effect_returned",
+        "intervention_skipped",
+        "error_code"
+      ],
+      "expected_output": {
+        "path_exists": true,
+        "effect_returned": false,
+        "intervention_skipped": false,
+        "error_code": "invalid_intervention"
+      },
+      "base_points": 4,
+      "base_max_points": 4,
+      "base_duration_seconds": 67.06,
+      "base_output": {
+        "path_exists": true,
+        "effect_returned": false,
+        "intervention_skipped": false,
+        "error_code": "invalid_intervention"
+      },
+      "skill_points": 4,
+      "skill_max_points": 4,
+      "skill_duration_seconds": 71.32,
+      "skill_output": {
+        "path_exists": true,
+        "effect_returned": false,
+        "intervention_skipped": false,
+        "error_code": "invalid_intervention"
+      },
+      "duration_delta_seconds": 4.26
+    },
+    {
+      "task_id": "intervene_soxx_amd",
+      "category": "intervention_boundaries",
+      "checks": [
+        "path_exists",
+        "effect_returned",
+        "intervention_skipped",
+        "skip_reason"
+      ],
+      "expected_output": {
+        "path_exists": false,
+        "effect_returned": false,
+        "intervention_skipped": true,
+        "skip_reason": "no_directed_path_found"
+      },
+      "base_points": 4,
+      "base_max_points": 4,
+      "base_duration_seconds": 85.11,
+      "base_output": {
+        "path_exists": false,
+        "effect_returned": false,
+        "intervention_skipped": true,
+        "skip_reason": "no_directed_path_found"
+      },
+      "skill_points": 4,
+      "skill_max_points": 4,
+      "skill_duration_seconds": 65.55,
+      "skill_output": {
+        "path_exists": false,
+        "effect_returned": false,
+        "intervention_skipped": true,
+        "skip_reason": "no_directed_path_found"
+      },
+      "duration_delta_seconds": -19.56
+    },
+    {
+      "task_id": "counterfactual_preview_nvda_amd",
+      "category": "extension_semantics",
+      "checks": [
+        "reachable",
+        "effect_support",
+        "path_count",
+        "preview_only"
+      ],
+      "expected_output": {
+        "reachable": false,
+        "effect_support": "no_structural_path",
+        "path_count": 0,
+        "preview_only": true
+      },
+      "base_points": 4,
+      "base_max_points": 4,
+      "base_duration_seconds": 78.18,
+      "base_output": {
+        "reachable": false,
+        "effect_support": "no_structural_path",
+        "path_count": 0,
+        "preview_only": true
+      },
+      "skill_points": 4,
+      "skill_max_points": 4,
+      "skill_duration_seconds": 77.91,
+      "skill_output": {
+        "reachable": false,
+        "effect_support": "no_structural_path",
+        "path_count": 0,
+        "preview_only": true
+      },
+      "duration_delta_seconds": -0.27
+    },
+    {
+      "task_id": "intervene_time_lag_nvda_amd",
+      "category": "extension_semantics",
+      "checks": [
+        "ok",
+        "status_code",
+        "error_code"
+      ],
+      "expected_output": {
+        "ok": false,
+        "status_code": 400,
+        "error_code": "invalid_intervention"
+      },
+      "base_points": 3,
+      "base_max_points": 3,
+      "base_duration_seconds": 73.13,
+      "base_output": {
+        "ok": false,
+        "status_code": 400,
+        "error_code": "invalid_intervention"
+      },
+      "skill_points": 3,
+      "skill_max_points": 3,
+      "skill_duration_seconds": 57.14,
+      "skill_output": {
+        "ok": false,
+        "status_code": 400,
+        "error_code": "invalid_intervention"
+      },
+      "duration_delta_seconds": -15.99
+    }
+  ]
+}

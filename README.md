@@ -15,6 +15,7 @@ Benchmark versions currently included:
 | **v5** | Codex with and without installed `causal-abel` skill | Direct live Abel CAP A/B on six graph/intervention tasks |
 | **v6** | Codex with and without installed `causal-abel` skill | FutureX financial-subset A/B: 10 scored `FutureX-Past` questions + 7 live `FutureX-Online` predictions |
 | **v7** | Codex with and without installed `causal-abel` skill | `FutureX-Online` live-only A/B on 7 unresolved finance questions, including output-validity checks and observed skill-use evidence |
+| **v8** | Codex with and without installed `causal-abel` skill | CAP-adapted causalbench aligned to Abel graph, intervention, and extension semantics; designed as a live contract/regression benchmark |
 
 The original `v3` / `v4` pipeline uses **LLM-based question classification** (GPT-4o-mini) to identify suitable financial questions and extract ticker symbols, then **`normalize-node`** from [cap_probe.py](https://github.com/Abel-ai-causality/Abel-skills/blob/main/causal-abel/scripts/cap_probe.py) to resolve correct Abel node IDs.
 
@@ -229,6 +230,27 @@ This makes `v7` a cleaner benchmark for "live prediction with and without the sk
 
 ---
 
+## v8 — CAP CausalBench v1
+
+`v8` is the first benchmark in this repo designed directly around the real `causal-abel` capability surface instead of around generic future-prediction datasets.
+
+Headline results:
+
+- **15 tasks / 31 scored fields** across six categories: capability contract, node normalization, structural reads, reachability and validation, intervention boundaries, and extension semantics.
+- **Base**: `31/31` in `970.70s`
+- **Skill**: `31/31` in `1017.36s`
+- **Takeaway**: `v8` is useful as a live CAP contract and regression suite, but it is **not yet discriminative** for `llm only` vs `llm + skill` when the prompts are explicit and structured.
+
+Why this matters:
+
+- `FutureX` is useful for live prediction, but many tasks are not good matches for graph-centric causal reasoning.
+- `v8` instead checks whether the model can correctly inspect and use the live Abel CAP interface that the skill is built around.
+- This includes tricky semantics such as `invalid_intervention`, `no_directed_path_found`, preview-only counterfactuals, and extension method signatures.
+
+The benchmark spec is documented in [`v8/benchmark_spec.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v8/benchmark_spec.md), and the runnable harness is [`v8/test_script.py`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v8/test_script.py).
+
+---
+
 ## Files
 
 | File | Description |
@@ -248,6 +270,10 @@ This makes `v7` a cleaner benchmark for "live prediction with and without the sk
 | `v7/test_script.py` | Reproducible FutureX-Online live-only harness |
 | `v7/rescore_live.py` | Auto-backfill scorer for resolved `FutureX-Online` questions via `FutureX-Past` |
 | `v7/cases.md` | Live-only per-task comparison and observed skill-usage evidence |
+| `v8/results.json` | CAP-adapted causalbench summary for live Codex base vs skill |
+| `v8/test_script.py` | Reproducible live CAP-aligned benchmark harness |
+| `v8/cases.md` | Case taxonomy, category scores, and timing notes |
+| `v8/benchmark_spec.md` | Design rationale, scoring philosophy, and next-step benchmark plan |
 
 ---
 
@@ -260,12 +286,14 @@ This makes `v7` a cleaner benchmark for "live prediction with and without the sk
 3. **+46.7% improvement on Abel-data subset**: For cases where Abel data was available, accuracy jumped from 20% to 66.7%.
 4. **Full skill usage matters**: Using `observe` + `neighbors` + `markov-blanket` (v4) provides richer context than `observe` alone (v3).
 5. **Strict judging reveals the real picture**: Lenient judges that accept refusals as "correct" mask Abel's true value.
+6. **Capability-aligned benchmarking is a separate need**: `v8` shows that a benchmark can be well aligned to Abel CAP semantics even if it does not yet create an A/B gap between base and skill.
 
 ### Limitations
 
 1. **Temporal mismatch**: Abel's next-period forecasts vs. days/weeks-ahead questions.
 2. **Graph coverage gaps**: SPY, DJI, BTC, XAUUSD, CSI300, Chinese A-shares not in graph.
 3. **Multi-asset questions**: Current approach uses one node; should aggregate signals across all mentioned assets.
+4. **Explicit prompts reduce separation**: In `v8`, a strong base model can inspect the same live CAP surface and match the skill-assisted run.
 
 ### Recommendations
 
@@ -273,6 +301,7 @@ This makes `v7` a cleaner benchmark for "live prediction with and without the sk
 2. Expand Abel's graph to cover major indices, crypto pairs, and precious metals.
 3. Add time-horizon awareness to prompts: weight short-term Abel signals differently for day-level vs. month-level questions.
 4. For multi-asset questions, query Abel for each mentioned asset and present aggregated signals.
+5. Keep `v8` as the regression core, then add a more natural intent-level benchmark layer where routing, workflow choice, and proxy selection matter.
 
 ---
 
