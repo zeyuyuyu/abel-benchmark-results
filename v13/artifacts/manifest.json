@@ -1,0 +1,20 @@
+{
+  "files": [
+    {
+      "path": "artifacts/futurex_online_rows.json",
+      "description": "Raw official FutureX-Online source rows included in v13."
+    },
+    {
+      "path": "artifacts/reference_snapshot.json",
+      "description": "Build-time market snapshot used to parameterize custom live tasks."
+    },
+    {
+      "path": "questions.json",
+      "description": "Benchmark questions only, with no answer key."
+    },
+    {
+      "path": "ground_truth.json",
+      "description": "Pending answer store plus explicit third-party resolution specs."
+    }
+  ]
+}

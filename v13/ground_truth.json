@@ -1,0 +1,422 @@
+{
+  "version": "v13-live-only-finance",
+  "today_context": "March 25, 2026 (GMT+8, Asia/Shanghai)",
+  "case_count": 17,
+  "cases": [
+    {
+      "id": "v13_001",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "futurex_past_backfill",
+        "dataset_name": "futurex-ai/Futurex-Past",
+        "source_id": "69a2e39e5692ef005cdbf2d9",
+        "expected_after": "2026-03-31",
+        "title": "S&P 500 Single-Day Gains and Losses (%) in Q1"
+      }
+    },
+    {
+      "id": "v13_002",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "futurex_past_backfill",
+        "dataset_name": "futurex-ai/Futurex-Past",
+        "source_id": "69a2e39e5692ef005cdbf2e9",
+        "expected_after": "2026-03-31",
+        "title": "What will KOSPI (^KS11) hit in Q1 2026?"
+      }
+    },
+    {
+      "id": "v13_003",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "futurex_past_backfill",
+        "dataset_name": "futurex-ai/Futurex-Past",
+        "source_id": "69a2e39e5692ef005cdbf2d8",
+        "expected_after": "2026-03-31",
+        "title": "Q1 S&P 500 Performance"
+      }
+    },
+    {
+      "id": "v13_004",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "futurex_past_backfill",
+        "dataset_name": "futurex-ai/Futurex-Past",
+        "source_id": "69a2e39e5692ef005cdbf2e8",
+        "expected_after": "2026-03-31",
+        "title": "Will KOSPI (KS11) close above __ end of Q1?"
+      }
+    },
+    {
+      "id": "v13_005",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "futurex_past_backfill",
+        "dataset_name": "futurex-ai/Futurex-Past",
+        "source_id": "69a4319df2cb3b006875e9d0",
+        "expected_after": "2026-03-31",
+        "title": "What price will Bitcoin hit by March 2026? (add your prediction)"
+      }
+    },
+    {
+      "id": "v13_006",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "futurex_past_backfill",
+        "dataset_name": "futurex-ai/Futurex-Past",
+        "source_id": "699c4887d1d3cf005c1e48ad",
+        "expected_after": "2026-03-26",
+        "title": "Banxico interest rate decision in March"
+      }
+    },
+    {
+      "id": "v13_007",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "futurex_past_backfill",
+        "dataset_name": "futurex-ai/Futurex-Past",
+        "source_id": "69a2e39e5692ef005cdbf27c",
+        "expected_after": "2026-03-31",
+        "title": "Robinhood launches prediction market through MIAXdx by March 31?"
+      }
+    },
+    {
+      "id": "v13_008",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "close_bucket",
+        "symbol": "GC=F",
+        "resolution_date": "2026-03-31",
+        "buckets": [
+          {
+            "label": "A",
+            "type": "lt",
+            "value": 4450
+          },
+          {
+            "label": "B",
+            "type": "range",
+            "lower": 4450,
+            "upper": 4500
+          },
+          {
+            "label": "C",
+            "type": "range",
+            "lower": 4500,
+            "upper": 4550
+          },
+          {
+            "label": "D",
+            "type": "range",
+            "lower": 4550,
+            "upper": 4600
+          },
+          {
+            "label": "E",
+            "type": "ge",
+            "value": 4600
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_009",
+      "status": "resolved",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "hit_levels",
+        "symbol": "CL=F",
+        "start_date": "2026-03-25",
+        "resolution_date": "2026-03-31",
+        "levels": [
+          {
+            "label": "A",
+            "direction": "high",
+            "value": 90
+          },
+          {
+            "label": "B",
+            "direction": "high",
+            "value": 92
+          },
+          {
+            "label": "C",
+            "direction": "high",
+            "value": 95
+          },
+          {
+            "label": "D",
+            "direction": "low",
+            "value": 86
+          },
+          {
+            "label": "E",
+            "direction": "low",
+            "value": 84
+          },
+          {
+            "label": "F",
+            "direction": "low",
+            "value": 82
+          }
+        ]
+      },
+      "resolved_meta": {
+        "max_high": 91.61000061035156,
+        "min_low": 90.70999908447266
+      }
+    },
+    {
+      "id": "v13_010",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "close_threshold_truths",
+        "symbol": "BTC-USD",
+        "resolution_date": "2026-03-31",
+        "thresholds": [
+          {
+            "label": "A",
+            "operator": "gt",
+            "value": 68000
+          },
+          {
+            "label": "B",
+            "operator": "gt",
+            "value": 70000
+          },
+          {
+            "label": "C",
+            "operator": "gt",
+            "value": 72000
+          },
+          {
+            "label": "D",
+            "operator": "gt",
+            "value": 75000
+          },
+          {
+            "label": "E",
+            "operator": "gt",
+            "value": 80000
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_011",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "close_bucket",
+        "symbol": "ETH-USD",
+        "resolution_date": "2026-03-31",
+        "buckets": [
+          {
+            "label": "A",
+            "type": "lt",
+            "value": 2050
+          },
+          {
+            "label": "B",
+            "type": "range",
+            "lower": 2050,
+            "upper": 2150
+          },
+          {
+            "label": "C",
+            "type": "range",
+            "lower": 2150,
+            "upper": 2250
+          },
+          {
+            "label": "D",
+            "type": "range",
+            "lower": 2250,
+            "upper": 2350
+          },
+          {
+            "label": "E",
+            "type": "ge",
+            "value": 2350
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_012",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "NVDA",
+            "reference_close": 179.43,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "AMD",
+            "reference_close": 205.37,
+            "reference_date": "2026-03-24"
+          },
+          "C": {
+            "symbol": "AVGO",
+            "reference_close": 323.08,
+            "reference_date": "2026-03-25"
+          },
+          "D": {
+            "symbol": "TSM",
+            "reference_close": 346.65,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_013",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "membership_above_reference",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "NVDA",
+            "reference_close": 179.43,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "AMD",
+            "reference_close": 205.37,
+            "reference_date": "2026-03-24"
+          },
+          "C": {
+            "symbol": "AVGO",
+            "reference_close": 323.08,
+            "reference_date": "2026-03-25"
+          },
+          "D": {
+            "symbol": "TSM",
+            "reference_close": 346.65,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_014",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "membership_above_reference",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "BTC-USD",
+            "reference_close": 71329.3672,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "ETH-USD",
+            "reference_close": 2177.4016,
+            "reference_date": "2026-03-25"
+          },
+          "C": {
+            "symbol": "TSLA",
+            "reference_close": 393.13,
+            "reference_date": "2026-03-25"
+          },
+          "D": {
+            "symbol": "NVDA",
+            "reference_close": 179.43,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_015",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "BTC-USD",
+            "reference_close": 71329.3672,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "ETH-USD",
+            "reference_close": 2177.4016,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_016",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "binary_close_threshold",
+        "symbol": "NVDA",
+        "resolution_date": "2026-03-31",
+        "operator": "gt",
+        "value": 185
+      }
+    },
+    {
+      "id": "v13_017",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "binary_close_threshold",
+        "symbol": "AMD",
+        "resolution_date": "2026-03-31",
+        "operator": "gt",
+        "value": 215
+      }
+    }
+  ]
+}

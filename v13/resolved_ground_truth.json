@@ -1,0 +1,193 @@
+{
+  "version": "v13-resolved-companion",
+  "case_count": 15,
+  "cases": [
+    {
+      "id": "v13r_001",
+      "source_id": "694fd4d0ae81c200695c89cf",
+      "title": "Bank of Brazil decision in January?",
+      "category": "central_bank_decision",
+      "answer_tokens": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "source_dataset": "futurex-ai/Futurex-Past",
+      "resolved_around": "2026-01-27"
+    },
+    {
+      "id": "v13r_002",
+      "source_id": "6956690920a2e600672a7864",
+      "title": "At close of business on 23 January 2026, will the most recently announced Bank of Japan (BOJ) \"uncollateralized overnight call [interest] rate\" be lower, the same, or higher than it was at close of business on 19 December 2025?",
+      "category": "central_bank_decision",
+      "answer_tokens": [
+        "B"
+      ],
+      "answer_box": "\\boxed{B}",
+      "source_dataset": "futurex-ai/Futurex-Past",
+      "resolved_around": "2026-01-24"
+    },
+    {
+      "id": "v13r_003",
+      "source_id": "695a609d7b2e6a00694886f6",
+      "title": "Reserve Bank of Australia Decision in February",
+      "category": "central_bank_decision",
+      "answer_tokens": [
+        "B"
+      ],
+      "answer_box": "\\boxed{B}",
+      "source_dataset": "futurex-ai/Futurex-Past",
+      "resolved_around": "2026-02-03 00:00:00"
+    },
+    {
+      "id": "v13r_004",
+      "source_id": "6962468be87498005daa01c4",
+      "title": "At close of business on 5 February 2026, will the most recently announced European Central Bank (ECB) \"Deposit facility\" interest rate be lower, the same, or higher than it was at close of business on 18 December 2025?",
+      "category": "central_bank_decision",
+      "answer_tokens": [
+        "B"
+      ],
+      "answer_box": "\\boxed{B}",
+      "source_dataset": "futurex-ai/Futurex-Past",
+      "resolved_around": "2026-02-06"
+    },
+    {
+      "id": "v13r_005",
+      "source_id": "695bb4008b62560069adce53",
+      "title": "Gold (GC) above ___ end of January?",
+      "category": "commodity_thresholds",
+      "answer_tokens": [
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "answer_box": "\\boxed{H, I, J, K, L}",
+      "source_dataset": "futurex-ai/Futurex-Past",
+      "resolved_around": "2026-02-01 00:00:00"
+    },
+    {
+      "id": "v13r_006",
+      "source_id": "695bb4008b62560069adce54",
+      "title": "What will Gold (GC) settle at in January?",
+      "category": "commodity_bucket",
+      "answer_tokens": [
+        "E"
+      ],
+      "answer_box": "\\boxed{E}",
+      "source_dataset": "futurex-ai/Futurex-Past",
+      "resolved_around": "2026-02-01 00:00:00"
+    },
+    {
+      "id": "v13r_007",
+      "source_id": "695bb4008b62560069adce56",
+      "title": "What will Crude Oil (CL) hit__ by end of January?",
+      "category": "commodity_hit_levels",
+      "answer_tokens": [
+        "B",
+        "C",
+        "G",
+        "J"
+      ],
+      "answer_box": "\\boxed{B, C, G, J}",
+      "source_dataset": "futurex-ai/Futurex-Past",
+      "resolved_around": "2026-02-01 00:00:00"
+    },
+    {
+      "id": "v13r_008",
+      "source_id": "695bb4008b62560069adce59",
+      "title": "What will Crude Oil (CL) settle at in January?",
+      "category": "commodity_bucket",
+      "answer_tokens": [
+        "F"
+      ],
+      "answer_box": "\\boxed{F}",
+      "source_dataset": "futurex-ai/Futurex-Past",
+      "resolved_around": "2026-02-01 00:00:00"
+    },
+    {
+      "id": "v13r_009",
+      "source_id": "6957ba8a03568a006853e82e",
+      "title": "Tesla hits $400 or $500 first before end of January 2026?",
+      "category": "first_hit",
+      "answer_tokens": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "source_dataset": "futurex-ai/Futurex-Past",
+      "resolved_around": "2026-02-01 00:00:00"
+    },
+    {
+      "id": "v13r_010",
+      "source_id": "6957ba8a03568a006853e82f",
+      "title": "Nvidia hits 170, 200 or neither first by end of January 2026?",
+      "category": "first_hit",
+      "answer_tokens": [
+        "A"
+      ],
+      "answer_box": "\\boxed{A}",
+      "source_dataset": "futurex-ai/Futurex-Past",
+      "resolved_around": "2026-02-01 00:00:00"
+    },
+    {
+      "id": "v13r_011",
+      "source_id": "69590c18deacd00066876763",
+      "title": "Will Bitcoin close above USD $100,000 on 31 January 2026 (UTC)?",
+      "category": "crypto_binary",
+      "answer_tokens": [
+        "No"
+      ],
+      "answer_box": "\\boxed{No}",
+      "source_dataset": "futurex-ai/Futurex-Past",
+      "resolved_around": "2026-02-02 00:00:00"
+    },
+    {
+      "id": "v13r_012",
+      "source_id": "69590c18deacd00066876764",
+      "title": "Bitcoin below $82K in January?",
+      "category": "crypto_binary",
+      "answer_tokens": [
+        "Yes"
+      ],
+      "answer_box": "\\boxed{Yes}",
+      "source_dataset": "futurex-ai/Futurex-Past",
+      "resolved_around": "2026-02-02 00:00:00"
+    },
+    {
+      "id": "v13r_013",
+      "source_id": "698b2507175d47006853871d",
+      "title": "Between 10 October 2025 and 6 March 2026, what will be the lowest closing price of soybeans?",
+      "category": "agriculture_bucket",
+      "answer_tokens": [
+        "E"
+      ],
+      "answer_box": "\\boxed{E}",
+      "source_dataset": "futurex-ai/Futurex-Past",
+      "resolved_around": "2026-03-07"
+    },
+    {
+      "id": "v13r_014",
+      "source_id": "6981ea9930057a005cdb9e46",
+      "title": "Will global platinum availability fall below 2 million ounces by March 4, 2026, due to South African mine supply issues?",
+      "category": "supply_shock_binary",
+      "answer_tokens": [
+        "No"
+      ],
+      "answer_box": "\\boxed{No}",
+      "source_dataset": "futurex-ai/Futurex-Past",
+      "resolved_around": "2026-03-05"
+    },
+    {
+      "id": "v13r_015",
+      "source_id": "69a977a47e9d43005df0d703",
+      "title": "Will NVIDIA stock be higher on March 16, 2026 than on March 09, 2026?",
+      "category": "single_stock_direction",
+      "answer_tokens": [
+        "No"
+      ],
+      "answer_box": "\\boxed{No}",
+      "source_dataset": "futurex-ai/Futurex-Past",
+      "resolved_around": "2026-03-17"
+    }
+  ]
+}
