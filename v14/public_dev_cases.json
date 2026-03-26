@@ -1,0 +1,1858 @@
+{
+  "version": "v14-alpha-public-dev-cases",
+  "split": "public_dev",
+  "case_count": 21,
+  "notes": [
+    "Each case is individually authored and instantiated from the v14 seed set.",
+    "This pack is meant for public development and interpretability, not hidden evaluation.",
+    "Ground truth is separated into public_dev_ground_truth.json."
+  ],
+  "cases": [
+    {
+      "id": "v14d_001",
+      "split": "public_dev",
+      "track": "formal_causality",
+      "source_family": [
+        "CLADDER",
+        "CounterBench"
+      ],
+      "task_family": "backdoor_adjustment",
+      "generation_pipeline": "structure_plus_data_to_nl",
+      "prompt_style": "naturalized_graph_question",
+      "title": "Campaign Lift With A Hidden Seasonal Driver",
+      "scenario": "A business DAG is given for campaign exposure, site traffic, conversion, and seasonality. The case asks whether the effect of the campaign on conversion is identifiable and what should be adjusted for.",
+      "question": "Which adjustment set, if any, identifies the causal effect of campaign exposure on conversion?",
+      "inputs_needed": [
+        {
+          "type": "causal_graph",
+          "description": "Observed DAG with 4-6 nodes",
+          "required": true
+        }
+      ],
+      "truth_type": "oracle_graph",
+      "mode_compatibility": [
+        "model_only",
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "causal_formula",
+        "graph_reasoning"
+      ],
+      "slice_tags": [
+        "intervention",
+        "confounder",
+        "identification",
+        "business"
+      ],
+      "expected_output_schema": {
+        "format": "structured_json",
+        "required_fields": [
+          "identified",
+          "adjustment_set",
+          "rationale"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "field_level_accuracy",
+        "identification_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "CLADDER",
+        "CounterBench"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "causal_graph",
+          "title": "Observed DAG",
+          "content": "Nodes: campaign_exposure, site_visits, conversion, seasonality. Edges: seasonality -> campaign_exposure; seasonality -> conversion; campaign_exposure -> site_visits; site_visits -> conversion; campaign_exposure -> conversion. All nodes are observed."
+        },
+        {
+          "type": "document_excerpt",
+          "title": "Measurement note",
+          "content": "Seasonality is measured before campaigns launch. Site visits are recorded after campaign exposure and before conversion."
+        }
+      ],
+      "response_contract": {
+        "format": "structured_json",
+        "required_fields": [
+          "label",
+          "identified",
+          "adjustment_set",
+          "rationale"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "No adjustment is needed."
+        },
+        {
+          "label": "B",
+          "text": "Adjust for site_visits only."
+        },
+        {
+          "label": "C",
+          "text": "Adjust for seasonality only."
+        },
+        {
+          "label": "D",
+          "text": "Adjust for seasonality and site_visits."
+        },
+        {
+          "label": "E",
+          "text": "The total effect is not identifiable from observed variables."
+        }
+      ],
+      "paired_case_group": "formal_identification_campaign"
+    },
+    {
+      "id": "v14d_002",
+      "split": "public_dev",
+      "track": "formal_causality",
+      "source_family": [
+        "CounterBench",
+        "CORR2CAUSE"
+      ],
+      "task_family": "counterfactual_with_delexicalization",
+      "generation_pipeline": "structure_plus_data_to_nl",
+      "prompt_style": "naturalized_graph_question",
+      "title": "Would Outcome Y Have Changed Under Do(X)?",
+      "scenario": "A delexicalized counterfactual case uses nonsense variable names so that the model cannot rely on prior semantic associations.",
+      "question": "Given the observed facts and the graph, would Y still have occurred if X had been set to 0?",
+      "inputs_needed": [
+        {
+          "type": "causal_graph",
+          "description": "Small SCM-style graph with delexicalized node names",
+          "required": true
+        },
+        {
+          "type": "evaluation_metadata",
+          "description": "Observed factual assignment and intervention target",
+          "required": true
+        }
+      ],
+      "truth_type": "oracle_graph",
+      "mode_compatibility": [
+        "model_only",
+        "open_book"
+      ],
+      "skills_required": [
+        "counterfactual_reasoning",
+        "causal_formula"
+      ],
+      "slice_tags": [
+        "counterfactual",
+        "correlation_vs_causation"
+      ],
+      "expected_output_schema": {
+        "format": "yes_no",
+        "required_fields": [
+          "answer",
+          "rationale"
+        ],
+        "abstention_allowed": false
+      },
+      "scoring_focus": [
+        "final_answer_accuracy",
+        "field_level_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "CounterBench",
+        "CORR2CAUSE"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "causal_graph",
+          "title": "SCM graph",
+          "content": "Binary variables with edges X -> M -> Y and Z -> Y. No hidden confounding is assumed."
+        },
+        {
+          "type": "document_excerpt",
+          "title": "Structural equations and observations",
+          "content": "M := X. Y := M OR Z. Observed facts: X=1, Z=0, therefore M=1 and Y=1."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "counterfactual_outcome",
+          "rationale"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "Yes, Y would still have occurred under do(X=0)."
+        },
+        {
+          "label": "B",
+          "text": "No, Y would not have occurred under do(X=0)."
+        },
+        {
+          "label": "C",
+          "text": "The counterfactual is not identifiable from the information given."
+        }
+      ],
+      "paired_case_group": "formal_counterfactual_scm"
+    },
+    {
+      "id": "v14d_003",
+      "split": "public_dev",
+      "track": "formal_causality",
+      "source_family": [
+        "CORR2CAUSE",
+        "CLADDER"
+      ],
+      "task_family": "correlation_vs_causation_discrimination",
+      "generation_pipeline": "structure_plus_data_to_nl",
+      "prompt_style": "naturalized_graph_question",
+      "title": "A Strong Association But No Direct Effect",
+      "scenario": "A short report describes a strong observational association between two business metrics, but the graph shows a shared upstream driver.",
+      "question": "Is the claim 'X causes Y' supported, unsupported, or contradicted by the structure?",
+      "inputs_needed": [
+        {
+          "type": "causal_graph",
+          "description": "Shared-cause graph",
+          "required": true
+        },
+        {
+          "type": "document_excerpt",
+          "description": "Short report containing the observational claim",
+          "required": true
+        }
+      ],
+      "truth_type": "oracle_graph",
+      "mode_compatibility": [
+        "model_only",
+        "open_book"
+      ],
+      "skills_required": [
+        "graph_reasoning",
+        "abstention"
+      ],
+      "slice_tags": [
+        "association",
+        "correlation_vs_causation",
+        "supportability"
+      ],
+      "expected_output_schema": {
+        "format": "multiple_choice",
+        "required_fields": [
+          "label",
+          "justification"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "final_answer_accuracy",
+        "abstention_quality"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "CORR2CAUSE",
+        "CLADDER"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "causal_graph",
+          "title": "Observed structure",
+          "content": "Edges: Z -> X, Z -> Y, X -> M, M -> Y. There is no direct edge X -> Y."
+        },
+        {
+          "type": "table",
+          "title": "Association snapshot",
+          "content": "Observed data show P(Y=1 | X=1)=0.70 and P(Y=1 | X=0)=0.30."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "effect_type",
+          "rationale"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "Supported: X has a causal effect on Y, but only indirectly."
+        },
+        {
+          "label": "B",
+          "text": "Unsupported: the graph shows association only, not causation."
+        },
+        {
+          "label": "C",
+          "text": "Contradicted: the graph rules out any causal effect from X to Y."
+        }
+      ],
+      "paired_case_group": "formal_correlation_vs_cause"
+    },
+    {
+      "id": "v14d_004",
+      "split": "public_dev",
+      "track": "graph_and_mechanism",
+      "source_family": [
+        "CausalGraph2LLM"
+      ],
+      "task_family": "mediator_vs_confounder_identification",
+      "generation_pipeline": "structure_plus_data_to_nl",
+      "prompt_style": "graph_query",
+      "title": "Which Node Is Acting As The Mediator?",
+      "scenario": "The case presents a graph and a natural-language description of a mechanism linking price, demand, and margin.",
+      "question": "Which node is the mediator between price change and margin change?",
+      "inputs_needed": [
+        {
+          "type": "causal_graph",
+          "description": "Annotated graph with 6-8 nodes",
+          "required": true
+        }
+      ],
+      "truth_type": "oracle_graph",
+      "mode_compatibility": [
+        "model_only",
+        "open_book"
+      ],
+      "skills_required": [
+        "graph_reasoning"
+      ],
+      "slice_tags": [
+        "mediator",
+        "graph_structure"
+      ],
+      "expected_output_schema": {
+        "format": "structured_json",
+        "required_fields": [
+          "mediator_node",
+          "mechanism_path"
+        ],
+        "abstention_allowed": false
+      },
+      "scoring_focus": [
+        "field_level_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "CausalGraph2LLM"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "causal_graph",
+          "title": "Mechanism graph",
+          "content": "Edges: price_change -> unit_volume, unit_volume -> freight_cost, unit_volume -> gross_margin, freight_cost -> gross_margin, cost_inflation -> freight_cost, cost_inflation -> gross_margin."
+        },
+        {
+          "type": "document_excerpt",
+          "title": "Narrative description",
+          "content": "Management says the price change first altered unit volume, which then affected both shipping intensity and margin realization."
+        }
+      ],
+      "response_contract": {
+        "format": "structured_json",
+        "required_fields": [
+          "mediator_node",
+          "mechanism_path"
+        ]
+      },
+      "paired_case_group": "graph_mechanism_price_margin"
+    },
+    {
+      "id": "v14d_005",
+      "split": "public_dev",
+      "track": "graph_and_mechanism",
+      "source_family": [
+        "CausalGraph2LLM",
+        "CausalBench"
+      ],
+      "task_family": "path_supportability",
+      "generation_pipeline": "structure_plus_data_to_nl",
+      "prompt_style": "graph_query",
+      "title": "Can This Effect Be Reached Through Any Directed Path?",
+      "scenario": "A graph and a short product-growth story are both provided. The model must decide whether a claimed effect is structurally reachable.",
+      "question": "Is there a directed causal path from the intervention node to the stated outcome node?",
+      "inputs_needed": [
+        {
+          "type": "causal_graph",
+          "description": "Directed graph",
+          "required": true
+        },
+        {
+          "type": "narrative",
+          "description": "Claim stated in product language",
+          "required": true
+        }
+      ],
+      "truth_type": "oracle_graph",
+      "mode_compatibility": [
+        "model_only",
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "graph_reasoning",
+        "abstention"
+      ],
+      "slice_tags": [
+        "path_existence",
+        "supportability",
+        "mechanism"
+      ],
+      "expected_output_schema": {
+        "format": "structured_json",
+        "required_fields": [
+          "path_exists",
+          "shortest_path",
+          "confidence"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "field_level_accuracy",
+        "abstention_quality"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "CausalGraph2LLM",
+        "CausalBench"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "causal_graph",
+          "title": "Service graph",
+          "content": "Edges: supplier_delay -> stockout -> fulfillment_delay -> customer_complaints -> churn. Also marketing_spend -> new_customers and price_discount -> new_customers. No arrows lead from marketing_spend or price_discount into churn through the service chain."
+        }
+      ],
+      "response_contract": {
+        "format": "structured_json",
+        "required_fields": [
+          "reachable",
+          "example_path",
+          "rationale"
+        ]
+      },
+      "paired_case_group": "graph_path_existence_service_failure"
+    },
+    {
+      "id": "v14d_006",
+      "split": "public_dev",
+      "track": "graph_and_mechanism",
+      "source_family": [
+        "CausalGraph2LLM"
+      ],
+      "task_family": "encoding_invariance",
+      "generation_pipeline": "structure_plus_data_to_nl",
+      "prompt_style": "graph_query",
+      "title": "Same Graph, Different Encoding",
+      "scenario": "The same causal graph is shown in two encodings: adjacency-list style and narrative description. The model should reach the same conclusion.",
+      "question": "Do the two graph encodings imply the same answer to the causal query?",
+      "inputs_needed": [
+        {
+          "type": "causal_graph",
+          "description": "Two equivalent graph encodings",
+          "required": true
+        }
+      ],
+      "truth_type": "oracle_graph",
+      "mode_compatibility": [
+        "model_only"
+      ],
+      "skills_required": [
+        "graph_reasoning",
+        "robustness"
+      ],
+      "slice_tags": [
+        "encoding_sensitivity",
+        "graph_structure"
+      ],
+      "expected_output_schema": {
+        "format": "yes_no",
+        "required_fields": [
+          "answer",
+          "canonical_reasoning"
+        ],
+        "abstention_allowed": false
+      },
+      "scoring_focus": [
+        "final_answer_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "CausalGraph2LLM"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "causal_graph",
+          "title": "Encoding A: adjacency list",
+          "content": "macro_demand -> ad_spend; macro_demand -> sales; ad_spend -> visits; visits -> sales; promo_discount -> visits; inventory_constraint -> sales."
+        },
+        {
+          "type": "narrative",
+          "title": "Encoding B: paragraph",
+          "content": "When macro demand strengthens, the company spends more on ads and would have sold more even without those extra ads. Ads increase visits, and visits help sales. Promotions also lift visits, while inventory constraints can cap sales."
+        },
+        {
+          "type": "document_excerpt",
+          "title": "Question focus",
+          "content": "Identify the node that is the confounder for the relationship between ad_spend and sales across both encodings."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "confounder",
+          "rationale"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "promo_discount"
+        },
+        {
+          "label": "B",
+          "text": "macro_demand"
+        },
+        {
+          "label": "C",
+          "text": "inventory_constraint"
+        },
+        {
+          "label": "D",
+          "text": "visits"
+        }
+      ],
+      "paired_case_group": "graph_encoding_invariance_ads_sales"
+    },
+    {
+      "id": "v14d_007",
+      "split": "public_dev",
+      "track": "data_grounded_causal_reasoning",
+      "source_family": [
+        "QRData",
+        "QRText"
+      ],
+      "task_family": "post_treatment_control_trap",
+      "generation_pipeline": "structure_plus_data_to_nl",
+      "prompt_style": "table_qa",
+      "title": "A/B Test With A Post-Treatment Metric",
+      "scenario": "An experiment report includes treatment assignment, conversion, and an engagement metric that is measured after treatment.",
+      "question": "Should the engagement metric be controlled for when estimating the treatment effect on conversion?",
+      "inputs_needed": [
+        {
+          "type": "table",
+          "description": "Experiment summary table",
+          "required": true
+        },
+        {
+          "type": "document_excerpt",
+          "description": "Short report defining each metric",
+          "required": true
+        }
+      ],
+      "truth_type": "programmatic_from_data",
+      "mode_compatibility": [
+        "model_only",
+        "open_book"
+      ],
+      "skills_required": [
+        "statistical_grounding",
+        "causal_formula"
+      ],
+      "slice_tags": [
+        "intervention",
+        "post_treatment",
+        "identification"
+      ],
+      "expected_output_schema": {
+        "format": "multiple_choice",
+        "required_fields": [
+          "label",
+          "rationale"
+        ],
+        "abstention_allowed": false
+      },
+      "scoring_focus": [
+        "final_answer_accuracy",
+        "field_level_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "QRData",
+        "QRText"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "table",
+          "title": "Experiment summary",
+          "content": "Rows: control, treatment. Columns: assigned_users, conversions, three_day_engagement_score. The engagement score is measured only after assignment and after users see the experience."
+        },
+        {
+          "type": "document_excerpt",
+          "title": "Metric definitions",
+          "content": "Conversion is the primary endpoint. Three-day engagement is computed from post-assignment behavior inside the product."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "should_control",
+          "rationale"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "Yes. Control for engagement because it predicts conversion."
+        },
+        {
+          "label": "B",
+          "text": "No. Engagement is post-treatment and should not be controlled for."
+        },
+        {
+          "label": "C",
+          "text": "Yes, but only to improve precision without affecting identification."
+        },
+        {
+          "label": "D",
+          "text": "The treatment effect is unidentifiable no matter what is done."
+        }
+      ],
+      "paired_case_group": "data_vs_text_post_treatment"
+    },
+    {
+      "id": "v14d_008",
+      "split": "public_dev",
+      "track": "data_grounded_causal_reasoning",
+      "source_family": [
+        "QRData",
+        "FinQA"
+      ],
+      "task_family": "simpsons_paradox_causal_read",
+      "generation_pipeline": "structure_plus_data_to_nl",
+      "prompt_style": "table_qa",
+      "title": "The Aggregate Says Yes, The Strata Say No",
+      "scenario": "A table shows an overall performance lift but subgroup breakdowns move in the opposite direction due to a composition shift.",
+      "question": "Is the aggregate increase sufficient evidence of a positive causal effect?",
+      "inputs_needed": [
+        {
+          "type": "table",
+          "description": "Aggregated and stratified performance table",
+          "required": true
+        }
+      ],
+      "truth_type": "programmatic_from_data",
+      "mode_compatibility": [
+        "model_only",
+        "open_book"
+      ],
+      "skills_required": [
+        "statistical_grounding",
+        "calculation"
+      ],
+      "slice_tags": [
+        "association",
+        "confounder",
+        "data_vs_text_gap"
+      ],
+      "expected_output_schema": {
+        "format": "structured_json",
+        "required_fields": [
+          "supported",
+          "key_driver",
+          "recommended_read"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "field_level_accuracy",
+        "abstention_quality"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "QRData",
+        "FinQA"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "table",
+          "title": "Segmented conversion table",
+          "content": "Novice users: control 18/100 convert, treatment 15/100 convert. Expert users: control 70/100 convert, treatment 66/100 convert. Mixture: treatment traffic is disproportionately expert-heavy, so the aggregate treatment conversion rate appears higher than the aggregate control rate."
+        },
+        {
+          "type": "document_excerpt",
+          "title": "Assignment note",
+          "content": "The treatment was rolled out more aggressively to expert users after a manual allocation decision."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "segment_conclusion",
+          "rationale"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "Treatment helps both overall and within each segment."
+        },
+        {
+          "label": "B",
+          "text": "Treatment looks better in aggregate but performs worse within both segments because the traffic mix changed."
+        },
+        {
+          "label": "C",
+          "text": "Treatment is worse overall but better within both segments."
+        },
+        {
+          "label": "D",
+          "text": "No conclusion can be drawn from the table."
+        }
+      ],
+      "paired_case_group": "data_grounded_simpson"
+    },
+    {
+      "id": "v14d_009",
+      "split": "public_dev",
+      "track": "data_grounded_causal_reasoning",
+      "source_family": [
+        "FinQA",
+        "BizBench"
+      ],
+      "task_family": "finance_table_causal_interpretation",
+      "generation_pipeline": "simple_qa_to_complex_analysis",
+      "prompt_style": "mixed_modal_finance_qa",
+      "title": "Margin Expansion After A Pricing Change",
+      "scenario": "A finance table and a short memo summarize unit volume, realized price, marketing spend, and gross margin before and after a pricing policy change.",
+      "question": "Which variable most plausibly mediates the effect of the pricing change on gross margin?",
+      "inputs_needed": [
+        {
+          "type": "table",
+          "description": "Financial summary table",
+          "required": true
+        },
+        {
+          "type": "document_excerpt",
+          "description": "Management memo",
+          "required": true
+        }
+      ],
+      "truth_type": "hybrid_structured_review",
+      "mode_compatibility": [
+        "model_only",
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "calculation",
+        "domain_knowledge",
+        "graph_reasoning"
+      ],
+      "slice_tags": [
+        "finance",
+        "mediator",
+        "calculation"
+      ],
+      "expected_output_schema": {
+        "format": "structured_json",
+        "required_fields": [
+          "mediator",
+          "evidence_points",
+          "confidence"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "field_level_accuracy",
+        "calculation_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "FinQA",
+        "BizBench"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "table",
+          "title": "Before/after KPI snapshot",
+          "content": "List price +2.0%; unit volume -1.0%; input cost per unit -4.0%; gross margin +3.0 percentage points; competitor prices flat."
+        },
+        {
+          "type": "document_excerpt",
+          "title": "Management note",
+          "content": "A commodity hedge rolled in during the same quarter and materially reduced input costs. Management warns that the margin benefit should not be attributed to pricing alone."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "supportability",
+          "rationale"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "The pricing change clearly caused the full margin expansion."
+        },
+        {
+          "label": "B",
+          "text": "The margin expansion cannot be attributed solely to pricing because input costs also moved materially."
+        },
+        {
+          "label": "C",
+          "text": "The company must have cut price because volume fell."
+        },
+        {
+          "label": "D",
+          "text": "No causal statement of any kind is possible here."
+        }
+      ],
+      "paired_case_group": "data_grounded_pricing_margin"
+    },
+    {
+      "id": "v14d_010",
+      "split": "public_dev",
+      "track": "natural_event_causality",
+      "source_family": [
+        "CRAB",
+        "ExpliCa"
+      ],
+      "task_family": "event_chain_attribution",
+      "generation_pipeline": "domain_knowledge_plus_news_to_structural_task",
+      "prompt_style": "news_narrative",
+      "title": "Which Event Actually Drove The Shortage?",
+      "scenario": "A short news packet describes weather disruptions, port congestion, and inventory shortages across several paragraphs.",
+      "question": "Which event is the most likely direct driver of the final shortage event?",
+      "inputs_needed": [
+        {
+          "type": "news_packet",
+          "description": "3-5 short news excerpts",
+          "required": true
+        }
+      ],
+      "truth_type": "expert_labeled",
+      "mode_compatibility": [
+        "model_only",
+        "open_book"
+      ],
+      "skills_required": [
+        "event_reasoning",
+        "temporal_reasoning"
+      ],
+      "slice_tags": [
+        "event_analysis",
+        "natural_narrative",
+        "temporal_vs_causal"
+      ],
+      "expected_output_schema": {
+        "format": "multiple_choice",
+        "required_fields": [
+          "label",
+          "justification"
+        ],
+        "abstention_allowed": false
+      },
+      "scoring_focus": [
+        "final_answer_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "CRAB",
+        "ExpliCa"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "news_packet",
+          "title": "Excerpt 1",
+          "content": "A typhoon delayed inbound vessels over the weekend and pushed two ocean arrivals back by roughly three days."
+        },
+        {
+          "type": "news_packet",
+          "title": "Excerpt 2",
+          "content": "By Tuesday morning, the port said berth congestion had eased and most containers had been unloaded."
+        },
+        {
+          "type": "news_packet",
+          "title": "Excerpt 3",
+          "content": "On Tuesday night, a scanner outage at the retailer's regional distribution center left 40% of inbound pallets unprocessed. Stores ran out of a promoted SKU the next afternoon."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "direct_driver",
+          "justification"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "The typhoon was the most direct driver of the shortage."
+        },
+        {
+          "label": "B",
+          "text": "Port congestion was the most direct driver of the shortage."
+        },
+        {
+          "label": "C",
+          "text": "The distribution-center scanner outage was the most direct driver of the shortage."
+        },
+        {
+          "label": "D",
+          "text": "Seasonal demand was the most direct driver of the shortage."
+        }
+      ],
+      "paired_case_group": "narrative_direct_driver_shortage"
+    },
+    {
+      "id": "v14d_011",
+      "split": "public_dev",
+      "track": "natural_event_causality",
+      "source_family": [
+        "CRAB",
+        "CausalFlip"
+      ],
+      "task_family": "causal_vs_temporal_disambiguation",
+      "generation_pipeline": "domain_knowledge_plus_news_to_structural_task",
+      "prompt_style": "news_narrative",
+      "title": "After Does Not Mean Because",
+      "scenario": "Two semantically similar news summaries are given, but one implies only temporal succession while the other states an actual mechanism.",
+      "question": "Which summary supports a causal reading and which supports only a temporal reading?",
+      "inputs_needed": [
+        {
+          "type": "narrative",
+          "description": "Paired story variants",
+          "required": true
+        }
+      ],
+      "truth_type": "expert_labeled",
+      "mode_compatibility": [
+        "model_only"
+      ],
+      "skills_required": [
+        "natural_language_robustness",
+        "abstention"
+      ],
+      "slice_tags": [
+        "temporal_vs_causal",
+        "answer_flip"
+      ],
+      "expected_output_schema": {
+        "format": "structured_json",
+        "required_fields": [
+          "causal_variant",
+          "temporal_variant",
+          "rationale"
+        ],
+        "abstention_allowed": false
+      },
+      "scoring_focus": [
+        "field_level_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "CRAB",
+        "CausalFlip"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "news_packet",
+          "title": "Excerpt 1",
+          "content": "Before market open, the company announced a $2 billion buyback and raised full-year guidance."
+        },
+        {
+          "type": "news_packet",
+          "title": "Excerpt 2",
+          "content": "Midday, the CEO appeared on television and repeated the same points from the morning release without adding new information."
+        },
+        {
+          "type": "news_packet",
+          "title": "Excerpt 3",
+          "content": "The shares finished the day up 7.8%, with most of the move occurring in the first 20 minutes after the open."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "causal_read",
+          "justification"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "Yes. The CEO interview was the direct cause of the stock move."
+        },
+        {
+          "label": "B",
+          "text": "Unsupported. The buyback and raised guidance are the better-supported drivers, while the interview mostly repeated old information."
+        },
+        {
+          "label": "C",
+          "text": "No. Interviews can never cause stock moves."
+        },
+        {
+          "label": "D",
+          "text": "The move was random and cannot be analyzed causally."
+        }
+      ],
+      "paired_case_group": "narrative_temporal_vs_causal_equity_move"
+    },
+    {
+      "id": "v14d_012",
+      "split": "public_dev",
+      "track": "natural_event_causality",
+      "source_family": [
+        "CRAB",
+        "CounterBench"
+      ],
+      "task_family": "narrative_counterfactual",
+      "generation_pipeline": "domain_knowledge_plus_news_to_structural_task",
+      "prompt_style": "news_narrative",
+      "title": "If The Strike Had Not Happened",
+      "scenario": "A supply-chain story culminates in a missed delivery milestone. The case asks for a counterfactual read under removal of one key disruption.",
+      "question": "Would the missed delivery still have occurred if the strike had not happened, assuming the other events remained unchanged?",
+      "inputs_needed": [
+        {
+          "type": "narrative",
+          "description": "Event chain with one removable disruption",
+          "required": true
+        }
+      ],
+      "truth_type": "expert_labeled",
+      "mode_compatibility": [
+        "model_only",
+        "open_book"
+      ],
+      "skills_required": [
+        "counterfactual_reasoning",
+        "event_reasoning"
+      ],
+      "slice_tags": [
+        "counterfactual",
+        "event_analysis"
+      ],
+      "expected_output_schema": {
+        "format": "yes_no",
+        "required_fields": [
+          "answer",
+          "key_dependency"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "final_answer_accuracy",
+        "field_level_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "CRAB",
+        "CounterBench"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "news_packet",
+          "title": "Excerpt 1",
+          "content": "A port strike cut throughput by roughly 25% for five days early in the month."
+        },
+        {
+          "type": "news_packet",
+          "title": "Excerpt 2",
+          "content": "Later in the month, heavy rain reduced rail departures by another 10%."
+        },
+        {
+          "type": "news_packet",
+          "title": "Excerpt 3",
+          "content": "Actual monthly exports ended 18% below plan."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "counterfactual_direction",
+          "justification"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "Exports would have finished above plan."
+        },
+        {
+          "label": "B",
+          "text": "Exports would have been roughly on plan."
+        },
+        {
+          "label": "C",
+          "text": "Exports would still have been below plan, but materially better than realized."
+        },
+        {
+          "label": "D",
+          "text": "Exports would have been worse than realized."
+        }
+      ],
+      "paired_case_group": "narrative_counterfactual_port_strike"
+    },
+    {
+      "id": "v14d_013",
+      "split": "public_dev",
+      "track": "finance_and_business_causal_reasoning",
+      "source_family": [
+        "XFinBench",
+        "BizBench",
+        "FinBen"
+      ],
+      "task_family": "earnings_driver_analysis",
+      "generation_pipeline": "simple_qa_to_complex_analysis",
+      "prompt_style": "analyst_memo",
+      "title": "Why Did Margin Miss Despite Revenue Growth?",
+      "scenario": "An analyst memo, earnings excerpt, and compact KPI table are given for a company that grew revenue but missed margin expectations.",
+      "question": "What is the most plausible primary driver of the margin miss, and which variable relationship best supports that explanation?",
+      "inputs_needed": [
+        {
+          "type": "document_excerpt",
+          "description": "Earnings excerpt",
+          "required": true
+        },
+        {
+          "type": "table",
+          "description": "KPI summary table",
+          "required": true
+        }
+      ],
+      "truth_type": "hybrid_structured_review",
+      "mode_compatibility": [
+        "model_only",
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "domain_knowledge",
+        "event_reasoning",
+        "calculation"
+      ],
+      "slice_tags": [
+        "finance",
+        "event_analysis",
+        "variable_relationship"
+      ],
+      "expected_output_schema": {
+        "format": "structured_json",
+        "required_fields": [
+          "primary_driver",
+          "supporting_variables",
+          "confidence"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "field_level_accuracy",
+        "calibration"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "XFinBench",
+        "BizBench",
+        "FinBen"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Earnings excerpt",
+          "content": "Revenue grew 12% year over year, but operating margin missed consensus. Management highlighted a larger-than-expected mix shift into lower-margin hardware and elevated expedited freight costs."
+        },
+        {
+          "type": "table",
+          "title": "KPI table",
+          "content": "Hardware mix: 46% -> 58%. Services mix: 54% -> 42%. Hardware gross margin: 24% -> 18%. Services gross margin: 72% -> 70%. Expedited freight cost as % of revenue: 0.4% -> 2.2%."
+        }
+      ],
+      "response_contract": {
+        "format": "structured_json",
+        "required_fields": [
+          "primary_driver",
+          "supporting_variables",
+          "confidence"
+        ]
+      },
+      "paired_case_group": "finance_margin_miss"
+    },
+    {
+      "id": "v14d_014",
+      "split": "public_dev",
+      "track": "finance_and_business_causal_reasoning",
+      "source_family": [
+        "BizBench",
+        "FinQA"
+      ],
+      "task_family": "marketing_spend_intervention",
+      "generation_pipeline": "simple_qa_to_complex_analysis",
+      "prompt_style": "analyst_memo",
+      "title": "What Happens If We Cut Paid Acquisition?",
+      "scenario": "A growth team has CAC, retention, conversion, and revenue-per-user metrics. The case asks for the near-term causal effect of cutting paid acquisition.",
+      "question": "Which KPI is most likely to change first if paid acquisition is reduced by 20 percent, and why?",
+      "inputs_needed": [
+        {
+          "type": "table",
+          "description": "Growth and unit-economics table",
+          "required": true
+        },
+        {
+          "type": "document_excerpt",
+          "description": "Channel-mix note",
+          "required": true
+        }
+      ],
+      "truth_type": "hybrid_structured_review",
+      "mode_compatibility": [
+        "model_only",
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "domain_knowledge",
+        "graph_reasoning"
+      ],
+      "slice_tags": [
+        "business",
+        "intervention",
+        "variable_relationship"
+      ],
+      "expected_output_schema": {
+        "format": "structured_json",
+        "required_fields": [
+          "first_moved_kpi",
+          "mechanism",
+          "confidence"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "field_level_accuracy",
+        "abstention_quality"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "BizBench",
+        "FinQA"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Marketing memo",
+          "content": "Paid search contributes 62% of first qualified visits, organic contributes 28%, referral contributes 10%. Paid CAC has been rising but remains the largest controllable volume lever."
+        },
+        {
+          "type": "table",
+          "title": "Geo-test results",
+          "content": "In prior geo tests, cutting one paid lead generated only 0.25 organic replacement leads on average within the same month."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "base_case",
+          "rationale"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "Qualified leads would likely drop materially, while CAC improves only partially because organic replacement is limited."
+        },
+        {
+          "label": "B",
+          "text": "Qualified leads would stay roughly flat because organic demand will fully replace paid traffic."
+        },
+        {
+          "label": "C",
+          "text": "Revenue would rise immediately because paid traffic is always low quality."
+        },
+        {
+          "label": "D",
+          "text": "There is no basis for any directional judgment."
+        }
+      ],
+      "paired_case_group": "finance_paid_acquisition_cut"
+    },
+    {
+      "id": "v14d_015",
+      "split": "public_dev",
+      "track": "finance_and_business_causal_reasoning",
+      "source_family": [
+        "XFinBench",
+        "FinBen"
+      ],
+      "task_family": "multi_factor_finance_synthesis",
+      "generation_pipeline": "simple_qa_to_complex_analysis",
+      "prompt_style": "analyst_memo",
+      "title": "Three Plausible Stories, One Dominant Driver",
+      "scenario": "A cross-asset memo includes rates, FX, commodity costs, and company guidance. Several causal stories look plausible.",
+      "question": "Which causal story best explains the observed move, and what key evidence would falsify it?",
+      "inputs_needed": [
+        {
+          "type": "document_excerpt",
+          "description": "Cross-asset and company summary memo",
+          "required": true
+        }
+      ],
+      "truth_type": "hybrid_structured_review",
+      "mode_compatibility": [
+        "model_only",
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "domain_knowledge",
+        "abduction",
+        "abstention"
+      ],
+      "slice_tags": [
+        "finance",
+        "supportability",
+        "event_analysis"
+      ],
+      "expected_output_schema": {
+        "format": "structured_json",
+        "required_fields": [
+          "best_story",
+          "falsifier",
+          "confidence"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "field_level_accuracy",
+        "calibration"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "XFinBench",
+        "FinBen"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Analyst note",
+          "content": "Management cited three factors for the quarter: a one-point constant-currency headwind, a 40 bps legal reserve, and weaker channel sell-through that pushed inventory days higher."
+        },
+        {
+          "type": "table",
+          "title": "Operating summary",
+          "content": "Revenue miss versus plan: -6%. Constant-currency impact: -1 point. Legal reserve impact on operating margin: -0.4 points. Channel inventory days: +12 days. End-market sell-through: -9%."
+        }
+      ],
+      "response_contract": {
+        "format": "structured_json",
+        "required_fields": [
+          "primary_driver",
+          "supporting_variables",
+          "confidence"
+        ]
+      },
+      "paired_case_group": "finance_dominant_driver"
+    },
+    {
+      "id": "v14d_016",
+      "split": "public_dev",
+      "track": "industrial_intervention_and_estimation",
+      "source_family": [
+        "causalAssembly",
+        "CSuite"
+      ],
+      "task_family": "manufacturing_sensor_confounder",
+      "generation_pipeline": "structure_plus_data_to_nl",
+      "prompt_style": "operational_report",
+      "title": "Did The Temperature Change Really Reduce Defects?",
+      "scenario": "A manufacturing report shows defect rates before and after a temperature policy change, but maintenance timing also shifted.",
+      "question": "Is the causal effect of the temperature change on defect rate identifiable from the observed variables?",
+      "inputs_needed": [
+        {
+          "type": "operational_log",
+          "description": "Process metrics and maintenance indicators",
+          "required": true
+        }
+      ],
+      "truth_type": "semi_synthetic_ground_truth",
+      "mode_compatibility": [
+        "model_only",
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "identification",
+        "statistical_grounding"
+      ],
+      "slice_tags": [
+        "industrial_process",
+        "confounder",
+        "identification"
+      ],
+      "expected_output_schema": {
+        "format": "structured_json",
+        "required_fields": [
+          "identified",
+          "needed_controls",
+          "risk_note"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "identification_accuracy",
+        "field_level_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "causalAssembly",
+        "CSuite"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "operational_log",
+          "title": "Process snapshot",
+          "content": "Defect rate fell from 4.8% to 3.9% after a temperature-policy increase on Line A. In the same week, Line A received a maintenance overhaul, while other lines did not."
+        },
+        {
+          "type": "document_excerpt",
+          "title": "Rollout note",
+          "content": "The temperature change was applied only on the renovated line. Throughput also dipped during the same maintenance window."
+        }
+      ],
+      "response_contract": {
+        "format": "structured_json",
+        "required_fields": [
+          "identified",
+          "needed_controls",
+          "risk_note"
+        ]
+      },
+      "paired_case_group": "industrial_identification_temperature"
+    },
+    {
+      "id": "v14d_017",
+      "split": "public_dev",
+      "track": "industrial_intervention_and_estimation",
+      "source_family": [
+        "InterveneBench",
+        "CausalReasoningBenchmark"
+      ],
+      "task_family": "staggered_rollout_policy",
+      "generation_pipeline": "domain_knowledge_plus_news_to_structural_task",
+      "prompt_style": "study_design_prompt",
+      "title": "A Policy Rolled Out At Different Times",
+      "scenario": "A policy is rolled out across regions on different dates, and the case asks for the most credible identification strategy.",
+      "question": "Which identification strategy is most defensible for estimating the policy effect, and what is the main threat to validity?",
+      "inputs_needed": [
+        {
+          "type": "document_excerpt",
+          "description": "Study setup and staggered rollout summary",
+          "required": true
+        },
+        {
+          "type": "table",
+          "description": "Outcome and rollout timing table",
+          "required": true
+        }
+      ],
+      "truth_type": "expert_labeled",
+      "mode_compatibility": [
+        "model_only",
+        "open_book"
+      ],
+      "skills_required": [
+        "identification",
+        "abstention"
+      ],
+      "slice_tags": [
+        "policy",
+        "identification",
+        "supportability"
+      ],
+      "expected_output_schema": {
+        "format": "structured_json",
+        "required_fields": [
+          "strategy",
+          "main_threat",
+          "confidence"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "identification_accuracy",
+        "field_level_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "InterveneBench",
+        "CausalReasoningBenchmark"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "operational_log",
+          "title": "Plant adoption timeline",
+          "content": "Six plants adopted a scheduling policy across four different months. Pre-rollout output and defect trends are visually similar across plants."
+        },
+        {
+          "type": "document_excerpt",
+          "title": "Evaluation task",
+          "content": "Leadership wants a design that estimates the policy effect while accounting for staggered adoption."
+        }
+      ],
+      "response_contract": {
+        "format": "structured_json",
+        "required_fields": [
+          "design",
+          "key_assumption",
+          "risk_note"
+        ]
+      },
+      "paired_case_group": "industrial_staggered_rollout"
+    },
+    {
+      "id": "v14d_018",
+      "split": "public_dev",
+      "track": "industrial_intervention_and_estimation",
+      "source_family": [
+        "RealCause",
+        "CausalReasoningBenchmark"
+      ],
+      "task_family": "treatment_effect_estimation",
+      "generation_pipeline": "structure_plus_data_to_nl",
+      "prompt_style": "study_design_prompt",
+      "title": "Estimate The Effect And State The Assumptions",
+      "scenario": "A semi-synthetic healthcare-like dataset is summarized, with clear treatment, covariates, and outcome definitions.",
+      "question": "Estimate the average treatment effect and list the critical assumptions needed for that estimate to be credible.",
+      "inputs_needed": [
+        {
+          "type": "table",
+          "description": "Semi-synthetic dataset summary or sample",
+          "required": true
+        }
+      ],
+      "truth_type": "semi_synthetic_ground_truth",
+      "mode_compatibility": [
+        "model_only",
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "estimation",
+        "calculation",
+        "identification"
+      ],
+      "slice_tags": [
+        "estimation",
+        "industrial_process",
+        "supportability"
+      ],
+      "expected_output_schema": {
+        "format": "estimate_with_interval",
+        "required_fields": [
+          "ate_estimate",
+          "confidence_interval",
+          "assumptions"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "estimation_accuracy",
+        "identification_accuracy",
+        "calibration"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "RealCause",
+        "CausalReasoningBenchmark"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "table",
+          "title": "Weighted cohort summary",
+          "content": "Adjusted treated mean outcome: 81.2. Adjusted control mean outcome: 78.8. Estimated average treatment effect after weighting: +2.4 points."
+        },
+        {
+          "type": "document_excerpt",
+          "title": "Balance note",
+          "content": "Covariates available for adjustment include plant size, shift, baseline quality score, and operator tenure. Overlap diagnostics are acceptable."
+        }
+      ],
+      "response_contract": {
+        "format": "structured_json",
+        "required_fields": [
+          "estimate",
+          "assumptions",
+          "confidence"
+        ]
+      },
+      "paired_case_group": "industrial_estimation_and_assumptions"
+    },
+    {
+      "id": "v14d_019",
+      "split": "public_dev",
+      "track": "agentic_live_analysis",
+      "source_family": [
+        "Finance Agent",
+        "FinBen"
+      ],
+      "task_family": "fresh_event_synthesis",
+      "generation_pipeline": "domain_knowledge_plus_news_to_structural_task",
+      "prompt_style": "agent_brief",
+      "title": "Fresh Event, Fast Causal Read",
+      "scenario": "An unresolved event analysis task asks for a short causal read using current information, with evidence freshness explicitly relevant.",
+      "question": "What is the most likely causal driver of the move, and what is still uncertain enough that you should not overstate it?",
+      "inputs_needed": [
+        {
+          "type": "retrieval_bundle",
+          "description": "Live or recent evidence bundle",
+          "required": true
+        }
+      ],
+      "truth_type": "hybrid_structured_review",
+      "mode_compatibility": [
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "retrieval",
+        "tool_use",
+        "abstention"
+      ],
+      "slice_tags": [
+        "event_analysis",
+        "freshness_sensitive",
+        "finance"
+      ],
+      "expected_output_schema": {
+        "format": "short_text_plus_json",
+        "required_fields": [
+          "primary_driver",
+          "uncertainty",
+          "evidence_used"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "field_level_accuracy",
+        "tool_use_correctness",
+        "abstention_quality"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "Finance Agent",
+        "FinBen"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "retrieval_bundle",
+          "title": "Snippet 1",
+          "content": "Ocean carriers announced emergency surcharges after a canal disruption forced rerouting on several Asia-Europe lanes."
+        },
+        {
+          "type": "retrieval_bundle",
+          "title": "Snippet 2",
+          "content": "Freight rate indices jumped sharply over the same two-day window, while retailers said they had not yet repriced goods."
+        },
+        {
+          "type": "retrieval_bundle",
+          "title": "Snippet 3",
+          "content": "Analysts cautioned that the duration of the rerouting shock remained unclear and could fade if passage normalizes quickly."
+        }
+      ],
+      "response_contract": {
+        "format": "short_text_plus_json",
+        "required_fields": [
+          "primary_driver",
+          "uncertainty",
+          "evidence_used"
+        ]
+      },
+      "paired_case_group": "agentic_frozen_bundle_freight"
+    },
+    {
+      "id": "v14d_020",
+      "split": "public_dev",
+      "track": "agentic_live_analysis",
+      "source_family": [
+        "Finance Agent",
+        "BizBench"
+      ],
+      "task_family": "analyst_workflow_agent",
+      "generation_pipeline": "simple_qa_to_complex_analysis",
+      "prompt_style": "agent_brief",
+      "title": "Build The Event Memo, Not Just The Answer",
+      "scenario": "The agent receives a short business question but must collect current evidence, decide whether it is enough, and produce an analyst-style memo.",
+      "question": "What is your best-supported causal explanation, what evidence did you rely on, and what would make you change your view?",
+      "inputs_needed": [
+        {
+          "type": "retrieval_bundle",
+          "description": "Searchable public information and filings",
+          "required": true
+        }
+      ],
+      "truth_type": "hybrid_structured_review",
+      "mode_compatibility": [
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "retrieval",
+        "tool_use",
+        "event_reasoning",
+        "calibration"
+      ],
+      "slice_tags": [
+        "agentic",
+        "event_analysis",
+        "supportability"
+      ],
+      "expected_output_schema": {
+        "format": "short_text_plus_json",
+        "required_fields": [
+          "view",
+          "evidence",
+          "change_of_mind_trigger"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "tool_use_correctness",
+        "field_level_accuracy",
+        "calibration"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "Finance Agent",
+        "BizBench"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "retrieval_bundle",
+          "title": "Snippet 1",
+          "content": "A regional bank's shares fell after a policy official commented that deposit competition remains intense for smaller lenders."
+        },
+        {
+          "type": "retrieval_bundle",
+          "title": "Snippet 2",
+          "content": "The bank's last quarterly filing showed a relatively high share of interest-bearing deposits and rising funding costs."
+        },
+        {
+          "type": "retrieval_bundle",
+          "title": "Snippet 3",
+          "content": "A rumor about a capital raise circulated online, but no primary-source filing or company statement confirmed it."
+        }
+      ],
+      "response_contract": {
+        "format": "short_text_plus_json",
+        "required_fields": [
+          "primary_driver",
+          "next_verification",
+          "uncertainty"
+        ]
+      },
+      "paired_case_group": "agentic_event_memo_regional_bank"
+    },
+    {
+      "id": "v14d_021",
+      "split": "public_dev",
+      "track": "agentic_live_analysis",
+      "source_family": [
+        "Finance Agent",
+        "CRAB",
+        "XFinBench"
+      ],
+      "task_family": "cross_source_event_integration",
+      "generation_pipeline": "domain_knowledge_plus_news_to_structural_task",
+      "prompt_style": "agent_brief",
+      "title": "One Event, Multiple Conflicting Narratives",
+      "scenario": "A live case includes conflicting media explanations, partial company commentary, and market reaction across related assets.",
+      "question": "Which explanation is most causally plausible right now, and which alternatives remain live enough that you should keep them open?",
+      "inputs_needed": [
+        {
+          "type": "news_packet",
+          "description": "Conflicting current-event coverage",
+          "required": true
+        },
+        {
+          "type": "retrieval_bundle",
+          "description": "Optional supporting evidence",
+          "required": false
+        }
+      ],
+      "truth_type": "hybrid_structured_review",
+      "mode_compatibility": [
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "retrieval",
+        "event_reasoning",
+        "abstention"
+      ],
+      "slice_tags": [
+        "agentic",
+        "natural_narrative",
+        "freshness_sensitive"
+      ],
+      "expected_output_schema": {
+        "format": "structured_json",
+        "required_fields": [
+          "best_explanation",
+          "live_alternatives",
+          "evidence_gaps"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "field_level_accuracy",
+        "abstention_quality",
+        "tool_use_correctness"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "Finance Agent",
+        "CRAB",
+        "XFinBench"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "retrieval_bundle",
+          "title": "Snippet 1",
+          "content": "A biotech stock rallied after an FDA advisory panel voted in favor of its therapy."
+        },
+        {
+          "type": "retrieval_bundle",
+          "title": "Snippet 2",
+          "content": "Social media accounts also circulated an acquisition rumor, but no credible outlet confirmed it."
+        },
+        {
+          "type": "retrieval_bundle",
+          "title": "Snippet 3",
+          "content": "Short interest was elevated heading into the vote, which may have amplified the magnitude of the move."
+        }
+      ],
+      "response_contract": {
+        "format": "short_text_plus_json",
+        "required_fields": [
+          "primary_driver",
+          "uncertainty",
+          "evidence_used"
+        ]
+      },
+      "paired_case_group": "agentic_conflicting_narratives_biotech"
+    }
+  ]
+}

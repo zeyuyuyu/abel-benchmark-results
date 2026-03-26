@@ -1,0 +1,709 @@
+{
+  "version": "v14-alpha-public-dev-ground-truth",
+  "split": "public_dev",
+  "case_count": 21,
+  "notes": [
+    "Ground truth remains track-specific and does not force one universal answer format.",
+    "Scoring should use the field weights in each case instead of a single scalar-only judge."
+  ],
+  "cases": [
+    {
+      "id": "v14d_001",
+      "track": "formal_causality",
+      "truth_type": "oracle_graph",
+      "canonical_answer": {
+        "label": "C",
+        "identified": true,
+        "adjustment_set": [
+          "seasonality"
+        ],
+        "rationale": "Seasonality is the backdoor confounder. Site_visits lies on the causal pathway and should not be adjusted when estimating the total effect."
+      },
+      "accepted_alternatives": [
+        {
+          "adjustment_set": [
+            "seasonality"
+          ],
+          "notes": "Equivalent ordering or synonymous wording is acceptable."
+        }
+      ],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "identified",
+          "adjustment_set"
+        ],
+        "field_weights": {
+          "label": 0.25,
+          "identified": 0.25,
+          "adjustment_set": 0.35,
+          "rationale": 0.15
+        }
+      },
+      "evidence_summary": [
+        "seasonality opens the only observed backdoor path",
+        "site_visits is a mediator and blocking it would distort the total effect"
+      ],
+      "common_failure_modes": [
+        "adjusting for the mediator",
+        "claiming no adjustment is needed because the treatment has a direct edge"
+      ]
+    },
+    {
+      "id": "v14d_002",
+      "track": "formal_causality",
+      "truth_type": "oracle_graph",
+      "canonical_answer": {
+        "label": "B",
+        "counterfactual_outcome": 0,
+        "rationale": "Under do(X=0), M becomes 0. Because Z is observed to be 0, Y = 0 OR 0 = 0, so Y would not occur."
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "counterfactual_outcome"
+        ],
+        "field_weights": {
+          "label": 0.4,
+          "counterfactual_outcome": 0.4,
+          "rationale": 0.2
+        }
+      },
+      "evidence_summary": [
+        "deterministic SCM supplied",
+        "no hidden confounder blocks counterfactual evaluation"
+      ],
+      "common_failure_modes": [
+        "answering from the observed world instead of the intervened world",
+        "claiming the case is unidentifiable despite an explicit SCM"
+      ]
+    },
+    {
+      "id": "v14d_003",
+      "track": "formal_causality",
+      "truth_type": "oracle_graph",
+      "canonical_answer": {
+        "label": "A",
+        "effect_type": "indirect_causal_effect",
+        "rationale": "X affects Y through the mediator M. The lack of a direct edge does not remove the indirect causal path."
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "effect_type"
+        ],
+        "field_weights": {
+          "label": 0.45,
+          "effect_type": 0.35,
+          "rationale": 0.2
+        }
+      },
+      "evidence_summary": [
+        "direct effect absent but indirect path exists",
+        "observed association is consistent with both confounding and mediation"
+      ],
+      "common_failure_modes": [
+        "equating no direct edge with no causal effect",
+        "equating association alone with sufficient evidence"
+      ]
+    },
+    {
+      "id": "v14d_004",
+      "track": "graph_and_mechanism",
+      "truth_type": "oracle_graph",
+      "canonical_answer": {
+        "mediator_node": "unit_volume",
+        "mechanism_path": [
+          "price_change",
+          "unit_volume",
+          "gross_margin"
+        ]
+      },
+      "accepted_alternatives": [
+        {
+          "mechanism_path": [
+            "price_change",
+            "unit_volume",
+            "freight_cost",
+            "gross_margin"
+          ],
+          "notes": "Longer valid paths that still identify unit_volume as the mediator receive full credit."
+        }
+      ],
+      "scoring_rubric": {
+        "primary_fields": [
+          "mediator_node",
+          "mechanism_path"
+        ],
+        "field_weights": {
+          "mediator_node": 0.6,
+          "mechanism_path": 0.4
+        }
+      },
+      "evidence_summary": [
+        "unit_volume is downstream of price_change and upstream of margin",
+        "freight_cost is a later downstream consequence, not the first mediator"
+      ],
+      "common_failure_modes": [
+        "calling freight_cost the mediator",
+        "confusing an upstream confounder with an in-path mediator"
+      ]
+    },
+    {
+      "id": "v14d_005",
+      "track": "graph_and_mechanism",
+      "truth_type": "oracle_graph",
+      "canonical_answer": {
+        "reachable": true,
+        "example_path": [
+          "supplier_delay",
+          "stockout",
+          "fulfillment_delay",
+          "customer_complaints",
+          "churn"
+        ],
+        "rationale": "A fully directed service-failure path exists from supplier_delay to churn."
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "reachable",
+          "example_path"
+        ],
+        "field_weights": {
+          "reachable": 0.5,
+          "example_path": 0.35,
+          "rationale": 0.15
+        }
+      },
+      "evidence_summary": [
+        "path is directed end to end",
+        "irrelevant marketing nodes should not distract from reachability"
+      ],
+      "common_failure_modes": [
+        "reporting no path because the case includes unrelated nodes",
+        "providing an undirected or backward path"
+      ]
+    },
+    {
+      "id": "v14d_006",
+      "track": "graph_and_mechanism",
+      "truth_type": "oracle_graph",
+      "canonical_answer": {
+        "label": "B",
+        "confounder": "macro_demand",
+        "rationale": "Macro demand causes both ad_spend and sales. The answer should stay the same under either encoding."
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "confounder"
+        ],
+        "field_weights": {
+          "label": 0.45,
+          "confounder": 0.35,
+          "rationale": 0.2
+        }
+      },
+      "evidence_summary": [
+        "same graph rendered two ways",
+        "tests encoding robustness rather than graph memorization"
+      ],
+      "common_failure_modes": [
+        "answering the mediator visits",
+        "changing the answer across encodings"
+      ]
+    },
+    {
+      "id": "v14d_007",
+      "track": "data_grounded_causal_reasoning",
+      "truth_type": "programmatic_from_data",
+      "canonical_answer": {
+        "label": "B",
+        "should_control": false,
+        "rationale": "Three-day engagement is measured after treatment assignment and lies on or after the treatment path. Conditioning on it would bias total effect estimation."
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "should_control"
+        ],
+        "field_weights": {
+          "label": 0.45,
+          "should_control": 0.35,
+          "rationale": 0.2
+        }
+      },
+      "evidence_summary": [
+        "metric timing is explicit",
+        "tests whether the model truly uses the evidence packet"
+      ],
+      "common_failure_modes": [
+        "controlling for a predictive but post-treatment variable",
+        "calling the task impossible instead of identifying the trap"
+      ]
+    },
+    {
+      "id": "v14d_008",
+      "track": "data_grounded_causal_reasoning",
+      "truth_type": "programmatic_from_data",
+      "canonical_answer": {
+        "label": "B",
+        "segment_conclusion": "simpsons_paradox_due_to_segment_mix",
+        "rationale": "Within both novice and expert strata, treatment underperforms. The aggregate improvement is driven by the treated group containing more high-converting experts."
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "segment_conclusion"
+        ],
+        "field_weights": {
+          "label": 0.45,
+          "segment_conclusion": 0.35,
+          "rationale": 0.2
+        }
+      },
+      "evidence_summary": [
+        "classic composition effect",
+        "mix-shift explanation is explicitly available from the packet"
+      ],
+      "common_failure_modes": [
+        "reporting only the aggregate rate",
+        "ignoring the allocation note"
+      ]
+    },
+    {
+      "id": "v14d_009",
+      "track": "data_grounded_causal_reasoning",
+      "truth_type": "hybrid_structured_review",
+      "canonical_answer": {
+        "label": "B",
+        "supportability": "price_not_sufficient_explanation",
+        "rationale": "Pricing and input-cost relief moved at the same time. The packet supports a mixed explanation, not a pricing-only causal claim."
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "supportability"
+        ],
+        "field_weights": {
+          "label": 0.45,
+          "supportability": 0.35,
+          "rationale": 0.2
+        }
+      },
+      "evidence_summary": [
+        "competing causal driver explicitly documented",
+        "tests supportability rather than blind certainty"
+      ],
+      "common_failure_modes": [
+        "over-claiming that price caused all of the improvement",
+        "ignoring the cost hedge note"
+      ]
+    },
+    {
+      "id": "v14d_010",
+      "track": "natural_event_causality",
+      "truth_type": "expert_labeled",
+      "canonical_answer": {
+        "label": "C",
+        "direct_driver": "distribution_center_scanner_outage",
+        "justification": "Upstream weather mattered earlier, but the packet states that the immediate failure before stores stocked out was the scanner outage."
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "direct_driver"
+        ],
+        "field_weights": {
+          "label": 0.45,
+          "direct_driver": 0.35,
+          "justification": 0.2
+        }
+      },
+      "evidence_summary": [
+        "tests direct-driver selection inside a multi-event chain",
+        "temporal proximity alone is not enough; the packet names the final bottleneck"
+      ],
+      "common_failure_modes": [
+        "choosing the earliest upstream event",
+        "answering with a broad macro story not supported by the excerpts"
+      ]
+    },
+    {
+      "id": "v14d_011",
+      "track": "natural_event_causality",
+      "truth_type": "expert_labeled",
+      "canonical_answer": {
+        "label": "B",
+        "causal_read": "morning_corporate_actions_more_plausible_than_interview",
+        "justification": "The major price move happened before the interview and the interview introduced no new information."
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "causal_read"
+        ],
+        "field_weights": {
+          "label": 0.45,
+          "causal_read": 0.35,
+          "justification": 0.2
+        }
+      },
+      "evidence_summary": [
+        "tests temporal-vs-causal confusion",
+        "stronger evidence points to the pre-open actions rather than the midday interview"
+      ],
+      "common_failure_modes": [
+        "choosing the later event because it is more salient",
+        "making an over-general rule that interviews never matter"
+      ]
+    },
+    {
+      "id": "v14d_012",
+      "track": "natural_event_causality",
+      "truth_type": "expert_labeled",
+      "canonical_answer": {
+        "label": "C",
+        "counterfactual_direction": "improve_but_remain_below_plan",
+        "justification": "Removing the strike recovers part of the lost throughput, but the later rail disruption still leaves exports below plan."
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "counterfactual_direction"
+        ],
+        "field_weights": {
+          "label": 0.45,
+          "counterfactual_direction": 0.35,
+          "justification": 0.2
+        }
+      },
+      "evidence_summary": [
+        "counterfactual must remove one event while keeping the other",
+        "tests whether the model avoids all-or-nothing reasoning"
+      ],
+      "common_failure_modes": [
+        "assuming no strike means fully normal month",
+        "ignoring the remaining rain shock"
+      ]
+    },
+    {
+      "id": "v14d_013",
+      "track": "finance_and_business_causal_reasoning",
+      "truth_type": "hybrid_structured_review",
+      "canonical_answer": {
+        "primary_driver": "mix_shift_into_lower_margin_hardware_amplified_by_freight",
+        "supporting_variables": [
+          "hardware_mix_up",
+          "hardware_gross_margin_down",
+          "expedited_freight_cost_up"
+        ],
+        "confidence": "medium_high"
+      },
+      "accepted_alternatives": [
+        {
+          "primary_driver": "lower_margin_hardware_mix",
+          "notes": "Answers that foreground mix shift and still cite freight as a supporting factor receive full credit."
+        }
+      ],
+      "scoring_rubric": {
+        "primary_fields": [
+          "primary_driver",
+          "supporting_variables"
+        ],
+        "field_weights": {
+          "primary_driver": 0.45,
+          "supporting_variables": 0.35,
+          "confidence": 0.2
+        }
+      },
+      "evidence_summary": [
+        "revenue growth alone is not a valid margin explanation",
+        "packet supports a causal variable relationship between product mix and margin"
+      ],
+      "common_failure_modes": [
+        "answering with generic cost inflation despite no evidence",
+        "treating revenue growth itself as the driver of margin miss"
+      ]
+    },
+    {
+      "id": "v14d_014",
+      "track": "finance_and_business_causal_reasoning",
+      "truth_type": "hybrid_structured_review",
+      "canonical_answer": {
+        "label": "A",
+        "base_case": "lead_volume_down_partial_efficiency_gain",
+        "rationale": "The memo and geo test imply incomplete organic substitution. Cutting paid acquisition should reduce qualified leads before any efficiency benefit fully offsets the loss."
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "base_case"
+        ],
+        "field_weights": {
+          "label": 0.45,
+          "base_case": 0.35,
+          "rationale": 0.2
+        }
+      },
+      "evidence_summary": [
+        "tests business counterfactual reasoning, not ad-tech trivia",
+        "geo-test elasticity is the key causal clue"
+      ],
+      "common_failure_modes": [
+        "assuming perfect organic substitution",
+        "assuming paid traffic is categorically low quality with no packet support"
+      ]
+    },
+    {
+      "id": "v14d_015",
+      "track": "finance_and_business_causal_reasoning",
+      "truth_type": "hybrid_structured_review",
+      "canonical_answer": {
+        "primary_driver": "channel_inventory_correction_and_weak_sell_through",
+        "supporting_variables": [
+          "inventory_days_up",
+          "sell_through_down",
+          "revenue_miss_much_larger_than_fx_headwind"
+        ],
+        "confidence": "medium_high"
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "primary_driver",
+          "supporting_variables"
+        ],
+        "field_weights": {
+          "primary_driver": 0.45,
+          "supporting_variables": 0.35,
+          "confidence": 0.2
+        }
+      },
+      "evidence_summary": [
+        "dominant driver must explain most of the miss magnitude",
+        "FX and legal reserve are too small to be the main answer"
+      ],
+      "common_failure_modes": [
+        "choosing the most familiar macro explanation",
+        "overweighting a one-time legal item that mainly affects margin, not revenue"
+      ]
+    },
+    {
+      "id": "v14d_016",
+      "track": "industrial_intervention_and_estimation",
+      "truth_type": "semi_synthetic_ground_truth",
+      "canonical_answer": {
+        "identified": false,
+        "needed_controls": [
+          "maintenance_status",
+          "line_id",
+          "throughput"
+        ],
+        "risk_note": "The treatment is confounded by simultaneous maintenance and line selection. The observed packet does not support a clean causal estimate."
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "identified",
+          "needed_controls"
+        ],
+        "field_weights": {
+          "identified": 0.5,
+          "needed_controls": 0.3,
+          "risk_note": 0.2
+        }
+      },
+      "evidence_summary": [
+        "simultaneous maintenance shift breaks identification",
+        "tests supportability rather than blind estimation"
+      ],
+      "common_failure_modes": [
+        "treating before/after deltas as causal proof",
+        "ignoring line selection and maintenance timing"
+      ]
+    },
+    {
+      "id": "v14d_017",
+      "track": "industrial_intervention_and_estimation",
+      "truth_type": "expert_labeled",
+      "canonical_answer": {
+        "design": "staggered_difference_in_differences_event_study",
+        "key_assumption": "parallel_trends_absent_the_policy",
+        "risk_note": "Check for anticipation effects and cross-plant spillovers."
+      },
+      "accepted_alternatives": [
+        {
+          "design": "event_study_with_staggered_treatment_timing",
+          "notes": "Equivalent design wording receives full credit."
+        }
+      ],
+      "scoring_rubric": {
+        "primary_fields": [
+          "design",
+          "key_assumption"
+        ],
+        "field_weights": {
+          "design": 0.45,
+          "key_assumption": 0.35,
+          "risk_note": 0.2
+        }
+      },
+      "evidence_summary": [
+        "staggered rollout invites DiD/event-study reasoning",
+        "parallel trends is the key identification assumption"
+      ],
+      "common_failure_modes": [
+        "suggesting simple before/after comparison",
+        "jumping straight to numeric estimation without naming a design"
+      ]
+    },
+    {
+      "id": "v14d_018",
+      "track": "industrial_intervention_and_estimation",
+      "truth_type": "semi_synthetic_ground_truth",
+      "canonical_answer": {
+        "estimate": 2.4,
+        "assumptions": [
+          "no_unmeasured_confounding_given_adjusted_covariates",
+          "positivity_or_overlap",
+          "stable_outcome_definition_and_no_interference"
+        ],
+        "confidence": "medium"
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "estimate",
+          "assumptions"
+        ],
+        "field_weights": {
+          "estimate": 0.45,
+          "assumptions": 0.35,
+          "confidence": 0.2
+        }
+      },
+      "evidence_summary": [
+        "identification and estimation are scored separately",
+        "case explicitly supplies weighted estimate but still requires assumption awareness"
+      ],
+      "common_failure_modes": [
+        "copying the estimate without naming assumptions",
+        "inventing unsupported extra assumptions unrelated to the packet"
+      ]
+    },
+    {
+      "id": "v14d_019",
+      "track": "agentic_live_analysis",
+      "truth_type": "hybrid_structured_review",
+      "canonical_answer": {
+        "primary_driver": "freight_rate_spike_due_to_canal_disruption_and_rerouting",
+        "uncertainty": "how_long_the_disruption_and_surcharges_will_persist",
+        "evidence_used": [
+          "Snippet 1",
+          "Snippet 2",
+          "Snippet 3"
+        ]
+      },
+      "accepted_alternatives": [
+        {
+          "primary_driver": "rerouting_driven_freight_shock",
+          "notes": "Equivalent concise wording is acceptable if causally aligned."
+        }
+      ],
+      "scoring_rubric": {
+        "primary_fields": [
+          "primary_driver",
+          "uncertainty"
+        ],
+        "field_weights": {
+          "primary_driver": 0.45,
+          "uncertainty": 0.3,
+          "evidence_used": 0.25
+        }
+      },
+      "evidence_summary": [
+        "tests causal synthesis under freshness-sensitive but frozen evidence",
+        "good answers must separate what is likely from what remains unresolved"
+      ],
+      "common_failure_modes": [
+        "summarizing headlines without naming a mechanism",
+        "overclaiming a durable earnings effect not supported by the packet"
+      ]
+    },
+    {
+      "id": "v14d_020",
+      "track": "agentic_live_analysis",
+      "truth_type": "hybrid_structured_review",
+      "canonical_answer": {
+        "primary_driver": "funding_cost_and_deposit_beta_concern",
+        "next_verification": "verify_insured_vs_uninsured_deposit_mix_and_wholesale_funding_dependence",
+        "uncertainty": "the_unconfirmed_capital_raise_rumor_should_not_be_treated_as_established_fact"
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "primary_driver",
+          "next_verification"
+        ],
+        "field_weights": {
+          "primary_driver": 0.4,
+          "next_verification": 0.3,
+          "uncertainty": 0.3
+        }
+      },
+      "evidence_summary": [
+        "tests memo-style causal synthesis with verification discipline",
+        "answers should privilege primary-source evidence over rumor"
+      ],
+      "common_failure_modes": [
+        "treating the rumor as the main driver",
+        "failing to specify what to verify next"
+      ]
+    },
+    {
+      "id": "v14d_021",
+      "track": "agentic_live_analysis",
+      "truth_type": "hybrid_structured_review",
+      "canonical_answer": {
+        "primary_driver": "positive_fda_panel_vote_improving_approval_odds",
+        "uncertainty": "short_squeeze_dynamics_may_have_amplified_the_move_but_do_not_replace_the_main_causal_event",
+        "evidence_used": [
+          "Snippet 1",
+          "Snippet 3"
+        ]
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "primary_driver",
+          "uncertainty"
+        ],
+        "field_weights": {
+          "primary_driver": 0.45,
+          "uncertainty": 0.3,
+          "evidence_used": 0.25
+        }
+      },
+      "evidence_summary": [
+        "tests selection among competing narratives",
+        "main event should outrank unsupported rumor, while magnitude amplification remains a valid uncertainty"
+      ],
+      "common_failure_modes": [
+        "choosing the rumor because it sounds more dramatic",
+        "ignoring the distinction between driver and amplifier"
+      ]
+    }
+  ]
+}
