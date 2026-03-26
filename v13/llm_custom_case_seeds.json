@@ -7,8 +7,8 @@
       "label": "Gold futures (GC)",
       "category": "month_end_bucket",
       "pattern": "interval bin",
-      "title": "Gold has had enough crosscurrents already. If you had to bucket its March close today, where do you land?",
-      "question": "Gold has had enough crosscurrents already. If you had to bucket its March close today, where do you land?"
+      "title": "What will {label} close at on {resolution_date}?",
+      "question": "What will {label} close at on {resolution_date}?"
     },
     {
       "kind": "close_bucket",
@@ -16,8 +16,8 @@
       "label": "WTI crude oil futures (CL)",
       "category": "month_end_bucket",
       "pattern": "interval bin",
-      "title": "For WTI into month-end, which closing range looks most plausible right now?",
-      "question": "For WTI into month-end, which closing range looks most plausible right now?"
+      "title": "Where will {label} settle on the final trading day of March 2026?",
+      "question": "Where will {label} settle on the final trading day of March 2026?"
     },
     {
       "kind": "close_bucket",
@@ -25,8 +25,8 @@
       "label": "Bitcoin (BTC-USD)",
       "category": "month_end_bucket",
       "pattern": "interval bin",
-      "title": "If you only get one Bitcoin month-end call, which price bucket feels right?",
-      "question": "If you only get one Bitcoin month-end call, which price bucket feels right?"
+      "title": "What price range will {label} close in on {resolution_date}?",
+      "question": "What price range will {label} close in on {resolution_date}?"
     },
     {
       "kind": "close_bucket",
@@ -34,8 +34,8 @@
       "label": "Ethereum (ETH-USD)",
       "category": "month_end_bucket",
       "pattern": "interval bin",
-      "title": "Where does Ethereum most likely finish when March trading wraps up?",
-      "question": "Where does Ethereum most likely finish when March trading wraps up?"
+      "title": "Where will {label} finish on {resolution_date}?",
+      "question": "Where will {label} finish on {resolution_date}?"
     },
     {
       "kind": "close_bucket",
@@ -43,8 +43,8 @@
       "label": "NVIDIA (NVDA)",
       "category": "month_end_bucket",
       "pattern": "interval bin",
-      "title": "If NVIDIA closes the month without drama, which range is the best base case?",
-      "question": "If NVIDIA closes the month without drama, which range is the best base case?"
+      "title": "What will {label} close at by the end of March 2026?",
+      "question": "What will {label} close at by the end of March 2026?"
     },
     {
       "kind": "close_bucket",
@@ -52,8 +52,8 @@
       "label": "AMD (AMD)",
       "category": "month_end_bucket",
       "pattern": "interval bin",
-      "title": "What is your most plausible March-close bucket for AMD right now?",
-      "question": "What is your most plausible March-close bucket for AMD right now?"
+      "title": "Which range best describes the {label} close on {resolution_date}?",
+      "question": "Which range best describes the {label} close on {resolution_date}?"
     },
     {
       "kind": "close_bucket",
@@ -61,8 +61,8 @@
       "label": "Broadcom (AVGO)",
       "category": "month_end_bucket",
       "pattern": "interval bin",
-      "title": "Where do you think Broadcom ends the month once the dust settles?",
-      "question": "Where do you think Broadcom ends the month once the dust settles?"
+      "title": "What is the most likely closing range for {label} on {resolution_date}?",
+      "question": "What is the most likely closing range for {label} on {resolution_date}?"
     },
     {
       "kind": "close_bucket",
@@ -70,8 +70,8 @@
       "label": "Taiwan Semiconductor (TSM)",
       "category": "month_end_bucket",
       "pattern": "interval bin",
-      "title": "Which closing range makes the most sense for TSM by month-end?",
-      "question": "Which closing range makes the most sense for TSM by month-end?"
+      "title": "Where does {label} end up at the {resolution_date} close?",
+      "question": "Where does {label} end up at the {resolution_date} close?"
     },
     {
       "kind": "close_bucket",
@@ -79,8 +79,8 @@
       "label": "Tesla (TSLA)",
       "category": "month_end_bucket",
       "pattern": "interval bin",
-      "title": "If you had to pin Tesla to a bucket for the March close, which one would you choose?",
-      "question": "If you had to pin Tesla to a bucket for the March close, which one would you choose?"
+      "title": "What will the closing price of {label} be on the final trading day of March 2026?",
+      "question": "What will the closing price of {label} be on the final trading day of March 2026?"
     },
     {
       "kind": "close_bucket",
@@ -88,8 +88,8 @@
       "label": "Apple (AAPL)",
       "category": "month_end_bucket",
       "pattern": "interval bin",
-      "title": "Where is the cleanest month-end landing spot for Apple?",
-      "question": "Where is the cleanest month-end landing spot for Apple?"
+      "title": "Where will {label} close at month-end on {resolution_date}?",
+      "question": "Where will {label} close at month-end on {resolution_date}?"
     },
     {
       "kind": "close_bucket",
@@ -97,8 +97,8 @@
       "label": "Microsoft (MSFT)",
       "category": "month_end_bucket",
       "pattern": "interval bin",
-      "title": "What closing range feels most realistic for Microsoft at the end of March?",
-      "question": "What closing range feels most realistic for Microsoft at the end of March?"
+      "title": "Which closing bucket fits {label} on {resolution_date}?",
+      "question": "Which closing bucket fits {label} on {resolution_date}?"
     },
     {
       "kind": "close_bucket",
@@ -106,8 +106,8 @@
       "label": "Amazon (AMZN)",
       "category": "month_end_bucket",
       "pattern": "interval bin",
-      "title": "When March books close, which bucket best fits Amazon?",
-      "question": "When March books close, which bucket best fits Amazon?"
+      "title": "What closing range does {label} land in on {resolution_date}?",
+      "question": "What closing range does {label} land in on {resolution_date}?"
     },
     {
       "kind": "close_bucket",
@@ -115,8 +115,8 @@
       "label": "Meta (META)",
       "category": "month_end_bucket",
       "pattern": "interval bin",
-      "title": "What is the likeliest month-end bucket for Meta from here?",
-      "question": "What is the likeliest month-end bucket for Meta from here?"
+      "title": "Where will {label} finish at the March 2026 close?",
+      "question": "Where will {label} finish at the March 2026 close?"
     },
     {
       "kind": "close_bucket",
@@ -124,8 +124,8 @@
       "label": "Invesco QQQ Trust (QQQ)",
       "category": "month_end_bucket",
       "pattern": "interval bin",
-      "title": "If you had to bucket QQQ into the March close, which range would you take?",
-      "question": "If you had to bucket QQQ into the March close, which range would you take?"
+      "title": "What will {label} close at on the last trading day of March 2026?",
+      "question": "What will {label} close at on the last trading day of March 2026?"
     },
     {
       "kind": "close_bucket",
@@ -133,8 +133,8 @@
       "label": "SPDR S&P 500 ETF (SPY)",
       "category": "month_end_bucket",
       "pattern": "interval bin",
-      "title": "Where does SPY most plausibly finish on the March 31 close?",
-      "question": "Where does SPY most plausibly finish on the March 31 close?"
+      "title": "Which bucket contains the {label} close on {resolution_date}?",
+      "question": "Which bucket contains the {label} close on {resolution_date}?"
     },
     {
       "kind": "close_threshold_truths",
@@ -142,8 +142,8 @@
       "label": "Bitcoin (BTC-USD)",
       "category": "month_end_thresholds",
       "pattern": "statement-truth set",
-      "title": "Which of these bullish Bitcoin month-end claims still survives your base case?",
-      "question": "Which of these bullish Bitcoin month-end claims still survives your base case?"
+      "title": "Which of these statements about the {label} close on {resolution_date} will be true?",
+      "question": "Which of these statements about the {label} close on {resolution_date} will be true?"
     },
     {
       "kind": "close_threshold_truths",
@@ -151,8 +151,8 @@
       "label": "Ethereum (ETH-USD)",
       "category": "month_end_thresholds",
       "pattern": "statement-truth set",
-      "title": "How far up the ladder of bullish March-close calls on Ethereum are you willing to go?",
-      "question": "How far up the ladder of bullish March-close calls on Ethereum are you willing to go?"
+      "title": "Which of these {label} close-above statements still hold at the end of March 2026?",
+      "question": "Which of these {label} close-above statements still hold at the end of March 2026?"
     },
     {
       "kind": "close_threshold_truths",
@@ -160,8 +160,8 @@
       "label": "NVIDIA (NVDA)",
       "category": "month_end_thresholds",
       "pattern": "statement-truth set",
-      "title": "Which higher-end NVIDIA claims are still alive in your month-end view?",
-      "question": "Which higher-end NVIDIA claims are still alive in your month-end view?"
+      "title": "Which of these claims about {label} on the {resolution_date} close will be true?",
+      "question": "Which of these claims about {label} on the {resolution_date} close will be true?"
     },
     {
       "kind": "close_threshold_truths",
@@ -169,8 +169,8 @@
       "label": "AMD (AMD)",
       "category": "month_end_thresholds",
       "pattern": "statement-truth set",
-      "title": "On AMD, which of these increasingly bullish close-out statements still hold?",
-      "question": "On AMD, which of these increasingly bullish close-out statements still hold?"
+      "title": "Which of these higher-close outcomes for {label} will be true on {resolution_date}?",
+      "question": "Which of these higher-close outcomes for {label} will be true on {resolution_date}?"
     },
     {
       "kind": "close_threshold_truths",
@@ -178,8 +178,8 @@
       "label": "Tesla (TSLA)",
       "category": "month_end_thresholds",
       "pattern": "statement-truth set",
-      "title": "How much Tesla upside are you still willing to underwrite by the March close?",
-      "question": "How much Tesla upside are you still willing to underwrite by the March close?"
+      "title": "Which of these {label} closing thresholds are still met at the March 2026 close?",
+      "question": "Which of these {label} closing thresholds are still met at the March 2026 close?"
     },
     {
       "kind": "close_threshold_truths",
@@ -187,8 +187,8 @@
       "label": "Apple (AAPL)",
       "category": "month_end_thresholds",
       "pattern": "statement-truth set",
-      "title": "Which of these stronger Apple finish-to-March claims still looks defensible?",
-      "question": "Which of these stronger Apple finish-to-March claims still looks defensible?"
+      "title": "Which of these statements about {label} finishing above a level on {resolution_date} will be true?",
+      "question": "Which of these statements about {label} finishing above a level on {resolution_date} will be true?"
     },
     {
       "kind": "close_threshold_truths",
@@ -196,8 +196,8 @@
       "label": "Microsoft (MSFT)",
       "category": "month_end_thresholds",
       "pattern": "statement-truth set",
-      "title": "How bullish a Microsoft month-end do you really want to endorse here?",
-      "question": "How bullish a Microsoft month-end do you really want to endorse here?"
+      "title": "Which of these {label} close-above levels remain true at month-end?",
+      "question": "Which of these {label} close-above levels remain true at month-end?"
     },
     {
       "kind": "close_threshold_truths",
@@ -205,8 +205,8 @@
       "label": "Amazon (AMZN)",
       "category": "month_end_thresholds",
       "pattern": "statement-truth set",
-      "title": "Which Amazon upside claims still look credible by the end of March?",
-      "question": "Which Amazon upside claims still look credible by the end of March?"
+      "title": "Which of these outcomes for the {label} close on {resolution_date} will be true?",
+      "question": "Which of these outcomes for the {label} close on {resolution_date} will be true?"
     },
     {
       "kind": "close_threshold_truths",
@@ -214,8 +214,8 @@
       "label": "Meta (META)",
       "category": "month_end_thresholds",
       "pattern": "statement-truth set",
-      "title": "For Meta, which of these progressively more bullish closes still fits your view?",
-      "question": "For Meta, which of these progressively more bullish closes still fits your view?"
+      "title": "Which of these stronger month-end close statements about {label} will be true?",
+      "question": "Which of these stronger month-end close statements about {label} will be true?"
     },
     {
       "kind": "close_threshold_truths",
@@ -223,8 +223,8 @@
       "label": "Invesco QQQ Trust (QQQ)",
       "category": "month_end_thresholds",
       "pattern": "statement-truth set",
-      "title": "How many of these upbeat QQQ month-end statements would you still keep on the board?",
-      "question": "How many of these upbeat QQQ month-end statements would you still keep on the board?"
+      "title": "Which of these {label} statements survive the {resolution_date} close?",
+      "question": "Which of these {label} statements survive the {resolution_date} close?"
     },
     {
       "kind": "close_threshold_truths",
@@ -232,8 +232,8 @@
       "label": "iShares Semiconductor ETF (SOXX)",
       "category": "month_end_thresholds",
       "pattern": "statement-truth set",
-      "title": "Which of these semiconductor-ETF upside calls on SOXX still feels live?",
-      "question": "Which of these semiconductor-ETF upside calls on SOXX still feels live?"
+      "title": "Which of these close-above outcomes for {label} will still be true on {resolution_date}?",
+      "question": "Which of these close-above outcomes for {label} will still be true on {resolution_date}?"
     },
     {
       "kind": "close_threshold_truths",
@@ -241,8 +241,8 @@
       "label": "SPDR Gold Shares (GLD)",
       "category": "month_end_thresholds",
       "pattern": "statement-truth set",
-      "title": "How much higher can GLD really finish the month under your base case?",
-      "question": "How much higher can GLD really finish the month under your base case?"
+      "title": "Which of these statements about {label} at the March 2026 close end up being true?",
+      "question": "Which of these statements about {label} at the March 2026 close end up being true?"
     },
     {
       "kind": "hit_levels",
@@ -250,8 +250,8 @@
       "label": "WTI crude oil futures (CL)",
       "category": "hit_levels",
       "pattern": "threshold ladder",
-      "title": "Before March is over, which crude levels do you think actually print?",
-      "question": "Before March is over, which crude levels do you think actually print?"
+      "title": "Which of these {label} levels will trade before market close on {resolution_date}?",
+      "question": "Which of these {label} levels will trade before market close on {resolution_date}?"
     },
     {
       "kind": "hit_levels",
@@ -259,8 +259,8 @@
       "label": "Gold futures (GC)",
       "category": "hit_levels",
       "pattern": "threshold ladder",
-      "title": "Which gold levels are realistic to see trade before month-end?",
-      "question": "Which gold levels are realistic to see trade before month-end?"
+      "title": "Which of these price levels will {label} hit before {resolution_date}?",
+      "question": "Which of these price levels will {label} hit before {resolution_date}?"
     },
     {
       "kind": "hit_levels",
@@ -268,8 +268,8 @@
       "label": "Bitcoin (BTC-USD)",
       "category": "hit_levels",
       "pattern": "threshold ladder",
-      "title": "By the time March ends, which Bitcoin levels do you expect to be touched?",
-      "question": "By the time March ends, which Bitcoin levels do you expect to be touched?"
+      "title": "Before trading ends on {resolution_date}, which of these levels will {label} trade at?",
+      "question": "Before trading ends on {resolution_date}, which of these levels will {label} trade at?"
     },
     {
       "kind": "hit_levels",
@@ -277,8 +277,8 @@
       "label": "Ethereum (ETH-USD)",
       "category": "hit_levels",
       "pattern": "threshold ladder",
-      "title": "Which Ethereum marks do you think get tagged before the month is over?",
-      "question": "Which Ethereum marks do you think get tagged before the month is over?"
+      "title": "Which of these {label} levels get touched before the March 2026 close?",
+      "question": "Which of these {label} levels get touched before the March 2026 close?"
     },
     {
       "kind": "hit_levels",
@@ -286,8 +286,8 @@
       "label": "NVIDIA (NVDA)",
       "category": "hit_levels",
       "pattern": "threshold ladder",
-      "title": "Which NVIDIA price levels are in play before March closes out?",
-      "question": "Which NVIDIA price levels are in play before March closes out?"
+      "title": "Which of these price marks will {label} reach before {resolution_date}?",
+      "question": "Which of these price marks will {label} reach before {resolution_date}?"
     },
     {
       "kind": "hit_levels",
@@ -295,8 +295,8 @@
       "label": "AMD (AMD)",
       "category": "hit_levels",
       "pattern": "threshold ladder",
-      "title": "For AMD, which of these levels still look reachable before month-end?",
-      "question": "For AMD, which of these levels still look reachable before month-end?"
+      "title": "Which of these {label} levels trade at any point before market close on {resolution_date}?",
+      "question": "Which of these {label} levels trade at any point before market close on {resolution_date}?"
     },
     {
       "kind": "hit_levels",
@@ -304,8 +304,8 @@
       "label": "Tesla (TSLA)",
       "category": "hit_levels",
       "pattern": "threshold ladder",
-      "title": "Which Tesla levels do you expect to trade before the calendar flips?",
-      "question": "Which Tesla levels do you expect to trade before the calendar flips?"
+      "title": "Which of these levels does {label} print before the end of March 2026?",
+      "question": "Which of these levels does {label} print before the end of March 2026?"
     },
     {
       "kind": "hit_levels",
@@ -313,8 +313,8 @@
       "label": "Invesco QQQ Trust (QQQ)",
       "category": "hit_levels",
       "pattern": "threshold ladder",
-      "title": "Which QQQ levels do you think show up before the month ends?",
-      "question": "Which QQQ levels do you think show up before the month ends?"
+      "title": "Which of these {label} prices are traded before {resolution_date}?",
+      "question": "Which of these {label} prices are traded before {resolution_date}?"
     },
     {
       "kind": "hit_levels",
@@ -322,8 +322,8 @@
       "label": "SPDR S&P 500 ETF (SPY)",
       "category": "hit_levels",
       "pattern": "threshold ladder",
-      "title": "By March 31, which SPY levels look likely to trade at least once?",
-      "question": "By March 31, which SPY levels look likely to trade at least once?"
+      "title": "Which of these levels will {label} see before the month closes on {resolution_date}?",
+      "question": "Which of these levels will {label} see before the month closes on {resolution_date}?"
     },
     {
       "kind": "hit_levels",
@@ -331,8 +331,8 @@
       "label": "iShares Semiconductor ETF (SOXX)",
       "category": "hit_levels",
       "pattern": "threshold ladder",
-      "title": "Which SOXX levels are still genuinely in play before month-end?",
-      "question": "Which SOXX levels are still genuinely in play before month-end?"
+      "title": "Which of these {label} levels are reached before the final March close?",
+      "question": "Which of these {label} levels are reached before the final March close?"
     },
     {
       "kind": "hit_levels",
@@ -340,8 +340,8 @@
       "label": "Coinbase (COIN)",
       "category": "hit_levels",
       "pattern": "threshold ladder",
-      "title": "What Coinbase levels do you think we actually see before March wraps?",
-      "question": "What Coinbase levels do you think we actually see before March wraps?"
+      "title": "Which of these prices does {label} trade before {resolution_date}?",
+      "question": "Which of these prices does {label} trade before {resolution_date}?"
     },
     {
       "kind": "hit_levels",
@@ -349,8 +349,8 @@
       "label": "Strategy (MSTR)",
       "category": "hit_levels",
       "pattern": "threshold ladder",
-      "title": "For Strategy, which of these levels do you think get printed before March is done?",
-      "question": "For Strategy, which of these levels do you think get printed before March is done?"
+      "title": "Which of these {label} levels come into play before March 31, 2026?",
+      "question": "Which of these {label} levels come into play before March 31, 2026?"
     },
     {
       "symbol": "NVDA",
@@ -360,8 +360,8 @@
       "label": "NVIDIA (NVDA)",
       "category": "binary_price_event",
       "pattern": "binary",
-      "title": "Does NVIDIA actually clear its month-end close hurdle, or not?",
-      "question": "Does NVIDIA actually clear its month-end close hurdle, or not?"
+      "title": "Will {label} close above {threshold} on {resolution_date}?",
+      "question": "Will {label} close above {threshold} on {resolution_date}?"
     },
     {
       "symbol": "AMD",
@@ -371,8 +371,8 @@
       "label": "AMD (AMD)",
       "category": "binary_price_event",
       "pattern": "binary",
-      "title": "Does AMD finish March above its stretch target, or fall short?",
-      "question": "Does AMD finish March above its stretch target, or fall short?"
+      "title": "Will {label} finish above {threshold} at the {resolution_date} close?",
+      "question": "Will {label} finish above {threshold} at the {resolution_date} close?"
     },
     {
       "symbol": "AVGO",
@@ -382,8 +382,8 @@
       "label": "Broadcom (AVGO)",
       "category": "binary_price_event",
       "pattern": "binary",
-      "title": "Can Broadcom beat its month-end close marker from here?",
-      "question": "Can Broadcom beat its month-end close marker from here?"
+      "title": "Will {label} end March 2026 with a close above {threshold}?",
+      "question": "Will {label} end March 2026 with a close above {threshold}?"
     },
     {
       "symbol": "TSM",
@@ -393,8 +393,8 @@
       "label": "Taiwan Semiconductor (TSM)",
       "category": "binary_price_event",
       "pattern": "binary",
-      "title": "Does TSM do enough to close March through its upside threshold?",
-      "question": "Does TSM do enough to close March through its upside threshold?"
+      "title": "Will {label} close through {threshold} on the final trading day of March 2026?",
+      "question": "Will {label} close through {threshold} on the final trading day of March 2026?"
     },
     {
       "symbol": "TSLA",
@@ -404,8 +404,8 @@
       "label": "Tesla (TSLA)",
       "category": "binary_price_event",
       "pattern": "binary",
-      "title": "Will Tesla be able to finish March above its late-month hurdle?",
-      "question": "Will Tesla be able to finish March above its late-month hurdle?"
+      "title": "Will the {resolution_date} close for {label} be above {threshold}?",
+      "question": "Will the {resolution_date} close for {label} be above {threshold}?"
     },
     {
       "symbol": "AAPL",
@@ -415,8 +415,8 @@
       "label": "Apple (AAPL)",
       "category": "binary_price_event",
       "pattern": "binary",
-      "title": "Does Apple still have enough to close March through its target line?",
-      "question": "Does Apple still have enough to close March through its target line?"
+      "title": "Will {label} finish the month above {threshold} on {resolution_date}?",
+      "question": "Will {label} finish the month above {threshold} on {resolution_date}?"
     },
     {
       "symbol": "MSFT",
@@ -426,8 +426,8 @@
       "label": "Microsoft (MSFT)",
       "category": "binary_price_event",
       "pattern": "binary",
-      "title": "Can Microsoft end the month above its next meaningful close threshold?",
-      "question": "Can Microsoft end the month above its next meaningful close threshold?"
+      "title": "Will {label} close higher than {threshold} on {resolution_date}?",
+      "question": "Will {label} close higher than {threshold} on {resolution_date}?"
     },
     {
       "symbol": "AMZN",
@@ -437,8 +437,8 @@
       "label": "Amazon (AMZN)",
       "category": "binary_price_event",
       "pattern": "binary",
-      "title": "Does Amazon finish March on the right side of its upside checkpoint?",
-      "question": "Does Amazon finish March on the right side of its upside checkpoint?"
+      "title": "Will {label} end the March 2026 close above {threshold}?",
+      "question": "Will {label} end the March 2026 close above {threshold}?"
     },
     {
       "symbol": "META",
@@ -448,8 +448,8 @@
       "label": "Meta (META)",
       "category": "binary_price_event",
       "pattern": "binary",
-      "title": "Will Meta close March above its next threshold, yes or no?",
-      "question": "Will Meta close March above its next threshold, yes or no?"
+      "title": "Will {label} settle above {threshold} on the final trading day of March 2026?",
+      "question": "Will {label} settle above {threshold} on the final trading day of March 2026?"
     },
     {
       "symbol": "QQQ",
@@ -459,8 +459,8 @@
       "label": "Invesco QQQ Trust (QQQ)",
       "category": "binary_price_event",
       "pattern": "binary",
-      "title": "Does QQQ manage to finish the month above its current hurdle?",
-      "question": "Does QQQ manage to finish the month above its current hurdle?"
+      "title": "Will {label} close above {threshold} by month-end on {resolution_date}?",
+      "question": "Will {label} close above {threshold} by month-end on {resolution_date}?"
     },
     {
       "symbol": "SPY",
@@ -470,8 +470,8 @@
       "label": "SPDR S&P 500 ETF (SPY)",
       "category": "binary_price_event",
       "pattern": "binary",
-      "title": "Can SPY still close March through its target level?",
-      "question": "Can SPY still close March through its target level?"
+      "title": "Will {label} end March 2026 above {threshold} at the close?",
+      "question": "Will {label} end March 2026 above {threshold} at the close?"
     },
     {
       "symbol": "IWM",
@@ -481,8 +481,8 @@
       "label": "iShares Russell 2000 ETF (IWM)",
       "category": "binary_price_event",
       "pattern": "binary",
-      "title": "Does IWM have enough to finish March above its hurdle?",
-      "question": "Does IWM have enough to finish March above its hurdle?"
+      "title": "Will the final March close for {label} clear {threshold}?",
+      "question": "Will the final March close for {label} clear {threshold}?"
     },
     {
       "symbol": "BTC-USD",
@@ -492,8 +492,8 @@
       "label": "Bitcoin (BTC-USD)",
       "category": "binary_price_event",
       "pattern": "binary",
-      "title": "Will Bitcoin close March above its next big line in the sand?",
-      "question": "Will Bitcoin close March above its next big line in the sand?"
+      "title": "Will {label} close above {threshold} on the last trading day of March 2026?",
+      "question": "Will {label} close above {threshold} on the last trading day of March 2026?"
     },
     {
       "symbol": "ETH-USD",
@@ -503,8 +503,8 @@
       "label": "Ethereum (ETH-USD)",
       "category": "binary_price_event",
       "pattern": "binary",
-      "title": "Can Ethereum finish the month above its upside checkpoint?",
-      "question": "Can Ethereum finish the month above its upside checkpoint?"
+      "title": "Will {label} finish above {threshold} by the {resolution_date} close?",
+      "question": "Will {label} finish above {threshold} by the {resolution_date} close?"
     },
     {
       "symbol": "COIN",
@@ -514,8 +514,8 @@
       "label": "Coinbase (COIN)",
       "category": "binary_price_event",
       "pattern": "binary",
-      "title": "Does Coinbase clear its month-end hurdle by the close of March?",
-      "question": "Does Coinbase clear its month-end hurdle by the close of March?"
+      "title": "Will {label} close north of {threshold} on {resolution_date}?",
+      "question": "Will {label} close north of {threshold} on {resolution_date}?"
     },
     {
       "symbol": "MSTR",
@@ -525,8 +525,8 @@
       "label": "Strategy (MSTR)",
       "category": "binary_price_event",
       "pattern": "binary",
-      "title": "Will Strategy actually finish March above its stretch target?",
-      "question": "Will Strategy actually finish March above its stretch target?"
+      "title": "Will {label} end March above {threshold} at the closing bell?",
+      "question": "Will {label} end March above {threshold} at the closing bell?"
     },
     {
       "symbol": "XLE",
@@ -536,8 +536,8 @@
       "label": "Energy Select Sector SPDR Fund (XLE)",
       "category": "binary_price_event",
       "pattern": "binary",
-      "title": "Does XLE end March below its downside tripwire?",
-      "question": "Does XLE end March below its downside tripwire?"
+      "title": "Will {label} close below {threshold} on {resolution_date}?",
+      "question": "Will {label} close below {threshold} on {resolution_date}?"
     },
     {
       "symbol": "XLF",
@@ -547,8 +547,8 @@
       "label": "Financial Select Sector SPDR Fund (XLF)",
       "category": "binary_price_event",
       "pattern": "binary",
-      "title": "Does XLF finish the month below its soft floor?",
-      "question": "Does XLF finish the month below its soft floor?"
+      "title": "Will {label} finish March 2026 with a close below {threshold}?",
+      "question": "Will {label} finish March 2026 with a close below {threshold}?"
     },
     {
       "kind": "winner_by_return",
@@ -567,8 +567,8 @@
       "group_label": "semiconductor names",
       "category": "winner_market",
       "pattern": "winner market",
-      "title": "Inside the core chip trade, who wins the final stretch of March on percentage return?",
-      "question": "Inside the core chip trade, who wins the final stretch of March on percentage return?"
+      "title": "Which of these {group_label} posts the best return from the {snapshot_date} close through the {resolution_date} close?",
+      "question": "Which of these {group_label} posts the best return from the {snapshot_date} close through the {resolution_date} close?"
     },
     {
       "kind": "winner_by_return",
@@ -587,8 +587,8 @@
       "group_label": "megacap tech names",
       "category": "winner_market",
       "pattern": "winner market",
-      "title": "Which megacap tech name looks best placed to lead the last leg of March?",
-      "question": "Which megacap tech name looks best placed to lead the last leg of March?"
+      "title": "From the {snapshot_date} close to the {resolution_date} close, which of these {group_label} performs best?",
+      "question": "From the {snapshot_date} close to the {resolution_date} close, which of these {group_label} performs best?"
     },
     {
       "kind": "winner_by_return",
@@ -605,8 +605,8 @@
       "group_label": "market beta ETFs",
       "category": "winner_market",
       "pattern": "winner market",
-      "title": "Among the big beta ETFs, who posts the best return into month-end?",
-      "question": "Among the big beta ETFs, who posts the best return into month-end?"
+      "title": "Which name in this {group_label} group has the strongest return from {snapshot_date} through {resolution_date}?",
+      "question": "Which name in this {group_label} group has the strongest return from {snapshot_date} through {resolution_date}?"
     },
     {
       "kind": "winner_by_return",
@@ -625,8 +625,8 @@
       "group_label": "crypto assets and proxies",
       "category": "winner_market",
       "pattern": "winner market",
-      "title": "In the crypto complex, which listed or spot proxy wins the rest of March?",
-      "question": "In the crypto complex, which listed or spot proxy wins the rest of March?"
+      "title": "Across these {group_label}, which delivers the best performance from the {snapshot_date} close to the {resolution_date} close?",
+      "question": "Across these {group_label}, which delivers the best performance from the {snapshot_date} close to the {resolution_date} close?"
     },
     {
       "kind": "winner_by_return",
@@ -645,8 +645,8 @@
       "group_label": "energy names",
       "category": "winner_market",
       "pattern": "winner market",
-      "title": "Which energy name has the best shot at leading into the month-end close?",
-      "question": "Which energy name has the best shot at leading into the month-end close?"
+      "title": "Which of these {group_label} gains the most between the {snapshot_date} close and the {resolution_date} close?",
+      "question": "Which of these {group_label} gains the most between the {snapshot_date} close and the {resolution_date} close?"
     },
     {
       "kind": "winner_by_return",
@@ -665,8 +665,8 @@
       "group_label": "financial names",
       "category": "winner_market",
       "pattern": "winner market",
-      "title": "In financials, who do you think wins the final March sprint?",
-      "question": "In financials, who do you think wins the final March sprint?"
+      "title": "From {snapshot_date} through the close on {resolution_date}, which of these {group_label} leads on return?",
+      "question": "From {snapshot_date} through the close on {resolution_date}, which of these {group_label} leads on return?"
     },
     {
       "kind": "winner_by_return",
@@ -683,8 +683,8 @@
       "group_label": "precious-metals names",
       "category": "winner_market",
       "pattern": "winner market",
-      "title": "Which metals name is most likely to outperform into the March close?",
-      "question": "Which metals name is most likely to outperform into the March close?"
+      "title": "Which of these {group_label} finishes with the best return from the {snapshot_date} close through month-end?",
+      "question": "Which of these {group_label} finishes with the best return from the {snapshot_date} close through month-end?"
     },
     {
       "kind": "winner_by_return",
@@ -703,8 +703,8 @@
       "group_label": "AI platform names",
       "category": "winner_market",
       "pattern": "winner market",
-      "title": "Across the AI platform trade, who comes out on top by month-end return?",
-      "question": "Across the AI platform trade, who comes out on top by month-end return?"
+      "title": "Over the stretch from the {snapshot_date} close to the {resolution_date} close, which of these {group_label} outperforms?",
+      "question": "Over the stretch from the {snapshot_date} close to the {resolution_date} close, which of these {group_label} outperforms?"
     },
     {
       "kind": "winner_by_return",
@@ -723,8 +723,8 @@
       "group_label": "high-beta growth names",
       "category": "winner_market",
       "pattern": "winner market",
-      "title": "Which high-beta growth name wins the last stretch of March?",
-      "question": "Which high-beta growth name wins the last stretch of March?"
+      "title": "Which of these {group_label} posts the top return between the {snapshot_date} close and the March 2026 close?",
+      "question": "Which of these {group_label} posts the top return between the {snapshot_date} close and the March 2026 close?"
     },
     {
       "kind": "membership_above_reference",
@@ -743,8 +743,8 @@
       "group_label": "semiconductor names",
       "category": "up_membership",
       "pattern": "roster membership",
-      "title": "Which of these semiconductor names still finish March above where they stood on March 25?",
-      "question": "Which of these semiconductor names still finish March above where they stood on March 25?"
+      "title": "Which of these {group_label} close {resolution_date} above their {snapshot_date} close?",
+      "question": "Which of these {group_label} close {resolution_date} above their {snapshot_date} close?"
     },
     {
       "kind": "membership_above_reference",
@@ -763,8 +763,8 @@
       "group_label": "megacap tech names",
       "category": "up_membership",
       "pattern": "roster membership",
-      "title": "Which megacap tech names end the month in the green versus their March 25 close?",
-      "question": "Which megacap tech names end the month in the green versus their March 25 close?"
+      "title": "Which of these {group_label} finish the {resolution_date} close above their {snapshot_date} level?",
+      "question": "Which of these {group_label} finish the {resolution_date} close above their {snapshot_date} level?"
     },
     {
       "kind": "membership_above_reference",
@@ -781,8 +781,8 @@
       "group_label": "market beta ETFs",
       "category": "up_membership",
       "pattern": "roster membership",
-      "title": "Among the big beta ETFs, who still closes March above the March 25 mark?",
-      "question": "Among the big beta ETFs, who still closes March above the March 25 mark?"
+      "title": "By the close on {resolution_date}, which of these {group_label} are above their {snapshot_date} close?",
+      "question": "By the close on {resolution_date}, which of these {group_label} are above their {snapshot_date} close?"
     },
     {
       "kind": "membership_above_reference",
@@ -801,8 +801,8 @@
       "group_label": "crypto assets and proxies",
       "category": "up_membership",
       "pattern": "roster membership",
-      "title": "Which crypto assets or proxies finish March above their March 25 close?",
-      "question": "Which crypto assets or proxies finish March above their March 25 close?"
+      "title": "Which of these {group_label} end March 2026 above their {snapshot_date} close?",
+      "question": "Which of these {group_label} end March 2026 above their {snapshot_date} close?"
     },
     {
       "kind": "membership_above_reference",
@@ -821,8 +821,8 @@
       "group_label": "energy names",
       "category": "up_membership",
       "pattern": "roster membership",
-      "title": "Which energy names still manage to end March above their March 25 baseline?",
-      "question": "Which energy names still manage to end March above their March 25 baseline?"
+      "title": "Which names in this {group_label} group close higher on {resolution_date} than they did on {snapshot_date}?",
+      "question": "Which names in this {group_label} group close higher on {resolution_date} than they did on {snapshot_date}?"
     },
     {
       "kind": "membership_above_reference",
@@ -841,8 +841,8 @@
       "group_label": "financial names",
       "category": "up_membership",
       "pattern": "roster membership",
-      "title": "Which financial names finish the month above where they started this stretch?",
-      "question": "Which financial names finish the month above where they started this stretch?"
+      "title": "Which of these {group_label} finish above their {snapshot_date} close by month-end?",
+      "question": "Which of these {group_label} finish above their {snapshot_date} close by month-end?"
     },
     {
       "kind": "membership_above_reference",
@@ -859,8 +859,8 @@
       "group_label": "precious-metals names",
       "category": "up_membership",
       "pattern": "roster membership",
-      "title": "Which metals names close March above their March 25 levels?",
-      "question": "Which metals names close March above their March 25 levels?"
+      "title": "At the {resolution_date} close, which of these {group_label} are still above their {snapshot_date} close?",
+      "question": "At the {resolution_date} close, which of these {group_label} are still above their {snapshot_date} close?"
     },
     {
       "kind": "membership_above_reference",
@@ -879,8 +879,8 @@
       "group_label": "AI platform names",
       "category": "up_membership",
       "pattern": "roster membership",
-      "title": "Which AI platform names still finish March above their March 25 close?",
-      "question": "Which AI platform names still finish March above their March 25 close?"
+      "title": "Which of these {group_label} close March 2026 above where they closed on {snapshot_date}?",
+      "question": "Which of these {group_label} close March 2026 above where they closed on {snapshot_date}?"
     },
     {
       "kind": "membership_above_reference",
@@ -899,8 +899,8 @@
       "group_label": "high-beta growth names",
       "category": "up_membership",
       "pattern": "roster membership",
-      "title": "Which high-beta growth names make it to month-end above their March 25 mark?",
-      "question": "Which high-beta growth names make it to month-end above their March 25 mark?"
+      "title": "Which of these {group_label} end the month above their {snapshot_date} close?",
+      "question": "Which of these {group_label} end the month above their {snapshot_date} close?"
     },
     {
       "kind": "winner_by_return",
@@ -915,8 +915,8 @@
       "group_label": "head to head",
       "category": "head_to_head",
       "pattern": "winner market",
-      "title": "Into the March close, who outperforms on percentage return: Bitcoin or Ethereum?",
-      "question": "Into the March close, who outperforms on percentage return: Bitcoin or Ethereum?"
+      "title": "Which performs better from the {snapshot_date} close through the {resolution_date} close: {left_label} or {right_label}?",
+      "question": "Which performs better from the {snapshot_date} close through the {resolution_date} close: {left_label} or {right_label}?"
     },
     {
       "kind": "winner_by_return",
@@ -931,8 +931,8 @@
       "group_label": "head to head",
       "category": "head_to_head",
       "pattern": "winner market",
-      "title": "Who wins the rest-of-March tape: NVIDIA or AMD?",
-      "question": "Who wins the rest-of-March tape: NVIDIA or AMD?"
+      "title": "From the {snapshot_date} close to the {resolution_date} close, which has the stronger return: {left_label} or {right_label}?",
+      "question": "From the {snapshot_date} close to the {resolution_date} close, which has the stronger return: {left_label} or {right_label}?"
     },
     {
       "kind": "winner_by_return",
@@ -947,8 +947,8 @@
       "group_label": "head to head",
       "category": "head_to_head",
       "pattern": "winner market",
-      "title": "From here to month-end, who delivers the better return: Apple or Microsoft?",
-      "question": "From here to month-end, who delivers the better return: Apple or Microsoft?"
+      "title": "Which outperforms between {snapshot_date} and the close on {resolution_date}: {left_label} or {right_label}?",
+      "question": "Which outperforms between {snapshot_date} and the close on {resolution_date}: {left_label} or {right_label}?"
     },
     {
       "kind": "winner_by_return",
@@ -963,8 +963,8 @@
       "group_label": "head to head",
       "category": "head_to_head",
       "pattern": "winner market",
-      "title": "Through the March close, which does better: Amazon or Meta?",
-      "question": "Through the March close, which does better: Amazon or Meta?"
+      "title": "Which posts the better return from the {snapshot_date} close through month-end: {left_label} or {right_label}?",
+      "question": "Which posts the better return from the {snapshot_date} close through month-end: {left_label} or {right_label}?"
     },
     {
       "kind": "winner_by_return",
@@ -979,8 +979,8 @@
       "group_label": "head to head",
       "category": "head_to_head",
       "pattern": "winner market",
-      "title": "Over the last stretch of March, who outperforms: SPY or QQQ?",
-      "question": "Over the last stretch of March, who outperforms: SPY or QQQ?"
+      "title": "Between {left_label} and {right_label}, which does better from the {snapshot_date} close to the {resolution_date} close?",
+      "question": "Between {left_label} and {right_label}, which does better from the {snapshot_date} close to the {resolution_date} close?"
     },
     {
       "kind": "winner_by_return",
@@ -995,8 +995,8 @@
       "group_label": "head to head",
       "category": "head_to_head",
       "pattern": "winner market",
-      "title": "Into month-end, which wins on return: XLE or XLF?",
-      "question": "Into month-end, which wins on return: XLE or XLF?"
+      "title": "Which has the higher return over the stretch from {snapshot_date} to {resolution_date}: {left_label} or {right_label}?",
+      "question": "Which has the higher return over the stretch from {snapshot_date} to {resolution_date}: {left_label} or {right_label}?"
     },
     {
       "kind": "winner_by_return",
@@ -1011,8 +1011,8 @@
       "group_label": "head to head",
       "category": "head_to_head",
       "pattern": "winner market",
-      "title": "Between gold and crude, which one performs better into the March close?",
-      "question": "Between gold and crude, which one performs better into the March close?"
+      "title": "From the {snapshot_date} close through the final March close, which performs better: {left_label} or {right_label}?",
+      "question": "From the {snapshot_date} close through the final March close, which performs better: {left_label} or {right_label}?"
     },
     {
       "kind": "winner_by_return",
@@ -1027,8 +1027,8 @@
       "group_label": "head to head",
       "category": "head_to_head",
       "pattern": "winner market",
-      "title": "Which offers the better finish from here: Coinbase or Strategy?",
-      "question": "Which offers the better finish from here: Coinbase or Strategy?"
+      "title": "Which wins on return between the {snapshot_date} close and the {resolution_date} close: {left_label} or {right_label}?",
+      "question": "Which wins on return between the {snapshot_date} close and the {resolution_date} close: {left_label} or {right_label}?"
     },
     {
       "kind": "winner_by_return",
@@ -1043,8 +1043,8 @@
       "group_label": "head to head",
       "category": "head_to_head",
       "pattern": "winner market",
-      "title": "Into the March close, who wins: GLD or SLV?",
-      "question": "Into the March close, who wins: GLD or SLV?"
+      "title": "Which finishes stronger from the {snapshot_date} close through {resolution_date}: {left_label} or {right_label}?",
+      "question": "Which finishes stronger from the {snapshot_date} close through {resolution_date}: {left_label} or {right_label}?"
     },
     {
       "kind": "winner_by_return",
@@ -1059,8 +1059,8 @@
       "group_label": "head to head",
       "category": "head_to_head",
       "pattern": "winner market",
-      "title": "Through month-end, which does better: SOXX or QQQ?",
-      "question": "Through month-end, which does better: SOXX or QQQ?"
+      "title": "Which has the better move from {snapshot_date} to the March 2026 close: {left_label} or {right_label}?",
+      "question": "Which has the better move from {snapshot_date} to the March 2026 close: {left_label} or {right_label}?"
     },
     {
       "kind": "winner_by_return",
@@ -1075,8 +1075,8 @@
       "group_label": "head to head",
       "category": "head_to_head",
       "pattern": "winner market",
-      "title": "Who outperforms over the rest of March: Tesla or NVIDIA?",
-      "question": "Who outperforms over the rest of March: Tesla or NVIDIA?"
+      "title": "Between the {snapshot_date} close and the {resolution_date} close, which outperforms: {left_label} or {right_label}?",
+      "question": "Between the {snapshot_date} close and the {resolution_date} close, which outperforms: {left_label} or {right_label}?"
     },
     {
       "kind": "winner_by_return",
@@ -1091,8 +1091,8 @@
       "group_label": "head to head",
       "category": "head_to_head",
       "pattern": "winner market",
-      "title": "Into the month-end close, which financial heavyweight does better: JPMorgan or Goldman Sachs?",
-      "question": "Into the month-end close, which financial heavyweight does better: JPMorgan or Goldman Sachs?"
+      "title": "Which posts the stronger return into month-end: {left_label} or {right_label}?",
+      "question": "Which posts the stronger return into month-end: {left_label} or {right_label}?"
     },
     {
       "kind": "winner_by_return",
@@ -1107,8 +1107,8 @@
       "group_label": "head to head",
       "category": "head_to_head",
       "pattern": "winner market",
-      "title": "Which energy major finishes stronger from here: Exxon or Chevron?",
-      "question": "Which energy major finishes stronger from here: Exxon or Chevron?"
+      "title": "Which ends the period from {snapshot_date} through {resolution_date} with the better return: {left_label} or {right_label}?",
+      "question": "Which ends the period from {snapshot_date} through {resolution_date} with the better return: {left_label} or {right_label}?"
     },
     {
       "kind": "winner_by_return",
@@ -1123,8 +1123,8 @@
       "group_label": "head to head",
       "category": "head_to_head",
       "pattern": "winner market",
-      "title": "Over the rest of March, which does better: Apple or Amazon?",
-      "question": "Over the rest of March, which does better: Apple or Amazon?"
+      "title": "Which does better from the {snapshot_date} close to the close on {resolution_date}: {left_label} or {right_label}?",
+      "question": "Which does better from the {snapshot_date} close to the close on {resolution_date}: {left_label} or {right_label}?"
     },
     {
       "kind": "winner_by_return",
@@ -1139,8 +1139,8 @@
       "group_label": "head to head",
       "category": "head_to_head",
       "pattern": "winner market",
-      "title": "Into month-end, which has the edge: Meta or Alphabet?",
-      "question": "Into month-end, which has the edge: Meta or Alphabet?"
+      "title": "From {snapshot_date} through the March 2026 close, which leads on return: {left_label} or {right_label}?",
+      "question": "From {snapshot_date} through the March 2026 close, which leads on return: {left_label} or {right_label}?"
     },
     {
       "kind": "winner_by_return",
@@ -1155,8 +1155,8 @@
       "group_label": "head to head",
       "category": "head_to_head",
       "pattern": "winner market",
-      "title": "Through the March close, who outperforms: Broadcom or TSM?",
-      "question": "Through the March close, who outperforms: Broadcom or TSM?"
+      "title": "Which has the edge from the {snapshot_date} close through the {resolution_date} close: {left_label} or {right_label}?",
+      "question": "Which has the edge from the {snapshot_date} close through the {resolution_date} close: {left_label} or {right_label}?"
     },
     {
       "kind": "winner_by_return",
@@ -1171,8 +1171,8 @@
       "group_label": "head to head",
       "category": "head_to_head",
       "pattern": "winner market",
-      "title": "From here to month-end, which does better: IWM or SPY?",
-      "question": "From here to month-end, which does better: IWM or SPY?"
+      "title": "Which outperforms over the run from {snapshot_date} to {resolution_date}: {left_label} or {right_label}?",
+      "question": "Which outperforms over the run from {snapshot_date} to {resolution_date}: {left_label} or {right_label}?"
     },
     {
       "kind": "winner_by_return",
@@ -1187,8 +1187,8 @@
       "group_label": "head to head",
       "category": "head_to_head",
       "pattern": "winner market",
-      "title": "Over the rest of March, which performs better: Bitcoin or Coinbase?",
-      "question": "Over the rest of March, which performs better: Bitcoin or Coinbase?"
+      "title": "Which closes out the period with the better return, {left_label} or {right_label}?",
+      "question": "Which closes out the period with the better return, {left_label} or {right_label}?"
     }
   ]
 }

@@ -13,96 +13,96 @@ Today context: `March 26, 2026 (GMT+8, Asia/Shanghai)`
 | `v13_005` | `futurex_online` | `threshold_ladder` | `2026-03-31` | What price will Bitcoin hit by March 2026? (add your prediction) |
 | `v13_006` | `futurex_online` | `binary_event` | `2026-03-26` | Banxico interest rate decision in March |
 | `v13_007` | `futurex_online` | `binary_event` | `2026-03-31` | Robinhood launches prediction market through MIAXdx by March 31? |
-| `v13_008` | `custom_live` | `month_end_bucket` | `2026-03-31` | Gold has had enough crosscurrents already. If you had to bucket its March close today, where do you land? |
-| `v13_009` | `custom_live` | `month_end_bucket` | `2026-03-31` | For WTI into month-end, which closing range looks most plausible right now? |
-| `v13_010` | `custom_live` | `month_end_bucket` | `2026-03-31` | If you only get one Bitcoin month-end call, which price bucket feels right? |
-| `v13_011` | `custom_live` | `month_end_bucket` | `2026-03-31` | Where does Ethereum most likely finish when March trading wraps up? |
-| `v13_012` | `custom_live` | `month_end_bucket` | `2026-03-31` | If NVIDIA closes the month without drama, which range is the best base case? |
-| `v13_013` | `custom_live` | `month_end_bucket` | `2026-03-31` | What is your most plausible March-close bucket for AMD right now? |
-| `v13_014` | `custom_live` | `month_end_bucket` | `2026-03-31` | Where do you think Broadcom ends the month once the dust settles? |
-| `v13_015` | `custom_live` | `month_end_bucket` | `2026-03-31` | Which closing range makes the most sense for TSM by month-end? |
-| `v13_016` | `custom_live` | `month_end_bucket` | `2026-03-31` | If you had to pin Tesla to a bucket for the March close, which one would you choose? |
-| `v13_017` | `custom_live` | `month_end_bucket` | `2026-03-31` | Where is the cleanest month-end landing spot for Apple? |
-| `v13_018` | `custom_live` | `month_end_bucket` | `2026-03-31` | What closing range feels most realistic for Microsoft at the end of March? |
-| `v13_019` | `custom_live` | `month_end_bucket` | `2026-03-31` | When March books close, which bucket best fits Amazon? |
-| `v13_020` | `custom_live` | `month_end_bucket` | `2026-03-31` | What is the likeliest month-end bucket for Meta from here? |
-| `v13_021` | `custom_live` | `month_end_bucket` | `2026-03-31` | If you had to bucket QQQ into the March close, which range would you take? |
-| `v13_022` | `custom_live` | `month_end_bucket` | `2026-03-31` | Where does SPY most plausibly finish on the March 31 close? |
-| `v13_023` | `custom_live` | `month_end_thresholds` | `2026-03-31` | Which of these bullish Bitcoin month-end claims still survives your base case? |
-| `v13_024` | `custom_live` | `month_end_thresholds` | `2026-03-31` | How far up the ladder of bullish March-close calls on Ethereum are you willing to go? |
-| `v13_025` | `custom_live` | `month_end_thresholds` | `2026-03-31` | Which higher-end NVIDIA claims are still alive in your month-end view? |
-| `v13_026` | `custom_live` | `month_end_thresholds` | `2026-03-31` | On AMD, which of these increasingly bullish close-out statements still hold? |
-| `v13_027` | `custom_live` | `month_end_thresholds` | `2026-03-31` | How much Tesla upside are you still willing to underwrite by the March close? |
-| `v13_028` | `custom_live` | `month_end_thresholds` | `2026-03-31` | Which of these stronger Apple finish-to-March claims still looks defensible? |
-| `v13_029` | `custom_live` | `month_end_thresholds` | `2026-03-31` | How bullish a Microsoft month-end do you really want to endorse here? |
-| `v13_030` | `custom_live` | `month_end_thresholds` | `2026-03-31` | Which Amazon upside claims still look credible by the end of March? |
-| `v13_031` | `custom_live` | `month_end_thresholds` | `2026-03-31` | For Meta, which of these progressively more bullish closes still fits your view? |
-| `v13_032` | `custom_live` | `month_end_thresholds` | `2026-03-31` | How many of these upbeat QQQ month-end statements would you still keep on the board? |
-| `v13_033` | `custom_live` | `month_end_thresholds` | `2026-03-31` | Which of these semiconductor-ETF upside calls on SOXX still feels live? |
-| `v13_034` | `custom_live` | `month_end_thresholds` | `2026-03-31` | How much higher can GLD really finish the month under your base case? |
-| `v13_035` | `custom_live` | `hit_levels` | `2026-03-31` | Before March is over, which crude levels do you think actually print? |
-| `v13_036` | `custom_live` | `hit_levels` | `2026-03-31` | Which gold levels are realistic to see trade before month-end? |
-| `v13_037` | `custom_live` | `hit_levels` | `2026-03-31` | By the time March ends, which Bitcoin levels do you expect to be touched? |
-| `v13_038` | `custom_live` | `hit_levels` | `2026-03-31` | Which Ethereum marks do you think get tagged before the month is over? |
-| `v13_039` | `custom_live` | `hit_levels` | `2026-03-31` | Which NVIDIA price levels are in play before March closes out? |
-| `v13_040` | `custom_live` | `hit_levels` | `2026-03-31` | For AMD, which of these levels still look reachable before month-end? |
-| `v13_041` | `custom_live` | `hit_levels` | `2026-03-31` | Which Tesla levels do you expect to trade before the calendar flips? |
-| `v13_042` | `custom_live` | `hit_levels` | `2026-03-31` | Which QQQ levels do you think show up before the month ends? |
-| `v13_043` | `custom_live` | `hit_levels` | `2026-03-31` | By March 31, which SPY levels look likely to trade at least once? |
-| `v13_044` | `custom_live` | `hit_levels` | `2026-03-31` | Which SOXX levels are still genuinely in play before month-end? |
-| `v13_045` | `custom_live` | `hit_levels` | `2026-03-31` | What Coinbase levels do you think we actually see before March wraps? |
-| `v13_046` | `custom_live` | `hit_levels` | `2026-03-31` | For Strategy, which of these levels do you think get printed before March is done? |
-| `v13_047` | `custom_live` | `binary_price_event` | `2026-03-31` | Does NVIDIA actually clear its month-end close hurdle, or not? |
-| `v13_048` | `custom_live` | `binary_price_event` | `2026-03-31` | Does AMD finish March above its stretch target, or fall short? |
-| `v13_049` | `custom_live` | `binary_price_event` | `2026-03-31` | Can Broadcom beat its month-end close marker from here? |
-| `v13_050` | `custom_live` | `binary_price_event` | `2026-03-31` | Does TSM do enough to close March through its upside threshold? |
-| `v13_051` | `custom_live` | `binary_price_event` | `2026-03-31` | Will Tesla be able to finish March above its late-month hurdle? |
-| `v13_052` | `custom_live` | `binary_price_event` | `2026-03-31` | Does Apple still have enough to close March through its target line? |
-| `v13_053` | `custom_live` | `binary_price_event` | `2026-03-31` | Can Microsoft end the month above its next meaningful close threshold? |
-| `v13_054` | `custom_live` | `binary_price_event` | `2026-03-31` | Does Amazon finish March on the right side of its upside checkpoint? |
-| `v13_055` | `custom_live` | `binary_price_event` | `2026-03-31` | Will Meta close March above its next threshold, yes or no? |
-| `v13_056` | `custom_live` | `binary_price_event` | `2026-03-31` | Does QQQ manage to finish the month above its current hurdle? |
-| `v13_057` | `custom_live` | `binary_price_event` | `2026-03-31` | Can SPY still close March through its target level? |
-| `v13_058` | `custom_live` | `binary_price_event` | `2026-03-31` | Does IWM have enough to finish March above its hurdle? |
-| `v13_059` | `custom_live` | `binary_price_event` | `2026-03-31` | Will Bitcoin close March above its next big line in the sand? |
-| `v13_060` | `custom_live` | `binary_price_event` | `2026-03-31` | Can Ethereum finish the month above its upside checkpoint? |
-| `v13_061` | `custom_live` | `binary_price_event` | `2026-03-31` | Does Coinbase clear its month-end hurdle by the close of March? |
-| `v13_062` | `custom_live` | `binary_price_event` | `2026-03-31` | Will Strategy actually finish March above its stretch target? |
-| `v13_063` | `custom_live` | `binary_price_event` | `2026-03-31` | Does XLE end March below its downside tripwire? |
-| `v13_064` | `custom_live` | `binary_price_event` | `2026-03-31` | Does XLF finish the month below its soft floor? |
-| `v13_065` | `custom_live` | `winner_market` | `2026-03-31` | Inside the core chip trade, who wins the final stretch of March on percentage return? |
-| `v13_066` | `custom_live` | `winner_market` | `2026-03-31` | Which megacap tech name looks best placed to lead the last leg of March? |
-| `v13_067` | `custom_live` | `winner_market` | `2026-03-31` | Among the big beta ETFs, who posts the best return into month-end? |
-| `v13_068` | `custom_live` | `winner_market` | `2026-03-31` | In the crypto complex, which listed or spot proxy wins the rest of March? |
-| `v13_069` | `custom_live` | `winner_market` | `2026-03-31` | Which energy name has the best shot at leading into the month-end close? |
-| `v13_070` | `custom_live` | `winner_market` | `2026-03-31` | In financials, who do you think wins the final March sprint? |
-| `v13_071` | `custom_live` | `winner_market` | `2026-03-31` | Which metals name is most likely to outperform into the March close? |
-| `v13_072` | `custom_live` | `winner_market` | `2026-03-31` | Across the AI platform trade, who comes out on top by month-end return? |
-| `v13_073` | `custom_live` | `winner_market` | `2026-03-31` | Which high-beta growth name wins the last stretch of March? |
-| `v13_074` | `custom_live` | `up_membership` | `2026-03-31` | Which of these semiconductor names still finish March above where they stood on March 25? |
-| `v13_075` | `custom_live` | `up_membership` | `2026-03-31` | Which megacap tech names end the month in the green versus their March 25 close? |
-| `v13_076` | `custom_live` | `up_membership` | `2026-03-31` | Among the big beta ETFs, who still closes March above the March 25 mark? |
-| `v13_077` | `custom_live` | `up_membership` | `2026-03-31` | Which crypto assets or proxies finish March above their March 25 close? |
-| `v13_078` | `custom_live` | `up_membership` | `2026-03-31` | Which energy names still manage to end March above their March 25 baseline? |
-| `v13_079` | `custom_live` | `up_membership` | `2026-03-31` | Which financial names finish the month above where they started this stretch? |
-| `v13_080` | `custom_live` | `up_membership` | `2026-03-31` | Which metals names close March above their March 25 levels? |
-| `v13_081` | `custom_live` | `up_membership` | `2026-03-31` | Which AI platform names still finish March above their March 25 close? |
-| `v13_082` | `custom_live` | `up_membership` | `2026-03-31` | Which high-beta growth names make it to month-end above their March 25 mark? |
-| `v13_083` | `custom_live` | `head_to_head` | `2026-03-31` | Into the March close, who outperforms on percentage return: Bitcoin or Ethereum? |
-| `v13_084` | `custom_live` | `head_to_head` | `2026-03-31` | Who wins the rest-of-March tape: NVIDIA or AMD? |
-| `v13_085` | `custom_live` | `head_to_head` | `2026-03-31` | From here to month-end, who delivers the better return: Apple or Microsoft? |
-| `v13_086` | `custom_live` | `head_to_head` | `2026-03-31` | Through the March close, which does better: Amazon or Meta? |
-| `v13_087` | `custom_live` | `head_to_head` | `2026-03-31` | Over the last stretch of March, who outperforms: SPY or QQQ? |
-| `v13_088` | `custom_live` | `head_to_head` | `2026-03-31` | Into month-end, which wins on return: XLE or XLF? |
-| `v13_089` | `custom_live` | `head_to_head` | `2026-03-31` | Between gold and crude, which one performs better into the March close? |
-| `v13_090` | `custom_live` | `head_to_head` | `2026-03-31` | Which offers the better finish from here: Coinbase or Strategy? |
-| `v13_091` | `custom_live` | `head_to_head` | `2026-03-31` | Into the March close, who wins: GLD or SLV? |
-| `v13_092` | `custom_live` | `head_to_head` | `2026-03-31` | Through month-end, which does better: SOXX or QQQ? |
-| `v13_093` | `custom_live` | `head_to_head` | `2026-03-31` | Who outperforms over the rest of March: Tesla or NVIDIA? |
-| `v13_094` | `custom_live` | `head_to_head` | `2026-03-31` | Into the month-end close, which financial heavyweight does better: JPMorgan or Goldman Sachs? |
-| `v13_095` | `custom_live` | `head_to_head` | `2026-03-31` | Which energy major finishes stronger from here: Exxon or Chevron? |
-| `v13_096` | `custom_live` | `head_to_head` | `2026-03-31` | Over the rest of March, which does better: Apple or Amazon? |
-| `v13_097` | `custom_live` | `head_to_head` | `2026-03-31` | Into month-end, which has the edge: Meta or Alphabet? |
-| `v13_098` | `custom_live` | `head_to_head` | `2026-03-31` | Through the March close, who outperforms: Broadcom or TSM? |
-| `v13_099` | `custom_live` | `head_to_head` | `2026-03-31` | From here to month-end, which does better: IWM or SPY? |
-| `v13_100` | `custom_live` | `head_to_head` | `2026-03-31` | Over the rest of March, which performs better: Bitcoin or Coinbase? |
+| `v13_008` | `custom_live` | `month_end_bucket` | `2026-03-31` | What will Gold futures (GC) close at on March 31, 2026? |
+| `v13_009` | `custom_live` | `month_end_bucket` | `2026-03-31` | Where will WTI crude oil futures (CL) settle on the final trading day of March 2026? |
+| `v13_010` | `custom_live` | `month_end_bucket` | `2026-03-31` | What price range will Bitcoin (BTC-USD) close in on March 31, 2026? |
+| `v13_011` | `custom_live` | `month_end_bucket` | `2026-03-31` | Where will Ethereum (ETH-USD) finish on March 31, 2026? |
+| `v13_012` | `custom_live` | `month_end_bucket` | `2026-03-31` | What will NVIDIA (NVDA) close at by the end of March 2026? |
+| `v13_013` | `custom_live` | `month_end_bucket` | `2026-03-31` | Which range best describes the AMD (AMD) close on March 31, 2026? |
+| `v13_014` | `custom_live` | `month_end_bucket` | `2026-03-31` | What is the most likely closing range for Broadcom (AVGO) on March 31, 2026? |
+| `v13_015` | `custom_live` | `month_end_bucket` | `2026-03-31` | Where does Taiwan Semiconductor (TSM) end up at the March 31, 2026 close? |
+| `v13_016` | `custom_live` | `month_end_bucket` | `2026-03-31` | What will the closing price of Tesla (TSLA) be on the final trading day of March 2026? |
+| `v13_017` | `custom_live` | `month_end_bucket` | `2026-03-31` | Where will Apple (AAPL) close at month-end on March 31, 2026? |
+| `v13_018` | `custom_live` | `month_end_bucket` | `2026-03-31` | Which closing bucket fits Microsoft (MSFT) on March 31, 2026? |
+| `v13_019` | `custom_live` | `month_end_bucket` | `2026-03-31` | What closing range does Amazon (AMZN) land in on March 31, 2026? |
+| `v13_020` | `custom_live` | `month_end_bucket` | `2026-03-31` | Where will Meta (META) finish at the March 2026 close? |
+| `v13_021` | `custom_live` | `month_end_bucket` | `2026-03-31` | What will Invesco QQQ Trust (QQQ) close at on the last trading day of March 2026? |
+| `v13_022` | `custom_live` | `month_end_bucket` | `2026-03-31` | Which bucket contains the SPDR S&P 500 ETF (SPY) close on March 31, 2026? |
+| `v13_023` | `custom_live` | `month_end_thresholds` | `2026-03-31` | Which of these statements about the Bitcoin (BTC-USD) close on March 31, 2026 will be true? |
+| `v13_024` | `custom_live` | `month_end_thresholds` | `2026-03-31` | Which of these Ethereum (ETH-USD) close-above statements still hold at the end of March 2026? |
+| `v13_025` | `custom_live` | `month_end_thresholds` | `2026-03-31` | Which of these claims about NVIDIA (NVDA) on the March 31, 2026 close will be true? |
+| `v13_026` | `custom_live` | `month_end_thresholds` | `2026-03-31` | Which of these higher-close outcomes for AMD (AMD) will be true on March 31, 2026? |
+| `v13_027` | `custom_live` | `month_end_thresholds` | `2026-03-31` | Which of these Tesla (TSLA) closing thresholds are still met at the March 2026 close? |
+| `v13_028` | `custom_live` | `month_end_thresholds` | `2026-03-31` | Which of these statements about Apple (AAPL) finishing above a level on March 31, 2026 will be true? |
+| `v13_029` | `custom_live` | `month_end_thresholds` | `2026-03-31` | Which of these Microsoft (MSFT) close-above levels remain true at month-end? |
+| `v13_030` | `custom_live` | `month_end_thresholds` | `2026-03-31` | Which of these outcomes for the Amazon (AMZN) close on March 31, 2026 will be true? |
+| `v13_031` | `custom_live` | `month_end_thresholds` | `2026-03-31` | Which of these stronger month-end close statements about Meta (META) will be true? |
+| `v13_032` | `custom_live` | `month_end_thresholds` | `2026-03-31` | Which of these Invesco QQQ Trust (QQQ) statements survive the March 31, 2026 close? |
+| `v13_033` | `custom_live` | `month_end_thresholds` | `2026-03-31` | Which of these close-above outcomes for iShares Semiconductor ETF (SOXX) will still be true on March 31, 2026? |
+| `v13_034` | `custom_live` | `month_end_thresholds` | `2026-03-31` | Which of these statements about SPDR Gold Shares (GLD) at the March 2026 close end up being true? |
+| `v13_035` | `custom_live` | `hit_levels` | `2026-03-31` | Which of these WTI crude oil futures (CL) levels will trade before market close on March 31, 2026? |
+| `v13_036` | `custom_live` | `hit_levels` | `2026-03-31` | Which of these price levels will Gold futures (GC) hit before March 31, 2026? |
+| `v13_037` | `custom_live` | `hit_levels` | `2026-03-31` | Before trading ends on March 31, 2026, which of these levels will Bitcoin (BTC-USD) trade at? |
+| `v13_038` | `custom_live` | `hit_levels` | `2026-03-31` | Which of these Ethereum (ETH-USD) levels get touched before the March 2026 close? |
+| `v13_039` | `custom_live` | `hit_levels` | `2026-03-31` | Which of these price marks will NVIDIA (NVDA) reach before March 31, 2026? |
+| `v13_040` | `custom_live` | `hit_levels` | `2026-03-31` | Which of these AMD (AMD) levels trade at any point before market close on March 31, 2026? |
+| `v13_041` | `custom_live` | `hit_levels` | `2026-03-31` | Which of these levels does Tesla (TSLA) print before the end of March 2026? |
+| `v13_042` | `custom_live` | `hit_levels` | `2026-03-31` | Which of these Invesco QQQ Trust (QQQ) prices are traded before March 31, 2026? |
+| `v13_043` | `custom_live` | `hit_levels` | `2026-03-31` | Which of these levels will SPDR S&P 500 ETF (SPY) see before the month closes on March 31, 2026? |
+| `v13_044` | `custom_live` | `hit_levels` | `2026-03-31` | Which of these iShares Semiconductor ETF (SOXX) levels are reached before the final March close? |
+| `v13_045` | `custom_live` | `hit_levels` | `2026-03-31` | Which of these prices does Coinbase (COIN) trade before March 31, 2026? |
+| `v13_046` | `custom_live` | `hit_levels` | `2026-03-31` | Which of these Strategy (MSTR) levels come into play before March 31, 2026? |
+| `v13_047` | `custom_live` | `binary_price_event` | `2026-03-31` | Will NVIDIA (NVDA) close above $185 on March 31, 2026? |
+| `v13_048` | `custom_live` | `binary_price_event` | `2026-03-31` | Will AMD (AMD) finish above $230 at the March 31, 2026 close? |
+| `v13_049` | `custom_live` | `binary_price_event` | `2026-03-31` | Will Broadcom (AVGO) end March 2026 with a close above $330? |
+| `v13_050` | `custom_live` | `binary_price_event` | `2026-03-31` | Will Taiwan Semiconductor (TSM) close through $360 on the final trading day of March 2026? |
+| `v13_051` | `custom_live` | `binary_price_event` | `2026-03-31` | Will the March 31, 2026 close for Tesla (TSLA) be above $410? |
+| `v13_052` | `custom_live` | `binary_price_event` | `2026-03-31` | Will Apple (AAPL) finish the month above $260 on March 31, 2026? |
+| `v13_053` | `custom_live` | `binary_price_event` | `2026-03-31` | Will Microsoft (MSFT) close higher than $380 on March 31, 2026? |
+| `v13_054` | `custom_live` | `binary_price_event` | `2026-03-31` | Will Amazon (AMZN) end the March 2026 close above $220? |
+| `v13_055` | `custom_live` | `binary_price_event` | `2026-03-31` | Will Meta (META) settle above $620 on the final trading day of March 2026? |
+| `v13_056` | `custom_live` | `binary_price_event` | `2026-03-31` | Will Invesco QQQ Trust (QQQ) close above $600 by month-end on March 31, 2026? |
+| `v13_057` | `custom_live` | `binary_price_event` | `2026-03-31` | Will SPDR S&P 500 ETF (SPY) end March 2026 above $670 at the close? |
+| `v13_058` | `custom_live` | `binary_price_event` | `2026-03-31` | Will the final March close for iShares Russell 2000 ETF (IWM) clear $260? |
+| `v13_059` | `custom_live` | `binary_price_event` | `2026-03-31` | Will Bitcoin (BTC-USD) close above $74,000 on the last trading day of March 2026? |
+| `v13_060` | `custom_live` | `binary_price_event` | `2026-03-31` | Will Ethereum (ETH-USD) finish above $2,300 by the March 31, 2026 close? |
+| `v13_061` | `custom_live` | `binary_price_event` | `2026-03-31` | Will Coinbase (COIN) close north of $195 on March 31, 2026? |
+| `v13_062` | `custom_live` | `binary_price_event` | `2026-03-31` | Will Strategy (MSTR) end March above $160 at the closing bell? |
+| `v13_063` | `custom_live` | `binary_price_event` | `2026-03-31` | Will Energy Select Sector SPDR Fund (XLE) close below $58 on March 31, 2026? |
+| `v13_064` | `custom_live` | `binary_price_event` | `2026-03-31` | Will Financial Select Sector SPDR Fund (XLF) finish March 2026 with a close below $48? |
+| `v13_065` | `custom_live` | `winner_market` | `2026-03-31` | Which of these semiconductor names posts the best return from the March 25, 2026 close through the March 31, 2026 close? |
+| `v13_066` | `custom_live` | `winner_market` | `2026-03-31` | From the March 25, 2026 close to the March 31, 2026 close, which of these megacap tech names performs best? |
+| `v13_067` | `custom_live` | `winner_market` | `2026-03-31` | Which name in this market beta ETFs group has the strongest return from March 25, 2026 through March 31, 2026? |
+| `v13_068` | `custom_live` | `winner_market` | `2026-03-31` | Across these crypto assets and proxies, which delivers the best performance from the March 26, 2026 close to the March 31, 2026 close? |
+| `v13_069` | `custom_live` | `winner_market` | `2026-03-31` | Which of these energy names gains the most between the March 25, 2026 close and the March 31, 2026 close? |
+| `v13_070` | `custom_live` | `winner_market` | `2026-03-31` | From March 25, 2026 through the close on March 31, 2026, which of these financial names leads on return? |
+| `v13_071` | `custom_live` | `winner_market` | `2026-03-31` | Which of these precious-metals names finishes with the best return from the March 25, 2026 close through month-end? |
+| `v13_072` | `custom_live` | `winner_market` | `2026-03-31` | Over the stretch from the March 25, 2026 close to the March 31, 2026 close, which of these AI platform names outperforms? |
+| `v13_073` | `custom_live` | `winner_market` | `2026-03-31` | Which of these high-beta growth names posts the top return between the March 25, 2026 close and the March 2026 close? |
+| `v13_074` | `custom_live` | `up_membership` | `2026-03-31` | Which of these semiconductor names close March 31, 2026 above their March 25, 2026 close? |
+| `v13_075` | `custom_live` | `up_membership` | `2026-03-31` | Which of these megacap tech names finish the March 31, 2026 close above their March 25, 2026 level? |
+| `v13_076` | `custom_live` | `up_membership` | `2026-03-31` | By the close on March 31, 2026, which of these market beta ETFs are above their March 25, 2026 close? |
+| `v13_077` | `custom_live` | `up_membership` | `2026-03-31` | Which of these crypto assets and proxies end March 2026 above their March 26, 2026 close? |
+| `v13_078` | `custom_live` | `up_membership` | `2026-03-31` | Which names in this energy names group close higher on March 31, 2026 than they did on March 25, 2026? |
+| `v13_079` | `custom_live` | `up_membership` | `2026-03-31` | Which of these financial names finish above their March 25, 2026 close by month-end? |
+| `v13_080` | `custom_live` | `up_membership` | `2026-03-31` | At the March 31, 2026 close, which of these precious-metals names are still above their March 25, 2026 close? |
+| `v13_081` | `custom_live` | `up_membership` | `2026-03-31` | Which of these AI platform names close March 2026 above where they closed on March 25, 2026? |
+| `v13_082` | `custom_live` | `up_membership` | `2026-03-31` | Which of these high-beta growth names end the month above their March 25, 2026 close? |
+| `v13_083` | `custom_live` | `head_to_head` | `2026-03-31` | Which performs better from the March 26, 2026 close through the March 31, 2026 close: Bitcoin (BTC-USD) or Ethereum (ETH-USD)? |
+| `v13_084` | `custom_live` | `head_to_head` | `2026-03-31` | From the March 25, 2026 close to the March 31, 2026 close, which has the stronger return: NVIDIA (NVDA) or AMD (AMD)? |
+| `v13_085` | `custom_live` | `head_to_head` | `2026-03-31` | Which outperforms between March 25, 2026 and the close on March 31, 2026: Apple (AAPL) or Microsoft (MSFT)? |
+| `v13_086` | `custom_live` | `head_to_head` | `2026-03-31` | Which posts the better return from the March 25, 2026 close through month-end: Amazon (AMZN) or Meta (META)? |
+| `v13_087` | `custom_live` | `head_to_head` | `2026-03-31` | Between SPDR S&P 500 ETF (SPY) and Invesco QQQ Trust (QQQ), which does better from the March 25, 2026 close to the March 31, 2026 close? |
+| `v13_088` | `custom_live` | `head_to_head` | `2026-03-31` | Which has the higher return over the stretch from March 25, 2026 to March 31, 2026: Energy Select Sector SPDR Fund (XLE) or Financial Select Sector SPDR Fund (XLF)? |
+| `v13_089` | `custom_live` | `head_to_head` | `2026-03-31` | From the March 25, 2026 close through the final March close, which performs better: Gold futures (GC) or WTI crude oil futures (CL)? |
+| `v13_090` | `custom_live` | `head_to_head` | `2026-03-31` | Which wins on return between the March 25, 2026 close and the March 31, 2026 close: Coinbase (COIN) or Strategy (MSTR)? |
+| `v13_091` | `custom_live` | `head_to_head` | `2026-03-31` | Which finishes stronger from the March 25, 2026 close through March 31, 2026: SPDR Gold Shares (GLD) or iShares Silver Trust (SLV)? |
+| `v13_092` | `custom_live` | `head_to_head` | `2026-03-31` | Which has the better move from March 25, 2026 to the March 2026 close: iShares Semiconductor ETF (SOXX) or Invesco QQQ Trust (QQQ)? |
+| `v13_093` | `custom_live` | `head_to_head` | `2026-03-31` | Between the March 25, 2026 close and the March 31, 2026 close, which outperforms: Tesla (TSLA) or NVIDIA (NVDA)? |
+| `v13_094` | `custom_live` | `head_to_head` | `2026-03-31` | Which posts the stronger return into month-end: JPMorgan Chase (JPM) or Goldman Sachs (GS)? |
+| `v13_095` | `custom_live` | `head_to_head` | `2026-03-31` | Which ends the period from March 25, 2026 through March 31, 2026 with the better return: Exxon Mobil (XOM) or Chevron (CVX)? |
+| `v13_096` | `custom_live` | `head_to_head` | `2026-03-31` | Which does better from the March 25, 2026 close to the close on March 31, 2026: Apple (AAPL) or Amazon (AMZN)? |
+| `v13_097` | `custom_live` | `head_to_head` | `2026-03-31` | From March 25, 2026 through the March 2026 close, which leads on return: Meta (META) or Alphabet (GOOGL)? |
+| `v13_098` | `custom_live` | `head_to_head` | `2026-03-31` | Which has the edge from the March 25, 2026 close through the March 31, 2026 close: Broadcom (AVGO) or Taiwan Semiconductor (TSM)? |
+| `v13_099` | `custom_live` | `head_to_head` | `2026-03-31` | Which outperforms over the run from March 25, 2026 to March 31, 2026: iShares Russell 2000 ETF (IWM) or SPDR S&P 500 ETF (SPY)? |
+| `v13_100` | `custom_live` | `head_to_head` | `2026-03-31` | Which closes out the period with the better return, Bitcoin (BTC-USD) or Coinbase (COIN)? |

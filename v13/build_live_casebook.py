@@ -203,6 +203,12 @@ def asset_grid(symbol: str) -> int:
     return int(ASSET_CONFIGS[symbol]["grid"])
 
 
+def render_seed_text(seed: dict[str, Any], **context: Any) -> tuple[str, str]:
+    title_template = seed.get("title", seed["question"])
+    question_template = seed["question"]
+    return title_template.format(**context), question_template.format(**context)
+
+
 def capture_reference_snapshot() -> dict[str, Any]:
     snapshot: dict[str, Any] = {
         "today_context": TODAY_CONTEXT,
@@ -326,9 +332,13 @@ def build_bucket_case(seed: dict[str, Any], ref: dict[str, Any]) -> dict[str, An
     grid = asset_grid(symbol)
     mid = round_to_grid(close_value, grid, mode="nearest")
     bounds = [mid - (2 * grid), mid - grid, mid, mid + grid]
-    question = seed["question"]
+    title, question = render_seed_text(
+        seed,
+        label=asset_label(symbol),
+        resolution_date=human_date(RESOLUTION_DATE),
+    )
     return {
-        "title": seed.get("title", question),
+        "title": title,
         "category": seed.get("category", "month_end_bucket"),
         "pattern": seed.get("pattern", "interval bin"),
         "question": question,
@@ -362,9 +372,13 @@ def build_threshold_case(seed: dict[str, Any], ref: dict[str, Any]) -> dict[str,
     grid = asset_grid(symbol)
     base = round_to_grid(close_value, grid, mode="nearest")
     thresholds = [base - (2 * grid), base - grid, base, base + grid, base + (2 * grid)]
-    question = seed["question"]
+    title, question = render_seed_text(
+        seed,
+        label=asset_label(symbol),
+        resolution_date=human_date(RESOLUTION_DATE),
+    )
     return {
-        "title": seed.get("title", question),
+        "title": title,
         "category": seed.get("category", "month_end_thresholds"),
         "pattern": seed.get("pattern", "statement-truth set"),
         "question": question,
@@ -392,9 +406,13 @@ def build_hit_levels_case(seed: dict[str, Any], ref: dict[str, Any]) -> dict[str
     grid = asset_grid(symbol)
     highs = [round_to_grid(close_value + (grid * step), grid, mode="up") for step in (1, 2, 3)]
     lows = [round_to_grid(close_value - (grid * step), grid, mode="down") for step in (1, 2, 3)]
-    question = seed["question"]
+    title, question = render_seed_text(
+        seed,
+        label=asset_label(symbol),
+        resolution_date=human_date(RESOLUTION_DATE),
+    )
     return {
-        "title": seed.get("title", question),
+        "title": title,
         "category": seed.get("category", "hit_levels"),
         "pattern": seed.get("pattern", "threshold ladder"),
         "question": question,
@@ -431,12 +449,16 @@ def build_binary_case(seed: dict[str, Any], ref: dict[str, Any]) -> dict[str, An
     grid = asset_grid(symbol)
     if direction == "gt":
         threshold = round_to_grid(close_value * (1 + pct), grid, mode="up")
-        question = seed["question"]
     else:
         threshold = round_to_grid(close_value * (1 - pct), grid, mode="down")
-        question = seed["question"]
+    title, question = render_seed_text(
+        seed,
+        label=asset_label(symbol),
+        threshold=fmt_price(threshold),
+        resolution_date=human_date(RESOLUTION_DATE),
+    )
     return {
-        "title": seed.get("title", question),
+        "title": title,
         "category": seed.get("category", "binary_price_event"),
         "pattern": seed.get("pattern", "binary"),
         "question": question,
@@ -454,10 +476,16 @@ def build_binary_case(seed: dict[str, Any], ref: dict[str, Any]) -> dict[str, An
 
 
 def build_winner_case(seed: dict[str, Any], ref: dict[str, Any]) -> dict[str, Any]:
-    question = seed["question"]
     symbols = seed["symbols"]
+    snapshot_date = human_date(max(ref[symbol]["date"] for symbol in symbols))
+    title, question = render_seed_text(
+        seed,
+        group_label=seed.get("group_label", "assets"),
+        snapshot_date=snapshot_date,
+        resolution_date=human_date(RESOLUTION_DATE),
+    )
     return {
-        "title": seed.get("title", question),
+        "title": title,
         "category": seed.get("category", "winner_market"),
         "pattern": seed.get("pattern", "winner market"),
         "question": question,
@@ -480,10 +508,16 @@ def build_winner_case(seed: dict[str, Any], ref: dict[str, Any]) -> dict[str, An
 
 
 def build_membership_case(seed: dict[str, Any], ref: dict[str, Any]) -> dict[str, Any]:
-    question = seed["question"]
     symbols = seed["symbols"]
+    snapshot_date = human_date(max(ref[symbol]["date"] for symbol in symbols))
+    title, question = render_seed_text(
+        seed,
+        group_label=seed.get("group_label", "assets"),
+        snapshot_date=snapshot_date,
+        resolution_date=human_date(RESOLUTION_DATE),
+    )
     return {
-        "title": seed.get("title", question),
+        "title": title,
         "category": seed.get("category", "up_membership"),
         "pattern": seed.get("pattern", "roster membership"),
         "question": question,
@@ -506,11 +540,18 @@ def build_membership_case(seed: dict[str, Any], ref: dict[str, Any]) -> dict[str
 
 
 def build_head_to_head_case(seed: dict[str, Any], ref: dict[str, Any]) -> dict[str, Any]:
-    question = seed["question"]
     left = seed["symbols"][0]
     right = seed["symbols"][1]
+    snapshot_date = human_date(max(ref[left]["date"], ref[right]["date"]))
+    title, question = render_seed_text(
+        seed,
+        left_label=asset_label(left),
+        right_label=asset_label(right),
+        snapshot_date=snapshot_date,
+        resolution_date=human_date(RESOLUTION_DATE),
+    )
     return {
-        "title": seed.get("title", question),
+        "title": title,
         "category": seed.get("category", "head_to_head"),
         "pattern": seed.get("pattern", "winner market"),
         "question": question,

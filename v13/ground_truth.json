@@ -192,30 +192,30 @@
           {
             "label": "A",
             "type": "lt",
-            "value": 68000
+            "value": 66000
           },
           {
             "label": "B",
+            "type": "range",
+            "lower": 66000,
+            "upper": 68000
+          },
+          {
+            "label": "C",
             "type": "range",
             "lower": 68000,
             "upper": 70000
           },
           {
-            "label": "C",
+            "label": "D",
             "type": "range",
             "lower": 70000,
             "upper": 72000
           },
           {
-            "label": "D",
-            "type": "range",
-            "lower": 72000,
-            "upper": 74000
-          },
-          {
             "label": "E",
             "type": "ge",
-            "value": 74000
+            "value": 72000
           }
         ]
       }
@@ -738,27 +738,27 @@
           {
             "label": "A",
             "operator": "gt",
-            "value": 68000
+            "value": 66000
           },
           {
             "label": "B",
             "operator": "gt",
-            "value": 70000
+            "value": 68000
           },
           {
             "label": "C",
             "operator": "gt",
-            "value": 72000
+            "value": 70000
           },
           {
             "label": "D",
             "operator": "gt",
-            "value": 74000
+            "value": 72000
           },
           {
             "label": "E",
             "operator": "gt",
-            "value": 76000
+            "value": 74000
           }
         ]
       }
@@ -2090,12 +2090,12 @@
         "symbols": {
           "A": {
             "symbol": "BTC-USD",
-            "reference_close": 71114.9922,
+            "reference_close": 70950.0625,
             "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "ETH-USD",
-            "reference_close": 2159.3569,
+            "reference_close": 2154.3943,
             "reference_date": "2026-03-26"
           },
           "C": {
@@ -2123,7 +2123,7 @@
         "symbols": {
           "A": {
             "symbol": "CL=F",
-            "reference_close": 91.14,
+            "reference_close": 91.4,
             "reference_date": "2026-03-25"
           },
           "B": {
@@ -2189,7 +2189,7 @@
         "symbols": {
           "A": {
             "symbol": "GC=F",
-            "reference_close": 4529.0,
+            "reference_close": 4528.6001,
             "reference_date": "2026-03-25"
           },
           "B": {
@@ -2377,12 +2377,12 @@
         "symbols": {
           "A": {
             "symbol": "BTC-USD",
-            "reference_close": 71114.9922,
+            "reference_close": 70950.0625,
             "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "ETH-USD",
-            "reference_close": 2159.3569,
+            "reference_close": 2154.3943,
             "reference_date": "2026-03-26"
           },
           "C": {
@@ -2410,7 +2410,7 @@
         "symbols": {
           "A": {
             "symbol": "CL=F",
-            "reference_close": 91.14,
+            "reference_close": 91.4,
             "reference_date": "2026-03-25"
           },
           "B": {
@@ -2476,7 +2476,7 @@
         "symbols": {
           "A": {
             "symbol": "GC=F",
-            "reference_close": 4529.0,
+            "reference_close": 4528.6001,
             "reference_date": "2026-03-25"
           },
           "B": {
@@ -2570,12 +2570,12 @@
         "symbols": {
           "A": {
             "symbol": "BTC-USD",
-            "reference_close": 71114.9922,
+            "reference_close": 70950.0625,
             "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "ETH-USD",
-            "reference_close": 2159.3569,
+            "reference_close": 2154.3943,
             "reference_date": "2026-03-26"
           }
         }
@@ -2708,12 +2708,12 @@
         "symbols": {
           "A": {
             "symbol": "GC=F",
-            "reference_close": 4529.0,
+            "reference_close": 4528.6001,
             "reference_date": "2026-03-25"
           },
           "B": {
             "symbol": "CL=F",
-            "reference_close": 91.14,
+            "reference_close": 91.4,
             "reference_date": "2026-03-25"
           }
         }
@@ -2961,7 +2961,7 @@
         "symbols": {
           "A": {
             "symbol": "BTC-USD",
-            "reference_close": 71114.9922,
+            "reference_close": 70950.0625,
             "reference_date": "2026-03-26"
           },
           "B": {
