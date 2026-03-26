@@ -1,0 +1,1194 @@
+{
+  "version": "v13-llm-custom-case-seeds",
+  "cases": [
+    {
+      "kind": "close_bucket",
+      "symbol": "GC=F",
+      "label": "Gold futures (GC)",
+      "category": "month_end_bucket",
+      "pattern": "interval bin",
+      "title": "Gold has had enough crosscurrents already. If you had to bucket its March close today, where do you land?",
+      "question": "Gold has had enough crosscurrents already. If you had to bucket its March close today, where do you land?"
+    },
+    {
+      "kind": "close_bucket",
+      "symbol": "CL=F",
+      "label": "WTI crude oil futures (CL)",
+      "category": "month_end_bucket",
+      "pattern": "interval bin",
+      "title": "For WTI into month-end, which closing range looks most plausible right now?",
+      "question": "For WTI into month-end, which closing range looks most plausible right now?"
+    },
+    {
+      "kind": "close_bucket",
+      "symbol": "BTC-USD",
+      "label": "Bitcoin (BTC-USD)",
+      "category": "month_end_bucket",
+      "pattern": "interval bin",
+      "title": "If you only get one Bitcoin month-end call, which price bucket feels right?",
+      "question": "If you only get one Bitcoin month-end call, which price bucket feels right?"
+    },
+    {
+      "kind": "close_bucket",
+      "symbol": "ETH-USD",
+      "label": "Ethereum (ETH-USD)",
+      "category": "month_end_bucket",
+      "pattern": "interval bin",
+      "title": "Where does Ethereum most likely finish when March trading wraps up?",
+      "question": "Where does Ethereum most likely finish when March trading wraps up?"
+    },
+    {
+      "kind": "close_bucket",
+      "symbol": "NVDA",
+      "label": "NVIDIA (NVDA)",
+      "category": "month_end_bucket",
+      "pattern": "interval bin",
+      "title": "If NVIDIA closes the month without drama, which range is the best base case?",
+      "question": "If NVIDIA closes the month without drama, which range is the best base case?"
+    },
+    {
+      "kind": "close_bucket",
+      "symbol": "AMD",
+      "label": "AMD (AMD)",
+      "category": "month_end_bucket",
+      "pattern": "interval bin",
+      "title": "What is your most plausible March-close bucket for AMD right now?",
+      "question": "What is your most plausible March-close bucket for AMD right now?"
+    },
+    {
+      "kind": "close_bucket",
+      "symbol": "AVGO",
+      "label": "Broadcom (AVGO)",
+      "category": "month_end_bucket",
+      "pattern": "interval bin",
+      "title": "Where do you think Broadcom ends the month once the dust settles?",
+      "question": "Where do you think Broadcom ends the month once the dust settles?"
+    },
+    {
+      "kind": "close_bucket",
+      "symbol": "TSM",
+      "label": "Taiwan Semiconductor (TSM)",
+      "category": "month_end_bucket",
+      "pattern": "interval bin",
+      "title": "Which closing range makes the most sense for TSM by month-end?",
+      "question": "Which closing range makes the most sense for TSM by month-end?"
+    },
+    {
+      "kind": "close_bucket",
+      "symbol": "TSLA",
+      "label": "Tesla (TSLA)",
+      "category": "month_end_bucket",
+      "pattern": "interval bin",
+      "title": "If you had to pin Tesla to a bucket for the March close, which one would you choose?",
+      "question": "If you had to pin Tesla to a bucket for the March close, which one would you choose?"
+    },
+    {
+      "kind": "close_bucket",
+      "symbol": "AAPL",
+      "label": "Apple (AAPL)",
+      "category": "month_end_bucket",
+      "pattern": "interval bin",
+      "title": "Where is the cleanest month-end landing spot for Apple?",
+      "question": "Where is the cleanest month-end landing spot for Apple?"
+    },
+    {
+      "kind": "close_bucket",
+      "symbol": "MSFT",
+      "label": "Microsoft (MSFT)",
+      "category": "month_end_bucket",
+      "pattern": "interval bin",
+      "title": "What closing range feels most realistic for Microsoft at the end of March?",
+      "question": "What closing range feels most realistic for Microsoft at the end of March?"
+    },
+    {
+      "kind": "close_bucket",
+      "symbol": "AMZN",
+      "label": "Amazon (AMZN)",
+      "category": "month_end_bucket",
+      "pattern": "interval bin",
+      "title": "When March books close, which bucket best fits Amazon?",
+      "question": "When March books close, which bucket best fits Amazon?"
+    },
+    {
+      "kind": "close_bucket",
+      "symbol": "META",
+      "label": "Meta (META)",
+      "category": "month_end_bucket",
+      "pattern": "interval bin",
+      "title": "What is the likeliest month-end bucket for Meta from here?",
+      "question": "What is the likeliest month-end bucket for Meta from here?"
+    },
+    {
+      "kind": "close_bucket",
+      "symbol": "QQQ",
+      "label": "Invesco QQQ Trust (QQQ)",
+      "category": "month_end_bucket",
+      "pattern": "interval bin",
+      "title": "If you had to bucket QQQ into the March close, which range would you take?",
+      "question": "If you had to bucket QQQ into the March close, which range would you take?"
+    },
+    {
+      "kind": "close_bucket",
+      "symbol": "SPY",
+      "label": "SPDR S&P 500 ETF (SPY)",
+      "category": "month_end_bucket",
+      "pattern": "interval bin",
+      "title": "Where does SPY most plausibly finish on the March 31 close?",
+      "question": "Where does SPY most plausibly finish on the March 31 close?"
+    },
+    {
+      "kind": "close_threshold_truths",
+      "symbol": "BTC-USD",
+      "label": "Bitcoin (BTC-USD)",
+      "category": "month_end_thresholds",
+      "pattern": "statement-truth set",
+      "title": "Which of these bullish Bitcoin month-end claims still survives your base case?",
+      "question": "Which of these bullish Bitcoin month-end claims still survives your base case?"
+    },
+    {
+      "kind": "close_threshold_truths",
+      "symbol": "ETH-USD",
+      "label": "Ethereum (ETH-USD)",
+      "category": "month_end_thresholds",
+      "pattern": "statement-truth set",
+      "title": "How far up the ladder of bullish March-close calls on Ethereum are you willing to go?",
+      "question": "How far up the ladder of bullish March-close calls on Ethereum are you willing to go?"
+    },
+    {
+      "kind": "close_threshold_truths",
+      "symbol": "NVDA",
+      "label": "NVIDIA (NVDA)",
+      "category": "month_end_thresholds",
+      "pattern": "statement-truth set",
+      "title": "Which higher-end NVIDIA claims are still alive in your month-end view?",
+      "question": "Which higher-end NVIDIA claims are still alive in your month-end view?"
+    },
+    {
+      "kind": "close_threshold_truths",
+      "symbol": "AMD",
+      "label": "AMD (AMD)",
+      "category": "month_end_thresholds",
+      "pattern": "statement-truth set",
+      "title": "On AMD, which of these increasingly bullish close-out statements still hold?",
+      "question": "On AMD, which of these increasingly bullish close-out statements still hold?"
+    },
+    {
+      "kind": "close_threshold_truths",
+      "symbol": "TSLA",
+      "label": "Tesla (TSLA)",
+      "category": "month_end_thresholds",
+      "pattern": "statement-truth set",
+      "title": "How much Tesla upside are you still willing to underwrite by the March close?",
+      "question": "How much Tesla upside are you still willing to underwrite by the March close?"
+    },
+    {
+      "kind": "close_threshold_truths",
+      "symbol": "AAPL",
+      "label": "Apple (AAPL)",
+      "category": "month_end_thresholds",
+      "pattern": "statement-truth set",
+      "title": "Which of these stronger Apple finish-to-March claims still looks defensible?",
+      "question": "Which of these stronger Apple finish-to-March claims still looks defensible?"
+    },
+    {
+      "kind": "close_threshold_truths",
+      "symbol": "MSFT",
+      "label": "Microsoft (MSFT)",
+      "category": "month_end_thresholds",
+      "pattern": "statement-truth set",
+      "title": "How bullish a Microsoft month-end do you really want to endorse here?",
+      "question": "How bullish a Microsoft month-end do you really want to endorse here?"
+    },
+    {
+      "kind": "close_threshold_truths",
+      "symbol": "AMZN",
+      "label": "Amazon (AMZN)",
+      "category": "month_end_thresholds",
+      "pattern": "statement-truth set",
+      "title": "Which Amazon upside claims still look credible by the end of March?",
+      "question": "Which Amazon upside claims still look credible by the end of March?"
+    },
+    {
+      "kind": "close_threshold_truths",
+      "symbol": "META",
+      "label": "Meta (META)",
+      "category": "month_end_thresholds",
+      "pattern": "statement-truth set",
+      "title": "For Meta, which of these progressively more bullish closes still fits your view?",
+      "question": "For Meta, which of these progressively more bullish closes still fits your view?"
+    },
+    {
+      "kind": "close_threshold_truths",
+      "symbol": "QQQ",
+      "label": "Invesco QQQ Trust (QQQ)",
+      "category": "month_end_thresholds",
+      "pattern": "statement-truth set",
+      "title": "How many of these upbeat QQQ month-end statements would you still keep on the board?",
+      "question": "How many of these upbeat QQQ month-end statements would you still keep on the board?"
+    },
+    {
+      "kind": "close_threshold_truths",
+      "symbol": "SOXX",
+      "label": "iShares Semiconductor ETF (SOXX)",
+      "category": "month_end_thresholds",
+      "pattern": "statement-truth set",
+      "title": "Which of these semiconductor-ETF upside calls on SOXX still feels live?",
+      "question": "Which of these semiconductor-ETF upside calls on SOXX still feels live?"
+    },
+    {
+      "kind": "close_threshold_truths",
+      "symbol": "GLD",
+      "label": "SPDR Gold Shares (GLD)",
+      "category": "month_end_thresholds",
+      "pattern": "statement-truth set",
+      "title": "How much higher can GLD really finish the month under your base case?",
+      "question": "How much higher can GLD really finish the month under your base case?"
+    },
+    {
+      "kind": "hit_levels",
+      "symbol": "CL=F",
+      "label": "WTI crude oil futures (CL)",
+      "category": "hit_levels",
+      "pattern": "threshold ladder",
+      "title": "Before March is over, which crude levels do you think actually print?",
+      "question": "Before March is over, which crude levels do you think actually print?"
+    },
+    {
+      "kind": "hit_levels",
+      "symbol": "GC=F",
+      "label": "Gold futures (GC)",
+      "category": "hit_levels",
+      "pattern": "threshold ladder",
+      "title": "Which gold levels are realistic to see trade before month-end?",
+      "question": "Which gold levels are realistic to see trade before month-end?"
+    },
+    {
+      "kind": "hit_levels",
+      "symbol": "BTC-USD",
+      "label": "Bitcoin (BTC-USD)",
+      "category": "hit_levels",
+      "pattern": "threshold ladder",
+      "title": "By the time March ends, which Bitcoin levels do you expect to be touched?",
+      "question": "By the time March ends, which Bitcoin levels do you expect to be touched?"
+    },
+    {
+      "kind": "hit_levels",
+      "symbol": "ETH-USD",
+      "label": "Ethereum (ETH-USD)",
+      "category": "hit_levels",
+      "pattern": "threshold ladder",
+      "title": "Which Ethereum marks do you think get tagged before the month is over?",
+      "question": "Which Ethereum marks do you think get tagged before the month is over?"
+    },
+    {
+      "kind": "hit_levels",
+      "symbol": "NVDA",
+      "label": "NVIDIA (NVDA)",
+      "category": "hit_levels",
+      "pattern": "threshold ladder",
+      "title": "Which NVIDIA price levels are in play before March closes out?",
+      "question": "Which NVIDIA price levels are in play before March closes out?"
+    },
+    {
+      "kind": "hit_levels",
+      "symbol": "AMD",
+      "label": "AMD (AMD)",
+      "category": "hit_levels",
+      "pattern": "threshold ladder",
+      "title": "For AMD, which of these levels still look reachable before month-end?",
+      "question": "For AMD, which of these levels still look reachable before month-end?"
+    },
+    {
+      "kind": "hit_levels",
+      "symbol": "TSLA",
+      "label": "Tesla (TSLA)",
+      "category": "hit_levels",
+      "pattern": "threshold ladder",
+      "title": "Which Tesla levels do you expect to trade before the calendar flips?",
+      "question": "Which Tesla levels do you expect to trade before the calendar flips?"
+    },
+    {
+      "kind": "hit_levels",
+      "symbol": "QQQ",
+      "label": "Invesco QQQ Trust (QQQ)",
+      "category": "hit_levels",
+      "pattern": "threshold ladder",
+      "title": "Which QQQ levels do you think show up before the month ends?",
+      "question": "Which QQQ levels do you think show up before the month ends?"
+    },
+    {
+      "kind": "hit_levels",
+      "symbol": "SPY",
+      "label": "SPDR S&P 500 ETF (SPY)",
+      "category": "hit_levels",
+      "pattern": "threshold ladder",
+      "title": "By March 31, which SPY levels look likely to trade at least once?",
+      "question": "By March 31, which SPY levels look likely to trade at least once?"
+    },
+    {
+      "kind": "hit_levels",
+      "symbol": "SOXX",
+      "label": "iShares Semiconductor ETF (SOXX)",
+      "category": "hit_levels",
+      "pattern": "threshold ladder",
+      "title": "Which SOXX levels are still genuinely in play before month-end?",
+      "question": "Which SOXX levels are still genuinely in play before month-end?"
+    },
+    {
+      "kind": "hit_levels",
+      "symbol": "COIN",
+      "label": "Coinbase (COIN)",
+      "category": "hit_levels",
+      "pattern": "threshold ladder",
+      "title": "What Coinbase levels do you think we actually see before March wraps?",
+      "question": "What Coinbase levels do you think we actually see before March wraps?"
+    },
+    {
+      "kind": "hit_levels",
+      "symbol": "MSTR",
+      "label": "Strategy (MSTR)",
+      "category": "hit_levels",
+      "pattern": "threshold ladder",
+      "title": "For Strategy, which of these levels do you think get printed before March is done?",
+      "question": "For Strategy, which of these levels do you think get printed before March is done?"
+    },
+    {
+      "symbol": "NVDA",
+      "direction": "gt",
+      "pct": 0.03,
+      "kind": "binary_close_threshold",
+      "label": "NVIDIA (NVDA)",
+      "category": "binary_price_event",
+      "pattern": "binary",
+      "title": "Does NVIDIA actually clear its month-end close hurdle, or not?",
+      "question": "Does NVIDIA actually clear its month-end close hurdle, or not?"
+    },
+    {
+      "symbol": "AMD",
+      "direction": "gt",
+      "pct": 0.04,
+      "kind": "binary_close_threshold",
+      "label": "AMD (AMD)",
+      "category": "binary_price_event",
+      "pattern": "binary",
+      "title": "Does AMD finish March above its stretch target, or fall short?",
+      "question": "Does AMD finish March above its stretch target, or fall short?"
+    },
+    {
+      "symbol": "AVGO",
+      "direction": "gt",
+      "pct": 0.03,
+      "kind": "binary_close_threshold",
+      "label": "Broadcom (AVGO)",
+      "category": "binary_price_event",
+      "pattern": "binary",
+      "title": "Can Broadcom beat its month-end close marker from here?",
+      "question": "Can Broadcom beat its month-end close marker from here?"
+    },
+    {
+      "symbol": "TSM",
+      "direction": "gt",
+      "pct": 0.03,
+      "kind": "binary_close_threshold",
+      "label": "Taiwan Semiconductor (TSM)",
+      "category": "binary_price_event",
+      "pattern": "binary",
+      "title": "Does TSM do enough to close March through its upside threshold?",
+      "question": "Does TSM do enough to close March through its upside threshold?"
+    },
+    {
+      "symbol": "TSLA",
+      "direction": "gt",
+      "pct": 0.05,
+      "kind": "binary_close_threshold",
+      "label": "Tesla (TSLA)",
+      "category": "binary_price_event",
+      "pattern": "binary",
+      "title": "Will Tesla be able to finish March above its late-month hurdle?",
+      "question": "Will Tesla be able to finish March above its late-month hurdle?"
+    },
+    {
+      "symbol": "AAPL",
+      "direction": "gt",
+      "pct": 0.02,
+      "kind": "binary_close_threshold",
+      "label": "Apple (AAPL)",
+      "category": "binary_price_event",
+      "pattern": "binary",
+      "title": "Does Apple still have enough to close March through its target line?",
+      "question": "Does Apple still have enough to close March through its target line?"
+    },
+    {
+      "symbol": "MSFT",
+      "direction": "gt",
+      "pct": 0.02,
+      "kind": "binary_close_threshold",
+      "label": "Microsoft (MSFT)",
+      "category": "binary_price_event",
+      "pattern": "binary",
+      "title": "Can Microsoft end the month above its next meaningful close threshold?",
+      "question": "Can Microsoft end the month above its next meaningful close threshold?"
+    },
+    {
+      "symbol": "AMZN",
+      "direction": "gt",
+      "pct": 0.03,
+      "kind": "binary_close_threshold",
+      "label": "Amazon (AMZN)",
+      "category": "binary_price_event",
+      "pattern": "binary",
+      "title": "Does Amazon finish March on the right side of its upside checkpoint?",
+      "question": "Does Amazon finish March on the right side of its upside checkpoint?"
+    },
+    {
+      "symbol": "META",
+      "direction": "gt",
+      "pct": 0.03,
+      "kind": "binary_close_threshold",
+      "label": "Meta (META)",
+      "category": "binary_price_event",
+      "pattern": "binary",
+      "title": "Will Meta close March above its next threshold, yes or no?",
+      "question": "Will Meta close March above its next threshold, yes or no?"
+    },
+    {
+      "symbol": "QQQ",
+      "direction": "gt",
+      "pct": 0.02,
+      "kind": "binary_close_threshold",
+      "label": "Invesco QQQ Trust (QQQ)",
+      "category": "binary_price_event",
+      "pattern": "binary",
+      "title": "Does QQQ manage to finish the month above its current hurdle?",
+      "question": "Does QQQ manage to finish the month above its current hurdle?"
+    },
+    {
+      "symbol": "SPY",
+      "direction": "gt",
+      "pct": 0.015,
+      "kind": "binary_close_threshold",
+      "label": "SPDR S&P 500 ETF (SPY)",
+      "category": "binary_price_event",
+      "pattern": "binary",
+      "title": "Can SPY still close March through its target level?",
+      "question": "Can SPY still close March through its target level?"
+    },
+    {
+      "symbol": "IWM",
+      "direction": "gt",
+      "pct": 0.02,
+      "kind": "binary_close_threshold",
+      "label": "iShares Russell 2000 ETF (IWM)",
+      "category": "binary_price_event",
+      "pattern": "binary",
+      "title": "Does IWM have enough to finish March above its hurdle?",
+      "question": "Does IWM have enough to finish March above its hurdle?"
+    },
+    {
+      "symbol": "BTC-USD",
+      "direction": "gt",
+      "pct": 0.04,
+      "kind": "binary_close_threshold",
+      "label": "Bitcoin (BTC-USD)",
+      "category": "binary_price_event",
+      "pattern": "binary",
+      "title": "Will Bitcoin close March above its next big line in the sand?",
+      "question": "Will Bitcoin close March above its next big line in the sand?"
+    },
+    {
+      "symbol": "ETH-USD",
+      "direction": "gt",
+      "pct": 0.05,
+      "kind": "binary_close_threshold",
+      "label": "Ethereum (ETH-USD)",
+      "category": "binary_price_event",
+      "pattern": "binary",
+      "title": "Can Ethereum finish the month above its upside checkpoint?",
+      "question": "Can Ethereum finish the month above its upside checkpoint?"
+    },
+    {
+      "symbol": "COIN",
+      "direction": "gt",
+      "pct": 0.05,
+      "kind": "binary_close_threshold",
+      "label": "Coinbase (COIN)",
+      "category": "binary_price_event",
+      "pattern": "binary",
+      "title": "Does Coinbase clear its month-end hurdle by the close of March?",
+      "question": "Does Coinbase clear its month-end hurdle by the close of March?"
+    },
+    {
+      "symbol": "MSTR",
+      "direction": "gt",
+      "pct": 0.06,
+      "kind": "binary_close_threshold",
+      "label": "Strategy (MSTR)",
+      "category": "binary_price_event",
+      "pattern": "binary",
+      "title": "Will Strategy actually finish March above its stretch target?",
+      "question": "Will Strategy actually finish March above its stretch target?"
+    },
+    {
+      "symbol": "XLE",
+      "direction": "lt",
+      "pct": 0.03,
+      "kind": "binary_close_threshold",
+      "label": "Energy Select Sector SPDR Fund (XLE)",
+      "category": "binary_price_event",
+      "pattern": "binary",
+      "title": "Does XLE end March below its downside tripwire?",
+      "question": "Does XLE end March below its downside tripwire?"
+    },
+    {
+      "symbol": "XLF",
+      "direction": "lt",
+      "pct": 0.02,
+      "kind": "binary_close_threshold",
+      "label": "Financial Select Sector SPDR Fund (XLF)",
+      "category": "binary_price_event",
+      "pattern": "binary",
+      "title": "Does XLF finish the month below its soft floor?",
+      "question": "Does XLF finish the month below its soft floor?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "NVDA",
+        "AMD",
+        "AVGO",
+        "TSM"
+      ],
+      "labels": [
+        "NVIDIA (NVDA)",
+        "AMD (AMD)",
+        "Broadcom (AVGO)",
+        "Taiwan Semiconductor (TSM)"
+      ],
+      "group_label": "semiconductor names",
+      "category": "winner_market",
+      "pattern": "winner market",
+      "title": "Inside the core chip trade, who wins the final stretch of March on percentage return?",
+      "question": "Inside the core chip trade, who wins the final stretch of March on percentage return?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "AAPL",
+        "MSFT",
+        "AMZN",
+        "META"
+      ],
+      "labels": [
+        "Apple (AAPL)",
+        "Microsoft (MSFT)",
+        "Amazon (AMZN)",
+        "Meta (META)"
+      ],
+      "group_label": "megacap tech names",
+      "category": "winner_market",
+      "pattern": "winner market",
+      "title": "Which megacap tech name looks best placed to lead the last leg of March?",
+      "question": "Which megacap tech name looks best placed to lead the last leg of March?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "SPY",
+        "QQQ",
+        "IWM"
+      ],
+      "labels": [
+        "SPDR S&P 500 ETF (SPY)",
+        "Invesco QQQ Trust (QQQ)",
+        "iShares Russell 2000 ETF (IWM)"
+      ],
+      "group_label": "market beta ETFs",
+      "category": "winner_market",
+      "pattern": "winner market",
+      "title": "Among the big beta ETFs, who posts the best return into month-end?",
+      "question": "Among the big beta ETFs, who posts the best return into month-end?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "BTC-USD",
+        "ETH-USD",
+        "COIN",
+        "MSTR"
+      ],
+      "labels": [
+        "Bitcoin (BTC-USD)",
+        "Ethereum (ETH-USD)",
+        "Coinbase (COIN)",
+        "Strategy (MSTR)"
+      ],
+      "group_label": "crypto assets and proxies",
+      "category": "winner_market",
+      "pattern": "winner market",
+      "title": "In the crypto complex, which listed or spot proxy wins the rest of March?",
+      "question": "In the crypto complex, which listed or spot proxy wins the rest of March?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "CL=F",
+        "XLE",
+        "XOM",
+        "CVX"
+      ],
+      "labels": [
+        "WTI crude oil futures (CL)",
+        "Energy Select Sector SPDR Fund (XLE)",
+        "Exxon Mobil (XOM)",
+        "Chevron (CVX)"
+      ],
+      "group_label": "energy names",
+      "category": "winner_market",
+      "pattern": "winner market",
+      "title": "Which energy name has the best shot at leading into the month-end close?",
+      "question": "Which energy name has the best shot at leading into the month-end close?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "XLF",
+        "JPM",
+        "GS",
+        "BAC"
+      ],
+      "labels": [
+        "Financial Select Sector SPDR Fund (XLF)",
+        "JPMorgan Chase (JPM)",
+        "Goldman Sachs (GS)",
+        "Bank of America (BAC)"
+      ],
+      "group_label": "financial names",
+      "category": "winner_market",
+      "pattern": "winner market",
+      "title": "In financials, who do you think wins the final March sprint?",
+      "question": "In financials, who do you think wins the final March sprint?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "GC=F",
+        "GLD",
+        "SLV"
+      ],
+      "labels": [
+        "Gold futures (GC)",
+        "SPDR Gold Shares (GLD)",
+        "iShares Silver Trust (SLV)"
+      ],
+      "group_label": "precious-metals names",
+      "category": "winner_market",
+      "pattern": "winner market",
+      "title": "Which metals name is most likely to outperform into the March close?",
+      "question": "Which metals name is most likely to outperform into the March close?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "NVDA",
+        "MSFT",
+        "META",
+        "AMZN"
+      ],
+      "labels": [
+        "NVIDIA (NVDA)",
+        "Microsoft (MSFT)",
+        "Meta (META)",
+        "Amazon (AMZN)"
+      ],
+      "group_label": "AI platform names",
+      "category": "winner_market",
+      "pattern": "winner market",
+      "title": "Across the AI platform trade, who comes out on top by month-end return?",
+      "question": "Across the AI platform trade, who comes out on top by month-end return?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "TSLA",
+        "COIN",
+        "MSTR",
+        "SOXX"
+      ],
+      "labels": [
+        "Tesla (TSLA)",
+        "Coinbase (COIN)",
+        "Strategy (MSTR)",
+        "iShares Semiconductor ETF (SOXX)"
+      ],
+      "group_label": "high-beta growth names",
+      "category": "winner_market",
+      "pattern": "winner market",
+      "title": "Which high-beta growth name wins the last stretch of March?",
+      "question": "Which high-beta growth name wins the last stretch of March?"
+    },
+    {
+      "kind": "membership_above_reference",
+      "symbols": [
+        "NVDA",
+        "AMD",
+        "AVGO",
+        "TSM"
+      ],
+      "labels": [
+        "NVIDIA (NVDA)",
+        "AMD (AMD)",
+        "Broadcom (AVGO)",
+        "Taiwan Semiconductor (TSM)"
+      ],
+      "group_label": "semiconductor names",
+      "category": "up_membership",
+      "pattern": "roster membership",
+      "title": "Which of these semiconductor names still finish March above where they stood on March 25?",
+      "question": "Which of these semiconductor names still finish March above where they stood on March 25?"
+    },
+    {
+      "kind": "membership_above_reference",
+      "symbols": [
+        "AAPL",
+        "MSFT",
+        "AMZN",
+        "META"
+      ],
+      "labels": [
+        "Apple (AAPL)",
+        "Microsoft (MSFT)",
+        "Amazon (AMZN)",
+        "Meta (META)"
+      ],
+      "group_label": "megacap tech names",
+      "category": "up_membership",
+      "pattern": "roster membership",
+      "title": "Which megacap tech names end the month in the green versus their March 25 close?",
+      "question": "Which megacap tech names end the month in the green versus their March 25 close?"
+    },
+    {
+      "kind": "membership_above_reference",
+      "symbols": [
+        "SPY",
+        "QQQ",
+        "IWM"
+      ],
+      "labels": [
+        "SPDR S&P 500 ETF (SPY)",
+        "Invesco QQQ Trust (QQQ)",
+        "iShares Russell 2000 ETF (IWM)"
+      ],
+      "group_label": "market beta ETFs",
+      "category": "up_membership",
+      "pattern": "roster membership",
+      "title": "Among the big beta ETFs, who still closes March above the March 25 mark?",
+      "question": "Among the big beta ETFs, who still closes March above the March 25 mark?"
+    },
+    {
+      "kind": "membership_above_reference",
+      "symbols": [
+        "BTC-USD",
+        "ETH-USD",
+        "COIN",
+        "MSTR"
+      ],
+      "labels": [
+        "Bitcoin (BTC-USD)",
+        "Ethereum (ETH-USD)",
+        "Coinbase (COIN)",
+        "Strategy (MSTR)"
+      ],
+      "group_label": "crypto assets and proxies",
+      "category": "up_membership",
+      "pattern": "roster membership",
+      "title": "Which crypto assets or proxies finish March above their March 25 close?",
+      "question": "Which crypto assets or proxies finish March above their March 25 close?"
+    },
+    {
+      "kind": "membership_above_reference",
+      "symbols": [
+        "CL=F",
+        "XLE",
+        "XOM",
+        "CVX"
+      ],
+      "labels": [
+        "WTI crude oil futures (CL)",
+        "Energy Select Sector SPDR Fund (XLE)",
+        "Exxon Mobil (XOM)",
+        "Chevron (CVX)"
+      ],
+      "group_label": "energy names",
+      "category": "up_membership",
+      "pattern": "roster membership",
+      "title": "Which energy names still manage to end March above their March 25 baseline?",
+      "question": "Which energy names still manage to end March above their March 25 baseline?"
+    },
+    {
+      "kind": "membership_above_reference",
+      "symbols": [
+        "XLF",
+        "JPM",
+        "GS",
+        "BAC"
+      ],
+      "labels": [
+        "Financial Select Sector SPDR Fund (XLF)",
+        "JPMorgan Chase (JPM)",
+        "Goldman Sachs (GS)",
+        "Bank of America (BAC)"
+      ],
+      "group_label": "financial names",
+      "category": "up_membership",
+      "pattern": "roster membership",
+      "title": "Which financial names finish the month above where they started this stretch?",
+      "question": "Which financial names finish the month above where they started this stretch?"
+    },
+    {
+      "kind": "membership_above_reference",
+      "symbols": [
+        "GC=F",
+        "GLD",
+        "SLV"
+      ],
+      "labels": [
+        "Gold futures (GC)",
+        "SPDR Gold Shares (GLD)",
+        "iShares Silver Trust (SLV)"
+      ],
+      "group_label": "precious-metals names",
+      "category": "up_membership",
+      "pattern": "roster membership",
+      "title": "Which metals names close March above their March 25 levels?",
+      "question": "Which metals names close March above their March 25 levels?"
+    },
+    {
+      "kind": "membership_above_reference",
+      "symbols": [
+        "NVDA",
+        "MSFT",
+        "META",
+        "AMZN"
+      ],
+      "labels": [
+        "NVIDIA (NVDA)",
+        "Microsoft (MSFT)",
+        "Meta (META)",
+        "Amazon (AMZN)"
+      ],
+      "group_label": "AI platform names",
+      "category": "up_membership",
+      "pattern": "roster membership",
+      "title": "Which AI platform names still finish March above their March 25 close?",
+      "question": "Which AI platform names still finish March above their March 25 close?"
+    },
+    {
+      "kind": "membership_above_reference",
+      "symbols": [
+        "TSLA",
+        "COIN",
+        "MSTR",
+        "SOXX"
+      ],
+      "labels": [
+        "Tesla (TSLA)",
+        "Coinbase (COIN)",
+        "Strategy (MSTR)",
+        "iShares Semiconductor ETF (SOXX)"
+      ],
+      "group_label": "high-beta growth names",
+      "category": "up_membership",
+      "pattern": "roster membership",
+      "title": "Which high-beta growth names make it to month-end above their March 25 mark?",
+      "question": "Which high-beta growth names make it to month-end above their March 25 mark?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "BTC-USD",
+        "ETH-USD"
+      ],
+      "labels": [
+        "Bitcoin (BTC-USD)",
+        "Ethereum (ETH-USD)"
+      ],
+      "group_label": "head to head",
+      "category": "head_to_head",
+      "pattern": "winner market",
+      "title": "Into the March close, who outperforms on percentage return: Bitcoin or Ethereum?",
+      "question": "Into the March close, who outperforms on percentage return: Bitcoin or Ethereum?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "NVDA",
+        "AMD"
+      ],
+      "labels": [
+        "NVIDIA (NVDA)",
+        "AMD (AMD)"
+      ],
+      "group_label": "head to head",
+      "category": "head_to_head",
+      "pattern": "winner market",
+      "title": "Who wins the rest-of-March tape: NVIDIA or AMD?",
+      "question": "Who wins the rest-of-March tape: NVIDIA or AMD?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "AAPL",
+        "MSFT"
+      ],
+      "labels": [
+        "Apple (AAPL)",
+        "Microsoft (MSFT)"
+      ],
+      "group_label": "head to head",
+      "category": "head_to_head",
+      "pattern": "winner market",
+      "title": "From here to month-end, who delivers the better return: Apple or Microsoft?",
+      "question": "From here to month-end, who delivers the better return: Apple or Microsoft?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "AMZN",
+        "META"
+      ],
+      "labels": [
+        "Amazon (AMZN)",
+        "Meta (META)"
+      ],
+      "group_label": "head to head",
+      "category": "head_to_head",
+      "pattern": "winner market",
+      "title": "Through the March close, which does better: Amazon or Meta?",
+      "question": "Through the March close, which does better: Amazon or Meta?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "SPY",
+        "QQQ"
+      ],
+      "labels": [
+        "SPDR S&P 500 ETF (SPY)",
+        "Invesco QQQ Trust (QQQ)"
+      ],
+      "group_label": "head to head",
+      "category": "head_to_head",
+      "pattern": "winner market",
+      "title": "Over the last stretch of March, who outperforms: SPY or QQQ?",
+      "question": "Over the last stretch of March, who outperforms: SPY or QQQ?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "XLE",
+        "XLF"
+      ],
+      "labels": [
+        "Energy Select Sector SPDR Fund (XLE)",
+        "Financial Select Sector SPDR Fund (XLF)"
+      ],
+      "group_label": "head to head",
+      "category": "head_to_head",
+      "pattern": "winner market",
+      "title": "Into month-end, which wins on return: XLE or XLF?",
+      "question": "Into month-end, which wins on return: XLE or XLF?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "GC=F",
+        "CL=F"
+      ],
+      "labels": [
+        "Gold futures (GC)",
+        "WTI crude oil futures (CL)"
+      ],
+      "group_label": "head to head",
+      "category": "head_to_head",
+      "pattern": "winner market",
+      "title": "Between gold and crude, which one performs better into the March close?",
+      "question": "Between gold and crude, which one performs better into the March close?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "COIN",
+        "MSTR"
+      ],
+      "labels": [
+        "Coinbase (COIN)",
+        "Strategy (MSTR)"
+      ],
+      "group_label": "head to head",
+      "category": "head_to_head",
+      "pattern": "winner market",
+      "title": "Which offers the better finish from here: Coinbase or Strategy?",
+      "question": "Which offers the better finish from here: Coinbase or Strategy?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "GLD",
+        "SLV"
+      ],
+      "labels": [
+        "SPDR Gold Shares (GLD)",
+        "iShares Silver Trust (SLV)"
+      ],
+      "group_label": "head to head",
+      "category": "head_to_head",
+      "pattern": "winner market",
+      "title": "Into the March close, who wins: GLD or SLV?",
+      "question": "Into the March close, who wins: GLD or SLV?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "SOXX",
+        "QQQ"
+      ],
+      "labels": [
+        "iShares Semiconductor ETF (SOXX)",
+        "Invesco QQQ Trust (QQQ)"
+      ],
+      "group_label": "head to head",
+      "category": "head_to_head",
+      "pattern": "winner market",
+      "title": "Through month-end, which does better: SOXX or QQQ?",
+      "question": "Through month-end, which does better: SOXX or QQQ?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "TSLA",
+        "NVDA"
+      ],
+      "labels": [
+        "Tesla (TSLA)",
+        "NVIDIA (NVDA)"
+      ],
+      "group_label": "head to head",
+      "category": "head_to_head",
+      "pattern": "winner market",
+      "title": "Who outperforms over the rest of March: Tesla or NVIDIA?",
+      "question": "Who outperforms over the rest of March: Tesla or NVIDIA?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "JPM",
+        "GS"
+      ],
+      "labels": [
+        "JPMorgan Chase (JPM)",
+        "Goldman Sachs (GS)"
+      ],
+      "group_label": "head to head",
+      "category": "head_to_head",
+      "pattern": "winner market",
+      "title": "Into the month-end close, which financial heavyweight does better: JPMorgan or Goldman Sachs?",
+      "question": "Into the month-end close, which financial heavyweight does better: JPMorgan or Goldman Sachs?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "XOM",
+        "CVX"
+      ],
+      "labels": [
+        "Exxon Mobil (XOM)",
+        "Chevron (CVX)"
+      ],
+      "group_label": "head to head",
+      "category": "head_to_head",
+      "pattern": "winner market",
+      "title": "Which energy major finishes stronger from here: Exxon or Chevron?",
+      "question": "Which energy major finishes stronger from here: Exxon or Chevron?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "AAPL",
+        "AMZN"
+      ],
+      "labels": [
+        "Apple (AAPL)",
+        "Amazon (AMZN)"
+      ],
+      "group_label": "head to head",
+      "category": "head_to_head",
+      "pattern": "winner market",
+      "title": "Over the rest of March, which does better: Apple or Amazon?",
+      "question": "Over the rest of March, which does better: Apple or Amazon?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "META",
+        "GOOGL"
+      ],
+      "labels": [
+        "Meta (META)",
+        "Alphabet (GOOGL)"
+      ],
+      "group_label": "head to head",
+      "category": "head_to_head",
+      "pattern": "winner market",
+      "title": "Into month-end, which has the edge: Meta or Alphabet?",
+      "question": "Into month-end, which has the edge: Meta or Alphabet?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "AVGO",
+        "TSM"
+      ],
+      "labels": [
+        "Broadcom (AVGO)",
+        "Taiwan Semiconductor (TSM)"
+      ],
+      "group_label": "head to head",
+      "category": "head_to_head",
+      "pattern": "winner market",
+      "title": "Through the March close, who outperforms: Broadcom or TSM?",
+      "question": "Through the March close, who outperforms: Broadcom or TSM?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "IWM",
+        "SPY"
+      ],
+      "labels": [
+        "iShares Russell 2000 ETF (IWM)",
+        "SPDR S&P 500 ETF (SPY)"
+      ],
+      "group_label": "head to head",
+      "category": "head_to_head",
+      "pattern": "winner market",
+      "title": "From here to month-end, which does better: IWM or SPY?",
+      "question": "From here to month-end, which does better: IWM or SPY?"
+    },
+    {
+      "kind": "winner_by_return",
+      "symbols": [
+        "BTC-USD",
+        "COIN"
+      ],
+      "labels": [
+        "Bitcoin (BTC-USD)",
+        "Coinbase (COIN)"
+      ],
+      "group_label": "head to head",
+      "category": "head_to_head",
+      "pattern": "winner market",
+      "title": "Over the rest of March, which performs better: Bitcoin or Coinbase?",
+      "question": "Over the rest of March, which performs better: Bitcoin or Coinbase?"
+    }
+  ]
+}

@@ -1,86 +1,246 @@
 {
-  "today_context": "March 25, 2026 (GMT+8, Asia/Shanghai)",
+  "today_context": "March 26, 2026 (GMT+8, Asia/Shanghai)",
   "resolution_date": "2026-03-31",
   "symbols": {
-    "GC=F": {
-      "symbol": "GC=F",
+    "AAPL": {
+      "symbol": "AAPL",
       "date": "2026-03-25",
       "timezone": "America/New_York",
-      "open": 4473.5,
-      "high": 4601.0,
-      "low": 4458.2002,
-      "close": 4548.5,
-      "volume": 154581
-    },
-    "CL=F": {
-      "symbol": "CL=F",
-      "date": "2026-03-25",
-      "timezone": "America/New_York",
-      "open": 88.49,
-      "high": 89.57,
-      "low": 86.46,
-      "close": 88.54,
-      "volume": 197761
-    },
-    "BTC-USD": {
-      "symbol": "BTC-USD",
-      "date": "2026-03-25",
-      "timezone": "UTC",
-      "open": 70525.5625,
-      "high": 71925.1328,
-      "low": 70422.7969,
-      "close": 71329.3672,
-      "volume": 40748244992
-    },
-    "ETH-USD": {
-      "symbol": "ETH-USD",
-      "date": "2026-03-25",
-      "timezone": "UTC",
-      "open": 2155.7852,
-      "high": 2197.3303,
-      "low": 2149.4749,
-      "close": 2177.4016,
-      "volume": 19249385472
-    },
-    "NVDA": {
-      "symbol": "NVDA",
-      "date": "2026-03-25",
-      "timezone": "America/New_York",
-      "open": 177.1,
-      "high": 179.84,
-      "low": 176.86,
-      "close": 179.43,
-      "volume": 38784947
+      "open": 254.02,
+      "high": 254.98,
+      "low": 251.6,
+      "close": 252.62,
+      "volume": 27690948
     },
     "AMD": {
       "symbol": "AMD",
-      "date": "2026-03-24",
+      "date": "2026-03-25",
       "timezone": "America/New_York",
-      "open": 201.39,
-      "high": 206.43,
-      "low": 200.13,
-      "close": 205.37,
-      "volume": 27192200
+      "open": 211.505,
+      "high": 221.33,
+      "low": 211.505,
+      "close": 220.27,
+      "volume": 47234598
+    },
+    "AMZN": {
+      "symbol": "AMZN",
+      "date": "2026-03-25",
+      "timezone": "America/New_York",
+      "open": 211.62,
+      "high": 213.07,
+      "low": 209.9,
+      "close": 211.71,
+      "volume": 35103651
     },
     "AVGO": {
       "symbol": "AVGO",
       "date": "2026-03-25",
       "timezone": "America/New_York",
       "open": 323.18,
-      "high": 323.84,
-      "low": 318.065,
-      "close": 323.08,
-      "volume": 3706616
+      "high": 324.29,
+      "low": 316.72,
+      "close": 318.81,
+      "volume": 19852634
     },
-    "TSM": {
-      "symbol": "TSM",
+    "BAC": {
+      "symbol": "BAC",
       "date": "2026-03-25",
       "timezone": "America/New_York",
-      "open": 346.0,
-      "high": 348.8,
-      "low": 343.5,
-      "close": 346.65,
-      "volume": 4060805
+      "open": 48.52,
+      "high": 49.11,
+      "low": 48.19,
+      "close": 48.75,
+      "volume": 29880118
+    },
+    "BTC-USD": {
+      "symbol": "BTC-USD",
+      "date": "2026-03-26",
+      "timezone": "UTC",
+      "open": 71311.6641,
+      "high": 71350.8438,
+      "low": 71114.9922,
+      "close": 71114.9922,
+      "volume": 35053797376
+    },
+    "CL=F": {
+      "symbol": "CL=F",
+      "date": "2026-03-25",
+      "timezone": "America/New_York",
+      "open": 91.38,
+      "high": 91.61,
+      "low": 90.71,
+      "close": 91.14,
+      "volume": 12889
+    },
+    "COIN": {
+      "symbol": "COIN",
+      "date": "2026-03-25",
+      "timezone": "America/New_York",
+      "open": 184.579,
+      "high": 190.71,
+      "low": 180.06,
+      "close": 181.1,
+      "volume": 10380465
+    },
+    "CVX": {
+      "symbol": "CVX",
+      "date": "2026-03-25",
+      "timezone": "America/New_York",
+      "open": 206.0,
+      "high": 207.24,
+      "low": 204.66,
+      "close": 205.15,
+      "volume": 7807355
+    },
+    "ETH-USD": {
+      "symbol": "ETH-USD",
+      "date": "2026-03-26",
+      "timezone": "UTC",
+      "open": 2168.2783,
+      "high": 2170.0745,
+      "low": 2159.3569,
+      "close": 2159.3569,
+      "volume": 16513274880
+    },
+    "GC=F": {
+      "symbol": "GC=F",
+      "date": "2026-03-25",
+      "timezone": "America/New_York",
+      "open": 4508.8999,
+      "high": 4541.6001,
+      "low": 4485.6001,
+      "close": 4529.0,
+      "volume": 14781
+    },
+    "GLD": {
+      "symbol": "GLD",
+      "date": "2026-03-25",
+      "timezone": "America/New_York",
+      "open": 419.705,
+      "high": 420.66,
+      "low": 412.25,
+      "close": 416.29,
+      "volume": 15607771
+    },
+    "GOOGL": {
+      "symbol": "GOOGL",
+      "date": "2026-03-25",
+      "timezone": "America/New_York",
+      "open": 293.44,
+      "high": 296.0,
+      "low": 289.24,
+      "close": 290.93,
+      "volume": 29331608
+    },
+    "GS": {
+      "symbol": "GS",
+      "date": "2026-03-25",
+      "timezone": "America/New_York",
+      "open": 845.01,
+      "high": 854.75,
+      "low": 833.9001,
+      "close": 841.84,
+      "volume": 1581118
+    },
+    "IWM": {
+      "symbol": "IWM",
+      "date": "2026-03-25",
+      "timezone": "America/New_York",
+      "open": 251.74,
+      "high": 253.07,
+      "low": 249.52,
+      "close": 251.82,
+      "volume": 45042741
+    },
+    "JPM": {
+      "symbol": "JPM",
+      "date": "2026-03-25",
+      "timezone": "America/New_York",
+      "open": 294.15,
+      "high": 297.64,
+      "low": 292.44,
+      "close": 295.42,
+      "volume": 12163728
+    },
+    "META": {
+      "symbol": "META",
+      "date": "2026-03-25",
+      "timezone": "America/New_York",
+      "open": 598.74,
+      "high": 603.62,
+      "low": 593.4,
+      "close": 594.89,
+      "volume": 12161179
+    },
+    "MSFT": {
+      "symbol": "MSFT",
+      "date": "2026-03-25",
+      "timezone": "America/New_York",
+      "open": 376.92,
+      "high": 377.06,
+      "low": 369.63,
+      "close": 371.04,
+      "volume": 30437226
+    },
+    "MSTR": {
+      "symbol": "MSTR",
+      "date": "2026-03-25",
+      "timezone": "America/New_York",
+      "open": 140.465,
+      "high": 143.85,
+      "low": 136.805,
+      "close": 139.13,
+      "volume": 18514805
+    },
+    "NVDA": {
+      "symbol": "NVDA",
+      "date": "2026-03-25",
+      "timezone": "America/New_York",
+      "open": 177.1,
+      "high": 181.215,
+      "low": 176.86,
+      "close": 178.68,
+      "volume": 162047260
+    },
+    "QQQ": {
+      "symbol": "QQQ",
+      "date": "2026-03-25",
+      "timezone": "America/New_York",
+      "open": 589.11,
+      "high": 591.37,
+      "low": 585.69,
+      "close": 587.82,
+      "volume": 58868432
+    },
+    "SLV": {
+      "symbol": "SLV",
+      "date": "2026-03-25",
+      "timezone": "America/New_York",
+      "open": 66.04,
+      "high": 66.4,
+      "low": 64.48,
+      "close": 65.21,
+      "volume": 37556994
+    },
+    "SOXX": {
+      "symbol": "SOXX",
+      "date": "2026-03-25",
+      "timezone": "America/New_York",
+      "open": 344.28,
+      "high": 347.68,
+      "low": 342.14,
+      "close": 345.25,
+      "volume": 5812294
+    },
+    "SPY": {
+      "symbol": "SPY",
+      "date": "2026-03-25",
+      "timezone": "America/New_York",
+      "open": 658.67,
+      "high": 660.89,
+      "low": 654.24,
+      "close": 656.82,
+      "volume": 86252891
     },
     "TSLA": {
       "symbol": "TSLA",
@@ -88,9 +248,49 @@
       "timezone": "America/New_York",
       "open": 389.99,
       "high": 396.22,
-      "low": 389.28,
-      "close": 393.13,
-      "volume": 14301787
+      "low": 385.01,
+      "close": 385.95,
+      "volume": 54787532
+    },
+    "TSM": {
+      "symbol": "TSM",
+      "date": "2026-03-25",
+      "timezone": "America/New_York",
+      "open": 346.0,
+      "high": 350.445,
+      "low": 343.5,
+      "close": 347.75,
+      "volume": 12089866
+    },
+    "XLE": {
+      "symbol": "XLE",
+      "date": "2026-03-25",
+      "timezone": "America/New_York",
+      "open": 60.32,
+      "high": 61.0,
+      "low": 60.26,
+      "close": 60.57,
+      "volume": 42601001
+    },
+    "XLF": {
+      "symbol": "XLF",
+      "date": "2026-03-25",
+      "timezone": "America/New_York",
+      "open": 49.59,
+      "high": 49.9501,
+      "low": 48.99,
+      "close": 49.34,
+      "volume": 39572659
+    },
+    "XOM": {
+      "symbol": "XOM",
+      "date": "2026-03-25",
+      "timezone": "America/New_York",
+      "open": 163.87,
+      "high": 164.9994,
+      "low": 162.93,
+      "close": 163.26,
+      "volume": 16899073
     }
   }
 }

@@ -12,8 +12,9 @@ v13 is the first benchmark in this repo that is intentionally designed to avoid 
 ## Composition
 
 - Official current-week `FutureX-Online` finance tasks: `7`
-- Custom `FutureX`-style live market tasks resolved by public price data: `10`
-- Total cases: `17`
+- Custom `FutureX`-style live market tasks resolved by public price data: `93`
+- Each custom live question is authored in a separate LLM-written seed file, not generated from a repeated prompt template at build time.
+- Total cases: `100`
 
 ## Ground Truth Policy
 
@@ -32,6 +33,7 @@ v13 is the first benchmark in this repo that is intentionally designed to avoid 
 
 - `artifacts/futurex_online_rows.json`: raw official source rows used in the benchmark.
 - `artifacts/reference_snapshot.json`: the build-time market reference snapshot for custom live tasks.
+- `llm_custom_case_seeds.json`: individually written custom live question surfaces used by the builder.
 - `artifacts/manifest.json`: artifact index.
 
 ## Reproducibility

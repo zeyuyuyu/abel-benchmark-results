@@ -1,7 +1,7 @@
 {
   "version": "v13-live-only-finance",
-  "today_context": "March 25, 2026 (GMT+8, Asia/Shanghai)",
-  "question_count": 17,
+  "today_context": "March 26, 2026 (GMT+8, Asia/Shanghai)",
+  "question_count": 100,
   "cases": [
     {
       "id": "v13_001",
@@ -90,32 +90,32 @@
     {
       "id": "v13_008",
       "source_type": "custom_live",
-      "title": "What will Gold futures (GC) settle at on the final trading day of March 2026?",
+      "title": "Gold has had enough crosscurrents already. If you had to bucket its March close today, where do you land?",
       "category": "month_end_bucket",
       "futurex_pattern": "interval bin",
-      "question": "What will Gold futures (GC) settle at on the final trading day of March 2026?",
-      "prompt": "You are an agent that can predict future events. The event to be predicted: \"What will Gold futures (GC) settle at on the final trading day of March 2026? (resolved around 2026-03-31 (GMT+8)). \nA.  Gold futures (GC) settle below $4,450\nB.  Gold futures (GC) settle at least $4,450 but below $4,500\nC.  Gold futures (GC) settle at least $4,500 but below $4,550\nD.  Gold futures (GC) settle at least $4,550 but below $4,600\nE.  Gold futures (GC) settle at least $4,600\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "question": "Gold has had enough crosscurrents already. If you had to bucket its March close today, where do you land?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Gold has had enough crosscurrents already. If you had to bucket its March close today, where do you land? (resolved around 2026-03-31 (GMT+8)). \nA.  Gold futures (GC) closes below $4,450\nB.  Gold futures (GC) closes at least $4,450 but below $4,500\nC.  Gold futures (GC) closes at least $4,500 but below $4,550\nD.  Gold futures (GC) closes at least $4,550 but below $4,600\nE.  Gold futures (GC) closes at least $4,600\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
       "answer_format": "boxed_letters",
       "options": [
         {
           "label": "A",
-          "text": "Gold futures (GC) settle below $4,450"
+          "text": "Gold futures (GC) closes below $4,450"
         },
         {
           "label": "B",
-          "text": "Gold futures (GC) settle at least $4,450 but below $4,500"
+          "text": "Gold futures (GC) closes at least $4,450 but below $4,500"
         },
         {
           "label": "C",
-          "text": "Gold futures (GC) settle at least $4,500 but below $4,550"
+          "text": "Gold futures (GC) closes at least $4,500 but below $4,550"
         },
         {
           "label": "D",
-          "text": "Gold futures (GC) settle at least $4,550 but below $4,600"
+          "text": "Gold futures (GC) closes at least $4,550 but below $4,600"
         },
         {
           "label": "E",
-          "text": "Gold futures (GC) settle at least $4,600"
+          "text": "Gold futures (GC) closes at least $4,600"
         }
       ],
       "end_time": "2026-03-31"
@@ -123,36 +123,32 @@
     {
       "id": "v13_009",
       "source_type": "custom_live",
-      "title": "Which of these WTI crude oil futures (CL) levels will trade at any point before March 31, 2026?",
-      "category": "hit_levels",
-      "futurex_pattern": "threshold ladder",
-      "question": "Which of these WTI crude oil futures (CL) levels will trade at any point before March 31, 2026?",
-      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which of these WTI crude oil futures (CL) levels will trade at any point before March 31, 2026? (resolved around 2026-03-31 (GMT+8)). \nA.  WTI crude oil futures (CL) hit $90 on the high side before March 31, 2026\nB.  WTI crude oil futures (CL) hit $92 on the high side before March 31, 2026\nC.  WTI crude oil futures (CL) hit $95 on the high side before March 31, 2026\nD.  WTI crude oil futures (CL) hit $86 on the low side before March 31, 2026\nE.  WTI crude oil futures (CL) hit $84 on the low side before March 31, 2026\nF.  WTI crude oil futures (CL) hit $82 on the low side before March 31, 2026\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "title": "For WTI into month-end, which closing range looks most plausible right now?",
+      "category": "month_end_bucket",
+      "futurex_pattern": "interval bin",
+      "question": "For WTI into month-end, which closing range looks most plausible right now?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"For WTI into month-end, which closing range looks most plausible right now? (resolved around 2026-03-31 (GMT+8)). \nA.  WTI crude oil futures (CL) closes below $88\nB.  WTI crude oil futures (CL) closes at least $88 but below $90\nC.  WTI crude oil futures (CL) closes at least $90 but below $92\nD.  WTI crude oil futures (CL) closes at least $92 but below $94\nE.  WTI crude oil futures (CL) closes at least $94\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
       "answer_format": "boxed_letters",
       "options": [
         {
           "label": "A",
-          "text": "WTI crude oil futures (CL) hit $90 on the high side before March 31, 2026"
+          "text": "WTI crude oil futures (CL) closes below $88"
         },
         {
           "label": "B",
-          "text": "WTI crude oil futures (CL) hit $92 on the high side before March 31, 2026"
+          "text": "WTI crude oil futures (CL) closes at least $88 but below $90"
         },
         {
           "label": "C",
-          "text": "WTI crude oil futures (CL) hit $95 on the high side before March 31, 2026"
+          "text": "WTI crude oil futures (CL) closes at least $90 but below $92"
         },
         {
           "label": "D",
-          "text": "WTI crude oil futures (CL) hit $86 on the low side before March 31, 2026"
+          "text": "WTI crude oil futures (CL) closes at least $92 but below $94"
         },
         {
           "label": "E",
-          "text": "WTI crude oil futures (CL) hit $84 on the low side before March 31, 2026"
-        },
-        {
-          "label": "F",
-          "text": "WTI crude oil futures (CL) hit $82 on the low side before March 31, 2026"
+          "text": "WTI crude oil futures (CL) closes at least $94"
         }
       ],
       "end_time": "2026-03-31"
@@ -160,32 +156,32 @@
     {
       "id": "v13_010",
       "source_type": "custom_live",
-      "title": "Which of these increasingly bullish claims about Bitcoin will still be true at the March 2026 close?",
-      "category": "month_end_thresholds",
-      "futurex_pattern": "statement-truth set",
-      "question": "Which of these increasingly bullish claims about Bitcoin will still be true at the March 2026 close?",
-      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which of these increasingly bullish claims about Bitcoin will still be true at the March 2026 close? (resolved around 2026-03-31 (GMT+8)). \nA.  Bitcoin closes above $68,000 at the March 2026 close\nB.  Bitcoin closes above $70,000 at the March 2026 close\nC.  Bitcoin closes above $72,000 at the March 2026 close\nD.  Bitcoin closes above $75,000 at the March 2026 close\nE.  Bitcoin closes above $80,000 at the March 2026 close\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "title": "If you only get one Bitcoin month-end call, which price bucket feels right?",
+      "category": "month_end_bucket",
+      "futurex_pattern": "interval bin",
+      "question": "If you only get one Bitcoin month-end call, which price bucket feels right?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"If you only get one Bitcoin month-end call, which price bucket feels right? (resolved around 2026-03-31 (GMT+8)). \nA.  Bitcoin (BTC-USD) closes below $68,000\nB.  Bitcoin (BTC-USD) closes at least $68,000 but below $70,000\nC.  Bitcoin (BTC-USD) closes at least $70,000 but below $72,000\nD.  Bitcoin (BTC-USD) closes at least $72,000 but below $74,000\nE.  Bitcoin (BTC-USD) closes at least $74,000\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
       "answer_format": "boxed_letters",
       "options": [
         {
           "label": "A",
-          "text": "Bitcoin closes above $68,000 at the March 2026 close"
+          "text": "Bitcoin (BTC-USD) closes below $68,000"
         },
         {
           "label": "B",
-          "text": "Bitcoin closes above $70,000 at the March 2026 close"
+          "text": "Bitcoin (BTC-USD) closes at least $68,000 but below $70,000"
         },
         {
           "label": "C",
-          "text": "Bitcoin closes above $72,000 at the March 2026 close"
+          "text": "Bitcoin (BTC-USD) closes at least $70,000 but below $72,000"
         },
         {
           "label": "D",
-          "text": "Bitcoin closes above $75,000 at the March 2026 close"
+          "text": "Bitcoin (BTC-USD) closes at least $72,000 but below $74,000"
         },
         {
           "label": "E",
-          "text": "Bitcoin closes above $80,000 at the March 2026 close"
+          "text": "Bitcoin (BTC-USD) closes at least $74,000"
         }
       ],
       "end_time": "2026-03-31"
@@ -193,32 +189,32 @@
     {
       "id": "v13_011",
       "source_type": "custom_live",
-      "title": "What will Ethereum (ETH-USD) be worth at the March 2026 close?",
+      "title": "Where does Ethereum most likely finish when March trading wraps up?",
       "category": "month_end_bucket",
       "futurex_pattern": "interval bin",
-      "question": "What will Ethereum (ETH-USD) be worth at the March 2026 close?",
-      "prompt": "You are an agent that can predict future events. The event to be predicted: \"What will Ethereum (ETH-USD) be worth at the March 2026 close? (resolved around 2026-03-31 (GMT+8)). \nA.  Ethereum closes below $2,050\nB.  Ethereum closes at least $2,050 but below $2,150\nC.  Ethereum closes at least $2,150 but below $2,250\nD.  Ethereum closes at least $2,250 but below $2,350\nE.  Ethereum closes at least $2,350\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "question": "Where does Ethereum most likely finish when March trading wraps up?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Where does Ethereum most likely finish when March trading wraps up? (resolved around 2026-03-31 (GMT+8)). \nA.  Ethereum (ETH-USD) closes below $2,000\nB.  Ethereum (ETH-USD) closes at least $2,000 but below $2,100\nC.  Ethereum (ETH-USD) closes at least $2,100 but below $2,200\nD.  Ethereum (ETH-USD) closes at least $2,200 but below $2,300\nE.  Ethereum (ETH-USD) closes at least $2,300\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
       "answer_format": "boxed_letters",
       "options": [
         {
           "label": "A",
-          "text": "Ethereum closes below $2,050"
+          "text": "Ethereum (ETH-USD) closes below $2,000"
         },
         {
           "label": "B",
-          "text": "Ethereum closes at least $2,050 but below $2,150"
+          "text": "Ethereum (ETH-USD) closes at least $2,000 but below $2,100"
         },
         {
           "label": "C",
-          "text": "Ethereum closes at least $2,150 but below $2,250"
+          "text": "Ethereum (ETH-USD) closes at least $2,100 but below $2,200"
         },
         {
           "label": "D",
-          "text": "Ethereum closes at least $2,250 but below $2,350"
+          "text": "Ethereum (ETH-USD) closes at least $2,200 but below $2,300"
         },
         {
           "label": "E",
-          "text": "Ethereum closes at least $2,350"
+          "text": "Ethereum (ETH-USD) closes at least $2,300"
         }
       ],
       "end_time": "2026-03-31"
@@ -226,28 +222,32 @@
     {
       "id": "v13_012",
       "source_type": "custom_live",
-      "title": "Which semiconductor stock will post the best percentage return from the March 25, 2026 close through the March 31, 2026 close?",
-      "category": "winner_market",
-      "futurex_pattern": "winner market",
-      "question": "Which semiconductor stock will post the best percentage return from the March 25, 2026 close through the March 31, 2026 close?",
-      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which semiconductor stock will post the best percentage return from the March 25, 2026 close through the March 31, 2026 close? (resolved around 2026-03-31 (GMT+8)). \nA.  NVIDIA (NVDA)\nB.  AMD (AMD)\nC.  Broadcom (AVGO)\nD.  Taiwan Semiconductor (TSM)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "title": "If NVIDIA closes the month without drama, which range is the best base case?",
+      "category": "month_end_bucket",
+      "futurex_pattern": "interval bin",
+      "question": "If NVIDIA closes the month without drama, which range is the best base case?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"If NVIDIA closes the month without drama, which range is the best base case? (resolved around 2026-03-31 (GMT+8)). \nA.  NVIDIA (NVDA) closes below $170\nB.  NVIDIA (NVDA) closes at least $170 but below $175\nC.  NVIDIA (NVDA) closes at least $175 but below $180\nD.  NVIDIA (NVDA) closes at least $180 but below $185\nE.  NVIDIA (NVDA) closes at least $185\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
       "answer_format": "boxed_letters",
       "options": [
         {
           "label": "A",
-          "text": "NVIDIA (NVDA)"
+          "text": "NVIDIA (NVDA) closes below $170"
         },
         {
           "label": "B",
-          "text": "AMD (AMD)"
+          "text": "NVIDIA (NVDA) closes at least $170 but below $175"
         },
         {
           "label": "C",
-          "text": "Broadcom (AVGO)"
+          "text": "NVIDIA (NVDA) closes at least $175 but below $180"
         },
         {
           "label": "D",
-          "text": "Taiwan Semiconductor (TSM)"
+          "text": "NVIDIA (NVDA) closes at least $180 but below $185"
+        },
+        {
+          "label": "E",
+          "text": "NVIDIA (NVDA) closes at least $185"
         }
       ],
       "end_time": "2026-03-31"
@@ -255,11 +255,1397 @@
     {
       "id": "v13_013",
       "source_type": "custom_live",
-      "title": "Which of these semiconductor stocks will finish March 2026 above their March 25, 2026 close?",
-      "category": "up_membership",
-      "futurex_pattern": "roster membership",
-      "question": "Which of these semiconductor stocks will finish March 2026 above their March 25, 2026 close?",
-      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which of these semiconductor stocks will finish March 2026 above their March 25, 2026 close? (resolved around 2026-03-31 (GMT+8)). \nA.  NVIDIA (NVDA)\nB.  AMD (AMD)\nC.  Broadcom (AVGO)\nD.  Taiwan Semiconductor (TSM)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "title": "What is your most plausible March-close bucket for AMD right now?",
+      "category": "month_end_bucket",
+      "futurex_pattern": "interval bin",
+      "question": "What is your most plausible March-close bucket for AMD right now?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"What is your most plausible March-close bucket for AMD right now? (resolved around 2026-03-31 (GMT+8)). \nA.  AMD (AMD) closes below $210\nB.  AMD (AMD) closes at least $210 but below $215\nC.  AMD (AMD) closes at least $215 but below $220\nD.  AMD (AMD) closes at least $220 but below $225\nE.  AMD (AMD) closes at least $225\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "AMD (AMD) closes below $210"
+        },
+        {
+          "label": "B",
+          "text": "AMD (AMD) closes at least $210 but below $215"
+        },
+        {
+          "label": "C",
+          "text": "AMD (AMD) closes at least $215 but below $220"
+        },
+        {
+          "label": "D",
+          "text": "AMD (AMD) closes at least $220 but below $225"
+        },
+        {
+          "label": "E",
+          "text": "AMD (AMD) closes at least $225"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_014",
+      "source_type": "custom_live",
+      "title": "Where do you think Broadcom ends the month once the dust settles?",
+      "category": "month_end_bucket",
+      "futurex_pattern": "interval bin",
+      "question": "Where do you think Broadcom ends the month once the dust settles?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Where do you think Broadcom ends the month once the dust settles? (resolved around 2026-03-31 (GMT+8)). \nA.  Broadcom (AVGO) closes below $310\nB.  Broadcom (AVGO) closes at least $310 but below $315\nC.  Broadcom (AVGO) closes at least $315 but below $320\nD.  Broadcom (AVGO) closes at least $320 but below $325\nE.  Broadcom (AVGO) closes at least $325\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Broadcom (AVGO) closes below $310"
+        },
+        {
+          "label": "B",
+          "text": "Broadcom (AVGO) closes at least $310 but below $315"
+        },
+        {
+          "label": "C",
+          "text": "Broadcom (AVGO) closes at least $315 but below $320"
+        },
+        {
+          "label": "D",
+          "text": "Broadcom (AVGO) closes at least $320 but below $325"
+        },
+        {
+          "label": "E",
+          "text": "Broadcom (AVGO) closes at least $325"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_015",
+      "source_type": "custom_live",
+      "title": "Which closing range makes the most sense for TSM by month-end?",
+      "category": "month_end_bucket",
+      "futurex_pattern": "interval bin",
+      "question": "Which closing range makes the most sense for TSM by month-end?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which closing range makes the most sense for TSM by month-end? (resolved around 2026-03-31 (GMT+8)). \nA.  Taiwan Semiconductor (TSM) closes below $340\nB.  Taiwan Semiconductor (TSM) closes at least $340 but below $345\nC.  Taiwan Semiconductor (TSM) closes at least $345 but below $350\nD.  Taiwan Semiconductor (TSM) closes at least $350 but below $355\nE.  Taiwan Semiconductor (TSM) closes at least $355\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Taiwan Semiconductor (TSM) closes below $340"
+        },
+        {
+          "label": "B",
+          "text": "Taiwan Semiconductor (TSM) closes at least $340 but below $345"
+        },
+        {
+          "label": "C",
+          "text": "Taiwan Semiconductor (TSM) closes at least $345 but below $350"
+        },
+        {
+          "label": "D",
+          "text": "Taiwan Semiconductor (TSM) closes at least $350 but below $355"
+        },
+        {
+          "label": "E",
+          "text": "Taiwan Semiconductor (TSM) closes at least $355"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_016",
+      "source_type": "custom_live",
+      "title": "If you had to pin Tesla to a bucket for the March close, which one would you choose?",
+      "category": "month_end_bucket",
+      "futurex_pattern": "interval bin",
+      "question": "If you had to pin Tesla to a bucket for the March close, which one would you choose?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"If you had to pin Tesla to a bucket for the March close, which one would you choose? (resolved around 2026-03-31 (GMT+8)). \nA.  Tesla (TSLA) closes below $370\nB.  Tesla (TSLA) closes at least $370 but below $380\nC.  Tesla (TSLA) closes at least $380 but below $390\nD.  Tesla (TSLA) closes at least $390 but below $400\nE.  Tesla (TSLA) closes at least $400\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tesla (TSLA) closes below $370"
+        },
+        {
+          "label": "B",
+          "text": "Tesla (TSLA) closes at least $370 but below $380"
+        },
+        {
+          "label": "C",
+          "text": "Tesla (TSLA) closes at least $380 but below $390"
+        },
+        {
+          "label": "D",
+          "text": "Tesla (TSLA) closes at least $390 but below $400"
+        },
+        {
+          "label": "E",
+          "text": "Tesla (TSLA) closes at least $400"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_017",
+      "source_type": "custom_live",
+      "title": "Where is the cleanest month-end landing spot for Apple?",
+      "category": "month_end_bucket",
+      "futurex_pattern": "interval bin",
+      "question": "Where is the cleanest month-end landing spot for Apple?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Where is the cleanest month-end landing spot for Apple? (resolved around 2026-03-31 (GMT+8)). \nA.  Apple (AAPL) closes below $245\nB.  Apple (AAPL) closes at least $245 but below $250\nC.  Apple (AAPL) closes at least $250 but below $255\nD.  Apple (AAPL) closes at least $255 but below $260\nE.  Apple (AAPL) closes at least $260\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Apple (AAPL) closes below $245"
+        },
+        {
+          "label": "B",
+          "text": "Apple (AAPL) closes at least $245 but below $250"
+        },
+        {
+          "label": "C",
+          "text": "Apple (AAPL) closes at least $250 but below $255"
+        },
+        {
+          "label": "D",
+          "text": "Apple (AAPL) closes at least $255 but below $260"
+        },
+        {
+          "label": "E",
+          "text": "Apple (AAPL) closes at least $260"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_018",
+      "source_type": "custom_live",
+      "title": "What closing range feels most realistic for Microsoft at the end of March?",
+      "category": "month_end_bucket",
+      "futurex_pattern": "interval bin",
+      "question": "What closing range feels most realistic for Microsoft at the end of March?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"What closing range feels most realistic for Microsoft at the end of March? (resolved around 2026-03-31 (GMT+8)). \nA.  Microsoft (MSFT) closes below $360\nB.  Microsoft (MSFT) closes at least $360 but below $365\nC.  Microsoft (MSFT) closes at least $365 but below $370\nD.  Microsoft (MSFT) closes at least $370 but below $375\nE.  Microsoft (MSFT) closes at least $375\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Microsoft (MSFT) closes below $360"
+        },
+        {
+          "label": "B",
+          "text": "Microsoft (MSFT) closes at least $360 but below $365"
+        },
+        {
+          "label": "C",
+          "text": "Microsoft (MSFT) closes at least $365 but below $370"
+        },
+        {
+          "label": "D",
+          "text": "Microsoft (MSFT) closes at least $370 but below $375"
+        },
+        {
+          "label": "E",
+          "text": "Microsoft (MSFT) closes at least $375"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_019",
+      "source_type": "custom_live",
+      "title": "When March books close, which bucket best fits Amazon?",
+      "category": "month_end_bucket",
+      "futurex_pattern": "interval bin",
+      "question": "When March books close, which bucket best fits Amazon?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"When March books close, which bucket best fits Amazon? (resolved around 2026-03-31 (GMT+8)). \nA.  Amazon (AMZN) closes below $200\nB.  Amazon (AMZN) closes at least $200 but below $205\nC.  Amazon (AMZN) closes at least $205 but below $210\nD.  Amazon (AMZN) closes at least $210 but below $215\nE.  Amazon (AMZN) closes at least $215\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Amazon (AMZN) closes below $200"
+        },
+        {
+          "label": "B",
+          "text": "Amazon (AMZN) closes at least $200 but below $205"
+        },
+        {
+          "label": "C",
+          "text": "Amazon (AMZN) closes at least $205 but below $210"
+        },
+        {
+          "label": "D",
+          "text": "Amazon (AMZN) closes at least $210 but below $215"
+        },
+        {
+          "label": "E",
+          "text": "Amazon (AMZN) closes at least $215"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_020",
+      "source_type": "custom_live",
+      "title": "What is the likeliest month-end bucket for Meta from here?",
+      "category": "month_end_bucket",
+      "futurex_pattern": "interval bin",
+      "question": "What is the likeliest month-end bucket for Meta from here?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"What is the likeliest month-end bucket for Meta from here? (resolved around 2026-03-31 (GMT+8)). \nA.  Meta (META) closes below $570\nB.  Meta (META) closes at least $570 but below $580\nC.  Meta (META) closes at least $580 but below $590\nD.  Meta (META) closes at least $590 but below $600\nE.  Meta (META) closes at least $600\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Meta (META) closes below $570"
+        },
+        {
+          "label": "B",
+          "text": "Meta (META) closes at least $570 but below $580"
+        },
+        {
+          "label": "C",
+          "text": "Meta (META) closes at least $580 but below $590"
+        },
+        {
+          "label": "D",
+          "text": "Meta (META) closes at least $590 but below $600"
+        },
+        {
+          "label": "E",
+          "text": "Meta (META) closes at least $600"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_021",
+      "source_type": "custom_live",
+      "title": "If you had to bucket QQQ into the March close, which range would you take?",
+      "category": "month_end_bucket",
+      "futurex_pattern": "interval bin",
+      "question": "If you had to bucket QQQ into the March close, which range would you take?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"If you had to bucket QQQ into the March close, which range would you take? (resolved around 2026-03-31 (GMT+8)). \nA.  Invesco QQQ Trust (QQQ) closes below $580\nB.  Invesco QQQ Trust (QQQ) closes at least $580 but below $585\nC.  Invesco QQQ Trust (QQQ) closes at least $585 but below $590\nD.  Invesco QQQ Trust (QQQ) closes at least $590 but below $595\nE.  Invesco QQQ Trust (QQQ) closes at least $595\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Invesco QQQ Trust (QQQ) closes below $580"
+        },
+        {
+          "label": "B",
+          "text": "Invesco QQQ Trust (QQQ) closes at least $580 but below $585"
+        },
+        {
+          "label": "C",
+          "text": "Invesco QQQ Trust (QQQ) closes at least $585 but below $590"
+        },
+        {
+          "label": "D",
+          "text": "Invesco QQQ Trust (QQQ) closes at least $590 but below $595"
+        },
+        {
+          "label": "E",
+          "text": "Invesco QQQ Trust (QQQ) closes at least $595"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_022",
+      "source_type": "custom_live",
+      "title": "Where does SPY most plausibly finish on the March 31 close?",
+      "category": "month_end_bucket",
+      "futurex_pattern": "interval bin",
+      "question": "Where does SPY most plausibly finish on the March 31 close?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Where does SPY most plausibly finish on the March 31 close? (resolved around 2026-03-31 (GMT+8)). \nA.  SPDR S&P 500 ETF (SPY) closes below $645\nB.  SPDR S&P 500 ETF (SPY) closes at least $645 but below $650\nC.  SPDR S&P 500 ETF (SPY) closes at least $650 but below $655\nD.  SPDR S&P 500 ETF (SPY) closes at least $655 but below $660\nE.  SPDR S&P 500 ETF (SPY) closes at least $660\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "SPDR S&P 500 ETF (SPY) closes below $645"
+        },
+        {
+          "label": "B",
+          "text": "SPDR S&P 500 ETF (SPY) closes at least $645 but below $650"
+        },
+        {
+          "label": "C",
+          "text": "SPDR S&P 500 ETF (SPY) closes at least $650 but below $655"
+        },
+        {
+          "label": "D",
+          "text": "SPDR S&P 500 ETF (SPY) closes at least $655 but below $660"
+        },
+        {
+          "label": "E",
+          "text": "SPDR S&P 500 ETF (SPY) closes at least $660"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_023",
+      "source_type": "custom_live",
+      "title": "Which of these bullish Bitcoin month-end claims still survives your base case?",
+      "category": "month_end_thresholds",
+      "futurex_pattern": "statement-truth set",
+      "question": "Which of these bullish Bitcoin month-end claims still survives your base case?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which of these bullish Bitcoin month-end claims still survives your base case? (resolved around 2026-03-31 (GMT+8)). \nA.  Bitcoin (BTC-USD) closes above $68,000 at the March 2026 close\nB.  Bitcoin (BTC-USD) closes above $70,000 at the March 2026 close\nC.  Bitcoin (BTC-USD) closes above $72,000 at the March 2026 close\nD.  Bitcoin (BTC-USD) closes above $74,000 at the March 2026 close\nE.  Bitcoin (BTC-USD) closes above $76,000 at the March 2026 close\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Bitcoin (BTC-USD) closes above $68,000 at the March 2026 close"
+        },
+        {
+          "label": "B",
+          "text": "Bitcoin (BTC-USD) closes above $70,000 at the March 2026 close"
+        },
+        {
+          "label": "C",
+          "text": "Bitcoin (BTC-USD) closes above $72,000 at the March 2026 close"
+        },
+        {
+          "label": "D",
+          "text": "Bitcoin (BTC-USD) closes above $74,000 at the March 2026 close"
+        },
+        {
+          "label": "E",
+          "text": "Bitcoin (BTC-USD) closes above $76,000 at the March 2026 close"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_024",
+      "source_type": "custom_live",
+      "title": "How far up the ladder of bullish March-close calls on Ethereum are you willing to go?",
+      "category": "month_end_thresholds",
+      "futurex_pattern": "statement-truth set",
+      "question": "How far up the ladder of bullish March-close calls on Ethereum are you willing to go?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"How far up the ladder of bullish March-close calls on Ethereum are you willing to go? (resolved around 2026-03-31 (GMT+8)). \nA.  Ethereum (ETH-USD) closes above $2,000 at the March 2026 close\nB.  Ethereum (ETH-USD) closes above $2,100 at the March 2026 close\nC.  Ethereum (ETH-USD) closes above $2,200 at the March 2026 close\nD.  Ethereum (ETH-USD) closes above $2,300 at the March 2026 close\nE.  Ethereum (ETH-USD) closes above $2,400 at the March 2026 close\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Ethereum (ETH-USD) closes above $2,000 at the March 2026 close"
+        },
+        {
+          "label": "B",
+          "text": "Ethereum (ETH-USD) closes above $2,100 at the March 2026 close"
+        },
+        {
+          "label": "C",
+          "text": "Ethereum (ETH-USD) closes above $2,200 at the March 2026 close"
+        },
+        {
+          "label": "D",
+          "text": "Ethereum (ETH-USD) closes above $2,300 at the March 2026 close"
+        },
+        {
+          "label": "E",
+          "text": "Ethereum (ETH-USD) closes above $2,400 at the March 2026 close"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_025",
+      "source_type": "custom_live",
+      "title": "Which higher-end NVIDIA claims are still alive in your month-end view?",
+      "category": "month_end_thresholds",
+      "futurex_pattern": "statement-truth set",
+      "question": "Which higher-end NVIDIA claims are still alive in your month-end view?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which higher-end NVIDIA claims are still alive in your month-end view? (resolved around 2026-03-31 (GMT+8)). \nA.  NVIDIA (NVDA) closes above $170 at the March 2026 close\nB.  NVIDIA (NVDA) closes above $175 at the March 2026 close\nC.  NVIDIA (NVDA) closes above $180 at the March 2026 close\nD.  NVIDIA (NVDA) closes above $185 at the March 2026 close\nE.  NVIDIA (NVDA) closes above $190 at the March 2026 close\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "NVIDIA (NVDA) closes above $170 at the March 2026 close"
+        },
+        {
+          "label": "B",
+          "text": "NVIDIA (NVDA) closes above $175 at the March 2026 close"
+        },
+        {
+          "label": "C",
+          "text": "NVIDIA (NVDA) closes above $180 at the March 2026 close"
+        },
+        {
+          "label": "D",
+          "text": "NVIDIA (NVDA) closes above $185 at the March 2026 close"
+        },
+        {
+          "label": "E",
+          "text": "NVIDIA (NVDA) closes above $190 at the March 2026 close"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_026",
+      "source_type": "custom_live",
+      "title": "On AMD, which of these increasingly bullish close-out statements still hold?",
+      "category": "month_end_thresholds",
+      "futurex_pattern": "statement-truth set",
+      "question": "On AMD, which of these increasingly bullish close-out statements still hold?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"On AMD, which of these increasingly bullish close-out statements still hold? (resolved around 2026-03-31 (GMT+8)). \nA.  AMD (AMD) closes above $210 at the March 2026 close\nB.  AMD (AMD) closes above $215 at the March 2026 close\nC.  AMD (AMD) closes above $220 at the March 2026 close\nD.  AMD (AMD) closes above $225 at the March 2026 close\nE.  AMD (AMD) closes above $230 at the March 2026 close\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "AMD (AMD) closes above $210 at the March 2026 close"
+        },
+        {
+          "label": "B",
+          "text": "AMD (AMD) closes above $215 at the March 2026 close"
+        },
+        {
+          "label": "C",
+          "text": "AMD (AMD) closes above $220 at the March 2026 close"
+        },
+        {
+          "label": "D",
+          "text": "AMD (AMD) closes above $225 at the March 2026 close"
+        },
+        {
+          "label": "E",
+          "text": "AMD (AMD) closes above $230 at the March 2026 close"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_027",
+      "source_type": "custom_live",
+      "title": "How much Tesla upside are you still willing to underwrite by the March close?",
+      "category": "month_end_thresholds",
+      "futurex_pattern": "statement-truth set",
+      "question": "How much Tesla upside are you still willing to underwrite by the March close?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"How much Tesla upside are you still willing to underwrite by the March close? (resolved around 2026-03-31 (GMT+8)). \nA.  Tesla (TSLA) closes above $370 at the March 2026 close\nB.  Tesla (TSLA) closes above $380 at the March 2026 close\nC.  Tesla (TSLA) closes above $390 at the March 2026 close\nD.  Tesla (TSLA) closes above $400 at the March 2026 close\nE.  Tesla (TSLA) closes above $410 at the March 2026 close\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tesla (TSLA) closes above $370 at the March 2026 close"
+        },
+        {
+          "label": "B",
+          "text": "Tesla (TSLA) closes above $380 at the March 2026 close"
+        },
+        {
+          "label": "C",
+          "text": "Tesla (TSLA) closes above $390 at the March 2026 close"
+        },
+        {
+          "label": "D",
+          "text": "Tesla (TSLA) closes above $400 at the March 2026 close"
+        },
+        {
+          "label": "E",
+          "text": "Tesla (TSLA) closes above $410 at the March 2026 close"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_028",
+      "source_type": "custom_live",
+      "title": "Which of these stronger Apple finish-to-March claims still looks defensible?",
+      "category": "month_end_thresholds",
+      "futurex_pattern": "statement-truth set",
+      "question": "Which of these stronger Apple finish-to-March claims still looks defensible?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which of these stronger Apple finish-to-March claims still looks defensible? (resolved around 2026-03-31 (GMT+8)). \nA.  Apple (AAPL) closes above $245 at the March 2026 close\nB.  Apple (AAPL) closes above $250 at the March 2026 close\nC.  Apple (AAPL) closes above $255 at the March 2026 close\nD.  Apple (AAPL) closes above $260 at the March 2026 close\nE.  Apple (AAPL) closes above $265 at the March 2026 close\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Apple (AAPL) closes above $245 at the March 2026 close"
+        },
+        {
+          "label": "B",
+          "text": "Apple (AAPL) closes above $250 at the March 2026 close"
+        },
+        {
+          "label": "C",
+          "text": "Apple (AAPL) closes above $255 at the March 2026 close"
+        },
+        {
+          "label": "D",
+          "text": "Apple (AAPL) closes above $260 at the March 2026 close"
+        },
+        {
+          "label": "E",
+          "text": "Apple (AAPL) closes above $265 at the March 2026 close"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_029",
+      "source_type": "custom_live",
+      "title": "How bullish a Microsoft month-end do you really want to endorse here?",
+      "category": "month_end_thresholds",
+      "futurex_pattern": "statement-truth set",
+      "question": "How bullish a Microsoft month-end do you really want to endorse here?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"How bullish a Microsoft month-end do you really want to endorse here? (resolved around 2026-03-31 (GMT+8)). \nA.  Microsoft (MSFT) closes above $360 at the March 2026 close\nB.  Microsoft (MSFT) closes above $365 at the March 2026 close\nC.  Microsoft (MSFT) closes above $370 at the March 2026 close\nD.  Microsoft (MSFT) closes above $375 at the March 2026 close\nE.  Microsoft (MSFT) closes above $380 at the March 2026 close\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Microsoft (MSFT) closes above $360 at the March 2026 close"
+        },
+        {
+          "label": "B",
+          "text": "Microsoft (MSFT) closes above $365 at the March 2026 close"
+        },
+        {
+          "label": "C",
+          "text": "Microsoft (MSFT) closes above $370 at the March 2026 close"
+        },
+        {
+          "label": "D",
+          "text": "Microsoft (MSFT) closes above $375 at the March 2026 close"
+        },
+        {
+          "label": "E",
+          "text": "Microsoft (MSFT) closes above $380 at the March 2026 close"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_030",
+      "source_type": "custom_live",
+      "title": "Which Amazon upside claims still look credible by the end of March?",
+      "category": "month_end_thresholds",
+      "futurex_pattern": "statement-truth set",
+      "question": "Which Amazon upside claims still look credible by the end of March?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which Amazon upside claims still look credible by the end of March? (resolved around 2026-03-31 (GMT+8)). \nA.  Amazon (AMZN) closes above $200 at the March 2026 close\nB.  Amazon (AMZN) closes above $205 at the March 2026 close\nC.  Amazon (AMZN) closes above $210 at the March 2026 close\nD.  Amazon (AMZN) closes above $215 at the March 2026 close\nE.  Amazon (AMZN) closes above $220 at the March 2026 close\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Amazon (AMZN) closes above $200 at the March 2026 close"
+        },
+        {
+          "label": "B",
+          "text": "Amazon (AMZN) closes above $205 at the March 2026 close"
+        },
+        {
+          "label": "C",
+          "text": "Amazon (AMZN) closes above $210 at the March 2026 close"
+        },
+        {
+          "label": "D",
+          "text": "Amazon (AMZN) closes above $215 at the March 2026 close"
+        },
+        {
+          "label": "E",
+          "text": "Amazon (AMZN) closes above $220 at the March 2026 close"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_031",
+      "source_type": "custom_live",
+      "title": "For Meta, which of these progressively more bullish closes still fits your view?",
+      "category": "month_end_thresholds",
+      "futurex_pattern": "statement-truth set",
+      "question": "For Meta, which of these progressively more bullish closes still fits your view?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"For Meta, which of these progressively more bullish closes still fits your view? (resolved around 2026-03-31 (GMT+8)). \nA.  Meta (META) closes above $570 at the March 2026 close\nB.  Meta (META) closes above $580 at the March 2026 close\nC.  Meta (META) closes above $590 at the March 2026 close\nD.  Meta (META) closes above $600 at the March 2026 close\nE.  Meta (META) closes above $610 at the March 2026 close\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Meta (META) closes above $570 at the March 2026 close"
+        },
+        {
+          "label": "B",
+          "text": "Meta (META) closes above $580 at the March 2026 close"
+        },
+        {
+          "label": "C",
+          "text": "Meta (META) closes above $590 at the March 2026 close"
+        },
+        {
+          "label": "D",
+          "text": "Meta (META) closes above $600 at the March 2026 close"
+        },
+        {
+          "label": "E",
+          "text": "Meta (META) closes above $610 at the March 2026 close"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_032",
+      "source_type": "custom_live",
+      "title": "How many of these upbeat QQQ month-end statements would you still keep on the board?",
+      "category": "month_end_thresholds",
+      "futurex_pattern": "statement-truth set",
+      "question": "How many of these upbeat QQQ month-end statements would you still keep on the board?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"How many of these upbeat QQQ month-end statements would you still keep on the board? (resolved around 2026-03-31 (GMT+8)). \nA.  Invesco QQQ Trust (QQQ) closes above $580 at the March 2026 close\nB.  Invesco QQQ Trust (QQQ) closes above $585 at the March 2026 close\nC.  Invesco QQQ Trust (QQQ) closes above $590 at the March 2026 close\nD.  Invesco QQQ Trust (QQQ) closes above $595 at the March 2026 close\nE.  Invesco QQQ Trust (QQQ) closes above $600 at the March 2026 close\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Invesco QQQ Trust (QQQ) closes above $580 at the March 2026 close"
+        },
+        {
+          "label": "B",
+          "text": "Invesco QQQ Trust (QQQ) closes above $585 at the March 2026 close"
+        },
+        {
+          "label": "C",
+          "text": "Invesco QQQ Trust (QQQ) closes above $590 at the March 2026 close"
+        },
+        {
+          "label": "D",
+          "text": "Invesco QQQ Trust (QQQ) closes above $595 at the March 2026 close"
+        },
+        {
+          "label": "E",
+          "text": "Invesco QQQ Trust (QQQ) closes above $600 at the March 2026 close"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_033",
+      "source_type": "custom_live",
+      "title": "Which of these semiconductor-ETF upside calls on SOXX still feels live?",
+      "category": "month_end_thresholds",
+      "futurex_pattern": "statement-truth set",
+      "question": "Which of these semiconductor-ETF upside calls on SOXX still feels live?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which of these semiconductor-ETF upside calls on SOXX still feels live? (resolved around 2026-03-31 (GMT+8)). \nA.  iShares Semiconductor ETF (SOXX) closes above $335 at the March 2026 close\nB.  iShares Semiconductor ETF (SOXX) closes above $340 at the March 2026 close\nC.  iShares Semiconductor ETF (SOXX) closes above $345 at the March 2026 close\nD.  iShares Semiconductor ETF (SOXX) closes above $350 at the March 2026 close\nE.  iShares Semiconductor ETF (SOXX) closes above $355 at the March 2026 close\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "iShares Semiconductor ETF (SOXX) closes above $335 at the March 2026 close"
+        },
+        {
+          "label": "B",
+          "text": "iShares Semiconductor ETF (SOXX) closes above $340 at the March 2026 close"
+        },
+        {
+          "label": "C",
+          "text": "iShares Semiconductor ETF (SOXX) closes above $345 at the March 2026 close"
+        },
+        {
+          "label": "D",
+          "text": "iShares Semiconductor ETF (SOXX) closes above $350 at the March 2026 close"
+        },
+        {
+          "label": "E",
+          "text": "iShares Semiconductor ETF (SOXX) closes above $355 at the March 2026 close"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_034",
+      "source_type": "custom_live",
+      "title": "How much higher can GLD really finish the month under your base case?",
+      "category": "month_end_thresholds",
+      "futurex_pattern": "statement-truth set",
+      "question": "How much higher can GLD really finish the month under your base case?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"How much higher can GLD really finish the month under your base case? (resolved around 2026-03-31 (GMT+8)). \nA.  SPDR Gold Shares (GLD) closes above $405 at the March 2026 close\nB.  SPDR Gold Shares (GLD) closes above $410 at the March 2026 close\nC.  SPDR Gold Shares (GLD) closes above $415 at the March 2026 close\nD.  SPDR Gold Shares (GLD) closes above $420 at the March 2026 close\nE.  SPDR Gold Shares (GLD) closes above $425 at the March 2026 close\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "SPDR Gold Shares (GLD) closes above $405 at the March 2026 close"
+        },
+        {
+          "label": "B",
+          "text": "SPDR Gold Shares (GLD) closes above $410 at the March 2026 close"
+        },
+        {
+          "label": "C",
+          "text": "SPDR Gold Shares (GLD) closes above $415 at the March 2026 close"
+        },
+        {
+          "label": "D",
+          "text": "SPDR Gold Shares (GLD) closes above $420 at the March 2026 close"
+        },
+        {
+          "label": "E",
+          "text": "SPDR Gold Shares (GLD) closes above $425 at the March 2026 close"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_035",
+      "source_type": "custom_live",
+      "title": "Before March is over, which crude levels do you think actually print?",
+      "category": "hit_levels",
+      "futurex_pattern": "threshold ladder",
+      "question": "Before March is over, which crude levels do you think actually print?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Before March is over, which crude levels do you think actually print? (resolved around 2026-03-31 (GMT+8)). \nA.  WTI crude oil futures (CL) hits $94 on the high side before March 31, 2026\nB.  WTI crude oil futures (CL) hits $96 on the high side before March 31, 2026\nC.  WTI crude oil futures (CL) hits $98 on the high side before March 31, 2026\nD.  WTI crude oil futures (CL) hits $88 on the low side before March 31, 2026\nE.  WTI crude oil futures (CL) hits $86 on the low side before March 31, 2026\nF.  WTI crude oil futures (CL) hits $84 on the low side before March 31, 2026\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "WTI crude oil futures (CL) hits $94 on the high side before March 31, 2026"
+        },
+        {
+          "label": "B",
+          "text": "WTI crude oil futures (CL) hits $96 on the high side before March 31, 2026"
+        },
+        {
+          "label": "C",
+          "text": "WTI crude oil futures (CL) hits $98 on the high side before March 31, 2026"
+        },
+        {
+          "label": "D",
+          "text": "WTI crude oil futures (CL) hits $88 on the low side before March 31, 2026"
+        },
+        {
+          "label": "E",
+          "text": "WTI crude oil futures (CL) hits $86 on the low side before March 31, 2026"
+        },
+        {
+          "label": "F",
+          "text": "WTI crude oil futures (CL) hits $84 on the low side before March 31, 2026"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_036",
+      "source_type": "custom_live",
+      "title": "Which gold levels are realistic to see trade before month-end?",
+      "category": "hit_levels",
+      "futurex_pattern": "threshold ladder",
+      "question": "Which gold levels are realistic to see trade before month-end?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which gold levels are realistic to see trade before month-end? (resolved around 2026-03-31 (GMT+8)). \nA.  Gold futures (GC) hits $4,600 on the high side before March 31, 2026\nB.  Gold futures (GC) hits $4,650 on the high side before March 31, 2026\nC.  Gold futures (GC) hits $4,700 on the high side before March 31, 2026\nD.  Gold futures (GC) hits $4,450 on the low side before March 31, 2026\nE.  Gold futures (GC) hits $4,400 on the low side before March 31, 2026\nF.  Gold futures (GC) hits $4,350 on the low side before March 31, 2026\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Gold futures (GC) hits $4,600 on the high side before March 31, 2026"
+        },
+        {
+          "label": "B",
+          "text": "Gold futures (GC) hits $4,650 on the high side before March 31, 2026"
+        },
+        {
+          "label": "C",
+          "text": "Gold futures (GC) hits $4,700 on the high side before March 31, 2026"
+        },
+        {
+          "label": "D",
+          "text": "Gold futures (GC) hits $4,450 on the low side before March 31, 2026"
+        },
+        {
+          "label": "E",
+          "text": "Gold futures (GC) hits $4,400 on the low side before March 31, 2026"
+        },
+        {
+          "label": "F",
+          "text": "Gold futures (GC) hits $4,350 on the low side before March 31, 2026"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_037",
+      "source_type": "custom_live",
+      "title": "By the time March ends, which Bitcoin levels do you expect to be touched?",
+      "category": "hit_levels",
+      "futurex_pattern": "threshold ladder",
+      "question": "By the time March ends, which Bitcoin levels do you expect to be touched?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"By the time March ends, which Bitcoin levels do you expect to be touched? (resolved around 2026-03-31 (GMT+8)). \nA.  Bitcoin (BTC-USD) hits $74,000 on the high side before March 31, 2026\nB.  Bitcoin (BTC-USD) hits $76,000 on the high side before March 31, 2026\nC.  Bitcoin (BTC-USD) hits $78,000 on the high side before March 31, 2026\nD.  Bitcoin (BTC-USD) hits $68,000 on the low side before March 31, 2026\nE.  Bitcoin (BTC-USD) hits $66,000 on the low side before March 31, 2026\nF.  Bitcoin (BTC-USD) hits $64,000 on the low side before March 31, 2026\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Bitcoin (BTC-USD) hits $74,000 on the high side before March 31, 2026"
+        },
+        {
+          "label": "B",
+          "text": "Bitcoin (BTC-USD) hits $76,000 on the high side before March 31, 2026"
+        },
+        {
+          "label": "C",
+          "text": "Bitcoin (BTC-USD) hits $78,000 on the high side before March 31, 2026"
+        },
+        {
+          "label": "D",
+          "text": "Bitcoin (BTC-USD) hits $68,000 on the low side before March 31, 2026"
+        },
+        {
+          "label": "E",
+          "text": "Bitcoin (BTC-USD) hits $66,000 on the low side before March 31, 2026"
+        },
+        {
+          "label": "F",
+          "text": "Bitcoin (BTC-USD) hits $64,000 on the low side before March 31, 2026"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_038",
+      "source_type": "custom_live",
+      "title": "Which Ethereum marks do you think get tagged before the month is over?",
+      "category": "hit_levels",
+      "futurex_pattern": "threshold ladder",
+      "question": "Which Ethereum marks do you think get tagged before the month is over?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which Ethereum marks do you think get tagged before the month is over? (resolved around 2026-03-31 (GMT+8)). \nA.  Ethereum (ETH-USD) hits $2,300 on the high side before March 31, 2026\nB.  Ethereum (ETH-USD) hits $2,400 on the high side before March 31, 2026\nC.  Ethereum (ETH-USD) hits $2,500 on the high side before March 31, 2026\nD.  Ethereum (ETH-USD) hits $2,000 on the low side before March 31, 2026\nE.  Ethereum (ETH-USD) hits $1,900 on the low side before March 31, 2026\nF.  Ethereum (ETH-USD) hits $1,800 on the low side before March 31, 2026\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Ethereum (ETH-USD) hits $2,300 on the high side before March 31, 2026"
+        },
+        {
+          "label": "B",
+          "text": "Ethereum (ETH-USD) hits $2,400 on the high side before March 31, 2026"
+        },
+        {
+          "label": "C",
+          "text": "Ethereum (ETH-USD) hits $2,500 on the high side before March 31, 2026"
+        },
+        {
+          "label": "D",
+          "text": "Ethereum (ETH-USD) hits $2,000 on the low side before March 31, 2026"
+        },
+        {
+          "label": "E",
+          "text": "Ethereum (ETH-USD) hits $1,900 on the low side before March 31, 2026"
+        },
+        {
+          "label": "F",
+          "text": "Ethereum (ETH-USD) hits $1,800 on the low side before March 31, 2026"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_039",
+      "source_type": "custom_live",
+      "title": "Which NVIDIA price levels are in play before March closes out?",
+      "category": "hit_levels",
+      "futurex_pattern": "threshold ladder",
+      "question": "Which NVIDIA price levels are in play before March closes out?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which NVIDIA price levels are in play before March closes out? (resolved around 2026-03-31 (GMT+8)). \nA.  NVIDIA (NVDA) hits $185 on the high side before March 31, 2026\nB.  NVIDIA (NVDA) hits $190 on the high side before March 31, 2026\nC.  NVIDIA (NVDA) hits $195 on the high side before March 31, 2026\nD.  NVIDIA (NVDA) hits $170 on the low side before March 31, 2026\nE.  NVIDIA (NVDA) hits $165 on the low side before March 31, 2026\nF.  NVIDIA (NVDA) hits $160 on the low side before March 31, 2026\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "NVIDIA (NVDA) hits $185 on the high side before March 31, 2026"
+        },
+        {
+          "label": "B",
+          "text": "NVIDIA (NVDA) hits $190 on the high side before March 31, 2026"
+        },
+        {
+          "label": "C",
+          "text": "NVIDIA (NVDA) hits $195 on the high side before March 31, 2026"
+        },
+        {
+          "label": "D",
+          "text": "NVIDIA (NVDA) hits $170 on the low side before March 31, 2026"
+        },
+        {
+          "label": "E",
+          "text": "NVIDIA (NVDA) hits $165 on the low side before March 31, 2026"
+        },
+        {
+          "label": "F",
+          "text": "NVIDIA (NVDA) hits $160 on the low side before March 31, 2026"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_040",
+      "source_type": "custom_live",
+      "title": "For AMD, which of these levels still look reachable before month-end?",
+      "category": "hit_levels",
+      "futurex_pattern": "threshold ladder",
+      "question": "For AMD, which of these levels still look reachable before month-end?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"For AMD, which of these levels still look reachable before month-end? (resolved around 2026-03-31 (GMT+8)). \nA.  AMD (AMD) hits $230 on the high side before March 31, 2026\nB.  AMD (AMD) hits $235 on the high side before March 31, 2026\nC.  AMD (AMD) hits $240 on the high side before March 31, 2026\nD.  AMD (AMD) hits $215 on the low side before March 31, 2026\nE.  AMD (AMD) hits $210 on the low side before March 31, 2026\nF.  AMD (AMD) hits $205 on the low side before March 31, 2026\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "AMD (AMD) hits $230 on the high side before March 31, 2026"
+        },
+        {
+          "label": "B",
+          "text": "AMD (AMD) hits $235 on the high side before March 31, 2026"
+        },
+        {
+          "label": "C",
+          "text": "AMD (AMD) hits $240 on the high side before March 31, 2026"
+        },
+        {
+          "label": "D",
+          "text": "AMD (AMD) hits $215 on the low side before March 31, 2026"
+        },
+        {
+          "label": "E",
+          "text": "AMD (AMD) hits $210 on the low side before March 31, 2026"
+        },
+        {
+          "label": "F",
+          "text": "AMD (AMD) hits $205 on the low side before March 31, 2026"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_041",
+      "source_type": "custom_live",
+      "title": "Which Tesla levels do you expect to trade before the calendar flips?",
+      "category": "hit_levels",
+      "futurex_pattern": "threshold ladder",
+      "question": "Which Tesla levels do you expect to trade before the calendar flips?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which Tesla levels do you expect to trade before the calendar flips? (resolved around 2026-03-31 (GMT+8)). \nA.  Tesla (TSLA) hits $400 on the high side before March 31, 2026\nB.  Tesla (TSLA) hits $410 on the high side before March 31, 2026\nC.  Tesla (TSLA) hits $420 on the high side before March 31, 2026\nD.  Tesla (TSLA) hits $370 on the low side before March 31, 2026\nE.  Tesla (TSLA) hits $360 on the low side before March 31, 2026\nF.  Tesla (TSLA) hits $350 on the low side before March 31, 2026\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tesla (TSLA) hits $400 on the high side before March 31, 2026"
+        },
+        {
+          "label": "B",
+          "text": "Tesla (TSLA) hits $410 on the high side before March 31, 2026"
+        },
+        {
+          "label": "C",
+          "text": "Tesla (TSLA) hits $420 on the high side before March 31, 2026"
+        },
+        {
+          "label": "D",
+          "text": "Tesla (TSLA) hits $370 on the low side before March 31, 2026"
+        },
+        {
+          "label": "E",
+          "text": "Tesla (TSLA) hits $360 on the low side before March 31, 2026"
+        },
+        {
+          "label": "F",
+          "text": "Tesla (TSLA) hits $350 on the low side before March 31, 2026"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_042",
+      "source_type": "custom_live",
+      "title": "Which QQQ levels do you think show up before the month ends?",
+      "category": "hit_levels",
+      "futurex_pattern": "threshold ladder",
+      "question": "Which QQQ levels do you think show up before the month ends?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which QQQ levels do you think show up before the month ends? (resolved around 2026-03-31 (GMT+8)). \nA.  Invesco QQQ Trust (QQQ) hits $595 on the high side before March 31, 2026\nB.  Invesco QQQ Trust (QQQ) hits $600 on the high side before March 31, 2026\nC.  Invesco QQQ Trust (QQQ) hits $605 on the high side before March 31, 2026\nD.  Invesco QQQ Trust (QQQ) hits $580 on the low side before March 31, 2026\nE.  Invesco QQQ Trust (QQQ) hits $575 on the low side before March 31, 2026\nF.  Invesco QQQ Trust (QQQ) hits $570 on the low side before March 31, 2026\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Invesco QQQ Trust (QQQ) hits $595 on the high side before March 31, 2026"
+        },
+        {
+          "label": "B",
+          "text": "Invesco QQQ Trust (QQQ) hits $600 on the high side before March 31, 2026"
+        },
+        {
+          "label": "C",
+          "text": "Invesco QQQ Trust (QQQ) hits $605 on the high side before March 31, 2026"
+        },
+        {
+          "label": "D",
+          "text": "Invesco QQQ Trust (QQQ) hits $580 on the low side before March 31, 2026"
+        },
+        {
+          "label": "E",
+          "text": "Invesco QQQ Trust (QQQ) hits $575 on the low side before March 31, 2026"
+        },
+        {
+          "label": "F",
+          "text": "Invesco QQQ Trust (QQQ) hits $570 on the low side before March 31, 2026"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_043",
+      "source_type": "custom_live",
+      "title": "By March 31, which SPY levels look likely to trade at least once?",
+      "category": "hit_levels",
+      "futurex_pattern": "threshold ladder",
+      "question": "By March 31, which SPY levels look likely to trade at least once?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"By March 31, which SPY levels look likely to trade at least once? (resolved around 2026-03-31 (GMT+8)). \nA.  SPDR S&P 500 ETF (SPY) hits $665 on the high side before March 31, 2026\nB.  SPDR S&P 500 ETF (SPY) hits $670 on the high side before March 31, 2026\nC.  SPDR S&P 500 ETF (SPY) hits $675 on the high side before March 31, 2026\nD.  SPDR S&P 500 ETF (SPY) hits $650 on the low side before March 31, 2026\nE.  SPDR S&P 500 ETF (SPY) hits $645 on the low side before March 31, 2026\nF.  SPDR S&P 500 ETF (SPY) hits $640 on the low side before March 31, 2026\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "SPDR S&P 500 ETF (SPY) hits $665 on the high side before March 31, 2026"
+        },
+        {
+          "label": "B",
+          "text": "SPDR S&P 500 ETF (SPY) hits $670 on the high side before March 31, 2026"
+        },
+        {
+          "label": "C",
+          "text": "SPDR S&P 500 ETF (SPY) hits $675 on the high side before March 31, 2026"
+        },
+        {
+          "label": "D",
+          "text": "SPDR S&P 500 ETF (SPY) hits $650 on the low side before March 31, 2026"
+        },
+        {
+          "label": "E",
+          "text": "SPDR S&P 500 ETF (SPY) hits $645 on the low side before March 31, 2026"
+        },
+        {
+          "label": "F",
+          "text": "SPDR S&P 500 ETF (SPY) hits $640 on the low side before March 31, 2026"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_044",
+      "source_type": "custom_live",
+      "title": "Which SOXX levels are still genuinely in play before month-end?",
+      "category": "hit_levels",
+      "futurex_pattern": "threshold ladder",
+      "question": "Which SOXX levels are still genuinely in play before month-end?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which SOXX levels are still genuinely in play before month-end? (resolved around 2026-03-31 (GMT+8)). \nA.  iShares Semiconductor ETF (SOXX) hits $355 on the high side before March 31, 2026\nB.  iShares Semiconductor ETF (SOXX) hits $360 on the high side before March 31, 2026\nC.  iShares Semiconductor ETF (SOXX) hits $365 on the high side before March 31, 2026\nD.  iShares Semiconductor ETF (SOXX) hits $340 on the low side before March 31, 2026\nE.  iShares Semiconductor ETF (SOXX) hits $335 on the low side before March 31, 2026\nF.  iShares Semiconductor ETF (SOXX) hits $330 on the low side before March 31, 2026\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "iShares Semiconductor ETF (SOXX) hits $355 on the high side before March 31, 2026"
+        },
+        {
+          "label": "B",
+          "text": "iShares Semiconductor ETF (SOXX) hits $360 on the high side before March 31, 2026"
+        },
+        {
+          "label": "C",
+          "text": "iShares Semiconductor ETF (SOXX) hits $365 on the high side before March 31, 2026"
+        },
+        {
+          "label": "D",
+          "text": "iShares Semiconductor ETF (SOXX) hits $340 on the low side before March 31, 2026"
+        },
+        {
+          "label": "E",
+          "text": "iShares Semiconductor ETF (SOXX) hits $335 on the low side before March 31, 2026"
+        },
+        {
+          "label": "F",
+          "text": "iShares Semiconductor ETF (SOXX) hits $330 on the low side before March 31, 2026"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_045",
+      "source_type": "custom_live",
+      "title": "What Coinbase levels do you think we actually see before March wraps?",
+      "category": "hit_levels",
+      "futurex_pattern": "threshold ladder",
+      "question": "What Coinbase levels do you think we actually see before March wraps?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"What Coinbase levels do you think we actually see before March wraps? (resolved around 2026-03-31 (GMT+8)). \nA.  Coinbase (COIN) hits $190 on the high side before March 31, 2026\nB.  Coinbase (COIN) hits $195 on the high side before March 31, 2026\nC.  Coinbase (COIN) hits $200 on the high side before March 31, 2026\nD.  Coinbase (COIN) hits $175 on the low side before March 31, 2026\nE.  Coinbase (COIN) hits $170 on the low side before March 31, 2026\nF.  Coinbase (COIN) hits $165 on the low side before March 31, 2026\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Coinbase (COIN) hits $190 on the high side before March 31, 2026"
+        },
+        {
+          "label": "B",
+          "text": "Coinbase (COIN) hits $195 on the high side before March 31, 2026"
+        },
+        {
+          "label": "C",
+          "text": "Coinbase (COIN) hits $200 on the high side before March 31, 2026"
+        },
+        {
+          "label": "D",
+          "text": "Coinbase (COIN) hits $175 on the low side before March 31, 2026"
+        },
+        {
+          "label": "E",
+          "text": "Coinbase (COIN) hits $170 on the low side before March 31, 2026"
+        },
+        {
+          "label": "F",
+          "text": "Coinbase (COIN) hits $165 on the low side before March 31, 2026"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_046",
+      "source_type": "custom_live",
+      "title": "For Strategy, which of these levels do you think get printed before March is done?",
+      "category": "hit_levels",
+      "futurex_pattern": "threshold ladder",
+      "question": "For Strategy, which of these levels do you think get printed before March is done?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"For Strategy, which of these levels do you think get printed before March is done? (resolved around 2026-03-31 (GMT+8)). \nA.  Strategy (MSTR) hits $160 on the high side before March 31, 2026\nB.  Strategy (MSTR) hits $180 on the high side before March 31, 2026\nC.  Strategy (MSTR) hits $200 on the high side before March 31, 2026\nD.  Strategy (MSTR) hits $100 on the low side before March 31, 2026\nE.  Strategy (MSTR) hits $80 on the low side before March 31, 2026\nF.  Strategy (MSTR) hits $60 on the low side before March 31, 2026\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Strategy (MSTR) hits $160 on the high side before March 31, 2026"
+        },
+        {
+          "label": "B",
+          "text": "Strategy (MSTR) hits $180 on the high side before March 31, 2026"
+        },
+        {
+          "label": "C",
+          "text": "Strategy (MSTR) hits $200 on the high side before March 31, 2026"
+        },
+        {
+          "label": "D",
+          "text": "Strategy (MSTR) hits $100 on the low side before March 31, 2026"
+        },
+        {
+          "label": "E",
+          "text": "Strategy (MSTR) hits $80 on the low side before March 31, 2026"
+        },
+        {
+          "label": "F",
+          "text": "Strategy (MSTR) hits $60 on the low side before March 31, 2026"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_047",
+      "source_type": "custom_live",
+      "title": "Does NVIDIA actually clear its month-end close hurdle, or not?",
+      "category": "binary_price_event",
+      "futurex_pattern": "binary",
+      "question": "Does NVIDIA actually clear its month-end close hurdle, or not?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Does NVIDIA actually clear its month-end close hurdle, or not? (resolved around 2026-03-31 (GMT+8)). \" IMPORTANT: Your final answer MUST end with this exact format: \\boxed{Yes} or \\boxed{No} Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_yes_no",
+      "options": null,
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_048",
+      "source_type": "custom_live",
+      "title": "Does AMD finish March above its stretch target, or fall short?",
+      "category": "binary_price_event",
+      "futurex_pattern": "binary",
+      "question": "Does AMD finish March above its stretch target, or fall short?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Does AMD finish March above its stretch target, or fall short? (resolved around 2026-03-31 (GMT+8)). \" IMPORTANT: Your final answer MUST end with this exact format: \\boxed{Yes} or \\boxed{No} Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_yes_no",
+      "options": null,
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_049",
+      "source_type": "custom_live",
+      "title": "Can Broadcom beat its month-end close marker from here?",
+      "category": "binary_price_event",
+      "futurex_pattern": "binary",
+      "question": "Can Broadcom beat its month-end close marker from here?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Can Broadcom beat its month-end close marker from here? (resolved around 2026-03-31 (GMT+8)). \" IMPORTANT: Your final answer MUST end with this exact format: \\boxed{Yes} or \\boxed{No} Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_yes_no",
+      "options": null,
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_050",
+      "source_type": "custom_live",
+      "title": "Does TSM do enough to close March through its upside threshold?",
+      "category": "binary_price_event",
+      "futurex_pattern": "binary",
+      "question": "Does TSM do enough to close March through its upside threshold?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Does TSM do enough to close March through its upside threshold? (resolved around 2026-03-31 (GMT+8)). \" IMPORTANT: Your final answer MUST end with this exact format: \\boxed{Yes} or \\boxed{No} Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_yes_no",
+      "options": null,
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_051",
+      "source_type": "custom_live",
+      "title": "Will Tesla be able to finish March above its late-month hurdle?",
+      "category": "binary_price_event",
+      "futurex_pattern": "binary",
+      "question": "Will Tesla be able to finish March above its late-month hurdle?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Will Tesla be able to finish March above its late-month hurdle? (resolved around 2026-03-31 (GMT+8)). \" IMPORTANT: Your final answer MUST end with this exact format: \\boxed{Yes} or \\boxed{No} Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_yes_no",
+      "options": null,
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_052",
+      "source_type": "custom_live",
+      "title": "Does Apple still have enough to close March through its target line?",
+      "category": "binary_price_event",
+      "futurex_pattern": "binary",
+      "question": "Does Apple still have enough to close March through its target line?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Does Apple still have enough to close March through its target line? (resolved around 2026-03-31 (GMT+8)). \" IMPORTANT: Your final answer MUST end with this exact format: \\boxed{Yes} or \\boxed{No} Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_yes_no",
+      "options": null,
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_053",
+      "source_type": "custom_live",
+      "title": "Can Microsoft end the month above its next meaningful close threshold?",
+      "category": "binary_price_event",
+      "futurex_pattern": "binary",
+      "question": "Can Microsoft end the month above its next meaningful close threshold?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Can Microsoft end the month above its next meaningful close threshold? (resolved around 2026-03-31 (GMT+8)). \" IMPORTANT: Your final answer MUST end with this exact format: \\boxed{Yes} or \\boxed{No} Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_yes_no",
+      "options": null,
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_054",
+      "source_type": "custom_live",
+      "title": "Does Amazon finish March on the right side of its upside checkpoint?",
+      "category": "binary_price_event",
+      "futurex_pattern": "binary",
+      "question": "Does Amazon finish March on the right side of its upside checkpoint?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Does Amazon finish March on the right side of its upside checkpoint? (resolved around 2026-03-31 (GMT+8)). \" IMPORTANT: Your final answer MUST end with this exact format: \\boxed{Yes} or \\boxed{No} Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_yes_no",
+      "options": null,
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_055",
+      "source_type": "custom_live",
+      "title": "Will Meta close March above its next threshold, yes or no?",
+      "category": "binary_price_event",
+      "futurex_pattern": "binary",
+      "question": "Will Meta close March above its next threshold, yes or no?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Will Meta close March above its next threshold, yes or no? (resolved around 2026-03-31 (GMT+8)). \" IMPORTANT: Your final answer MUST end with this exact format: \\boxed{Yes} or \\boxed{No} Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_yes_no",
+      "options": null,
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_056",
+      "source_type": "custom_live",
+      "title": "Does QQQ manage to finish the month above its current hurdle?",
+      "category": "binary_price_event",
+      "futurex_pattern": "binary",
+      "question": "Does QQQ manage to finish the month above its current hurdle?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Does QQQ manage to finish the month above its current hurdle? (resolved around 2026-03-31 (GMT+8)). \" IMPORTANT: Your final answer MUST end with this exact format: \\boxed{Yes} or \\boxed{No} Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_yes_no",
+      "options": null,
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_057",
+      "source_type": "custom_live",
+      "title": "Can SPY still close March through its target level?",
+      "category": "binary_price_event",
+      "futurex_pattern": "binary",
+      "question": "Can SPY still close March through its target level?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Can SPY still close March through its target level? (resolved around 2026-03-31 (GMT+8)). \" IMPORTANT: Your final answer MUST end with this exact format: \\boxed{Yes} or \\boxed{No} Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_yes_no",
+      "options": null,
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_058",
+      "source_type": "custom_live",
+      "title": "Does IWM have enough to finish March above its hurdle?",
+      "category": "binary_price_event",
+      "futurex_pattern": "binary",
+      "question": "Does IWM have enough to finish March above its hurdle?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Does IWM have enough to finish March above its hurdle? (resolved around 2026-03-31 (GMT+8)). \" IMPORTANT: Your final answer MUST end with this exact format: \\boxed{Yes} or \\boxed{No} Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_yes_no",
+      "options": null,
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_059",
+      "source_type": "custom_live",
+      "title": "Will Bitcoin close March above its next big line in the sand?",
+      "category": "binary_price_event",
+      "futurex_pattern": "binary",
+      "question": "Will Bitcoin close March above its next big line in the sand?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Will Bitcoin close March above its next big line in the sand? (resolved around 2026-03-31 (GMT+8)). \" IMPORTANT: Your final answer MUST end with this exact format: \\boxed{Yes} or \\boxed{No} Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_yes_no",
+      "options": null,
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_060",
+      "source_type": "custom_live",
+      "title": "Can Ethereum finish the month above its upside checkpoint?",
+      "category": "binary_price_event",
+      "futurex_pattern": "binary",
+      "question": "Can Ethereum finish the month above its upside checkpoint?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Can Ethereum finish the month above its upside checkpoint? (resolved around 2026-03-31 (GMT+8)). \" IMPORTANT: Your final answer MUST end with this exact format: \\boxed{Yes} or \\boxed{No} Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_yes_no",
+      "options": null,
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_061",
+      "source_type": "custom_live",
+      "title": "Does Coinbase clear its month-end hurdle by the close of March?",
+      "category": "binary_price_event",
+      "futurex_pattern": "binary",
+      "question": "Does Coinbase clear its month-end hurdle by the close of March?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Does Coinbase clear its month-end hurdle by the close of March? (resolved around 2026-03-31 (GMT+8)). \" IMPORTANT: Your final answer MUST end with this exact format: \\boxed{Yes} or \\boxed{No} Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_yes_no",
+      "options": null,
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_062",
+      "source_type": "custom_live",
+      "title": "Will Strategy actually finish March above its stretch target?",
+      "category": "binary_price_event",
+      "futurex_pattern": "binary",
+      "question": "Will Strategy actually finish March above its stretch target?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Will Strategy actually finish March above its stretch target? (resolved around 2026-03-31 (GMT+8)). \" IMPORTANT: Your final answer MUST end with this exact format: \\boxed{Yes} or \\boxed{No} Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_yes_no",
+      "options": null,
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_063",
+      "source_type": "custom_live",
+      "title": "Does XLE end March below its downside tripwire?",
+      "category": "binary_price_event",
+      "futurex_pattern": "binary",
+      "question": "Does XLE end March below its downside tripwire?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Does XLE end March below its downside tripwire? (resolved around 2026-03-31 (GMT+8)). \" IMPORTANT: Your final answer MUST end with this exact format: \\boxed{Yes} or \\boxed{No} Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_yes_no",
+      "options": null,
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_064",
+      "source_type": "custom_live",
+      "title": "Does XLF finish the month below its soft floor?",
+      "category": "binary_price_event",
+      "futurex_pattern": "binary",
+      "question": "Does XLF finish the month below its soft floor?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Does XLF finish the month below its soft floor? (resolved around 2026-03-31 (GMT+8)). \" IMPORTANT: Your final answer MUST end with this exact format: \\boxed{Yes} or \\boxed{No} Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_yes_no",
+      "options": null,
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_065",
+      "source_type": "custom_live",
+      "title": "Inside the core chip trade, who wins the final stretch of March on percentage return?",
+      "category": "winner_market",
+      "futurex_pattern": "winner market",
+      "question": "Inside the core chip trade, who wins the final stretch of March on percentage return?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Inside the core chip trade, who wins the final stretch of March on percentage return? (resolved around 2026-03-31 (GMT+8)). \nA.  NVIDIA (NVDA)\nB.  AMD (AMD)\nC.  Broadcom (AVGO)\nD.  Taiwan Semiconductor (TSM)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
       "answer_format": "boxed_letters",
       "options": [
         {
@@ -282,13 +1668,67 @@
       "end_time": "2026-03-31"
     },
     {
-      "id": "v13_014",
+      "id": "v13_066",
       "source_type": "custom_live",
-      "title": "Which of these risk assets will finish March 2026 above their March 25, 2026 close?",
-      "category": "up_membership",
-      "futurex_pattern": "roster membership",
-      "question": "Which of these risk assets will finish March 2026 above their March 25, 2026 close?",
-      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which of these risk assets will finish March 2026 above their March 25, 2026 close? (resolved around 2026-03-31 (GMT+8)). \nA.  Bitcoin (BTC-USD)\nB.  Ethereum (ETH-USD)\nC.  Tesla (TSLA)\nD.  NVIDIA (NVDA)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "title": "Which megacap tech name looks best placed to lead the last leg of March?",
+      "category": "winner_market",
+      "futurex_pattern": "winner market",
+      "question": "Which megacap tech name looks best placed to lead the last leg of March?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which megacap tech name looks best placed to lead the last leg of March? (resolved around 2026-03-31 (GMT+8)). \nA.  Apple (AAPL)\nB.  Microsoft (MSFT)\nC.  Amazon (AMZN)\nD.  Meta (META)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Apple (AAPL)"
+        },
+        {
+          "label": "B",
+          "text": "Microsoft (MSFT)"
+        },
+        {
+          "label": "C",
+          "text": "Amazon (AMZN)"
+        },
+        {
+          "label": "D",
+          "text": "Meta (META)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_067",
+      "source_type": "custom_live",
+      "title": "Among the big beta ETFs, who posts the best return into month-end?",
+      "category": "winner_market",
+      "futurex_pattern": "winner market",
+      "question": "Among the big beta ETFs, who posts the best return into month-end?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Among the big beta ETFs, who posts the best return into month-end? (resolved around 2026-03-31 (GMT+8)). \nA.  SPDR S&P 500 ETF (SPY)\nB.  Invesco QQQ Trust (QQQ)\nC.  iShares Russell 2000 ETF (IWM)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "SPDR S&P 500 ETF (SPY)"
+        },
+        {
+          "label": "B",
+          "text": "Invesco QQQ Trust (QQQ)"
+        },
+        {
+          "label": "C",
+          "text": "iShares Russell 2000 ETF (IWM)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_068",
+      "source_type": "custom_live",
+      "title": "In the crypto complex, which listed or spot proxy wins the rest of March?",
+      "category": "winner_market",
+      "futurex_pattern": "winner market",
+      "question": "In the crypto complex, which listed or spot proxy wins the rest of March?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"In the crypto complex, which listed or spot proxy wins the rest of March? (resolved around 2026-03-31 (GMT+8)). \nA.  Bitcoin (BTC-USD)\nB.  Ethereum (ETH-USD)\nC.  Coinbase (COIN)\nD.  Strategy (MSTR)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
       "answer_format": "boxed_letters",
       "options": [
         {
@@ -301,23 +1741,417 @@
         },
         {
           "label": "C",
-          "text": "Tesla (TSLA)"
+          "text": "Coinbase (COIN)"
         },
         {
           "label": "D",
-          "text": "NVIDIA (NVDA)"
+          "text": "Strategy (MSTR)"
         }
       ],
       "end_time": "2026-03-31"
     },
     {
-      "id": "v13_015",
+      "id": "v13_069",
       "source_type": "custom_live",
-      "title": "Which will post the larger percentage return from the March 25, 2026 close through the March 31, 2026 close?",
+      "title": "Which energy name has the best shot at leading into the month-end close?",
       "category": "winner_market",
       "futurex_pattern": "winner market",
-      "question": "Which will post the larger percentage return from the March 25, 2026 close through the March 31, 2026 close?",
-      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which will post the larger percentage return from the March 25, 2026 close through the March 31, 2026 close? (resolved around 2026-03-31 (GMT+8)). \nA.  Bitcoin (BTC-USD)\nB.  Ethereum (ETH-USD)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "question": "Which energy name has the best shot at leading into the month-end close?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which energy name has the best shot at leading into the month-end close? (resolved around 2026-03-31 (GMT+8)). \nA.  WTI crude oil futures (CL)\nB.  Energy Select Sector SPDR Fund (XLE)\nC.  Exxon Mobil (XOM)\nD.  Chevron (CVX)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "WTI crude oil futures (CL)"
+        },
+        {
+          "label": "B",
+          "text": "Energy Select Sector SPDR Fund (XLE)"
+        },
+        {
+          "label": "C",
+          "text": "Exxon Mobil (XOM)"
+        },
+        {
+          "label": "D",
+          "text": "Chevron (CVX)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_070",
+      "source_type": "custom_live",
+      "title": "In financials, who do you think wins the final March sprint?",
+      "category": "winner_market",
+      "futurex_pattern": "winner market",
+      "question": "In financials, who do you think wins the final March sprint?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"In financials, who do you think wins the final March sprint? (resolved around 2026-03-31 (GMT+8)). \nA.  Financial Select Sector SPDR Fund (XLF)\nB.  JPMorgan Chase (JPM)\nC.  Goldman Sachs (GS)\nD.  Bank of America (BAC)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Financial Select Sector SPDR Fund (XLF)"
+        },
+        {
+          "label": "B",
+          "text": "JPMorgan Chase (JPM)"
+        },
+        {
+          "label": "C",
+          "text": "Goldman Sachs (GS)"
+        },
+        {
+          "label": "D",
+          "text": "Bank of America (BAC)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_071",
+      "source_type": "custom_live",
+      "title": "Which metals name is most likely to outperform into the March close?",
+      "category": "winner_market",
+      "futurex_pattern": "winner market",
+      "question": "Which metals name is most likely to outperform into the March close?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which metals name is most likely to outperform into the March close? (resolved around 2026-03-31 (GMT+8)). \nA.  Gold futures (GC)\nB.  SPDR Gold Shares (GLD)\nC.  iShares Silver Trust (SLV)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Gold futures (GC)"
+        },
+        {
+          "label": "B",
+          "text": "SPDR Gold Shares (GLD)"
+        },
+        {
+          "label": "C",
+          "text": "iShares Silver Trust (SLV)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_072",
+      "source_type": "custom_live",
+      "title": "Across the AI platform trade, who comes out on top by month-end return?",
+      "category": "winner_market",
+      "futurex_pattern": "winner market",
+      "question": "Across the AI platform trade, who comes out on top by month-end return?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Across the AI platform trade, who comes out on top by month-end return? (resolved around 2026-03-31 (GMT+8)). \nA.  NVIDIA (NVDA)\nB.  Microsoft (MSFT)\nC.  Meta (META)\nD.  Amazon (AMZN)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "NVIDIA (NVDA)"
+        },
+        {
+          "label": "B",
+          "text": "Microsoft (MSFT)"
+        },
+        {
+          "label": "C",
+          "text": "Meta (META)"
+        },
+        {
+          "label": "D",
+          "text": "Amazon (AMZN)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_073",
+      "source_type": "custom_live",
+      "title": "Which high-beta growth name wins the last stretch of March?",
+      "category": "winner_market",
+      "futurex_pattern": "winner market",
+      "question": "Which high-beta growth name wins the last stretch of March?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which high-beta growth name wins the last stretch of March? (resolved around 2026-03-31 (GMT+8)). \nA.  Tesla (TSLA)\nB.  Coinbase (COIN)\nC.  Strategy (MSTR)\nD.  iShares Semiconductor ETF (SOXX)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tesla (TSLA)"
+        },
+        {
+          "label": "B",
+          "text": "Coinbase (COIN)"
+        },
+        {
+          "label": "C",
+          "text": "Strategy (MSTR)"
+        },
+        {
+          "label": "D",
+          "text": "iShares Semiconductor ETF (SOXX)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_074",
+      "source_type": "custom_live",
+      "title": "Which of these semiconductor names still finish March above where they stood on March 25?",
+      "category": "up_membership",
+      "futurex_pattern": "roster membership",
+      "question": "Which of these semiconductor names still finish March above where they stood on March 25?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which of these semiconductor names still finish March above where they stood on March 25? (resolved around 2026-03-31 (GMT+8)). \nA.  NVIDIA (NVDA)\nB.  AMD (AMD)\nC.  Broadcom (AVGO)\nD.  Taiwan Semiconductor (TSM)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "NVIDIA (NVDA)"
+        },
+        {
+          "label": "B",
+          "text": "AMD (AMD)"
+        },
+        {
+          "label": "C",
+          "text": "Broadcom (AVGO)"
+        },
+        {
+          "label": "D",
+          "text": "Taiwan Semiconductor (TSM)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_075",
+      "source_type": "custom_live",
+      "title": "Which megacap tech names end the month in the green versus their March 25 close?",
+      "category": "up_membership",
+      "futurex_pattern": "roster membership",
+      "question": "Which megacap tech names end the month in the green versus their March 25 close?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which megacap tech names end the month in the green versus their March 25 close? (resolved around 2026-03-31 (GMT+8)). \nA.  Apple (AAPL)\nB.  Microsoft (MSFT)\nC.  Amazon (AMZN)\nD.  Meta (META)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Apple (AAPL)"
+        },
+        {
+          "label": "B",
+          "text": "Microsoft (MSFT)"
+        },
+        {
+          "label": "C",
+          "text": "Amazon (AMZN)"
+        },
+        {
+          "label": "D",
+          "text": "Meta (META)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_076",
+      "source_type": "custom_live",
+      "title": "Among the big beta ETFs, who still closes March above the March 25 mark?",
+      "category": "up_membership",
+      "futurex_pattern": "roster membership",
+      "question": "Among the big beta ETFs, who still closes March above the March 25 mark?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Among the big beta ETFs, who still closes March above the March 25 mark? (resolved around 2026-03-31 (GMT+8)). \nA.  SPDR S&P 500 ETF (SPY)\nB.  Invesco QQQ Trust (QQQ)\nC.  iShares Russell 2000 ETF (IWM)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "SPDR S&P 500 ETF (SPY)"
+        },
+        {
+          "label": "B",
+          "text": "Invesco QQQ Trust (QQQ)"
+        },
+        {
+          "label": "C",
+          "text": "iShares Russell 2000 ETF (IWM)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_077",
+      "source_type": "custom_live",
+      "title": "Which crypto assets or proxies finish March above their March 25 close?",
+      "category": "up_membership",
+      "futurex_pattern": "roster membership",
+      "question": "Which crypto assets or proxies finish March above their March 25 close?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which crypto assets or proxies finish March above their March 25 close? (resolved around 2026-03-31 (GMT+8)). \nA.  Bitcoin (BTC-USD)\nB.  Ethereum (ETH-USD)\nC.  Coinbase (COIN)\nD.  Strategy (MSTR)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Bitcoin (BTC-USD)"
+        },
+        {
+          "label": "B",
+          "text": "Ethereum (ETH-USD)"
+        },
+        {
+          "label": "C",
+          "text": "Coinbase (COIN)"
+        },
+        {
+          "label": "D",
+          "text": "Strategy (MSTR)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_078",
+      "source_type": "custom_live",
+      "title": "Which energy names still manage to end March above their March 25 baseline?",
+      "category": "up_membership",
+      "futurex_pattern": "roster membership",
+      "question": "Which energy names still manage to end March above their March 25 baseline?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which energy names still manage to end March above their March 25 baseline? (resolved around 2026-03-31 (GMT+8)). \nA.  WTI crude oil futures (CL)\nB.  Energy Select Sector SPDR Fund (XLE)\nC.  Exxon Mobil (XOM)\nD.  Chevron (CVX)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "WTI crude oil futures (CL)"
+        },
+        {
+          "label": "B",
+          "text": "Energy Select Sector SPDR Fund (XLE)"
+        },
+        {
+          "label": "C",
+          "text": "Exxon Mobil (XOM)"
+        },
+        {
+          "label": "D",
+          "text": "Chevron (CVX)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_079",
+      "source_type": "custom_live",
+      "title": "Which financial names finish the month above where they started this stretch?",
+      "category": "up_membership",
+      "futurex_pattern": "roster membership",
+      "question": "Which financial names finish the month above where they started this stretch?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which financial names finish the month above where they started this stretch? (resolved around 2026-03-31 (GMT+8)). \nA.  Financial Select Sector SPDR Fund (XLF)\nB.  JPMorgan Chase (JPM)\nC.  Goldman Sachs (GS)\nD.  Bank of America (BAC)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Financial Select Sector SPDR Fund (XLF)"
+        },
+        {
+          "label": "B",
+          "text": "JPMorgan Chase (JPM)"
+        },
+        {
+          "label": "C",
+          "text": "Goldman Sachs (GS)"
+        },
+        {
+          "label": "D",
+          "text": "Bank of America (BAC)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_080",
+      "source_type": "custom_live",
+      "title": "Which metals names close March above their March 25 levels?",
+      "category": "up_membership",
+      "futurex_pattern": "roster membership",
+      "question": "Which metals names close March above their March 25 levels?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which metals names close March above their March 25 levels? (resolved around 2026-03-31 (GMT+8)). \nA.  Gold futures (GC)\nB.  SPDR Gold Shares (GLD)\nC.  iShares Silver Trust (SLV)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Gold futures (GC)"
+        },
+        {
+          "label": "B",
+          "text": "SPDR Gold Shares (GLD)"
+        },
+        {
+          "label": "C",
+          "text": "iShares Silver Trust (SLV)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_081",
+      "source_type": "custom_live",
+      "title": "Which AI platform names still finish March above their March 25 close?",
+      "category": "up_membership",
+      "futurex_pattern": "roster membership",
+      "question": "Which AI platform names still finish March above their March 25 close?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which AI platform names still finish March above their March 25 close? (resolved around 2026-03-31 (GMT+8)). \nA.  NVIDIA (NVDA)\nB.  Microsoft (MSFT)\nC.  Meta (META)\nD.  Amazon (AMZN)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "NVIDIA (NVDA)"
+        },
+        {
+          "label": "B",
+          "text": "Microsoft (MSFT)"
+        },
+        {
+          "label": "C",
+          "text": "Meta (META)"
+        },
+        {
+          "label": "D",
+          "text": "Amazon (AMZN)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_082",
+      "source_type": "custom_live",
+      "title": "Which high-beta growth names make it to month-end above their March 25 mark?",
+      "category": "up_membership",
+      "futurex_pattern": "roster membership",
+      "question": "Which high-beta growth names make it to month-end above their March 25 mark?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which high-beta growth names make it to month-end above their March 25 mark? (resolved around 2026-03-31 (GMT+8)). \nA.  Tesla (TSLA)\nB.  Coinbase (COIN)\nC.  Strategy (MSTR)\nD.  iShares Semiconductor ETF (SOXX)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tesla (TSLA)"
+        },
+        {
+          "label": "B",
+          "text": "Coinbase (COIN)"
+        },
+        {
+          "label": "C",
+          "text": "Strategy (MSTR)"
+        },
+        {
+          "label": "D",
+          "text": "iShares Semiconductor ETF (SOXX)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_083",
+      "source_type": "custom_live",
+      "title": "Into the March close, who outperforms on percentage return: Bitcoin or Ethereum?",
+      "category": "head_to_head",
+      "futurex_pattern": "winner market",
+      "question": "Into the March close, who outperforms on percentage return: Bitcoin or Ethereum?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Into the March close, who outperforms on percentage return: Bitcoin or Ethereum? (resolved around 2026-03-31 (GMT+8)). \nA.  Bitcoin (BTC-USD)\nB.  Ethereum (ETH-USD)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
       "answer_format": "boxed_letters",
       "options": [
         {
@@ -332,27 +2166,360 @@
       "end_time": "2026-03-31"
     },
     {
-      "id": "v13_016",
+      "id": "v13_084",
       "source_type": "custom_live",
-      "title": "Will NVIDIA stock close above $185 by March 31, 2026?",
-      "category": "binary_price_event",
-      "futurex_pattern": "binary",
-      "question": "Will NVIDIA stock close above $185 by March 31, 2026?",
-      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Will NVIDIA stock close above $185 by March 31, 2026? (resolved around 2026-03-31 (GMT+8)). \" IMPORTANT: Your final answer MUST end with this exact format: \\boxed{Yes} or \\boxed{No} Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
-      "answer_format": "boxed_yes_no",
-      "options": null,
+      "title": "Who wins the rest-of-March tape: NVIDIA or AMD?",
+      "category": "head_to_head",
+      "futurex_pattern": "winner market",
+      "question": "Who wins the rest-of-March tape: NVIDIA or AMD?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Who wins the rest-of-March tape: NVIDIA or AMD? (resolved around 2026-03-31 (GMT+8)). \nA.  NVIDIA (NVDA)\nB.  AMD (AMD)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "NVIDIA (NVDA)"
+        },
+        {
+          "label": "B",
+          "text": "AMD (AMD)"
+        }
+      ],
       "end_time": "2026-03-31"
     },
     {
-      "id": "v13_017",
+      "id": "v13_085",
       "source_type": "custom_live",
-      "title": "Will AMD stock close above $215 by March 31, 2026?",
-      "category": "binary_price_event",
-      "futurex_pattern": "binary",
-      "question": "Will AMD stock close above $215 by March 31, 2026?",
-      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Will AMD stock close above $215 by March 31, 2026? (resolved around 2026-03-31 (GMT+8)). \" IMPORTANT: Your final answer MUST end with this exact format: \\boxed{Yes} or \\boxed{No} Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
-      "answer_format": "boxed_yes_no",
-      "options": null,
+      "title": "From here to month-end, who delivers the better return: Apple or Microsoft?",
+      "category": "head_to_head",
+      "futurex_pattern": "winner market",
+      "question": "From here to month-end, who delivers the better return: Apple or Microsoft?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"From here to month-end, who delivers the better return: Apple or Microsoft? (resolved around 2026-03-31 (GMT+8)). \nA.  Apple (AAPL)\nB.  Microsoft (MSFT)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Apple (AAPL)"
+        },
+        {
+          "label": "B",
+          "text": "Microsoft (MSFT)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_086",
+      "source_type": "custom_live",
+      "title": "Through the March close, which does better: Amazon or Meta?",
+      "category": "head_to_head",
+      "futurex_pattern": "winner market",
+      "question": "Through the March close, which does better: Amazon or Meta?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Through the March close, which does better: Amazon or Meta? (resolved around 2026-03-31 (GMT+8)). \nA.  Amazon (AMZN)\nB.  Meta (META)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Amazon (AMZN)"
+        },
+        {
+          "label": "B",
+          "text": "Meta (META)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_087",
+      "source_type": "custom_live",
+      "title": "Over the last stretch of March, who outperforms: SPY or QQQ?",
+      "category": "head_to_head",
+      "futurex_pattern": "winner market",
+      "question": "Over the last stretch of March, who outperforms: SPY or QQQ?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Over the last stretch of March, who outperforms: SPY or QQQ? (resolved around 2026-03-31 (GMT+8)). \nA.  SPDR S&P 500 ETF (SPY)\nB.  Invesco QQQ Trust (QQQ)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "SPDR S&P 500 ETF (SPY)"
+        },
+        {
+          "label": "B",
+          "text": "Invesco QQQ Trust (QQQ)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_088",
+      "source_type": "custom_live",
+      "title": "Into month-end, which wins on return: XLE or XLF?",
+      "category": "head_to_head",
+      "futurex_pattern": "winner market",
+      "question": "Into month-end, which wins on return: XLE or XLF?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Into month-end, which wins on return: XLE or XLF? (resolved around 2026-03-31 (GMT+8)). \nA.  Energy Select Sector SPDR Fund (XLE)\nB.  Financial Select Sector SPDR Fund (XLF)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Energy Select Sector SPDR Fund (XLE)"
+        },
+        {
+          "label": "B",
+          "text": "Financial Select Sector SPDR Fund (XLF)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_089",
+      "source_type": "custom_live",
+      "title": "Between gold and crude, which one performs better into the March close?",
+      "category": "head_to_head",
+      "futurex_pattern": "winner market",
+      "question": "Between gold and crude, which one performs better into the March close?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Between gold and crude, which one performs better into the March close? (resolved around 2026-03-31 (GMT+8)). \nA.  Gold futures (GC)\nB.  WTI crude oil futures (CL)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Gold futures (GC)"
+        },
+        {
+          "label": "B",
+          "text": "WTI crude oil futures (CL)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_090",
+      "source_type": "custom_live",
+      "title": "Which offers the better finish from here: Coinbase or Strategy?",
+      "category": "head_to_head",
+      "futurex_pattern": "winner market",
+      "question": "Which offers the better finish from here: Coinbase or Strategy?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which offers the better finish from here: Coinbase or Strategy? (resolved around 2026-03-31 (GMT+8)). \nA.  Coinbase (COIN)\nB.  Strategy (MSTR)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Coinbase (COIN)"
+        },
+        {
+          "label": "B",
+          "text": "Strategy (MSTR)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_091",
+      "source_type": "custom_live",
+      "title": "Into the March close, who wins: GLD or SLV?",
+      "category": "head_to_head",
+      "futurex_pattern": "winner market",
+      "question": "Into the March close, who wins: GLD or SLV?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Into the March close, who wins: GLD or SLV? (resolved around 2026-03-31 (GMT+8)). \nA.  SPDR Gold Shares (GLD)\nB.  iShares Silver Trust (SLV)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "SPDR Gold Shares (GLD)"
+        },
+        {
+          "label": "B",
+          "text": "iShares Silver Trust (SLV)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_092",
+      "source_type": "custom_live",
+      "title": "Through month-end, which does better: SOXX or QQQ?",
+      "category": "head_to_head",
+      "futurex_pattern": "winner market",
+      "question": "Through month-end, which does better: SOXX or QQQ?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Through month-end, which does better: SOXX or QQQ? (resolved around 2026-03-31 (GMT+8)). \nA.  iShares Semiconductor ETF (SOXX)\nB.  Invesco QQQ Trust (QQQ)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "iShares Semiconductor ETF (SOXX)"
+        },
+        {
+          "label": "B",
+          "text": "Invesco QQQ Trust (QQQ)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_093",
+      "source_type": "custom_live",
+      "title": "Who outperforms over the rest of March: Tesla or NVIDIA?",
+      "category": "head_to_head",
+      "futurex_pattern": "winner market",
+      "question": "Who outperforms over the rest of March: Tesla or NVIDIA?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Who outperforms over the rest of March: Tesla or NVIDIA? (resolved around 2026-03-31 (GMT+8)). \nA.  Tesla (TSLA)\nB.  NVIDIA (NVDA)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tesla (TSLA)"
+        },
+        {
+          "label": "B",
+          "text": "NVIDIA (NVDA)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_094",
+      "source_type": "custom_live",
+      "title": "Into the month-end close, which financial heavyweight does better: JPMorgan or Goldman Sachs?",
+      "category": "head_to_head",
+      "futurex_pattern": "winner market",
+      "question": "Into the month-end close, which financial heavyweight does better: JPMorgan or Goldman Sachs?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Into the month-end close, which financial heavyweight does better: JPMorgan or Goldman Sachs? (resolved around 2026-03-31 (GMT+8)). \nA.  JPMorgan Chase (JPM)\nB.  Goldman Sachs (GS)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "JPMorgan Chase (JPM)"
+        },
+        {
+          "label": "B",
+          "text": "Goldman Sachs (GS)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_095",
+      "source_type": "custom_live",
+      "title": "Which energy major finishes stronger from here: Exxon or Chevron?",
+      "category": "head_to_head",
+      "futurex_pattern": "winner market",
+      "question": "Which energy major finishes stronger from here: Exxon or Chevron?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Which energy major finishes stronger from here: Exxon or Chevron? (resolved around 2026-03-31 (GMT+8)). \nA.  Exxon Mobil (XOM)\nB.  Chevron (CVX)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Exxon Mobil (XOM)"
+        },
+        {
+          "label": "B",
+          "text": "Chevron (CVX)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_096",
+      "source_type": "custom_live",
+      "title": "Over the rest of March, which does better: Apple or Amazon?",
+      "category": "head_to_head",
+      "futurex_pattern": "winner market",
+      "question": "Over the rest of March, which does better: Apple or Amazon?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Over the rest of March, which does better: Apple or Amazon? (resolved around 2026-03-31 (GMT+8)). \nA.  Apple (AAPL)\nB.  Amazon (AMZN)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Apple (AAPL)"
+        },
+        {
+          "label": "B",
+          "text": "Amazon (AMZN)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_097",
+      "source_type": "custom_live",
+      "title": "Into month-end, which has the edge: Meta or Alphabet?",
+      "category": "head_to_head",
+      "futurex_pattern": "winner market",
+      "question": "Into month-end, which has the edge: Meta or Alphabet?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Into month-end, which has the edge: Meta or Alphabet? (resolved around 2026-03-31 (GMT+8)). \nA.  Meta (META)\nB.  Alphabet (GOOGL)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Meta (META)"
+        },
+        {
+          "label": "B",
+          "text": "Alphabet (GOOGL)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_098",
+      "source_type": "custom_live",
+      "title": "Through the March close, who outperforms: Broadcom or TSM?",
+      "category": "head_to_head",
+      "futurex_pattern": "winner market",
+      "question": "Through the March close, who outperforms: Broadcom or TSM?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Through the March close, who outperforms: Broadcom or TSM? (resolved around 2026-03-31 (GMT+8)). \nA.  Broadcom (AVGO)\nB.  Taiwan Semiconductor (TSM)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Broadcom (AVGO)"
+        },
+        {
+          "label": "B",
+          "text": "Taiwan Semiconductor (TSM)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_099",
+      "source_type": "custom_live",
+      "title": "From here to month-end, which does better: IWM or SPY?",
+      "category": "head_to_head",
+      "futurex_pattern": "winner market",
+      "question": "From here to month-end, which does better: IWM or SPY?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"From here to month-end, which does better: IWM or SPY? (resolved around 2026-03-31 (GMT+8)). \nA.  iShares Russell 2000 ETF (IWM)\nB.  SPDR S&P 500 ETF (SPY)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "iShares Russell 2000 ETF (IWM)"
+        },
+        {
+          "label": "B",
+          "text": "SPDR S&P 500 ETF (SPY)"
+        }
+      ],
+      "end_time": "2026-03-31"
+    },
+    {
+      "id": "v13_100",
+      "source_type": "custom_live",
+      "title": "Over the rest of March, which performs better: Bitcoin or Coinbase?",
+      "category": "head_to_head",
+      "futurex_pattern": "winner market",
+      "question": "Over the rest of March, which performs better: Bitcoin or Coinbase?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Over the rest of March, which performs better: Bitcoin or Coinbase? (resolved around 2026-03-31 (GMT+8)). \nA.  Bitcoin (BTC-USD)\nB.  Coinbase (COIN)\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "answer_format": "boxed_letters",
+      "options": [
+        {
+          "label": "A",
+          "text": "Bitcoin (BTC-USD)"
+        },
+        {
+          "label": "B",
+          "text": "Coinbase (COIN)"
+        }
+      ],
       "end_time": "2026-03-31"
     }
   ]

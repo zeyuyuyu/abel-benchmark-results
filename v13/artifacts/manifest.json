@@ -9,6 +9,10 @@
       "description": "Build-time market snapshot used to parameterize custom live tasks."
     },
     {
+      "path": "llm_custom_case_seeds.json",
+      "description": "LLM-authored custom live question seeds used to build the 93 non-official cases."
+    },
+    {
       "path": "questions.json",
       "description": "Benchmark questions only, with no answer key."
     },

@@ -1,7 +1,7 @@
 {
   "version": "v13-live-only-finance",
-  "today_context": "March 25, 2026 (GMT+8, Asia/Shanghai)",
-  "case_count": 17,
+  "today_context": "March 26, 2026 (GMT+8, Asia/Shanghai)",
+  "case_count": 100,
   "cases": [
     {
       "id": "v13_001",
@@ -138,57 +138,594 @@
     },
     {
       "id": "v13_009",
-      "status": "resolved",
-      "answer_box": "\\boxed{A}",
-      "answer_tokens": [
-        "A"
-      ],
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
       "resolution_spec": {
         "source": "yfinance",
-        "method": "hit_levels",
+        "method": "close_bucket",
         "symbol": "CL=F",
-        "start_date": "2026-03-25",
         "resolution_date": "2026-03-31",
-        "levels": [
+        "buckets": [
           {
             "label": "A",
-            "direction": "high",
-            "value": 90
+            "type": "lt",
+            "value": 88
           },
           {
             "label": "B",
-            "direction": "high",
-            "value": 92
+            "type": "range",
+            "lower": 88,
+            "upper": 90
           },
           {
             "label": "C",
-            "direction": "high",
-            "value": 95
+            "type": "range",
+            "lower": 90,
+            "upper": 92
           },
           {
             "label": "D",
-            "direction": "low",
-            "value": 86
+            "type": "range",
+            "lower": 92,
+            "upper": 94
           },
           {
             "label": "E",
-            "direction": "low",
-            "value": 84
-          },
-          {
-            "label": "F",
-            "direction": "low",
-            "value": 82
+            "type": "ge",
+            "value": 94
           }
         ]
-      },
-      "resolved_meta": {
-        "max_high": 91.61000061035156,
-        "min_low": 90.70999908447266
       }
     },
     {
       "id": "v13_010",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "close_bucket",
+        "symbol": "BTC-USD",
+        "resolution_date": "2026-03-31",
+        "buckets": [
+          {
+            "label": "A",
+            "type": "lt",
+            "value": 68000
+          },
+          {
+            "label": "B",
+            "type": "range",
+            "lower": 68000,
+            "upper": 70000
+          },
+          {
+            "label": "C",
+            "type": "range",
+            "lower": 70000,
+            "upper": 72000
+          },
+          {
+            "label": "D",
+            "type": "range",
+            "lower": 72000,
+            "upper": 74000
+          },
+          {
+            "label": "E",
+            "type": "ge",
+            "value": 74000
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_011",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "close_bucket",
+        "symbol": "ETH-USD",
+        "resolution_date": "2026-03-31",
+        "buckets": [
+          {
+            "label": "A",
+            "type": "lt",
+            "value": 2000
+          },
+          {
+            "label": "B",
+            "type": "range",
+            "lower": 2000,
+            "upper": 2100
+          },
+          {
+            "label": "C",
+            "type": "range",
+            "lower": 2100,
+            "upper": 2200
+          },
+          {
+            "label": "D",
+            "type": "range",
+            "lower": 2200,
+            "upper": 2300
+          },
+          {
+            "label": "E",
+            "type": "ge",
+            "value": 2300
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_012",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "close_bucket",
+        "symbol": "NVDA",
+        "resolution_date": "2026-03-31",
+        "buckets": [
+          {
+            "label": "A",
+            "type": "lt",
+            "value": 170
+          },
+          {
+            "label": "B",
+            "type": "range",
+            "lower": 170,
+            "upper": 175
+          },
+          {
+            "label": "C",
+            "type": "range",
+            "lower": 175,
+            "upper": 180
+          },
+          {
+            "label": "D",
+            "type": "range",
+            "lower": 180,
+            "upper": 185
+          },
+          {
+            "label": "E",
+            "type": "ge",
+            "value": 185
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_013",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "close_bucket",
+        "symbol": "AMD",
+        "resolution_date": "2026-03-31",
+        "buckets": [
+          {
+            "label": "A",
+            "type": "lt",
+            "value": 210
+          },
+          {
+            "label": "B",
+            "type": "range",
+            "lower": 210,
+            "upper": 215
+          },
+          {
+            "label": "C",
+            "type": "range",
+            "lower": 215,
+            "upper": 220
+          },
+          {
+            "label": "D",
+            "type": "range",
+            "lower": 220,
+            "upper": 225
+          },
+          {
+            "label": "E",
+            "type": "ge",
+            "value": 225
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_014",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "close_bucket",
+        "symbol": "AVGO",
+        "resolution_date": "2026-03-31",
+        "buckets": [
+          {
+            "label": "A",
+            "type": "lt",
+            "value": 310
+          },
+          {
+            "label": "B",
+            "type": "range",
+            "lower": 310,
+            "upper": 315
+          },
+          {
+            "label": "C",
+            "type": "range",
+            "lower": 315,
+            "upper": 320
+          },
+          {
+            "label": "D",
+            "type": "range",
+            "lower": 320,
+            "upper": 325
+          },
+          {
+            "label": "E",
+            "type": "ge",
+            "value": 325
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_015",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "close_bucket",
+        "symbol": "TSM",
+        "resolution_date": "2026-03-31",
+        "buckets": [
+          {
+            "label": "A",
+            "type": "lt",
+            "value": 340
+          },
+          {
+            "label": "B",
+            "type": "range",
+            "lower": 340,
+            "upper": 345
+          },
+          {
+            "label": "C",
+            "type": "range",
+            "lower": 345,
+            "upper": 350
+          },
+          {
+            "label": "D",
+            "type": "range",
+            "lower": 350,
+            "upper": 355
+          },
+          {
+            "label": "E",
+            "type": "ge",
+            "value": 355
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_016",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "close_bucket",
+        "symbol": "TSLA",
+        "resolution_date": "2026-03-31",
+        "buckets": [
+          {
+            "label": "A",
+            "type": "lt",
+            "value": 370
+          },
+          {
+            "label": "B",
+            "type": "range",
+            "lower": 370,
+            "upper": 380
+          },
+          {
+            "label": "C",
+            "type": "range",
+            "lower": 380,
+            "upper": 390
+          },
+          {
+            "label": "D",
+            "type": "range",
+            "lower": 390,
+            "upper": 400
+          },
+          {
+            "label": "E",
+            "type": "ge",
+            "value": 400
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_017",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "close_bucket",
+        "symbol": "AAPL",
+        "resolution_date": "2026-03-31",
+        "buckets": [
+          {
+            "label": "A",
+            "type": "lt",
+            "value": 245
+          },
+          {
+            "label": "B",
+            "type": "range",
+            "lower": 245,
+            "upper": 250
+          },
+          {
+            "label": "C",
+            "type": "range",
+            "lower": 250,
+            "upper": 255
+          },
+          {
+            "label": "D",
+            "type": "range",
+            "lower": 255,
+            "upper": 260
+          },
+          {
+            "label": "E",
+            "type": "ge",
+            "value": 260
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_018",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "close_bucket",
+        "symbol": "MSFT",
+        "resolution_date": "2026-03-31",
+        "buckets": [
+          {
+            "label": "A",
+            "type": "lt",
+            "value": 360
+          },
+          {
+            "label": "B",
+            "type": "range",
+            "lower": 360,
+            "upper": 365
+          },
+          {
+            "label": "C",
+            "type": "range",
+            "lower": 365,
+            "upper": 370
+          },
+          {
+            "label": "D",
+            "type": "range",
+            "lower": 370,
+            "upper": 375
+          },
+          {
+            "label": "E",
+            "type": "ge",
+            "value": 375
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_019",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "close_bucket",
+        "symbol": "AMZN",
+        "resolution_date": "2026-03-31",
+        "buckets": [
+          {
+            "label": "A",
+            "type": "lt",
+            "value": 200
+          },
+          {
+            "label": "B",
+            "type": "range",
+            "lower": 200,
+            "upper": 205
+          },
+          {
+            "label": "C",
+            "type": "range",
+            "lower": 205,
+            "upper": 210
+          },
+          {
+            "label": "D",
+            "type": "range",
+            "lower": 210,
+            "upper": 215
+          },
+          {
+            "label": "E",
+            "type": "ge",
+            "value": 215
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_020",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "close_bucket",
+        "symbol": "META",
+        "resolution_date": "2026-03-31",
+        "buckets": [
+          {
+            "label": "A",
+            "type": "lt",
+            "value": 570
+          },
+          {
+            "label": "B",
+            "type": "range",
+            "lower": 570,
+            "upper": 580
+          },
+          {
+            "label": "C",
+            "type": "range",
+            "lower": 580,
+            "upper": 590
+          },
+          {
+            "label": "D",
+            "type": "range",
+            "lower": 590,
+            "upper": 600
+          },
+          {
+            "label": "E",
+            "type": "ge",
+            "value": 600
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_021",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "close_bucket",
+        "symbol": "QQQ",
+        "resolution_date": "2026-03-31",
+        "buckets": [
+          {
+            "label": "A",
+            "type": "lt",
+            "value": 580
+          },
+          {
+            "label": "B",
+            "type": "range",
+            "lower": 580,
+            "upper": 585
+          },
+          {
+            "label": "C",
+            "type": "range",
+            "lower": 585,
+            "upper": 590
+          },
+          {
+            "label": "D",
+            "type": "range",
+            "lower": 590,
+            "upper": 595
+          },
+          {
+            "label": "E",
+            "type": "ge",
+            "value": 595
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_022",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "close_bucket",
+        "symbol": "SPY",
+        "resolution_date": "2026-03-31",
+        "buckets": [
+          {
+            "label": "A",
+            "type": "lt",
+            "value": 645
+          },
+          {
+            "label": "B",
+            "type": "range",
+            "lower": 645,
+            "upper": 650
+          },
+          {
+            "label": "C",
+            "type": "range",
+            "lower": 650,
+            "upper": 655
+          },
+          {
+            "label": "D",
+            "type": "range",
+            "lower": 655,
+            "upper": 660
+          },
+          {
+            "label": "E",
+            "type": "ge",
+            "value": 660
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_023",
       "status": "pending",
       "answer_box": null,
       "answer_tokens": null,
@@ -216,182 +753,987 @@
           {
             "label": "D",
             "operator": "gt",
-            "value": 75000
+            "value": 74000
           },
           {
             "label": "E",
             "operator": "gt",
-            "value": 80000
+            "value": 76000
           }
         ]
       }
     },
     {
-      "id": "v13_011",
+      "id": "v13_024",
       "status": "pending",
       "answer_box": null,
       "answer_tokens": null,
       "resolution_spec": {
         "source": "yfinance",
-        "method": "close_bucket",
+        "method": "close_threshold_truths",
         "symbol": "ETH-USD",
         "resolution_date": "2026-03-31",
-        "buckets": [
+        "thresholds": [
           {
             "label": "A",
-            "type": "lt",
-            "value": 2050
+            "operator": "gt",
+            "value": 2000
           },
           {
             "label": "B",
-            "type": "range",
-            "lower": 2050,
-            "upper": 2150
+            "operator": "gt",
+            "value": 2100
           },
           {
             "label": "C",
-            "type": "range",
-            "lower": 2150,
-            "upper": 2250
+            "operator": "gt",
+            "value": 2200
           },
           {
             "label": "D",
-            "type": "range",
-            "lower": 2250,
-            "upper": 2350
+            "operator": "gt",
+            "value": 2300
           },
           {
             "label": "E",
-            "type": "ge",
-            "value": 2350
+            "operator": "gt",
+            "value": 2400
           }
         ]
       }
     },
     {
-      "id": "v13_012",
+      "id": "v13_025",
       "status": "pending",
       "answer_box": null,
       "answer_tokens": null,
       "resolution_spec": {
         "source": "yfinance",
-        "method": "winner_by_return",
+        "method": "close_threshold_truths",
+        "symbol": "NVDA",
         "resolution_date": "2026-03-31",
-        "symbols": {
-          "A": {
-            "symbol": "NVDA",
-            "reference_close": 179.43,
-            "reference_date": "2026-03-25"
+        "thresholds": [
+          {
+            "label": "A",
+            "operator": "gt",
+            "value": 170
           },
-          "B": {
-            "symbol": "AMD",
-            "reference_close": 205.37,
-            "reference_date": "2026-03-24"
+          {
+            "label": "B",
+            "operator": "gt",
+            "value": 175
           },
-          "C": {
-            "symbol": "AVGO",
-            "reference_close": 323.08,
-            "reference_date": "2026-03-25"
+          {
+            "label": "C",
+            "operator": "gt",
+            "value": 180
           },
-          "D": {
-            "symbol": "TSM",
-            "reference_close": 346.65,
-            "reference_date": "2026-03-25"
+          {
+            "label": "D",
+            "operator": "gt",
+            "value": 185
+          },
+          {
+            "label": "E",
+            "operator": "gt",
+            "value": 190
           }
-        }
+        ]
       }
     },
     {
-      "id": "v13_013",
+      "id": "v13_026",
       "status": "pending",
       "answer_box": null,
       "answer_tokens": null,
       "resolution_spec": {
         "source": "yfinance",
-        "method": "membership_above_reference",
+        "method": "close_threshold_truths",
+        "symbol": "AMD",
         "resolution_date": "2026-03-31",
-        "symbols": {
-          "A": {
-            "symbol": "NVDA",
-            "reference_close": 179.43,
-            "reference_date": "2026-03-25"
+        "thresholds": [
+          {
+            "label": "A",
+            "operator": "gt",
+            "value": 210
           },
-          "B": {
-            "symbol": "AMD",
-            "reference_close": 205.37,
-            "reference_date": "2026-03-24"
+          {
+            "label": "B",
+            "operator": "gt",
+            "value": 215
           },
-          "C": {
-            "symbol": "AVGO",
-            "reference_close": 323.08,
-            "reference_date": "2026-03-25"
+          {
+            "label": "C",
+            "operator": "gt",
+            "value": 220
           },
-          "D": {
-            "symbol": "TSM",
-            "reference_close": 346.65,
-            "reference_date": "2026-03-25"
+          {
+            "label": "D",
+            "operator": "gt",
+            "value": 225
+          },
+          {
+            "label": "E",
+            "operator": "gt",
+            "value": 230
           }
-        }
+        ]
       }
     },
     {
-      "id": "v13_014",
+      "id": "v13_027",
       "status": "pending",
       "answer_box": null,
       "answer_tokens": null,
       "resolution_spec": {
         "source": "yfinance",
-        "method": "membership_above_reference",
+        "method": "close_threshold_truths",
+        "symbol": "TSLA",
         "resolution_date": "2026-03-31",
-        "symbols": {
-          "A": {
-            "symbol": "BTC-USD",
-            "reference_close": 71329.3672,
-            "reference_date": "2026-03-25"
+        "thresholds": [
+          {
+            "label": "A",
+            "operator": "gt",
+            "value": 370
           },
-          "B": {
-            "symbol": "ETH-USD",
-            "reference_close": 2177.4016,
-            "reference_date": "2026-03-25"
+          {
+            "label": "B",
+            "operator": "gt",
+            "value": 380
           },
-          "C": {
-            "symbol": "TSLA",
-            "reference_close": 393.13,
-            "reference_date": "2026-03-25"
+          {
+            "label": "C",
+            "operator": "gt",
+            "value": 390
           },
-          "D": {
-            "symbol": "NVDA",
-            "reference_close": 179.43,
-            "reference_date": "2026-03-25"
+          {
+            "label": "D",
+            "operator": "gt",
+            "value": 400
+          },
+          {
+            "label": "E",
+            "operator": "gt",
+            "value": 410
           }
-        }
+        ]
       }
     },
     {
-      "id": "v13_015",
+      "id": "v13_028",
       "status": "pending",
       "answer_box": null,
       "answer_tokens": null,
       "resolution_spec": {
         "source": "yfinance",
-        "method": "winner_by_return",
+        "method": "close_threshold_truths",
+        "symbol": "AAPL",
         "resolution_date": "2026-03-31",
-        "symbols": {
-          "A": {
-            "symbol": "BTC-USD",
-            "reference_close": 71329.3672,
-            "reference_date": "2026-03-25"
+        "thresholds": [
+          {
+            "label": "A",
+            "operator": "gt",
+            "value": 245
           },
-          "B": {
-            "symbol": "ETH-USD",
-            "reference_close": 2177.4016,
-            "reference_date": "2026-03-25"
+          {
+            "label": "B",
+            "operator": "gt",
+            "value": 250
+          },
+          {
+            "label": "C",
+            "operator": "gt",
+            "value": 255
+          },
+          {
+            "label": "D",
+            "operator": "gt",
+            "value": 260
+          },
+          {
+            "label": "E",
+            "operator": "gt",
+            "value": 265
           }
-        }
+        ]
       }
     },
     {
-      "id": "v13_016",
+      "id": "v13_029",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "close_threshold_truths",
+        "symbol": "MSFT",
+        "resolution_date": "2026-03-31",
+        "thresholds": [
+          {
+            "label": "A",
+            "operator": "gt",
+            "value": 360
+          },
+          {
+            "label": "B",
+            "operator": "gt",
+            "value": 365
+          },
+          {
+            "label": "C",
+            "operator": "gt",
+            "value": 370
+          },
+          {
+            "label": "D",
+            "operator": "gt",
+            "value": 375
+          },
+          {
+            "label": "E",
+            "operator": "gt",
+            "value": 380
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_030",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "close_threshold_truths",
+        "symbol": "AMZN",
+        "resolution_date": "2026-03-31",
+        "thresholds": [
+          {
+            "label": "A",
+            "operator": "gt",
+            "value": 200
+          },
+          {
+            "label": "B",
+            "operator": "gt",
+            "value": 205
+          },
+          {
+            "label": "C",
+            "operator": "gt",
+            "value": 210
+          },
+          {
+            "label": "D",
+            "operator": "gt",
+            "value": 215
+          },
+          {
+            "label": "E",
+            "operator": "gt",
+            "value": 220
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_031",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "close_threshold_truths",
+        "symbol": "META",
+        "resolution_date": "2026-03-31",
+        "thresholds": [
+          {
+            "label": "A",
+            "operator": "gt",
+            "value": 570
+          },
+          {
+            "label": "B",
+            "operator": "gt",
+            "value": 580
+          },
+          {
+            "label": "C",
+            "operator": "gt",
+            "value": 590
+          },
+          {
+            "label": "D",
+            "operator": "gt",
+            "value": 600
+          },
+          {
+            "label": "E",
+            "operator": "gt",
+            "value": 610
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_032",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "close_threshold_truths",
+        "symbol": "QQQ",
+        "resolution_date": "2026-03-31",
+        "thresholds": [
+          {
+            "label": "A",
+            "operator": "gt",
+            "value": 580
+          },
+          {
+            "label": "B",
+            "operator": "gt",
+            "value": 585
+          },
+          {
+            "label": "C",
+            "operator": "gt",
+            "value": 590
+          },
+          {
+            "label": "D",
+            "operator": "gt",
+            "value": 595
+          },
+          {
+            "label": "E",
+            "operator": "gt",
+            "value": 600
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_033",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "close_threshold_truths",
+        "symbol": "SOXX",
+        "resolution_date": "2026-03-31",
+        "thresholds": [
+          {
+            "label": "A",
+            "operator": "gt",
+            "value": 335
+          },
+          {
+            "label": "B",
+            "operator": "gt",
+            "value": 340
+          },
+          {
+            "label": "C",
+            "operator": "gt",
+            "value": 345
+          },
+          {
+            "label": "D",
+            "operator": "gt",
+            "value": 350
+          },
+          {
+            "label": "E",
+            "operator": "gt",
+            "value": 355
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_034",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "close_threshold_truths",
+        "symbol": "GLD",
+        "resolution_date": "2026-03-31",
+        "thresholds": [
+          {
+            "label": "A",
+            "operator": "gt",
+            "value": 405
+          },
+          {
+            "label": "B",
+            "operator": "gt",
+            "value": 410
+          },
+          {
+            "label": "C",
+            "operator": "gt",
+            "value": 415
+          },
+          {
+            "label": "D",
+            "operator": "gt",
+            "value": 420
+          },
+          {
+            "label": "E",
+            "operator": "gt",
+            "value": 425
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_035",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "hit_levels",
+        "symbol": "CL=F",
+        "start_date": "2026-03-25",
+        "resolution_date": "2026-03-31",
+        "levels": [
+          {
+            "label": "A",
+            "direction": "high",
+            "value": 94
+          },
+          {
+            "label": "B",
+            "direction": "high",
+            "value": 96
+          },
+          {
+            "label": "C",
+            "direction": "high",
+            "value": 98
+          },
+          {
+            "label": "D",
+            "direction": "low",
+            "value": 88
+          },
+          {
+            "label": "E",
+            "direction": "low",
+            "value": 86
+          },
+          {
+            "label": "F",
+            "direction": "low",
+            "value": 84
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_036",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "hit_levels",
+        "symbol": "GC=F",
+        "start_date": "2026-03-25",
+        "resolution_date": "2026-03-31",
+        "levels": [
+          {
+            "label": "A",
+            "direction": "high",
+            "value": 4600
+          },
+          {
+            "label": "B",
+            "direction": "high",
+            "value": 4650
+          },
+          {
+            "label": "C",
+            "direction": "high",
+            "value": 4700
+          },
+          {
+            "label": "D",
+            "direction": "low",
+            "value": 4450
+          },
+          {
+            "label": "E",
+            "direction": "low",
+            "value": 4400
+          },
+          {
+            "label": "F",
+            "direction": "low",
+            "value": 4350
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_037",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "hit_levels",
+        "symbol": "BTC-USD",
+        "start_date": "2026-03-26",
+        "resolution_date": "2026-03-31",
+        "levels": [
+          {
+            "label": "A",
+            "direction": "high",
+            "value": 74000
+          },
+          {
+            "label": "B",
+            "direction": "high",
+            "value": 76000
+          },
+          {
+            "label": "C",
+            "direction": "high",
+            "value": 78000
+          },
+          {
+            "label": "D",
+            "direction": "low",
+            "value": 68000
+          },
+          {
+            "label": "E",
+            "direction": "low",
+            "value": 66000
+          },
+          {
+            "label": "F",
+            "direction": "low",
+            "value": 64000
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_038",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "hit_levels",
+        "symbol": "ETH-USD",
+        "start_date": "2026-03-26",
+        "resolution_date": "2026-03-31",
+        "levels": [
+          {
+            "label": "A",
+            "direction": "high",
+            "value": 2300
+          },
+          {
+            "label": "B",
+            "direction": "high",
+            "value": 2400
+          },
+          {
+            "label": "C",
+            "direction": "high",
+            "value": 2500
+          },
+          {
+            "label": "D",
+            "direction": "low",
+            "value": 2000
+          },
+          {
+            "label": "E",
+            "direction": "low",
+            "value": 1900
+          },
+          {
+            "label": "F",
+            "direction": "low",
+            "value": 1800
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_039",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "hit_levels",
+        "symbol": "NVDA",
+        "start_date": "2026-03-25",
+        "resolution_date": "2026-03-31",
+        "levels": [
+          {
+            "label": "A",
+            "direction": "high",
+            "value": 185
+          },
+          {
+            "label": "B",
+            "direction": "high",
+            "value": 190
+          },
+          {
+            "label": "C",
+            "direction": "high",
+            "value": 195
+          },
+          {
+            "label": "D",
+            "direction": "low",
+            "value": 170
+          },
+          {
+            "label": "E",
+            "direction": "low",
+            "value": 165
+          },
+          {
+            "label": "F",
+            "direction": "low",
+            "value": 160
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_040",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "hit_levels",
+        "symbol": "AMD",
+        "start_date": "2026-03-25",
+        "resolution_date": "2026-03-31",
+        "levels": [
+          {
+            "label": "A",
+            "direction": "high",
+            "value": 230
+          },
+          {
+            "label": "B",
+            "direction": "high",
+            "value": 235
+          },
+          {
+            "label": "C",
+            "direction": "high",
+            "value": 240
+          },
+          {
+            "label": "D",
+            "direction": "low",
+            "value": 215
+          },
+          {
+            "label": "E",
+            "direction": "low",
+            "value": 210
+          },
+          {
+            "label": "F",
+            "direction": "low",
+            "value": 205
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_041",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "hit_levels",
+        "symbol": "TSLA",
+        "start_date": "2026-03-25",
+        "resolution_date": "2026-03-31",
+        "levels": [
+          {
+            "label": "A",
+            "direction": "high",
+            "value": 400
+          },
+          {
+            "label": "B",
+            "direction": "high",
+            "value": 410
+          },
+          {
+            "label": "C",
+            "direction": "high",
+            "value": 420
+          },
+          {
+            "label": "D",
+            "direction": "low",
+            "value": 370
+          },
+          {
+            "label": "E",
+            "direction": "low",
+            "value": 360
+          },
+          {
+            "label": "F",
+            "direction": "low",
+            "value": 350
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_042",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "hit_levels",
+        "symbol": "QQQ",
+        "start_date": "2026-03-25",
+        "resolution_date": "2026-03-31",
+        "levels": [
+          {
+            "label": "A",
+            "direction": "high",
+            "value": 595
+          },
+          {
+            "label": "B",
+            "direction": "high",
+            "value": 600
+          },
+          {
+            "label": "C",
+            "direction": "high",
+            "value": 605
+          },
+          {
+            "label": "D",
+            "direction": "low",
+            "value": 580
+          },
+          {
+            "label": "E",
+            "direction": "low",
+            "value": 575
+          },
+          {
+            "label": "F",
+            "direction": "low",
+            "value": 570
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_043",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "hit_levels",
+        "symbol": "SPY",
+        "start_date": "2026-03-25",
+        "resolution_date": "2026-03-31",
+        "levels": [
+          {
+            "label": "A",
+            "direction": "high",
+            "value": 665
+          },
+          {
+            "label": "B",
+            "direction": "high",
+            "value": 670
+          },
+          {
+            "label": "C",
+            "direction": "high",
+            "value": 675
+          },
+          {
+            "label": "D",
+            "direction": "low",
+            "value": 650
+          },
+          {
+            "label": "E",
+            "direction": "low",
+            "value": 645
+          },
+          {
+            "label": "F",
+            "direction": "low",
+            "value": 640
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_044",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "hit_levels",
+        "symbol": "SOXX",
+        "start_date": "2026-03-25",
+        "resolution_date": "2026-03-31",
+        "levels": [
+          {
+            "label": "A",
+            "direction": "high",
+            "value": 355
+          },
+          {
+            "label": "B",
+            "direction": "high",
+            "value": 360
+          },
+          {
+            "label": "C",
+            "direction": "high",
+            "value": 365
+          },
+          {
+            "label": "D",
+            "direction": "low",
+            "value": 340
+          },
+          {
+            "label": "E",
+            "direction": "low",
+            "value": 335
+          },
+          {
+            "label": "F",
+            "direction": "low",
+            "value": 330
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_045",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "hit_levels",
+        "symbol": "COIN",
+        "start_date": "2026-03-25",
+        "resolution_date": "2026-03-31",
+        "levels": [
+          {
+            "label": "A",
+            "direction": "high",
+            "value": 190
+          },
+          {
+            "label": "B",
+            "direction": "high",
+            "value": 195
+          },
+          {
+            "label": "C",
+            "direction": "high",
+            "value": 200
+          },
+          {
+            "label": "D",
+            "direction": "low",
+            "value": 175
+          },
+          {
+            "label": "E",
+            "direction": "low",
+            "value": 170
+          },
+          {
+            "label": "F",
+            "direction": "low",
+            "value": 165
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_046",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "hit_levels",
+        "symbol": "MSTR",
+        "start_date": "2026-03-25",
+        "resolution_date": "2026-03-31",
+        "levels": [
+          {
+            "label": "A",
+            "direction": "high",
+            "value": 160
+          },
+          {
+            "label": "B",
+            "direction": "high",
+            "value": 180
+          },
+          {
+            "label": "C",
+            "direction": "high",
+            "value": 200
+          },
+          {
+            "label": "D",
+            "direction": "low",
+            "value": 100
+          },
+          {
+            "label": "E",
+            "direction": "low",
+            "value": 80
+          },
+          {
+            "label": "F",
+            "direction": "low",
+            "value": 60
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13_047",
       "status": "pending",
       "answer_box": null,
       "answer_tokens": null,
@@ -405,7 +1747,7 @@
       }
     },
     {
-      "id": "v13_017",
+      "id": "v13_048",
       "status": "pending",
       "answer_box": null,
       "answer_tokens": null,
@@ -415,7 +1757,1219 @@
         "symbol": "AMD",
         "resolution_date": "2026-03-31",
         "operator": "gt",
-        "value": 215
+        "value": 230
+      }
+    },
+    {
+      "id": "v13_049",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "binary_close_threshold",
+        "symbol": "AVGO",
+        "resolution_date": "2026-03-31",
+        "operator": "gt",
+        "value": 330
+      }
+    },
+    {
+      "id": "v13_050",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "binary_close_threshold",
+        "symbol": "TSM",
+        "resolution_date": "2026-03-31",
+        "operator": "gt",
+        "value": 360
+      }
+    },
+    {
+      "id": "v13_051",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "binary_close_threshold",
+        "symbol": "TSLA",
+        "resolution_date": "2026-03-31",
+        "operator": "gt",
+        "value": 410
+      }
+    },
+    {
+      "id": "v13_052",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "binary_close_threshold",
+        "symbol": "AAPL",
+        "resolution_date": "2026-03-31",
+        "operator": "gt",
+        "value": 260
+      }
+    },
+    {
+      "id": "v13_053",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "binary_close_threshold",
+        "symbol": "MSFT",
+        "resolution_date": "2026-03-31",
+        "operator": "gt",
+        "value": 380
+      }
+    },
+    {
+      "id": "v13_054",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "binary_close_threshold",
+        "symbol": "AMZN",
+        "resolution_date": "2026-03-31",
+        "operator": "gt",
+        "value": 220
+      }
+    },
+    {
+      "id": "v13_055",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "binary_close_threshold",
+        "symbol": "META",
+        "resolution_date": "2026-03-31",
+        "operator": "gt",
+        "value": 620
+      }
+    },
+    {
+      "id": "v13_056",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "binary_close_threshold",
+        "symbol": "QQQ",
+        "resolution_date": "2026-03-31",
+        "operator": "gt",
+        "value": 600
+      }
+    },
+    {
+      "id": "v13_057",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "binary_close_threshold",
+        "symbol": "SPY",
+        "resolution_date": "2026-03-31",
+        "operator": "gt",
+        "value": 670
+      }
+    },
+    {
+      "id": "v13_058",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "binary_close_threshold",
+        "symbol": "IWM",
+        "resolution_date": "2026-03-31",
+        "operator": "gt",
+        "value": 260
+      }
+    },
+    {
+      "id": "v13_059",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "binary_close_threshold",
+        "symbol": "BTC-USD",
+        "resolution_date": "2026-03-31",
+        "operator": "gt",
+        "value": 74000
+      }
+    },
+    {
+      "id": "v13_060",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "binary_close_threshold",
+        "symbol": "ETH-USD",
+        "resolution_date": "2026-03-31",
+        "operator": "gt",
+        "value": 2300
+      }
+    },
+    {
+      "id": "v13_061",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "binary_close_threshold",
+        "symbol": "COIN",
+        "resolution_date": "2026-03-31",
+        "operator": "gt",
+        "value": 195
+      }
+    },
+    {
+      "id": "v13_062",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "binary_close_threshold",
+        "symbol": "MSTR",
+        "resolution_date": "2026-03-31",
+        "operator": "gt",
+        "value": 160
+      }
+    },
+    {
+      "id": "v13_063",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "binary_close_threshold",
+        "symbol": "XLE",
+        "resolution_date": "2026-03-31",
+        "operator": "lt",
+        "value": 58
+      }
+    },
+    {
+      "id": "v13_064",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "binary_close_threshold",
+        "symbol": "XLF",
+        "resolution_date": "2026-03-31",
+        "operator": "lt",
+        "value": 48
+      }
+    },
+    {
+      "id": "v13_065",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "NVDA",
+            "reference_close": 178.68,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "AMD",
+            "reference_close": 220.27,
+            "reference_date": "2026-03-25"
+          },
+          "C": {
+            "symbol": "AVGO",
+            "reference_close": 318.81,
+            "reference_date": "2026-03-25"
+          },
+          "D": {
+            "symbol": "TSM",
+            "reference_close": 347.75,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_066",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "AAPL",
+            "reference_close": 252.62,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "MSFT",
+            "reference_close": 371.04,
+            "reference_date": "2026-03-25"
+          },
+          "C": {
+            "symbol": "AMZN",
+            "reference_close": 211.71,
+            "reference_date": "2026-03-25"
+          },
+          "D": {
+            "symbol": "META",
+            "reference_close": 594.89,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_067",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "SPY",
+            "reference_close": 656.82,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "QQQ",
+            "reference_close": 587.82,
+            "reference_date": "2026-03-25"
+          },
+          "C": {
+            "symbol": "IWM",
+            "reference_close": 251.82,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_068",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "BTC-USD",
+            "reference_close": 71114.9922,
+            "reference_date": "2026-03-26"
+          },
+          "B": {
+            "symbol": "ETH-USD",
+            "reference_close": 2159.3569,
+            "reference_date": "2026-03-26"
+          },
+          "C": {
+            "symbol": "COIN",
+            "reference_close": 181.1,
+            "reference_date": "2026-03-25"
+          },
+          "D": {
+            "symbol": "MSTR",
+            "reference_close": 139.13,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_069",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "CL=F",
+            "reference_close": 91.14,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "XLE",
+            "reference_close": 60.57,
+            "reference_date": "2026-03-25"
+          },
+          "C": {
+            "symbol": "XOM",
+            "reference_close": 163.26,
+            "reference_date": "2026-03-25"
+          },
+          "D": {
+            "symbol": "CVX",
+            "reference_close": 205.15,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_070",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "XLF",
+            "reference_close": 49.34,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "JPM",
+            "reference_close": 295.42,
+            "reference_date": "2026-03-25"
+          },
+          "C": {
+            "symbol": "GS",
+            "reference_close": 841.84,
+            "reference_date": "2026-03-25"
+          },
+          "D": {
+            "symbol": "BAC",
+            "reference_close": 48.75,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_071",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "GC=F",
+            "reference_close": 4529.0,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "GLD",
+            "reference_close": 416.29,
+            "reference_date": "2026-03-25"
+          },
+          "C": {
+            "symbol": "SLV",
+            "reference_close": 65.21,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_072",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "NVDA",
+            "reference_close": 178.68,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "MSFT",
+            "reference_close": 371.04,
+            "reference_date": "2026-03-25"
+          },
+          "C": {
+            "symbol": "META",
+            "reference_close": 594.89,
+            "reference_date": "2026-03-25"
+          },
+          "D": {
+            "symbol": "AMZN",
+            "reference_close": 211.71,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_073",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "TSLA",
+            "reference_close": 385.95,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "COIN",
+            "reference_close": 181.1,
+            "reference_date": "2026-03-25"
+          },
+          "C": {
+            "symbol": "MSTR",
+            "reference_close": 139.13,
+            "reference_date": "2026-03-25"
+          },
+          "D": {
+            "symbol": "SOXX",
+            "reference_close": 345.25,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_074",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "membership_above_reference",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "NVDA",
+            "reference_close": 178.68,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "AMD",
+            "reference_close": 220.27,
+            "reference_date": "2026-03-25"
+          },
+          "C": {
+            "symbol": "AVGO",
+            "reference_close": 318.81,
+            "reference_date": "2026-03-25"
+          },
+          "D": {
+            "symbol": "TSM",
+            "reference_close": 347.75,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_075",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "membership_above_reference",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "AAPL",
+            "reference_close": 252.62,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "MSFT",
+            "reference_close": 371.04,
+            "reference_date": "2026-03-25"
+          },
+          "C": {
+            "symbol": "AMZN",
+            "reference_close": 211.71,
+            "reference_date": "2026-03-25"
+          },
+          "D": {
+            "symbol": "META",
+            "reference_close": 594.89,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_076",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "membership_above_reference",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "SPY",
+            "reference_close": 656.82,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "QQQ",
+            "reference_close": 587.82,
+            "reference_date": "2026-03-25"
+          },
+          "C": {
+            "symbol": "IWM",
+            "reference_close": 251.82,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_077",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "membership_above_reference",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "BTC-USD",
+            "reference_close": 71114.9922,
+            "reference_date": "2026-03-26"
+          },
+          "B": {
+            "symbol": "ETH-USD",
+            "reference_close": 2159.3569,
+            "reference_date": "2026-03-26"
+          },
+          "C": {
+            "symbol": "COIN",
+            "reference_close": 181.1,
+            "reference_date": "2026-03-25"
+          },
+          "D": {
+            "symbol": "MSTR",
+            "reference_close": 139.13,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_078",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "membership_above_reference",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "CL=F",
+            "reference_close": 91.14,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "XLE",
+            "reference_close": 60.57,
+            "reference_date": "2026-03-25"
+          },
+          "C": {
+            "symbol": "XOM",
+            "reference_close": 163.26,
+            "reference_date": "2026-03-25"
+          },
+          "D": {
+            "symbol": "CVX",
+            "reference_close": 205.15,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_079",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "membership_above_reference",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "XLF",
+            "reference_close": 49.34,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "JPM",
+            "reference_close": 295.42,
+            "reference_date": "2026-03-25"
+          },
+          "C": {
+            "symbol": "GS",
+            "reference_close": 841.84,
+            "reference_date": "2026-03-25"
+          },
+          "D": {
+            "symbol": "BAC",
+            "reference_close": 48.75,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_080",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "membership_above_reference",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "GC=F",
+            "reference_close": 4529.0,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "GLD",
+            "reference_close": 416.29,
+            "reference_date": "2026-03-25"
+          },
+          "C": {
+            "symbol": "SLV",
+            "reference_close": 65.21,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_081",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "membership_above_reference",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "NVDA",
+            "reference_close": 178.68,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "MSFT",
+            "reference_close": 371.04,
+            "reference_date": "2026-03-25"
+          },
+          "C": {
+            "symbol": "META",
+            "reference_close": 594.89,
+            "reference_date": "2026-03-25"
+          },
+          "D": {
+            "symbol": "AMZN",
+            "reference_close": 211.71,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_082",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "membership_above_reference",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "TSLA",
+            "reference_close": 385.95,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "COIN",
+            "reference_close": 181.1,
+            "reference_date": "2026-03-25"
+          },
+          "C": {
+            "symbol": "MSTR",
+            "reference_close": 139.13,
+            "reference_date": "2026-03-25"
+          },
+          "D": {
+            "symbol": "SOXX",
+            "reference_close": 345.25,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_083",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "BTC-USD",
+            "reference_close": 71114.9922,
+            "reference_date": "2026-03-26"
+          },
+          "B": {
+            "symbol": "ETH-USD",
+            "reference_close": 2159.3569,
+            "reference_date": "2026-03-26"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_084",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "NVDA",
+            "reference_close": 178.68,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "AMD",
+            "reference_close": 220.27,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_085",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "AAPL",
+            "reference_close": 252.62,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "MSFT",
+            "reference_close": 371.04,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_086",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "AMZN",
+            "reference_close": 211.71,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "META",
+            "reference_close": 594.89,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_087",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "SPY",
+            "reference_close": 656.82,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "QQQ",
+            "reference_close": 587.82,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_088",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "XLE",
+            "reference_close": 60.57,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "XLF",
+            "reference_close": 49.34,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_089",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "GC=F",
+            "reference_close": 4529.0,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "CL=F",
+            "reference_close": 91.14,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_090",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "COIN",
+            "reference_close": 181.1,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "MSTR",
+            "reference_close": 139.13,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_091",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "GLD",
+            "reference_close": 416.29,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "SLV",
+            "reference_close": 65.21,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_092",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "SOXX",
+            "reference_close": 345.25,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "QQQ",
+            "reference_close": 587.82,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_093",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "TSLA",
+            "reference_close": 385.95,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "NVDA",
+            "reference_close": 178.68,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_094",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "JPM",
+            "reference_close": 295.42,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "GS",
+            "reference_close": 841.84,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_095",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "XOM",
+            "reference_close": 163.26,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "CVX",
+            "reference_close": 205.15,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_096",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "AAPL",
+            "reference_close": 252.62,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "AMZN",
+            "reference_close": 211.71,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_097",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "META",
+            "reference_close": 594.89,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "GOOGL",
+            "reference_close": 290.93,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_098",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "AVGO",
+            "reference_close": 318.81,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "TSM",
+            "reference_close": 347.75,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_099",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "IWM",
+            "reference_close": 251.82,
+            "reference_date": "2026-03-25"
+          },
+          "B": {
+            "symbol": "SPY",
+            "reference_close": 656.82,
+            "reference_date": "2026-03-25"
+          }
+        }
+      }
+    },
+    {
+      "id": "v13_100",
+      "status": "pending",
+      "answer_box": null,
+      "answer_tokens": null,
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "winner_by_return",
+        "resolution_date": "2026-03-31",
+        "symbols": {
+          "A": {
+            "symbol": "BTC-USD",
+            "reference_close": 71114.9922,
+            "reference_date": "2026-03-26"
+          },
+          "B": {
+            "symbol": "COIN",
+            "reference_close": 181.1,
+            "reference_date": "2026-03-25"
+          }
+        }
       }
     }
   ]

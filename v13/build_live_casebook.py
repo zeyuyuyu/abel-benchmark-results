@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import math
+from datetime import datetime
 from pathlib import Path
 from typing import Any
 
@@ -21,8 +22,9 @@ SPEC_PATH = ROOT / "casebook_spec.md"
 REFERENCE_SNAPSHOT_PATH = ARTIFACTS_DIR / "reference_snapshot.json"
 FUTUREX_ROWS_PATH = ARTIFACTS_DIR / "futurex_online_rows.json"
 MANIFEST_PATH = ARTIFACTS_DIR / "manifest.json"
+CUSTOM_SEEDS_PATH = ROOT / "llm_custom_case_seeds.json"
 
-TODAY_CONTEXT = "March 25, 2026 (GMT+8, Asia/Shanghai)"
+TODAY_CONTEXT = "March 26, 2026 (GMT+8, Asia/Shanghai)"
 RESOLUTION_DATE = "2026-03-31"
 DATASET_NAME = "futurex-ai/Futurex-Online"
 OFFICIAL_IDS = [
@@ -34,7 +36,143 @@ OFFICIAL_IDS = [
     "699c4887d1d3cf005c1e48ad",  # Banxico interest rate decision in March
     "69a2e39e5692ef005cdbf27c",  # Robinhood launches prediction market through MIAXdx by March 31?
 ]
-REFERENCE_SYMBOLS = ["GC=F", "CL=F", "BTC-USD", "ETH-USD", "NVDA", "AMD", "AVGO", "TSM", "TSLA"]
+TARGET_TOTAL_CASES = 100
+
+ASSET_CONFIGS = {
+    "GC=F": {"label": "Gold futures (GC)", "grid": 50},
+    "CL=F": {"label": "WTI crude oil futures (CL)", "grid": 2},
+    "BTC-USD": {"label": "Bitcoin (BTC-USD)", "grid": 2000},
+    "ETH-USD": {"label": "Ethereum (ETH-USD)", "grid": 100},
+    "NVDA": {"label": "NVIDIA (NVDA)", "grid": 5},
+    "AMD": {"label": "AMD (AMD)", "grid": 5},
+    "AVGO": {"label": "Broadcom (AVGO)", "grid": 5},
+    "TSM": {"label": "Taiwan Semiconductor (TSM)", "grid": 5},
+    "TSLA": {"label": "Tesla (TSLA)", "grid": 10},
+    "AAPL": {"label": "Apple (AAPL)", "grid": 5},
+    "MSFT": {"label": "Microsoft (MSFT)", "grid": 5},
+    "AMZN": {"label": "Amazon (AMZN)", "grid": 5},
+    "META": {"label": "Meta (META)", "grid": 10},
+    "GOOGL": {"label": "Alphabet (GOOGL)", "grid": 5},
+    "QQQ": {"label": "Invesco QQQ Trust (QQQ)", "grid": 5},
+    "SPY": {"label": "SPDR S&P 500 ETF (SPY)", "grid": 5},
+    "IWM": {"label": "iShares Russell 2000 ETF (IWM)", "grid": 5},
+    "SOXX": {"label": "iShares Semiconductor ETF (SOXX)", "grid": 5},
+    "XLE": {"label": "Energy Select Sector SPDR Fund (XLE)", "grid": 2},
+    "XLF": {"label": "Financial Select Sector SPDR Fund (XLF)", "grid": 2},
+    "GLD": {"label": "SPDR Gold Shares (GLD)", "grid": 5},
+    "SLV": {"label": "iShares Silver Trust (SLV)", "grid": 1},
+    "COIN": {"label": "Coinbase (COIN)", "grid": 5},
+    "MSTR": {"label": "Strategy (MSTR)", "grid": 20},
+    "XOM": {"label": "Exxon Mobil (XOM)", "grid": 2},
+    "CVX": {"label": "Chevron (CVX)", "grid": 2},
+    "JPM": {"label": "JPMorgan Chase (JPM)", "grid": 5},
+    "GS": {"label": "Goldman Sachs (GS)", "grid": 10},
+    "BAC": {"label": "Bank of America (BAC)", "grid": 1},
+}
+
+BUCKET_SYMBOLS = [
+    "GC=F",
+    "CL=F",
+    "BTC-USD",
+    "ETH-USD",
+    "NVDA",
+    "AMD",
+    "AVGO",
+    "TSM",
+    "TSLA",
+    "AAPL",
+    "MSFT",
+    "AMZN",
+    "META",
+    "QQQ",
+    "SPY",
+]
+
+THRESHOLD_SYMBOLS = [
+    "BTC-USD",
+    "ETH-USD",
+    "NVDA",
+    "AMD",
+    "TSLA",
+    "AAPL",
+    "MSFT",
+    "AMZN",
+    "META",
+    "QQQ",
+    "SOXX",
+    "GLD",
+]
+
+HIT_SYMBOLS = [
+    "CL=F",
+    "GC=F",
+    "BTC-USD",
+    "ETH-USD",
+    "NVDA",
+    "AMD",
+    "TSLA",
+    "QQQ",
+    "SPY",
+    "SOXX",
+    "COIN",
+    "MSTR",
+]
+
+BINARY_CASE_SPECS = [
+    {"symbol": "NVDA", "direction": "gt", "pct": 0.03},
+    {"symbol": "AMD", "direction": "gt", "pct": 0.04},
+    {"symbol": "AVGO", "direction": "gt", "pct": 0.03},
+    {"symbol": "TSM", "direction": "gt", "pct": 0.03},
+    {"symbol": "TSLA", "direction": "gt", "pct": 0.05},
+    {"symbol": "AAPL", "direction": "gt", "pct": 0.02},
+    {"symbol": "MSFT", "direction": "gt", "pct": 0.02},
+    {"symbol": "AMZN", "direction": "gt", "pct": 0.03},
+    {"symbol": "META", "direction": "gt", "pct": 0.03},
+    {"symbol": "QQQ", "direction": "gt", "pct": 0.02},
+    {"symbol": "SPY", "direction": "gt", "pct": 0.015},
+    {"symbol": "IWM", "direction": "gt", "pct": 0.02},
+    {"symbol": "BTC-USD", "direction": "gt", "pct": 0.04},
+    {"symbol": "ETH-USD", "direction": "gt", "pct": 0.05},
+    {"symbol": "COIN", "direction": "gt", "pct": 0.05},
+    {"symbol": "MSTR", "direction": "gt", "pct": 0.06},
+    {"symbol": "XLE", "direction": "lt", "pct": 0.03},
+    {"symbol": "XLF", "direction": "lt", "pct": 0.02},
+]
+
+GROUP_SPECS = [
+    {"group_label": "semiconductor names", "symbols": ["NVDA", "AMD", "AVGO", "TSM"]},
+    {"group_label": "megacap tech names", "symbols": ["AAPL", "MSFT", "AMZN", "META"]},
+    {"group_label": "market beta ETFs", "symbols": ["SPY", "QQQ", "IWM"]},
+    {"group_label": "crypto assets and proxies", "symbols": ["BTC-USD", "ETH-USD", "COIN", "MSTR"]},
+    {"group_label": "energy names", "symbols": ["CL=F", "XLE", "XOM", "CVX"]},
+    {"group_label": "financial names", "symbols": ["XLF", "JPM", "GS", "BAC"]},
+    {"group_label": "precious-metals names", "symbols": ["GC=F", "GLD", "SLV"]},
+    {"group_label": "AI platform names", "symbols": ["NVDA", "MSFT", "META", "AMZN"]},
+    {"group_label": "high-beta growth names", "symbols": ["TSLA", "COIN", "MSTR", "SOXX"]},
+]
+
+HEAD_TO_HEAD_SPECS = [
+    ("BTC-USD", "ETH-USD"),
+    ("NVDA", "AMD"),
+    ("AAPL", "MSFT"),
+    ("AMZN", "META"),
+    ("SPY", "QQQ"),
+    ("XLE", "XLF"),
+    ("GC=F", "CL=F"),
+    ("COIN", "MSTR"),
+    ("GLD", "SLV"),
+    ("SOXX", "QQQ"),
+    ("TSLA", "NVDA"),
+    ("JPM", "GS"),
+    ("XOM", "CVX"),
+    ("AAPL", "AMZN"),
+    ("META", "GOOGL"),
+    ("AVGO", "TSM"),
+    ("IWM", "SPY"),
+    ("BTC-USD", "COIN"),
+]
+
+REFERENCE_SYMBOLS = sorted(ASSET_CONFIGS)
 
 LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
@@ -51,6 +189,18 @@ def fmt_price(value: float, decimals: int = 0) -> str:
     if decimals == 0:
         return f"${value:,.0f}"
     return f"${value:,.{decimals}f}"
+
+
+def human_date(iso_date: str) -> str:
+    return datetime.fromisoformat(iso_date).strftime("%B %d, %Y")
+
+
+def asset_label(symbol: str) -> str:
+    return ASSET_CONFIGS[symbol]["label"]
+
+
+def asset_grid(symbol: str) -> int:
+    return int(ASSET_CONFIGS[symbol]["grid"])
 
 
 def capture_reference_snapshot() -> dict[str, Any]:
@@ -83,6 +233,11 @@ def load_futurex_rows() -> list[dict[str, Any]]:
     dataset = load_dataset(DATASET_NAME, split="train")
     row_map = {row["id"]: row for row in dataset}
     return [row_map[source_id] for source_id in OFFICIAL_IDS]
+
+
+def load_custom_case_seeds() -> list[dict[str, Any]]:
+    payload = json.loads(CUSTOM_SEEDS_PATH.read_text(encoding="utf-8"))
+    return payload["cases"]
 
 
 def official_category(title: str) -> str:
@@ -165,281 +320,258 @@ def add_case(
     )
 
 
+def build_bucket_case(seed: dict[str, Any], ref: dict[str, Any]) -> dict[str, Any]:
+    symbol = seed["symbol"]
+    close_value = float(ref[symbol]["close"])
+    grid = asset_grid(symbol)
+    mid = round_to_grid(close_value, grid, mode="nearest")
+    bounds = [mid - (2 * grid), mid - grid, mid, mid + grid]
+    question = seed["question"]
+    return {
+        "title": seed.get("title", question),
+        "category": seed.get("category", "month_end_bucket"),
+        "pattern": seed.get("pattern", "interval bin"),
+        "question": question,
+        "answer_format": "boxed_letters",
+        "options": [
+            f"{asset_label(symbol)} closes below {fmt_price(bounds[0])}",
+            f"{asset_label(symbol)} closes at least {fmt_price(bounds[0])} but below {fmt_price(bounds[1])}",
+            f"{asset_label(symbol)} closes at least {fmt_price(bounds[1])} but below {fmt_price(bounds[2])}",
+            f"{asset_label(symbol)} closes at least {fmt_price(bounds[2])} but below {fmt_price(bounds[3])}",
+            f"{asset_label(symbol)} closes at least {fmt_price(bounds[3])}",
+        ],
+        "resolution_spec": {
+            "source": "yfinance",
+            "method": "close_bucket",
+            "symbol": symbol,
+            "resolution_date": RESOLUTION_DATE,
+            "buckets": [
+                {"label": "A", "type": "lt", "value": bounds[0]},
+                {"label": "B", "type": "range", "lower": bounds[0], "upper": bounds[1]},
+                {"label": "C", "type": "range", "lower": bounds[1], "upper": bounds[2]},
+                {"label": "D", "type": "range", "lower": bounds[2], "upper": bounds[3]},
+                {"label": "E", "type": "ge", "value": bounds[3]},
+            ],
+        },
+    }
+
+
+def build_threshold_case(seed: dict[str, Any], ref: dict[str, Any]) -> dict[str, Any]:
+    symbol = seed["symbol"]
+    close_value = float(ref[symbol]["close"])
+    grid = asset_grid(symbol)
+    base = round_to_grid(close_value, grid, mode="nearest")
+    thresholds = [base - (2 * grid), base - grid, base, base + grid, base + (2 * grid)]
+    question = seed["question"]
+    return {
+        "title": seed.get("title", question),
+        "category": seed.get("category", "month_end_thresholds"),
+        "pattern": seed.get("pattern", "statement-truth set"),
+        "question": question,
+        "answer_format": "boxed_letters",
+        "options": [
+            f"{asset_label(symbol)} closes above {fmt_price(threshold)} at the March 2026 close"
+            for threshold in thresholds
+        ],
+        "resolution_spec": {
+            "source": "yfinance",
+            "method": "close_threshold_truths",
+            "symbol": symbol,
+            "resolution_date": RESOLUTION_DATE,
+            "thresholds": [
+                {"label": LETTERS[idx], "operator": "gt", "value": threshold}
+                for idx, threshold in enumerate(thresholds)
+            ],
+        },
+    }
+
+
+def build_hit_levels_case(seed: dict[str, Any], ref: dict[str, Any]) -> dict[str, Any]:
+    symbol = seed["symbol"]
+    close_value = float(ref[symbol]["close"])
+    grid = asset_grid(symbol)
+    highs = [round_to_grid(close_value + (grid * step), grid, mode="up") for step in (1, 2, 3)]
+    lows = [round_to_grid(close_value - (grid * step), grid, mode="down") for step in (1, 2, 3)]
+    question = seed["question"]
+    return {
+        "title": seed.get("title", question),
+        "category": seed.get("category", "hit_levels"),
+        "pattern": seed.get("pattern", "threshold ladder"),
+        "question": question,
+        "answer_format": "boxed_letters",
+        "options": [
+            f"{asset_label(symbol)} hits {fmt_price(level)} on the high side before March 31, 2026" for level in highs
+        ]
+        + [
+            f"{asset_label(symbol)} hits {fmt_price(level)} on the low side before March 31, 2026" for level in lows
+        ],
+        "resolution_spec": {
+            "source": "yfinance",
+            "method": "hit_levels",
+            "symbol": symbol,
+            "start_date": ref[symbol]["date"],
+            "resolution_date": RESOLUTION_DATE,
+            "levels": [
+                {"label": LETTERS[idx], "direction": "high", "value": level}
+                for idx, level in enumerate(highs)
+            ]
+            + [
+                {"label": LETTERS[idx + len(highs)], "direction": "low", "value": level}
+                for idx, level in enumerate(lows)
+            ],
+        },
+    }
+
+
+def build_binary_case(seed: dict[str, Any], ref: dict[str, Any]) -> dict[str, Any]:
+    symbol = seed["symbol"]
+    direction = seed["direction"]
+    pct = seed["pct"]
+    close_value = float(ref[symbol]["close"])
+    grid = asset_grid(symbol)
+    if direction == "gt":
+        threshold = round_to_grid(close_value * (1 + pct), grid, mode="up")
+        question = seed["question"]
+    else:
+        threshold = round_to_grid(close_value * (1 - pct), grid, mode="down")
+        question = seed["question"]
+    return {
+        "title": seed.get("title", question),
+        "category": seed.get("category", "binary_price_event"),
+        "pattern": seed.get("pattern", "binary"),
+        "question": question,
+        "answer_format": "boxed_yes_no",
+        "options": None,
+        "resolution_spec": {
+            "source": "yfinance",
+            "method": "binary_close_threshold",
+            "symbol": symbol,
+            "resolution_date": RESOLUTION_DATE,
+            "operator": direction,
+            "value": threshold,
+        },
+    }
+
+
+def build_winner_case(seed: dict[str, Any], ref: dict[str, Any]) -> dict[str, Any]:
+    question = seed["question"]
+    symbols = seed["symbols"]
+    return {
+        "title": seed.get("title", question),
+        "category": seed.get("category", "winner_market"),
+        "pattern": seed.get("pattern", "winner market"),
+        "question": question,
+        "answer_format": "boxed_letters",
+        "options": [asset_label(symbol) for symbol in symbols],
+        "resolution_spec": {
+            "source": "yfinance",
+            "method": "winner_by_return",
+            "resolution_date": RESOLUTION_DATE,
+            "symbols": {
+                LETTERS[idx]: {
+                    "symbol": symbol,
+                    "reference_close": ref[symbol]["close"],
+                    "reference_date": ref[symbol]["date"],
+                }
+                for idx, symbol in enumerate(symbols)
+            },
+        },
+    }
+
+
+def build_membership_case(seed: dict[str, Any], ref: dict[str, Any]) -> dict[str, Any]:
+    question = seed["question"]
+    symbols = seed["symbols"]
+    return {
+        "title": seed.get("title", question),
+        "category": seed.get("category", "up_membership"),
+        "pattern": seed.get("pattern", "roster membership"),
+        "question": question,
+        "answer_format": "boxed_letters",
+        "options": [asset_label(symbol) for symbol in symbols],
+        "resolution_spec": {
+            "source": "yfinance",
+            "method": "membership_above_reference",
+            "resolution_date": RESOLUTION_DATE,
+            "symbols": {
+                LETTERS[idx]: {
+                    "symbol": symbol,
+                    "reference_close": ref[symbol]["close"],
+                    "reference_date": ref[symbol]["date"],
+                }
+                for idx, symbol in enumerate(symbols)
+            },
+        },
+    }
+
+
+def build_head_to_head_case(seed: dict[str, Any], ref: dict[str, Any]) -> dict[str, Any]:
+    question = seed["question"]
+    left = seed["symbols"][0]
+    right = seed["symbols"][1]
+    return {
+        "title": seed.get("title", question),
+        "category": seed.get("category", "head_to_head"),
+        "pattern": seed.get("pattern", "winner market"),
+        "question": question,
+        "answer_format": "boxed_letters",
+        "options": [asset_label(left), asset_label(right)],
+        "resolution_spec": {
+            "source": "yfinance",
+            "method": "winner_by_return",
+            "resolution_date": RESOLUTION_DATE,
+            "symbols": {
+                "A": {
+                    "symbol": left,
+                    "reference_close": ref[left]["close"],
+                    "reference_date": ref[left]["date"],
+                },
+                "B": {
+                    "symbol": right,
+                    "reference_close": ref[right]["close"],
+                    "reference_date": ref[right]["date"],
+                },
+            },
+        },
+    }
+
+
 def build_custom_cases(snapshot: dict[str, Any]) -> list[dict[str, Any]]:
     ref = snapshot["symbols"]
-    snapshot_date = ref["NVDA"]["date"]
+    seeds = load_custom_case_seeds()
 
-    gold_close = ref["GC=F"]["close"]
-    gold_mid = round_to_grid(gold_close, 50, mode="nearest")
-    gold_bounds = [gold_mid - 100, gold_mid - 50, gold_mid, gold_mid + 50]
+    custom_cases: list[dict[str, Any]] = []
+    for seed in seeds:
+        kind = seed["kind"]
+        if kind == "close_bucket":
+            custom_cases.append(build_bucket_case(seed, ref))
+        elif kind == "close_threshold_truths":
+            custom_cases.append(build_threshold_case(seed, ref))
+        elif kind == "hit_levels":
+            custom_cases.append(build_hit_levels_case(seed, ref))
+        elif kind == "binary_close_threshold":
+            custom_cases.append(build_binary_case(seed, ref))
+        elif kind == "winner_by_return":
+            if len(seed["symbols"]) == 2:
+                custom_cases.append(build_head_to_head_case(seed, ref))
+            else:
+                custom_cases.append(build_winner_case(seed, ref))
+        elif kind == "membership_above_reference":
+            custom_cases.append(build_membership_case(seed, ref))
+        else:
+            raise ValueError(f"Unsupported custom seed kind: {kind}")
 
-    eth_close = ref["ETH-USD"]["close"]
-    eth_mid = round_to_grid(eth_close, 100, mode="nearest")
-    eth_bounds = [eth_mid - 150, eth_mid - 50, eth_mid + 50, eth_mid + 150]
-
-    btc_close = ref["BTC-USD"]["close"]
-    btc_base = round_to_grid(btc_close, 1000, mode="nearest")
-    btc_thresholds = [btc_base - 3000, btc_base - 1000, btc_base + 1000, btc_base + 4000, btc_base + 9000]
-
-    crude_close = ref["CL=F"]["close"]
-    crude_highs = [
-        int(round_to_grid(crude_close + 1, 2, mode="up")),
-        int(round_to_grid(crude_close + 3, 2, mode="up")),
-        int(round_to_grid(crude_close + 6, 5, mode="up")),
-    ]
-    crude_lows = [
-        int(round_to_grid(crude_close - 1, 2, mode="down")),
-        int(round_to_grid(crude_close - 3, 2, mode="down")),
-        int(round_to_grid(crude_close - 6, 2, mode="down")),
-    ]
-
-    nvda_threshold = int(round_to_grid(ref["NVDA"]["close"] * 1.03, 5, mode="up"))
-    amd_threshold = int(round_to_grid(ref["AMD"]["close"] * 1.03, 5, mode="up"))
-
-    custom_cases: list[dict[str, Any]] = [
-        {
-            "title": "What will Gold futures (GC) settle at on the final trading day of March 2026?",
-            "category": "month_end_bucket",
-            "pattern": "interval bin",
-            "question": "What will Gold futures (GC) settle at on the final trading day of March 2026?",
-            "answer_format": "boxed_letters",
-            "options": [
-                f"Gold futures (GC) settle below {fmt_price(gold_bounds[0])}",
-                f"Gold futures (GC) settle at least {fmt_price(gold_bounds[0])} but below {fmt_price(gold_bounds[1])}",
-                f"Gold futures (GC) settle at least {fmt_price(gold_bounds[1])} but below {fmt_price(gold_bounds[2])}",
-                f"Gold futures (GC) settle at least {fmt_price(gold_bounds[2])} but below {fmt_price(gold_bounds[3])}",
-                f"Gold futures (GC) settle at least {fmt_price(gold_bounds[3])}",
-            ],
-            "resolution_spec": {
-                "source": "yfinance",
-                "method": "close_bucket",
-                "symbol": "GC=F",
-                "resolution_date": RESOLUTION_DATE,
-                "buckets": [
-                    {"label": "A", "type": "lt", "value": gold_bounds[0]},
-                    {"label": "B", "type": "range", "lower": gold_bounds[0], "upper": gold_bounds[1]},
-                    {"label": "C", "type": "range", "lower": gold_bounds[1], "upper": gold_bounds[2]},
-                    {"label": "D", "type": "range", "lower": gold_bounds[2], "upper": gold_bounds[3]},
-                    {"label": "E", "type": "ge", "value": gold_bounds[3]},
-                ],
-            },
-        },
-        {
-            "title": "Which of these WTI crude oil futures (CL) levels will trade at any point before March 31, 2026?",
-            "category": "hit_levels",
-            "pattern": "threshold ladder",
-            "question": "Which of these WTI crude oil futures (CL) levels will trade at any point before March 31, 2026?",
-            "answer_format": "boxed_letters",
-            "options": [
-                f"WTI crude oil futures (CL) hit {fmt_price(crude_highs[0])} on the high side before March 31, 2026",
-                f"WTI crude oil futures (CL) hit {fmt_price(crude_highs[1])} on the high side before March 31, 2026",
-                f"WTI crude oil futures (CL) hit {fmt_price(crude_highs[2])} on the high side before March 31, 2026",
-                f"WTI crude oil futures (CL) hit {fmt_price(crude_lows[0])} on the low side before March 31, 2026",
-                f"WTI crude oil futures (CL) hit {fmt_price(crude_lows[1])} on the low side before March 31, 2026",
-                f"WTI crude oil futures (CL) hit {fmt_price(crude_lows[2])} on the low side before March 31, 2026",
-            ],
-            "resolution_spec": {
-                "source": "yfinance",
-                "method": "hit_levels",
-                "symbol": "CL=F",
-                "start_date": ref["CL=F"]["date"],
-                "resolution_date": RESOLUTION_DATE,
-                "levels": [
-                    {"label": "A", "direction": "high", "value": crude_highs[0]},
-                    {"label": "B", "direction": "high", "value": crude_highs[1]},
-                    {"label": "C", "direction": "high", "value": crude_highs[2]},
-                    {"label": "D", "direction": "low", "value": crude_lows[0]},
-                    {"label": "E", "direction": "low", "value": crude_lows[1]},
-                    {"label": "F", "direction": "low", "value": crude_lows[2]},
-                ],
-            },
-        },
-        {
-            "title": "Which of these increasingly bullish claims about Bitcoin will still be true at the March 2026 close?",
-            "category": "month_end_thresholds",
-            "pattern": "statement-truth set",
-            "question": "Which of these increasingly bullish claims about Bitcoin will still be true at the March 2026 close?",
-            "answer_format": "boxed_letters",
-            "options": [
-                f"Bitcoin closes above {fmt_price(btc_thresholds[0])} at the March 2026 close",
-                f"Bitcoin closes above {fmt_price(btc_thresholds[1])} at the March 2026 close",
-                f"Bitcoin closes above {fmt_price(btc_thresholds[2])} at the March 2026 close",
-                f"Bitcoin closes above {fmt_price(btc_thresholds[3])} at the March 2026 close",
-                f"Bitcoin closes above {fmt_price(btc_thresholds[4])} at the March 2026 close",
-            ],
-            "resolution_spec": {
-                "source": "yfinance",
-                "method": "close_threshold_truths",
-                "symbol": "BTC-USD",
-                "resolution_date": RESOLUTION_DATE,
-                "thresholds": [
-                    {"label": "A", "operator": "gt", "value": btc_thresholds[0]},
-                    {"label": "B", "operator": "gt", "value": btc_thresholds[1]},
-                    {"label": "C", "operator": "gt", "value": btc_thresholds[2]},
-                    {"label": "D", "operator": "gt", "value": btc_thresholds[3]},
-                    {"label": "E", "operator": "gt", "value": btc_thresholds[4]},
-                ],
-            },
-        },
-        {
-            "title": "What will Ethereum (ETH-USD) be worth at the March 2026 close?",
-            "category": "month_end_bucket",
-            "pattern": "interval bin",
-            "question": "What will Ethereum (ETH-USD) be worth at the March 2026 close?",
-            "answer_format": "boxed_letters",
-            "options": [
-                f"Ethereum closes below {fmt_price(eth_bounds[0])}",
-                f"Ethereum closes at least {fmt_price(eth_bounds[0])} but below {fmt_price(eth_bounds[1])}",
-                f"Ethereum closes at least {fmt_price(eth_bounds[1])} but below {fmt_price(eth_bounds[2])}",
-                f"Ethereum closes at least {fmt_price(eth_bounds[2])} but below {fmt_price(eth_bounds[3])}",
-                f"Ethereum closes at least {fmt_price(eth_bounds[3])}",
-            ],
-            "resolution_spec": {
-                "source": "yfinance",
-                "method": "close_bucket",
-                "symbol": "ETH-USD",
-                "resolution_date": RESOLUTION_DATE,
-                "buckets": [
-                    {"label": "A", "type": "lt", "value": eth_bounds[0]},
-                    {"label": "B", "type": "range", "lower": eth_bounds[0], "upper": eth_bounds[1]},
-                    {"label": "C", "type": "range", "lower": eth_bounds[1], "upper": eth_bounds[2]},
-                    {"label": "D", "type": "range", "lower": eth_bounds[2], "upper": eth_bounds[3]},
-                    {"label": "E", "type": "ge", "value": eth_bounds[3]},
-                ],
-            },
-        },
-        {
-            "title": "Which semiconductor stock will post the best percentage return from the March 25, 2026 close through the March 31, 2026 close?",
-            "category": "winner_market",
-            "pattern": "winner market",
-            "question": "Which semiconductor stock will post the best percentage return from the March 25, 2026 close through the March 31, 2026 close?",
-            "answer_format": "boxed_letters",
-            "options": [
-                "NVIDIA (NVDA)",
-                "AMD (AMD)",
-                "Broadcom (AVGO)",
-                "Taiwan Semiconductor (TSM)",
-            ],
-            "resolution_spec": {
-                "source": "yfinance",
-                "method": "winner_by_return",
-                "resolution_date": RESOLUTION_DATE,
-                "symbols": {
-                    "A": {"symbol": "NVDA", "reference_close": ref["NVDA"]["close"], "reference_date": ref["NVDA"]["date"]},
-                    "B": {"symbol": "AMD", "reference_close": ref["AMD"]["close"], "reference_date": ref["AMD"]["date"]},
-                    "C": {"symbol": "AVGO", "reference_close": ref["AVGO"]["close"], "reference_date": ref["AVGO"]["date"]},
-                    "D": {"symbol": "TSM", "reference_close": ref["TSM"]["close"], "reference_date": ref["TSM"]["date"]},
-                },
-            },
-        },
-        {
-            "title": "Which of these semiconductor stocks will finish March 2026 above their March 25, 2026 close?",
-            "category": "up_membership",
-            "pattern": "roster membership",
-            "question": "Which of these semiconductor stocks will finish March 2026 above their March 25, 2026 close?",
-            "answer_format": "boxed_letters",
-            "options": [
-                "NVIDIA (NVDA)",
-                "AMD (AMD)",
-                "Broadcom (AVGO)",
-                "Taiwan Semiconductor (TSM)",
-            ],
-            "resolution_spec": {
-                "source": "yfinance",
-                "method": "membership_above_reference",
-                "resolution_date": RESOLUTION_DATE,
-                "symbols": {
-                    "A": {"symbol": "NVDA", "reference_close": ref["NVDA"]["close"], "reference_date": ref["NVDA"]["date"]},
-                    "B": {"symbol": "AMD", "reference_close": ref["AMD"]["close"], "reference_date": ref["AMD"]["date"]},
-                    "C": {"symbol": "AVGO", "reference_close": ref["AVGO"]["close"], "reference_date": ref["AVGO"]["date"]},
-                    "D": {"symbol": "TSM", "reference_close": ref["TSM"]["close"], "reference_date": ref["TSM"]["date"]},
-                },
-            },
-        },
-        {
-            "title": "Which of these risk assets will finish March 2026 above their March 25, 2026 close?",
-            "category": "up_membership",
-            "pattern": "roster membership",
-            "question": "Which of these risk assets will finish March 2026 above their March 25, 2026 close?",
-            "answer_format": "boxed_letters",
-            "options": [
-                "Bitcoin (BTC-USD)",
-                "Ethereum (ETH-USD)",
-                "Tesla (TSLA)",
-                "NVIDIA (NVDA)",
-            ],
-            "resolution_spec": {
-                "source": "yfinance",
-                "method": "membership_above_reference",
-                "resolution_date": RESOLUTION_DATE,
-                "symbols": {
-                    "A": {"symbol": "BTC-USD", "reference_close": ref["BTC-USD"]["close"], "reference_date": ref["BTC-USD"]["date"]},
-                    "B": {"symbol": "ETH-USD", "reference_close": ref["ETH-USD"]["close"], "reference_date": ref["ETH-USD"]["date"]},
-                    "C": {"symbol": "TSLA", "reference_close": ref["TSLA"]["close"], "reference_date": ref["TSLA"]["date"]},
-                    "D": {"symbol": "NVDA", "reference_close": ref["NVDA"]["close"], "reference_date": ref["NVDA"]["date"]},
-                },
-            },
-        },
-        {
-            "title": "Which will post the larger percentage return from the March 25, 2026 close through the March 31, 2026 close?",
-            "category": "winner_market",
-            "pattern": "winner market",
-            "question": "Which will post the larger percentage return from the March 25, 2026 close through the March 31, 2026 close?",
-            "answer_format": "boxed_letters",
-            "options": [
-                "Bitcoin (BTC-USD)",
-                "Ethereum (ETH-USD)",
-            ],
-            "resolution_spec": {
-                "source": "yfinance",
-                "method": "winner_by_return",
-                "resolution_date": RESOLUTION_DATE,
-                "symbols": {
-                    "A": {"symbol": "BTC-USD", "reference_close": ref["BTC-USD"]["close"], "reference_date": ref["BTC-USD"]["date"]},
-                    "B": {"symbol": "ETH-USD", "reference_close": ref["ETH-USD"]["close"], "reference_date": ref["ETH-USD"]["date"]},
-                },
-            },
-        },
-        {
-            "title": f"Will NVIDIA stock close above {fmt_price(nvda_threshold)} by March 31, 2026?",
-            "category": "binary_price_event",
-            "pattern": "binary",
-            "question": f"Will NVIDIA stock close above {fmt_price(nvda_threshold)} by March 31, 2026?",
-            "answer_format": "boxed_yes_no",
-            "options": None,
-            "resolution_spec": {
-                "source": "yfinance",
-                "method": "binary_close_threshold",
-                "symbol": "NVDA",
-                "resolution_date": RESOLUTION_DATE,
-                "operator": "gt",
-                "value": nvda_threshold,
-            },
-        },
-        {
-            "title": f"Will AMD stock close above {fmt_price(amd_threshold)} by March 31, 2026?",
-            "category": "binary_price_event",
-            "pattern": "binary",
-            "question": f"Will AMD stock close above {fmt_price(amd_threshold)} by March 31, 2026?",
-            "answer_format": "boxed_yes_no",
-            "options": None,
-            "resolution_spec": {
-                "source": "yfinance",
-                "method": "binary_close_threshold",
-                "symbol": "AMD",
-                "resolution_date": RESOLUTION_DATE,
-                "operator": "gt",
-                "value": amd_threshold,
-            },
-        },
-    ]
+    expected_custom_count = TARGET_TOTAL_CASES - len(OFFICIAL_IDS)
+    if len(custom_cases) != expected_custom_count:
+        raise RuntimeError(
+            f"Expected {expected_custom_count} custom cases, but built {len(custom_cases)}"
+        )
 
     for case in custom_cases:
         if case["answer_format"] == "boxed_yes_no":
             case["prompt"] = build_yes_no_prompt(case["question"], end_time=RESOLUTION_DATE)
         else:
             case["prompt"] = build_letter_prompt(case["question"], case["options"], end_time=RESOLUTION_DATE)
-        case["reference_snapshot_date"] = snapshot_date
     return custom_cases
 
 
@@ -479,6 +611,7 @@ def render_spec_markdown(question_count: int) -> str:
             "",
             f"- Official current-week `FutureX-Online` finance tasks: `{len(OFFICIAL_IDS)}`",
             f"- Custom `FutureX`-style live market tasks resolved by public price data: `{question_count - len(OFFICIAL_IDS)}`",
+            "- Each custom live question is authored in a separate LLM-written seed file, not generated from a repeated prompt template at build time.",
             f"- Total cases: `{question_count}`",
             "",
             "## Ground Truth Policy",
@@ -498,6 +631,7 @@ def render_spec_markdown(question_count: int) -> str:
             "",
             "- `artifacts/futurex_online_rows.json`: raw official source rows used in the benchmark.",
             "- `artifacts/reference_snapshot.json`: the build-time market reference snapshot for custom live tasks.",
+            "- `llm_custom_case_seeds.json`: individually written custom live question surfaces used by the builder.",
             "- `artifacts/manifest.json`: artifact index.",
             "",
             "## Reproducibility",
@@ -611,6 +745,7 @@ def main() -> None:
                 "files": [
                     {"path": "artifacts/futurex_online_rows.json", "description": "Raw official FutureX-Online source rows included in v13."},
                     {"path": "artifacts/reference_snapshot.json", "description": "Build-time market snapshot used to parameterize custom live tasks."},
+                    {"path": "llm_custom_case_seeds.json", "description": "LLM-authored custom live question seeds used to build the 93 non-official cases."},
                     {"path": "questions.json", "description": "Benchmark questions only, with no answer key."},
                     {"path": "ground_truth.json", "description": "Pending answer store plus explicit third-party resolution specs."},
                 ]
