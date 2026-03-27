@@ -1,0 +1,1646 @@
+{
+  "timestamp": "2026-03-27T18:02:07.742470+08:00",
+  "version": "v14",
+  "benchmark": "public_dev",
+  "model": "gpt-5.4",
+  "reasoning_effort": "low",
+  "case_count": 21,
+  "cases": [
+    {
+      "id": "v14d_001",
+      "title": "Campaign Lift With A Hidden Seasonal Driver",
+      "track": "formal_causality"
+    },
+    {
+      "id": "v14d_002",
+      "title": "Would Outcome Y Have Changed Under Do(X)?",
+      "track": "formal_causality"
+    },
+    {
+      "id": "v14d_003",
+      "title": "A Strong Association But No Direct Effect",
+      "track": "formal_causality"
+    },
+    {
+      "id": "v14d_004",
+      "title": "Which Node Is Acting As The Mediator?",
+      "track": "graph_and_mechanism"
+    },
+    {
+      "id": "v14d_005",
+      "title": "Can This Effect Be Reached Through Any Directed Path?",
+      "track": "graph_and_mechanism"
+    },
+    {
+      "id": "v14d_006",
+      "title": "Same Graph, Different Encoding",
+      "track": "graph_and_mechanism"
+    },
+    {
+      "id": "v14d_007",
+      "title": "A/B Test With A Post-Treatment Metric",
+      "track": "data_grounded_causal_reasoning"
+    },
+    {
+      "id": "v14d_008",
+      "title": "The Aggregate Says Yes, The Strata Say No",
+      "track": "data_grounded_causal_reasoning"
+    },
+    {
+      "id": "v14d_009",
+      "title": "Margin Expansion After A Pricing Change",
+      "track": "data_grounded_causal_reasoning"
+    },
+    {
+      "id": "v14d_010",
+      "title": "Which Event Actually Drove The Shortage?",
+      "track": "natural_event_causality"
+    },
+    {
+      "id": "v14d_011",
+      "title": "After Does Not Mean Because",
+      "track": "natural_event_causality"
+    },
+    {
+      "id": "v14d_012",
+      "title": "If The Strike Had Not Happened",
+      "track": "natural_event_causality"
+    },
+    {
+      "id": "v14d_013",
+      "title": "Why Did Margin Miss Despite Revenue Growth?",
+      "track": "finance_and_business_causal_reasoning"
+    },
+    {
+      "id": "v14d_014",
+      "title": "What Happens If We Cut Paid Acquisition?",
+      "track": "finance_and_business_causal_reasoning"
+    },
+    {
+      "id": "v14d_015",
+      "title": "Three Plausible Stories, One Dominant Driver",
+      "track": "finance_and_business_causal_reasoning"
+    },
+    {
+      "id": "v14d_016",
+      "title": "Did The Temperature Change Really Reduce Defects?",
+      "track": "industrial_intervention_and_estimation"
+    },
+    {
+      "id": "v14d_017",
+      "title": "A Policy Rolled Out At Different Times",
+      "track": "industrial_intervention_and_estimation"
+    },
+    {
+      "id": "v14d_018",
+      "title": "Estimate The Effect And State The Assumptions",
+      "track": "industrial_intervention_and_estimation"
+    },
+    {
+      "id": "v14d_019",
+      "title": "Fresh Event, Fast Causal Read",
+      "track": "agentic_live_analysis"
+    },
+    {
+      "id": "v14d_020",
+      "title": "Build The Event Memo, Not Just The Answer",
+      "track": "agentic_live_analysis"
+    },
+    {
+      "id": "v14d_021",
+      "title": "One Event, Multiple Conflicting Narratives",
+      "track": "agentic_live_analysis"
+    }
+  ],
+  "runs": {
+    "base": {
+      "summary": {
+        "exact_primary_correct": 6,
+        "case_count": 21,
+        "exact_primary_accuracy": 0.2857,
+        "weighted_average": 0.4476,
+        "total_duration_seconds": 278.22,
+        "per_track": {
+          "formal_causality": {
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1.0
+          },
+          "graph_and_mechanism": {
+            "correct": 1,
+            "total": 3,
+            "accuracy": 0.3333
+          },
+          "data_grounded_causal_reasoning": {
+            "correct": 1,
+            "total": 3,
+            "accuracy": 0.3333
+          },
+          "natural_event_causality": {
+            "correct": 1,
+            "total": 3,
+            "accuracy": 0.3333
+          },
+          "finance_and_business_causal_reasoning": {
+            "correct": 0,
+            "total": 3,
+            "accuracy": 0.0
+          },
+          "industrial_intervention_and_estimation": {
+            "correct": 0,
+            "total": 3,
+            "accuracy": 0.0
+          },
+          "agentic_live_analysis": {
+            "correct": 0,
+            "total": 3,
+            "accuracy": 0.0
+          }
+        }
+      },
+      "cases": [
+        {
+          "id": "v14d_001",
+          "title": "Campaign Lift With A Hidden Seasonal Driver",
+          "track": "formal_causality",
+          "prediction": {
+            "label": "C",
+            "identified": true,
+            "adjustment_set": [
+              "seasonality"
+            ],
+            "rationale": "Seasonality is a common cause of campaign_exposure and conversion, so it opens a backdoor path that must be blocked. Site_visits is downstream of campaign_exposure and lies on the causal pathway to conversion, so adjusting for it would block part of the total effect."
+          },
+          "canonical_answer": {
+            "label": "C",
+            "identified": true,
+            "adjustment_set": [
+              "seasonality"
+            ],
+            "rationale": "Seasonality is the backdoor confounder. Site_visits lies on the causal pathway and should not be adjusted when estimating the total effect."
+          },
+          "primary_fields": [
+            "label",
+            "identified",
+            "adjustment_set"
+          ],
+          "field_results": {
+            "label": true,
+            "identified": true,
+            "adjustment_set": true,
+            "rationale": false
+          },
+          "exact_primary_correct": true,
+          "weighted_score": 0.85
+        },
+        {
+          "id": "v14d_002",
+          "title": "Would Outcome Y Have Changed Under Do(X)?",
+          "track": "formal_causality",
+          "prediction": {
+            "label": "B",
+            "counterfactual_outcome": 0,
+            "rationale": "For the observed unit, Z=0. Under do(X=0), the structural equations give M:=X=0, and then Y:=M OR Z = 0 OR 0 = 0. So Y would not have occurred."
+          },
+          "canonical_answer": {
+            "label": "B",
+            "counterfactual_outcome": 0,
+            "rationale": "Under do(X=0), M becomes 0. Because Z is observed to be 0, Y = 0 OR 0 = 0, so Y would not occur."
+          },
+          "primary_fields": [
+            "label",
+            "counterfactual_outcome"
+          ],
+          "field_results": {
+            "label": true,
+            "counterfactual_outcome": true,
+            "rationale": false
+          },
+          "exact_primary_correct": true,
+          "weighted_score": 0.8
+        },
+        {
+          "id": "v14d_003",
+          "title": "A Strong Association But No Direct Effect",
+          "track": "formal_causality",
+          "prediction": {
+            "label": "A",
+            "effect_type": "indirect",
+            "rationale": "The graph contains a causal path X -> M -> Y, so X does causally affect Y. The structure rules out only a direct X -> Y edge, not causation altogether."
+          },
+          "canonical_answer": {
+            "label": "A",
+            "effect_type": "indirect_causal_effect",
+            "rationale": "X affects Y through the mediator M. The lack of a direct edge does not remove the indirect causal path."
+          },
+          "primary_fields": [
+            "label",
+            "effect_type"
+          ],
+          "field_results": {
+            "label": true,
+            "effect_type": true,
+            "rationale": false
+          },
+          "exact_primary_correct": true,
+          "weighted_score": 0.8
+        },
+        {
+          "id": "v14d_004",
+          "title": "Which Node Is Acting As The Mediator?",
+          "track": "graph_and_mechanism",
+          "prediction": {
+            "mediator_node": "unit_volume",
+            "mechanism_path": "price_change -> unit_volume -> gross_margin"
+          },
+          "canonical_answer": {
+            "mediator_node": "unit_volume",
+            "mechanism_path": [
+              "price_change",
+              "unit_volume",
+              "gross_margin"
+            ]
+          },
+          "primary_fields": [
+            "mediator_node",
+            "mechanism_path"
+          ],
+          "field_results": {
+            "mediator_node": true,
+            "mechanism_path": false
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.6
+        },
+        {
+          "id": "v14d_005",
+          "title": "Can This Effect Be Reached Through Any Directed Path?",
+          "track": "graph_and_mechanism",
+          "prediction": {
+            "reachable": false,
+            "example_path": "none",
+            "rationale": "No directed path from marketing_spend or price_discount to churn is shown; those nodes only point to new_customers, while churn is only downstream of supplier_delay -> stockout -> fulfillment_delay -> customer_complaints."
+          },
+          "canonical_answer": {
+            "reachable": true,
+            "example_path": [
+              "supplier_delay",
+              "stockout",
+              "fulfillment_delay",
+              "customer_complaints",
+              "churn"
+            ],
+            "rationale": "A fully directed service-failure path exists from supplier_delay to churn."
+          },
+          "primary_fields": [
+            "reachable",
+            "example_path"
+          ],
+          "field_results": {
+            "reachable": false,
+            "example_path": false,
+            "rationale": false
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.0
+        },
+        {
+          "id": "v14d_006",
+          "title": "Same Graph, Different Encoding",
+          "track": "graph_and_mechanism",
+          "prediction": {
+            "label": "B",
+            "confounder": "macro_demand",
+            "rationale": "macro_demand causes both ad_spend and sales in both encodings, so it is the confounder."
+          },
+          "canonical_answer": {
+            "label": "B",
+            "confounder": "macro_demand",
+            "rationale": "Macro demand causes both ad_spend and sales. The answer should stay the same under either encoding."
+          },
+          "primary_fields": [
+            "label",
+            "confounder"
+          ],
+          "field_results": {
+            "label": true,
+            "confounder": true,
+            "rationale": false
+          },
+          "exact_primary_correct": true,
+          "weighted_score": 0.8
+        },
+        {
+          "id": "v14d_007",
+          "title": "A/B Test With A Post-Treatment Metric",
+          "track": "data_grounded_causal_reasoning",
+          "prediction": {
+            "label": "B",
+            "should_control": "no",
+            "rationale": "The three-day engagement score is measured only after assignment and after users see the experience, and it is computed from post-assignment behavior. It is therefore post-treatment and should not be controlled for when estimating the treatment effect on conversion."
+          },
+          "canonical_answer": {
+            "label": "B",
+            "should_control": false,
+            "rationale": "Three-day engagement is measured after treatment assignment and lies on or after the treatment path. Conditioning on it would bias total effect estimation."
+          },
+          "primary_fields": [
+            "label",
+            "should_control"
+          ],
+          "field_results": {
+            "label": true,
+            "should_control": true,
+            "rationale": false
+          },
+          "exact_primary_correct": true,
+          "weighted_score": 0.8
+        },
+        {
+          "id": "v14d_008",
+          "title": "The Aggregate Says Yes, The Strata Say No",
+          "track": "data_grounded_causal_reasoning",
+          "prediction": {
+            "label": "B",
+            "segment_conclusion": "worse in both segments; aggregate uplift is mix-driven",
+            "rationale": "Within novices, treatment converts 15/100 versus 18/100 for control. Within experts, treatment converts 66/100 versus 70/100 for control. The aggregate treatment rate only looks higher because treatment traffic was shifted toward expert users after a manual allocation decision."
+          },
+          "canonical_answer": {
+            "label": "B",
+            "segment_conclusion": "simpsons_paradox_due_to_segment_mix",
+            "rationale": "Within both novice and expert strata, treatment underperforms. The aggregate improvement is driven by the treated group containing more high-converting experts."
+          },
+          "primary_fields": [
+            "label",
+            "segment_conclusion"
+          ],
+          "field_results": {
+            "label": true,
+            "segment_conclusion": false,
+            "rationale": false
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.45
+        },
+        {
+          "id": "v14d_009",
+          "title": "Margin Expansion After A Pricing Change",
+          "track": "data_grounded_causal_reasoning",
+          "prediction": {
+            "label": "B",
+            "supportability": "not_pricing_alone",
+            "rationale": "List price increased by 2.0%, but input cost per unit fell by 4.0%, and management states that a commodity hedge materially reduced input costs and that the margin benefit should not be attributed to pricing alone. So the margin expansion is not supportably attributable solely to pricing."
+          },
+          "canonical_answer": {
+            "label": "B",
+            "supportability": "price_not_sufficient_explanation",
+            "rationale": "Pricing and input-cost relief moved at the same time. The packet supports a mixed explanation, not a pricing-only causal claim."
+          },
+          "primary_fields": [
+            "label",
+            "supportability"
+          ],
+          "field_results": {
+            "label": true,
+            "supportability": false,
+            "rationale": false
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.45
+        },
+        {
+          "id": "v14d_010",
+          "title": "Which Event Actually Drove The Shortage?",
+          "track": "natural_event_causality",
+          "prediction": {
+            "label": "C",
+            "direct_driver": "distribution_center_scanner_outage",
+            "justification": "The shortage follows most directly from the Tuesday-night scanner outage that left 40% of inbound pallets unprocessed. The earlier typhoon and port congestion had largely cleared by then."
+          },
+          "canonical_answer": {
+            "label": "C",
+            "direct_driver": "distribution_center_scanner_outage",
+            "justification": "Upstream weather mattered earlier, but the packet states that the immediate failure before stores stocked out was the scanner outage."
+          },
+          "primary_fields": [
+            "label",
+            "direct_driver"
+          ],
+          "field_results": {
+            "label": true,
+            "direct_driver": true,
+            "justification": false
+          },
+          "exact_primary_correct": true,
+          "weighted_score": 0.8
+        },
+        {
+          "id": "v14d_011",
+          "title": "After Does Not Mean Because",
+          "track": "natural_event_causality",
+          "prediction": {
+            "label": "B",
+            "causal_read": "buyback_and_raised_guidance_causal; ceo_interview_temporal_only",
+            "justification": "The buyback and raised guidance were announced before the open, and most of the stock move happened in the first 20 minutes after the open. The midday interview added no new information, so it is at most temporally adjacent, not the best-supported cause."
+          },
+          "canonical_answer": {
+            "label": "B",
+            "causal_read": "morning_corporate_actions_more_plausible_than_interview",
+            "justification": "The major price move happened before the interview and the interview introduced no new information."
+          },
+          "primary_fields": [
+            "label",
+            "causal_read"
+          ],
+          "field_results": {
+            "label": true,
+            "causal_read": false,
+            "justification": false
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.45
+        },
+        {
+          "id": "v14d_012",
+          "title": "If The Strike Had Not Happened",
+          "track": "natural_event_causality",
+          "prediction": {
+            "label": "C",
+            "counterfactual_direction": "still_below_plan_but_materially_better",
+            "justification": "Without the strike, one clear source of lost throughput disappears, so exports should improve versus the realized 18% miss. But the later heavy rain still reduced rail departures, so exports would likely remain below plan."
+          },
+          "canonical_answer": {
+            "label": "C",
+            "counterfactual_direction": "improve_but_remain_below_plan",
+            "justification": "Removing the strike recovers part of the lost throughput, but the later rail disruption still leaves exports below plan."
+          },
+          "primary_fields": [
+            "label",
+            "counterfactual_direction"
+          ],
+          "field_results": {
+            "label": true,
+            "counterfactual_direction": false,
+            "justification": false
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.45
+        },
+        {
+          "id": "v14d_013",
+          "title": "Why Did Margin Miss Despite Revenue Growth?",
+          "track": "finance_and_business_causal_reasoning",
+          "prediction": {
+            "primary_driver": "mix_shift_to_lower_margin_hardware",
+            "supporting_variables": {
+              "relationship": "hardware_mix_up + services_mix_down, with hardware_gross_margin far below services_gross_margin, drives blended_margin_down",
+              "evidence": "hardware mix 46%->58%; services mix 54%->42%; hardware GM 24%->18% vs services GM 72%->70%; freight 0.4%->2.2% is a secondary drag"
+            },
+            "confidence": "high"
+          },
+          "canonical_answer": {
+            "primary_driver": "mix_shift_into_lower_margin_hardware_amplified_by_freight",
+            "supporting_variables": [
+              "hardware_mix_up",
+              "hardware_gross_margin_down",
+              "expedited_freight_cost_up"
+            ],
+            "confidence": "medium_high"
+          },
+          "primary_fields": [
+            "primary_driver",
+            "supporting_variables"
+          ],
+          "field_results": {
+            "primary_driver": true,
+            "supporting_variables": false,
+            "confidence": true
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.65
+        },
+        {
+          "id": "v14d_014",
+          "title": "What Happens If We Cut Paid Acquisition?",
+          "track": "finance_and_business_causal_reasoning",
+          "prediction": {
+            "label": "A",
+            "base_case": "qualified_leads_drop_first",
+            "rationale": "Paid search drives 62% of first qualified visits, and prior geo tests showed only 0.25 same-month organic replacement for each paid lead cut, so volume falls quickly while CAC only partially improves."
+          },
+          "canonical_answer": {
+            "label": "A",
+            "base_case": "lead_volume_down_partial_efficiency_gain",
+            "rationale": "The memo and geo test imply incomplete organic substitution. Cutting paid acquisition should reduce qualified leads before any efficiency benefit fully offsets the loss."
+          },
+          "primary_fields": [
+            "label",
+            "base_case"
+          ],
+          "field_results": {
+            "label": true,
+            "base_case": false,
+            "rationale": false
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.45
+        },
+        {
+          "id": "v14d_015",
+          "title": "Three Plausible Stories, One Dominant Driver",
+          "track": "finance_and_business_causal_reasoning",
+          "prediction": {
+            "primary_driver": "weaker_channel_sell_through_causing_inventory_build",
+            "supporting_variables": {
+              "support": "end-market sell-through fell 9% and channel inventory days rose 12 days, which fits the 6% revenue miss better than FX (-1 point) or the legal reserve (-0.4 margin points)",
+              "falsifier": "stable_or_improving_sell-through and no_inventory_day_build"
+            },
+            "confidence": "high"
+          },
+          "canonical_answer": {
+            "primary_driver": "channel_inventory_correction_and_weak_sell_through",
+            "supporting_variables": [
+              "inventory_days_up",
+              "sell_through_down",
+              "revenue_miss_much_larger_than_fx_headwind"
+            ],
+            "confidence": "medium_high"
+          },
+          "primary_fields": [
+            "primary_driver",
+            "supporting_variables"
+          ],
+          "field_results": {
+            "primary_driver": false,
+            "supporting_variables": false,
+            "confidence": true
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.2
+        },
+        {
+          "id": "v14d_016",
+          "title": "Did The Temperature Change Really Reduce Defects?",
+          "track": "industrial_intervention_and_estimation",
+          "prediction": {
+            "identified": "no",
+            "needed_controls": [
+              "maintenance overhaul/renovation timing",
+              "concurrent throughput or downtime changes",
+              "independent variation in temperature separate from renovation"
+            ],
+            "risk_note": "The temperature change happened only on the renovated line during the maintenance window, so maintenance and related operating changes are confounded with the observed defect-rate drop."
+          },
+          "canonical_answer": {
+            "identified": false,
+            "needed_controls": [
+              "maintenance_status",
+              "line_id",
+              "throughput"
+            ],
+            "risk_note": "The treatment is confounded by simultaneous maintenance and line selection. The observed packet does not support a clean causal estimate."
+          },
+          "primary_fields": [
+            "identified",
+            "needed_controls"
+          ],
+          "field_results": {
+            "identified": true,
+            "needed_controls": false,
+            "risk_note": false
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.5
+        },
+        {
+          "id": "v14d_017",
+          "title": "A Policy Rolled Out At Different Times",
+          "track": "industrial_intervention_and_estimation",
+          "prediction": {
+            "design": "staggered_diff_in_diff",
+            "key_assumption": "Absent the policy, plants would have continued on parallel outcome trends, with no anticipatory effects before adoption.",
+            "risk_note": "The main threat is endogenous rollout timing or other plant-specific shocks that coincide with adoption and violate parallel trends."
+          },
+          "canonical_answer": {
+            "design": "staggered_difference_in_differences_event_study",
+            "key_assumption": "parallel_trends_absent_the_policy",
+            "risk_note": "Check for anticipation effects and cross-plant spillovers."
+          },
+          "primary_fields": [
+            "design",
+            "key_assumption"
+          ],
+          "field_results": {
+            "design": false,
+            "key_assumption": true,
+            "risk_note": false
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.35
+        },
+        {
+          "id": "v14d_018",
+          "title": "Estimate The Effect And State The Assumptions",
+          "track": "industrial_intervention_and_estimation",
+          "prediction": {
+            "estimate": {
+              "ate": 2.4,
+              "unit": "points"
+            },
+            "assumptions": [
+              "no unmeasured confounding after adjusting for plant size, shift, baseline quality score, and operator tenure",
+              "positivity/overlap",
+              "consistency/SUTVA",
+              "correct weighting/specification"
+            ],
+            "confidence": "moderate"
+          },
+          "canonical_answer": {
+            "estimate": 2.4,
+            "assumptions": [
+              "no_unmeasured_confounding_given_adjusted_covariates",
+              "positivity_or_overlap",
+              "stable_outcome_definition_and_no_interference"
+            ],
+            "confidence": "medium"
+          },
+          "primary_fields": [
+            "estimate",
+            "assumptions"
+          ],
+          "field_results": {
+            "estimate": false,
+            "assumptions": false,
+            "confidence": false
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.0
+        },
+        {
+          "id": "v14d_019",
+          "title": "Fresh Event, Fast Causal Read",
+          "track": "agentic_live_analysis",
+          "prediction": {
+            "primary_driver": "Canal disruption forced Asia-Europe rerouting, carriers added emergency surcharges, and that shipping shock most likely drove the freight-rate jump.",
+            "uncertainty": "The key unknown is duration: if canal passage normalizes quickly, surcharges and rates could fade. Retailers had not yet repriced goods, so downstream pass-through should not be overstated.",
+            "evidence_used": [
+              "Emergency surcharges were announced after rerouting on Asia-Europe lanes.",
+              "Freight rate indices jumped over the same two-day window.",
+              "Retailers said they had not yet repriced goods.",
+              "Analysts said the rerouting shock could fade if passage normalizes quickly."
+            ]
+          },
+          "canonical_answer": {
+            "primary_driver": "freight_rate_spike_due_to_canal_disruption_and_rerouting",
+            "uncertainty": "how_long_the_disruption_and_surcharges_will_persist",
+            "evidence_used": [
+              "Snippet 1",
+              "Snippet 2",
+              "Snippet 3"
+            ]
+          },
+          "primary_fields": [
+            "primary_driver",
+            "uncertainty"
+          ],
+          "field_results": {
+            "primary_driver": false,
+            "uncertainty": false,
+            "evidence_used": false
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.0
+        },
+        {
+          "id": "v14d_020",
+          "title": "Build The Event Memo, Not Just The Answer",
+          "track": "agentic_live_analysis",
+          "prediction": {
+            "primary_driver": "The best-supported driver is concern about deposit competition and funding-cost pressure for smaller lenders, made more acute here by the bank's high share of interest-bearing deposits and rising funding costs.",
+            "next_verification": "Check for primary-source filings or company statements on any capital raise, and for updated deposit mix/funding-cost data to see whether pressure is worsening or stabilizing.",
+            "uncertainty": "The capital-raise rumor is unconfirmed and should not be treated as causal without a filing or company statement."
+          },
+          "canonical_answer": {
+            "primary_driver": "funding_cost_and_deposit_beta_concern",
+            "next_verification": "verify_insured_vs_uninsured_deposit_mix_and_wholesale_funding_dependence",
+            "uncertainty": "the_unconfirmed_capital_raise_rumor_should_not_be_treated_as_established_fact"
+          },
+          "primary_fields": [
+            "primary_driver",
+            "next_verification"
+          ],
+          "field_results": {
+            "primary_driver": false,
+            "next_verification": false,
+            "uncertainty": false
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.0
+        },
+        {
+          "id": "v14d_021",
+          "title": "One Event, Multiple Conflicting Narratives",
+          "track": "agentic_live_analysis",
+          "prediction": {
+            "primary_driver": "The most causally plausible driver is the favorable FDA advisory-panel vote, which directly improved the therapy's perceived outlook.",
+            "uncertainty": "The size of the rally may have been amplified by elevated short interest, and the acquisition rumor remains unconfirmed enough that it should stay only as a low-confidence alternative.",
+            "evidence_used": [
+              "The stock rallied after the FDA advisory panel voted in favor of the therapy.",
+              "Short interest was elevated heading into the vote, which could amplify the move.",
+              "Acquisition chatter was only on social media and had no credible confirmation."
+            ]
+          },
+          "canonical_answer": {
+            "primary_driver": "positive_fda_panel_vote_improving_approval_odds",
+            "uncertainty": "short_squeeze_dynamics_may_have_amplified_the_move_but_do_not_replace_the_main_causal_event",
+            "evidence_used": [
+              "Snippet 1",
+              "Snippet 3"
+            ]
+          },
+          "primary_fields": [
+            "primary_driver",
+            "uncertainty"
+          ],
+          "field_results": {
+            "primary_driver": false,
+            "uncertainty": false,
+            "evidence_used": false
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.0
+        }
+      ],
+      "batch_logs": [
+        {
+          "batch_index": 1,
+          "case_ids": [
+            "v14d_001",
+            "v14d_002",
+            "v14d_003"
+          ],
+          "duration_seconds": 19.4,
+          "returncode": 0,
+          "stderr_tail": " the total effect.\"}},{\"id\":\"v14d_002\",\"answer\":{\"label\":\"B\",\"counterfactual_outcome\":0,\"rationale\":\"For the observed unit, Z=0. Under do(X=0), the structural equations give M:=X=0, and then Y:=M OR Z = 0 OR 0 = 0. So Y would not have occurred.\"}},{\"id\":\"v14d_003\",\"answer\":{\"label\":\"A\",\"effect_type\":\"indirect\",\"rationale\":\"The graph contains a causal path X -> M -> Y, so X does causally affect Y. The structure rules out only a direct X -> Y edge, not causation altogether.\"}}]}\ntokens used\n9,195\n",
+          "output_path": "/Users/zeyu/Documents/bach_private_cache/.bench/v14-public-dev-results-20260327-180207/base/batch_1.json"
+        },
+        {
+          "batch_index": 2,
+          "case_ids": [
+            "v14d_004",
+            "v14d_005",
+            "v14d_006"
+          ],
+          "duration_seconds": 39.45,
+          "returncode": 0,
+          "stderr_tail": "\"}},{\"id\":\"v14d_005\",\"answer\":{\"reachable\":false,\"example_path\":\"none\",\"rationale\":\"No directed path from marketing_spend or price_discount to churn is shown; those nodes only point to new_customers, while churn is only downstream of supplier_delay -> stockout -> fulfillment_delay -> customer_complaints.\"}},{\"id\":\"v14d_006\",\"answer\":{\"label\":\"B\",\"confounder\":\"macro_demand\",\"rationale\":\"macro_demand causes both ad_spend and sales in both encodings, so it is the confounder.\"}}]}\ntokens used\n8,100\n",
+          "output_path": "/Users/zeyu/Documents/bach_private_cache/.bench/v14-public-dev-results-20260327-180207/base/batch_2.json"
+        },
+        {
+          "batch_index": 3,
+          "case_ids": [
+            "v14d_007",
+            "v14d_008",
+            "v14d_009"
+          ],
+          "duration_seconds": 36.9,
+          "returncode": 0,
+          "stderr_tail": " because treatment traffic was shifted toward expert users after a manual allocation decision.\"}},{\"id\":\"v14d_009\",\"answer\":{\"label\":\"B\",\"supportability\":\"not_pricing_alone\",\"rationale\":\"List price increased by 2.0%, but input cost per unit fell by 4.0%, and management states that a commodity hedge materially reduced input costs and that the margin benefit should not be attributed to pricing alone. So the margin expansion is not supportably attributable solely to pricing.\"}}]}\ntokens used\n8,165\n",
+          "output_path": "/Users/zeyu/Documents/bach_private_cache/.bench/v14-public-dev-results-20260327-180207/base/batch_3.json"
+        },
+        {
+          "batch_index": 4,
+          "case_ids": [
+            "v14d_010",
+            "v14d_011",
+            "v14d_012"
+          ],
+          "duration_seconds": 32.62,
+          "returncode": 0,
+          "stderr_tail": "r the open. The midday interview added no new information, so it is at most temporally adjacent, not the best-supported cause.\"}},{\"id\":\"v14d_012\",\"answer\":{\"label\":\"C\",\"counterfactual_direction\":\"still_below_plan_but_materially_better\",\"justification\":\"Without the strike, one clear source of lost throughput disappears, so exports should improve versus the realized 18% miss. But the later heavy rain still reduced rail departures, so exports would likely remain below plan.\"}}]}\ntokens used\n8,015\n",
+          "output_path": "/Users/zeyu/Documents/bach_private_cache/.bench/v14-public-dev-results-20260327-180207/base/batch_4.json"
+        },
+        {
+          "batch_index": 5,
+          "case_ids": [
+            "v14d_013",
+            "v14d_014",
+            "v14d_015"
+          ],
+          "duration_seconds": 75.33,
+          "returncode": 0,
+          "stderr_tail": "paid lead cut, so volume falls quickly while CAC only partially improves.\"}},{\"id\":\"v14d_015\",\"answer\":{\"primary_driver\":\"weaker_channel_sell_through_causing_inventory_build\",\"supporting_variables\":{\"support\":\"end-market sell-through fell 9% and channel inventory days rose 12 days, which fits the 6% revenue miss better than FX (-1 point) or the legal reserve (-0.4 margin points)\",\"falsifier\":\"stable_or_improving_sell-through and no_inventory_day_build\"},\"confidence\":\"high\"}}]}\ntokens used\n8,414\n",
+          "output_path": "/Users/zeyu/Documents/bach_private_cache/.bench/v14-public-dev-results-20260327-180207/base/batch_5.json"
+        },
+        {
+          "batch_index": 6,
+          "case_ids": [
+            "v14d_016",
+            "v14d_017",
+            "v14d_018"
+          ],
+          "duration_seconds": 35.16,
+          "returncode": 0,
+          "stderr_tail": "ticipatory effects before adoption.\",\"risk_note\":\"The main threat is endogenous rollout timing or other plant-specific shocks that coincide with adoption and violate parallel trends.\"}},{\"id\":\"v14d_018\",\"answer\":{\"estimate\":{\"ate\":2.4,\"unit\":\"points\"},\"assumptions\":[\"no unmeasured confounding after adjusting for plant size, shift, baseline quality score, and operator tenure\",\"positivity/overlap\",\"consistency/SUTVA\",\"correct weighting/specification\"],\"confidence\":\"moderate\"}}]}\ntokens used\n7,833\n",
+          "output_path": "/Users/zeyu/Documents/bach_private_cache/.bench/v14-public-dev-results-20260327-180207/base/batch_6.json"
+        },
+        {
+          "batch_index": 7,
+          "case_ids": [
+            "v14d_019",
+            "v14d_020",
+            "v14d_021"
+          ],
+          "duration_seconds": 39.36,
+          "returncode": 0,
+          "stderr_tail": "ived outlook.\",\"uncertainty\":\"The size of the rally may have been amplified by elevated short interest, and the acquisition rumor remains unconfirmed enough that it should stay only as a low-confidence alternative.\",\"evidence_used\":[\"The stock rallied after the FDA advisory panel voted in favor of the therapy.\",\"Short interest was elevated heading into the vote, which could amplify the move.\",\"Acquisition chatter was only on social media and had no credible confirmation.\"]}}]}\ntokens used\n7,981\n",
+          "output_path": "/Users/zeyu/Documents/bach_private_cache/.bench/v14-public-dev-results-20260327-180207/base/batch_7.json"
+        }
+      ]
+    },
+    "skill": {
+      "summary": {
+        "exact_primary_correct": 7,
+        "case_count": 21,
+        "exact_primary_accuracy": 0.3333,
+        "weighted_average": 0.4786,
+        "total_duration_seconds": 344.22,
+        "per_track": {
+          "formal_causality": {
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1.0
+          },
+          "graph_and_mechanism": {
+            "correct": 1,
+            "total": 3,
+            "accuracy": 0.3333
+          },
+          "data_grounded_causal_reasoning": {
+            "correct": 1,
+            "total": 3,
+            "accuracy": 0.3333
+          },
+          "natural_event_causality": {
+            "correct": 1,
+            "total": 3,
+            "accuracy": 0.3333
+          },
+          "finance_and_business_causal_reasoning": {
+            "correct": 0,
+            "total": 3,
+            "accuracy": 0.0
+          },
+          "industrial_intervention_and_estimation": {
+            "correct": 1,
+            "total": 3,
+            "accuracy": 0.3333
+          },
+          "agentic_live_analysis": {
+            "correct": 0,
+            "total": 3,
+            "accuracy": 0.0
+          }
+        }
+      },
+      "cases": [
+        {
+          "id": "v14d_001",
+          "title": "Campaign Lift With A Hidden Seasonal Driver",
+          "track": "formal_causality",
+          "prediction": {
+            "label": "C",
+            "identified": true,
+            "adjustment_set": [
+              "seasonality"
+            ],
+            "rationale": "Seasonality is a pre-treatment common cause of campaign_exposure and conversion, so adjusting for it blocks the backdoor path. site_visits is post-exposure and lies on the causal pathway, so adjusting for it would block part of the total effect."
+          },
+          "canonical_answer": {
+            "label": "C",
+            "identified": true,
+            "adjustment_set": [
+              "seasonality"
+            ],
+            "rationale": "Seasonality is the backdoor confounder. Site_visits lies on the causal pathway and should not be adjusted when estimating the total effect."
+          },
+          "primary_fields": [
+            "label",
+            "identified",
+            "adjustment_set"
+          ],
+          "field_results": {
+            "label": true,
+            "identified": true,
+            "adjustment_set": true,
+            "rationale": false
+          },
+          "exact_primary_correct": true,
+          "weighted_score": 0.85
+        },
+        {
+          "id": "v14d_002",
+          "title": "Would Outcome Y Have Changed Under Do(X)?",
+          "track": "formal_causality",
+          "prediction": {
+            "label": "B",
+            "counterfactual_outcome": 0,
+            "rationale": "Under do(X=0), M becomes 0 because M:=X. With the same observed Z=0, Y:=M OR Z becomes 0 OR 0 = 0, so Y would not occur."
+          },
+          "canonical_answer": {
+            "label": "B",
+            "counterfactual_outcome": 0,
+            "rationale": "Under do(X=0), M becomes 0. Because Z is observed to be 0, Y = 0 OR 0 = 0, so Y would not occur."
+          },
+          "primary_fields": [
+            "label",
+            "counterfactual_outcome"
+          ],
+          "field_results": {
+            "label": true,
+            "counterfactual_outcome": true,
+            "rationale": true
+          },
+          "exact_primary_correct": true,
+          "weighted_score": 1.0
+        },
+        {
+          "id": "v14d_003",
+          "title": "A Strong Association But No Direct Effect",
+          "track": "formal_causality",
+          "prediction": {
+            "label": "A",
+            "effect_type": "indirect",
+            "rationale": "The graph contains a causal path X -> M -> Y, so X does affect Y indirectly. Z is a shared upstream cause of X and Y, which can create association, but it does not remove the indirect causal effect."
+          },
+          "canonical_answer": {
+            "label": "A",
+            "effect_type": "indirect_causal_effect",
+            "rationale": "X affects Y through the mediator M. The lack of a direct edge does not remove the indirect causal path."
+          },
+          "primary_fields": [
+            "label",
+            "effect_type"
+          ],
+          "field_results": {
+            "label": true,
+            "effect_type": true,
+            "rationale": false
+          },
+          "exact_primary_correct": true,
+          "weighted_score": 0.8
+        },
+        {
+          "id": "v14d_004",
+          "title": "Which Node Is Acting As The Mediator?",
+          "track": "graph_and_mechanism",
+          "prediction": {
+            "mediator_node": "unit_volume",
+            "mechanism_path": "price_change -> unit_volume -> gross_margin"
+          },
+          "canonical_answer": {
+            "mediator_node": "unit_volume",
+            "mechanism_path": [
+              "price_change",
+              "unit_volume",
+              "gross_margin"
+            ]
+          },
+          "primary_fields": [
+            "mediator_node",
+            "mechanism_path"
+          ],
+          "field_results": {
+            "mediator_node": true,
+            "mechanism_path": false
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.6
+        },
+        {
+          "id": "v14d_005",
+          "title": "Can This Effect Be Reached Through Any Directed Path?",
+          "track": "graph_and_mechanism",
+          "prediction": {
+            "reachable": false,
+            "example_path": "none",
+            "rationale": "There is no directed path from the growth-side nodes shown (marketing_spend or price_discount) to churn; churn is only downstream of the service chain starting at supplier_delay."
+          },
+          "canonical_answer": {
+            "reachable": true,
+            "example_path": [
+              "supplier_delay",
+              "stockout",
+              "fulfillment_delay",
+              "customer_complaints",
+              "churn"
+            ],
+            "rationale": "A fully directed service-failure path exists from supplier_delay to churn."
+          },
+          "primary_fields": [
+            "reachable",
+            "example_path"
+          ],
+          "field_results": {
+            "reachable": false,
+            "example_path": false,
+            "rationale": false
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.0
+        },
+        {
+          "id": "v14d_006",
+          "title": "Same Graph, Different Encoding",
+          "track": "graph_and_mechanism",
+          "prediction": {
+            "label": "B",
+            "confounder": "macro_demand",
+            "rationale": "Both encodings show macro_demand causes ad_spend and also independently affects sales, so it is the common cause confounding the ad_spend-sales relationship."
+          },
+          "canonical_answer": {
+            "label": "B",
+            "confounder": "macro_demand",
+            "rationale": "Macro demand causes both ad_spend and sales. The answer should stay the same under either encoding."
+          },
+          "primary_fields": [
+            "label",
+            "confounder"
+          ],
+          "field_results": {
+            "label": true,
+            "confounder": true,
+            "rationale": false
+          },
+          "exact_primary_correct": true,
+          "weighted_score": 0.8
+        },
+        {
+          "id": "v14d_007",
+          "title": "A/B Test With A Post-Treatment Metric",
+          "track": "data_grounded_causal_reasoning",
+          "prediction": {
+            "label": "B",
+            "should_control": false,
+            "rationale": "Three-day engagement is measured after assignment and after exposure, so it is post-treatment. Controlling for it would condition on a post-treatment variable rather than estimate the total treatment effect on conversion."
+          },
+          "canonical_answer": {
+            "label": "B",
+            "should_control": false,
+            "rationale": "Three-day engagement is measured after treatment assignment and lies on or after the treatment path. Conditioning on it would bias total effect estimation."
+          },
+          "primary_fields": [
+            "label",
+            "should_control"
+          ],
+          "field_results": {
+            "label": true,
+            "should_control": true,
+            "rationale": false
+          },
+          "exact_primary_correct": true,
+          "weighted_score": 0.8
+        },
+        {
+          "id": "v14d_008",
+          "title": "The Aggregate Says Yes, The Strata Say No",
+          "track": "data_grounded_causal_reasoning",
+          "prediction": {
+            "label": "B",
+            "segment_conclusion": "aggregate_not_sufficient",
+            "rationale": "Within both segments, treatment converts worse than control: novices 15/100 vs 18/100 and experts 66/100 vs 70/100. The higher aggregate treatment rate is explained by the expert-heavy treatment mix after manual allocation."
+          },
+          "canonical_answer": {
+            "label": "B",
+            "segment_conclusion": "simpsons_paradox_due_to_segment_mix",
+            "rationale": "Within both novice and expert strata, treatment underperforms. The aggregate improvement is driven by the treated group containing more high-converting experts."
+          },
+          "primary_fields": [
+            "label",
+            "segment_conclusion"
+          ],
+          "field_results": {
+            "label": true,
+            "segment_conclusion": false,
+            "rationale": false
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.45
+        },
+        {
+          "id": "v14d_009",
+          "title": "Margin Expansion After A Pricing Change",
+          "track": "data_grounded_causal_reasoning",
+          "prediction": {
+            "label": "B",
+            "supportability": "pricing_alone_unsupported",
+            "rationale": "Gross margin rose while input cost per unit fell 4.0%, and the memo says a commodity hedge materially reduced input costs in the same quarter. That means the margin expansion cannot be attributed solely to pricing."
+          },
+          "canonical_answer": {
+            "label": "B",
+            "supportability": "price_not_sufficient_explanation",
+            "rationale": "Pricing and input-cost relief moved at the same time. The packet supports a mixed explanation, not a pricing-only causal claim."
+          },
+          "primary_fields": [
+            "label",
+            "supportability"
+          ],
+          "field_results": {
+            "label": true,
+            "supportability": false,
+            "rationale": false
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.45
+        },
+        {
+          "id": "v14d_010",
+          "title": "Which Event Actually Drove The Shortage?",
+          "track": "natural_event_causality",
+          "prediction": {
+            "label": "C",
+            "direct_driver": "distribution_center_scanner_outage",
+            "justification": "The shortage came right after the Tuesday-night scanner outage left 40% of inbound pallets unprocessed. The typhoon was earlier and the port congestion had already eased with most containers unloaded."
+          },
+          "canonical_answer": {
+            "label": "C",
+            "direct_driver": "distribution_center_scanner_outage",
+            "justification": "Upstream weather mattered earlier, but the packet states that the immediate failure before stores stocked out was the scanner outage."
+          },
+          "primary_fields": [
+            "label",
+            "direct_driver"
+          ],
+          "field_results": {
+            "label": true,
+            "direct_driver": true,
+            "justification": false
+          },
+          "exact_primary_correct": true,
+          "weighted_score": 0.8
+        },
+        {
+          "id": "v14d_011",
+          "title": "After Does Not Mean Because",
+          "track": "natural_event_causality",
+          "prediction": {
+            "label": "B",
+            "causal_read": "buyback_and_guidance_causal;_ceo_interview_temporal_only",
+            "justification": "The new buyback and raised guidance were announced before the open, and most of the stock move happened in the first 20 minutes after the open. The midday TV interview added no new information, so it supports only temporal succession, not a separate causal claim."
+          },
+          "canonical_answer": {
+            "label": "B",
+            "causal_read": "morning_corporate_actions_more_plausible_than_interview",
+            "justification": "The major price move happened before the interview and the interview introduced no new information."
+          },
+          "primary_fields": [
+            "label",
+            "causal_read"
+          ],
+          "field_results": {
+            "label": true,
+            "causal_read": false,
+            "justification": false
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.45
+        },
+        {
+          "id": "v14d_012",
+          "title": "If The Strike Had Not Happened",
+          "track": "natural_event_causality",
+          "prediction": {
+            "label": "C",
+            "counterfactual_direction": "still_below_plan_but_materially_better",
+            "justification": "Removing the strike would improve exports, but the later heavy-rain disruption would still cut rail departures. Since monthly exports still faced that separate shock, the result would likely remain below plan, though better than the realized 18% miss."
+          },
+          "canonical_answer": {
+            "label": "C",
+            "counterfactual_direction": "improve_but_remain_below_plan",
+            "justification": "Removing the strike recovers part of the lost throughput, but the later rail disruption still leaves exports below plan."
+          },
+          "primary_fields": [
+            "label",
+            "counterfactual_direction"
+          ],
+          "field_results": {
+            "label": true,
+            "counterfactual_direction": false,
+            "justification": false
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.45
+        },
+        {
+          "id": "v14d_013",
+          "title": "Why Did Margin Miss Despite Revenue Growth?",
+          "track": "finance_and_business_causal_reasoning",
+          "prediction": {
+            "primary_driver": "mix_shift_to_lower_margin_hardware",
+            "supporting_variables": {
+              "relationship": "hardware_mix_up + services_mix_down with hardware_gm << services_gm -> blended_margin_down",
+              "evidence": {
+                "hardware_mix": "46%->58%",
+                "services_mix": "54%->42%",
+                "hardware_gm": "24%->18%",
+                "services_gm": "72%->70%",
+                "freight_pct_rev": "0.4%->2.2% secondary"
+              }
+            },
+            "confidence": "high"
+          },
+          "canonical_answer": {
+            "primary_driver": "mix_shift_into_lower_margin_hardware_amplified_by_freight",
+            "supporting_variables": [
+              "hardware_mix_up",
+              "hardware_gross_margin_down",
+              "expedited_freight_cost_up"
+            ],
+            "confidence": "medium_high"
+          },
+          "primary_fields": [
+            "primary_driver",
+            "supporting_variables"
+          ],
+          "field_results": {
+            "primary_driver": true,
+            "supporting_variables": false,
+            "confidence": true
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.65
+        },
+        {
+          "id": "v14d_014",
+          "title": "What Happens If We Cut Paid Acquisition?",
+          "track": "finance_and_business_causal_reasoning",
+          "prediction": {
+            "label": "A",
+            "base_case": "qualified_leads_drop_first; CAC_improves_only_partially",
+            "rationale": "Paid search drives 62% of first qualified visits, and prior geo tests showed only 0.25 same-month organic replacement for each paid lead cut, so a 20% paid reduction most likely reduces near-term qualified leads first, with only partial CAC improvement."
+          },
+          "canonical_answer": {
+            "label": "A",
+            "base_case": "lead_volume_down_partial_efficiency_gain",
+            "rationale": "The memo and geo test imply incomplete organic substitution. Cutting paid acquisition should reduce qualified leads before any efficiency benefit fully offsets the loss."
+          },
+          "primary_fields": [
+            "label",
+            "base_case"
+          ],
+          "field_results": {
+            "label": true,
+            "base_case": false,
+            "rationale": false
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.45
+        },
+        {
+          "id": "v14d_015",
+          "title": "Three Plausible Stories, One Dominant Driver",
+          "track": "finance_and_business_causal_reasoning",
+          "prediction": {
+            "primary_driver": "weaker_channel_sell_through_causing_inventory_build",
+            "supporting_variables": {
+              "relationship": "sell_through_down + inventory_days_up -> revenue_miss",
+              "evidence": {
+                "revenue_miss_vs_plan": "-6%",
+                "end_market_sell_through": "-9%",
+                "channel_inventory_days": "+12 days",
+                "constant_currency": "-1 point",
+                "legal_reserve": "-0.4 point margin"
+              },
+              "falsifier": "channel_inventory_days_not_up_and_sell_through_not_down"
+            },
+            "confidence": "high"
+          },
+          "canonical_answer": {
+            "primary_driver": "channel_inventory_correction_and_weak_sell_through",
+            "supporting_variables": [
+              "inventory_days_up",
+              "sell_through_down",
+              "revenue_miss_much_larger_than_fx_headwind"
+            ],
+            "confidence": "medium_high"
+          },
+          "primary_fields": [
+            "primary_driver",
+            "supporting_variables"
+          ],
+          "field_results": {
+            "primary_driver": false,
+            "supporting_variables": false,
+            "confidence": true
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.2
+        },
+        {
+          "id": "v14d_016",
+          "title": "Did The Temperature Change Really Reduce Defects?",
+          "track": "industrial_intervention_and_estimation",
+          "prediction": {
+            "identified": false,
+            "needed_controls": [
+              "maintenance_overhaul",
+              "maintenance_timing",
+              "throughput"
+            ],
+            "risk_note": "The temperature change was applied only on the renovated line and in the same maintenance window, with throughput also changing, so the temperature effect is confounded with maintenance/renovation and is not separately identifiable from these observed data."
+          },
+          "canonical_answer": {
+            "identified": false,
+            "needed_controls": [
+              "maintenance_status",
+              "line_id",
+              "throughput"
+            ],
+            "risk_note": "The treatment is confounded by simultaneous maintenance and line selection. The observed packet does not support a clean causal estimate."
+          },
+          "primary_fields": [
+            "identified",
+            "needed_controls"
+          ],
+          "field_results": {
+            "identified": true,
+            "needed_controls": false,
+            "risk_note": false
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.5
+        },
+        {
+          "id": "v14d_017",
+          "title": "A Policy Rolled Out At Different Times",
+          "track": "industrial_intervention_and_estimation",
+          "prediction": {
+            "design": "staggered_difference_in_differences_event_study",
+            "key_assumption": "parallel_trends",
+            "risk_note": "The main threat is endogenous adoption timing or other plant-specific shocks around rollout; if adoption responds to those shocks, not-yet-treated plants are not a valid counterfactual."
+          },
+          "canonical_answer": {
+            "design": "staggered_difference_in_differences_event_study",
+            "key_assumption": "parallel_trends_absent_the_policy",
+            "risk_note": "Check for anticipation effects and cross-plant spillovers."
+          },
+          "primary_fields": [
+            "design",
+            "key_assumption"
+          ],
+          "field_results": {
+            "design": true,
+            "key_assumption": true,
+            "risk_note": false
+          },
+          "exact_primary_correct": true,
+          "weighted_score": 0.8
+        },
+        {
+          "id": "v14d_018",
+          "title": "Estimate The Effect And State The Assumptions",
+          "track": "industrial_intervention_and_estimation",
+          "prediction": {
+            "estimate": {
+              "ate": 2.4,
+              "unit": "points"
+            },
+            "assumptions": [
+              "no_unmeasured_confounding_given_observed_covariates",
+              "positivity_overlap",
+              "consistency_stable_treatment",
+              "correct_weighting_adjustment"
+            ],
+            "confidence": "moderate"
+          },
+          "canonical_answer": {
+            "estimate": 2.4,
+            "assumptions": [
+              "no_unmeasured_confounding_given_adjusted_covariates",
+              "positivity_or_overlap",
+              "stable_outcome_definition_and_no_interference"
+            ],
+            "confidence": "medium"
+          },
+          "primary_fields": [
+            "estimate",
+            "assumptions"
+          ],
+          "field_results": {
+            "estimate": false,
+            "assumptions": false,
+            "confidence": false
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.0
+        },
+        {
+          "id": "v14d_019",
+          "title": "Fresh Event, Fast Causal Read",
+          "track": "agentic_live_analysis",
+          "prediction": {
+            "primary_driver": "Canal disruption forcing rerouting on Asia-Europe lanes, which led carriers to impose emergency surcharges and drove the freight-rate jump.",
+            "uncertainty": "The duration of the rerouting shock is still unclear. If passage normalizes quickly, the surcharge/rate spike could fade, and retailers had not yet repriced goods so downstream pass-through is not established.",
+            "evidence_used": [
+              "Ocean carriers announced emergency surcharges after a canal disruption forced rerouting on several Asia-Europe lanes.",
+              "Freight rate indices jumped sharply over the same two-day window.",
+              "Retailers said they had not yet repriced goods.",
+              "Analysts cautioned that the duration of the rerouting shock remained unclear and could fade if passage normalizes quickly."
+            ]
+          },
+          "canonical_answer": {
+            "primary_driver": "freight_rate_spike_due_to_canal_disruption_and_rerouting",
+            "uncertainty": "how_long_the_disruption_and_surcharges_will_persist",
+            "evidence_used": [
+              "Snippet 1",
+              "Snippet 2",
+              "Snippet 3"
+            ]
+          },
+          "primary_fields": [
+            "primary_driver",
+            "uncertainty"
+          ],
+          "field_results": {
+            "primary_driver": false,
+            "uncertainty": false,
+            "evidence_used": false
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.0
+        },
+        {
+          "id": "v14d_020",
+          "title": "Build The Event Memo, Not Just The Answer",
+          "track": "agentic_live_analysis",
+          "prediction": {
+            "primary_driver": "Most likely, the selloff was driven by concern that intense deposit competition will pressure this regional bank's funding costs, especially because its last quarterly filing already showed a high share of interest-bearing deposits and rising funding costs.",
+            "next_verification": "Primary-source confirmation or denial of the capital-raise rumor is the key next check. I would also update the view if new company disclosures showed materially better or worse deposit mix and funding-cost trends than the last filing.",
+            "uncertainty": "The capital-raise rumor remains unconfirmed and could change the causal read if validated, but with no filing or company statement it should stay a secondary possibility rather than the base case."
+          },
+          "canonical_answer": {
+            "primary_driver": "funding_cost_and_deposit_beta_concern",
+            "next_verification": "verify_insured_vs_uninsured_deposit_mix_and_wholesale_funding_dependence",
+            "uncertainty": "the_unconfirmed_capital_raise_rumor_should_not_be_treated_as_established_fact"
+          },
+          "primary_fields": [
+            "primary_driver",
+            "next_verification"
+          ],
+          "field_results": {
+            "primary_driver": false,
+            "next_verification": false,
+            "uncertainty": false
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.0
+        },
+        {
+          "id": "v14d_021",
+          "title": "One Event, Multiple Conflicting Narratives",
+          "track": "agentic_live_analysis",
+          "prediction": {
+            "primary_driver": "The favorable FDA advisory-panel vote is the most causally plausible primary driver of the rally.",
+            "uncertainty": "High short interest may have amplified the size of the move through short covering, and the acquisition rumor remains a low-confidence alternative because it lacks credible confirmation.",
+            "evidence_used": [
+              "The biotech stock rallied after an FDA advisory panel voted in favor of its therapy.",
+              "Social media accounts circulated an acquisition rumor, but no credible outlet confirmed it.",
+              "Short interest was elevated heading into the vote, which may have amplified the magnitude of the move."
+            ]
+          },
+          "canonical_answer": {
+            "primary_driver": "positive_fda_panel_vote_improving_approval_odds",
+            "uncertainty": "short_squeeze_dynamics_may_have_amplified_the_move_but_do_not_replace_the_main_causal_event",
+            "evidence_used": [
+              "Snippet 1",
+              "Snippet 3"
+            ]
+          },
+          "primary_fields": [
+            "primary_driver",
+            "uncertainty"
+          ],
+          "field_results": {
+            "primary_driver": false,
+            "uncertainty": false,
+            "evidence_used": false
+          },
+          "exact_primary_correct": false,
+          "weighted_score": 0.0
+        }
+      ],
+      "batch_logs": [
+        {
+          "batch_index": 1,
+          "case_ids": [
+            "v14d_001",
+            "v14d_002",
+            "v14d_003"
+          ],
+          "duration_seconds": 32.56,
+          "returncode": 0,
+          "stderr_tail": "id\":\"v14d_002\",\"answer\":{\"label\":\"B\",\"counterfactual_outcome\":0,\"rationale\":\"Under do(X=0), M becomes 0 because M:=X. With the same observed Z=0, Y:=M OR Z becomes 0 OR 0 = 0, so Y would not occur.\"}},{\"id\":\"v14d_003\",\"answer\":{\"label\":\"A\",\"effect_type\":\"indirect\",\"rationale\":\"The graph contains a causal path X -> M -> Y, so X does affect Y indirectly. Z is a shared upstream cause of X and Y, which can create association, but it does not remove the indirect causal effect.\"}}]}\ntokens used\n9,868\n",
+          "output_path": "/Users/zeyu/Documents/bach_private_cache/.bench/v14-public-dev-results-20260327-180207/skill/batch_1.json"
+        },
+        {
+          "batch_index": 2,
+          "case_ids": [
+            "v14d_004",
+            "v14d_005",
+            "v14d_006"
+          ],
+          "duration_seconds": 38.8,
+          "returncode": 0,
+          "stderr_tail": "\":{\"reachable\":false,\"example_path\":\"none\",\"rationale\":\"There is no directed path from the growth-side nodes shown (marketing_spend or price_discount) to churn; churn is only downstream of the service chain starting at supplier_delay.\"}},{\"id\":\"v14d_006\",\"answer\":{\"label\":\"B\",\"confounder\":\"macro_demand\",\"rationale\":\"Both encodings show macro_demand causes ad_spend and also independently affects sales, so it is the common cause confounding the ad_spend-sales relationship.\"}}]}\ntokens used\n10,101\n",
+          "output_path": "/Users/zeyu/Documents/bach_private_cache/.bench/v14-public-dev-results-20260327-180207/skill/batch_2.json"
+        },
+        {
+          "batch_index": 3,
+          "case_ids": [
+            "v14d_007",
+            "v14d_008",
+            "v14d_009"
+          ],
+          "duration_seconds": 36.56,
+          "returncode": 0,
+          "stderr_tail": "ovices 15/100 vs 18/100 and experts 66/100 vs 70/100. The higher aggregate treatment rate is explained by the expert-heavy treatment mix after manual allocation.\"}},{\"id\":\"v14d_009\",\"answer\":{\"label\":\"B\",\"supportability\":\"pricing_alone_unsupported\",\"rationale\":\"Gross margin rose while input cost per unit fell 4.0%, and the memo says a commodity hedge materially reduced input costs in the same quarter. That means the margin expansion cannot be attributed solely to pricing.\"}}]}\ntokens used\n7,610\n",
+          "output_path": "/Users/zeyu/Documents/bach_private_cache/.bench/v14-public-dev-results-20260327-180207/skill/batch_3.json"
+        },
+        {
+          "batch_index": 4,
+          "case_ids": [
+            "v14d_010",
+            "v14d_011",
+            "v14d_012"
+          ],
+          "duration_seconds": 36.35,
+          "returncode": 0,
+          "stderr_tail": "w added no new information, so it supports only temporal succession, not a separate causal claim.\"}},{\"id\":\"v14d_012\",\"answer\":{\"label\":\"C\",\"counterfactual_direction\":\"still_below_plan_but_materially_better\",\"justification\":\"Removing the strike would improve exports, but the later heavy-rain disruption would still cut rail departures. Since monthly exports still faced that separate shock, the result would likely remain below plan, though better than the realized 18% miss.\"}}]}\ntokens used\n8,008\n",
+          "output_path": "/Users/zeyu/Documents/bach_private_cache/.bench/v14-public-dev-results-20260327-180207/skill/batch_4.json"
+        },
+        {
+          "batch_index": 5,
+          "case_ids": [
+            "v14d_013",
+            "v14d_014",
+            "v14d_015"
+          ],
+          "duration_seconds": 66.68,
+          "returncode": 0,
+          "stderr_tail": " improvement.\"}},{\"id\":\"v14d_015\",\"answer\":{\"primary_driver\":\"weaker_channel_sell_through_causing_inventory_build\",\"supporting_variables\":{\"relationship\":\"sell_through_down + inventory_days_up -> revenue_miss\",\"evidence\":{\"revenue_miss_vs_plan\":\"-6%\",\"end_market_sell_through\":\"-9%\",\"channel_inventory_days\":\"+12 days\",\"constant_currency\":\"-1 point\",\"legal_reserve\":\"-0.4 point margin\"},\"falsifier\":\"channel_inventory_days_not_up_and_sell_through_not_down\"},\"confidence\":\"high\"}}]}\ntokens used\n5,469\n",
+          "output_path": "/Users/zeyu/Documents/bach_private_cache/.bench/v14-public-dev-results-20260327-180207/skill/batch_5.json"
+        },
+        {
+          "batch_index": 6,
+          "case_ids": [
+            "v14d_016",
+            "v14d_017",
+            "v14d_018"
+          ],
+          "duration_seconds": 55.01,
+          "returncode": 0,
+          "stderr_tail": "y_assumption\":\"parallel_trends\",\"risk_note\":\"The main threat is endogenous adoption timing or other plant-specific shocks around rollout; if adoption responds to those shocks, not-yet-treated plants are not a valid counterfactual.\"}},{\"id\":\"v14d_018\",\"answer\":{\"estimate\":{\"ate\":2.4,\"unit\":\"points\"},\"assumptions\":[\"no_unmeasured_confounding_given_observed_covariates\",\"positivity_overlap\",\"consistency_stable_treatment\",\"correct_weighting_adjustment\"],\"confidence\":\"moderate\"}}]}\ntokens used\n10,754\n",
+          "output_path": "/Users/zeyu/Documents/bach_private_cache/.bench/v14-public-dev-results-20260327-180207/skill/batch_6.json"
+        },
+        {
+          "batch_index": 7,
+          "case_ids": [
+            "v14d_019",
+            "v14d_020",
+            "v14d_021"
+          ],
+          "duration_seconds": 78.26,
+          "returncode": 0,
+          "stderr_tail": "rest may have amplified the size of the move through short covering, and the acquisition rumor remains a low-confidence alternative because it lacks credible confirmation.\",\"evidence_used\":[\"The biotech stock rallied after an FDA advisory panel voted in favor of its therapy.\",\"Social media accounts circulated an acquisition rumor, but no credible outlet confirmed it.\",\"Short interest was elevated heading into the vote, which may have amplified the magnitude of the move.\"]}}]}\ntokens used\n11,606\n",
+          "output_path": "/Users/zeyu/Documents/bach_private_cache/.bench/v14-public-dev-results-20260327-180207/skill/batch_7.json"
+        }
+      ]
+    }
+  },
+  "bench_dir": "/Users/zeyu/Documents/bach_private_cache/.bench/v14-public-dev-results-20260327-180207",
+  "comparison": {
+    "prediction_diff_count": 20,
+    "differing_case_ids": [
+      "v14d_001",
+      "v14d_002",
+      "v14d_003",
+      "v14d_005",
+      "v14d_006",
+      "v14d_007",
+      "v14d_008",
+      "v14d_009",
+      "v14d_010",
+      "v14d_011",
+      "v14d_012",
+      "v14d_013",
+      "v14d_014",
+      "v14d_015",
+      "v14d_016",
+      "v14d_017",
+      "v14d_018",
+      "v14d_019",
+      "v14d_020",
+      "v14d_021"
+    ]
+  }
+}
