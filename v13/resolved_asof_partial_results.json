@@ -1,10 +1,12 @@
 {
-  "timestamp": "2026-03-27T19:22:28+08:00",
+  "timestamp": "2026-03-27T20:02:58+08:00",
   "benchmark": "v13_resolved_asof_open_book_partial",
-  "case_count": 6,
+  "case_count": 9,
   "summary": {
-    "base_correct": 4,
-    "skill_correct": 4
+    "base_correct": 6,
+    "skill_correct": 5,
+    "base_accuracy": 0.6667,
+    "skill_accuracy": 0.5556
   },
   "cases": [
     {
@@ -16,7 +18,10 @@
       "base_prediction": "\\boxed{A}",
       "skill_prediction": "\\boxed{A}",
       "base_correct": true,
-      "skill_correct": true
+      "skill_correct": true,
+      "base_timed_out": false,
+      "skill_timed_out": false,
+      "runner": "resolved_asof_test_script.py --batch-size 1"
     },
     {
       "id": "v13ra_002",
@@ -27,7 +32,10 @@
       "base_prediction": "\\boxed{B}",
       "skill_prediction": "\\boxed{B}",
       "base_correct": true,
-      "skill_correct": true
+      "skill_correct": true,
+      "base_timed_out": false,
+      "skill_timed_out": false,
+      "runner": "resolved_asof_test_script.py --batch-size 1"
     },
     {
       "id": "v13ra_003",
@@ -38,7 +46,10 @@
       "base_prediction": "\\boxed{B}",
       "skill_prediction": "\\boxed{C}",
       "base_correct": true,
-      "skill_correct": false
+      "skill_correct": false,
+      "base_timed_out": false,
+      "skill_timed_out": false,
+      "runner": "resolved_asof_test_script.py --batch-size 1"
     },
     {
       "id": "v13ra_004",
@@ -49,7 +60,10 @@
       "base_prediction": "\\boxed{B}",
       "skill_prediction": "\\boxed{B}",
       "base_correct": true,
-      "skill_correct": true
+      "skill_correct": true,
+      "base_timed_out": false,
+      "skill_timed_out": false,
+      "runner": "resolved_asof_test_script.py --batch-size 1"
     },
     {
       "id": "v13ra_005",
@@ -60,7 +74,10 @@
       "base_prediction": "\\boxed{F, G, H, I, J, K, L}",
       "skill_prediction": "\\boxed{H, I, J, K, L}",
       "base_correct": false,
-      "skill_correct": true
+      "skill_correct": true,
+      "base_timed_out": false,
+      "skill_timed_out": false,
+      "runner": "resolved_asof_test_script.py --batch-size 1"
     },
     {
       "id": "v13ra_006",
@@ -71,7 +88,52 @@
       "base_prediction": "\\boxed{A}",
       "skill_prediction": "\\boxed{F}",
       "base_correct": false,
-      "skill_correct": false
+      "skill_correct": false,
+      "base_timed_out": false,
+      "skill_timed_out": false,
+      "runner": "resolved_asof_test_script.py --batch-size 1"
+    },
+    {
+      "id": "v13ra_007",
+      "title": "What will Crude Oil (CL) hit__ by end of January?",
+      "category": "commodity_hit_levels",
+      "search_cutoff": "2026-02-01",
+      "answer_box": "\\boxed{B, C, G, J}",
+      "base_prediction": "\\boxed{B, C, G, J}",
+      "skill_prediction": "\\boxed{B, C, G, J}",
+      "base_correct": true,
+      "skill_correct": true,
+      "base_timed_out": false,
+      "skill_timed_out": false,
+      "runner": "resolved_asof light prompt"
+    },
+    {
+      "id": "v13ra_008",
+      "title": "What will Crude Oil (CL) settle at in January?",
+      "category": "commodity_bucket",
+      "search_cutoff": "2026-02-01",
+      "answer_box": "\\boxed{F}",
+      "base_prediction": "\\boxed{F}",
+      "skill_prediction": null,
+      "base_correct": true,
+      "skill_correct": false,
+      "base_timed_out": false,
+      "skill_timed_out": true,
+      "runner": "resolved_asof light prompt"
+    },
+    {
+      "id": "v13ra_009",
+      "title": "Tesla hits $400 or $500 first before end of January 2026?",
+      "category": "first_hit",
+      "search_cutoff": "2026-02-01",
+      "answer_box": "\\boxed{A}",
+      "base_prediction": "\\boxed{C}",
+      "skill_prediction": "\\boxed{C}",
+      "base_correct": false,
+      "skill_correct": false,
+      "base_timed_out": false,
+      "skill_timed_out": false,
+      "runner": "resolved_asof light prompt"
     }
   ]
 }
