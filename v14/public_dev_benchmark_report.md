@@ -6,6 +6,7 @@
 - Case count: `21`
 - Questions: `/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v14/public_dev_cases.json`
 - Ground truth: `/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v14/public_dev_ground_truth.json`
+- Detailed case markdown: `public_dev_case_results.md`
 
 ## base
 

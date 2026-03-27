@@ -21,6 +21,7 @@ QUESTIONS_PATH = ROOT / "public_dev_cases.json"
 GROUND_TRUTH_PATH = ROOT / "public_dev_ground_truth.json"
 RESULTS_PATH = ROOT / "public_dev_results.json"
 REPORT_PATH = ROOT / "public_dev_benchmark_report.md"
+CASE_RESULTS_REPORT_PATH = ROOT / "public_dev_case_results.md"
 BENCH_ROOT = ROOT.parent.parent / ".bench"
 BASE_HOME = BENCH_ROOT / "codex_home_base"
 SKILL_HOME = BENCH_ROOT / "codex_home_skill"
@@ -367,6 +368,7 @@ def render_report(results: dict[str, Any]) -> str:
         f"- Case count: `{results['case_count']}`",
         f"- Questions: `{QUESTIONS_PATH}`",
         f"- Ground truth: `{GROUND_TRUTH_PATH}`",
+        f"- Detailed case markdown: `{CASE_RESULTS_REPORT_PATH.name}`",
         "",
     ]
     for mode_name in ["base", "skill"]:
@@ -419,6 +421,89 @@ def render_report(results: dict[str, Any]) -> str:
         track = next(case["track"] for case in results["cases"] if case["id"] == case_id)
         lines.append(f"| `{case_id}` | `{track}` | `{base_mark}` | `{skill_mark}` |")
     lines.append("")
+    return "\n".join(lines)
+
+
+def render_case_results(
+    results: dict[str, Any],
+    cases: list[dict[str, Any]],
+    truth_map: dict[str, dict[str, Any]],
+) -> str:
+    base_cases = {case["id"]: case for case in results["runs"].get("base", {}).get("cases", [])}
+    skill_cases = {case["id"]: case for case in results["runs"].get("skill", {}).get("cases", [])}
+    lines = [
+        "# v14 Public Dev Case Results",
+        "",
+        "This markdown expands every evaluated case with the question, ground truth,",
+        "and the `codex only` vs `codex + skill` outputs.",
+        "",
+        f"- Timestamp: `{results['timestamp']}`",
+        f"- Model: `{results['model']}`",
+        f"- Reasoning effort: `{results['reasoning_effort']}`",
+        f"- Case count: `{results['case_count']}`",
+        "",
+    ]
+
+    for case in cases:
+        truth = truth_map[case["id"]]
+        base = base_cases.get(case["id"])
+        skill = skill_cases.get(case["id"])
+        lines.extend(
+            [
+                f"## {case['id']} — {case['title']}",
+                "",
+                f"- Track: `{case['track']}`",
+                f"- Truth type: `{case['truth_type']}`",
+                f"- Task family: `{case['task_family']}`",
+                "",
+                "Question:",
+                "```text",
+                case["question"],
+                "```",
+                "",
+            ]
+        )
+
+        if case.get("options"):
+            lines.append("Options:")
+            for option in case["options"]:
+                lines.append(f"- `{option['label']}`: {option['text']}")
+            lines.append("")
+
+        lines.append("Ground truth:")
+        lines.append("```json")
+        lines.append(json.dumps(truth["canonical_answer"], indent=2, ensure_ascii=False))
+        lines.append("```")
+        lines.append("")
+
+        if base:
+            lines.append("`codex only`:")
+            lines.append("```json")
+            lines.append(json.dumps(base["prediction"], indent=2, ensure_ascii=False))
+            lines.append("```")
+            lines.append(
+                f"- Exact-primary correct: `{'yes' if base['exact_primary_correct'] else 'no'}`"
+            )
+            lines.append(f"- Weighted score: `{base['weighted_score']:.2%}`")
+            lines.append("Field results:")
+            for field, matched in base["field_results"].items():
+                lines.append(f"- `{field}`: `{'match' if matched else 'mismatch'}`")
+            lines.append("")
+
+        if skill:
+            lines.append("`codex + skill`:")
+            lines.append("```json")
+            lines.append(json.dumps(skill["prediction"], indent=2, ensure_ascii=False))
+            lines.append("```")
+            lines.append(
+                f"- Exact-primary correct: `{'yes' if skill['exact_primary_correct'] else 'no'}`"
+            )
+            lines.append(f"- Weighted score: `{skill['weighted_score']:.2%}`")
+            lines.append("Field results:")
+            for field, matched in skill["field_results"].items():
+                lines.append(f"- `{field}`: `{'match' if matched else 'mismatch'}`")
+            lines.append("")
+
     return "\n".join(lines)
 
 
@@ -482,8 +567,10 @@ def main() -> None:
 
     RESULTS_PATH.write_text(json.dumps(results, indent=2, ensure_ascii=False) + "\n")
     REPORT_PATH.write_text(render_report(results))
+    CASE_RESULTS_REPORT_PATH.write_text(render_case_results(results, cases, truth_map))
     print(f"wrote {RESULTS_PATH}")
     print(f"wrote {REPORT_PATH}")
+    print(f"wrote {CASE_RESULTS_REPORT_PATH}")
 
 
 if __name__ == "__main__":
