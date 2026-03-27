@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 import os
 import re
@@ -46,6 +47,14 @@ RUNS = [
     RunConfig(name="base", codex_home=BASE_HOME),
     RunConfig(name="skill", codex_home=SKILL_HOME),
 ]
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--batch-size", type=int, default=5)
+    parser.add_argument("--case-ids", nargs="*")
+    parser.add_argument("--timeout-seconds", type=int, default=TIMEOUT_SECONDS)
+    return parser.parse_args()
 
 
 def resolve_api_key() -> str:
@@ -133,6 +142,7 @@ def run_codex_batch(
     output_path: Path,
     prompt: str,
     api_key: str,
+    timeout_seconds: int,
 ) -> dict[str, Any]:
     cmd = [
         "codex",
@@ -162,7 +172,7 @@ def run_codex_batch(
         capture_output=True,
         text=True,
         env=env,
-        timeout=TIMEOUT_SECONDS,
+        timeout=timeout_seconds,
         check=False,
     )
     duration = round(time.time() - started, 2)
@@ -197,10 +207,19 @@ def run_codex_batch(
 
 
 def main() -> None:
+    args = parse_args()
     api_key = resolve_api_key()
     questions = load_json(QUESTIONS_PATH)["cases"]
+    if args.case_ids:
+        case_map = {item["id"]: item for item in questions}
+        missing = [case_id for case_id in args.case_ids if case_id not in case_map]
+        if missing:
+            raise SystemExit(f"Unknown case IDs: {', '.join(missing)}")
+        questions = [case_map[case_id] for case_id in args.case_ids]
     truth_map = {item["id"]: item for item in load_json(GROUND_TRUTH_PATH)["cases"]}
-    batches = [questions[:5], questions[5:10], questions[10:]]
+    batches = [
+        questions[i : i + args.batch_size] for i in range(0, len(questions), args.batch_size)
+    ]
 
     timestamp = time.strftime("%Y%m%d-%H%M%S")
     out_dir = BENCH_DIR / f"v13-resolved-asof-results-{timestamp}"
@@ -234,6 +253,7 @@ def main() -> None:
                     output_path=state["run_dir"] / f"batch_{batch_index}.json",
                     prompt=build_prompt(batch_cases, batch_name=f"batch_{batch_index}"),
                     api_key=api_key,
+                    timeout_seconds=args.timeout_seconds,
                 )
                 future_map[future] = run.name
             for future, run_name in future_map.items():

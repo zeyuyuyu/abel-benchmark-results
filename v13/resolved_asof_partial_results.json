@@ -1,0 +1,77 @@
+{
+  "timestamp": "2026-03-27T19:22:28+08:00",
+  "benchmark": "v13_resolved_asof_open_book_partial",
+  "case_count": 6,
+  "summary": {
+    "base_correct": 4,
+    "skill_correct": 4
+  },
+  "cases": [
+    {
+      "id": "v13ra_001",
+      "title": "Bank of Brazil decision in January?",
+      "category": "central_bank_decision",
+      "search_cutoff": "2026-01-27",
+      "answer_box": "\\boxed{A}",
+      "base_prediction": "\\boxed{A}",
+      "skill_prediction": "\\boxed{A}",
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "v13ra_002",
+      "title": "At close of business on 23 January 2026, will the most recently announced Bank of Japan (BOJ) \"uncollateralized overnight call [interest] rate\" be lower, the same, or higher than it was at close of business on 19 December 2025?",
+      "category": "central_bank_decision",
+      "search_cutoff": "2026-01-23",
+      "answer_box": "\\boxed{B}",
+      "base_prediction": "\\boxed{B}",
+      "skill_prediction": "\\boxed{B}",
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "v13ra_003",
+      "title": "Reserve Bank of Australia Decision in February",
+      "category": "central_bank_decision",
+      "search_cutoff": "2026-02-03",
+      "answer_box": "\\boxed{B}",
+      "base_prediction": "\\boxed{B}",
+      "skill_prediction": "\\boxed{C}",
+      "base_correct": true,
+      "skill_correct": false
+    },
+    {
+      "id": "v13ra_004",
+      "title": "At close of business on 5 February 2026, will the most recently announced European Central Bank (ECB) \"Deposit facility\" interest rate be lower, the same, or higher than it was at close of business on 18 December 2025?",
+      "category": "central_bank_decision",
+      "search_cutoff": "2026-02-05",
+      "answer_box": "\\boxed{B}",
+      "base_prediction": "\\boxed{B}",
+      "skill_prediction": "\\boxed{B}",
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "v13ra_005",
+      "title": "Gold (GC) above ___ end of January?",
+      "category": "commodity_thresholds",
+      "search_cutoff": "2026-02-01",
+      "answer_box": "\\boxed{H, I, J, K, L}",
+      "base_prediction": "\\boxed{F, G, H, I, J, K, L}",
+      "skill_prediction": "\\boxed{H, I, J, K, L}",
+      "base_correct": false,
+      "skill_correct": true
+    },
+    {
+      "id": "v13ra_006",
+      "title": "What will Gold (GC) settle at in January?",
+      "category": "commodity_bucket",
+      "search_cutoff": "2026-02-01",
+      "answer_box": "\\boxed{E}",
+      "base_prediction": "\\boxed{A}",
+      "skill_prediction": "\\boxed{F}",
+      "base_correct": false,
+      "skill_correct": false
+    }
+  ]
+}
