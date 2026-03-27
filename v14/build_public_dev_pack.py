@@ -1123,6 +1123,29 @@ def load_seeds() -> list[dict]:
     return data["cases"]
 
 
+def render_case_materials(materials: list[dict]) -> list[str]:
+    lines = ["Materials:"]
+    for item in materials:
+        lines.extend(
+            [
+                f"- `{item['type']}` — {item['title']}",
+                "```text",
+                item["content"],
+                "```",
+            ]
+        )
+    return lines
+
+
+def render_case_options(options: list[dict] | None) -> list[str]:
+    if not options:
+        return []
+    lines = ["Options:"]
+    for item in options:
+        lines.append(f"- `{item['label']}`: {item['text']}")
+    return lines
+
+
 def build_cases_and_truth() -> tuple[dict, dict, str]:
     seeds = load_seeds()
     seed_ids = {case["id"] for case in seeds}
@@ -1184,10 +1207,49 @@ def build_cases_and_truth() -> tuple[dict, dict, str]:
         "cases": truths,
     }
 
-    lines = ["# v14 Public Dev Cases", "", "| ID | Track | Truth | Title |", "|---|---|---|---|"]
+    truth_map = {item["id"]: item for item in truths}
+    lines = [
+        "# v14 Public Dev Cases",
+        "",
+        "This markdown expands every public-dev case with its question and ground truth.",
+        "",
+    ]
     for case in cases:
-        lines.append(
-            f"| `{case['id']}` | `{case['track']}` | `{case['truth_type']}` | {case['title']} |"
+        truth = truth_map[case["id"]]
+        lines.extend(
+            [
+                f"## {case['id']} — {case['title']}",
+                "",
+                f"- Track: `{case['track']}`",
+                f"- Truth type: `{case['truth_type']}`",
+                f"- Prompt style: `{case['prompt_style']}`",
+                f"- Task family: `{case['task_family']}`",
+                "",
+                "Scenario:",
+                "```text",
+                case["scenario"],
+                "```",
+                "",
+                "Question:",
+                "```text",
+                case["question"],
+                "```",
+                "",
+            ]
+        )
+        option_lines = render_case_options(case.get("options"))
+        if option_lines:
+            lines.extend(option_lines + [""])
+        lines.extend(render_case_materials(case["instantiated_inputs"]))
+        lines.extend(
+            [
+                "",
+                "Ground truth:",
+                "```json",
+                json.dumps(truth["canonical_answer"], indent=2, ensure_ascii=False),
+                "```",
+                "",
+            ]
         )
     markdown = "\n".join(lines) + "\n"
     return casebook, ground_truth, markdown

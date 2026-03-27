@@ -21,7 +21,7 @@ v13 is the first benchmark in this repo that is intentionally designed to avoid 
 - Official `FutureX-Online` cases resolve by matching the same `id` after it lands in `FutureX-Past`.
 - Custom live cases resolve through `yfinance` daily data using explicit rules stored in `ground_truth.json`.
 - No answer is written into `questions.json`.
-- `cases.md` intentionally omits the answer key.
+- `cases.md` expands every case for human review, but live-case ground truth stays blank until later resolution.
 
 ## Why This Is Better Than FutureX-Past For The Main Benchmark
 
@@ -38,6 +38,6 @@ v13 is the first benchmark in this repo that is intentionally designed to avoid 
 
 ## Reproducibility
 
-- Build package: `python3 /Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v13/build_live_casebook.py`
-- Run live A/B: `python3 /Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v13/test_script.py`
-- Backfill scores later: `python3 /Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v13/rescore_live.py`
+- Build package: `python3 build_live_casebook.py`
+- Run live A/B: `python3 test_script.py`
+- Backfill scores later: `python3 rescore_live.py`

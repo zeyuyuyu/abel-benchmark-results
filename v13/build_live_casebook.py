@@ -13,7 +13,7 @@ import yfinance as yf
 from datasets import load_dataset
 
 
-ROOT = Path("/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v13")
+ROOT = Path(__file__).resolve().parent
 ARTIFACTS_DIR = ROOT / "artifacts"
 QUESTIONS_PATH = ROOT / "questions.json"
 GROUND_TRUTH_PATH = ROOT / "ground_truth.json"
@@ -616,20 +616,64 @@ def build_custom_cases(snapshot: dict[str, Any]) -> list[dict[str, Any]]:
     return custom_cases
 
 
-def render_cases_markdown(questions: list[dict[str, Any]]) -> str:
+def render_case_options(options: list[dict[str, str]] | None) -> list[str]:
+    if not options:
+        return []
+    lines = ["Options:"]
+    for item in options:
+        lines.append(f"- `{item['label']}`: {item['text']}")
+    return lines
+
+
+def render_cases_markdown(
+    questions: list[dict[str, Any]], ground_truth: list[dict[str, Any]]
+) -> str:
+    truth_map = {item["id"]: item for item in ground_truth}
     lines = [
         "# v13 Live-Only Finance Cases",
         "",
-        "This index intentionally excludes answers. Ground truth stays separate in `ground_truth.json` and is backfilled only through third-party resolution rules.",
+        "This is the human-readable casebook for the live-only main benchmark.",
+        "",
+        "- Every case is expanded below.",
+        "- Because these are live cases, the markdown leaves ground truth blank unless the case has already been resolved later.",
+        "- The machine-readable resolution rules still live in `ground_truth.json`.",
         "",
         f"Today context: `{TODAY_CONTEXT}`",
         "",
-        "| Case ID | Source | Category | End Time | Title |",
-        "|---------|--------|----------|----------|-------|",
     ]
     for case in questions:
-        lines.append(
-            f"| `{case['id']}` | `{case['source_type']}` | `{case['category']}` | `{case['end_time']}` | {case['title']} |"
+        truth = truth_map[case["id"]]
+        gt_display = truth["answer_box"] if truth["status"] == "resolved" else ""
+        lines.extend(
+            [
+                f"## {case['id']} — {case['title']}",
+                "",
+                f"- Source: `{case['source_type']}`",
+                f"- Category: `{case['category']}`",
+                f"- Pattern: `{case['futurex_pattern']}`",
+                f"- End time: `{case['end_time']}`",
+                f"- Answer format: `{case['answer_format']}`",
+                "",
+                "Question:",
+                "```text",
+                case["question"],
+                "```",
+                "",
+            ]
+        )
+        option_lines = render_case_options(case["options"])
+        if option_lines:
+            lines.extend(option_lines + [""])
+        lines.extend(
+            [
+                "Prompt:",
+                "```text",
+                case["prompt"],
+                "```",
+                "",
+                f"Ground truth: `{gt_display}`",
+                "",
+            ]
         )
     return "\n".join(lines) + "\n"
 
@@ -660,7 +704,7 @@ def render_spec_markdown(question_count: int) -> str:
             "- Official `FutureX-Online` cases resolve by matching the same `id` after it lands in `FutureX-Past`.",
             "- Custom live cases resolve through `yfinance` daily data using explicit rules stored in `ground_truth.json`.",
             "- No answer is written into `questions.json`.",
-            "- `cases.md` intentionally omits the answer key.",
+            "- `cases.md` expands every case for human review, but live-case ground truth stays blank until later resolution.",
             "",
             "## Why This Is Better Than FutureX-Past For The Main Benchmark",
             "",
@@ -677,9 +721,9 @@ def render_spec_markdown(question_count: int) -> str:
             "",
             "## Reproducibility",
             "",
-            "- Build package: `python3 /Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v13/build_live_casebook.py`",
-            "- Run live A/B: `python3 /Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v13/test_script.py`",
-            "- Backfill scores later: `python3 /Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v13/rescore_live.py`",
+            "- Build package: `python3 build_live_casebook.py`",
+            "- Run live A/B: `python3 test_script.py`",
+            "- Backfill scores later: `python3 rescore_live.py`",
         ]
     ) + "\n"
 
@@ -770,7 +814,7 @@ def main() -> None:
         + "\n",
         encoding="utf-8",
     )
-    CASES_PATH.write_text(render_cases_markdown(questions), encoding="utf-8")
+    CASES_PATH.write_text(render_cases_markdown(questions, ground_truth), encoding="utf-8")
     SPEC_PATH.write_text(render_spec_markdown(len(questions)), encoding="utf-8")
     REFERENCE_SNAPSHOT_PATH.write_text(
         json.dumps(snapshot, indent=2, ensure_ascii=False) + "\n",

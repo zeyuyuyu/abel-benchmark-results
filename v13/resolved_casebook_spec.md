@@ -27,3 +27,7 @@ This is a quick-scoring companion subset for v13.
 - `resolved_cases.md`
 - `artifacts/futurex_past_resolved_rows.json`
 - `resolved_test_script.py`
+
+## Markdown Policy
+
+- `resolved_cases.md` expands every case and includes ground truth because this subset is already resolved.

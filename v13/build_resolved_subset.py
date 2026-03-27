@@ -11,7 +11,7 @@ from typing import Any
 from datasets import load_dataset
 
 
-ROOT = Path("/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v13")
+ROOT = Path(__file__).resolve().parent
 ARTIFACTS_DIR = ROOT / "artifacts"
 QUESTIONS_PATH = ROOT / "resolved_questions.json"
 GROUND_TRUTH_PATH = ROOT / "resolved_ground_truth.json"
@@ -116,7 +116,9 @@ def normalize_tokens(value: Any) -> list[str]:
     return [str(value).strip()]
 
 
-def build_markdown(questions: list[dict[str, Any]]) -> str:
+def build_markdown(
+    questions: list[dict[str, Any]], ground_truth_map: dict[str, dict[str, Any]]
+) -> str:
     lines = [
         "# v13 Resolved Companion Cases",
         "",
@@ -125,12 +127,26 @@ def build_markdown(questions: list[dict[str, Any]]) -> str:
         "- Use it for fast regression and category-level scoring.",
         "- Do not treat it as the main benchmark, because the answers are already publicly resolvable.",
         "",
-        "| Case ID | Category | Pattern | Resolved Around | Title |",
-        "|---------|----------|---------|-----------------|-------|",
     ]
     for case in questions:
-        lines.append(
-            f"| `{case['id']}` | `{case['category']}` | `{case['futurex_pattern']}` | `{case['resolved_around']}` | {case['title']} |"
+        truth = ground_truth_map[case["id"]]
+        lines.extend(
+            [
+                f"## {case['id']} — {case['title']}",
+                "",
+                f"- Category: `{case['category']}`",
+                f"- Pattern: `{case['futurex_pattern']}`",
+                f"- Resolved around: `{case['resolved_around']}`",
+                f"- Answer format: `{case['answer_format']}`",
+                "",
+                "Prompt:",
+                "```text",
+                case["prompt"],
+                "```",
+                "",
+                f"Ground truth: `{truth['answer_box']}`",
+                "",
+            ]
         )
     return "\n".join(lines) + "\n"
 
@@ -167,6 +183,10 @@ def build_spec(question_count: int) -> str:
             "- `resolved_cases.md`",
             "- `artifacts/futurex_past_resolved_rows.json`",
             "- `resolved_test_script.py`",
+            "",
+            "## Markdown Policy",
+            "",
+            "- `resolved_cases.md` expands every case and includes ground truth because this subset is already resolved.",
         ]
     ) + "\n"
 
@@ -240,7 +260,8 @@ def main() -> None:
         json.dumps(source_rows, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
-    CASES_PATH.write_text(build_markdown(questions), encoding="utf-8")
+    ground_truth_map = {item["id"]: item for item in ground_truth}
+    CASES_PATH.write_text(build_markdown(questions, ground_truth_map), encoding="utf-8")
     SPEC_PATH.write_text(build_spec(len(questions)), encoding="utf-8")
     print(f"Built v13 resolved companion with {len(questions)} cases.")
 
