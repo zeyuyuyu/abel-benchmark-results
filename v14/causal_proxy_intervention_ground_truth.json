@@ -1,0 +1,507 @@
+{
+  "version": "v14-alpha-causal-proxy-intervention-ground-truth",
+  "split": "public_dev",
+  "case_count": 16,
+  "notes": [
+    "This answer key is for the focused causal/proxy/intervention pack, not the main 21-case v14 pack.",
+    "Scoring should use per-case field weights and not a single exact-match scalar only."
+  ],
+  "cases": [
+    {
+      "id": "v14cpi_001",
+      "track": "finance_and_business_causal_reasoning",
+      "truth_type": "hybrid_structured_review",
+      "canonical_answer": {
+        "label": "A",
+        "primary_proxy_family": "financing_conditions_and_mortgage_affordability",
+        "falsifier": "orders_keep_deteriorating_even_if_rate_and_credit_proxies_normalize"
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "primary_proxy_family",
+          "falsifier"
+        ],
+        "field_weights": {
+          "label": 0.4,
+          "primary_proxy_family": 0.35,
+          "falsifier": 0.25
+        }
+      },
+      "evidence_summary": [
+        "Mortgage affordability worsened materially while traffic and visits stayed roughly intact.",
+        "Credit and rate signals moved sharply, which fits hesitation around financing more than collapse in underlying shopper interest."
+      ],
+      "common_failure_modes": [
+        "Treating a modest cancellation increase as proof of broad demand collapse.",
+        "Ignoring the sharper movement in mortgage-rate and credit proxies."
+      ]
+    },
+    {
+      "id": "v14cpi_002",
+      "track": "finance_and_business_causal_reasoning",
+      "truth_type": "hybrid_structured_review",
+      "canonical_answer": {
+        "label": "B",
+        "primary_proxy_family": "retail_liquidity_and_alt_beta",
+        "falsifier": "project_specific_activity_breaks_while_broad_alt_liquidity_normalizes"
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "primary_proxy_family",
+          "falsifier"
+        ],
+        "field_weights": {
+          "label": 0.4,
+          "primary_proxy_family": 0.35,
+          "falsifier": 0.25
+        }
+      },
+      "evidence_summary": [
+        "Majors were stable while lower-liquidity books and alt funding deteriorated sharply.",
+        "Project-specific usage stayed flat, which argues against a token-specific adoption collapse."
+      ],
+      "common_failure_modes": [
+        "Projecting a broad BTC/ETH narrative onto a move that is concentrated in low-liquidity alt exposure.",
+        "Assuming a hack or exploit without any evidence packet support."
+      ]
+    },
+    {
+      "id": "v14cpi_003",
+      "track": "finance_and_business_causal_reasoning",
+      "truth_type": "hybrid_structured_review",
+      "canonical_answer": {
+        "label": "A",
+        "primary_proxy_family": "fuel_and_input_cost_pressure",
+        "falsifier": "forward_bookings_or_unit_revenue_break_while_fuel_pressure_eases"
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "primary_proxy_family",
+          "falsifier"
+        ],
+        "field_weights": {
+          "label": 0.4,
+          "primary_proxy_family": 0.35,
+          "falsifier": 0.25
+        }
+      },
+      "evidence_summary": [
+        "The sharpest moving variables are fuel-linked while bookings and unit-revenue guidance are stable.",
+        "There is no evidence packet support for labor or FX being the dominant marginal driver."
+      ],
+      "common_failure_modes": [
+        "Assuming all airline weakness is demand-driven without checking booking and unit-revenue evidence.",
+        "Overweighting crude headlines without relating them to the actual airline cost channel."
+      ]
+    },
+    {
+      "id": "v14cpi_004",
+      "track": "finance_and_business_causal_reasoning",
+      "truth_type": "hybrid_structured_review",
+      "canonical_answer": {
+        "label": "A",
+        "primary_proxy_family": "financing_conditions_and_duration_pressure",
+        "falsifier": "renewal_or_churn_metrics_break_even_if_credit_and_rate_proxies_stabilize"
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "primary_proxy_family",
+          "falsifier"
+        ],
+        "field_weights": {
+          "label": 0.4,
+          "primary_proxy_family": 0.35,
+          "falsifier": 0.25
+        }
+      },
+      "evidence_summary": [
+        "Macro duration and credit-sensitive software factors moved sharply while company operating metrics were largely intact.",
+        "The packet does not contain company-specific failure evidence strong enough to outrank the factor move."
+      ],
+      "common_failure_modes": [
+        "Inventing product trouble from price action alone.",
+        "Ignoring the explicit sector-factor de-rating in the evidence packet."
+      ]
+    },
+    {
+      "id": "v14cpi_005",
+      "track": "finance_and_business_causal_reasoning",
+      "truth_type": "hybrid_structured_review",
+      "canonical_answer": {
+        "label": "A",
+        "bridge_noise": "soybean_rally",
+        "rationale_tag": "company_cost_structure_does_not_run_through_soybeans"
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "bridge_noise",
+          "rationale_tag"
+        ],
+        "field_weights": {
+          "label": 0.45,
+          "bridge_noise": 0.35,
+          "rationale_tag": 0.2
+        }
+      },
+      "evidence_summary": [
+        "The note explicitly says soy is not a material input for the focal brand mix.",
+        "Freight, resin, palm oil, and cocoa all sit more directly on the company cost path."
+      ],
+      "common_failure_modes": [
+        "Equating any agricultural headline with causal relevance to a food stock.",
+        "Picking the most visible market move instead of the cleanest company-specific transmission channel."
+      ]
+    },
+    {
+      "id": "v14cpi_006",
+      "track": "graph_and_mechanism",
+      "truth_type": "hybrid_structured_review",
+      "canonical_answer": {
+        "label": "C",
+        "mechanism": "valuation_duration_and_refinancing_channel",
+        "supportability": "supported_but_indirect"
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "mechanism",
+          "supportability"
+        ],
+        "field_weights": {
+          "label": 0.4,
+          "mechanism": 0.35,
+          "supportability": 0.25
+        }
+      },
+      "evidence_summary": [
+        "The packet rules out direct deposit exposure, but a broader risk and financing channel remains plausible.",
+        "High-yield spreads widened and duration-sensitive software names sold off together."
+      ],
+      "common_failure_modes": [
+        "Assuming no path simply because the company lacks direct bank exposure.",
+        "Inventing a balance-sheet crisis despite the explicit net-cash note."
+      ]
+    },
+    {
+      "id": "v14cpi_007",
+      "track": "graph_and_mechanism",
+      "truth_type": "hybrid_structured_review",
+      "canonical_answer": {
+        "label": "C",
+        "transmission_strength": "weak_near_term",
+        "blocking_factor": "fixed_contracts_and_low_cost_share"
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "transmission_strength",
+          "blocking_factor"
+        ],
+        "field_weights": {
+          "label": 0.4,
+          "transmission_strength": 0.3,
+          "blocking_factor": 0.3
+        }
+      },
+      "evidence_summary": [
+        "The cost share is small and the contract coverage delays pass-through.",
+        "The packet explicitly points to larger variable exposures elsewhere in the cost stack."
+      ],
+      "common_failure_modes": [
+        "Overweighting the most dramatic commodity headline without checking cost share and contract timing.",
+        "Calling the move impossible to assess despite clear packet constraints."
+      ]
+    },
+    {
+      "id": "v14cpi_008",
+      "track": "natural_event_causality",
+      "truth_type": "expert_labeled",
+      "canonical_answer": {
+        "label": "C",
+        "primary_driver": "fda_advisory_panel_vote",
+        "amplifier": "short_squeeze_dynamics"
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "primary_driver",
+          "amplifier"
+        ],
+        "field_weights": {
+          "label": 0.4,
+          "primary_driver": 0.35,
+          "amplifier": 0.25
+        }
+      },
+      "evidence_summary": [
+        "Most of the move occurred immediately after the regulatory event and before the rumor appeared.",
+        "Short interest can explain amplification without replacing the primary catalyst."
+      ],
+      "common_failure_modes": [
+        "Treating the later rumor as primary despite the timing mismatch.",
+        "Collapsing primary driver and amplifier into the same answer."
+      ]
+    },
+    {
+      "id": "v14cpi_009",
+      "track": "industrial_intervention_and_estimation",
+      "truth_type": "expert_labeled",
+      "canonical_answer": {
+        "label": "C",
+        "identified": false,
+        "blocking_issue": "bundled_intervention_and_targeted_rollout"
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "identified",
+          "blocking_issue"
+        ],
+        "field_weights": {
+          "label": 0.45,
+          "identified": 0.3,
+          "blocking_issue": 0.25
+        }
+      },
+      "evidence_summary": [
+        "Price and comp changed together on the same weak regions, so the packet does not isolate price alone.",
+        "There is no randomization or staggered variation to separate the two levers cleanly."
+      ],
+      "common_failure_modes": [
+        "Treating any untreated region as a valid control despite targeted rollout.",
+        "Ignoring the incentive-plan rewrite because the price cut feels more salient."
+      ]
+    },
+    {
+      "id": "v14cpi_010",
+      "track": "industrial_intervention_and_estimation",
+      "truth_type": "expert_labeled",
+      "canonical_answer": {
+        "label": "B",
+        "design": "matched_or_staggered_difference_in_differences_event_study",
+        "main_threat": "targeted_rollout_and_regression_to_mean"
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "design",
+          "main_threat"
+        ],
+        "field_weights": {
+          "label": 0.4,
+          "design": 0.35,
+          "main_threat": 0.25
+        }
+      },
+      "evidence_summary": [
+        "The rollout is non-random and correlated with pre-period failure levels.",
+        "A DID/event-study framing is the cleanest public-dev answer because it explicitly tests pretrends and uses staggered structure when available."
+      ],
+      "common_failure_modes": [
+        "Choosing before/after because failures visibly fell.",
+        "Ignoring regression to the mean in a targeted rollout."
+      ]
+    },
+    {
+      "id": "v14cpi_011",
+      "track": "industrial_intervention_and_estimation",
+      "truth_type": "expert_labeled",
+      "canonical_answer": {
+        "label": "C",
+        "identified": false,
+        "blocking_issue": "selection_on_latent_purchase_propensity"
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "identified",
+          "blocking_issue"
+        ],
+        "field_weights": {
+          "label": 0.45,
+          "identified": 0.3,
+          "blocking_issue": 0.25
+        }
+      },
+      "evidence_summary": [
+        "Treatment assignment depends on an internal score that the analyst does not fully observe.",
+        "The untreated pool differs on the same latent propensity that likely affects future purchases."
+      ],
+      "common_failure_modes": [
+        "Assuming any observed covariates guarantee ignorability.",
+        "Treating stable merchant mix as a substitute for assignment information."
+      ]
+    },
+    {
+      "id": "v14cpi_012",
+      "track": "industrial_intervention_and_estimation",
+      "truth_type": "expert_labeled",
+      "canonical_answer": {
+        "label": "C",
+        "identified": false,
+        "blocking_issue": "simultaneous_temporary_staffing_change"
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "identified",
+          "blocking_issue"
+        ],
+        "field_weights": {
+          "label": 0.45,
+          "identified": 0.3,
+          "blocking_issue": 0.25
+        }
+      },
+      "evidence_summary": [
+        "The packet changes operational capacity and expedite rules together in the same window.",
+        "Without staggered adoption or a holdout, attribution to expedite policy alone is not supportable."
+      ],
+      "common_failure_modes": [
+        "Treating the bigger named intervention as the only causal lever.",
+        "Assuming a good outcome metric implies clean identification."
+      ]
+    },
+    {
+      "id": "v14cpi_013",
+      "track": "agentic_live_analysis",
+      "truth_type": "hybrid_structured_review",
+      "canonical_answer": {
+        "label": "B",
+        "stress_target": "financing_conditions",
+        "readout": "order_intake_and_cancellations"
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "stress_target",
+          "readout"
+        ],
+        "field_weights": {
+          "label": 0.4,
+          "stress_target": 0.35,
+          "readout": 0.25
+        }
+      },
+      "evidence_summary": [
+        "The open causal split is financing friction versus true demand softness.",
+        "Orders and cancellations are the closest downstream variables for distinguishing the two stories after stressing financing conditions."
+      ],
+      "common_failure_modes": [
+        "Choosing a lever unrelated to the live uncertainty.",
+        "Looking at margin before testing the order-flow channel that actually separates the stories."
+      ]
+    },
+    {
+      "id": "v14cpi_014",
+      "track": "agentic_live_analysis",
+      "truth_type": "hybrid_structured_review",
+      "canonical_answer": {
+        "label": "A",
+        "stress_target": "jet_fuel_costs",
+        "readout": "unit_margin_or_eps_sensitivity"
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "stress_target",
+          "readout"
+        ],
+        "field_weights": {
+          "label": 0.4,
+          "stress_target": 0.35,
+          "readout": 0.25
+        }
+      },
+      "evidence_summary": [
+        "The packet already shows stable demand-side evidence and a large energy move.",
+        "Margin and EPS sensitivity are the most direct downstream readouts of a fuel-cost stress."
+      ],
+      "common_failure_modes": [
+        "Choosing a demand-side probe despite the packet already showing stable booking evidence.",
+        "Picking a variable that is not downstream of the suspected cost channel."
+      ]
+    },
+    {
+      "id": "v14cpi_015",
+      "track": "agentic_live_analysis",
+      "truth_type": "hybrid_structured_review",
+      "canonical_answer": {
+        "label": "B",
+        "stress_target": "customer_inventory_reset",
+        "readout": "shipments_and_backlog_conversion"
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "stress_target",
+          "readout"
+        ],
+        "field_weights": {
+          "label": 0.4,
+          "stress_target": 0.35,
+          "readout": 0.25
+        }
+      },
+      "evidence_summary": [
+        "Customer inventory and build schedules are the variables most directly tied to the supplier\u2019s shipment softness in the packet.",
+        "Lithium softness alone does not explain a slower backlog conversion nearly as cleanly."
+      ],
+      "common_failure_modes": [
+        "Defaulting to the flashier commodity move instead of the more direct downstream transmission path.",
+        "Reading margin before checking the shipment path that actually distinguishes the stories."
+      ]
+    },
+    {
+      "id": "v14cpi_016",
+      "track": "agentic_live_analysis",
+      "truth_type": "hybrid_structured_review",
+      "canonical_answer": {
+        "label": "A",
+        "stress_target": "incentive_policy_generosity",
+        "readout": "lead_to_booking_conversion"
+      },
+      "accepted_alternatives": [],
+      "scoring_rubric": {
+        "primary_fields": [
+          "label",
+          "stress_target",
+          "readout"
+        ],
+        "field_weights": {
+          "label": 0.4,
+          "stress_target": 0.35,
+          "readout": 0.25
+        }
+      },
+      "evidence_summary": [
+        "The leading thesis is specifically about incentive generosity, so the cleanest challenge is to stress that lever and inspect the conversion step most directly tied to purchase economics.",
+        "Lead volume moved far less than conversion, which makes the conversion readout more decision-relevant than top-of-funnel traffic."
+      ],
+      "common_failure_modes": [
+        "Choosing a lever that is unrelated to the stated uncertainty.",
+        "Looking at margin instead of the funnel step most exposed to incentive economics."
+      ]
+    }
+  ]
+}

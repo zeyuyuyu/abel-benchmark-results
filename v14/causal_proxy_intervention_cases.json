@@ -1,0 +1,1632 @@
+{
+  "version": "v14-alpha-causal-proxy-intervention-cases",
+  "split": "public_dev",
+  "description": "Focused public-dev pack designed to be harder on proxy routing, bridge-noise rejection, intervention boundaries, and pressure-test design than the main 21-case v14 pack.",
+  "case_count": 16,
+  "notes": [
+    "Ground truth is separated into causal_proxy_intervention_ground_truth.json.",
+    "These cases are intentionally shaped to better expose skill advantages on causal/proxy/intervention tasks."
+  ],
+  "cases": [
+    {
+      "id": "v14cpi_001",
+      "split": "public_dev",
+      "track": "finance_and_business_causal_reasoning",
+      "source_family": [
+        "XFinBench",
+        "FinBen",
+        "Finance Agent"
+      ],
+      "task_family": "proxy_family_selection",
+      "generation_pipeline": "domain_knowledge_plus_news_to_structural_task",
+      "prompt_style": "analyst_memo",
+      "title": "Homebuilder Miss: Funding Stress Or Demand Softness?",
+      "scenario": "A morning note combines mortgage data, builder credit signals, order metrics, and website activity after a homebuilder stock selloff.",
+      "question": "Which proxy family should you prioritize to explain the move, and what evidence would most directly falsify that read?",
+      "inputs_needed": [
+        {
+          "type": "document_excerpt",
+          "description": "Morning note",
+          "required": true
+        },
+        {
+          "type": "table",
+          "description": "Market and operating snapshot",
+          "required": true
+        }
+      ],
+      "truth_type": "hybrid_structured_review",
+      "mode_compatibility": [
+        "model_only",
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "proxy_routing",
+        "event_reasoning",
+        "falsification"
+      ],
+      "slice_tags": [
+        "finance",
+        "proxy_routing",
+        "financing_conditions",
+        "falsification"
+      ],
+      "expected_output_schema": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "primary_proxy_family",
+          "falsifier"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "field_level_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "XFinBench",
+        "FinBen",
+        "Finance Agent"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Morning note",
+          "content": "The stock fell 11% after management guided to lower near-term orders. Analysts noted no major land or permitting update. Channel checks described buyer hesitation around monthly payments rather than reduced tour activity."
+        },
+        {
+          "type": "table",
+          "title": "Market and operating snapshot",
+          "content": "30-year mortgage rate: +55 bps over 6 weeks. Mortgage applications: -12%. Builder CDS: +38 bps. Website traffic: -1%. Model-home visits: flat. Cancellation rate: +1.2 points. Backlog burn: stable."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "primary_proxy_family",
+          "falsifier"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "Financing conditions and mortgage affordability are the cleaner proxy family."
+        },
+        {
+          "label": "B",
+          "text": "End-demand collapse is the cleaner proxy family."
+        },
+        {
+          "label": "C",
+          "text": "Land-supply constraints are the cleaner proxy family."
+        },
+        {
+          "label": "D",
+          "text": "Accounting noise is the cleaner proxy family."
+        }
+      ],
+      "paired_case_group": "proxy_vs_pressure_homebuilder"
+    },
+    {
+      "id": "v14cpi_002",
+      "split": "public_dev",
+      "track": "finance_and_business_causal_reasoning",
+      "source_family": [
+        "XFinBench",
+        "FinBen",
+        "Finance Agent"
+      ],
+      "task_family": "proxy_family_selection",
+      "generation_pipeline": "domain_knowledge_plus_news_to_structural_task",
+      "prompt_style": "analyst_memo",
+      "title": "Alt-Token Slump: Base-Asset Weakness Or Liquidity Drain?",
+      "scenario": "A crypto market packet compares majors, alt-token liquidity, on-chain activity, and exchange conditions after a sharp decline in a gaming token basket.",
+      "question": "Which proxy family is the cleaner starting point for the selloff, and what would most directly falsify that interpretation?",
+      "inputs_needed": [
+        {
+          "type": "document_excerpt",
+          "description": "Crypto desk note",
+          "required": true
+        },
+        {
+          "type": "table",
+          "description": "Cross-market snapshot",
+          "required": true
+        }
+      ],
+      "truth_type": "hybrid_structured_review",
+      "mode_compatibility": [
+        "model_only",
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "proxy_routing",
+        "event_reasoning",
+        "falsification"
+      ],
+      "slice_tags": [
+        "crypto",
+        "proxy_routing",
+        "liquidity",
+        "falsification"
+      ],
+      "expected_output_schema": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "primary_proxy_family",
+          "falsifier"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "field_level_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "XFinBench",
+        "FinBen",
+        "Finance Agent"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Crypto desk note",
+          "content": "BTC and ETH were nearly flat on the day, but gaming and lower-liquidity alt tokens sold off hard. No exploit, governance failure, or delisting notice was reported for the focal token."
+        },
+        {
+          "type": "table",
+          "title": "Cross-market snapshot",
+          "content": "BTC return: +0.3%. ETH return: +0.1%. Alt-token order-book depth: -35%. Perp funding on small tokens: sharply negative. Exchange maintenance on one retail-heavy venue: 2 hours. Game DAU: flat. On-chain fees for the project: flat."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "primary_proxy_family",
+          "falsifier"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "Base-asset adoption is the cleaner proxy family."
+        },
+        {
+          "label": "B",
+          "text": "Retail liquidity and alt-beta risk appetite are the cleaner proxy family."
+        },
+        {
+          "label": "C",
+          "text": "A project-specific protocol exploit is the cleaner proxy family."
+        },
+        {
+          "label": "D",
+          "text": "Institutional ETF flows are the cleaner proxy family."
+        }
+      ]
+    },
+    {
+      "id": "v14cpi_003",
+      "split": "public_dev",
+      "track": "finance_and_business_causal_reasoning",
+      "source_family": [
+        "BizBench",
+        "XFinBench",
+        "FinBen"
+      ],
+      "task_family": "proxy_family_selection",
+      "generation_pipeline": "domain_knowledge_plus_news_to_structural_task",
+      "prompt_style": "analyst_memo",
+      "title": "Airline Selloff: Fuel Shock Or Demand Crack?",
+      "scenario": "An airline equity drawdown arrives alongside a commodity move, while booking and traffic indicators are updated in the same note.",
+      "question": "Which proxy family should be treated as the primary causal read, and what would most clearly falsify it?",
+      "inputs_needed": [
+        {
+          "type": "document_excerpt",
+          "description": "Airline sector note",
+          "required": true
+        },
+        {
+          "type": "table",
+          "description": "Operating and market snapshot",
+          "required": true
+        }
+      ],
+      "truth_type": "hybrid_structured_review",
+      "mode_compatibility": [
+        "model_only",
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "proxy_routing",
+        "domain_knowledge",
+        "falsification"
+      ],
+      "slice_tags": [
+        "finance",
+        "input_costs",
+        "proxy_routing",
+        "falsification"
+      ],
+      "expected_output_schema": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "primary_proxy_family",
+          "falsifier"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "field_level_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "BizBench",
+        "XFinBench",
+        "FinBen"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Airline sector note",
+          "content": "The stock fell after a sharp move in energy markets. Management did not cut capacity or demand commentary, and no labor disruption was disclosed."
+        },
+        {
+          "type": "table",
+          "title": "Operating and market snapshot",
+          "content": "Jet fuel crack spread: +18%. Front-month crude: +11%. Forward bookings: +1%. Load factor guidance: unchanged. Unit revenue guidance: flat. Wage agreement updates: none. FX basket: flat."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "primary_proxy_family",
+          "falsifier"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "Fuel and input-cost pressure are the primary proxy family."
+        },
+        {
+          "label": "B",
+          "text": "End-demand weakness is the primary proxy family."
+        },
+        {
+          "label": "C",
+          "text": "Labor disruption is the primary proxy family."
+        },
+        {
+          "label": "D",
+          "text": "FX translation is the primary proxy family."
+        }
+      ],
+      "paired_case_group": "proxy_vs_pressure_airline"
+    },
+    {
+      "id": "v14cpi_004",
+      "split": "public_dev",
+      "track": "finance_and_business_causal_reasoning",
+      "source_family": [
+        "XFinBench",
+        "FinBen",
+        "Finance Agent"
+      ],
+      "task_family": "proxy_family_selection",
+      "generation_pipeline": "domain_knowledge_plus_news_to_structural_task",
+      "prompt_style": "analyst_memo",
+      "title": "Small-Cap Software De-Rate: Duration Pressure Or Product Trouble?",
+      "scenario": "A software stock sells off with a broader factor move while company-specific operating metrics are also reported.",
+      "question": "Which proxy family is the cleaner explanation for the move, and what would most directly falsify that read?",
+      "inputs_needed": [
+        {
+          "type": "document_excerpt",
+          "description": "Software note",
+          "required": true
+        },
+        {
+          "type": "table",
+          "description": "Factor and operating snapshot",
+          "required": true
+        }
+      ],
+      "truth_type": "hybrid_structured_review",
+      "mode_compatibility": [
+        "model_only",
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "proxy_routing",
+        "event_reasoning",
+        "falsification"
+      ],
+      "slice_tags": [
+        "finance",
+        "credit",
+        "duration",
+        "proxy_routing"
+      ],
+      "expected_output_schema": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "primary_proxy_family",
+          "falsifier"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "field_level_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "XFinBench",
+        "FinBen",
+        "Finance Agent"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Software note",
+          "content": "The company reiterated annual ARR guidance and disclosed no outage, product recall, or major customer loss. The stock fell alongside a broader selloff in long-duration software names."
+        },
+        {
+          "type": "table",
+          "title": "Factor and operating snapshot",
+          "content": "High-yield OAS: +75 bps. 10Y real yield: +19 bps. Small-cap software basket: -11%. ARR guidance: unchanged. Net revenue retention: 112% -> 111%. Churn: flat. Major incident count: 0."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "primary_proxy_family",
+          "falsifier"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "Financing conditions and discount-rate duration are the cleaner proxy family."
+        },
+        {
+          "label": "B",
+          "text": "Product trouble is the cleaner proxy family."
+        },
+        {
+          "label": "C",
+          "text": "Channel inventory correction is the cleaner proxy family."
+        },
+        {
+          "label": "D",
+          "text": "Accounting restatement risk is the cleaner proxy family."
+        }
+      ]
+    },
+    {
+      "id": "v14cpi_005",
+      "split": "public_dev",
+      "track": "finance_and_business_causal_reasoning",
+      "source_family": [
+        "BizBench",
+        "XFinBench",
+        "CausalFlip"
+      ],
+      "task_family": "bridge_noise_rejection",
+      "generation_pipeline": "simple_qa_to_complex_analysis",
+      "prompt_style": "analyst_memo",
+      "title": "Soybean Rally And Snack-Maker Weakness",
+      "scenario": "A consumer staples note lists several moving commodities, but only some sit on the company\u2019s true cost path.",
+      "question": "Which candidate driver is most likely bridge noise rather than the core transmission channel?",
+      "inputs_needed": [
+        {
+          "type": "document_excerpt",
+          "description": "Staples note",
+          "required": true
+        },
+        {
+          "type": "table",
+          "description": "Cost exposure snapshot",
+          "required": true
+        }
+      ],
+      "truth_type": "hybrid_structured_review",
+      "mode_compatibility": [
+        "model_only",
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "graph_reasoning",
+        "domain_knowledge",
+        "abduction"
+      ],
+      "slice_tags": [
+        "finance",
+        "bridge_noise",
+        "input_costs",
+        "falsification"
+      ],
+      "expected_output_schema": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "bridge_noise",
+          "rationale_tag"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "field_level_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "BizBench",
+        "XFinBench",
+        "CausalFlip"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Staples note",
+          "content": "The stock traded lower after a basket of agricultural commodities moved higher. Management commentary emphasizes freight, packaging resin, palm oil, and cocoa as the main variable costs."
+        },
+        {
+          "type": "table",
+          "title": "Cost exposure snapshot",
+          "content": "Soybeans: +9%. Palm oil: +4%. Cocoa: +6%. Packaging resin: +7%. Freight surcharge impact: +110 bps to COGS. Soy exposure in the focal brand mix: not material."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "bridge_noise",
+          "rationale_tag"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "The soybean rally is most likely bridge noise rather than the core driver."
+        },
+        {
+          "label": "B",
+          "text": "Freight surcharges are most likely bridge noise rather than the core driver."
+        },
+        {
+          "label": "C",
+          "text": "Packaging-resin inflation is most likely bridge noise rather than the core driver."
+        },
+        {
+          "label": "D",
+          "text": "Palm-oil and cocoa costs are most likely bridge noise rather than the core driver."
+        }
+      ]
+    },
+    {
+      "id": "v14cpi_006",
+      "split": "public_dev",
+      "track": "graph_and_mechanism",
+      "source_family": [
+        "CausalGraph2LLM",
+        "CausalBench",
+        "XFinBench"
+      ],
+      "task_family": "transmission_supportability",
+      "generation_pipeline": "domain_knowledge_plus_news_to_structural_task",
+      "prompt_style": "analyst_memo",
+      "title": "Regional Bank Stress And A Small-Cap SaaS Selloff",
+      "scenario": "A software stock trades off during regional-bank stress even though the company has no direct deposit or lending disclosure in the packet.",
+      "question": "Which transmission path is the most supportable causal explanation?",
+      "inputs_needed": [
+        {
+          "type": "document_excerpt",
+          "description": "Market note",
+          "required": true
+        },
+        {
+          "type": "table",
+          "description": "Factor snapshot",
+          "required": true
+        }
+      ],
+      "truth_type": "hybrid_structured_review",
+      "mode_compatibility": [
+        "model_only",
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "graph_reasoning",
+        "proxy_routing",
+        "supportability"
+      ],
+      "slice_tags": [
+        "finance",
+        "transmission",
+        "supportability",
+        "credit"
+      ],
+      "expected_output_schema": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "mechanism",
+          "supportability"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "field_level_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "CausalGraph2LLM",
+        "CausalBench",
+        "XFinBench"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Market note",
+          "content": "The company stated that cash is spread across money-center banks and disclosed no unusual financing event. The stock still sold off with other long-duration software names when regional banks weakened."
+        },
+        {
+          "type": "table",
+          "title": "Factor snapshot",
+          "content": "Regional bank ETF: -14%. Small-cap software basket: -9%. HY OAS: +48 bps. Company net cash: positive. Revenue guidance: unchanged."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "mechanism",
+          "supportability"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "No plausible path exists from regional-bank stress to the software stock."
+        },
+        {
+          "label": "B",
+          "text": "Direct deposit-loss exposure is the most supportable path."
+        },
+        {
+          "label": "C",
+          "text": "A valuation-duration and refinancing channel is the most supportable path."
+        },
+        {
+          "label": "D",
+          "text": "A hardware inventory channel is the most supportable path."
+        }
+      ]
+    },
+    {
+      "id": "v14cpi_007",
+      "split": "public_dev",
+      "track": "graph_and_mechanism",
+      "source_family": [
+        "CausalGraph2LLM",
+        "CausalFlip",
+        "FinBen"
+      ],
+      "task_family": "transmission_strength_judgment",
+      "generation_pipeline": "domain_knowledge_plus_news_to_structural_task",
+      "prompt_style": "mixed_modal_finance_qa",
+      "title": "Rare-Earth Spike Into EV Gross Margin",
+      "scenario": "A commodity shock looks intuitively relevant, but the evidence packet includes cost-share and contracting details that constrain near-term transmission.",
+      "question": "How strong is the near-term transmission from rare-earth prices to the EV maker\u2019s gross margin?",
+      "inputs_needed": [
+        {
+          "type": "document_excerpt",
+          "description": "Supply-chain note",
+          "required": true
+        },
+        {
+          "type": "table",
+          "description": "Cost-structure snapshot",
+          "required": true
+        }
+      ],
+      "truth_type": "hybrid_structured_review",
+      "mode_compatibility": [
+        "model_only",
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "graph_reasoning",
+        "supportability",
+        "domain_knowledge"
+      ],
+      "slice_tags": [
+        "finance",
+        "transmission",
+        "input_costs",
+        "bridge_noise"
+      ],
+      "expected_output_schema": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "transmission_strength",
+          "blocking_factor"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "field_level_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "CausalGraph2LLM",
+        "CausalFlip",
+        "FinBen"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Supply-chain note",
+          "content": "Rare-earth spot prices jumped after export restrictions. The automaker\u2019s procurement note says the focal materials are covered by fixed contracts for the next two quarters."
+        },
+        {
+          "type": "table",
+          "title": "Cost-structure snapshot",
+          "content": "Rare-earth component share of COGS: 1.2%. Fixed-price coverage horizon: 2 quarters. Battery metals and logistics remain the larger variable exposures."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "transmission_strength",
+          "blocking_factor"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "It is a strong and immediate primary driver of gross margin."
+        },
+        {
+          "label": "B",
+          "text": "It is a moderate near-term driver, but not the dominant one."
+        },
+        {
+          "label": "C",
+          "text": "It is a weak, bridge-heavy near-term channel rather than a clean primary driver."
+        },
+        {
+          "label": "D",
+          "text": "No judgment of any kind is possible from the packet."
+        }
+      ]
+    },
+    {
+      "id": "v14cpi_008",
+      "split": "public_dev",
+      "track": "natural_event_causality",
+      "source_family": [
+        "CRAB",
+        "ExpliCa",
+        "Finance Agent"
+      ],
+      "task_family": "primary_driver_vs_amplifier",
+      "generation_pipeline": "domain_knowledge_plus_news_to_structural_task",
+      "prompt_style": "news_narrative",
+      "title": "Biotech Rally: Primary Driver Or Pure Squeeze?",
+      "scenario": "A market-news packet contains a regulatory catalyst, a later rumor, and evidence that short interest may have amplified the move.",
+      "question": "Which explanation best fits the move without overstating the evidence?",
+      "inputs_needed": [
+        {
+          "type": "news_packet",
+          "description": "Event timeline",
+          "required": true
+        },
+        {
+          "type": "table",
+          "description": "Intraday move summary",
+          "required": true
+        }
+      ],
+      "truth_type": "expert_labeled",
+      "mode_compatibility": [
+        "model_only",
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "event_reasoning",
+        "temporal_vs_causal",
+        "abduction"
+      ],
+      "slice_tags": [
+        "event_analysis",
+        "causal_vs_temporal",
+        "amplification",
+        "finance"
+      ],
+      "expected_output_schema": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "primary_driver",
+          "amplifier"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "field_level_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "CRAB",
+        "ExpliCa",
+        "Finance Agent"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "news_packet",
+          "title": "Event timeline",
+          "content": "09:00: FDA advisory panel votes favorably on the therapy. 09:05: stock opens sharply higher. 12:10: an unconfirmed social-media rumor mentions a possible acquisition. Short interest entering the day was 24% of float."
+        },
+        {
+          "type": "table",
+          "title": "Intraday move summary",
+          "content": "Open-to-10am move: +21%. Noon-to-close incremental move: +6%. Borrow fee: elevated. Company filings: no acquisition filing or comment."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "primary_driver",
+          "amplifier"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "The unconfirmed acquisition rumor is the primary driver."
+        },
+        {
+          "label": "B",
+          "text": "Short-squeeze dynamics are the primary driver, with no stronger causal event in the packet."
+        },
+        {
+          "label": "C",
+          "text": "The FDA advisory-panel vote is the primary driver, while squeeze dynamics likely amplified the move."
+        },
+        {
+          "label": "D",
+          "text": "No supportable causal read is possible from the packet."
+        }
+      ]
+    },
+    {
+      "id": "v14cpi_009",
+      "split": "public_dev",
+      "track": "industrial_intervention_and_estimation",
+      "source_family": [
+        "InterveneBench",
+        "CausalReasoningBenchmark",
+        "BizBench"
+      ],
+      "task_family": "bundled_intervention_supportability",
+      "generation_pipeline": "simple_qa_to_complex_analysis",
+      "prompt_style": "study_design_prompt",
+      "title": "Price Cut And Sales-Comp Rewrite In The Same Week",
+      "scenario": "Leadership wants the effect of a price cut on unit sales, but the operating packet shows another major commercial intervention at the same time and in the same weak regions.",
+      "question": "Is the causal effect of the price cut on units identified from the observed packet?",
+      "inputs_needed": [
+        {
+          "type": "document_excerpt",
+          "description": "Commercial rollout note",
+          "required": true
+        },
+        {
+          "type": "table",
+          "description": "Observed outcome summary",
+          "required": true
+        }
+      ],
+      "truth_type": "expert_labeled",
+      "mode_compatibility": [
+        "model_only",
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "identification",
+        "supportability",
+        "abstention"
+      ],
+      "slice_tags": [
+        "intervention",
+        "identification",
+        "bundled_treatment",
+        "business"
+      ],
+      "expected_output_schema": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "identified",
+          "blocking_issue"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "field_level_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "InterveneBench",
+        "CausalReasoningBenchmark",
+        "BizBench"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Commercial rollout note",
+          "content": "The company reduced list price by 8% in the weakest four regions and simultaneously changed sales compensation to reward unit volume instead of gross profit dollars."
+        },
+        {
+          "type": "table",
+          "title": "Observed outcome summary",
+          "content": "The treated regions saw unit growth accelerate after the rollout. Untreated regions kept the old price and old comp plan. No randomization or staggered timing was used."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "identified",
+          "blocking_issue"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "Yes. A simple before/after comparison identifies the price effect."
+        },
+        {
+          "label": "B",
+          "text": "Yes. Region controls are enough to identify the price effect."
+        },
+        {
+          "label": "C",
+          "text": "No. The packet bundles two interventions on selected weak regions."
+        },
+        {
+          "label": "D",
+          "text": "Yes. A treated-vs-untreated snapshot identifies the price effect."
+        }
+      ]
+    },
+    {
+      "id": "v14cpi_010",
+      "split": "public_dev",
+      "track": "industrial_intervention_and_estimation",
+      "source_family": [
+        "InterveneBench",
+        "CausalReasoningBenchmark",
+        "causalAssembly"
+      ],
+      "task_family": "targeted_rollout_design_choice",
+      "generation_pipeline": "domain_knowledge_plus_news_to_structural_task",
+      "prompt_style": "study_design_prompt",
+      "title": "Predictive Maintenance Rolled Out To The Worst Plants First",
+      "scenario": "A maintenance model was adopted first where failures were already highest, and leadership wants a credible evaluation design.",
+      "question": "Which design is most defensible for estimating the model\u2019s effect, and what is the main threat to validity?",
+      "inputs_needed": [
+        {
+          "type": "operational_log",
+          "description": "Rollout summary",
+          "required": true
+        },
+        {
+          "type": "table",
+          "description": "Plant summary",
+          "required": true
+        }
+      ],
+      "truth_type": "expert_labeled",
+      "mode_compatibility": [
+        "model_only",
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "identification",
+        "study_design",
+        "abstention"
+      ],
+      "slice_tags": [
+        "intervention",
+        "targeted_rollout",
+        "regression_to_mean",
+        "industrial_process"
+      ],
+      "expected_output_schema": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "design",
+          "main_threat"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "field_level_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "InterveneBench",
+        "CausalReasoningBenchmark",
+        "causalAssembly"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "operational_log",
+          "title": "Rollout summary",
+          "content": "The predictive-maintenance model was launched first at plants with the highest prior failure rates. Failure rates fell after deployment, but the untreated plants were lower-risk to begin with."
+        },
+        {
+          "type": "table",
+          "title": "Plant summary",
+          "content": "Four treated plants adopted in month 1, four control plants remained on the old process. Treated plants started with materially worse pre-period failure levels."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "design",
+          "main_threat"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "A simple before/after comparison is the most defensible design."
+        },
+        {
+          "label": "B",
+          "text": "A matched or staggered difference-in-differences event study with pretrend checks is the most defensible design."
+        },
+        {
+          "label": "C",
+          "text": "A post-only treated-vs-control cross-section is the most defensible design."
+        },
+        {
+          "label": "D",
+          "text": "Instrumenting treatment with plant size is the most defensible design."
+        }
+      ]
+    },
+    {
+      "id": "v14cpi_011",
+      "split": "public_dev",
+      "track": "industrial_intervention_and_estimation",
+      "source_family": [
+        "CausalReasoningBenchmark",
+        "BizBench",
+        "RealCause"
+      ],
+      "task_family": "selection_bias_supportability",
+      "generation_pipeline": "simple_qa_to_complex_analysis",
+      "prompt_style": "study_design_prompt",
+      "title": "Credit-Limit Increases For Prequalified Users",
+      "scenario": "A consumer-finance team increased credit limits only for users already scored as especially attractive, then asked for the treatment effect on purchase frequency.",
+      "question": "Can the treated-vs-untreated mean difference identify the effect on purchase frequency?",
+      "inputs_needed": [
+        {
+          "type": "document_excerpt",
+          "description": "Risk-team note",
+          "required": true
+        },
+        {
+          "type": "table",
+          "description": "Outcome summary",
+          "required": true
+        }
+      ],
+      "truth_type": "expert_labeled",
+      "mode_compatibility": [
+        "model_only",
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "identification",
+        "supportability",
+        "abstention"
+      ],
+      "slice_tags": [
+        "intervention",
+        "selection_bias",
+        "business",
+        "identification"
+      ],
+      "expected_output_schema": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "identified",
+          "blocking_issue"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "field_level_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "CausalReasoningBenchmark",
+        "BizBench",
+        "RealCause"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Risk-team note",
+          "content": "Only prequalified users with high internal scores received the limit increase. The untreated pool contains more low-score and lower-spend customers."
+        },
+        {
+          "type": "table",
+          "title": "Outcome summary",
+          "content": "Treated users increased purchase frequency after the offer. Current observables include age bucket, region, and merchant mix, but not latent spending appetite or the full internal scorecard."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "identified",
+          "blocking_issue"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "Yes. The treated-vs-untreated mean difference identifies the treatment effect."
+        },
+        {
+          "label": "B",
+          "text": "Yes. The current covariates are enough to remove the bias."
+        },
+        {
+          "label": "C",
+          "text": "No. Selection on latent spending propensity still blocks identification."
+        },
+        {
+          "label": "D",
+          "text": "Yes. Stable merchant mix is sufficient to identify the effect."
+        }
+      ]
+    },
+    {
+      "id": "v14cpi_012",
+      "split": "public_dev",
+      "track": "industrial_intervention_and_estimation",
+      "source_family": [
+        "InterveneBench",
+        "CausalReasoningBenchmark",
+        "causalAssembly"
+      ],
+      "task_family": "simultaneous_operations_change",
+      "generation_pipeline": "simple_qa_to_complex_analysis",
+      "prompt_style": "study_design_prompt",
+      "title": "Warehouse Expedite Policy And Temporary Staffing",
+      "scenario": "An operations packet shows late shipments falling after a new expedite policy, but staffing changed in the same window.",
+      "question": "Is the expedite-policy effect identified from the observed packet, and what is the most important confound?",
+      "inputs_needed": [
+        {
+          "type": "operational_log",
+          "description": "Operations note",
+          "required": true
+        },
+        {
+          "type": "table",
+          "description": "Late-shipment summary",
+          "required": true
+        }
+      ],
+      "truth_type": "expert_labeled",
+      "mode_compatibility": [
+        "model_only",
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "identification",
+        "supportability",
+        "abstention"
+      ],
+      "slice_tags": [
+        "intervention",
+        "operations",
+        "confounder",
+        "industrial_process"
+      ],
+      "expected_output_schema": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "identified",
+          "blocking_issue"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "field_level_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "InterveneBench",
+        "CausalReasoningBenchmark",
+        "causalAssembly"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "operational_log",
+          "title": "Operations note",
+          "content": "A warehouse introduced a new expedite policy during peak season. The same week, temporary staffing was increased by 18% and overtime rules were relaxed."
+        },
+        {
+          "type": "table",
+          "title": "Late-shipment summary",
+          "content": "Late shipments fell from 9.4% to 6.7% after the policy week. No site-level stagger or holdout group is available in the packet."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "identified",
+          "blocking_issue"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "Yes. Staffing is too small to matter here."
+        },
+        {
+          "label": "B",
+          "text": "Yes. Controlling for shift is enough to identify the policy effect."
+        },
+        {
+          "label": "C",
+          "text": "No. The simultaneous temporary-staffing change is the key confound."
+        },
+        {
+          "label": "D",
+          "text": "No. The outcome metric itself is unusable."
+        }
+      ]
+    },
+    {
+      "id": "v14cpi_013",
+      "split": "public_dev",
+      "track": "agentic_live_analysis",
+      "source_family": [
+        "Finance Agent",
+        "XFinBench",
+        "CausalReasoningBenchmark"
+      ],
+      "task_family": "pressure_test_design",
+      "generation_pipeline": "simple_qa_to_complex_analysis",
+      "prompt_style": "agent_brief",
+      "title": "Which First Pressure Test Separates Financing Stress From Demand Softness?",
+      "scenario": "A distributor note leaves two live stories on the table, and the task is to pick the first stress lever that would most efficiently separate them.",
+      "question": "Which first pressure test would best separate financing stress from demand softness?",
+      "inputs_needed": [
+        {
+          "type": "document_excerpt",
+          "description": "Agent brief",
+          "required": true
+        },
+        {
+          "type": "table",
+          "description": "Commercial snapshot",
+          "required": true
+        }
+      ],
+      "truth_type": "hybrid_structured_review",
+      "mode_compatibility": [
+        "model_only",
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "pressure_test_design",
+        "proxy_routing",
+        "decision_theory"
+      ],
+      "slice_tags": [
+        "pressure_test",
+        "finance",
+        "proxy_routing",
+        "falsification"
+      ],
+      "expected_output_schema": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "stress_target",
+          "readout"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "field_level_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "Finance Agent",
+        "XFinBench",
+        "CausalReasoningBenchmark"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "Rate-sensitive customer verticals have slowed, but service attach and installed-base usage remain stable. Credit spreads widened and management said quote activity was healthy but close timing stretched."
+        },
+        {
+          "type": "table",
+          "title": "Commercial snapshot",
+          "content": "New orders: -4%. Cancellations: +2 points. Service attach: flat. Installed-base usage: flat. HY OAS: +62 bps. Accounts receivable days: +4 days."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "stress_target",
+          "readout"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "Stress commodity input costs and inspect gross margin."
+        },
+        {
+          "label": "B",
+          "text": "Stress financing conditions and inspect orders plus cancellations."
+        },
+        {
+          "label": "C",
+          "text": "Stress FX and inspect backlog conversion."
+        },
+        {
+          "label": "D",
+          "text": "Stress labor availability and inspect headcount growth."
+        }
+      ],
+      "paired_case_group": "proxy_vs_pressure_homebuilder"
+    },
+    {
+      "id": "v14cpi_014",
+      "split": "public_dev",
+      "track": "agentic_live_analysis",
+      "source_family": [
+        "Finance Agent",
+        "BizBench",
+        "XFinBench"
+      ],
+      "task_family": "pressure_test_design",
+      "generation_pipeline": "simple_qa_to_complex_analysis",
+      "prompt_style": "agent_brief",
+      "title": "Fuel Shock Or Demand Weakness: Which Probe Comes First?",
+      "scenario": "An airline packet leaves cost shock and demand weakness as competing stories, and the task is to choose the first clean pressure test.",
+      "question": "Which first pressure test most cleanly distinguishes fuel shock from demand weakness?",
+      "inputs_needed": [
+        {
+          "type": "document_excerpt",
+          "description": "Agent brief",
+          "required": true
+        },
+        {
+          "type": "table",
+          "description": "Sector snapshot",
+          "required": true
+        }
+      ],
+      "truth_type": "hybrid_structured_review",
+      "mode_compatibility": [
+        "model_only",
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "pressure_test_design",
+        "domain_knowledge",
+        "decision_theory"
+      ],
+      "slice_tags": [
+        "pressure_test",
+        "finance",
+        "input_costs",
+        "airline"
+      ],
+      "expected_output_schema": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "stress_target",
+          "readout"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "field_level_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "Finance Agent",
+        "BizBench",
+        "XFinBench"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "The stock sold off with energy markets. Forward bookings and capacity plans held steady. Analysts want the first probe that would most quickly separate cost pressure from true demand deterioration."
+        },
+        {
+          "type": "table",
+          "title": "Sector snapshot",
+          "content": "Jet fuel crack: +18%. Forward bookings: +1%. Load factor guidance: unchanged. Unit revenue: flat. FX: flat."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "stress_target",
+          "readout"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "Stress jet-fuel costs and inspect unit margin or EPS sensitivity."
+        },
+        {
+          "label": "B",
+          "text": "Stress load factor and inspect fuel hedges."
+        },
+        {
+          "label": "C",
+          "text": "Stress FX and inspect baggage-fee revenue."
+        },
+        {
+          "label": "D",
+          "text": "Stress wage inflation and inspect loyalty signups."
+        }
+      ],
+      "paired_case_group": "proxy_vs_pressure_airline"
+    },
+    {
+      "id": "v14cpi_015",
+      "split": "public_dev",
+      "track": "agentic_live_analysis",
+      "source_family": [
+        "Finance Agent",
+        "XFinBench",
+        "CausalReasoningBenchmark"
+      ],
+      "task_family": "pressure_test_design",
+      "generation_pipeline": "simple_qa_to_complex_analysis",
+      "prompt_style": "agent_brief",
+      "title": "EV Supplier Drop: Lithium Pass-Through Or Customer Inventory Reset?",
+      "scenario": "A supplier stock weakens while both upstream commodity and downstream customer signals are moving, and the analyst must pick the first separating probe.",
+      "question": "Which first pressure test best distinguishes lithium pass-through from customer inventory reset?",
+      "inputs_needed": [
+        {
+          "type": "document_excerpt",
+          "description": "Agent brief",
+          "required": true
+        },
+        {
+          "type": "table",
+          "description": "Supplier snapshot",
+          "required": true
+        }
+      ],
+      "truth_type": "hybrid_structured_review",
+      "mode_compatibility": [
+        "model_only",
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "pressure_test_design",
+        "proxy_routing",
+        "decision_theory"
+      ],
+      "slice_tags": [
+        "pressure_test",
+        "finance",
+        "inventory",
+        "input_costs"
+      ],
+      "expected_output_schema": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "stress_target",
+          "readout"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "field_level_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "Finance Agent",
+        "XFinBench",
+        "CausalReasoningBenchmark"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "Lithium prices softened, but customer inventory days also rose across two major OEMs. The supplier guides to softer near-term shipments without changing long-run content assumptions."
+        },
+        {
+          "type": "table",
+          "title": "Supplier snapshot",
+          "content": "Lithium spot: -14%. Customer inventory days: +11 days. OEM production schedules: trimmed for next quarter. Supplier gross-margin guide: only modestly lower. Backlog conversion: slowing."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "stress_target",
+          "readout"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "Stress lithium prices and inspect next-quarter gross margin."
+        },
+        {
+          "label": "B",
+          "text": "Stress customer inventory and build schedules, then inspect shipments and backlog conversion."
+        },
+        {
+          "label": "C",
+          "text": "Stress FX and inspect operating expenses."
+        },
+        {
+          "label": "D",
+          "text": "Stress energy prices and inspect depreciation."
+        }
+      ]
+    },
+    {
+      "id": "v14cpi_016",
+      "split": "public_dev",
+      "track": "agentic_live_analysis",
+      "source_family": [
+        "Finance Agent",
+        "BizBench",
+        "CausalReasoningBenchmark"
+      ],
+      "task_family": "pressure_test_design",
+      "generation_pipeline": "simple_qa_to_complex_analysis",
+      "prompt_style": "agent_brief",
+      "title": "Residential Solar Miss: Policy Step-Down Or Sales Execution?",
+      "scenario": "The packet leaves policy and execution stories both live, and the evaluation asks for the cleanest first probe to challenge the leading thesis.",
+      "question": "Which pressure test most directly challenges the thesis that policy incentive step-down is the main driver?",
+      "inputs_needed": [
+        {
+          "type": "document_excerpt",
+          "description": "Agent brief",
+          "required": true
+        },
+        {
+          "type": "table",
+          "description": "Sales funnel snapshot",
+          "required": true
+        }
+      ],
+      "truth_type": "hybrid_structured_review",
+      "mode_compatibility": [
+        "model_only",
+        "open_book",
+        "tool_agent"
+      ],
+      "skills_required": [
+        "pressure_test_design",
+        "event_reasoning",
+        "falsification"
+      ],
+      "slice_tags": [
+        "pressure_test",
+        "policy",
+        "finance",
+        "falsification"
+      ],
+      "expected_output_schema": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "stress_target",
+          "readout"
+        ],
+        "abstention_allowed": true
+      },
+      "scoring_focus": [
+        "field_level_accuracy"
+      ],
+      "authoring_status": "instantiated_public_dev",
+      "benchmark_inspirations": [
+        "Finance Agent",
+        "BizBench",
+        "CausalReasoningBenchmark"
+      ],
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "Order volume weakened after a state incentive step-down, but channel checks also mention elevated rep turnover and slower lead follow-up times."
+        },
+        {
+          "type": "table",
+          "title": "Sales funnel snapshot",
+          "content": "Lead volume: -3%. Lead-to-booking conversion: -16%. Incentive value: -22%. Sales-rep turnover: +8 points. Follow-up time: slower by 1.4 days."
+        }
+      ],
+      "response_contract": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": [
+          "label",
+          "stress_target",
+          "readout"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "text": "Stress incentive-policy generosity and inspect lead-to-booking conversion."
+        },
+        {
+          "label": "B",
+          "text": "Stress panel input costs and inspect gross margin."
+        },
+        {
+          "label": "C",
+          "text": "Stress installer hiring and inspect warehouse rent."
+        },
+        {
+          "label": "D",
+          "text": "Stress bitcoin and inspect lead generation."
+        }
+      ]
+    }
+  ]
+}
