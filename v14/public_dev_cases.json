@@ -1866,11 +1866,11 @@
         "Finance Agent"
       ],
       "task_family": "futurex_style_live_prediction",
-      "evaluation_regime": "live_forward_resolution",
+      "evaluation_regime": "frozen_evidence_public_dev",
       "generation_pipeline": "simple_qa_to_complex_analysis",
       "prompt_style": "agent_brief",
       "title": "Banxico Decision Contract-Style Exemplar",
-      "scenario": "A public-dev exemplar of a FutureX-style policy prediction question. The evidence packet is frozen at prediction time and the answer is evaluated only after the decision occurs.",
+      "scenario": "A public-dev exemplar of a FutureX-style policy prediction question. The evidence packet is frozen, but because this split includes an explicit answer key for development, it should be treated as frozen-evidence public-dev rather than true live forward resolution.",
       "question": "As of the frozen packet, which policy outcome is the best prediction for Banxico's next meeting?",
       "inputs_needed": [
         {
@@ -1879,7 +1879,7 @@
           "required": true
         }
       ],
-      "truth_type": "hidden_live_resolution",
+      "truth_type": "expert_labeled",
       "mode_compatibility": [
         "open_book",
         "tool_agent"
@@ -1960,11 +1960,11 @@
         "XFinBench"
       ],
       "task_family": "futurex_style_live_prediction",
-      "evaluation_regime": "live_forward_resolution",
+      "evaluation_regime": "frozen_evidence_public_dev",
       "generation_pipeline": "simple_qa_to_complex_analysis",
       "prompt_style": "agent_brief",
       "title": "Month-End Commodity Threshold Exemplar",
-      "scenario": "A public-dev exemplar of a FutureX-style commodity threshold question, scored only after the month-end close.",
+      "scenario": "A public-dev exemplar of a FutureX-style commodity threshold question. It imitates a month-end live contract, but because this split exposes the answer key for development, it belongs to frozen-evidence public-dev rather than true live forward resolution.",
       "question": "Given the freeze packet, which threshold set is the best prediction for gold by month-end?",
       "inputs_needed": [
         {
@@ -1973,7 +1973,7 @@
           "required": true
         }
       ],
-      "truth_type": "hidden_live_resolution",
+      "truth_type": "expert_labeled",
       "mode_compatibility": [
         "open_book",
         "tool_agent"

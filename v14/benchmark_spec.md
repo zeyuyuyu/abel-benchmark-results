@@ -208,6 +208,10 @@ Recommended Track G subfamilies:
   - this family should be split again by `evaluation_regime`
     - `live_forward_resolution`
     - `historical_asof_search_cutoff`
+  - strict rule:
+    - `live_forward_resolution` is only for genuinely unresolved future cases
+    - public-dev exemplars with visible answers must use
+      `frozen_evidence_public_dev`
 
 ## Task Generation Pipelines
 
@@ -335,6 +339,11 @@ Completed:
 9. `public_dev_cases.json`
 10. `public_dev_ground_truth.json`
 11. `public_dev_cases.md`
+12. `build_track_g_true_live_pack.py`
+13. `track_g_true_live_questions.json`
+14. `track_g_true_live_ground_truth.json`
+15. `track_g_true_live_cases.md`
+16. `track_g_true_live_spec.md`
 
 Next:
 

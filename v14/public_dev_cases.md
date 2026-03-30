@@ -906,14 +906,14 @@ Ground truth:
 ## v14d_022 — Banxico Decision Contract-Style Exemplar
 
 - Track: `agentic_live_analysis`
-- Truth type: `hidden_live_resolution`
+- Truth type: `expert_labeled`
 - Prompt style: `agent_brief`
 - Task family: `futurex_style_live_prediction`
-- Evaluation regime: `live_forward_resolution`
+- Evaluation regime: `frozen_evidence_public_dev`
 
 Scenario:
 ```text
-A public-dev exemplar of a FutureX-style policy prediction question. The evidence packet is frozen at prediction time and the answer is evaluated only after the decision occurs.
+A public-dev exemplar of a FutureX-style policy prediction question. The evidence packet is frozen, but because this split includes an explicit answer key for development, it should be treated as frozen-evidence public-dev rather than true live forward resolution.
 ```
 
 Question:
@@ -948,14 +948,14 @@ Ground truth:
 ## v14d_023 — Month-End Commodity Threshold Exemplar
 
 - Track: `agentic_live_analysis`
-- Truth type: `hidden_live_resolution`
+- Truth type: `expert_labeled`
 - Prompt style: `agent_brief`
 - Task family: `futurex_style_live_prediction`
-- Evaluation regime: `live_forward_resolution`
+- Evaluation regime: `frozen_evidence_public_dev`
 
 Scenario:
 ```text
-A public-dev exemplar of a FutureX-style commodity threshold question, scored only after the month-end close.
+A public-dev exemplar of a FutureX-style commodity threshold question. It imitates a month-end live contract, but because this split exposes the answer key for development, it belongs to frozen-evidence public-dev rather than true live forward resolution.
 ```
 
 Question:

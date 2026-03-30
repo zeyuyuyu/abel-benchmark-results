@@ -1153,7 +1153,7 @@ DETAILS = {
                 "field_weights": {"label": 0.45, "primary_basis": 0.35, "confidence": 0.20},
             },
             "evidence_summary": [
-                "This is a public-dev exemplar of a freeze-first, resolve-later policy contract.",
+                "This is a frozen-evidence public-dev exemplar that imitates a live-forward policy contract.",
                 "The key lesson is that prediction should be based on freeze-time packet evidence, not hindsight.",
             ],
             "common_failure_modes": [
@@ -1199,7 +1199,7 @@ DETAILS = {
                 "field_weights": {"label": 0.45, "primary_basis": 0.35, "confidence": 0.20},
             },
             "evidence_summary": [
-                "This is a public-dev exemplar of a live-forward commodity threshold contract.",
+                "This is a frozen-evidence public-dev exemplar that imitates a live-forward commodity threshold contract.",
                 "The case teaches bucketed prediction under freeze-time evidence rather than point forecasting.",
             ],
             "common_failure_modes": [

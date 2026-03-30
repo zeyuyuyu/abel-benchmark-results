@@ -3,6 +3,10 @@
   "track": "agentic_live_analysis",
   "task_family": "futurex_style_live_prediction",
   "description": "Canonical mapping of the v13 FutureX-oriented benchmark packs into the v14 Track G taxonomy.",
+  "rules": [
+    "live_forward_resolution is reserved for genuinely unresolved future cases",
+    "public-dev examples with visible answer keys may imitate FutureX contracts, but they should use frozen_evidence_public_dev instead"
+  ],
   "groups": [
     {
       "mapping_id": "track_g_futurex_live",
@@ -16,6 +20,11 @@
         "v13/questions.json",
         "v13/ground_truth.json",
         "v13/cases.md"
+      ],
+      "v14_materialized_files": [
+        "v14/track_g_true_live_questions.json",
+        "v14/track_g_true_live_ground_truth.json",
+        "v14/track_g_true_live_cases.md"
       ],
       "case_count": 100,
       "subgroup_breakdown": [

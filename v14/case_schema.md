@@ -135,6 +135,14 @@ Allowed values:
 - `historical_asof_search_cutoff`
 - `historical_resolved_unbounded`
 
+Rule:
+
+- `live_forward_resolution` is reserved for genuinely unresolved future cases
+  whose answers are filled in only after third-party resolution.
+- If a case already ships with a visible answer key for public development, it
+  must not use `live_forward_resolution`; use
+  `frozen_evidence_public_dev` instead.
+
 ### `generation_pipeline`
 
 - Type: `string`

@@ -251,6 +251,11 @@ when evidence is insufficient.
   - should be split into two evaluation regimes:
     - `live_forward_resolution`
     - `historical_asof_search_cutoff`
+  - strict rule:
+    - `live_forward_resolution` is only for genuinely unresolved future cases
+    - public-dev examples that already expose answers belong under
+      `frozen_evidence_public_dev`, even if they imitate FutureX-style live
+      contracts
 
 ### Why FutureX-Style Tasks Belong Here
 

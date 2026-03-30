@@ -18,6 +18,13 @@ So the canonical placement is:
 
 Within that family, we distinguish two primary evaluation regimes.
 
+Important rule:
+
+- `live_forward_resolution` is reserved for genuinely unresolved future cases
+- public-dev cases with visible answer keys may imitate FutureX contracts, but
+  they should be tagged `frozen_evidence_public_dev`, not
+  `live_forward_resolution`
+
 ## Regime 1: Live Forward Resolution
 
 - `evaluation_regime = live_forward_resolution`
@@ -39,6 +46,8 @@ Why this mapping matters:
 - the official subset preserves the external FutureX surface directly
 - the custom subset extends the same agentic contract style into a larger
   finance-oriented live benchmark
+- this is the canonical true-live slice for Track G, distinct from public-dev
+  exemplars
 
 ## Regime 2: Historical As-Of Search Cutoff
 
@@ -92,3 +101,10 @@ When someone asks “which kind?”, the answer is:
 
 - `live_forward_resolution`
 - `historical_asof_search_cutoff`
+
+When someone asks “where is the true-live materialized pack in `v14`?”, the
+answer is:
+
+- `track_g_true_live_questions.json`
+- `track_g_true_live_ground_truth.json`
+- `track_g_true_live_cases.md`
