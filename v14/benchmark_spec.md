@@ -197,6 +197,18 @@ This version combines ideas from:
   - event-grounded synthesis
   - abstention under insufficient evidence
 
+Recommended Track G subfamilies:
+
+- `task_family = agentic_event_synthesis`
+  - for frozen-evidence public-dev cases that test evidence gathering and
+    synthesis without live outcome resolution
+- `task_family = futurex_style_live_prediction`
+  - for contract-style prediction tasks with explicit freeze times and later
+    third-party scoring
+  - this family should be split again by `evaluation_regime`
+    - `live_forward_resolution`
+    - `historical_asof_search_cutoff`
+
 ## Task Generation Pipelines
 
 The benchmark should use three generation pipelines.
@@ -277,6 +289,10 @@ Scores from these three modes must remain separate.
 
 - unresolved questions with later third-party resolution
 - scored after freeze time, not at prediction time
+
+For `FutureX`-style tasks, this live split should not be the only setup. The
+benchmark should also support a historically resolved, time-bounded open-book
+variant where search is allowed but strictly capped by a case-level cutoff.
 
 ## v14 Alpha Build Recommendation
 

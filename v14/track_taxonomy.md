@@ -223,6 +223,7 @@ defensible assumptions, and estimation that survives contact with real data.
 
 - `Finance Agent`
 - freshness-sensitive slices from finance benchmarks
+- `FutureX`
 
 ### Why This Track Exists
 
@@ -237,12 +238,40 @@ when evidence is insufficient.
 - no hidden answer-key leakage
 - explicit uncertainty with disciplined scope
 
+### Track G Subfamilies
+
+- `agentic_event_synthesis`
+  - frozen-evidence or packet-based agent tasks
+  - public-dev friendly
+  - usually `evaluation_regime = frozen_evidence_public_dev`
+
+- `futurex_style_live_prediction`
+  - contract-style prediction questions with explicit freeze time, format
+    contract, and later scoring
+  - should be split into two evaluation regimes:
+    - `live_forward_resolution`
+    - `historical_asof_search_cutoff`
+
+### Why FutureX-Style Tasks Belong Here
+
+`FutureX` is not a top-level causal track by itself. It is an evaluation surface
+inside Track G.
+
+The reason is structural:
+
+- the top-level `v14` tracks are organized by capability type
+- `FutureX` is a benchmark family and task surface, not a standalone causal
+  capability category
+- what `FutureX` contributes is high-quality contract-style agent evaluation,
+  especially for time-bounded search and frozen prediction workflows
+
 ### Common Failure Modes
 
 - over-retrieval
 - wrong tool choice
 - recency neglect
 - unsupported confidence
+- using future information in historical as-of settings
 
 ## Cross-Track Tagging
 

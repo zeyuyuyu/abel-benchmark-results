@@ -1,0 +1,96 @@
+{
+  "version": "v14-track-g-futurex-mapping",
+  "track": "agentic_live_analysis",
+  "task_family": "futurex_style_live_prediction",
+  "description": "Canonical mapping of the v13 FutureX-oriented benchmark packs into the v14 Track G taxonomy.",
+  "groups": [
+    {
+      "mapping_id": "track_g_futurex_live",
+      "source_version": "v13",
+      "evaluation_regime": "live_forward_resolution",
+      "source_family": [
+        "FutureX-Online",
+        "FutureX-custom-live"
+      ],
+      "source_files": [
+        "v13/questions.json",
+        "v13/ground_truth.json",
+        "v13/cases.md"
+      ],
+      "case_count": 100,
+      "subgroup_breakdown": [
+        {
+          "name": "official_futurex_online_finance",
+          "source_type": "futurex_online",
+          "case_count": 7,
+          "id_range": [
+            "v13_001",
+            "v13_007"
+          ]
+        },
+        {
+          "name": "custom_live_finance_cases",
+          "source_type": "custom_live",
+          "case_count": 93,
+          "id_range": [
+            "v13_008",
+            "v13_100"
+          ]
+        }
+      ],
+      "notes": [
+        "This is the primary FutureX-style live prediction slice in the current benchmark stack.",
+        "The 7 official cases borrow the FutureX-Online contract surface directly.",
+        "The remaining 93 custom live cases were authored to stay close to FutureX contract style while remaining finance-specific."
+      ]
+    },
+    {
+      "mapping_id": "track_g_futurex_past_asof",
+      "source_version": "v13",
+      "evaluation_regime": "historical_asof_search_cutoff",
+      "source_family": [
+        "FutureX-Past"
+      ],
+      "source_files": [
+        "v13/resolved_asof_questions.json",
+        "v13/resolved_asof_ground_truth.json",
+        "v13/resolved_asof_cases.md"
+      ],
+      "case_count": 15,
+      "category_breakdown": {
+        "central_bank_decision": 4,
+        "commodity_bucket": 2,
+        "first_hit": 2,
+        "crypto_binary": 2,
+        "commodity_thresholds": 1,
+        "commodity_hit_levels": 1,
+        "agriculture_bucket": 1,
+        "supply_shock_binary": 1,
+        "single_stock_direction": 1
+      },
+      "notes": [
+        "Search is allowed, but every case carries a case-level search_cutoff.",
+        "This is the canonical time-bounded historical open-book slice for Track G.",
+        "It should be interpreted separately from unrestricted historical QA."
+      ]
+    }
+  ],
+  "related_non_primary_group": {
+    "mapping_id": "track_g_futurex_past_unbounded_auxiliary",
+    "source_version": "v13",
+    "evaluation_regime": "historical_resolved_unbounded",
+    "source_family": [
+      "FutureX-Past"
+    ],
+    "source_files": [
+      "v13/resolved_questions.json",
+      "v13/resolved_ground_truth.json",
+      "v13/resolved_cases.md"
+    ],
+    "case_count": 15,
+    "notes": [
+      "Useful as an auxiliary retrieval-and-mapping audit.",
+      "Not recommended as the primary FutureX-style score because it permits broader historical leakage."
+    ]
+  }
+}

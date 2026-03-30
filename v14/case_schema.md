@@ -54,6 +54,7 @@ Each benchmark case should be a single JSON object.
 - `instantiated_inputs`
 - `response_contract`
 - `ground_truth_ref`
+- `evaluation_regime`
 
 ## Field Definitions
 
@@ -119,6 +120,20 @@ Examples:
 - `earnings_driver_analysis`
 - `policy_rollout_identification`
 - `agentic_event_synthesis`
+- `futurex_style_live_prediction`
+
+### `evaluation_regime`
+
+- Type: `string`
+- Purpose: explicitly distinguishes how the case is supposed to be evaluated in
+  time-sensitive or retrieval-sensitive settings
+
+Allowed values:
+
+- `frozen_evidence_public_dev`
+- `live_forward_resolution`
+- `historical_asof_search_cutoff`
+- `historical_resolved_unbounded`
 
 ### `generation_pipeline`
 
