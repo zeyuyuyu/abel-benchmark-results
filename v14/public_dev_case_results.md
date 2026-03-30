@@ -3,10 +3,10 @@
 This markdown expands every evaluated case with the question, ground truth,
 and the `codex only` vs `codex + skill` outputs.
 
-- Timestamp: `2026-03-27T18:02:07.742470+08:00`
+- Timestamp: `2026-03-30T10:07:24.699666+08:00`
 - Model: `gpt-5.4`
 - Reasoning effort: `low`
-- Case count: `21`
+- Case count: `25`
 
 ## v14d_001 — Campaign Lift With A Hidden Seasonal Driver
 
@@ -46,7 +46,7 @@ Ground truth:
   "adjustment_set": [
     "seasonality"
   ],
-  "rationale": "Seasonality is a common cause of campaign_exposure and conversion, so it opens a backdoor path that must be blocked. Site_visits is downstream of campaign_exposure and lies on the causal pathway to conversion, so adjusting for it would block part of the total effect."
+  "rationale": "The backdoor path campaign_exposure <- seasonality -> conversion must be blocked. Seasonality is pre-treatment and observed, so adjusting for it identifies the total effect. Site_visits is post-treatment and a mediator, so adjusting for it would block part of the total causal effect."
 }
 ```
 - Exact-primary correct: `yes`
@@ -65,16 +65,16 @@ Field results:
   "adjustment_set": [
     "seasonality"
   ],
-  "rationale": "Seasonality is a pre-treatment common cause of campaign_exposure and conversion, so adjusting for it blocks the backdoor path. site_visits is post-exposure and lies on the causal pathway, so adjusting for it would block part of the total effect."
+  "rationale": "Seasonality is a pre-treatment common cause of campaign_exposure and conversion, so adjusting for it blocks the backdoor path campaign_exposure <- seasonality -> conversion. Site_visits is post-treatment and lies on the causal pathway, so it should not be adjusted for when identifying the total effect."
 }
 ```
 - Exact-primary correct: `yes`
-- Weighted score: `85.00%`
+- Weighted score: `100.00%`
 Field results:
 - `label`: `match`
 - `identified`: `match`
 - `adjustment_set`: `match`
-- `rationale`: `mismatch`
+- `rationale`: `match`
 
 ## v14d_002 — Would Outcome Y Have Changed Under Do(X)?
 
@@ -105,8 +105,8 @@ Ground truth:
 ```json
 {
   "label": "B",
-  "counterfactual_outcome": 0,
-  "rationale": "For the observed unit, Z=0. Under do(X=0), the structural equations give M:=X=0, and then Y:=M OR Z = 0 OR 0 = 0. So Y would not have occurred."
+  "counterfactual_outcome": "Y=0 under do(X=0)",
+  "rationale": "From the structural equations, setting X=0 forces M=0 because M := X. With the observed Z=0 unchanged for the same unit, Y := M OR Z becomes 0 OR 0 = 0. So Y would not have occurred."
 }
 ```
 - Exact-primary correct: `yes`
@@ -120,8 +120,8 @@ Field results:
 ```json
 {
   "label": "B",
-  "counterfactual_outcome": 0,
-  "rationale": "Under do(X=0), M becomes 0 because M:=X. With the same observed Z=0, Y:=M OR Z becomes 0 OR 0 = 0, so Y would not occur."
+  "counterfactual_outcome": "Y=0",
+  "rationale": "Under do(X=0), M becomes 0 because M:=X. With Z fixed at its observed value 0, Y:=M OR Z becomes 0 OR 0 = 0. So Y would not have occurred."
 }
 ```
 - Exact-primary correct: `yes`
@@ -161,7 +161,7 @@ Ground truth:
 {
   "label": "A",
   "effect_type": "indirect",
-  "rationale": "The graph contains a causal path X -> M -> Y, so X does causally affect Y. The structure rules out only a direct X -> Y edge, not causation altogether."
+  "rationale": "The graph includes a directed path X -> M -> Y, so X has a causal effect on Y through M. The structure rules out a direct edge X -> Y, but it does not rule out causation; it supports an indirect effect."
 }
 ```
 - Exact-primary correct: `yes`
@@ -176,7 +176,7 @@ Field results:
 {
   "label": "A",
   "effect_type": "indirect",
-  "rationale": "The graph contains a causal path X -> M -> Y, so X does affect Y indirectly. Z is a shared upstream cause of X and Y, which can create association, but it does not remove the indirect causal effect."
+  "rationale": "The structure contains a directed path X -> M -> Y, so X can causally affect Y indirectly even though there is no direct edge X -> Y. Z also creates association between X and Y, but the graph does not rule out causation; it supports an indirect effect."
 }
 ```
 - Exact-primary correct: `yes`
@@ -266,7 +266,7 @@ Ground truth:
 {
   "reachable": false,
   "example_path": "none",
-  "rationale": "No directed path from marketing_spend or price_discount to churn is shown; those nodes only point to new_customers, while churn is only downstream of supplier_delay -> stockout -> fulfillment_delay -> customer_complaints."
+  "rationale": "No directed path from marketing_spend or price_discount to churn; those nodes only lead to new_customers, while churn is only downstream of supplier_delay -> stockout -> fulfillment_delay -> customer_complaints."
 }
 ```
 - Exact-primary correct: `no`
@@ -280,8 +280,8 @@ Field results:
 ```json
 {
   "reachable": false,
-  "example_path": "none",
-  "rationale": "There is no directed path from the growth-side nodes shown (marketing_spend or price_discount) to churn; churn is only downstream of the service chain starting at supplier_delay."
+  "example_path": null,
+  "rationale": "No directed path leads from marketing_spend or price_discount to churn; both only point to new_customers, while churn is downstream of supplier_delay -> stockout -> fulfillment_delay -> customer_complaints."
 }
 ```
 - Exact-primary correct: `no`
@@ -322,7 +322,7 @@ Ground truth:
 {
   "label": "B",
   "confounder": "macro_demand",
-  "rationale": "macro_demand causes both ad_spend and sales in both encodings, so it is the confounder."
+  "rationale": "macro_demand is a common cause of both ad_spend and sales in both encodings."
 }
 ```
 - Exact-primary correct: `yes`
@@ -337,7 +337,7 @@ Field results:
 {
   "label": "B",
   "confounder": "macro_demand",
-  "rationale": "Both encodings show macro_demand causes ad_spend and also independently affects sales, so it is the common cause confounding the ad_spend-sales relationship."
+  "rationale": "Both encodings show macro_demand causing both ad_spend and sales, so it is the confounder in each representation."
 }
 ```
 - Exact-primary correct: `yes`
@@ -377,8 +377,8 @@ Ground truth:
 ```json
 {
   "label": "B",
-  "should_control": "no",
-  "rationale": "The three-day engagement score is measured only after assignment and after users see the experience, and it is computed from post-assignment behavior. It is therefore post-treatment and should not be controlled for when estimating the treatment effect on conversion."
+  "should_control": false,
+  "rationale": "No. The engagement score is measured only after assignment and from post-assignment behavior after users see the experience, so it is a post-treatment variable and should not be controlled for when estimating the treatment effect on conversion."
 }
 ```
 - Exact-primary correct: `yes`
@@ -393,7 +393,7 @@ Field results:
 {
   "label": "B",
   "should_control": false,
-  "rationale": "Three-day engagement is measured after assignment and after exposure, so it is post-treatment. Controlling for it would condition on a post-treatment variable rather than estimate the total treatment effect on conversion."
+  "rationale": "The engagement metric is measured only after assignment and after users see the experience, so it is post-treatment and should not be controlled for when estimating the treatment effect on conversion."
 }
 ```
 - Exact-primary correct: `yes`
@@ -433,8 +433,8 @@ Ground truth:
 ```json
 {
   "label": "B",
-  "segment_conclusion": "worse in both segments; aggregate uplift is mix-driven",
-  "rationale": "Within novices, treatment converts 15/100 versus 18/100 for control. Within experts, treatment converts 66/100 versus 70/100 for control. The aggregate treatment rate only looks higher because treatment traffic was shifted toward expert users after a manual allocation decision."
+  "segment_conclusion": "worse_within_both_segments",
+  "rationale": "Treatment underperforms within both strata: novices convert at 15/100 vs 18/100 for control, and experts at 66/100 vs 70/100 for control. The aggregate treatment rate looks higher only because treatment traffic is disproportionately expert-heavy after a manual allocation decision."
 }
 ```
 - Exact-primary correct: `no`
@@ -448,8 +448,8 @@ Field results:
 ```json
 {
   "label": "B",
-  "segment_conclusion": "aggregate_not_sufficient",
-  "rationale": "Within both segments, treatment converts worse than control: novices 15/100 vs 18/100 and experts 66/100 vs 70/100. The higher aggregate treatment rate is explained by the expert-heavy treatment mix after manual allocation."
+  "segment_conclusion": "worse_in_both_segments",
+  "rationale": "Within both strata, treatment converts worse than control (novice 15/100 vs 18/100; expert 66/100 vs 70/100). The aggregate lift is explained by treatment being disproportionately expert-heavy after a manual allocation decision."
 }
 ```
 - Exact-primary correct: `no`
@@ -489,8 +489,8 @@ Ground truth:
 ```json
 {
   "label": "B",
-  "supportability": "not_pricing_alone",
-  "rationale": "List price increased by 2.0%, but input cost per unit fell by 4.0%, and management states that a commodity hedge materially reduced input costs and that the margin benefit should not be attributed to pricing alone. So the margin expansion is not supportably attributable solely to pricing."
+  "supportability": "not_solely_pricing",
+  "rationale": "The gross-margin increase is not supportable as a pricing-only effect because input cost per unit also fell materially (-4.0%), and the memo states that a commodity hedge reduced input costs in the same quarter and that the margin benefit should not be attributed to pricing alone."
 }
 ```
 - Exact-primary correct: `no`
@@ -504,8 +504,8 @@ Field results:
 ```json
 {
   "label": "B",
-  "supportability": "pricing_alone_unsupported",
-  "rationale": "Gross margin rose while input cost per unit fell 4.0%, and the memo says a commodity hedge materially reduced input costs in the same quarter. That means the margin expansion cannot be attributed solely to pricing."
+  "supportability": "not_pricing_alone",
+  "rationale": "Gross margin rose, but input cost per unit also fell 4.0%, and management states a commodity hedge materially reduced input costs and that the margin benefit should not be attributed to pricing alone."
 }
 ```
 - Exact-primary correct: `no`
@@ -546,7 +546,7 @@ Ground truth:
 {
   "label": "C",
   "direct_driver": "distribution_center_scanner_outage",
-  "justification": "The shortage follows most directly from the Tuesday-night scanner outage that left 40% of inbound pallets unprocessed. The earlier typhoon and port congestion had largely cleared by then."
+  "justification": "The shortage followed immediately after the Tuesday-night scanner outage left 40% of inbound pallets unprocessed. Port congestion had already eased, and the typhoon was a more upstream delay."
 }
 ```
 - Exact-primary correct: `yes`
@@ -560,8 +560,8 @@ Field results:
 ```json
 {
   "label": "C",
-  "direct_driver": "distribution_center_scanner_outage",
-  "justification": "The shortage came right after the Tuesday-night scanner outage left 40% of inbound pallets unprocessed. The typhoon was earlier and the port congestion had already eased with most containers unloaded."
+  "direct_driver": "scanner_outage_at_regional_distribution_center",
+  "justification": "By Tuesday morning the port congestion had eased and most containers were unloaded. The immediate disruption before stores ran out was the Tuesday-night scanner outage that left 40% of inbound pallets unprocessed."
 }
 ```
 - Exact-primary correct: `yes`
@@ -601,8 +601,8 @@ Ground truth:
 ```json
 {
   "label": "B",
-  "causal_read": "buyback_and_raised_guidance_causal; ceo_interview_temporal_only",
-  "justification": "The buyback and raised guidance were announced before the open, and most of the stock move happened in the first 20 minutes after the open. The midday interview added no new information, so it is at most temporally adjacent, not the best-supported cause."
+  "causal_read": "buyback_and_raised_guidance_causal; CEO_interview_temporal_only",
+  "justification": "Most of the stock move happened in the first 20 minutes after the open, aligning with the pre-open buyback and guidance news. The midday interview added no new information, so it supports timing, not causation."
 }
 ```
 - Exact-primary correct: `no`
@@ -616,8 +616,8 @@ Field results:
 ```json
 {
   "label": "B",
-  "causal_read": "buyback_and_guidance_causal;_ceo_interview_temporal_only",
-  "justification": "The new buyback and raised guidance were announced before the open, and most of the stock move happened in the first 20 minutes after the open. The midday TV interview added no new information, so it supports only temporal succession, not a separate causal claim."
+  "causal_read": "Causal: pre-open buyback_and_raised_guidance; Temporal_only: midday_CEO_interview",
+  "justification": "Most of the stock move happened in the first 20 minutes after the open, aligning with the pre-open announcement. The CEO interview came later and repeated the same points without new information."
 }
 ```
 - Exact-primary correct: `no`
@@ -658,7 +658,7 @@ Ground truth:
 {
   "label": "C",
   "counterfactual_direction": "still_below_plan_but_materially_better",
-  "justification": "Without the strike, one clear source of lost throughput disappears, so exports should improve versus the realized 18% miss. But the later heavy rain still reduced rail departures, so exports would likely remain below plan."
+  "justification": "Removing the strike would improve exports versus the realized result, but the later heavy rain would still reduce rail departures, so exports would likely remain below plan rather than fully recover."
 }
 ```
 - Exact-primary correct: `no`
@@ -673,7 +673,7 @@ Field results:
 {
   "label": "C",
   "counterfactual_direction": "still_below_plan_but_materially_better",
-  "justification": "Removing the strike would improve exports, but the later heavy-rain disruption would still cut rail departures. Since monthly exports still faced that separate shock, the result would likely remain below plan, though better than the realized 18% miss."
+  "justification": "Without the strike, exports would have been higher than realized, but the later heavy rain would still have reduced rail departures. So the result is best read as still below plan, but improved versus the actual outcome."
 }
 ```
 - Exact-primary correct: `no`
@@ -710,42 +710,42 @@ Ground truth:
 `codex only`:
 ```json
 {
-  "primary_driver": "mix_shift_to_lower_margin_hardware",
+  "primary_driver": "unfavorable_hardware_mix_shift",
   "supporting_variables": {
-    "relationship": "hardware_mix_up + services_mix_down, with hardware_gross_margin far below services_gross_margin, drives blended_margin_down",
-    "evidence": "hardware mix 46%->58%; services mix 54%->42%; hardware GM 24%->18% vs services GM 72%->70%; freight 0.4%->2.2% is a secondary drag"
+    "relationship": "higher_hardware_mix_and_lower_hardware_margin_reduced_blended_margin",
+    "evidence": [
+      "Hardware mix 46%->58%",
+      "Services mix 54%->42%",
+      "Hardware gross margin 24%->18%",
+      "Services gross margin 72%->70%",
+      "Expedited freight cost as % of revenue 0.4%->2.2% (secondary pressure)"
+    ]
   },
   "confidence": "high"
 }
 ```
 - Exact-primary correct: `no`
-- Weighted score: `65.00%`
+- Weighted score: `20.00%`
 Field results:
-- `primary_driver`: `match`
+- `primary_driver`: `mismatch`
 - `supporting_variables`: `mismatch`
 - `confidence`: `match`
 
 `codex + skill`:
 ```json
 {
-  "primary_driver": "mix_shift_to_lower_margin_hardware",
+  "primary_driver": "lower-margin hardware mix shift",
   "supporting_variables": {
-    "relationship": "hardware_mix_up + services_mix_down with hardware_gm << services_gm -> blended_margin_down",
-    "evidence": {
-      "hardware_mix": "46%->58%",
-      "services_mix": "54%->42%",
-      "hardware_gm": "24%->18%",
-      "services_gm": "72%->70%",
-      "freight_pct_rev": "0.4%->2.2% secondary"
-    }
+    "relationship": "hardware_mix_up + services_mix_down -> blended_margin_down",
+    "evidence": "Hardware mix rose from 46% to 58% while services mix fell from 54% to 42%; hardware gross margin was far below services and also fell from 24% to 18% versus services at 72% to 70%. Expedited freight rose from 0.4% to 2.2% of revenue, but that looks secondary to the mix shift."
   },
   "confidence": "high"
 }
 ```
 - Exact-primary correct: `no`
-- Weighted score: `65.00%`
+- Weighted score: `20.00%`
 Field results:
-- `primary_driver`: `match`
+- `primary_driver`: `mismatch`
 - `supporting_variables`: `mismatch`
 - `confidence`: `match`
 
@@ -780,7 +780,7 @@ Ground truth:
 {
   "label": "A",
   "base_case": "qualified_leads_drop_first",
-  "rationale": "Paid search drives 62% of first qualified visits, and prior geo tests showed only 0.25 same-month organic replacement for each paid lead cut, so volume falls quickly while CAC only partially improves."
+  "rationale": "Paid search supplies 62% of first qualified visits, and prior geo tests showed only 0.25 same-month organic replacement for each paid lead cut. A 20% paid reduction therefore most likely hits qualified leads first, while CAC may improve only partially."
 }
 ```
 - Exact-primary correct: `no`
@@ -794,8 +794,8 @@ Field results:
 ```json
 {
   "label": "A",
-  "base_case": "qualified_leads_drop_first; CAC_improves_only_partially",
-  "rationale": "Paid search drives 62% of first qualified visits, and prior geo tests showed only 0.25 same-month organic replacement for each paid lead cut, so a 20% paid reduction most likely reduces near-term qualified leads first, with only partial CAC improvement."
+  "base_case": "qualified_leads_down_first; CAC_improves_partially",
+  "rationale": "Paid search drives 62% of first qualified visits and prior geo tests showed only 0.25 same-month organic replacement for each paid lead cut. A 20% paid reduction therefore most likely hits qualified lead volume first, with only partial CAC benefit because organic does not fully replace the lost paid traffic."
 }
 ```
 - Exact-primary correct: `no`
@@ -832,10 +832,17 @@ Ground truth:
 `codex only`:
 ```json
 {
-  "primary_driver": "weaker_channel_sell_through_causing_inventory_build",
+  "primary_driver": "weaker_channel_sell_through_and_inventory_buildup",
   "supporting_variables": {
-    "support": "end-market sell-through fell 9% and channel inventory days rose 12 days, which fits the 6% revenue miss better than FX (-1 point) or the legal reserve (-0.4 margin points)",
-    "falsifier": "stable_or_improving_sell-through and no_inventory_day_build"
+    "relationship": "sell_through_down_and_inventory_days_up_best_explain_most_of_the_revenue_miss",
+    "evidence": [
+      "Revenue miss versus plan: -6%",
+      "Constant-currency impact: -1 point",
+      "Legal reserve impact on operating margin: -0.4 points",
+      "Channel inventory days: +12 days",
+      "End-market sell-through: -9%"
+    ],
+    "falsifier": "channel_inventory_days_flat_or_down_and_end_market_sell_through_not_materially_weaker"
   },
   "confidence": "high"
 }
@@ -850,17 +857,11 @@ Field results:
 `codex + skill`:
 ```json
 {
-  "primary_driver": "weaker_channel_sell_through_causing_inventory_build",
+  "primary_driver": "weaker channel sell-through causing inventory build and a revenue miss",
   "supporting_variables": {
     "relationship": "sell_through_down + inventory_days_up -> revenue_miss",
-    "evidence": {
-      "revenue_miss_vs_plan": "-6%",
-      "end_market_sell_through": "-9%",
-      "channel_inventory_days": "+12 days",
-      "constant_currency": "-1 point",
-      "legal_reserve": "-0.4 point margin"
-    },
-    "falsifier": "channel_inventory_days_not_up_and_sell_through_not_down"
+    "evidence": "End-market sell-through fell 9% and channel inventory days rose by 12 days, which fits the 6% revenue miss. The other cited factors are much smaller: constant-currency was only a 1-point headwind and the legal reserve was only a 0.4-point operating-margin impact.",
+    "falsifier": "Evidence that sell-through was not actually weak, or that inventory days rose for a non-demand reason, or that FX/legal effects were large enough to explain most of the miss by themselves."
   },
   "confidence": "high"
 }
@@ -901,11 +902,11 @@ Ground truth:
 {
   "identified": "no",
   "needed_controls": [
-    "maintenance overhaul/renovation timing",
-    "concurrent throughput or downtime changes",
-    "independent variation in temperature separate from renovation"
+    "maintenance_timing",
+    "maintenance_status",
+    "throughput"
   ],
-  "risk_note": "The temperature change happened only on the renovated line during the maintenance window, so maintenance and related operating changes are confounded with the observed defect-rate drop."
+  "risk_note": "The temperature change occurred only on the renovated line during the same maintenance window, so the observed defect drop is confounded with maintenance and throughput changes and the temperature effect is not separately identifiable."
 }
 ```
 - Exact-primary correct: `no`
@@ -918,13 +919,13 @@ Field results:
 `codex + skill`:
 ```json
 {
-  "identified": false,
+  "identified": "no",
   "needed_controls": [
-    "maintenance_overhaul",
-    "maintenance_timing",
-    "throughput"
+    "maintenance",
+    "throughput",
+    "line_time"
   ],
-  "risk_note": "The temperature change was applied only on the renovated line and in the same maintenance window, with throughput also changing, so the temperature effect is confounded with maintenance/renovation and is not separately identifiable from these observed data."
+  "risk_note": "Temperature changed only on the renovated line during the maintenance window, so the defect drop is confounded with maintenance and throughput changes."
 }
 ```
 - Exact-primary correct: `no`
@@ -957,9 +958,9 @@ Ground truth:
 `codex only`:
 ```json
 {
-  "design": "staggered_diff_in_diff",
-  "key_assumption": "Absent the policy, plants would have continued on parallel outcome trends, with no anticipatory effects before adoption.",
-  "risk_note": "The main threat is endogenous rollout timing or other plant-specific shocks that coincide with adoption and violate parallel trends."
+  "design": "staggered_did_event_study",
+  "key_assumption": "parallel_trends",
+  "risk_note": "The main threat is endogenous adoption timing or other plant-specific shocks that violate parallel trends; with staggered rollout, a naive TWFE implementation can also be biased if effects differ across cohorts or time."
 }
 ```
 - Exact-primary correct: `no`
@@ -972,15 +973,15 @@ Field results:
 `codex + skill`:
 ```json
 {
-  "design": "staggered_difference_in_differences_event_study",
+  "design": "staggered_did_event_study",
   "key_assumption": "parallel_trends",
-  "risk_note": "The main threat is endogenous adoption timing or other plant-specific shocks around rollout; if adoption responds to those shocks, not-yet-treated plants are not a valid counterfactual."
+  "risk_note": "The main threat is endogenous adoption timing: if plants rolled out the policy when plant-specific shocks or trends were changing, the estimate is biased."
 }
 ```
-- Exact-primary correct: `yes`
-- Weighted score: `80.00%`
+- Exact-primary correct: `no`
+- Weighted score: `35.00%`
 Field results:
-- `design`: `match`
+- `design`: `mismatch`
 - `key_assumption`: `match`
 - `risk_note`: `mismatch`
 
@@ -1011,23 +1012,20 @@ Ground truth:
 `codex only`:
 ```json
 {
-  "estimate": {
-    "ate": 2.4,
-    "unit": "points"
-  },
+  "estimate": 2.4,
   "assumptions": [
-    "no unmeasured confounding after adjusting for plant size, shift, baseline quality score, and operator tenure",
-    "positivity/overlap",
-    "consistency/SUTVA",
-    "correct weighting/specification"
+    "no_unmeasured_confounding_given_plant_size_shift_baseline_quality_score_and_operator_tenure",
+    "positivity_or_overlap",
+    "consistency_and_no_interference",
+    "correct_weighting_or_adjustment_specification"
   ],
   "confidence": "moderate"
 }
 ```
 - Exact-primary correct: `no`
-- Weighted score: `0.00%`
+- Weighted score: `45.00%`
 Field results:
-- `estimate`: `mismatch`
+- `estimate`: `match`
 - `assumptions`: `mismatch`
 - `confidence`: `mismatch`
 
@@ -1035,14 +1033,13 @@ Field results:
 ```json
 {
   "estimate": {
-    "ate": 2.4,
-    "unit": "points"
+    "ate_points": 2.4
   },
   "assumptions": [
-    "no_unmeasured_confounding_given_observed_covariates",
+    "conditional_exchangeability_given_covariates",
     "positivity_overlap",
-    "consistency_stable_treatment",
-    "correct_weighting_adjustment"
+    "consistency_no_interference",
+    "adequate_weighting_balance"
   ],
   "confidence": "moderate"
 }
@@ -1081,11 +1078,11 @@ Ground truth:
 `codex only`:
 ```json
 {
-  "primary_driver": "Canal disruption forced Asia-Europe rerouting, carriers added emergency surcharges, and that shipping shock most likely drove the freight-rate jump.",
-  "uncertainty": "The key unknown is duration: if canal passage normalizes quickly, surcharges and rates could fade. Retailers had not yet repriced goods, so downstream pass-through should not be overstated.",
+  "primary_driver": "Canal disruption forced rerouting, leading carriers to add emergency surcharges and pushing freight rates sharply higher.",
+  "uncertainty": "The key unknown is duration: if passage normalizes quickly, the surcharge/rate shock could fade. Retail pass-through is also not yet visible.",
   "evidence_used": [
-    "Emergency surcharges were announced after rerouting on Asia-Europe lanes.",
-    "Freight rate indices jumped over the same two-day window.",
+    "Carriers announced emergency surcharges after rerouting on Asia-Europe lanes.",
+    "Freight rate indices jumped sharply in the same two-day window.",
     "Retailers said they had not yet repriced goods.",
     "Analysts said the rerouting shock could fade if passage normalizes quickly."
   ]
@@ -1101,20 +1098,19 @@ Field results:
 `codex + skill`:
 ```json
 {
-  "primary_driver": "Canal disruption forcing rerouting on Asia-Europe lanes, which led carriers to impose emergency surcharges and drove the freight-rate jump.",
-  "uncertainty": "The duration of the rerouting shock is still unclear. If passage normalizes quickly, the surcharge/rate spike could fade, and retailers had not yet repriced goods so downstream pass-through is not established.",
+  "primary_driver": "The most likely driver is the canal-disruption rerouting shock: carriers imposed emergency surcharges on affected Asia-Europe lanes, and that appears to have driven the sharp freight-rate move.",
+  "uncertainty": "Do not overstate persistence. Analysts explicitly said the shock could fade if passage normalizes quickly, and retailers had not yet repriced goods, so downstream pass-through is not established.",
   "evidence_used": [
-    "Ocean carriers announced emergency surcharges after a canal disruption forced rerouting on several Asia-Europe lanes.",
-    "Freight rate indices jumped sharply over the same two-day window.",
-    "Retailers said they had not yet repriced goods.",
-    "Analysts cautioned that the duration of the rerouting shock remained unclear and could fade if passage normalizes quickly."
+    "Snippet 1: emergency surcharges followed canal-disruption rerouting on Asia-Europe lanes",
+    "Snippet 2: freight rate indices jumped in the same two-day window while retailers had not yet repriced goods",
+    "Snippet 3: analysts said duration of the rerouting shock was unclear and could fade quickly"
   ]
 }
 ```
 - Exact-primary correct: `no`
-- Weighted score: `0.00%`
+- Weighted score: `45.00%`
 Field results:
-- `primary_driver`: `mismatch`
+- `primary_driver`: `match`
 - `uncertainty`: `mismatch`
 - `evidence_used`: `mismatch`
 
@@ -1141,9 +1137,9 @@ Ground truth:
 `codex only`:
 ```json
 {
-  "primary_driver": "The best-supported driver is concern about deposit competition and funding-cost pressure for smaller lenders, made more acute here by the bank's high share of interest-bearing deposits and rising funding costs.",
-  "next_verification": "Check for primary-source filings or company statements on any capital raise, and for updated deposit mix/funding-cost data to see whether pressure is worsening or stabilizing.",
-  "uncertainty": "The capital-raise rumor is unconfirmed and should not be treated as causal without a filing or company statement."
+  "primary_driver": "Most likely a funding-cost/deposit-pressure read: the policy official flagged intense deposit competition for smaller lenders, and the bank's filing already showed high interest-bearing deposits and rising funding costs.",
+  "next_verification": "Check for any primary-source filing or company statement on the rumored capital raise, and for updated deposit/funding-cost data that would confirm or weaken the pressure thesis.",
+  "uncertainty": "The capital-raise rumor is unconfirmed, and the severity of future deposit/funding pressure is still unclear from the provided materials."
 }
 ```
 - Exact-primary correct: `no`
@@ -1156,9 +1152,9 @@ Field results:
 `codex + skill`:
 ```json
 {
-  "primary_driver": "Most likely, the selloff was driven by concern that intense deposit competition will pressure this regional bank's funding costs, especially because its last quarterly filing already showed a high share of interest-bearing deposits and rising funding costs.",
-  "next_verification": "Primary-source confirmation or denial of the capital-raise rumor is the key next check. I would also update the view if new company disclosures showed materially better or worse deposit mix and funding-cost trends than the last filing.",
-  "uncertainty": "The capital-raise rumor remains unconfirmed and could change the causal read if validated, but with no filing or company statement it should stay a secondary possibility rather than the base case."
+  "primary_driver": "Best-supported explanation: the selloff was a funding-pressure repricing. The policy comment said deposit competition is intense for smaller lenders, and this bank's own filing showed high interest-bearing deposits plus rising funding costs, making it look exposed.",
+  "next_verification": "Check for any primary-source filing or company statement on the capital-raise rumor, and for fresh disclosure on deposit mix and funding costs. A confirmed capital raise, or clear evidence that funding pressure is easing or worsening, would change the view.",
+  "uncertainty": "The capital-raise rumor is unconfirmed, and the provided materials do not prove an idiosyncratic capital problem beyond exposure to broader smaller-lender deposit competition."
 }
 ```
 - Exact-primary correct: `no`
@@ -1194,12 +1190,12 @@ Ground truth:
 `codex only`:
 ```json
 {
-  "primary_driver": "The most causally plausible driver is the favorable FDA advisory-panel vote, which directly improved the therapy's perceived outlook.",
-  "uncertainty": "The size of the rally may have been amplified by elevated short interest, and the acquisition rumor remains unconfirmed enough that it should stay only as a low-confidence alternative.",
+  "primary_driver": "The most plausible driver is the favorable FDA advisory-panel vote.",
+  "uncertainty": "Two alternatives remain open enough to keep in view: elevated short interest may have amplified the rally, and the acquisition rumor is still unconfirmed and should not be treated as established.",
   "evidence_used": [
-    "The stock rallied after the FDA advisory panel voted in favor of the therapy.",
-    "Short interest was elevated heading into the vote, which could amplify the move.",
-    "Acquisition chatter was only on social media and had no credible confirmation."
+    "The stock rallied after an FDA advisory panel voted in favor of the therapy.",
+    "Social media circulated an acquisition rumor, but no credible outlet confirmed it.",
+    "Short interest was elevated heading into the vote, which could have amplified the move."
   ]
 }
 ```
@@ -1213,12 +1209,12 @@ Field results:
 `codex + skill`:
 ```json
 {
-  "primary_driver": "The favorable FDA advisory-panel vote is the most causally plausible primary driver of the rally.",
-  "uncertainty": "High short interest may have amplified the size of the move through short covering, and the acquisition rumor remains a low-confidence alternative because it lacks credible confirmation.",
+  "primary_driver": "The most causally plausible driver is the positive FDA advisory-panel vote on the therapy.",
+  "uncertainty": "Keep two alternatives open: elevated short interest may have amplified the size of the rally, and the acquisition rumor remains live only as an unverified possibility, not a confirmed driver.",
   "evidence_used": [
-    "The biotech stock rallied after an FDA advisory panel voted in favor of its therapy.",
-    "Social media accounts circulated an acquisition rumor, but no credible outlet confirmed it.",
-    "Short interest was elevated heading into the vote, which may have amplified the magnitude of the move."
+    "Snippet 1: the stock rallied after the FDA advisory panel voted in favor",
+    "Snippet 2: acquisition rumor circulated on social media but had no credible confirmation",
+    "Snippet 3: short interest was elevated heading into the vote and may have amplified the move"
   ]
 }
 ```
@@ -1228,3 +1224,221 @@ Field results:
 - `primary_driver`: `mismatch`
 - `uncertainty`: `mismatch`
 - `evidence_used`: `mismatch`
+
+## v14d_022 — Banxico Decision Contract-Style Exemplar
+
+- Track: `agentic_live_analysis`
+- Truth type: `hidden_live_resolution`
+- Task family: `futurex_style_live_prediction`
+
+Question:
+```text
+As of the frozen packet, which policy outcome is the best prediction for Banxico's next meeting?
+```
+
+Options:
+- `A`: Cut the policy rate by 25 bps.
+- `B`: Hold the policy rate unchanged.
+- `C`: Raise the policy rate.
+
+Ground truth:
+```json
+{
+  "label": "A",
+  "primary_basis": "disinflation_plus_softer_growth_and_market_pricing_for_a_modest_cut",
+  "confidence": "medium"
+}
+```
+
+`codex only`:
+```json
+{
+  "label": "A",
+  "primary_basis": "Consensus and OIS both point to a modest 25 bps easing, with softer growth and easing inflation but no stress signal for a larger move.",
+  "confidence": 0.71
+}
+```
+- Exact-primary correct: `no`
+- Weighted score: `45.00%`
+Field results:
+- `label`: `match`
+- `primary_basis`: `mismatch`
+- `confidence`: `mismatch`
+
+`codex + skill`:
+```json
+{
+  "label": "A",
+  "primary_basis": "Consensus commentary and OIS both lean to modest easing, while stable FX and no local-rates stress fit a standard 25 bps cut rather than a hold or hike.",
+  "confidence": 0.69
+}
+```
+- Exact-primary correct: `no`
+- Weighted score: `45.00%`
+Field results:
+- `label`: `match`
+- `primary_basis`: `mismatch`
+- `confidence`: `mismatch`
+
+## v14d_023 — Month-End Commodity Threshold Exemplar
+
+- Track: `agentic_live_analysis`
+- Truth type: `hidden_live_resolution`
+- Task family: `futurex_style_live_prediction`
+
+Question:
+```text
+Given the freeze packet, which threshold set is the best prediction for gold by month-end?
+```
+
+Options:
+- `A`: The highest threshold set is the best prediction.
+- `B`: The middle threshold set is the best prediction.
+- `C`: The lowest threshold set is the best prediction.
+
+Ground truth:
+```json
+{
+  "label": "B",
+  "primary_basis": "supportive_macro_and_flow_backdrop_but_not_strong_enough_for_the_most_extreme_threshold_set",
+  "confidence": "medium"
+}
+```
+
+`codex only`:
+```json
+{
+  "label": "B",
+  "primary_basis": "The setup is supportive for gold, but 'constructive not euphoric' positioning argues for a moderate outcome rather than the highest bucket.",
+  "confidence": 0.6
+}
+```
+- Exact-primary correct: `no`
+- Weighted score: `45.00%`
+Field results:
+- `label`: `match`
+- `primary_basis`: `mismatch`
+- `confidence`: `mismatch`
+
+`codex + skill`:
+```json
+{
+  "label": "B",
+  "primary_basis": "The packet is supportive for gold, but the setup looks moderate rather than extreme: lower real yields, steady central-bank buying, a modestly softer dollar, and constructive but not euphoric positioning.",
+  "confidence": 0.58
+}
+```
+- Exact-primary correct: `no`
+- Weighted score: `45.00%`
+Field results:
+- `label`: `match`
+- `primary_basis`: `mismatch`
+- `confidence`: `mismatch`
+
+## v14d_024 — As-Of Bitcoin Close Threshold Exemplar
+
+- Track: `agentic_live_analysis`
+- Truth type: `expert_labeled`
+- Task family: `futurex_style_live_prediction`
+
+Question:
+```text
+Using only information available by the cutoff date, should the prediction be Yes or No?
+```
+
+Options:
+- `A`: Yes
+- `B`: No
+
+Ground truth:
+```json
+{
+  "label": "B",
+  "cutoff_rule": "do_not_use_sources_after_2026_01_31",
+  "primary_basis": "the_as_of_packet_does_not_support_a_clean_break_above_100k_by_the_cutoff"
+}
+```
+
+`codex only`:
+```json
+{
+  "label": "B",
+  "cutoff_rule": "use_only_pre_2026-01-31_utc_sources",
+  "primary_basis": "By the cutoff packet, BTC was still below 100k into the final session and no confirmed late-session catalyst suggested a decisive break above the threshold."
+}
+```
+- Exact-primary correct: `no`
+- Weighted score: `50.00%`
+Field results:
+- `label`: `match`
+- `cutoff_rule`: `mismatch`
+- `primary_basis`: `mismatch`
+
+`codex + skill`:
+```json
+{
+  "label": "B",
+  "cutoff_rule": "Use only information available on or before 2026-01-31 UTC; later month-end recaps are invalid.",
+  "primary_basis": "The packet shows BTC below 100k into the final session and no confirmed late-session catalyst suggesting a decisive break above the threshold."
+}
+```
+- Exact-primary correct: `no`
+- Weighted score: `50.00%`
+Field results:
+- `label`: `match`
+- `cutoff_rule`: `mismatch`
+- `primary_basis`: `mismatch`
+
+## v14d_025 — As-Of Supply Shock Binary Exemplar
+
+- Track: `agentic_live_analysis`
+- Truth type: `expert_labeled`
+- Task family: `futurex_style_live_prediction`
+
+Question:
+```text
+Using only information available by the cutoff date, should the prediction be Yes or No?
+```
+
+Options:
+- `A`: Yes
+- `B`: No
+
+Ground truth:
+```json
+{
+  "label": "B",
+  "cutoff_rule": "do_not_use_sources_after_2026_03_04",
+  "primary_basis": "the_as_of_supply_packet_supports_stress_but_not_a_sub_threshold_global_availability_outcome"
+}
+```
+
+`codex only`:
+```json
+{
+  "label": "B",
+  "cutoff_rule": "only materials available on or before 2026-03-04",
+  "primary_basis": "As-of packet says supply disruption concerns were real, but it does not support global platinum availability falling below the stated threshold by the deadline."
+}
+```
+- Exact-primary correct: `no`
+- Weighted score: `50.00%`
+Field results:
+- `label`: `match`
+- `cutoff_rule`: `mismatch`
+- `primary_basis`: `mismatch`
+
+`codex + skill`:
+```json
+{
+  "label": "B",
+  "cutoff_rule": "Use only sources dated on or before 2026-03-04; later settlement or retrospective evidence is invalid.",
+  "primary_basis": "The as-of packet says South African supply disruption concerns were real, but it does not support global platinum availability falling below the stated threshold by the deadline."
+}
+```
+- Exact-primary correct: `no`
+- Weighted score: `50.00%`
+Field results:
+- `label`: `match`
+- `cutoff_rule`: `mismatch`
+- `primary_basis`: `mismatch`
