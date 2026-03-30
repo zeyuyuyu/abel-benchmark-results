@@ -56,6 +56,10 @@ Why this mapping matters:
   - `v13/resolved_asof_questions.json`
   - `v13/resolved_asof_ground_truth.json`
   - `v13/resolved_asof_cases.md`
+- `v14` materialized files:
+  - `v14/track_g_past_asof_questions.json`
+  - `v14/track_g_past_asof_ground_truth.json`
+  - `v14/track_g_past_asof_cases.md`
 - Case count: `15`
 
 This is the canonical historical open-book slice for Track G.
@@ -108,3 +112,10 @@ answer is:
 - `track_g_true_live_questions.json`
 - `track_g_true_live_ground_truth.json`
 - `track_g_true_live_cases.md`
+
+When someone asks “where is the full historical as-of materialized pack in
+`v14`?”, the answer is:
+
+- `track_g_past_asof_questions.json`
+- `track_g_past_asof_ground_truth.json`
+- `track_g_past_asof_cases.md`

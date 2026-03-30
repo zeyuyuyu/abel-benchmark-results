@@ -344,6 +344,11 @@ Completed:
 14. `track_g_true_live_ground_truth.json`
 15. `track_g_true_live_cases.md`
 16. `track_g_true_live_spec.md`
+17. `build_track_g_past_asof_pack.py`
+18. `track_g_past_asof_questions.json`
+19. `track_g_past_asof_ground_truth.json`
+20. `track_g_past_asof_cases.md`
+21. `track_g_past_asof_spec.md`
 
 Next:
 
