@@ -55,22 +55,21 @@
     },
     {
       "mapping_id": "track_g_futurex_past_asof",
-      "source_version": "v13",
+      "source_version": "futurex_past_full_hf",
       "evaluation_regime": "historical_asof_search_cutoff",
       "source_family": [
         "FutureX-Past"
       ],
       "source_files": [
-        "v13/resolved_asof_questions.json",
-        "v13/resolved_asof_ground_truth.json",
-        "v13/resolved_asof_cases.md"
+        "huggingface://futurex-ai/Futurex-Past",
+        "v14/build_track_g_past_asof_pack.py"
       ],
       "v14_materialized_files": [
         "v14/track_g_past_asof_questions.json",
         "v14/track_g_past_asof_ground_truth.json",
         "v14/track_g_past_asof_cases.md"
       ],
-      "case_count": 15,
+      "case_count": 244,
       "category_breakdown": {
         "central_bank_decision": 4,
         "commodity_bucket": 2,
@@ -80,11 +79,19 @@
         "commodity_hit_levels": 1,
         "agriculture_bucket": 1,
         "supply_shock_binary": 1,
-        "single_stock_direction": 1
+        "single_stock_direction": 1,
+        "unlabeled": 229
+      },
+      "level_breakdown": {
+        "1": 98,
+        "2": 106,
+        "3": 15,
+        "4": 25
       },
       "notes": [
         "Search is allowed, but every case carries a case-level search_cutoff.",
-        "This is the canonical time-bounded historical open-book slice for Track G.",
+        "This is the canonical full FutureX-Past time-bounded historical open-book slice for Track G.",
+        "15 legacy finance case ids (v13ra_001 through v13ra_015) are preserved for backward comparability.",
         "It should be interpreted separately from unrestricted historical QA."
       ]
     }

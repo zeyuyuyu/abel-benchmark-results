@@ -2,39 +2,45 @@
 
 ## Purpose
 
-This pack is the canonical `v14` materialization of Track G historical
-`FutureX-Past` cases under a strict time-bounded search protocol.
+This is the canonical full FutureX-Past materialization for Track G under
+`historical_asof_search_cutoff`.
 
-## Source
+## Composition
 
-This pack mirrors the current `v13` historical as-of benchmark:
+- Total cases: `244`
+- Legacy finance-tagged cases: `15`
+- Remaining cases are labeled `category = unlabeled` unless we have prior
+  curated category tags.
 
-- source questions: `v13/resolved_asof_questions.json`
-- source answers: `v13/resolved_asof_ground_truth.json`
+## Evaluation Rule
+
+- Search is allowed.
+- But evidence must be dated on or before each case's `search_cutoff`.
+- If source dates are unavailable or ambiguous, they should not be relied on.
+
+## Category Breakdown
+
+- `agriculture_bucket`: `1`
+- `central_bank_decision`: `4`
+- `commodity_bucket`: `2`
+- `commodity_hit_levels`: `1`
+- `commodity_thresholds`: `1`
+- `crypto_binary`: `2`
+- `first_hit`: `2`
+- `single_stock_direction`: `1`
+- `supply_shock_binary`: `1`
+- `unlabeled`: `229`
+
+## Level Breakdown
+
+- `level=1`: `98`
+- `level=2`: `106`
+- `level=3`: `15`
+- `level=4`: `25`
 
 ## Files
 
 - `track_g_past_asof_questions.json`
 - `track_g_past_asof_ground_truth.json`
 - `track_g_past_asof_cases.md`
-
-## Evaluation Rule
-
-- Search is allowed.
-- But evidence must be dated on or before the case-level `search_cutoff`.
-- If source dates are unclear, they should not be relied on.
-
-## Why This Exists
-
-`public_dev` only contains a small number of Track G exemplars.
-
-This pack is different:
-
-- it is the full current historical as-of slice
-- it preserves the category mix from `v13 resolved_asof`
-- it is the correct materialized `v14` pack for
-  `evaluation_regime = historical_asof_search_cutoff`
-
-## Current Count
-
-- mirrored historical as-of cases: `15`
+- `build_track_g_past_asof_pack.py`

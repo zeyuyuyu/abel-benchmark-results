@@ -53,16 +53,18 @@ Why this mapping matters:
 
 - `evaluation_regime = historical_asof_search_cutoff`
 - Source files:
-  - `v13/resolved_asof_questions.json`
-  - `v13/resolved_asof_ground_truth.json`
-  - `v13/resolved_asof_cases.md`
+  - `huggingface://futurex-ai/Futurex-Past`
+  - `v14/build_track_g_past_asof_pack.py`
 - `v14` materialized files:
   - `v14/track_g_past_asof_questions.json`
   - `v14/track_g_past_asof_ground_truth.json`
   - `v14/track_g_past_asof_cases.md`
-- Case count: `15`
+- Case count: `244`
 
 This is the canonical historical open-book slice for Track G.
+
+It now materializes the full FutureX-Past set and keeps `15` legacy finance
+case ids (`v13ra_001` -> `v13ra_015`) stable for backward comparability.
 
 The defining rule is:
 
@@ -80,6 +82,14 @@ Category mix:
 - `agriculture_bucket`: `1`
 - `supply_shock_binary`: `1`
 - `single_stock_direction`: `1`
+- `unlabeled`: `229`
+
+Level mix:
+
+- `level=1`: `98`
+- `level=2`: `106`
+- `level=3`: `15`
+- `level=4`: `25`
 
 ## Related But Non-Primary
 

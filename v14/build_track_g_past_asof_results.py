@@ -94,7 +94,7 @@ def build_outputs(summary: dict[str, Any]) -> tuple[dict[str, Any], str]:
     lines = [
         "# v14 Track G Past-As-Of Results",
         "",
-        "Full `historical_asof_search_cutoff` run over the 15-case Track G pack.",
+        f"Full `historical_asof_search_cutoff` run over the {total}-case Track G pack.",
         "",
         f"- Base: `{summary['runs']['base']['correct_case_count']}/{total} = {summary['runs']['base']['accuracy']:.2%}`",
         f"- Skill: `{summary['runs']['skill']['correct_case_count']}/{total} = {summary['runs']['skill']['accuracy']:.2%}`",
