@@ -8,6 +8,7 @@ This markdown expands every public-dev case with its question and ground truth.
 - Truth type: `oracle_graph`
 - Prompt style: `naturalized_graph_question`
 - Task family: `backdoor_adjustment`
+- Evaluation regime: `unspecified`
 
 Scenario:
 ```text
@@ -54,6 +55,7 @@ Ground truth:
 - Truth type: `oracle_graph`
 - Prompt style: `naturalized_graph_question`
 - Task family: `counterfactual_with_delexicalization`
+- Evaluation regime: `unspecified`
 
 Scenario:
 ```text
@@ -95,6 +97,7 @@ Ground truth:
 - Truth type: `oracle_graph`
 - Prompt style: `naturalized_graph_question`
 - Task family: `correlation_vs_causation_discrimination`
+- Evaluation regime: `unspecified`
 
 Scenario:
 ```text
@@ -136,6 +139,7 @@ Ground truth:
 - Truth type: `oracle_graph`
 - Prompt style: `graph_query`
 - Task family: `mediator_vs_confounder_identification`
+- Evaluation regime: `unspecified`
 
 Scenario:
 ```text
@@ -175,6 +179,7 @@ Ground truth:
 - Truth type: `oracle_graph`
 - Prompt style: `graph_query`
 - Task family: `path_supportability`
+- Evaluation regime: `unspecified`
 
 Scenario:
 ```text
@@ -213,6 +218,7 @@ Ground truth:
 - Truth type: `oracle_graph`
 - Prompt style: `graph_query`
 - Task family: `encoding_invariance`
+- Evaluation regime: `unspecified`
 
 Scenario:
 ```text
@@ -259,6 +265,7 @@ Ground truth:
 - Truth type: `programmatic_from_data`
 - Prompt style: `table_qa`
 - Task family: `post_treatment_control_trap`
+- Evaluation regime: `unspecified`
 
 Scenario:
 ```text
@@ -301,6 +308,7 @@ Ground truth:
 - Truth type: `programmatic_from_data`
 - Prompt style: `table_qa`
 - Task family: `simpsons_paradox_causal_read`
+- Evaluation regime: `unspecified`
 
 Scenario:
 ```text
@@ -343,6 +351,7 @@ Ground truth:
 - Truth type: `hybrid_structured_review`
 - Prompt style: `mixed_modal_finance_qa`
 - Task family: `finance_table_causal_interpretation`
+- Evaluation regime: `unspecified`
 
 Scenario:
 ```text
@@ -385,6 +394,7 @@ Ground truth:
 - Truth type: `expert_labeled`
 - Prompt style: `news_narrative`
 - Task family: `event_chain_attribution`
+- Evaluation regime: `unspecified`
 
 Scenario:
 ```text
@@ -431,6 +441,7 @@ Ground truth:
 - Truth type: `expert_labeled`
 - Prompt style: `news_narrative`
 - Task family: `causal_vs_temporal_disambiguation`
+- Evaluation regime: `unspecified`
 
 Scenario:
 ```text
@@ -477,6 +488,7 @@ Ground truth:
 - Truth type: `expert_labeled`
 - Prompt style: `news_narrative`
 - Task family: `narrative_counterfactual`
+- Evaluation regime: `unspecified`
 
 Scenario:
 ```text
@@ -523,6 +535,7 @@ Ground truth:
 - Truth type: `hybrid_structured_review`
 - Prompt style: `analyst_memo`
 - Task family: `earnings_driver_analysis`
+- Evaluation regime: `unspecified`
 
 Scenario:
 ```text
@@ -563,6 +576,7 @@ Ground truth:
 - Truth type: `hybrid_structured_review`
 - Prompt style: `analyst_memo`
 - Task family: `marketing_spend_intervention`
+- Evaluation regime: `unspecified`
 
 Scenario:
 ```text
@@ -605,6 +619,7 @@ Ground truth:
 - Truth type: `hybrid_structured_review`
 - Prompt style: `analyst_memo`
 - Task family: `multi_factor_finance_synthesis`
+- Evaluation regime: `unspecified`
 
 Scenario:
 ```text
@@ -645,6 +660,7 @@ Ground truth:
 - Truth type: `semi_synthetic_ground_truth`
 - Prompt style: `operational_report`
 - Task family: `manufacturing_sensor_confounder`
+- Evaluation regime: `unspecified`
 
 Scenario:
 ```text
@@ -685,6 +701,7 @@ Ground truth:
 - Truth type: `expert_labeled`
 - Prompt style: `study_design_prompt`
 - Task family: `staggered_rollout_policy`
+- Evaluation regime: `unspecified`
 
 Scenario:
 ```text
@@ -721,6 +738,7 @@ Ground truth:
 - Truth type: `semi_synthetic_ground_truth`
 - Prompt style: `study_design_prompt`
 - Task family: `treatment_effect_estimation`
+- Evaluation regime: `unspecified`
 
 Scenario:
 ```text
@@ -761,6 +779,7 @@ Ground truth:
 - Truth type: `hybrid_structured_review`
 - Prompt style: `agent_brief`
 - Task family: `fresh_event_synthesis`
+- Evaluation regime: `frozen_evidence_public_dev`
 
 Scenario:
 ```text
@@ -805,6 +824,7 @@ Ground truth:
 - Truth type: `hybrid_structured_review`
 - Prompt style: `agent_brief`
 - Task family: `analyst_workflow_agent`
+- Evaluation regime: `frozen_evidence_public_dev`
 
 Scenario:
 ```text
@@ -845,6 +865,7 @@ Ground truth:
 - Truth type: `hybrid_structured_review`
 - Prompt style: `agent_brief`
 - Task family: `cross_source_event_integration`
+- Evaluation regime: `frozen_evidence_public_dev`
 
 Scenario:
 ```text
@@ -879,6 +900,172 @@ Ground truth:
     "Snippet 1",
     "Snippet 3"
   ]
+}
+```
+
+## v14d_022 — Banxico Decision Contract-Style Exemplar
+
+- Track: `agentic_live_analysis`
+- Truth type: `hidden_live_resolution`
+- Prompt style: `agent_brief`
+- Task family: `futurex_style_live_prediction`
+- Evaluation regime: `live_forward_resolution`
+
+Scenario:
+```text
+A public-dev exemplar of a FutureX-style policy prediction question. The evidence packet is frozen at prediction time and the answer is evaluated only after the decision occurs.
+```
+
+Question:
+```text
+As of the frozen packet, which policy outcome is the best prediction for Banxico's next meeting?
+```
+
+Options:
+- `A`: Cut the policy rate by 25 bps.
+- `B`: Hold the policy rate unchanged.
+- `C`: Raise the policy rate.
+
+Materials:
+- `retrieval_bundle` — Freeze packet
+```text
+Core inflation remains above target, but recent monthly prints have eased. Growth indicators softened and overnight-index swaps price a modest easing probability for the next meeting rather than a large move.
+```
+- `retrieval_bundle` — Market pricing snapshot
+```text
+Consensus commentary leans toward a 25 bps cut. FX is stable and there is no emergency-liquidity signal in local rates.
+```
+
+Ground truth:
+```json
+{
+  "label": "A",
+  "primary_basis": "disinflation_plus_softer_growth_and_market_pricing_for_a_modest_cut",
+  "confidence": "medium"
+}
+```
+
+## v14d_023 — Month-End Commodity Threshold Exemplar
+
+- Track: `agentic_live_analysis`
+- Truth type: `hidden_live_resolution`
+- Prompt style: `agent_brief`
+- Task family: `futurex_style_live_prediction`
+- Evaluation regime: `live_forward_resolution`
+
+Scenario:
+```text
+A public-dev exemplar of a FutureX-style commodity threshold question, scored only after the month-end close.
+```
+
+Question:
+```text
+Given the freeze packet, which threshold set is the best prediction for gold by month-end?
+```
+
+Options:
+- `A`: The highest threshold set is the best prediction.
+- `B`: The middle threshold set is the best prediction.
+- `C`: The lowest threshold set is the best prediction.
+
+Materials:
+- `retrieval_bundle` — Freeze packet
+```text
+Gold has been supported by lower real yields and steady central-bank buying. The dollar softened modestly, while positioning looks constructive but not euphoric.
+```
+- `retrieval_bundle` — Threshold card
+```text
+The relevant forecast question is which threshold bucket is the best month-end prediction, not the exact settlement number.
+```
+
+Ground truth:
+```json
+{
+  "label": "B",
+  "primary_basis": "supportive_macro_and_flow_backdrop_but_not_strong_enough_for_the_most_extreme_threshold_set",
+  "confidence": "medium"
+}
+```
+
+## v14d_024 — As-Of Bitcoin Close Threshold Exemplar
+
+- Track: `agentic_live_analysis`
+- Truth type: `expert_labeled`
+- Prompt style: `agent_brief`
+- Task family: `futurex_style_live_prediction`
+- Evaluation regime: `historical_asof_search_cutoff`
+
+Scenario:
+```text
+A public-dev exemplar of a FutureX-Past case run under an as-of search policy. Search is allowed, but only with sources dated on or before the case cutoff.
+```
+
+Question:
+```text
+Using only information available by the cutoff date, should the prediction be Yes or No?
+```
+
+Options:
+- `A`: Yes
+- `B`: No
+
+Materials:
+- `retrieval_bundle` — As-of packet
+```text
+Case cutoff: 2026-01-31 UTC. BTC traded below 100k into the final session, with no confirmed late-session catalyst in the packet suggesting a decisive break above the threshold.
+```
+- `retrieval_bundle` — Usage rule
+```text
+Search is allowed only with sources dated on or before the case cutoff. Later month-end recaps are invalid for this case.
+```
+
+Ground truth:
+```json
+{
+  "label": "B",
+  "cutoff_rule": "do_not_use_sources_after_2026_01_31",
+  "primary_basis": "the_as_of_packet_does_not_support_a_clean_break_above_100k_by_the_cutoff"
+}
+```
+
+## v14d_025 — As-Of Supply Shock Binary Exemplar
+
+- Track: `agentic_live_analysis`
+- Truth type: `expert_labeled`
+- Prompt style: `agent_brief`
+- Task family: `futurex_style_live_prediction`
+- Evaluation regime: `historical_asof_search_cutoff`
+
+Scenario:
+```text
+A public-dev exemplar of a FutureX-Past supply-shock question evaluated with a strict case-level search cutoff.
+```
+
+Question:
+```text
+Using only information available by the cutoff date, should the prediction be Yes or No?
+```
+
+Options:
+- `A`: Yes
+- `B`: No
+
+Materials:
+- `retrieval_bundle` — As-of packet
+```text
+Case cutoff: 2026-03-04. South African supply disruption concerns were real, but the packet does not support global platinum availability falling below the stated threshold by the deadline.
+```
+- `retrieval_bundle` — Usage rule
+```text
+Search is allowed only with sources dated on or before the case cutoff. Any later settlement or retrospective article is invalid evidence.
+```
+
+Ground truth:
+```json
+{
+  "label": "B",
+  "cutoff_rule": "do_not_use_sources_after_2026_03_04",
+  "primary_basis": "the_as_of_supply_packet_supports_stress_but_not_a_sub_threshold_global_availability_outcome"
 }
 ```
 

@@ -2,7 +2,7 @@
   "version": "v14-alpha-public-dev-seed-set",
   "split": "public_dev",
   "description": "First seed batch for the industrial causal benchmark. These are authoring seeds, not yet fully instantiated benchmark cases.",
-  "case_count": 21,
+  "case_count": 25,
   "cases": [
     {
       "id": "v14d_001",
@@ -486,6 +486,7 @@
       "track": "agentic_live_analysis",
       "source_family": ["Finance Agent", "FinBen"],
       "task_family": "fresh_event_synthesis",
+      "evaluation_regime": "frozen_evidence_public_dev",
       "generation_pipeline": "domain_knowledge_plus_news_to_structural_task",
       "prompt_style": "agent_brief",
       "title": "Fresh Event, Fast Causal Read",
@@ -512,6 +513,7 @@
       "track": "agentic_live_analysis",
       "source_family": ["Finance Agent", "BizBench"],
       "task_family": "analyst_workflow_agent",
+      "evaluation_regime": "frozen_evidence_public_dev",
       "generation_pipeline": "simple_qa_to_complex_analysis",
       "prompt_style": "agent_brief",
       "title": "Build The Event Memo, Not Just The Answer",
@@ -538,6 +540,7 @@
       "track": "agentic_live_analysis",
       "source_family": ["Finance Agent", "CRAB", "XFinBench"],
       "task_family": "cross_source_event_integration",
+      "evaluation_regime": "frozen_evidence_public_dev",
       "generation_pipeline": "domain_knowledge_plus_news_to_structural_task",
       "prompt_style": "agent_brief",
       "title": "One Event, Multiple Conflicting Narratives",
@@ -557,6 +560,114 @@
         "abstention_allowed": true
       },
       "scoring_focus": ["field_level_accuracy", "abstention_quality", "tool_use_correctness"],
+      "authoring_status": "seed"
+    },
+    {
+      "id": "v14d_022",
+      "split": "public_dev",
+      "track": "agentic_live_analysis",
+      "source_family": ["FutureX", "Finance Agent"],
+      "task_family": "futurex_style_live_prediction",
+      "evaluation_regime": "live_forward_resolution",
+      "generation_pipeline": "simple_qa_to_complex_analysis",
+      "prompt_style": "agent_brief",
+      "title": "Banxico Decision Contract-Style Exemplar",
+      "scenario": "A public-dev exemplar of a FutureX-style policy prediction question. The evidence packet is frozen at prediction time and the answer is evaluated only after the decision occurs.",
+      "question": "As of the frozen packet, which policy outcome is the best prediction for Banxico's next meeting?",
+      "inputs_needed": [
+        {"type": "retrieval_bundle", "description": "Freeze-time macro and policy packet", "required": true}
+      ],
+      "truth_type": "hidden_live_resolution",
+      "mode_compatibility": ["open_book", "tool_agent"],
+      "skills_required": ["retrieval", "event_reasoning", "calibration"],
+      "slice_tags": ["agentic", "freshness_sensitive", "policy", "futurex_style"],
+      "expected_output_schema": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": ["label", "primary_basis", "confidence"],
+        "abstention_allowed": true
+      },
+      "scoring_focus": ["final_answer_accuracy", "field_level_accuracy", "calibration"],
+      "authoring_status": "seed"
+    },
+    {
+      "id": "v14d_023",
+      "split": "public_dev",
+      "track": "agentic_live_analysis",
+      "source_family": ["FutureX", "Finance Agent", "XFinBench"],
+      "task_family": "futurex_style_live_prediction",
+      "evaluation_regime": "live_forward_resolution",
+      "generation_pipeline": "simple_qa_to_complex_analysis",
+      "prompt_style": "agent_brief",
+      "title": "Month-End Commodity Threshold Exemplar",
+      "scenario": "A public-dev exemplar of a FutureX-style commodity threshold question, scored only after the month-end close.",
+      "question": "Given the freeze packet, which threshold set is the best prediction for gold by month-end?",
+      "inputs_needed": [
+        {"type": "retrieval_bundle", "description": "Freeze-time commodity and rates packet", "required": true}
+      ],
+      "truth_type": "hidden_live_resolution",
+      "mode_compatibility": ["open_book", "tool_agent"],
+      "skills_required": ["retrieval", "event_reasoning", "calibration"],
+      "slice_tags": ["agentic", "freshness_sensitive", "commodity", "futurex_style"],
+      "expected_output_schema": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": ["label", "primary_basis", "confidence"],
+        "abstention_allowed": true
+      },
+      "scoring_focus": ["final_answer_accuracy", "field_level_accuracy", "calibration"],
+      "authoring_status": "seed"
+    },
+    {
+      "id": "v14d_024",
+      "split": "public_dev",
+      "track": "agentic_live_analysis",
+      "source_family": ["FutureX-Past", "Finance Agent"],
+      "task_family": "futurex_style_live_prediction",
+      "evaluation_regime": "historical_asof_search_cutoff",
+      "generation_pipeline": "simple_qa_to_complex_analysis",
+      "prompt_style": "agent_brief",
+      "title": "As-Of Bitcoin Close Threshold Exemplar",
+      "scenario": "A public-dev exemplar of a FutureX-Past case run under an as-of search policy. Search is allowed, but only with sources dated on or before the case cutoff.",
+      "question": "Using only information available by the cutoff date, should the prediction be Yes or No?",
+      "inputs_needed": [
+        {"type": "retrieval_bundle", "description": "As-of market packet and search rule", "required": true}
+      ],
+      "truth_type": "expert_labeled",
+      "mode_compatibility": ["open_book", "tool_agent"],
+      "skills_required": ["retrieval", "time_bounded_search", "calibration"],
+      "slice_tags": ["agentic", "historical_asof", "crypto", "futurex_style"],
+      "expected_output_schema": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": ["label", "cutoff_rule", "primary_basis"],
+        "abstention_allowed": true
+      },
+      "scoring_focus": ["final_answer_accuracy", "tool_use_correctness", "field_level_accuracy"],
+      "authoring_status": "seed"
+    },
+    {
+      "id": "v14d_025",
+      "split": "public_dev",
+      "track": "agentic_live_analysis",
+      "source_family": ["FutureX-Past", "Finance Agent", "FinBen"],
+      "task_family": "futurex_style_live_prediction",
+      "evaluation_regime": "historical_asof_search_cutoff",
+      "generation_pipeline": "simple_qa_to_complex_analysis",
+      "prompt_style": "agent_brief",
+      "title": "As-Of Supply Shock Binary Exemplar",
+      "scenario": "A public-dev exemplar of a FutureX-Past supply-shock question evaluated with a strict case-level search cutoff.",
+      "question": "Using only information available by the cutoff date, should the prediction be Yes or No?",
+      "inputs_needed": [
+        {"type": "retrieval_bundle", "description": "As-of supply and mining packet with cutoff metadata", "required": true}
+      ],
+      "truth_type": "expert_labeled",
+      "mode_compatibility": ["open_book", "tool_agent"],
+      "skills_required": ["retrieval", "time_bounded_search", "event_reasoning"],
+      "slice_tags": ["agentic", "historical_asof", "supply_shock", "futurex_style"],
+      "expected_output_schema": {
+        "format": "multiple_choice_plus_json",
+        "required_fields": ["label", "cutoff_rule", "primary_basis"],
+        "abstention_allowed": true
+      },
+      "scoring_focus": ["final_answer_accuracy", "tool_use_correctness", "field_level_accuracy"],
       "authoring_status": "seed"
     }
   ]

@@ -1115,6 +1115,191 @@ DETAILS = {
             ],
         },
     },
+    "v14d_022": {
+        "paired_case_group": "futurex_live_policy_exemplar",
+        "materials": [
+            material(
+                "retrieval_bundle",
+                "Freeze packet",
+                "Core inflation remains above target, but recent monthly prints have eased. "
+                "Growth indicators softened and overnight-index swaps price a modest easing "
+                "probability for the next meeting rather than a large move.",
+            ),
+            material(
+                "retrieval_bundle",
+                "Market pricing snapshot",
+                "Consensus commentary leans toward a 25 bps cut. FX is stable and there is "
+                "no emergency-liquidity signal in local rates.",
+            ),
+        ],
+        "options": [
+            option("A", "Cut the policy rate by 25 bps."),
+            option("B", "Hold the policy rate unchanged."),
+            option("C", "Raise the policy rate."),
+        ],
+        "response_contract": {
+            "format": "multiple_choice_plus_json",
+            "required_fields": ["label", "primary_basis", "confidence"],
+        },
+        "ground_truth": {
+            "canonical_answer": {
+                "label": "A",
+                "primary_basis": "disinflation_plus_softer_growth_and_market_pricing_for_a_modest_cut",
+                "confidence": "medium",
+            },
+            "accepted_alternatives": [],
+            "scoring_rubric": {
+                "primary_fields": ["label", "primary_basis"],
+                "field_weights": {"label": 0.45, "primary_basis": 0.35, "confidence": 0.20},
+            },
+            "evidence_summary": [
+                "This is a public-dev exemplar of a freeze-first, resolve-later policy contract.",
+                "The key lesson is that prediction should be based on freeze-time packet evidence, not hindsight.",
+            ],
+            "common_failure_modes": [
+                "using later commentary rather than the frozen packet",
+                "overstating confidence when the packet only supports a modest base case",
+            ],
+        },
+    },
+    "v14d_023": {
+        "paired_case_group": "futurex_live_commodity_exemplar",
+        "materials": [
+            material(
+                "retrieval_bundle",
+                "Freeze packet",
+                "Gold has been supported by lower real yields and steady central-bank buying. "
+                "The dollar softened modestly, while positioning looks constructive but not euphoric.",
+            ),
+            material(
+                "retrieval_bundle",
+                "Threshold card",
+                "The relevant forecast question is which threshold bucket is the best month-end "
+                "prediction, not the exact settlement number.",
+            ),
+        ],
+        "options": [
+            option("A", "The highest threshold set is the best prediction."),
+            option("B", "The middle threshold set is the best prediction."),
+            option("C", "The lowest threshold set is the best prediction."),
+        ],
+        "response_contract": {
+            "format": "multiple_choice_plus_json",
+            "required_fields": ["label", "primary_basis", "confidence"],
+        },
+        "ground_truth": {
+            "canonical_answer": {
+                "label": "B",
+                "primary_basis": "supportive_macro_and_flow_backdrop_but_not_strong_enough_for_the_most_extreme_threshold_set",
+                "confidence": "medium",
+            },
+            "accepted_alternatives": [],
+            "scoring_rubric": {
+                "primary_fields": ["label", "primary_basis"],
+                "field_weights": {"label": 0.45, "primary_basis": 0.35, "confidence": 0.20},
+            },
+            "evidence_summary": [
+                "This is a public-dev exemplar of a live-forward commodity threshold contract.",
+                "The case teaches bucketed prediction under freeze-time evidence rather than point forecasting.",
+            ],
+            "common_failure_modes": [
+                "jumping to the most bullish bucket just because the asset has momentum",
+                "answering with an exact price instead of the contract-style bucket",
+            ],
+        },
+    },
+    "v14d_024": {
+        "paired_case_group": "futurex_asof_crypto_exemplar",
+        "materials": [
+            material(
+                "retrieval_bundle",
+                "As-of packet",
+                "Case cutoff: 2026-01-31 UTC. BTC traded below 100k into the final session, "
+                "with no confirmed late-session catalyst in the packet suggesting a decisive "
+                "break above the threshold.",
+            ),
+            material(
+                "retrieval_bundle",
+                "Usage rule",
+                "Search is allowed only with sources dated on or before the case cutoff. "
+                "Later month-end recaps are invalid for this case.",
+            ),
+        ],
+        "options": [
+            option("A", "Yes"),
+            option("B", "No"),
+        ],
+        "response_contract": {
+            "format": "multiple_choice_plus_json",
+            "required_fields": ["label", "cutoff_rule", "primary_basis"],
+        },
+        "ground_truth": {
+            "canonical_answer": {
+                "label": "B",
+                "cutoff_rule": "do_not_use_sources_after_2026_01_31",
+                "primary_basis": "the_as_of_packet_does_not_support_a_clean_break_above_100k_by_the_cutoff",
+            },
+            "accepted_alternatives": [],
+            "scoring_rubric": {
+                "primary_fields": ["label", "cutoff_rule"],
+                "field_weights": {"label": 0.5, "cutoff_rule": 0.25, "primary_basis": 0.25},
+            },
+            "evidence_summary": [
+                "Adapted from the v13 historical as-of slice.",
+                "The core lesson is not the BTC view itself, but respecting the search cutoff.",
+            ],
+            "common_failure_modes": [
+                "using post-cutoff summaries",
+                "omitting the as-of rule entirely and answering like unrestricted historical QA",
+            ],
+        },
+    },
+    "v14d_025": {
+        "paired_case_group": "futurex_asof_supply_shock_exemplar",
+        "materials": [
+            material(
+                "retrieval_bundle",
+                "As-of packet",
+                "Case cutoff: 2026-03-04. South African supply disruption concerns were real, "
+                "but the packet does not support global platinum availability falling below "
+                "the stated threshold by the deadline.",
+            ),
+            material(
+                "retrieval_bundle",
+                "Usage rule",
+                "Search is allowed only with sources dated on or before the case cutoff. "
+                "Any later settlement or retrospective article is invalid evidence.",
+            ),
+        ],
+        "options": [
+            option("A", "Yes"),
+            option("B", "No"),
+        ],
+        "response_contract": {
+            "format": "multiple_choice_plus_json",
+            "required_fields": ["label", "cutoff_rule", "primary_basis"],
+        },
+        "ground_truth": {
+            "canonical_answer": {
+                "label": "B",
+                "cutoff_rule": "do_not_use_sources_after_2026_03_04",
+                "primary_basis": "the_as_of_supply_packet_supports_stress_but_not_a_sub_threshold_global_availability_outcome",
+            },
+            "accepted_alternatives": [],
+            "scoring_rubric": {
+                "primary_fields": ["label", "cutoff_rule"],
+                "field_weights": {"label": 0.5, "cutoff_rule": 0.25, "primary_basis": 0.25},
+            },
+            "evidence_summary": [
+                "Adapted from the v13 historical as-of slice.",
+                "This exemplar teaches time-bounded search discipline on supply-shock questions.",
+            ],
+            "common_failure_modes": [
+                "treating supply stress as proof of crossing the threshold",
+                "using later coverage instead of the case-bounded evidence window",
+            ],
+        },
+    },
 }
 
 
@@ -1224,6 +1409,7 @@ def build_cases_and_truth() -> tuple[dict, dict, str]:
                 f"- Truth type: `{case['truth_type']}`",
                 f"- Prompt style: `{case['prompt_style']}`",
                 f"- Task family: `{case['task_family']}`",
+                f"- Evaluation regime: `{case.get('evaluation_regime', 'unspecified')}`",
                 "",
                 "Scenario:",
                 "```text",
