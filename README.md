@@ -33,6 +33,9 @@ Repo-local benchmark skill package:
 - Skill contract: [`skills/abel-benchmark-v14/SKILL.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14/SKILL.md)
 - Router script: [`skills/abel-benchmark-v14/scripts/run_pack.py`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14/scripts/run_pack.py)
 
+Latest Track H report:
+- [`v14/track_h_benchmark_report.20260331.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v14/track_h_benchmark_report.20260331.md)
+
 The original `v3` / `v4` pipeline uses **LLM-based question classification** (GPT-4o-mini) to identify suitable financial questions and extract ticker symbols, then **`normalize-node`** from [cap_probe.py](https://github.com/Abel-ai-causality/Abel-skills/blob/main/causal-abel/scripts/cap_probe.py) to resolve correct Abel node IDs.
 
 ### Dataset
