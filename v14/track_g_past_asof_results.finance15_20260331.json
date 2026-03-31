@@ -1,0 +1,291 @@
+{
+  "timestamp": "20260331-101723",
+  "benchmark": "v14_track_g_past_asof",
+  "case_count": 15,
+  "base": {
+    "correct_case_count": 10,
+    "valid_case_count": 14,
+    "accuracy": 0.6667,
+    "duration_seconds": 1344.25,
+    "category_scores": {
+      "central_bank_decision": {
+        "correct": 4,
+        "case_count": 4
+      },
+      "commodity_thresholds": {
+        "correct": 0,
+        "case_count": 1
+      },
+      "commodity_bucket": {
+        "correct": 2,
+        "case_count": 2
+      },
+      "commodity_hit_levels": {
+        "correct": 0,
+        "case_count": 1
+      },
+      "first_hit": {
+        "correct": 0,
+        "case_count": 2
+      },
+      "crypto_binary": {
+        "correct": 2,
+        "case_count": 2
+      },
+      "agriculture_bucket": {
+        "correct": 1,
+        "case_count": 1
+      },
+      "supply_shock_binary": {
+        "correct": 1,
+        "case_count": 1
+      },
+      "single_stock_direction": {
+        "correct": 0,
+        "case_count": 1
+      }
+    }
+  },
+  "skill": {
+    "correct_case_count": 9,
+    "valid_case_count": 13,
+    "accuracy": 0.6,
+    "duration_seconds": 1625.23,
+    "category_scores": {
+      "central_bank_decision": {
+        "correct": 4,
+        "case_count": 4
+      },
+      "commodity_thresholds": {
+        "correct": 0,
+        "case_count": 1
+      },
+      "commodity_bucket": {
+        "correct": 1,
+        "case_count": 2
+      },
+      "commodity_hit_levels": {
+        "correct": 0,
+        "case_count": 1
+      },
+      "first_hit": {
+        "correct": 0,
+        "case_count": 2
+      },
+      "crypto_binary": {
+        "correct": 2,
+        "case_count": 2
+      },
+      "agriculture_bucket": {
+        "correct": 1,
+        "case_count": 1
+      },
+      "supply_shock_binary": {
+        "correct": 1,
+        "case_count": 1
+      },
+      "single_stock_direction": {
+        "correct": 0,
+        "case_count": 1
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "v13ra_001",
+      "title": "Bank of Brazil decision in January?",
+      "category": "central_bank_decision",
+      "search_cutoff": "2026-01-27",
+      "answer_box": "\\boxed{A}",
+      "base_prediction": "\\boxed{A}",
+      "skill_prediction": "\\boxed{A}",
+      "base_correct": true,
+      "skill_correct": true,
+      "base_valid": true,
+      "skill_valid": true
+    },
+    {
+      "id": "v13ra_002",
+      "title": "At close of business on 23 January 2026, will the most recently announced Bank of Japan (BOJ) \"uncollateralized overnight call [interest] rate\" be lower, the same, or higher than it was at close of business on 19 December 2025?",
+      "category": "central_bank_decision",
+      "search_cutoff": "2026-01-23",
+      "answer_box": "\\boxed{B}",
+      "base_prediction": "\\boxed{B}",
+      "skill_prediction": "\\boxed{B}",
+      "base_correct": true,
+      "skill_correct": true,
+      "base_valid": true,
+      "skill_valid": true
+    },
+    {
+      "id": "v13ra_005",
+      "title": "Gold (GC) above ___ end of January?",
+      "category": "commodity_thresholds",
+      "search_cutoff": "2026-02-01",
+      "answer_box": "\\boxed{H, I, J, K, L}",
+      "base_prediction": "\\boxed{H}",
+      "skill_prediction": "\\boxed{F}",
+      "base_correct": false,
+      "skill_correct": false,
+      "base_valid": true,
+      "skill_valid": true
+    },
+    {
+      "id": "v13ra_008",
+      "title": "What will Crude Oil (CL) settle at in January?",
+      "category": "commodity_bucket",
+      "search_cutoff": "2026-02-01",
+      "answer_box": "\\boxed{F}",
+      "base_prediction": "\\boxed{F}",
+      "skill_prediction": "\\boxed{F}",
+      "base_correct": true,
+      "skill_correct": true,
+      "base_valid": true,
+      "skill_valid": true
+    },
+    {
+      "id": "v13ra_007",
+      "title": "What will Crude Oil (CL) hit__ by end of January?",
+      "category": "commodity_hit_levels",
+      "search_cutoff": "2026-02-01",
+      "answer_box": "\\boxed{B, C, G, J}",
+      "base_prediction": "\\boxed{BCGJ}",
+      "skill_prediction": null,
+      "base_correct": false,
+      "skill_correct": false,
+      "base_valid": false,
+      "skill_valid": false
+    },
+    {
+      "id": "v13ra_006",
+      "title": "What will Gold (GC) settle at in January?",
+      "category": "commodity_bucket",
+      "search_cutoff": "2026-02-01",
+      "answer_box": "\\boxed{E}",
+      "base_prediction": "\\boxed{E}",
+      "skill_prediction": null,
+      "base_correct": true,
+      "skill_correct": false,
+      "base_valid": true,
+      "skill_valid": false
+    },
+    {
+      "id": "v13ra_009",
+      "title": "Tesla hits $400 or $500 first before end of January 2026?",
+      "category": "first_hit",
+      "search_cutoff": "2026-02-01",
+      "answer_box": "\\boxed{A}",
+      "base_prediction": "\\boxed{C}",
+      "skill_prediction": "\\boxed{C}",
+      "base_correct": false,
+      "skill_correct": false,
+      "base_valid": true,
+      "skill_valid": true
+    },
+    {
+      "id": "v13ra_003",
+      "title": "Reserve Bank of Australia Decision in February",
+      "category": "central_bank_decision",
+      "search_cutoff": "2026-02-03",
+      "answer_box": "\\boxed{B}",
+      "base_prediction": "\\boxed{B}",
+      "skill_prediction": "\\boxed{B}",
+      "base_correct": true,
+      "skill_correct": true,
+      "base_valid": true,
+      "skill_valid": true
+    },
+    {
+      "id": "v13ra_010",
+      "title": "Nvidia hits 170, 200 or neither first by end of January 2026?",
+      "category": "first_hit",
+      "search_cutoff": "2026-02-01",
+      "answer_box": "\\boxed{A}",
+      "base_prediction": "\\boxed{C}",
+      "skill_prediction": "\\boxed{C}",
+      "base_correct": false,
+      "skill_correct": false,
+      "base_valid": true,
+      "skill_valid": true
+    },
+    {
+      "id": "v13ra_011",
+      "title": "Will Bitcoin close above USD $100,000 on 31 January 2026 (UTC)?",
+      "category": "crypto_binary",
+      "search_cutoff": "2026-01-31",
+      "answer_box": "\\boxed{No}",
+      "base_prediction": "\\boxed{No}",
+      "skill_prediction": "\\boxed{No}",
+      "base_correct": true,
+      "skill_correct": true,
+      "base_valid": true,
+      "skill_valid": true
+    },
+    {
+      "id": "v13ra_012",
+      "title": "Bitcoin below $82K in January?",
+      "category": "crypto_binary",
+      "search_cutoff": "2026-02-02",
+      "answer_box": "\\boxed{Yes}",
+      "base_prediction": "\\boxed{Yes}",
+      "skill_prediction": "\\boxed{Yes}",
+      "base_correct": true,
+      "skill_correct": true,
+      "base_valid": true,
+      "skill_valid": true
+    },
+    {
+      "id": "v13ra_004",
+      "title": "At close of business on 5 February 2026, will the most recently announced European Central Bank (ECB) \"Deposit facility\" interest rate be lower, the same, or higher than it was at close of business on 18 December 2025?",
+      "category": "central_bank_decision",
+      "search_cutoff": "2026-02-05",
+      "answer_box": "\\boxed{B}",
+      "base_prediction": "\\boxed{B}",
+      "skill_prediction": "\\boxed{B}",
+      "base_correct": true,
+      "skill_correct": true,
+      "base_valid": true,
+      "skill_valid": true
+    },
+    {
+      "id": "v13ra_013",
+      "title": "Between 10 October 2025 and 6 March 2026, what will be the lowest closing price of soybeans?",
+      "category": "agriculture_bucket",
+      "search_cutoff": "2026-03-06",
+      "answer_box": "\\boxed{E}",
+      "base_prediction": "\\boxed{E}",
+      "skill_prediction": "\\boxed{E}",
+      "base_correct": true,
+      "skill_correct": true,
+      "base_valid": true,
+      "skill_valid": true
+    },
+    {
+      "id": "v13ra_014",
+      "title": "Will global platinum availability fall below 2 million ounces by March 4, 2026, due to South African mine supply issues?",
+      "category": "supply_shock_binary",
+      "search_cutoff": "2026-03-04",
+      "answer_box": "\\boxed{No}",
+      "base_prediction": "\\boxed{No}",
+      "skill_prediction": "\\boxed{No}",
+      "base_correct": true,
+      "skill_correct": true,
+      "base_valid": true,
+      "skill_valid": true
+    },
+    {
+      "id": "v13ra_015",
+      "title": "Will NVIDIA stock be higher on March 16, 2026 than on March 09, 2026?",
+      "category": "single_stock_direction",
+      "search_cutoff": "2026-03-16",
+      "answer_box": "\\boxed{No}",
+      "base_prediction": "\\boxed{Yes}",
+      "skill_prediction": "\\boxed{Yes}",
+      "base_correct": false,
+      "skill_correct": false,
+      "base_valid": true,
+      "skill_valid": true
+    }
+  ],
+  "source_summary_path": "summary.json"
+}
