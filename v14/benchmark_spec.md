@@ -33,6 +33,19 @@ This version combines ideas from:
    also be scored.
 5. Synthetic, semi-synthetic, and real-world task sources must coexist.
 
+## Public Release Mode
+
+For this repository, `v14` is published as a **public benchmark suite** with
+explicit pack index and file manifest:
+
+- `v14/public_benchmark_index.md`
+- `v14/public_benchmark_manifest.json`
+
+The public artifacts include question files, case markdown, and separated
+ground-truth files. Track-level visibility and scoring readiness are
+materialized in the manifest (for example, Track G true-live is public but
+keeps answer keys pending until future resolution).
+
 ## Source Benchmark Integration
 
 ### Causality Core

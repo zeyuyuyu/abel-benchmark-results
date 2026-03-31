@@ -278,6 +278,46 @@ The reason is structural:
 - unsupported confidence
 - using future information in historical as-of settings
 
+## Track H: Causal Network Operations
+
+### Measures
+
+- operational use of a causal market network
+- direct-upstream attribution
+- path reachability checks
+- role typing (parent / child / spouse)
+- cross-asset causal-signal selection
+
+### Benchmark Inspirations
+
+- `Finance Agent`
+- `XFinBench`
+- `CLADDER`
+- `FutureX` (contracted answer surfaces)
+
+### Why This Track Exists
+
+Many industrial deployments do not fail on generic QA; they fail on whether an
+agent can actually operate a causal network toolchain under time pressure and
+produce clean, auditable outputs.
+
+Track H isolates that operational gap in realistic analyst-style prompts
+without requiring users to ask in tool-specific language.
+
+### What Good Looks Like
+
+- high valid-output rate with strict answer contracts
+- accurate node-level operational reads
+- correct separation of direct upstream links vs blanket neighbors
+- robust path-reachability judgments across varied source-target pairs
+
+### Common Failure Modes
+
+- guessing instead of querying
+- malformed answer format despite correct reasoning
+- confusing spouse relations with direct causation
+- missing directed-vs-undirected path distinctions
+
 ## Cross-Track Tagging
 
 Every instantiated case should also carry slice tags from these shared groups:
@@ -313,5 +353,5 @@ Every instantiated case should also carry slice tags from these shared groups:
 
 ## Public Alpha Recommendation
 
-For a credible `v14 alpha`, public dev should cover all seven tracks. Avoid
+For a credible `v14 alpha`, public dev should cover all eight tracks. Avoid
 launching with only finance or only synthetic graph questions.

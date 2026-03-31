@@ -1,0 +1,783 @@
+{
+  "version": "v14-track-h-causal-ops-questions",
+  "split": "public_dev",
+  "track": "causal_network_operations",
+  "task_family": "causal_network_operations",
+  "evaluation_regime": "frozen_evidence_public_dev",
+  "case_count": 24,
+  "notes": [
+    "Natural analyst-style causal-network operation tasks.",
+    "Ground truth is generated from a frozen CAP snapshot.",
+    "Answers are in a separate ground-truth file."
+  ],
+  "cases": [
+    {
+      "id": "v14h_001",
+      "split": "public_dev",
+      "track": "causal_network_operations",
+      "source_family": [
+        "Finance Agent",
+        "XFinBench",
+        "FutureX"
+      ],
+      "task_family": "cross_asset_upside_selection",
+      "evaluation_regime": "frozen_evidence_public_dev",
+      "title": "Cross-Asset Upside Pick (NVDA/TSLA/GS/AVGO)",
+      "category": "upside_selection",
+      "question": "You are preparing a one-step tactical note from an internal causal market network. Among the following assets, which one currently has the strongest upside signal?",
+      "options": [
+        {
+          "label": "A",
+          "text": "NVDA"
+        },
+        {
+          "label": "B",
+          "text": "TSLA"
+        },
+        {
+          "label": "C",
+          "text": "GS"
+        },
+        {
+          "label": "D",
+          "text": "AVGO"
+        }
+      ],
+      "answer_format": "boxed_letters"
+    },
+    {
+      "id": "v14h_002",
+      "split": "public_dev",
+      "track": "causal_network_operations",
+      "source_family": [
+        "Finance Agent",
+        "XFinBench",
+        "FutureX"
+      ],
+      "task_family": "cross_asset_upside_selection",
+      "evaluation_regime": "frozen_evidence_public_dev",
+      "title": "Cross-Asset Upside Pick (ETHUSD/XOM/AVGO/AMZN)",
+      "category": "upside_selection",
+      "question": "You are preparing a one-step tactical note from an internal causal market network. Among the following assets, which one currently has the strongest upside signal?",
+      "options": [
+        {
+          "label": "A",
+          "text": "ETHUSD"
+        },
+        {
+          "label": "B",
+          "text": "XOM"
+        },
+        {
+          "label": "C",
+          "text": "AVGO"
+        },
+        {
+          "label": "D",
+          "text": "AMZN"
+        }
+      ],
+      "answer_format": "boxed_letters"
+    },
+    {
+      "id": "v14h_003",
+      "split": "public_dev",
+      "track": "causal_network_operations",
+      "source_family": [
+        "Finance Agent",
+        "XFinBench",
+        "FutureX"
+      ],
+      "task_family": "cross_asset_upside_selection",
+      "evaluation_regime": "frozen_evidence_public_dev",
+      "title": "Cross-Asset Upside Pick (AMZN/ADAUSD/GS/AVGO)",
+      "category": "upside_selection",
+      "question": "You are preparing a one-step tactical note from an internal causal market network. Among the following assets, which one currently has the strongest upside signal?",
+      "options": [
+        {
+          "label": "A",
+          "text": "AMZN"
+        },
+        {
+          "label": "B",
+          "text": "ADAUSD"
+        },
+        {
+          "label": "C",
+          "text": "GS"
+        },
+        {
+          "label": "D",
+          "text": "AVGO"
+        }
+      ],
+      "answer_format": "boxed_letters"
+    },
+    {
+      "id": "v14h_004",
+      "split": "public_dev",
+      "track": "causal_network_operations",
+      "source_family": [
+        "Finance Agent",
+        "XFinBench",
+        "FutureX"
+      ],
+      "task_family": "cross_asset_upside_selection",
+      "evaluation_regime": "frozen_evidence_public_dev",
+      "title": "Cross-Asset Upside Pick (NVDA/AMZN/INTC/AAPL)",
+      "category": "upside_selection",
+      "question": "You are preparing a one-step tactical note from an internal causal market network. Among the following assets, which one currently has the strongest upside signal?",
+      "options": [
+        {
+          "label": "A",
+          "text": "NVDA"
+        },
+        {
+          "label": "B",
+          "text": "AMZN"
+        },
+        {
+          "label": "C",
+          "text": "INTC"
+        },
+        {
+          "label": "D",
+          "text": "AAPL"
+        }
+      ],
+      "answer_format": "boxed_letters"
+    },
+    {
+      "id": "v14h_005",
+      "split": "public_dev",
+      "track": "causal_network_operations",
+      "source_family": [
+        "Finance Agent",
+        "XFinBench",
+        "FutureX"
+      ],
+      "task_family": "cross_asset_upside_selection",
+      "evaluation_regime": "frozen_evidence_public_dev",
+      "title": "Cross-Asset Upside Pick (JPM/AMZN/PYPL/AAPL)",
+      "category": "upside_selection",
+      "question": "You are preparing a one-step tactical note from an internal causal market network. Among the following assets, which one currently has the strongest upside signal?",
+      "options": [
+        {
+          "label": "A",
+          "text": "JPM"
+        },
+        {
+          "label": "B",
+          "text": "AMZN"
+        },
+        {
+          "label": "C",
+          "text": "PYPL"
+        },
+        {
+          "label": "D",
+          "text": "AAPL"
+        }
+      ],
+      "answer_format": "boxed_letters"
+    },
+    {
+      "id": "v14h_006",
+      "split": "public_dev",
+      "track": "causal_network_operations",
+      "source_family": [
+        "Finance Agent",
+        "XFinBench",
+        "FutureX"
+      ],
+      "task_family": "cross_asset_upside_selection",
+      "evaluation_regime": "frozen_evidence_public_dev",
+      "title": "Cross-Asset Upside Pick (JPM/META/GS/AMZN)",
+      "category": "upside_selection",
+      "question": "You are preparing a one-step tactical note from an internal causal market network. Among the following assets, which one currently has the strongest upside signal?",
+      "options": [
+        {
+          "label": "A",
+          "text": "JPM"
+        },
+        {
+          "label": "B",
+          "text": "META"
+        },
+        {
+          "label": "C",
+          "text": "GS"
+        },
+        {
+          "label": "D",
+          "text": "AMZN"
+        }
+      ],
+      "answer_format": "boxed_letters"
+    },
+    {
+      "id": "v14h_007",
+      "split": "public_dev",
+      "track": "causal_network_operations",
+      "source_family": [
+        "Finance Agent",
+        "XFinBench",
+        "CLADDER"
+      ],
+      "task_family": "direct_parent_identification",
+      "evaluation_regime": "frozen_evidence_public_dev",
+      "title": "Direct Upstream Driver For XOM",
+      "category": "parent_identification",
+      "question": "For risk decomposition on XOM, which candidate is currently a direct upstream driver in the causal market network?",
+      "options": [
+        {
+          "label": "A",
+          "text": "AAPL"
+        },
+        {
+          "label": "B",
+          "text": "ADAUSD"
+        },
+        {
+          "label": "C",
+          "text": "INTC"
+        },
+        {
+          "label": "D",
+          "text": "ECCX"
+        }
+      ],
+      "answer_format": "boxed_letters"
+    },
+    {
+      "id": "v14h_008",
+      "split": "public_dev",
+      "track": "causal_network_operations",
+      "source_family": [
+        "Finance Agent",
+        "XFinBench",
+        "CLADDER"
+      ],
+      "task_family": "direct_parent_identification",
+      "evaluation_regime": "frozen_evidence_public_dev",
+      "title": "Direct Upstream Driver For XRPUSD",
+      "category": "parent_identification",
+      "question": "For risk decomposition on XRPUSD, which candidate is currently a direct upstream driver in the causal market network?",
+      "options": [
+        {
+          "label": "A",
+          "text": "GS"
+        },
+        {
+          "label": "B",
+          "text": "GOOGL"
+        },
+        {
+          "label": "C",
+          "text": "AIV"
+        },
+        {
+          "label": "D",
+          "text": "COIN"
+        }
+      ],
+      "answer_format": "boxed_letters"
+    },
+    {
+      "id": "v14h_009",
+      "split": "public_dev",
+      "track": "causal_network_operations",
+      "source_family": [
+        "Finance Agent",
+        "XFinBench",
+        "CLADDER"
+      ],
+      "task_family": "direct_parent_identification",
+      "evaluation_regime": "frozen_evidence_public_dev",
+      "title": "Direct Upstream Driver For ETHUSD",
+      "category": "parent_identification",
+      "question": "For risk decomposition on ETHUSD, which candidate is currently a direct upstream driver in the causal market network?",
+      "options": [
+        {
+          "label": "A",
+          "text": "NVDA"
+        },
+        {
+          "label": "B",
+          "text": "XRPUSD"
+        },
+        {
+          "label": "C",
+          "text": "SSTK"
+        },
+        {
+          "label": "D",
+          "text": "DOGEUSD"
+        }
+      ],
+      "answer_format": "boxed_letters"
+    },
+    {
+      "id": "v14h_010",
+      "split": "public_dev",
+      "track": "causal_network_operations",
+      "source_family": [
+        "Finance Agent",
+        "XFinBench",
+        "CLADDER"
+      ],
+      "task_family": "direct_parent_identification",
+      "evaluation_regime": "frozen_evidence_public_dev",
+      "title": "Direct Upstream Driver For META",
+      "category": "parent_identification",
+      "question": "For risk decomposition on META, which candidate is currently a direct upstream driver in the causal market network?",
+      "options": [
+        {
+          "label": "A",
+          "text": "CVX"
+        },
+        {
+          "label": "B",
+          "text": "GOOGL"
+        },
+        {
+          "label": "C",
+          "text": "AVGO"
+        },
+        {
+          "label": "D",
+          "text": "PSFE"
+        }
+      ],
+      "answer_format": "boxed_letters"
+    },
+    {
+      "id": "v14h_011",
+      "split": "public_dev",
+      "track": "causal_network_operations",
+      "source_family": [
+        "Finance Agent",
+        "XFinBench",
+        "CLADDER"
+      ],
+      "task_family": "direct_parent_identification",
+      "evaluation_regime": "frozen_evidence_public_dev",
+      "title": "Direct Upstream Driver For CVX",
+      "category": "parent_identification",
+      "question": "For risk decomposition on CVX, which candidate is currently a direct upstream driver in the causal market network?",
+      "options": [
+        {
+          "label": "A",
+          "text": "NVDA"
+        },
+        {
+          "label": "B",
+          "text": "GS"
+        },
+        {
+          "label": "C",
+          "text": "INTC"
+        },
+        {
+          "label": "D",
+          "text": "BML-PG"
+        }
+      ],
+      "answer_format": "boxed_letters"
+    },
+    {
+      "id": "v14h_012",
+      "split": "public_dev",
+      "track": "causal_network_operations",
+      "source_family": [
+        "Finance Agent",
+        "XFinBench",
+        "CLADDER"
+      ],
+      "task_family": "direct_parent_identification",
+      "evaluation_regime": "frozen_evidence_public_dev",
+      "title": "Direct Upstream Driver For AAPL",
+      "category": "parent_identification",
+      "question": "For risk decomposition on AAPL, which candidate is currently a direct upstream driver in the causal market network?",
+      "options": [
+        {
+          "label": "A",
+          "text": "NVDA"
+        },
+        {
+          "label": "B",
+          "text": "AMZN"
+        },
+        {
+          "label": "C",
+          "text": "PRIMEUSD"
+        },
+        {
+          "label": "D",
+          "text": "XOM"
+        }
+      ],
+      "answer_format": "boxed_letters"
+    },
+    {
+      "id": "v14h_013",
+      "split": "public_dev",
+      "track": "causal_network_operations",
+      "source_family": [
+        "CounterBench",
+        "Finance Agent",
+        "XFinBench"
+      ],
+      "task_family": "markov_role_classification",
+      "evaluation_regime": "frozen_evidence_public_dev",
+      "title": "Role Of ECCX Relative To XOM",
+      "category": "markov_role",
+      "question": "In the current causal market network, what is the relationship role of ECCX relative to XOM?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Parent (direct upstream driver)"
+        },
+        {
+          "label": "B",
+          "text": "Child (direct downstream receiver)"
+        },
+        {
+          "label": "C",
+          "text": "Spouse (shares a child but not a direct parent/child link)"
+        },
+        {
+          "label": "D",
+          "text": "None of the above"
+        }
+      ],
+      "answer_format": "boxed_letters"
+    },
+    {
+      "id": "v14h_014",
+      "split": "public_dev",
+      "track": "causal_network_operations",
+      "source_family": [
+        "CounterBench",
+        "Finance Agent",
+        "XFinBench"
+      ],
+      "task_family": "markov_role_classification",
+      "evaluation_regime": "frozen_evidence_public_dev",
+      "title": "Role Of IMOUSD Relative To COIN",
+      "category": "markov_role",
+      "question": "In the current causal market network, what is the relationship role of IMOUSD relative to COIN?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Parent (direct upstream driver)"
+        },
+        {
+          "label": "B",
+          "text": "Child (direct downstream receiver)"
+        },
+        {
+          "label": "C",
+          "text": "Spouse (shares a child but not a direct parent/child link)"
+        },
+        {
+          "label": "D",
+          "text": "None of the above"
+        }
+      ],
+      "answer_format": "boxed_letters"
+    },
+    {
+      "id": "v14h_015",
+      "split": "public_dev",
+      "track": "causal_network_operations",
+      "source_family": [
+        "CounterBench",
+        "Finance Agent",
+        "XFinBench"
+      ],
+      "task_family": "markov_role_classification",
+      "evaluation_regime": "frozen_evidence_public_dev",
+      "title": "Role Of DANAUSD Relative To DAL",
+      "category": "markov_role",
+      "question": "In the current causal market network, what is the relationship role of DANAUSD relative to DAL?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Parent (direct upstream driver)"
+        },
+        {
+          "label": "B",
+          "text": "Child (direct downstream receiver)"
+        },
+        {
+          "label": "C",
+          "text": "Spouse (shares a child but not a direct parent/child link)"
+        },
+        {
+          "label": "D",
+          "text": "None of the above"
+        }
+      ],
+      "answer_format": "boxed_letters"
+    },
+    {
+      "id": "v14h_016",
+      "split": "public_dev",
+      "track": "causal_network_operations",
+      "source_family": [
+        "CounterBench",
+        "Finance Agent",
+        "XFinBench"
+      ],
+      "task_family": "markov_role_classification",
+      "evaluation_regime": "frozen_evidence_public_dev",
+      "title": "Role Of AEROUSD Relative To GOOGL",
+      "category": "markov_role",
+      "question": "In the current causal market network, what is the relationship role of AEROUSD relative to GOOGL?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Parent (direct upstream driver)"
+        },
+        {
+          "label": "B",
+          "text": "Child (direct downstream receiver)"
+        },
+        {
+          "label": "C",
+          "text": "Spouse (shares a child but not a direct parent/child link)"
+        },
+        {
+          "label": "D",
+          "text": "None of the above"
+        }
+      ],
+      "answer_format": "boxed_letters"
+    },
+    {
+      "id": "v14h_017",
+      "split": "public_dev",
+      "track": "causal_network_operations",
+      "source_family": [
+        "CounterBench",
+        "Finance Agent",
+        "XFinBench"
+      ],
+      "task_family": "markov_role_classification",
+      "evaluation_regime": "frozen_evidence_public_dev",
+      "title": "Role Of AIV Relative To XRPUSD",
+      "category": "markov_role",
+      "question": "In the current causal market network, what is the relationship role of AIV relative to XRPUSD?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Parent (direct upstream driver)"
+        },
+        {
+          "label": "B",
+          "text": "Child (direct downstream receiver)"
+        },
+        {
+          "label": "C",
+          "text": "Spouse (shares a child but not a direct parent/child link)"
+        },
+        {
+          "label": "D",
+          "text": "None of the above"
+        }
+      ],
+      "answer_format": "boxed_letters"
+    },
+    {
+      "id": "v14h_018",
+      "split": "public_dev",
+      "track": "causal_network_operations",
+      "source_family": [
+        "CounterBench",
+        "Finance Agent",
+        "XFinBench"
+      ],
+      "task_family": "markov_role_classification",
+      "evaluation_regime": "frozen_evidence_public_dev",
+      "title": "Role Of AGNCM Relative To TSLA",
+      "category": "markov_role",
+      "question": "In the current causal market network, what is the relationship role of AGNCM relative to TSLA?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Parent (direct upstream driver)"
+        },
+        {
+          "label": "B",
+          "text": "Child (direct downstream receiver)"
+        },
+        {
+          "label": "C",
+          "text": "Spouse (shares a child but not a direct parent/child link)"
+        },
+        {
+          "label": "D",
+          "text": "None of the above"
+        }
+      ],
+      "answer_format": "boxed_letters"
+    },
+    {
+      "id": "v14h_019",
+      "split": "public_dev",
+      "track": "causal_network_operations",
+      "source_family": [
+        "CLADDER",
+        "Finance Agent",
+        "FutureX"
+      ],
+      "task_family": "directed_path_reachability",
+      "evaluation_regime": "frozen_evidence_public_dev",
+      "title": "Path Reachability: TDROPUSD -> GS",
+      "category": "path_reachability",
+      "question": "For fast shock-propagation screening, can a directed causal influence from TDROPUSD reach GS in the current market network?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Yes, there is at least one directed causal path."
+        },
+        {
+          "label": "B",
+          "text": "No, no directed causal path is present."
+        }
+      ],
+      "answer_format": "boxed_letters"
+    },
+    {
+      "id": "v14h_020",
+      "split": "public_dev",
+      "track": "causal_network_operations",
+      "source_family": [
+        "CLADDER",
+        "Finance Agent",
+        "FutureX"
+      ],
+      "task_family": "directed_path_reachability",
+      "evaluation_regime": "frozen_evidence_public_dev",
+      "title": "Path Reachability: PYPL -> DOGEUSD",
+      "category": "path_reachability",
+      "question": "For fast shock-propagation screening, can a directed causal influence from PYPL reach DOGEUSD in the current market network?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Yes, there is at least one directed causal path."
+        },
+        {
+          "label": "B",
+          "text": "No, no directed causal path is present."
+        }
+      ],
+      "answer_format": "boxed_letters"
+    },
+    {
+      "id": "v14h_021",
+      "split": "public_dev",
+      "track": "causal_network_operations",
+      "source_family": [
+        "CLADDER",
+        "Finance Agent",
+        "FutureX"
+      ],
+      "task_family": "directed_path_reachability",
+      "evaluation_regime": "frozen_evidence_public_dev",
+      "title": "Path Reachability: SFIUSD -> INTC",
+      "category": "path_reachability",
+      "question": "For fast shock-propagation screening, can a directed causal influence from SFIUSD reach INTC in the current market network?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Yes, there is at least one directed causal path."
+        },
+        {
+          "label": "B",
+          "text": "No, no directed causal path is present."
+        }
+      ],
+      "answer_format": "boxed_letters"
+    },
+    {
+      "id": "v14h_022",
+      "split": "public_dev",
+      "track": "causal_network_operations",
+      "source_family": [
+        "CLADDER",
+        "Finance Agent",
+        "FutureX"
+      ],
+      "task_family": "directed_path_reachability",
+      "evaluation_regime": "frozen_evidence_public_dev",
+      "title": "Path Reachability: XRPUSD -> XOM",
+      "category": "path_reachability",
+      "question": "For fast shock-propagation screening, can a directed causal influence from XRPUSD reach XOM in the current market network?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Yes, there is at least one directed causal path."
+        },
+        {
+          "label": "B",
+          "text": "No, no directed causal path is present."
+        }
+      ],
+      "answer_format": "boxed_letters"
+    },
+    {
+      "id": "v14h_023",
+      "split": "public_dev",
+      "track": "causal_network_operations",
+      "source_family": [
+        "CLADDER",
+        "Finance Agent",
+        "FutureX"
+      ],
+      "task_family": "directed_path_reachability",
+      "evaluation_regime": "frozen_evidence_public_dev",
+      "title": "Path Reachability: AIV -> XRPUSD",
+      "category": "path_reachability",
+      "question": "For fast shock-propagation screening, can a directed causal influence from AIV reach XRPUSD in the current market network?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Yes, there is at least one directed causal path."
+        },
+        {
+          "label": "B",
+          "text": "No, no directed causal path is present."
+        }
+      ],
+      "answer_format": "boxed_letters"
+    },
+    {
+      "id": "v14h_024",
+      "split": "public_dev",
+      "track": "causal_network_operations",
+      "source_family": [
+        "CLADDER",
+        "Finance Agent",
+        "FutureX"
+      ],
+      "task_family": "directed_path_reachability",
+      "evaluation_regime": "frozen_evidence_public_dev",
+      "title": "Path Reachability: ADAUSD -> XRPUSD",
+      "category": "path_reachability",
+      "question": "For fast shock-propagation screening, can a directed causal influence from ADAUSD reach XRPUSD in the current market network?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Yes, there is at least one directed causal path."
+        },
+        {
+          "label": "B",
+          "text": "No, no directed causal path is present."
+        }
+      ],
+      "answer_format": "boxed_letters"
+    }
+  ]
+}

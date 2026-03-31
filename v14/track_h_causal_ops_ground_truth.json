@@ -1,0 +1,474 @@
+{
+  "version": "v14-track-h-causal-ops-ground-truth",
+  "split": "public_dev",
+  "case_count": 24,
+  "notes": [
+    "Programmatic answer keys derived from CAP snapshot artifacts.",
+    "Do not expose this file to the evaluated model during benchmark runs."
+  ],
+  "cases": [
+    {
+      "id": "v14h_001",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
+      "grounding": {
+        "family": "cross_asset_upside_selection",
+        "winner_node": "AVGO.price",
+        "winner_prediction": 0.0048,
+        "option_nodes": [
+          "NVDA.price",
+          "TSLA.price",
+          "GS.price",
+          "AVGO.price"
+        ],
+        "option_predictions": {
+          "NVDA.price": 0.0007,
+          "TSLA.price": -0.0026,
+          "GS.price": -0.0017,
+          "AVGO.price": 0.0048
+        }
+      }
+    },
+    {
+      "id": "v14h_002",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
+      "grounding": {
+        "family": "cross_asset_upside_selection",
+        "winner_node": "ETHUSD.price",
+        "winner_prediction": 0.0098,
+        "option_nodes": [
+          "ETHUSD.price",
+          "XOM.price",
+          "AVGO.price",
+          "AMZN.price"
+        ],
+        "option_predictions": {
+          "ETHUSD.price": 0.0098,
+          "XOM.price": -0.0001,
+          "AVGO.price": 0.0048,
+          "AMZN.price": 0.0003
+        }
+      }
+    },
+    {
+      "id": "v14h_003",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
+      "grounding": {
+        "family": "cross_asset_upside_selection",
+        "winner_node": "AVGO.price",
+        "winner_prediction": 0.0048,
+        "option_nodes": [
+          "AMZN.price",
+          "ADAUSD.price",
+          "GS.price",
+          "AVGO.price"
+        ],
+        "option_predictions": {
+          "AMZN.price": 0.0003,
+          "ADAUSD.price": -0.001,
+          "GS.price": -0.0017,
+          "AVGO.price": 0.0048
+        }
+      }
+    },
+    {
+      "id": "v14h_004",
+      "answer_box": "\\boxed{C}",
+      "answer_tokens": [
+        "C"
+      ],
+      "grounding": {
+        "family": "cross_asset_upside_selection",
+        "winner_node": "INTC.price",
+        "winner_prediction": 0.0063,
+        "option_nodes": [
+          "NVDA.price",
+          "AMZN.price",
+          "INTC.price",
+          "AAPL.price"
+        ],
+        "option_predictions": {
+          "NVDA.price": 0.0007,
+          "AMZN.price": 0.0003,
+          "INTC.price": 0.0063,
+          "AAPL.price": -0.0001
+        }
+      }
+    },
+    {
+      "id": "v14h_005",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
+      "grounding": {
+        "family": "cross_asset_upside_selection",
+        "winner_node": "AMZN.price",
+        "winner_prediction": 0.0003,
+        "option_nodes": [
+          "JPM.price",
+          "AMZN.price",
+          "PYPL.price",
+          "AAPL.price"
+        ],
+        "option_predictions": {
+          "JPM.price": -0.0008,
+          "AMZN.price": 0.0003,
+          "PYPL.price": -0.0031,
+          "AAPL.price": -0.0001
+        }
+      }
+    },
+    {
+      "id": "v14h_006",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
+      "grounding": {
+        "family": "cross_asset_upside_selection",
+        "winner_node": "META.price",
+        "winner_prediction": 0.0179,
+        "option_nodes": [
+          "JPM.price",
+          "META.price",
+          "GS.price",
+          "AMZN.price"
+        ],
+        "option_predictions": {
+          "JPM.price": -0.0008,
+          "META.price": 0.0179,
+          "GS.price": -0.0017,
+          "AMZN.price": 0.0003
+        }
+      }
+    },
+    {
+      "id": "v14h_007",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
+      "grounding": {
+        "family": "direct_parent_identification",
+        "target_node": "XOM.price",
+        "true_parent_node": "ECCX.price",
+        "all_parent_nodes": [
+          "ECCX.price",
+          "OXLCP.price"
+        ],
+        "option_nodes": [
+          "AAPL.price",
+          "ADAUSD.price",
+          "INTC.price",
+          "ECCX.price"
+        ]
+      }
+    },
+    {
+      "id": "v14h_008",
+      "answer_box": "\\boxed{C}",
+      "answer_tokens": [
+        "C"
+      ],
+      "grounding": {
+        "family": "direct_parent_identification",
+        "target_node": "XRPUSD.price",
+        "true_parent_node": "AIV.price",
+        "all_parent_nodes": [
+          "AIV.price"
+        ],
+        "option_nodes": [
+          "GS.price",
+          "GOOGL.price",
+          "AIV.price",
+          "COIN.price"
+        ]
+      }
+    },
+    {
+      "id": "v14h_009",
+      "answer_box": "\\boxed{C}",
+      "answer_tokens": [
+        "C"
+      ],
+      "grounding": {
+        "family": "direct_parent_identification",
+        "target_node": "ETHUSD.price",
+        "true_parent_node": "SSTK.price",
+        "all_parent_nodes": [
+          "SSTK.price"
+        ],
+        "option_nodes": [
+          "NVDA.price",
+          "XRPUSD.price",
+          "SSTK.price",
+          "DOGEUSD.price"
+        ]
+      }
+    },
+    {
+      "id": "v14h_010",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
+      "grounding": {
+        "family": "direct_parent_identification",
+        "target_node": "META.price",
+        "true_parent_node": "PSFE.price",
+        "all_parent_nodes": [
+          "HGTY.price",
+          "HOTH.price",
+          "LFST.price",
+          "LGVN.price",
+          "MITQ.price",
+          "NTRB.price",
+          "PMCB.price",
+          "PSFE.price",
+          "RSKD.price",
+          "TRDA.price"
+        ],
+        "option_nodes": [
+          "CVX.price",
+          "GOOGL.price",
+          "AVGO.price",
+          "PSFE.price"
+        ]
+      }
+    },
+    {
+      "id": "v14h_011",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
+      "grounding": {
+        "family": "direct_parent_identification",
+        "target_node": "CVX.price",
+        "true_parent_node": "BML-PG.price",
+        "all_parent_nodes": [
+          "AGNCM.price",
+          "AMTX.price",
+          "AQNB.price",
+          "BIFIUSD.price",
+          "BML-PG.price",
+          "CARE.price",
+          "GCBC.price",
+          "PFX.price",
+          "SBFG.price",
+          "USB-PP.price"
+        ],
+        "option_nodes": [
+          "NVDA.price",
+          "GS.price",
+          "INTC.price",
+          "BML-PG.price"
+        ]
+      }
+    },
+    {
+      "id": "v14h_012",
+      "answer_box": "\\boxed{C}",
+      "answer_tokens": [
+        "C"
+      ],
+      "grounding": {
+        "family": "direct_parent_identification",
+        "target_node": "AAPL.price",
+        "true_parent_node": "PRIMEUSD.price",
+        "all_parent_nodes": [
+          "AREB.price",
+          "CALIUSD.price",
+          "MBPUSD.price",
+          "PRIMEUSD.price",
+          "YFXUSD.price"
+        ],
+        "option_nodes": [
+          "NVDA.price",
+          "AMZN.price",
+          "PRIMEUSD.price",
+          "XOM.price"
+        ]
+      }
+    },
+    {
+      "id": "v14h_013",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
+      "grounding": {
+        "family": "markov_role_classification",
+        "target_node": "XOM.price",
+        "neighbor_node": "ECCX.price",
+        "neighbor_roles": [
+          "child",
+          "parent",
+          "spouse"
+        ]
+      }
+    },
+    {
+      "id": "v14h_014",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
+      "grounding": {
+        "family": "markov_role_classification",
+        "target_node": "COIN.price",
+        "neighbor_node": "IMOUSD.price",
+        "neighbor_roles": [
+          "parent"
+        ]
+      }
+    },
+    {
+      "id": "v14h_015",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
+      "grounding": {
+        "family": "markov_role_classification",
+        "target_node": "DAL.price",
+        "neighbor_node": "DANAUSD.price",
+        "neighbor_roles": [
+          "parent"
+        ]
+      }
+    },
+    {
+      "id": "v14h_016",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
+      "grounding": {
+        "family": "markov_role_classification",
+        "target_node": "GOOGL.price",
+        "neighbor_node": "AEROUSD.price",
+        "neighbor_roles": [
+          "child"
+        ]
+      }
+    },
+    {
+      "id": "v14h_017",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
+      "grounding": {
+        "family": "markov_role_classification",
+        "target_node": "XRPUSD.price",
+        "neighbor_node": "AIV.price",
+        "neighbor_roles": [
+          "parent"
+        ]
+      }
+    },
+    {
+      "id": "v14h_018",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
+      "grounding": {
+        "family": "markov_role_classification",
+        "target_node": "TSLA.price",
+        "neighbor_node": "AGNCM.price",
+        "neighbor_roles": [
+          "parent"
+        ]
+      }
+    },
+    {
+      "id": "v14h_019",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
+      "grounding": {
+        "family": "directed_path_reachability",
+        "source_node": "TDROPUSD.price",
+        "target_node": "GS.price",
+        "path_exists": true
+      }
+    },
+    {
+      "id": "v14h_020",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
+      "grounding": {
+        "family": "directed_path_reachability",
+        "source_node": "PYPL.price",
+        "target_node": "DOGEUSD.price",
+        "path_exists": false
+      }
+    },
+    {
+      "id": "v14h_021",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
+      "grounding": {
+        "family": "directed_path_reachability",
+        "source_node": "SFIUSD.price",
+        "target_node": "INTC.price",
+        "path_exists": true
+      }
+    },
+    {
+      "id": "v14h_022",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
+      "grounding": {
+        "family": "directed_path_reachability",
+        "source_node": "XRPUSD.price",
+        "target_node": "XOM.price",
+        "path_exists": false
+      }
+    },
+    {
+      "id": "v14h_023",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
+      "grounding": {
+        "family": "directed_path_reachability",
+        "source_node": "AIV.price",
+        "target_node": "XRPUSD.price",
+        "path_exists": true
+      }
+    },
+    {
+      "id": "v14h_024",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
+      "grounding": {
+        "family": "directed_path_reachability",
+        "source_node": "ADAUSD.price",
+        "target_node": "XRPUSD.price",
+        "path_exists": false
+      }
+    }
+  ]
+}

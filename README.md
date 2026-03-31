@@ -23,6 +23,16 @@ Benchmark versions currently included:
 | **v13** | Split benchmark with a 100-case live-only main set plus a categorized resolved companion subset | Keeps the main benchmark third-party-resolved and forward-looking, with 93 LLM-authored custom live finance cases on top of 7 official `FutureX-Online` tasks, plus an immediately scoreable categorized `FutureX-Past` companion |
 | **v14** | Industrial causal benchmark architecture plus public-dev prototype pack | New benchmark design layer that integrates formal causal benchmarks, data-grounded causal QA, natural event causality, finance/business reasoning, and industrial intervention/estimation into a unified industrial-grade causal benchmark spec, now with an instantiated public-dev case pack, separated answer key, a focused causal/proxy/intervention stress pack, formal Track G mapping for FutureX-style live vs past-as-of cases, a dedicated true-live Track G pack where ground truth stays blank until future resolution, and a full materialized historical as-of Track G pack |
 
+Public benchmark entrypoint for `v14`:
+- Index: [`v14/public_benchmark_index.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v14/public_benchmark_index.md)
+- Manifest: [`v14/public_benchmark_manifest.json`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v14/public_benchmark_manifest.json)
+- Builder: [`v14/build_public_benchmark_manifest.py`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v14/build_public_benchmark_manifest.py)
+
+Repo-local benchmark skill package:
+- Skill folder: [`skills/abel-benchmark-v14/`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14)
+- Skill contract: [`skills/abel-benchmark-v14/SKILL.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14/SKILL.md)
+- Router script: [`skills/abel-benchmark-v14/scripts/run_pack.py`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14/scripts/run_pack.py)
+
 The original `v3` / `v4` pipeline uses **LLM-based question classification** (GPT-4o-mini) to identify suitable financial questions and extract ticker symbols, then **`normalize-node`** from [cap_probe.py](https://github.com/Abel-ai-causality/Abel-skills/blob/main/causal-abel/scripts/cap_probe.py) to resolve correct Abel node IDs.
 
 ### Dataset

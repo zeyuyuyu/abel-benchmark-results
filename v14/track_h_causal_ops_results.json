@@ -1,0 +1,351 @@
+{
+  "timestamp": "20260331-175131",
+  "benchmark": "v14_track_h_causal_ops",
+  "case_count": 24,
+  "base": {
+    "correct_case_count": 16,
+    "valid_case_count": 18,
+    "accuracy": 0.6667,
+    "duration_seconds": 6899.45,
+    "family_scores": {
+      "cross_asset_upside_selection": {
+        "correct": 4,
+        "case_count": 6
+      },
+      "direct_parent_identification": {
+        "correct": 3,
+        "case_count": 6
+      },
+      "markov_role_classification": {
+        "correct": 3,
+        "case_count": 6
+      },
+      "directed_path_reachability": {
+        "correct": 6,
+        "case_count": 6
+      }
+    }
+  },
+  "skill": {
+    "correct_case_count": 21,
+    "valid_case_count": 21,
+    "accuracy": 0.875,
+    "duration_seconds": 6445.91,
+    "family_scores": {
+      "cross_asset_upside_selection": {
+        "correct": 6,
+        "case_count": 6
+      },
+      "direct_parent_identification": {
+        "correct": 6,
+        "case_count": 6
+      },
+      "markov_role_classification": {
+        "correct": 3,
+        "case_count": 6
+      },
+      "directed_path_reachability": {
+        "correct": 6,
+        "case_count": 6
+      }
+    }
+  },
+  "valid_only": {
+    "case_count": 18,
+    "base_correct_case_count": 16,
+    "skill_correct_case_count": 18,
+    "base_accuracy": 0.8889,
+    "skill_accuracy": 1.0
+  },
+  "cases": [
+    {
+      "id": "v14h_001",
+      "title": "Cross-Asset Upside Pick (NVDA/TSLA/GS/AVGO)",
+      "task_family": "cross_asset_upside_selection",
+      "answer_box": "\\boxed{D}",
+      "base_prediction": "\\boxed{A}",
+      "skill_prediction": "\\boxed{D}",
+      "base_valid": true,
+      "skill_valid": true,
+      "base_correct": false,
+      "skill_correct": true
+    },
+    {
+      "id": "v14h_002",
+      "title": "Cross-Asset Upside Pick (ETHUSD/XOM/AVGO/AMZN)",
+      "task_family": "cross_asset_upside_selection",
+      "answer_box": "\\boxed{A}",
+      "base_prediction": "\\boxed{C}",
+      "skill_prediction": "\\boxed{A}",
+      "base_valid": true,
+      "skill_valid": true,
+      "base_correct": false,
+      "skill_correct": true
+    },
+    {
+      "id": "v14h_003",
+      "title": "Cross-Asset Upside Pick (AMZN/ADAUSD/GS/AVGO)",
+      "task_family": "cross_asset_upside_selection",
+      "answer_box": "\\boxed{D}",
+      "base_prediction": "\\boxed{D}",
+      "skill_prediction": "\\boxed{D}",
+      "base_valid": true,
+      "skill_valid": true,
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "v14h_004",
+      "title": "Cross-Asset Upside Pick (NVDA/AMZN/INTC/AAPL)",
+      "task_family": "cross_asset_upside_selection",
+      "answer_box": "\\boxed{C}",
+      "base_prediction": "\\boxed{C}",
+      "skill_prediction": "\\boxed{C}",
+      "base_valid": true,
+      "skill_valid": true,
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "v14h_005",
+      "title": "Cross-Asset Upside Pick (JPM/AMZN/PYPL/AAPL)",
+      "task_family": "cross_asset_upside_selection",
+      "answer_box": "\\boxed{B}",
+      "base_prediction": "\\boxed{B}",
+      "skill_prediction": "\\boxed{B}",
+      "base_valid": true,
+      "skill_valid": true,
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "v14h_006",
+      "title": "Cross-Asset Upside Pick (JPM/META/GS/AMZN)",
+      "task_family": "cross_asset_upside_selection",
+      "answer_box": "\\boxed{B}",
+      "base_prediction": "\\boxed{B}",
+      "skill_prediction": "\\boxed{B}",
+      "base_valid": true,
+      "skill_valid": true,
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "v14h_007",
+      "title": "Direct Upstream Driver For XOM",
+      "task_family": "direct_parent_identification",
+      "answer_box": "\\boxed{D}",
+      "base_prediction": null,
+      "skill_prediction": "\\boxed{D}",
+      "base_valid": false,
+      "skill_valid": true,
+      "base_correct": false,
+      "skill_correct": true
+    },
+    {
+      "id": "v14h_008",
+      "title": "Direct Upstream Driver For XRPUSD",
+      "task_family": "direct_parent_identification",
+      "answer_box": "\\boxed{C}",
+      "base_prediction": null,
+      "skill_prediction": "\\boxed{C}",
+      "base_valid": false,
+      "skill_valid": true,
+      "base_correct": false,
+      "skill_correct": true
+    },
+    {
+      "id": "v14h_009",
+      "title": "Direct Upstream Driver For ETHUSD",
+      "task_family": "direct_parent_identification",
+      "answer_box": "\\boxed{C}",
+      "base_prediction": null,
+      "skill_prediction": "\\boxed{C}",
+      "base_valid": false,
+      "skill_valid": true,
+      "base_correct": false,
+      "skill_correct": true
+    },
+    {
+      "id": "v14h_010",
+      "title": "Direct Upstream Driver For META",
+      "task_family": "direct_parent_identification",
+      "answer_box": "\\boxed{D}",
+      "base_prediction": "\\boxed{D}",
+      "skill_prediction": "\\boxed{D}",
+      "base_valid": true,
+      "skill_valid": true,
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "v14h_011",
+      "title": "Direct Upstream Driver For CVX",
+      "task_family": "direct_parent_identification",
+      "answer_box": "\\boxed{D}",
+      "base_prediction": "\\boxed{D}",
+      "skill_prediction": "\\boxed{D}",
+      "base_valid": true,
+      "skill_valid": true,
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "v14h_012",
+      "title": "Direct Upstream Driver For AAPL",
+      "task_family": "direct_parent_identification",
+      "answer_box": "\\boxed{C}",
+      "base_prediction": "\\boxed{C}",
+      "skill_prediction": "\\boxed{C}",
+      "base_valid": true,
+      "skill_valid": true,
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "v14h_013",
+      "title": "Role Of ECCX Relative To XOM",
+      "task_family": "markov_role_classification",
+      "answer_box": "\\boxed{A}",
+      "base_prediction": null,
+      "skill_prediction": null,
+      "base_valid": false,
+      "skill_valid": false,
+      "base_correct": false,
+      "skill_correct": false
+    },
+    {
+      "id": "v14h_014",
+      "title": "Role Of IMOUSD Relative To COIN",
+      "task_family": "markov_role_classification",
+      "answer_box": "\\boxed{A}",
+      "base_prediction": null,
+      "skill_prediction": null,
+      "base_valid": false,
+      "skill_valid": false,
+      "base_correct": false,
+      "skill_correct": false
+    },
+    {
+      "id": "v14h_015",
+      "title": "Role Of DANAUSD Relative To DAL",
+      "task_family": "markov_role_classification",
+      "answer_box": "\\boxed{A}",
+      "base_prediction": null,
+      "skill_prediction": null,
+      "base_valid": false,
+      "skill_valid": false,
+      "base_correct": false,
+      "skill_correct": false
+    },
+    {
+      "id": "v14h_016",
+      "title": "Role Of AEROUSD Relative To GOOGL",
+      "task_family": "markov_role_classification",
+      "answer_box": "\\boxed{B}",
+      "base_prediction": "\\boxed{B}",
+      "skill_prediction": "\\boxed{B}",
+      "base_valid": true,
+      "skill_valid": true,
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "v14h_017",
+      "title": "Role Of AIV Relative To XRPUSD",
+      "task_family": "markov_role_classification",
+      "answer_box": "\\boxed{A}",
+      "base_prediction": "\\boxed{A}",
+      "skill_prediction": "\\boxed{A}",
+      "base_valid": true,
+      "skill_valid": true,
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "v14h_018",
+      "title": "Role Of AGNCM Relative To TSLA",
+      "task_family": "markov_role_classification",
+      "answer_box": "\\boxed{A}",
+      "base_prediction": "\\boxed{A}",
+      "skill_prediction": "\\boxed{A}",
+      "base_valid": true,
+      "skill_valid": true,
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "v14h_019",
+      "title": "Path Reachability: TDROPUSD -> GS",
+      "task_family": "directed_path_reachability",
+      "answer_box": "\\boxed{A}",
+      "base_prediction": "\\boxed{A}",
+      "skill_prediction": "\\boxed{A}",
+      "base_valid": true,
+      "skill_valid": true,
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "v14h_020",
+      "title": "Path Reachability: PYPL -> DOGEUSD",
+      "task_family": "directed_path_reachability",
+      "answer_box": "\\boxed{B}",
+      "base_prediction": "\\boxed{B}",
+      "skill_prediction": "\\boxed{B}",
+      "base_valid": true,
+      "skill_valid": true,
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "v14h_021",
+      "title": "Path Reachability: SFIUSD -> INTC",
+      "task_family": "directed_path_reachability",
+      "answer_box": "\\boxed{A}",
+      "base_prediction": "\\boxed{A}",
+      "skill_prediction": "\\boxed{A}",
+      "base_valid": true,
+      "skill_valid": true,
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "v14h_022",
+      "title": "Path Reachability: XRPUSD -> XOM",
+      "task_family": "directed_path_reachability",
+      "answer_box": "\\boxed{B}",
+      "base_prediction": "\\boxed{B}",
+      "skill_prediction": "\\boxed{B}",
+      "base_valid": true,
+      "skill_valid": true,
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "v14h_023",
+      "title": "Path Reachability: AIV -> XRPUSD",
+      "task_family": "directed_path_reachability",
+      "answer_box": "\\boxed{A}",
+      "base_prediction": "\\boxed{A}",
+      "skill_prediction": "\\boxed{A}",
+      "base_valid": true,
+      "skill_valid": true,
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "v14h_024",
+      "title": "Path Reachability: ADAUSD -> XRPUSD",
+      "task_family": "directed_path_reachability",
+      "answer_box": "\\boxed{B}",
+      "base_prediction": "\\boxed{B}",
+      "skill_prediction": "\\boxed{B}",
+      "base_valid": true,
+      "skill_valid": true,
+      "base_correct": true,
+      "skill_correct": true
+    }
+  ],
+  "source_summary_path": "/Users/zeyu/Documents/bach_private_cache/.bench/v14-track-h-causal-ops-results-20260331-175131/summary.json"
+}

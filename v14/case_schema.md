@@ -89,6 +89,7 @@ Example:
   - `finance_and_business_causal_reasoning`
   - `industrial_intervention_and_estimation`
   - `agentic_live_analysis`
+  - `causal_network_operations`
 
 ### `source_family`
 
