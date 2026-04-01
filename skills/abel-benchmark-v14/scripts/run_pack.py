@@ -11,7 +11,31 @@ from pathlib import Path
 
 
 HERE = Path(__file__).resolve()
-REPO_ROOT = HERE.parents[3]
+
+
+def resolve_repo_root() -> Path:
+    override = os.getenv("ABEL_BENCHMARK_REPO", "").strip()
+    if override:
+        path = Path(override).expanduser().resolve()
+        if (path / "v14").exists():
+            return path
+        raise SystemExit(f"ABEL_BENCHMARK_REPO does not look valid: {path}")
+
+    for parent in HERE.parents:
+        if (parent / "v14").exists() and (parent / "README.md").exists():
+            return parent
+
+    default = Path("/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results")
+    if (default / "v14").exists():
+        return default
+
+    raise SystemExit(
+        "Could not find benchmark repo root. Set ABEL_BENCHMARK_REPO to "
+        "the abel-benchmark-results path."
+    )
+
+
+REPO_ROOT = resolve_repo_root()
 
 
 PACK_TO_CMD = {
