@@ -32,8 +32,8 @@ python3 ~/.codex/skills/abel-benchmark-v14/scripts/mcp_server.py --transport std
 ```
 
 References:
-- Skill README: [`skills/abel-benchmark-v14/README.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14/README.md)
-- Cross-agent guide: [`skills/abel-benchmark-v14/references/cross_agent_usage.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14/references/cross_agent_usage.md)
+- Skill README: [skills/abel-benchmark-v14/README.md](./skills/abel-benchmark-v14/README.md)
+- Cross-agent guide: [skills/abel-benchmark-v14/references/cross_agent_usage.md](./skills/abel-benchmark-v14/references/cross_agent_usage.md)
 
 ## Overview
 
@@ -59,18 +59,18 @@ Benchmark versions currently included:
 | **v14** | Industrial causal benchmark architecture plus public-dev prototype pack | New benchmark design layer that integrates formal causal benchmarks, data-grounded causal QA, natural event causality, finance/business reasoning, and industrial intervention/estimation into a unified industrial-grade causal benchmark spec, now with an instantiated public-dev case pack, separated answer key, a focused causal/proxy/intervention stress pack, formal Track G mapping for FutureX-style live vs past-as-of cases, a dedicated true-live Track G pack where ground truth stays blank until future resolution, and a full materialized historical as-of Track G pack |
 
 Public benchmark entrypoint for `v14`:
-- Index: [`v14/public_benchmark_index.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v14/public_benchmark_index.md)
-- Manifest: [`v14/public_benchmark_manifest.json`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v14/public_benchmark_manifest.json)
-- Builder: [`v14/build_public_benchmark_manifest.py`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v14/build_public_benchmark_manifest.py)
+- Index: [v14/public_benchmark_index.md](./v14/public_benchmark_index.md)
+- Manifest: [v14/public_benchmark_manifest.json](./v14/public_benchmark_manifest.json)
+- Builder: [v14/build_public_benchmark_manifest.py](./v14/build_public_benchmark_manifest.py)
 
 Public benchmark skill package:
-- Skill folder: [`skills/abel-benchmark-v14/`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14)
-- Skill contract: [`skills/abel-benchmark-v14/SKILL.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14/SKILL.md)
-- Router script: [`skills/abel-benchmark-v14/scripts/run_pack.py`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14/scripts/run_pack.py)
-- Cross-agent CLI: [`skills/abel-benchmark-v14/scripts/benchmark_cli.py`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14/scripts/benchmark_cli.py)
-- MCP server: [`skills/abel-benchmark-v14/scripts/mcp_server.py`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14/scripts/mcp_server.py)
-- Public install guide: [`skills/abel-benchmark-v14/references/public_install.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14/references/public_install.md)
-- Cross-agent usage: [`skills/abel-benchmark-v14/references/cross_agent_usage.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14/references/cross_agent_usage.md)
+- Skill folder: [skills/abel-benchmark-v14/](./skills/abel-benchmark-v14/)
+- Skill contract: [skills/abel-benchmark-v14/SKILL.md](./skills/abel-benchmark-v14/SKILL.md)
+- Router script: [skills/abel-benchmark-v14/scripts/run_pack.py](./skills/abel-benchmark-v14/scripts/run_pack.py)
+- Cross-agent CLI: [skills/abel-benchmark-v14/scripts/benchmark_cli.py](./skills/abel-benchmark-v14/scripts/benchmark_cli.py)
+- MCP server: [skills/abel-benchmark-v14/scripts/mcp_server.py](./skills/abel-benchmark-v14/scripts/mcp_server.py)
+- Public install guide: [skills/abel-benchmark-v14/references/public_install.md](./skills/abel-benchmark-v14/references/public_install.md)
+- Cross-agent usage: [skills/abel-benchmark-v14/references/cross_agent_usage.md](./skills/abel-benchmark-v14/references/cross_agent_usage.md)
 
 Internet install command (Codex skill-installer):
 ```bash
@@ -80,7 +80,7 @@ python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-githu
 ```
 
 Latest Track H report:
-- [`v14/track_h_benchmark_report.20260331.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v14/track_h_benchmark_report.20260331.md)
+- [v14/track_h_benchmark_report.20260331.md](./v14/track_h_benchmark_report.20260331.md)
 
 The original `v3` / `v4` pipeline uses **LLM-based question classification** (GPT-4o-mini) to identify suitable financial questions and extract ticker symbols, then **`normalize-node`** from [cap_probe.py](https://github.com/Abel-ai-causality/Abel-skills/blob/main/causal-abel/scripts/cap_probe.py) to resolve correct Abel node IDs.
 
@@ -288,7 +288,7 @@ Headline results:
 Run it with:
 
 ```bash
-python3 /Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v7/rescore_live.py
+python3 v7/rescore_live.py
 ```
 
 This makes `v7` a cleaner benchmark for "live prediction with and without the skill" than any `FutureX-Past` setup, even though the questions are not yet scoreable until they resolve.
@@ -312,7 +312,7 @@ Why this matters:
 - `v8` instead checks whether the model can correctly inspect and use the live Abel CAP interface that the skill is built around.
 - This includes tricky semantics such as `invalid_intervention`, `no_directed_path_found`, preview-only counterfactuals, and extension method signatures.
 
-The benchmark spec is documented in [`v8/benchmark_spec.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v8/benchmark_spec.md), and the runnable harness is [`v8/test_script.py`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v8/test_script.py).
+The benchmark spec is documented in [v8/benchmark_spec.md](./v8/benchmark_spec.md), and the runnable harness is [v8/test_script.py](./v8/test_script.py).
 
 ---
 
@@ -344,10 +344,10 @@ Headline properties:
 
 Files:
 
-- Dataset: [`v10/natural_intent_cases.json`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v10/natural_intent_cases.json)
-- Overview: [`v10/cases.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v10/cases.md)
-- Spec: [`v10/casebook_spec.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v10/casebook_spec.md)
-- Generator: [`v10/build_natural_intent_casebook.py`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v10/build_natural_intent_casebook.py)
+- Dataset: [v10/natural_intent_cases.json](./v10/natural_intent_cases.json)
+- Overview: [v10/cases.md](./v10/cases.md)
+- Spec: [v10/casebook_spec.md](./v10/casebook_spec.md)
+- Generator: [v10/build_natural_intent_casebook.py](./v10/build_natural_intent_casebook.py)
 
 ---
 
@@ -367,14 +367,14 @@ Why this matters:
 
 Files:
 
-- Questions: [`v11/questions.json`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v11/questions.json)
-- Ground Truth: [`v11/ground_truth.json`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v11/ground_truth.json)
-- Overview: [`v11/cases.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v11/cases.md)
-- Spec: [`v11/casebook_spec.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v11/casebook_spec.md)
-- Snapshot Facts: [`v11/artifacts/snapshot_facts.json`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v11/artifacts/snapshot_facts.json)
-- Artifact Manifest: [`v11/artifacts/manifest.json`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v11/artifacts/manifest.json)
-- Builder: [`v11/build_natural_intent_casebook.py`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v11/build_natural_intent_casebook.py)
-- Capture: [`v11/capture_snapshot_artifacts.py`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v11/capture_snapshot_artifacts.py)
+- Questions: [v11/questions.json](./v11/questions.json)
+- Ground Truth: [v11/ground_truth.json](./v11/ground_truth.json)
+- Overview: [v11/cases.md](./v11/cases.md)
+- Spec: [v11/casebook_spec.md](./v11/casebook_spec.md)
+- Snapshot Facts: [v11/artifacts/snapshot_facts.json](./v11/artifacts/snapshot_facts.json)
+- Artifact Manifest: [v11/artifacts/manifest.json](./v11/artifacts/manifest.json)
+- Builder: [v11/build_natural_intent_casebook.py](./v11/build_natural_intent_casebook.py)
+- Capture: [v11/capture_snapshot_artifacts.py](./v11/capture_snapshot_artifacts.py)
 
 ---
 
