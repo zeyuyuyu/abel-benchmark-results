@@ -1,5 +1,40 @@
 # Abel Skill Benchmark Results
 
+## How To Use This Skill (Quick Start)
+
+1. Install skill from GitHub:
+
+```bash
+python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
+  --repo zeyuyuyu/abel-benchmark-results \
+  --path skills/abel-benchmark-v14
+```
+
+2. Bootstrap benchmark repo and set path:
+
+```bash
+python3 ~/.codex/skills/abel-benchmark-v14/scripts/run_pack.py bootstrap-repo
+export ABEL_BENCHMARK_REPO=~/abel-benchmark-results
+```
+
+3. Run benchmark commands (no MCP required):
+
+```bash
+python3 ~/.codex/skills/abel-benchmark-v14/scripts/benchmark_cli.py --repo "$ABEL_BENCHMARK_REPO" list-packs
+python3 ~/.codex/skills/abel-benchmark-v14/scripts/benchmark_cli.py --repo "$ABEL_BENCHMARK_REPO" get-cases --pack-id track_h_causal_ops --limit 5
+python3 ~/.codex/skills/abel-benchmark-v14/scripts/benchmark_cli.py --repo "$ABEL_BENCHMARK_REPO" score-predictions --pack-id track_h_causal_ops --predictions-file /path/to/preds.json
+```
+
+Optional MCP mode (for Claude Code / OpenClaw style MCP clients):
+
+```bash
+python3 ~/.codex/skills/abel-benchmark-v14/scripts/mcp_server.py --transport stdio
+```
+
+References:
+- Skill README: [`skills/abel-benchmark-v14/README.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14/README.md)
+- Cross-agent guide: [`skills/abel-benchmark-v14/references/cross_agent_usage.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14/references/cross_agent_usage.md)
+
 ## Overview
 
 This repository collects multiple benchmarks comparing **LLM only** vs **LLM + [Abel Skill](https://github.com/Abel-ai-causality/Abel-skills)**.
