@@ -28,10 +28,18 @@ Public benchmark entrypoint for `v14`:
 - Manifest: [`v14/public_benchmark_manifest.json`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v14/public_benchmark_manifest.json)
 - Builder: [`v14/build_public_benchmark_manifest.py`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v14/build_public_benchmark_manifest.py)
 
-Repo-local benchmark skill package:
+Public benchmark skill package:
 - Skill folder: [`skills/abel-benchmark-v14/`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14)
 - Skill contract: [`skills/abel-benchmark-v14/SKILL.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14/SKILL.md)
 - Router script: [`skills/abel-benchmark-v14/scripts/run_pack.py`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14/scripts/run_pack.py)
+- Public install guide: [`skills/abel-benchmark-v14/references/public_install.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14/references/public_install.md)
+
+Internet install command (Codex skill-installer):
+```bash
+python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
+  --repo zeyuyuyu/abel-benchmark-results \
+  --path skills/abel-benchmark-v14
+```
 
 Latest Track H report:
 - [`v14/track_h_benchmark_report.20260331.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v14/track_h_benchmark_report.20260331.md)
