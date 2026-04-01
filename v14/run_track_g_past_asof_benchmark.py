@@ -34,7 +34,10 @@ SKILL_ENV = Path(
 MODEL = "gpt-5.4"
 REASONING_EFFORT = "low"
 TIMEOUT_SECONDS = 1800
-BOXED_RE = re.compile(r"^\\boxed\{(?:Yes|No|[A-Z](?:, ?[A-Z])*)\}$")
+BOXED_RE = re.compile(r"^\\boxed\{(?P<inner>.*)\}$", re.DOTALL)
+LETTER_TOKEN_RE = re.compile(r"^[A-Z]$")
+LETTER_LIST_RE = re.compile(r"^[A-Z](?:, ?[A-Z])*$")
+COMPACT_LETTER_LIST_RE = re.compile(r"^[A-Z]{2,}$")
 
 
 @dataclass(frozen=True)
@@ -98,11 +101,34 @@ def parse_json_payload(text: str) -> dict[str, Any]:
         raise
 
 
-def extract_tokens(prediction: str | None) -> list[str]:
-    if not prediction or not BOXED_RE.fullmatch(prediction.strip()):
+def normalize_token(token: str) -> str:
+    return re.sub(r"\s+", " ", token.strip())
+
+
+def extract_tokens(prediction: str | None, gold_tokens: list[str]) -> list[str]:
+    if not prediction:
         return []
-    inner = prediction.strip()[len("\\boxed{") : -1]
-    return sorted(part.strip() for part in inner.split(",") if part.strip())
+    match = BOXED_RE.fullmatch(prediction.strip())
+    if not match:
+        return []
+
+    inner = normalize_token(match.group("inner"))
+    normalized_gold = [normalize_token(token) for token in gold_tokens]
+    if not normalized_gold:
+        return []
+    if len(normalized_gold) == 1:
+        return [inner]
+
+    if all(LETTER_TOKEN_RE.fullmatch(token) for token in normalized_gold):
+        if LETTER_LIST_RE.fullmatch(inner):
+            return sorted(part.strip() for part in inner.split(",") if part.strip())
+        if COMPACT_LETTER_LIST_RE.fullmatch(inner) and len(inner) == len(normalized_gold):
+            return sorted(list(inner))
+
+    parts = [normalize_token(part) for part in inner.split(",")]
+    if len(parts) != len(normalized_gold):
+        return []
+    return sorted(parts)
 
 
 def compact_case_prompt(prompt: str) -> str:
@@ -182,6 +208,7 @@ def run_codex_batch(
     env["ABEL_API_KEY"] = api_key
     started = time.time()
     timed_out = False
+    timeout = timeout_seconds if timeout_seconds > 0 else None
     try:
         completed = subprocess.run(
             cmd,
@@ -189,7 +216,7 @@ def run_codex_batch(
             capture_output=True,
             text=True,
             env=env,
-            timeout=timeout_seconds,
+            timeout=timeout,
             check=False,
         )
         returncode = completed.returncode
@@ -302,6 +329,7 @@ def main() -> None:
         "version": "v14-track-g-past-asof",
         "model": MODEL,
         "reasoning_effort": REASONING_EFFORT,
+        "timeout_seconds": args.timeout_seconds,
         "case_count": len(questions),
         "runs": {},
         "cases": [],
@@ -315,8 +343,8 @@ def main() -> None:
         for case in questions:
             prediction = state["prediction_map"].get(case["id"])
             truth = truth_map[case["id"]]
-            pred_tokens = extract_tokens(prediction)
-            gold_tokens = sorted(truth["answer_tokens"])
+            gold_tokens = sorted(normalize_token(token) for token in truth["answer_tokens"])
+            pred_tokens = extract_tokens(prediction, truth["answer_tokens"])
             is_valid = bool(pred_tokens)
             is_correct = pred_tokens == gold_tokens
             if is_valid:

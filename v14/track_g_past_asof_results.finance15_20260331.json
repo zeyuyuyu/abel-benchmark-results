@@ -3,9 +3,9 @@
   "benchmark": "v14_track_g_past_asof",
   "case_count": 15,
   "base": {
-    "correct_case_count": 10,
-    "valid_case_count": 14,
-    "accuracy": 0.6667,
+    "correct_case_count": 11,
+    "valid_case_count": 15,
+    "accuracy": 0.7333,
     "duration_seconds": 1344.25,
     "category_scores": {
       "central_bank_decision": {
@@ -21,7 +21,7 @@
         "case_count": 2
       },
       "commodity_hit_levels": {
-        "correct": 0,
+        "correct": 1,
         "case_count": 1
       },
       "first_hit": {
@@ -151,9 +151,9 @@
       "answer_box": "\\boxed{B, C, G, J}",
       "base_prediction": "\\boxed{BCGJ}",
       "skill_prediction": null,
-      "base_correct": false,
+      "base_correct": true,
       "skill_correct": false,
-      "base_valid": false,
+      "base_valid": true,
       "skill_valid": false
     },
     {

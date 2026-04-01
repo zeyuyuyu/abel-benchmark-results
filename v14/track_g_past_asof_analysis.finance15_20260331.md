@@ -29,11 +29,11 @@
 
 - 在“只比较有效 case”的口径下，二者 **持平**（`9/13` vs `9/13`）
 - `codex + skill` 更慢（+280.98s）
-- 被剔除的 2 题都与空预测/格式问题相关，而不是纯推理差异
+- 被剔除的 2 题都与 skill 空预测/timeout 相关，而不是纯推理差异
 
 补充（原始口径，不剔除无效输出）：
 
-- `codex only`: `10/15 = 66.67%`
+- `codex only`: `11/15 = 73.33%`
 - `codex + skill`: `9/15 = 60.00%`
 
 ## 3) 分类表现
@@ -43,10 +43,10 @@
 | `central_bank_decision` | 4/4 | 4/4 |
 | `crypto_binary` | 2/2 | 2/2 |
 | `commodity_bucket` | 2/2 | 1/2 |
+| `commodity_hit_levels` | 1/1 | 0/1 |
 | `agriculture_bucket` | 1/1 | 1/1 |
 | `supply_shock_binary` | 1/1 | 1/1 |
 | `commodity_thresholds` | 0/1 | 0/1 |
-| `commodity_hit_levels` | 0/1 | 0/1 |
 | `first_hit` | 0/2 | 0/2 |
 | `single_stock_direction` | 0/1 | 0/1 |
 
@@ -54,7 +54,7 @@
 
 - 两边都擅长：`central_bank_decision`、`crypto_binary`
 - 两边都薄弱：`first_hit`、复杂阈值/命中类题
-- 本次唯一明显拉开的是 `commodity_bucket`（skill 因 timeout 少 1 分）
+- 本次明显拉开的是 `commodity_bucket` 和 `commodity_hit_levels`（都与 skill timeout 相关）
 
 ## 4) 关键失分原因（高优先级）
 
@@ -65,10 +65,11 @@
 
 这两题里，`v13ra_006` 本来 base 是答对的（`\boxed{E}`），因此 skill 侧超时造成了净损失。
 
-### B. 格式不合规导致无效（即使语义接近也记错）
+### B. 旧 scorer 对紧凑多选格式过严
 
-- `v13ra_007`（base）输出 `\boxed{BCGJ}`，未按要求使用逗号分隔，判定无效
-- 这类格式错误在严格 benchmark 里会直接损失有效率和准确率
+- `v13ra_007`（base）输出 `\boxed{BCGJ}`，语义上等同于 GT `\boxed{B, C, G, J}`
+- 修正 scorer 后，这题应记为 **base 正确且有效**，而不是格式无效
+- 这说明 Track G 结果应对紧凑字母多选做归一化，而不该只做字符串级严格匹配
 
 ### C. 多选阈值题本身难度较高
 
@@ -80,16 +81,16 @@
 
 ## 5) Case-level 差异摘要
 
-- **被有效口径剔除**：`v13ra_006`（skill 空预测）、`v13ra_007`（base 格式无效 + skill 空预测）
-- **Base-only 正确（原始口径）**：`v13ra_006`
+- **被有效口径剔除**：`v13ra_006`、`v13ra_007`（两题都是 skill 空预测）
+- **Base-only 正确（原始口径）**：`v13ra_006`, `v13ra_007`
 - **Skill-only 正确**：无
-- **双方都错**：`v13ra_005`, `v13ra_007`, `v13ra_009`, `v13ra_010`, `v13ra_015`
+- **双方都错**：`v13ra_005`, `v13ra_009`, `v13ra_010`, `v13ra_015`
 - 预测发生变化的题：3 题（其中 2 题变化由 skill timeout 引起）
 
 ## 6) 解释口径（避免误读）
 
 这 15 题在有效口径下是 `9/13` 对 `9/13`，说明两边“有有效输出时”的答题质量接近。  
-原始口径下 skill 落后，主要是工程稳定性（timeout）和输出合规问题造成，而不是显著的推理能力差距。
+原始口径下 skill 落后，主要是工程稳定性（timeout）造成，而不是显著的推理能力差距。
 
 ## 7) 下一步建议
 

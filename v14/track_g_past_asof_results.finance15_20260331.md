@@ -2,9 +2,9 @@
 
 Full `historical_asof_search_cutoff` run over the 15-case Track G pack.
 
-- Base: `10/15 = 66.67%`
+- Base: `11/15 = 73.33%`
 - Skill: `9/15 = 60.00%`
-- Base valid outputs: `14/15`
+- Base valid outputs: `15/15`
 - Skill valid outputs: `13/15`
 - Base duration: `1344.25s`
 - Skill duration: `1625.23s`
@@ -15,7 +15,7 @@ Full `historical_asof_search_cutoff` run over the 15-case Track G pack.
 | `v13ra_002` | `central_bank_decision` | `2026-01-23` | `\boxed{B}` | `\boxed{B}` ✅ | `\boxed{B}` ✅ | completed |
 | `v13ra_005` | `commodity_thresholds` | `2026-02-01` | `\boxed{H, I, J, K, L}` | `\boxed{H}` ❌ | `\boxed{F}` ❌ | completed |
 | `v13ra_008` | `commodity_bucket` | `2026-02-01` | `\boxed{F}` | `\boxed{F}` ✅ | `\boxed{F}` ✅ | completed |
-| `v13ra_007` | `commodity_hit_levels` | `2026-02-01` | `\boxed{B, C, G, J}` | `\boxed{BCGJ}` ❌ | `None` | base_invalid_or_missing, skill_invalid_or_missing |
+| `v13ra_007` | `commodity_hit_levels` | `2026-02-01` | `\boxed{B, C, G, J}` | `\boxed{BCGJ}` ✅ | `None` | skill_invalid_or_missing |
 | `v13ra_006` | `commodity_bucket` | `2026-02-01` | `\boxed{E}` | `\boxed{E}` ✅ | `None` | skill_invalid_or_missing |
 | `v13ra_009` | `first_hit` | `2026-02-01` | `\boxed{A}` | `\boxed{C}` ❌ | `\boxed{C}` ❌ | completed |
 | `v13ra_003` | `central_bank_decision` | `2026-02-03` | `\boxed{B}` | `\boxed{B}` ✅ | `\boxed{B}` ✅ | completed |
@@ -32,7 +32,7 @@ Full `historical_asof_search_cutoff` run over the 15-case Track G pack.
 - `agriculture_bucket`: base `1/1`, skill `1/1`
 - `central_bank_decision`: base `4/4`, skill `4/4`
 - `commodity_bucket`: base `2/2`, skill `1/2`
-- `commodity_hit_levels`: base `0/1`, skill `0/1`
+- `commodity_hit_levels`: base `1/1`, skill `0/1`
 - `commodity_thresholds`: base `0/1`, skill `0/1`
 - `crypto_binary`: base `2/2`, skill `2/2`
 - `first_hit`: base `0/2`, skill `0/2`
@@ -76,7 +76,7 @@ Full `historical_asof_search_cutoff` run over the 15-case Track G pack.
 - Category: `commodity_hit_levels`
 - Search cutoff: `2026-02-01`
 - Ground truth: `\boxed{B, C, G, J}`
-- `codex only`: `\boxed{BCGJ}` ❌
+- `codex only`: `\boxed{BCGJ}` ✅
 - `codex + skill`: `None`
 
 ## v13ra_006 — What will Gold (GC) settle at in January?
