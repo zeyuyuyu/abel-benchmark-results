@@ -32,7 +32,10 @@ Public benchmark skill package:
 - Skill folder: [`skills/abel-benchmark-v14/`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14)
 - Skill contract: [`skills/abel-benchmark-v14/SKILL.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14/SKILL.md)
 - Router script: [`skills/abel-benchmark-v14/scripts/run_pack.py`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14/scripts/run_pack.py)
+- Cross-agent CLI: [`skills/abel-benchmark-v14/scripts/benchmark_cli.py`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14/scripts/benchmark_cli.py)
+- MCP server: [`skills/abel-benchmark-v14/scripts/mcp_server.py`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14/scripts/mcp_server.py)
 - Public install guide: [`skills/abel-benchmark-v14/references/public_install.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14/references/public_install.md)
+- Cross-agent usage: [`skills/abel-benchmark-v14/references/cross_agent_usage.md`](/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/skills/abel-benchmark-v14/references/cross_agent_usage.md)
 
 Internet install command (Codex skill-installer):
 ```bash

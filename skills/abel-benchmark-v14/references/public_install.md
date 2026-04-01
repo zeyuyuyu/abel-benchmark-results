@@ -44,3 +44,21 @@ python3 ~/.codex/skills/abel-benchmark-v14/scripts/run_pack.py check-skill
 python3 ~/.codex/skills/abel-benchmark-v14/scripts/run_pack.py v14-track-g-past-asof
 python3 ~/.codex/skills/abel-benchmark-v14/scripts/run_pack.py v14-track-h-causal-ops
 ```
+
+## 4) Use From Any LLM Agent
+
+MCP is **not required**. If your agent can run shell commands, use CLI directly.
+
+CLI:
+
+```bash
+python3 ~/.codex/skills/abel-benchmark-v14/scripts/benchmark_cli.py \
+  --repo /path/to/abel-benchmark-results \
+  list-packs
+```
+
+MCP server:
+
+```bash
+python3 ~/.codex/skills/abel-benchmark-v14/scripts/mcp_server.py --transport stdio
+```

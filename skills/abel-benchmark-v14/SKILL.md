@@ -11,6 +11,7 @@ results for:
 - `codex only` vs `codex + skill`
 - v14 public-dev and Track G/Track H packs
 - public benchmark index / manifest updates
+- cross-agent benchmark serving (MCP / CLI)
 
 Repository:
 - `https://github.com/zeyuyuyu/abel-benchmark-results`
@@ -64,3 +65,18 @@ Supported packs:
 Reference:
 - `references/track_routing.md`
 - `references/public_install.md`
+- `references/cross_agent_usage.md`
+
+## Cross-Agent Endpoints
+
+Generic CLI:
+
+```bash
+python3 ~/.codex/skills/abel-benchmark-v14/scripts/benchmark_cli.py --repo /path/to/abel-benchmark-results list-packs
+```
+
+MCP server:
+
+```bash
+python3 ~/.codex/skills/abel-benchmark-v14/scripts/mcp_server.py --transport stdio
+```
