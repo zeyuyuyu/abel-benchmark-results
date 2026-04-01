@@ -15,17 +15,30 @@ bundle that can be installed from GitHub.
 - `references/cross_agent_usage.md`: Claude/OpenClaw/generic MCP usage
 - `.env.example`: required API key variable template
 
-## Install (From GitHub)
+## Install
 
-Use Codex skill installer:
+### Repo-local mode (works for any shell-enabled agent)
 
 ```bash
-python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
-  --repo zeyuyuyu/abel-benchmark-results \
-  --path skills/abel-benchmark-v14
+git clone https://github.com/zeyuyuyu/abel-benchmark-results.git
+cd abel-benchmark-results
+export ABEL_BENCHMARK_REPO="$PWD"
+export ABEL_BENCHMARK_SKILL_ROOT="$PWD/skills/abel-benchmark-v14"
 ```
 
-Then restart Codex.
+### Codex-installed mode
+
+Install the GitHub skill bundle with:
+
+- repo: `zeyuyuyu/abel-benchmark-results`
+- path: `skills/abel-benchmark-v14`
+
+Then point to the installed skill root:
+
+```bash
+export CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
+export ABEL_BENCHMARK_SKILL_ROOT="$CODEX_HOME/skills/abel-benchmark-v14"
+```
 
 ## Cross-Agent (Any LLM Agent)
 
@@ -36,7 +49,7 @@ MCP is optional. The minimal path is:
 CLI mode:
 
 ```bash
-python3 ~/.codex/skills/abel-benchmark-v14/scripts/benchmark_cli.py \
+python3 "$ABEL_BENCHMARK_SKILL_ROOT/scripts/benchmark_cli.py" \
   --repo /path/to/abel-benchmark-results \
   list-packs
 ```
@@ -44,7 +57,8 @@ python3 ~/.codex/skills/abel-benchmark-v14/scripts/benchmark_cli.py \
 MCP mode:
 
 ```bash
-python3 ~/.codex/skills/abel-benchmark-v14/scripts/mcp_server.py --transport stdio
+export ABEL_BENCHMARK_REPO=/path/to/abel-benchmark-results
+python3 "$ABEL_BENCHMARK_SKILL_ROOT/scripts/mcp_server.py" --transport stdio
 ```
 
 See:
@@ -53,10 +67,8 @@ See:
 ## Quick Start
 
 ```bash
-python3 ~/.codex/skills/abel-benchmark-v14/scripts/run_pack.py bootstrap-repo
-export ABEL_BENCHMARK_REPO=~/abel-benchmark-results
-
-python3 ~/.codex/skills/abel-benchmark-v14/scripts/run_pack.py check-skill
-python3 ~/.codex/skills/abel-benchmark-v14/scripts/run_pack.py v14-track-g-past-asof
-python3 ~/.codex/skills/abel-benchmark-v14/scripts/run_pack.py v14-build-public-manifest
+python3 "$ABEL_BENCHMARK_SKILL_ROOT/scripts/run_pack.py" --repo "$ABEL_BENCHMARK_REPO" list-packs
+python3 "$ABEL_BENCHMARK_SKILL_ROOT/scripts/run_pack.py" --repo "$ABEL_BENCHMARK_REPO" check-skill
+python3 "$ABEL_BENCHMARK_SKILL_ROOT/scripts/run_pack.py" --repo "$ABEL_BENCHMARK_REPO" v14-track-g-past-asof
+python3 "$ABEL_BENCHMARK_SKILL_ROOT/scripts/run_pack.py" --repo "$ABEL_BENCHMARK_REPO" v14-build-public-manifest
 ```

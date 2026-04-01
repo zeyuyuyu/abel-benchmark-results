@@ -6,16 +6,21 @@ can be used by non-Codex agents too.
 ## 1) Generic CLI (works in any shell-enabled agent)
 
 ```bash
-python3 ~/.codex/skills/abel-benchmark-v14/scripts/benchmark_cli.py --repo /path/to/abel-benchmark-results list-packs
-python3 ~/.codex/skills/abel-benchmark-v14/scripts/benchmark_cli.py --repo /path/to/abel-benchmark-results describe-pack --pack-id track_g_past_asof
-python3 ~/.codex/skills/abel-benchmark-v14/scripts/benchmark_cli.py --repo /path/to/abel-benchmark-results get-cases --pack-id track_h_causal_ops --limit 5
-python3 ~/.codex/skills/abel-benchmark-v14/scripts/benchmark_cli.py --repo /path/to/abel-benchmark-results score-predictions --pack-id track_h_causal_ops --predictions-file /path/to/preds.json
+export ABEL_BENCHMARK_REPO=/path/to/abel-benchmark-results
+export ABEL_BENCHMARK_SKILL_ROOT="$ABEL_BENCHMARK_REPO/skills/abel-benchmark-v14"
+
+python3 "$ABEL_BENCHMARK_SKILL_ROOT/scripts/benchmark_cli.py" --repo "$ABEL_BENCHMARK_REPO" list-packs
+python3 "$ABEL_BENCHMARK_SKILL_ROOT/scripts/benchmark_cli.py" --repo "$ABEL_BENCHMARK_REPO" describe-pack --pack-id track_g_past_asof
+python3 "$ABEL_BENCHMARK_SKILL_ROOT/scripts/benchmark_cli.py" --repo "$ABEL_BENCHMARK_REPO" get-cases --pack-id track_h_causal_ops --limit 5
+python3 "$ABEL_BENCHMARK_SKILL_ROOT/scripts/benchmark_cli.py" --repo "$ABEL_BENCHMARK_REPO" score-predictions --pack-id track_h_causal_ops --predictions-file /path/to/preds.json
 ```
 
 ## 2) MCP Server (stdio transport)
 
 ```bash
-python3 ~/.codex/skills/abel-benchmark-v14/scripts/mcp_server.py --transport stdio
+export ABEL_BENCHMARK_REPO=/path/to/abel-benchmark-results
+export ABEL_BENCHMARK_SKILL_ROOT="$ABEL_BENCHMARK_REPO/skills/abel-benchmark-v14"
+python3 "$ABEL_BENCHMARK_SKILL_ROOT/scripts/mcp_server.py" --transport stdio
 ```
 
 Server tools:
@@ -32,7 +37,7 @@ Server tools:
 Use a stdio MCP config entry with:
 
 - command: `python3`
-- args: `["~/.codex/skills/abel-benchmark-v14/scripts/mcp_server.py", "--transport", "stdio"]`
+- args: `["/path/to/abel-benchmark-results/skills/abel-benchmark-v14/scripts/mcp_server.py", "--transport", "stdio"]`
 - env (optional): `ABEL_BENCHMARK_REPO=/path/to/abel-benchmark-results`
 
 Most MCP-compatible agents (including Claude Code/OpenClaw style clients) can

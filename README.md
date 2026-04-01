@@ -2,38 +2,38 @@
 
 ## How To Use This Skill (Quick Start)
 
-1. Install skill from GitHub:
+1. Clone the public repository:
 
 ```bash
-python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
-  --repo zeyuyuyu/abel-benchmark-results \
-  --path skills/abel-benchmark-v14
+git clone https://github.com/zeyuyuyu/abel-benchmark-results.git
+cd abel-benchmark-results
 ```
 
-2. Bootstrap benchmark repo and set path:
+2. Set repo-local paths:
 
 ```bash
-python3 ~/.codex/skills/abel-benchmark-v14/scripts/run_pack.py bootstrap-repo
-export ABEL_BENCHMARK_REPO=~/abel-benchmark-results
+export ABEL_BENCHMARK_REPO="$PWD"
+export ABEL_BENCHMARK_SKILL_ROOT="$PWD/skills/abel-benchmark-v14"
 ```
 
 3. Run benchmark commands (no MCP required):
 
 ```bash
-python3 ~/.codex/skills/abel-benchmark-v14/scripts/benchmark_cli.py --repo "$ABEL_BENCHMARK_REPO" list-packs
-python3 ~/.codex/skills/abel-benchmark-v14/scripts/benchmark_cli.py --repo "$ABEL_BENCHMARK_REPO" get-cases --pack-id track_h_causal_ops --limit 5
-python3 ~/.codex/skills/abel-benchmark-v14/scripts/benchmark_cli.py --repo "$ABEL_BENCHMARK_REPO" score-predictions --pack-id track_h_causal_ops --predictions-file /path/to/preds.json
+python3 "$ABEL_BENCHMARK_SKILL_ROOT/scripts/benchmark_cli.py" --repo "$ABEL_BENCHMARK_REPO" list-packs
+python3 "$ABEL_BENCHMARK_SKILL_ROOT/scripts/benchmark_cli.py" --repo "$ABEL_BENCHMARK_REPO" get-cases --pack-id track_h_causal_ops --limit 5
+python3 "$ABEL_BENCHMARK_SKILL_ROOT/scripts/benchmark_cli.py" --repo "$ABEL_BENCHMARK_REPO" score-predictions --pack-id track_h_causal_ops --predictions-file /path/to/preds.json
 ```
 
 Optional MCP mode (for Claude Code / OpenClaw style MCP clients):
 
 ```bash
-python3 ~/.codex/skills/abel-benchmark-v14/scripts/mcp_server.py --transport stdio
+python3 "$ABEL_BENCHMARK_SKILL_ROOT/scripts/mcp_server.py" --transport stdio
 ```
 
 References:
 - Skill README: [skills/abel-benchmark-v14/README.md](./skills/abel-benchmark-v14/README.md)
 - Cross-agent guide: [skills/abel-benchmark-v14/references/cross_agent_usage.md](./skills/abel-benchmark-v14/references/cross_agent_usage.md)
+- Codex install guide: [skills/abel-benchmark-v14/references/public_install.md](./skills/abel-benchmark-v14/references/public_install.md)
 
 ## Overview
 
@@ -72,12 +72,8 @@ Public benchmark skill package:
 - Public install guide: [skills/abel-benchmark-v14/references/public_install.md](./skills/abel-benchmark-v14/references/public_install.md)
 - Cross-agent usage: [skills/abel-benchmark-v14/references/cross_agent_usage.md](./skills/abel-benchmark-v14/references/cross_agent_usage.md)
 
-Internet install command (Codex skill-installer):
-```bash
-python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
-  --repo zeyuyuyu/abel-benchmark-results \
-  --path skills/abel-benchmark-v14
-```
+Codex-native installation notes:
+- [skills/abel-benchmark-v14/references/public_install.md](./skills/abel-benchmark-v14/references/public_install.md)
 
 Latest Track H report:
 - [v14/track_h_benchmark_report.20260331.md](./v14/track_h_benchmark_report.20260331.md)
