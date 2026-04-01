@@ -1,0 +1,105 @@
+{
+  "track": "v14_track_i_skill_mining_pool",
+  "pack_variant": "track_i_skill_mining_pool_v1_strict_skill_wins",
+  "case_count": 5,
+  "cases": [
+    {
+      "id": "v14im_005",
+      "source_case_id": "v14d_021",
+      "primary_answer_text": "positive FDA panel vote improving approval odds",
+      "followup_answer_text": "short-squeeze amplification remains possible, so verify timing and short interest",
+      "canonical_answer": {
+        "primary_driver": "positive_fda_panel_vote_improving_approval_odds",
+        "uncertainty": "short_squeeze_dynamics_may_have_amplified_the_move_but_do_not_replace_the_main_causal_event",
+        "evidence_used": [
+          "Snippet 1",
+          "Snippet 3"
+        ]
+      },
+      "evidence_summary": [
+        "tests selection among competing narratives",
+        "main event should outrank unsupported rumor, while magnitude amplification remains a valid uncertainty"
+      ],
+      "common_failure_modes": [
+        "choosing the rumor because it sounds more dramatic",
+        "ignoring the distinction between driver and amplifier"
+      ]
+    },
+    {
+      "id": "v14im_006",
+      "source_case_id": "v14cpi_001",
+      "primary_answer_text": "financing conditions and mortgage affordability",
+      "followup_answer_text": "if orders stay weak after financing proxies normalize, demand softness gains weight",
+      "canonical_answer": {
+        "label": "A",
+        "primary_proxy_family": "financing_conditions_and_mortgage_affordability",
+        "falsifier": "orders_keep_deteriorating_even_if_rate_and_credit_proxies_normalize"
+      },
+      "evidence_summary": [
+        "mortgage affordability worsened materially while traffic and visits stayed roughly intact",
+        "credit and rate signals moved sharply, which fits hesitation around financing more than collapse in shopper interest"
+      ],
+      "common_failure_modes": [
+        "treating a modest cancellation increase as proof of broad demand collapse",
+        "ignoring the sharper movement in mortgage-rate and credit proxies"
+      ]
+    },
+    {
+      "id": "v14im_007",
+      "source_case_id": "v14cpi_002",
+      "primary_answer_text": "retail liquidity and alt-beta risk appetite",
+      "followup_answer_text": "if project-specific activity breaks while broad alt liquidity normalizes",
+      "canonical_answer": {
+        "label": "B",
+        "primary_proxy_family": "retail_liquidity_and_alt_beta",
+        "falsifier": "project_specific_activity_breaks_while_broad_alt_liquidity_normalizes"
+      },
+      "evidence_summary": [
+        "majors were stable while lower-liquidity books and alt funding deteriorated sharply",
+        "project-specific usage stayed flat, which argues against a token-specific adoption collapse"
+      ],
+      "common_failure_modes": [
+        "projecting a broad BTC/ETH narrative onto a move concentrated in low-liquidity alt exposure",
+        "assuming a hack or exploit without evidence packet support"
+      ]
+    },
+    {
+      "id": "v14im_014",
+      "source_case_id": "v14cpi_013",
+      "primary_answer_text": "stress financing conditions first",
+      "followup_answer_text": "inspect orders and cancellations",
+      "canonical_answer": {
+        "label": "B",
+        "stress_target": "financing_conditions",
+        "readout": "order_intake_and_cancellations"
+      },
+      "evidence_summary": [
+        "the open causal split is financing friction versus true demand softness",
+        "orders and cancellations are the closest downstream variables for distinguishing the two stories after stressing financing conditions"
+      ],
+      "common_failure_modes": [
+        "choosing a lever unrelated to the live uncertainty",
+        "looking at margin before testing the order-flow channel that actually separates the stories"
+      ]
+    },
+    {
+      "id": "v14im_015",
+      "source_case_id": "v14cpi_014",
+      "primary_answer_text": "stress jet-fuel costs first",
+      "followup_answer_text": "inspect unit margin or EPS sensitivity",
+      "canonical_answer": {
+        "label": "A",
+        "stress_target": "jet_fuel_costs",
+        "readout": "unit_margin_or_eps_sensitivity"
+      },
+      "evidence_summary": [
+        "the packet already shows stable demand-side evidence and a large energy move",
+        "margin and EPS sensitivity are the most direct downstream readouts of a fuel-cost stress"
+      ],
+      "common_failure_modes": [
+        "choosing a demand-side probe despite the packet already showing stable booking evidence",
+        "picking a variable that is not downstream of the suspected cost channel"
+      ]
+    }
+  ]
+}

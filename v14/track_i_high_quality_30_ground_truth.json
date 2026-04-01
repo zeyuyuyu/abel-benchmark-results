@@ -1,0 +1,596 @@
+{
+  "track": "v14_track_i_high_quality_30",
+  "pack_variant": "track_i_high_quality_30_v1",
+  "case_count": 30,
+  "cases": [
+    {
+      "id": "v14im_001",
+      "source_case_id": "v14d_013",
+      "primary_answer_text": "mix shift into lower-margin hardware amplified by freight",
+      "followup_answer_text": "watch hardware mix, hardware margin, and freight cost",
+      "canonical_answer": {
+        "primary_driver": "mix_shift_into_lower_margin_hardware_amplified_by_freight",
+        "supporting_variables": [
+          "hardware_mix_up",
+          "hardware_gross_margin_down",
+          "expedited_freight_cost_up"
+        ],
+        "confidence": "medium_high"
+      },
+      "evidence_summary": [
+        "revenue growth alone is not a valid margin explanation",
+        "packet supports a causal variable relationship between product mix and margin"
+      ],
+      "common_failure_modes": [
+        "answering with generic cost inflation despite no evidence",
+        "treating revenue growth itself as the driver of margin miss"
+      ]
+    },
+    {
+      "id": "v14im_002",
+      "source_case_id": "v14d_015",
+      "primary_answer_text": "channel inventory correction and weak sell-through",
+      "followup_answer_text": "watch sell-through and inventory-days normalization",
+      "canonical_answer": {
+        "primary_driver": "channel_inventory_correction_and_weak_sell_through",
+        "supporting_variables": [
+          "inventory_days_up",
+          "sell_through_down",
+          "revenue_miss_much_larger_than_fx_headwind"
+        ],
+        "confidence": "medium_high"
+      },
+      "evidence_summary": [
+        "dominant driver must explain most of the miss magnitude",
+        "FX and legal reserve are too small to be the main answer"
+      ],
+      "common_failure_modes": [
+        "choosing the most familiar macro explanation",
+        "overweighting a one-time legal item that mainly affects margin, not revenue"
+      ]
+    },
+    {
+      "id": "v14im_003",
+      "source_case_id": "v14d_019",
+      "primary_answer_text": "freight-rate spike due to canal disruption and rerouting",
+      "followup_answer_text": "duration and persistence of rerouting surcharges remain uncertain",
+      "canonical_answer": {
+        "primary_driver": "freight_rate_spike_due_to_canal_disruption_and_rerouting",
+        "uncertainty": "how_long_the_disruption_and_surcharges_will_persist",
+        "evidence_used": [
+          "Snippet 1",
+          "Snippet 2",
+          "Snippet 3"
+        ]
+      },
+      "evidence_summary": [
+        "tests causal synthesis under freshness-sensitive but frozen evidence",
+        "good answers must separate what is likely from what remains unresolved"
+      ],
+      "common_failure_modes": [
+        "summarizing headlines without naming a mechanism",
+        "overclaiming a durable earnings effect not supported by the packet"
+      ]
+    },
+    {
+      "id": "v14im_004",
+      "source_case_id": "v14d_020",
+      "primary_answer_text": "funding-cost and deposit-beta concern",
+      "followup_answer_text": "verify uninsured-deposit mix or wholesale-funding dependence",
+      "canonical_answer": {
+        "primary_driver": "funding_cost_and_deposit_beta_concern",
+        "next_verification": "verify_insured_vs_uninsured_deposit_mix_and_wholesale_funding_dependence",
+        "uncertainty": "the_unconfirmed_capital_raise_rumor_should_not_be_treated_as_established_fact"
+      },
+      "evidence_summary": [
+        "tests memo-style causal synthesis with verification discipline",
+        "answers should privilege primary-source evidence over rumor"
+      ],
+      "common_failure_modes": [
+        "treating the rumor as the main driver",
+        "failing to specify what to verify next"
+      ]
+    },
+    {
+      "id": "v14im_005",
+      "source_case_id": "v14d_021",
+      "primary_answer_text": "positive FDA panel vote improving approval odds",
+      "followup_answer_text": "short-squeeze amplification remains possible, so verify timing and short interest",
+      "canonical_answer": {
+        "primary_driver": "positive_fda_panel_vote_improving_approval_odds",
+        "uncertainty": "short_squeeze_dynamics_may_have_amplified_the_move_but_do_not_replace_the_main_causal_event",
+        "evidence_used": [
+          "Snippet 1",
+          "Snippet 3"
+        ]
+      },
+      "evidence_summary": [
+        "tests selection among competing narratives",
+        "main event should outrank unsupported rumor, while magnitude amplification remains a valid uncertainty"
+      ],
+      "common_failure_modes": [
+        "choosing the rumor because it sounds more dramatic",
+        "ignoring the distinction between driver and amplifier"
+      ]
+    },
+    {
+      "id": "v14im_006",
+      "source_case_id": "v14cpi_001",
+      "primary_answer_text": "financing conditions and mortgage affordability",
+      "followup_answer_text": "if orders stay weak after financing proxies normalize, demand softness gains weight",
+      "canonical_answer": {
+        "label": "A",
+        "primary_proxy_family": "financing_conditions_and_mortgage_affordability",
+        "falsifier": "orders_keep_deteriorating_even_if_rate_and_credit_proxies_normalize"
+      },
+      "evidence_summary": [
+        "mortgage affordability worsened materially while traffic and visits stayed roughly intact",
+        "credit and rate signals moved sharply, which fits hesitation around financing more than collapse in shopper interest"
+      ],
+      "common_failure_modes": [
+        "treating a modest cancellation increase as proof of broad demand collapse",
+        "ignoring the sharper movement in mortgage-rate and credit proxies"
+      ]
+    },
+    {
+      "id": "v14im_007",
+      "source_case_id": "v14cpi_002",
+      "primary_answer_text": "retail liquidity and alt-beta risk appetite",
+      "followup_answer_text": "if project-specific activity breaks while broad alt liquidity normalizes",
+      "canonical_answer": {
+        "label": "B",
+        "primary_proxy_family": "retail_liquidity_and_alt_beta",
+        "falsifier": "project_specific_activity_breaks_while_broad_alt_liquidity_normalizes"
+      },
+      "evidence_summary": [
+        "majors were stable while lower-liquidity books and alt funding deteriorated sharply",
+        "project-specific usage stayed flat, which argues against a token-specific adoption collapse"
+      ],
+      "common_failure_modes": [
+        "projecting a broad BTC/ETH narrative onto a move concentrated in low-liquidity alt exposure",
+        "assuming a hack or exploit without evidence packet support"
+      ]
+    },
+    {
+      "id": "v14im_008",
+      "source_case_id": "v14cpi_003",
+      "primary_answer_text": "fuel and input-cost pressure",
+      "followup_answer_text": "if bookings or unit revenue break while fuel pressure eases",
+      "canonical_answer": {
+        "label": "A",
+        "primary_proxy_family": "fuel_and_input_cost_pressure",
+        "falsifier": "forward_bookings_or_unit_revenue_break_while_fuel_pressure_eases"
+      },
+      "evidence_summary": [
+        "the sharpest moving variables are fuel-linked while bookings and unit-revenue guidance are stable",
+        "there is no evidence packet support for labor or FX being the dominant marginal driver"
+      ],
+      "common_failure_modes": [
+        "assuming all airline weakness is demand-driven without checking booking and unit-revenue evidence",
+        "overweighting crude headlines without relating them to the actual airline cost channel"
+      ]
+    },
+    {
+      "id": "v14im_009",
+      "source_case_id": "v14cpi_004",
+      "primary_answer_text": "duration pressure and financing conditions",
+      "followup_answer_text": "if renewal or churn metrics break while rates and credit stabilize",
+      "canonical_answer": {
+        "label": "A",
+        "primary_proxy_family": "financing_conditions_and_duration_pressure",
+        "falsifier": "renewal_or_churn_metrics_break_even_if_credit_and_rate_proxies_stabilize"
+      },
+      "evidence_summary": [
+        "macro duration and credit-sensitive software factors moved sharply while company operating metrics were largely intact",
+        "the packet does not contain company-specific failure evidence strong enough to outrank the factor move"
+      ],
+      "common_failure_modes": [
+        "inventing product trouble from price action alone",
+        "ignoring the explicit sector-factor de-rating in the evidence packet"
+      ]
+    },
+    {
+      "id": "v14im_010",
+      "source_case_id": "v14cpi_005",
+      "primary_answer_text": "soybean rally is bridge noise",
+      "followup_answer_text": "watch freight, packaging resin, palm oil, and cocoa instead",
+      "canonical_answer": {
+        "label": "A",
+        "bridge_noise": "soybean_rally",
+        "rationale_tag": "company_cost_structure_does_not_run_through_soybeans"
+      },
+      "evidence_summary": [
+        "the note explicitly says soy is not a material input for the focal brand mix",
+        "freight, resin, palm oil, and cocoa all sit more directly on the company cost path"
+      ],
+      "common_failure_modes": [
+        "equating any agricultural headline with causal relevance to a food stock",
+        "picking the most visible market move instead of the cleanest company-specific transmission channel"
+      ]
+    },
+    {
+      "id": "v14im_011",
+      "source_case_id": "v14cpi_006",
+      "primary_answer_text": "valuation-duration and refinancing channel",
+      "followup_answer_text": "watch spreads and duration-sensitive peers while company metrics stay intact",
+      "canonical_answer": {
+        "label": "C",
+        "mechanism": "valuation_duration_and_refinancing_channel",
+        "supportability": "supported_but_indirect"
+      },
+      "evidence_summary": [
+        "the packet rules out direct deposit exposure, but a broader risk and financing channel remains plausible",
+        "high-yield spreads widened and duration-sensitive software names sold off together"
+      ],
+      "common_failure_modes": [
+        "assuming no path simply because the company lacks direct bank exposure",
+        "inventing a balance-sheet crisis despite the explicit net-cash note"
+      ]
+    },
+    {
+      "id": "v14im_012",
+      "source_case_id": "v14cpi_007",
+      "primary_answer_text": "weak near-term pass-through because contracts and cost share limit it",
+      "followup_answer_text": "verify contract coverage or cost share before promoting the shock",
+      "canonical_answer": {
+        "label": "C",
+        "transmission_strength": "weak_near_term",
+        "blocking_factor": "fixed_contracts_and_low_cost_share"
+      },
+      "evidence_summary": [
+        "the cost share is small and the contract coverage delays pass-through",
+        "the packet explicitly points to larger variable exposures elsewhere in the cost stack"
+      ],
+      "common_failure_modes": [
+        "overweighting the most dramatic commodity headline without checking cost share and contract timing",
+        "calling the move impossible to assess despite clear packet constraints"
+      ]
+    },
+    {
+      "id": "v14im_013",
+      "source_case_id": "v14cpi_008",
+      "primary_answer_text": "FDA advisory-panel vote is the primary driver while squeeze dynamics amplify",
+      "followup_answer_text": "keep primary driver separate from squeeze amplification",
+      "canonical_answer": {
+        "label": "C",
+        "primary_driver": "fda_advisory_panel_vote",
+        "amplifier": "short_squeeze_dynamics"
+      },
+      "evidence_summary": [
+        "most of the move occurred immediately after the regulatory event and before the rumor appeared",
+        "short interest can explain amplification without replacing the primary catalyst"
+      ],
+      "common_failure_modes": [
+        "treating the later rumor as primary despite the timing mismatch",
+        "collapsing primary driver and amplifier into the same answer"
+      ]
+    },
+    {
+      "id": "v14im_014",
+      "source_case_id": "v14cpi_013",
+      "primary_answer_text": "stress financing conditions first",
+      "followup_answer_text": "inspect orders and cancellations",
+      "canonical_answer": {
+        "label": "B",
+        "stress_target": "financing_conditions",
+        "readout": "order_intake_and_cancellations"
+      },
+      "evidence_summary": [
+        "the open causal split is financing friction versus true demand softness",
+        "orders and cancellations are the closest downstream variables for distinguishing the two stories after stressing financing conditions"
+      ],
+      "common_failure_modes": [
+        "choosing a lever unrelated to the live uncertainty",
+        "looking at margin before testing the order-flow channel that actually separates the stories"
+      ]
+    },
+    {
+      "id": "v14im_015",
+      "source_case_id": "v14cpi_014",
+      "primary_answer_text": "stress jet-fuel costs first",
+      "followup_answer_text": "inspect unit margin or EPS sensitivity",
+      "canonical_answer": {
+        "label": "A",
+        "stress_target": "jet_fuel_costs",
+        "readout": "unit_margin_or_eps_sensitivity"
+      },
+      "evidence_summary": [
+        "the packet already shows stable demand-side evidence and a large energy move",
+        "margin and EPS sensitivity are the most direct downstream readouts of a fuel-cost stress"
+      ],
+      "common_failure_modes": [
+        "choosing a demand-side probe despite the packet already showing stable booking evidence",
+        "picking a variable that is not downstream of the suspected cost channel"
+      ]
+    },
+    {
+      "id": "v14im_016",
+      "source_case_id": "v14cpi_015",
+      "primary_answer_text": "stress customer inventory and build schedules first",
+      "followup_answer_text": "inspect shipments and backlog conversion",
+      "canonical_answer": {
+        "label": "B",
+        "stress_target": "customer_inventory_reset",
+        "readout": "shipments_and_backlog_conversion"
+      },
+      "evidence_summary": [
+        "customer inventory and build schedules are the variables most directly tied to the supplier shipment softness in the packet",
+        "lithium softness alone does not explain a slower backlog conversion nearly as cleanly"
+      ],
+      "common_failure_modes": [
+        "defaulting to the flashier commodity move instead of the more direct downstream transmission path",
+        "reading margin before checking the shipment path that actually distinguishes the stories"
+      ]
+    },
+    {
+      "id": "v14im_017",
+      "source_case_id": "v14cpi_016",
+      "primary_answer_text": "stress incentive-policy generosity first",
+      "followup_answer_text": "inspect lead-to-booking conversion",
+      "canonical_answer": {
+        "label": "A",
+        "stress_target": "incentive_policy_generosity",
+        "readout": "lead_to_booking_conversion"
+      },
+      "evidence_summary": [
+        "the leading thesis is specifically about incentive generosity, so the cleanest challenge is to stress that lever and inspect the conversion step most directly tied to purchase economics",
+        "lead volume moved far less than conversion, which makes the conversion readout more decision-relevant than top-of-funnel traffic"
+      ],
+      "common_failure_modes": [
+        "choosing a lever unrelated to the stated uncertainty",
+        "looking at margin instead of the funnel step most exposed to incentive economics"
+      ]
+    },
+    {
+      "id": "v14im_018",
+      "source_case_id": "v14cpi_009",
+      "primary_answer_text": "no, the price cut is bundled with the sales-comp rewrite in the same weak regions",
+      "followup_answer_text": "targeted rollout and simultaneous commercial intervention contaminate attribution",
+      "canonical_answer": {
+        "label": "C",
+        "identified": false,
+        "blocking_issue": "bundled_intervention_and_targeted_rollout"
+      },
+      "evidence_summary": [
+        "the price cut and compensation rewrite happened together in the same weak regions",
+        "the packet does not support a price-only causal claim because the commercial interventions were bundled"
+      ],
+      "common_failure_modes": [
+        "pretending the price cut can be isolated despite same-window commercial changes",
+        "ignoring that the intervention was targeted into the weakest regions"
+      ]
+    },
+    {
+      "id": "v14im_019",
+      "source_case_id": "v14cpi_010",
+      "primary_answer_text": "matched or staggered diff-in-diff event study",
+      "followup_answer_text": "targeted rollout to high-failure plants and regression to the mean",
+      "canonical_answer": {
+        "label": "B",
+        "design": "matched_or_staggered_difference_in_differences_event_study",
+        "main_threat": "targeted_rollout_and_regression_to_mean"
+      },
+      "evidence_summary": [
+        "the rollout started where failures were already worst, so a naive before-after read is not credible",
+        "a staggered or matched design is needed to separate treatment from pre-existing plant risk"
+      ],
+      "common_failure_modes": [
+        "using a simple before-after comparison on plants selected for severe prior failures",
+        "forgetting regression to the mean when the worst plants are treated first"
+      ]
+    },
+    {
+      "id": "v14im_020",
+      "source_case_id": "v14cpi_011",
+      "primary_answer_text": "no, selection into prequalified users blocks clean attribution",
+      "followup_answer_text": "latent purchase propensity was already higher before treatment",
+      "canonical_answer": {
+        "label": "C",
+        "identified": false,
+        "blocking_issue": "selection_on_latent_purchase_propensity"
+      },
+      "evidence_summary": [
+        "credit limits were raised only for users already screened as attractive",
+        "the packet leaves a strong selection-on-propensity problem that a raw lift cannot remove"
+      ],
+      "common_failure_modes": [
+        "treating prequalification as harmless rather than the core source of bias",
+        "reading the observed lift as causal without addressing baseline user quality"
+      ]
+    },
+    {
+      "id": "v14im_021",
+      "source_case_id": "v14cpi_012",
+      "primary_answer_text": "no, temporary staffing changed in the same window",
+      "followup_answer_text": "the simultaneous staffing change contaminates the effect",
+      "canonical_answer": {
+        "label": "C",
+        "identified": false,
+        "blocking_issue": "simultaneous_temporary_staffing_change"
+      },
+      "evidence_summary": [
+        "late shipments fell after the expedite policy, but staffing also changed in the same period",
+        "the packet does not support isolating the expedite policy from the operational staffing shift"
+      ],
+      "common_failure_modes": [
+        "equating timing with attribution when multiple warehouse levers moved together",
+        "failing to name the simultaneous staffing change as the blocking issue"
+      ]
+    },
+    {
+      "id": "v14im_022",
+      "source_case_id": "v14d_009",
+      "primary_answer_text": "no, pricing and input-cost relief both mattered",
+      "followup_answer_text": "include input-cost relief alongside realized price",
+      "canonical_answer": {
+        "label": "B",
+        "supportability": "price_not_sufficient_explanation",
+        "rationale": "Pricing and input-cost relief moved at the same time. The packet supports a mixed explanation, not a pricing-only causal claim."
+      },
+      "evidence_summary": [
+        "the table shows pricing and input-cost relief moving in the same direction",
+        "the packet supports a mixed explanation, not a pricing-only story"
+      ],
+      "common_failure_modes": [
+        "giving all the credit to pricing just because it is the named intervention",
+        "ignoring simultaneous input-cost relief that also improves margin"
+      ]
+    },
+    {
+      "id": "v14im_023",
+      "source_case_id": "v14d_010",
+      "primary_answer_text": "distribution-center scanner outage",
+      "followup_answer_text": "weather and port disruption were upstream context, not the final trigger",
+      "canonical_answer": {
+        "label": "C",
+        "direct_driver": "distribution_center_scanner_outage",
+        "justification": "Upstream weather mattered earlier, but the packet states that the immediate failure before stores stocked out was the scanner outage."
+      },
+      "evidence_summary": [
+        "the packet says the immediate operational failure before stockouts was the scanner outage",
+        "earlier weather and port issues matter as setup, but they are not the last-step driver"
+      ],
+      "common_failure_modes": [
+        "choosing the biggest upstream headline instead of the direct downstream trigger",
+        "retelling the chronology without identifying the immediate mechanism"
+      ]
+    },
+    {
+      "id": "v14im_024",
+      "source_case_id": "v14d_011",
+      "primary_answer_text": "morning corporate actions were the driver, not the later interview",
+      "followup_answer_text": "do not over-credit the later interview because it added no new information",
+      "canonical_answer": {
+        "label": "B",
+        "causal_read": "morning_corporate_actions_more_plausible_than_interview",
+        "justification": "The major price move happened before the interview and the interview introduced no new information."
+      },
+      "evidence_summary": [
+        "the main price move happened before the interview and after the earlier corporate actions",
+        "the later interview did not introduce a stronger mechanism than the earlier actions"
+      ],
+      "common_failure_modes": [
+        "crediting the most recent headline despite the timing mismatch",
+        "confusing temporal sequence with causal force"
+      ]
+    },
+    {
+      "id": "v14im_025",
+      "source_case_id": "v14d_012",
+      "primary_answer_text": "deliveries improve but still finish below plan",
+      "followup_answer_text": "the later rail disruption would still hold exports back",
+      "canonical_answer": {
+        "label": "C",
+        "counterfactual_direction": "improve_but_remain_below_plan",
+        "justification": "Removing the strike recovers part of the lost throughput, but the later rail disruption still leaves exports below plan."
+      },
+      "evidence_summary": [
+        "removing the strike restores part of the throughput loss but not the later logistics shock",
+        "the counterfactual improves the outcome without fully restoring plan"
+      ],
+      "common_failure_modes": [
+        "assuming removal of one disruption fully repairs the chain despite later failures",
+        "missing that the packet asks for a partial-improvement counterfactual"
+      ]
+    },
+    {
+      "id": "v14im_026",
+      "source_case_id": "v14d_014",
+      "primary_answer_text": "qualified lead volume falls with only partial efficiency offset",
+      "followup_answer_text": "organic substitution is incomplete in the packet",
+      "canonical_answer": {
+        "label": "A",
+        "base_case": "lead_volume_down_partial_efficiency_gain",
+        "rationale": "The memo and geo test imply incomplete organic substitution. Cutting paid acquisition should reduce qualified leads before any efficiency benefit fully offsets the loss."
+      },
+      "evidence_summary": [
+        "the geo test and memo imply that paid leads do not fully reappear organically",
+        "some efficiency gains are plausible, but they do not fully offset the near-term lead loss"
+      ],
+      "common_failure_modes": [
+        "assuming a full efficiency offset with no evidence for complete substitution",
+        "focusing on CAC optics while ignoring the lead-volume channel"
+      ]
+    },
+    {
+      "id": "v14im_027",
+      "source_case_id": "v14d_016",
+      "primary_answer_text": "no clean causal claim because maintenance timing and line selection moved too",
+      "followup_answer_text": "control for maintenance status, line id, and throughput",
+      "canonical_answer": {
+        "identified": false,
+        "needed_controls": [
+          "maintenance_status",
+          "line_id",
+          "throughput"
+        ],
+        "risk_note": "The treatment is confounded by simultaneous maintenance and line selection. The observed packet does not support a clean causal estimate."
+      },
+      "evidence_summary": [
+        "maintenance timing and treatment assignment changed alongside the temperature policy",
+        "the packet does not support a clean estimate without plant and throughput controls"
+      ],
+      "common_failure_modes": [
+        "treating the before-after defect change as causal despite simultaneous maintenance shifts",
+        "failing to name the line-selection problem explicitly"
+      ]
+    },
+    {
+      "id": "v14im_028",
+      "source_case_id": "v14d_017",
+      "primary_answer_text": "staggered diff-in-diff event study",
+      "followup_answer_text": "parallel trends, plus anticipation or spillover risk",
+      "canonical_answer": {
+        "design": "staggered_difference_in_differences_event_study",
+        "key_assumption": "parallel_trends_absent_the_policy",
+        "risk_note": "Check for anticipation effects and cross-plant spillovers."
+      },
+      "evidence_summary": [
+        "regions adopted on different dates, which makes an event-study style design the most credible default",
+        "the identifying read still depends on absent-policy trend comparability and limited spillovers"
+      ],
+      "common_failure_modes": [
+        "using a pooled before-after read that throws away the rollout timing information",
+        "forgetting anticipation and spillover checks even with the right design family"
+      ]
+    },
+    {
+      "id": "v14im_029",
+      "source_case_id": "v14d_008",
+      "primary_answer_text": "segment mix shift creates a Simpson's paradox",
+      "followup_answer_text": "within both novice and expert strata the treatment underperformed",
+      "canonical_answer": {
+        "label": "B",
+        "segment_conclusion": "simpsons_paradox_due_to_segment_mix",
+        "rationale": "Within both novice and expert strata, treatment underperforms. The aggregate improvement is driven by the treated group containing more high-converting experts."
+      },
+      "evidence_summary": [
+        "the treated group ended up with more high-converting experts, which distorts the aggregate",
+        "within each segment the treatment actually underperformed, so the mix shift drives the top-line lift"
+      ],
+      "common_failure_modes": [
+        "reporting the aggregate lift without opening the segment composition change",
+        "missing that both within-stratum effects move against the headline aggregate"
+      ]
+    },
+    {
+      "id": "v14im_030",
+      "source_case_id": "v14d_007",
+      "primary_answer_text": "no, three-day engagement is post-treatment",
+      "followup_answer_text": "conditioning on a post-treatment metric biases the total effect",
+      "canonical_answer": {
+        "label": "B",
+        "should_control": false,
+        "rationale": "Three-day engagement is measured after treatment assignment and lies on or after the treatment path. Conditioning on it would bias total effect estimation."
+      },
+      "evidence_summary": [
+        "the engagement metric is measured after treatment assignment, so it sits on or after the treatment path",
+        "controlling for it would contaminate the total-effect estimate rather than clean it up"
+      ],
+      "common_failure_modes": [
+        "treating any predictive metric as a safe control without checking measurement timing",
+        "confusing post-treatment adjustment with confounder adjustment"
+      ]
+    }
+  ]
+}

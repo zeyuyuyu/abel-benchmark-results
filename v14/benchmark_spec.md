@@ -226,6 +226,68 @@ Recommended Track G subfamilies:
     - public-dev exemplars with visible answers must use
       `frozen_evidence_public_dev`
 
+Important boundary:
+
+- use `Track G` when freshness, retrieval discipline, or time-aware evidence
+  handling is the main thing being tested
+- do not put frozen analyst-decision cases here just because the agent uses
+  tools
+
+### Track H: Causal Network Operations
+
+- Primary sources: `Finance Agent`, `XFinBench`, `CLADDER`
+- Inputs: analyst-worded prompts whose correct answer depends on explicit
+  causal-network operations
+- Skills:
+  - upstream attribution
+  - reachability
+  - role typing
+  - cross-asset causal-signal selection
+
+Track H is useful, but should stay narrow. It measures operational use of a
+causal market network, not the full surface of realistic analyst workflow.
+
+### Track I: Competing Explanations
+
+- Primary sources: `BizBench`, `XFinBench`, `QRData`, `QRText`,
+  `InterveneBench`, `Finance Agent`
+- Inputs: earnings snippets, KPI tables, event timelines, peer reactions,
+  compact evidence packets, and short competing analyst notes
+- Skills:
+  - primary-explanation selection
+  - falsifier selection
+  - implication selection
+  - cause-vs-consequence separation
+  - supportability-aware explanation ranking
+
+Track I is where a causal skill should help without the benchmark looking
+product-shaped. The user-facing task is not "operate a graph" and not "call the
+right tool." It is: among several plausible stories, which one is causally best
+supported, what would falsify it, and which claimed driver is really just a
+downstream effect?
+
+Recommended Track I subfamilies:
+
+- `primary_explanation_selection`
+- `falsifier_selection`
+- `implication_selection`
+- `cause_vs_consequence_tagging`
+- `management_claim_stress_test`
+
+Recommended evaluation regime:
+
+- public dev: `frozen_evidence_public_dev`
+- hidden eval: `historical_resolved_unbounded` or hidden review-backed frozen
+  packets
+
+Suggested migration rule:
+
+- if a case is mainly about freshness, unresolved live evidence, or search
+  discipline, keep it in `Track G`
+- if a case is mainly about operational network reads, keep it in `Track H`
+- if a case is mainly about choosing between plausible causal stories in a
+  realistic analyst workflow, it belongs in `Track I`
+
 ## Task Generation Pipelines
 
 The benchmark should use three generation pipelines.

@@ -1,0 +1,287 @@
+{
+  "track": "v14_track_i_pressure_mining_round2_refined",
+  "pack_variant": "track_i_pressure_mining_round2_refined_v1",
+  "case_count": 10,
+  "cases": [
+    {
+      "id": "v14im2r_001",
+      "source_case_id": "v14cpi_014",
+      "title": "Fuel Shock Or Demand Weakness: Which Probe Comes First?",
+      "track": "competing_explanations",
+      "task_family": "pressure_test_design",
+      "scenario": "An airline packet leaves cost shock and demand weakness as competing stories, and the task is to choose the first clean pressure test.",
+      "question": "Which first pressure test most cleanly distinguishes fuel shock from demand weakness?",
+      "followup_question": "What downstream readout should you inspect after that stress?",
+      "prompt_style": "agent_brief",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "The stock sold off with energy markets. Forward bookings and capacity plans held steady. Analysts want the first probe that would most quickly separate cost pressure from true demand deterioration."
+        },
+        {
+          "type": "table",
+          "title": "Sector snapshot",
+          "content": "Jet fuel crack: +18%. Forward bookings: +1%. Load factor guidance: unchanged. Unit revenue: flat. FX: flat."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question, but stays close to phrasings that previously surfaced a real skill edge.",
+      "source_truth_summary": [
+        "the packet already shows stable demand-side evidence and a large energy move",
+        "margin and EPS sensitivity are the most direct downstream readouts of a fuel-cost stress"
+      ]
+    },
+    {
+      "id": "v14im2r_002",
+      "source_case_id": "v14cpi_014",
+      "title": "Fuel Shock Or Demand Weakness: Which Probe Comes First?",
+      "track": "competing_explanations",
+      "task_family": "pressure_test_design",
+      "scenario": "An airline packet leaves cost shock and demand weakness as competing stories, and the task is to choose the first clean pressure test.",
+      "question": "Which first pressure test most directly separates fuel shock from demand weakness?",
+      "followup_question": "What readout should you inspect once you run that probe?",
+      "prompt_style": "agent_brief",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "The stock sold off with energy markets. Forward bookings and capacity plans held steady. Analysts want the first probe that would most quickly separate cost pressure from true demand deterioration."
+        },
+        {
+          "type": "table",
+          "title": "Sector snapshot",
+          "content": "Jet fuel crack: +18%. Forward bookings: +1%. Load factor guidance: unchanged. Unit revenue: flat. FX: flat."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question, but stays close to phrasings that previously surfaced a real skill edge.",
+      "source_truth_summary": [
+        "fuel moved sharply while bookings and unit revenue held up",
+        "the direct downstream readout of a fuel-cost stress is margin or EPS sensitivity, not a demand metric"
+      ]
+    },
+    {
+      "id": "v14im2r_003",
+      "source_case_id": "v14cpi_014",
+      "title": "Fuel Shock Or Demand Weakness: Which Probe Comes First?",
+      "track": "competing_explanations",
+      "task_family": "pressure_test_design",
+      "scenario": "An airline packet leaves cost shock and demand weakness as competing stories, and the task is to choose the first clean pressure test.",
+      "question": "If you only get one first stress, which one best separates fuel shock from demand weakness?",
+      "followup_question": "What downstream number matters most after that stress?",
+      "prompt_style": "agent_brief",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "The stock sold off with energy markets. Forward bookings and capacity plans held steady. Analysts want the first probe that would most quickly separate cost pressure from true demand deterioration."
+        },
+        {
+          "type": "table",
+          "title": "Sector snapshot",
+          "content": "Jet fuel crack: +18%. Forward bookings: +1%. Load factor guidance: unchanged. Unit revenue: flat. FX: flat."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question, but stays close to phrasings that previously surfaced a real skill edge.",
+      "source_truth_summary": [
+        "energy-linked cost pressure is the live variable in the packet",
+        "the expected downstream consequence of that stress lands in margins or EPS, not in traffic headlines"
+      ]
+    },
+    {
+      "id": "v14im2r_004",
+      "source_case_id": "v14cpi_015",
+      "title": "EV Supplier Drop: Lithium Pass-Through Or Customer Inventory Reset?",
+      "track": "competing_explanations",
+      "task_family": "pressure_test_design",
+      "scenario": "A supplier stock weakens while both upstream commodity and downstream customer signals are moving, and the analyst must pick the first separating probe.",
+      "question": "Which first pressure test best distinguishes lithium pass-through from customer inventory reset?",
+      "followup_question": "What readout should you inspect once you run that probe?",
+      "prompt_style": "agent_brief",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "Lithium prices softened, but customer inventory days also rose across two major OEMs. The supplier guides to softer near-term shipments without changing long-run content assumptions."
+        },
+        {
+          "type": "table",
+          "title": "Supplier snapshot",
+          "content": "Lithium spot: -14%. Customer inventory days: +11 days. OEM production schedules: trimmed for next quarter. Supplier gross-margin guide: only modestly lower. Backlog conversion: slowing."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question, but stays close to phrasings that previously surfaced a real skill edge.",
+      "source_truth_summary": [
+        "customer inventory and build schedules are the variables most directly tied to the supplier shipment softness in the packet",
+        "lithium softness alone does not explain a slower backlog conversion nearly as cleanly"
+      ]
+    },
+    {
+      "id": "v14im2r_005",
+      "source_case_id": "v14cpi_015",
+      "title": "EV Supplier Drop: Lithium Pass-Through Or Customer Inventory Reset?",
+      "track": "competing_explanations",
+      "task_family": "pressure_test_design",
+      "scenario": "A supplier stock weakens while both upstream commodity and downstream customer signals are moving, and the analyst must pick the first separating probe.",
+      "question": "Which first pressure test most directly separates lithium pass-through from customer inventory reset?",
+      "followup_question": "What readout should matter most once you run that probe?",
+      "prompt_style": "agent_brief",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "Lithium prices softened, but customer inventory days also rose across two major OEMs. The supplier guides to softer near-term shipments without changing long-run content assumptions."
+        },
+        {
+          "type": "table",
+          "title": "Supplier snapshot",
+          "content": "Lithium spot: -14%. Customer inventory days: +11 days. OEM production schedules: trimmed for next quarter. Supplier gross-margin guide: only modestly lower. Backlog conversion: slowing."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question, but stays close to phrasings that previously surfaced a real skill edge.",
+      "source_truth_summary": [
+        "backlog conversion is already slowing while margin guidance is only modestly lower",
+        "that pattern points first to customer schedule and inventory stress rather than to commodity pass-through"
+      ]
+    },
+    {
+      "id": "v14im2r_006",
+      "source_case_id": "v14cpi_015",
+      "title": "EV Supplier Drop: Lithium Pass-Through Or Customer Inventory Reset?",
+      "track": "competing_explanations",
+      "task_family": "pressure_test_design",
+      "scenario": "A supplier stock weakens while both upstream commodity and downstream customer signals are moving, and the analyst must pick the first separating probe.",
+      "question": "What first probe most cleanly separates lithium pass-through from customer inventory reset?",
+      "followup_question": "What downstream shipment readout deserves the most weight after that?",
+      "prompt_style": "agent_brief",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "Lithium prices softened, but customer inventory days also rose across two major OEMs. The supplier guides to softer near-term shipments without changing long-run content assumptions."
+        },
+        {
+          "type": "table",
+          "title": "Supplier snapshot",
+          "content": "Lithium spot: -14%. Customer inventory days: +11 days. OEM production schedules: trimmed for next quarter. Supplier gross-margin guide: only modestly lower. Backlog conversion: slowing."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question, but stays close to phrasings that previously surfaced a real skill edge.",
+      "source_truth_summary": [
+        "the shipment path is the cleanest place to discriminate these stories",
+        "customer schedule and inventory stress should show up in shipments and backlog conversion faster than in margin"
+      ]
+    },
+    {
+      "id": "v14im2r_007",
+      "source_case_id": "v14cpi_016",
+      "title": "Residential Solar Miss: Policy Step-Down Or Sales Execution?",
+      "track": "competing_explanations",
+      "task_family": "pressure_test_design",
+      "scenario": "The packet leaves policy and execution stories both live, and the evaluation asks for the cleanest first probe to challenge the leading thesis.",
+      "question": "Which pressure test most directly challenges the thesis that policy incentive step-down is the main driver?",
+      "followup_question": "What readout matters most once you stress that lever?",
+      "prompt_style": "agent_brief",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "Order volume weakened after a state incentive step-down, but channel checks also mention elevated rep turnover and slower lead follow-up times."
+        },
+        {
+          "type": "table",
+          "title": "Sales funnel snapshot",
+          "content": "Lead volume: -3%. Lead-to-booking conversion: -16%. Incentive value: -22%. Sales-rep turnover: +8 points. Follow-up time: slower by 1.4 days."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question, but stays close to phrasings that previously surfaced a real skill edge.",
+      "source_truth_summary": [
+        "the leading thesis is specifically about incentive generosity, so the cleanest challenge is to stress that lever and inspect the conversion step most directly tied to purchase economics",
+        "lead volume moved far less than conversion, which makes the conversion readout more decision-relevant than top-of-funnel traffic"
+      ]
+    },
+    {
+      "id": "v14im2r_008",
+      "source_case_id": "v14cpi_016",
+      "title": "Residential Solar Miss: Policy Step-Down Or Sales Execution?",
+      "track": "competing_explanations",
+      "task_family": "pressure_test_design",
+      "scenario": "The packet leaves policy and execution stories both live, and the evaluation asks for the cleanest first probe to challenge the leading thesis.",
+      "question": "What first pressure test most directly challenges the policy-step-down story?",
+      "followup_question": "Which downstream readout matters most once you run it?",
+      "prompt_style": "agent_brief",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "Order volume weakened after a state incentive step-down, but channel checks also mention elevated rep turnover and slower lead follow-up times."
+        },
+        {
+          "type": "table",
+          "title": "Sales funnel snapshot",
+          "content": "Lead volume: -3%. Lead-to-booking conversion: -16%. Incentive value: -22%. Sales-rep turnover: +8 points. Follow-up time: slower by 1.4 days."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question, but stays close to phrasings that previously surfaced a real skill edge.",
+      "source_truth_summary": [
+        "the packet leaves policy and execution both live, but the leading claim is policy economics",
+        "lead-to-booking conversion is the funnel step most exposed to that lever"
+      ]
+    },
+    {
+      "id": "v14im2r_009",
+      "source_case_id": "v14cpi_016",
+      "title": "Residential Solar Miss: Policy Step-Down Or Sales Execution?",
+      "track": "competing_explanations",
+      "task_family": "pressure_test_design",
+      "scenario": "The packet leaves policy and execution stories both live, and the evaluation asks for the cleanest first probe to challenge the leading thesis.",
+      "question": "If policy economics is the leading thesis, what is the cleanest first probe to challenge it?",
+      "followup_question": "What funnel readout should you inspect once you do?",
+      "prompt_style": "agent_brief",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "Order volume weakened after a state incentive step-down, but channel checks also mention elevated rep turnover and slower lead follow-up times."
+        },
+        {
+          "type": "table",
+          "title": "Sales funnel snapshot",
+          "content": "Lead volume: -3%. Lead-to-booking conversion: -16%. Incentive value: -22%. Sales-rep turnover: +8 points. Follow-up time: slower by 1.4 days."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question, but stays close to phrasings that previously surfaced a real skill edge.",
+      "source_truth_summary": [
+        "incentive value dropped much more than lead volume, while conversion weakened sharply",
+        "the natural downstream arbiter is conversion rather than response-time anecdotes"
+      ]
+    },
+    {
+      "id": "v14im2r_010",
+      "source_case_id": "v14cpi_013",
+      "title": "Which First Pressure Test Separates Financing Stress From Demand Softness?",
+      "track": "competing_explanations",
+      "task_family": "pressure_test_design",
+      "scenario": "A distributor note leaves two live stories on the table, and the task is to pick the first stress lever that would most efficiently separate them.",
+      "question": "Which first pressure test separates financing stress from demand softness?",
+      "followup_question": "What readout should you inspect once you run that probe?",
+      "prompt_style": "agent_brief",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "Rate-sensitive customer verticals have slowed, but service attach and installed-base usage remain stable. Credit spreads widened and management said quote activity was healthy but close timing stretched."
+        },
+        {
+          "type": "table",
+          "title": "Commercial snapshot",
+          "content": "New orders: -4%. Cancellations: +2 points. Service attach: flat. Installed-base usage: flat. HY OAS: +62 bps. Accounts receivable days: +4 days."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question, but stays close to phrasings that previously surfaced a real skill edge.",
+      "source_truth_summary": [
+        "the open causal split is financing friction versus true demand softness",
+        "orders and cancellations are the closest downstream variables for distinguishing the two stories after stressing financing conditions"
+      ]
+    }
+  ]
+}

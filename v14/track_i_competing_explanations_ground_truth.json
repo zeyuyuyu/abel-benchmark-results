@@ -1,0 +1,555 @@
+{
+  "track": "v14_track_i_competing_explanations",
+  "case_count": 8,
+  "cases": [
+    {
+      "id": "v14i_001",
+      "source_case_id": "v14d_015",
+      "primary_answer_text": "channel inventory correction and weak sell-through",
+      "primary_match_any": [
+        [
+          [
+            "inventory correction",
+            "channel correction",
+            "channel inventory"
+          ]
+        ],
+        [
+          [
+            "sell-through",
+            "sell through"
+          ],
+          [
+            "inventory"
+          ]
+        ]
+      ],
+      "followup_answer_text": "watch sell-through and inventory-days normalization",
+      "followup_match_any": [
+        [
+          [
+            "sell-through",
+            "sell through"
+          ],
+          [
+            "inventory days",
+            "inventory"
+          ]
+        ],
+        [
+          [
+            "inventory days"
+          ],
+          [
+            "normalize",
+            "normalization",
+            "improve"
+          ]
+        ],
+        [
+          [
+            "sell-through",
+            "sell through"
+          ],
+          [
+            "recover",
+            "improve"
+          ]
+        ]
+      ],
+      "canonical_answer": {
+        "primary_driver": "channel_inventory_correction_and_weak_sell_through",
+        "supporting_variables": [
+          "inventory_days_up",
+          "sell_through_down",
+          "revenue_miss_much_larger_than_fx_headwind"
+        ],
+        "confidence": "medium_high"
+      },
+      "evidence_summary": [
+        "dominant driver must explain most of the miss magnitude",
+        "FX and legal reserve are too small to be the main answer"
+      ],
+      "common_failure_modes": [
+        "choosing the most familiar macro explanation",
+        "overweighting a one-time legal item that mainly affects margin, not revenue"
+      ]
+    },
+    {
+      "id": "v14i_003",
+      "source_case_id": "v14d_020",
+      "primary_answer_text": "funding-cost and deposit-beta concern",
+      "primary_match_any": [
+        [
+          [
+            "funding"
+          ],
+          [
+            "deposit",
+            "beta",
+            "competition"
+          ]
+        ],
+        [
+          [
+            "deposit beta",
+            "deposit competition"
+          ],
+          [
+            "funding",
+            "cost"
+          ]
+        ]
+      ],
+      "followup_answer_text": "verify uninsured-deposit mix or wholesale-funding dependence",
+      "followup_match_any": [
+        [
+          [
+            "uninsured",
+            "insured"
+          ],
+          [
+            "deposit"
+          ]
+        ],
+        [
+          [
+            "wholesale"
+          ],
+          [
+            "funding"
+          ]
+        ]
+      ],
+      "canonical_answer": {
+        "primary_driver": "funding_cost_and_deposit_beta_concern",
+        "next_verification": "verify_insured_vs_uninsured_deposit_mix_and_wholesale_funding_dependence",
+        "uncertainty": "the_unconfirmed_capital_raise_rumor_should_not_be_treated_as_established_fact"
+      },
+      "evidence_summary": [
+        "tests memo-style causal synthesis with verification discipline",
+        "answers should privilege primary-source evidence over rumor"
+      ],
+      "common_failure_modes": [
+        "treating the rumor as the main driver",
+        "failing to specify what to verify next"
+      ]
+    },
+    {
+      "id": "v14i_004",
+      "source_case_id": "v14d_021",
+      "primary_answer_text": "positive FDA panel vote improving approval odds",
+      "primary_match_any": [
+        [
+          [
+            "fda"
+          ],
+          [
+            "panel",
+            "vote",
+            "advisory"
+          ],
+          [
+            "approval",
+            "odds",
+            "therapy"
+          ]
+        ],
+        [
+          [
+            "panel vote",
+            "advisory panel"
+          ],
+          [
+            "approval"
+          ]
+        ]
+      ],
+      "followup_answer_text": "short-squeeze amplification remains possible, so verify timing and short interest",
+      "followup_match_any": [
+        [
+          [
+            "short interest",
+            "short-interest",
+            "borrow fee",
+            "borrow fees",
+            "borrow"
+          ],
+          [
+            "timing",
+            "amplif",
+            "amplifier"
+          ]
+        ],
+        [
+          [
+            "borrow fee",
+            "borrow fees"
+          ],
+          [
+            "short",
+            "squeeze"
+          ]
+        ]
+      ],
+      "canonical_answer": {
+        "primary_driver": "positive_fda_panel_vote_improving_approval_odds",
+        "uncertainty": "short_squeeze_dynamics_may_have_amplified_the_move_but_do_not_replace_the_main_causal_event",
+        "evidence_used": [
+          "Snippet 1",
+          "Snippet 3"
+        ]
+      },
+      "evidence_summary": [
+        "tests selection among competing narratives",
+        "main event should outrank unsupported rumor, while magnitude amplification remains a valid uncertainty"
+      ],
+      "common_failure_modes": [
+        "choosing the rumor because it sounds more dramatic",
+        "ignoring the distinction between driver and amplifier"
+      ]
+    },
+    {
+      "id": "v14i_005",
+      "source_case_id": "v14cpi_001",
+      "primary_answer_text": "financing conditions and mortgage affordability",
+      "primary_match_any": [
+        [
+          [
+            "mortgage"
+          ],
+          [
+            "afford",
+            "rate"
+          ]
+        ],
+        [
+          [
+            "financing"
+          ],
+          [
+            "afford",
+            "conditions",
+            "rates"
+          ]
+        ]
+      ],
+      "followup_answer_text": "if orders stay weak after financing proxies normalize, demand softness gains weight",
+      "followup_match_any": [
+        [
+          [
+            "orders"
+          ],
+          [
+            "normalize",
+            "normalise",
+            "improve",
+            "ease"
+          ],
+          [
+            "rate",
+            "credit",
+            "financing"
+          ]
+        ],
+        [
+          [
+            "demand"
+          ],
+          [
+            "orders"
+          ],
+          [
+            "stay weak",
+            "remain weak",
+            "keep deteriorating",
+            "keep weakening"
+          ]
+        ]
+      ],
+      "canonical_answer": {
+        "label": "A",
+        "primary_proxy_family": "financing_conditions_and_mortgage_affordability",
+        "falsifier": "orders_keep_deteriorating_even_if_rate_and_credit_proxies_normalize"
+      },
+      "evidence_summary": [
+        "Mortgage affordability worsened materially while traffic and visits stayed roughly intact.",
+        "Credit and rate signals moved sharply, which fits hesitation around financing more than collapse in underlying shopper interest."
+      ],
+      "common_failure_modes": [
+        "Treating a modest cancellation increase as proof of broad demand collapse.",
+        "Ignoring the sharper movement in mortgage-rate and credit proxies."
+      ]
+    },
+    {
+      "id": "v14i_006",
+      "source_case_id": "v14cpi_006",
+      "primary_answer_text": "valuation-duration and refinancing channel",
+      "primary_match_any": [
+        [
+          [
+            "duration",
+            "valuation"
+          ],
+          [
+            "refinanc",
+            "spread",
+            "credit"
+          ]
+        ],
+        [
+          [
+            "refinanc"
+          ],
+          [
+            "duration",
+            "multiple",
+            "valuation"
+          ]
+        ]
+      ],
+      "followup_answer_text": "watch spreads and duration-sensitive peers while company metrics stay intact",
+      "followup_match_any": [
+        [
+          [
+            "spread",
+            "credit"
+          ],
+          [
+            "duration",
+            "peer",
+            "basket"
+          ]
+        ],
+        [
+          [
+            "duration"
+          ],
+          [
+            "peer",
+            "basket",
+            "software"
+          ]
+        ]
+      ],
+      "canonical_answer": {
+        "label": "C",
+        "mechanism": "valuation_duration_and_refinancing_channel",
+        "supportability": "supported_but_indirect"
+      },
+      "evidence_summary": [
+        "The packet rules out direct deposit exposure, but a broader risk and financing channel remains plausible.",
+        "High-yield spreads widened and duration-sensitive software names sold off together."
+      ],
+      "common_failure_modes": [
+        "Assuming no path simply because the company lacks direct bank exposure.",
+        "Inventing a balance-sheet crisis despite the explicit net-cash note."
+      ]
+    },
+    {
+      "id": "v14i_007",
+      "source_case_id": "v14cpi_003",
+      "primary_answer_text": "fuel and input-cost pressure",
+      "primary_match_any": [
+        [
+          [
+            "fuel"
+          ],
+          [
+            "cost",
+            "input"
+          ]
+        ],
+        [
+          [
+            "crude"
+          ],
+          [
+            "fuel",
+            "cost"
+          ]
+        ]
+      ],
+      "followup_answer_text": "if bookings or unit revenue break while fuel pressure eases",
+      "followup_match_any": [
+        [
+          [
+            "bookings",
+            "unit revenue",
+            "unit-revenue"
+          ],
+          [
+            "fuel",
+            "crude"
+          ],
+          [
+            "ease",
+            "eases",
+            "normalize",
+            "normalise"
+          ]
+        ],
+        [
+          [
+            "bookings",
+            "unit revenue",
+            "unit-revenue"
+          ],
+          [
+            "break",
+            "weaken",
+            "fall"
+          ]
+        ]
+      ],
+      "canonical_answer": {
+        "label": "A",
+        "primary_proxy_family": "fuel_and_input_cost_pressure",
+        "falsifier": "forward_bookings_or_unit_revenue_break_while_fuel_pressure_eases"
+      },
+      "evidence_summary": [
+        "The sharpest moving variables are fuel-linked while bookings and unit-revenue guidance are stable.",
+        "There is no evidence packet support for labor or FX being the dominant marginal driver."
+      ],
+      "common_failure_modes": [
+        "Assuming all airline weakness is demand-driven without checking booking and unit-revenue evidence.",
+        "Overweighting crude headlines without relating them to the actual airline cost channel."
+      ]
+    },
+    {
+      "id": "v14i_008",
+      "source_case_id": "v14cpi_004",
+      "primary_answer_text": "duration pressure and financing conditions",
+      "primary_match_any": [
+        [
+          [
+            "duration",
+            "rate",
+            "yield"
+          ],
+          [
+            "pressure",
+            "financing",
+            "credit"
+          ]
+        ],
+        [
+          [
+            "financing",
+            "credit"
+          ],
+          [
+            "duration",
+            "multiple",
+            "rate"
+          ]
+        ]
+      ],
+      "followup_answer_text": "if renewal or churn metrics break while rates and credit stabilize",
+      "followup_match_any": [
+        [
+          [
+            "renewal",
+            "churn"
+          ],
+          [
+            "rate",
+            "credit"
+          ],
+          [
+            "stabil",
+            "normalize",
+            "normalise"
+          ]
+        ],
+        [
+          [
+            "renewal",
+            "churn"
+          ],
+          [
+            "break",
+            "weaken",
+            "deteriorate"
+          ]
+        ]
+      ],
+      "canonical_answer": {
+        "label": "A",
+        "primary_proxy_family": "financing_conditions_and_duration_pressure",
+        "falsifier": "renewal_or_churn_metrics_break_even_if_credit_and_rate_proxies_stabilize"
+      },
+      "evidence_summary": [
+        "Macro duration and credit-sensitive software factors moved sharply while company operating metrics were largely intact.",
+        "The packet does not contain company-specific failure evidence strong enough to outrank the factor move."
+      ],
+      "common_failure_modes": [
+        "Inventing product trouble from price action alone.",
+        "Ignoring the explicit sector-factor de-rating in the evidence packet."
+      ]
+    },
+    {
+      "id": "v14i_009",
+      "source_case_id": "v14cpi_007",
+      "primary_answer_text": "weak near-term pass-through because contracts and cost share limit it",
+      "primary_match_any": [
+        [
+          [
+            "weak",
+            "limited",
+            "modest"
+          ],
+          [
+            "near term",
+            "near-term",
+            "short term",
+            "short-term"
+          ]
+        ],
+        [
+          [
+            "contract"
+          ],
+          [
+            "cost share"
+          ]
+        ]
+      ],
+      "followup_answer_text": "verify contract coverage or cost share before promoting the shock",
+      "followup_match_any": [
+        [
+          [
+            "contract",
+            "coverage"
+          ],
+          [
+            "cost share"
+          ]
+        ],
+        [
+          [
+            "cost share"
+          ],
+          [
+            "contract",
+            "coverage"
+          ]
+        ]
+      ],
+      "canonical_answer": {
+        "label": "C",
+        "transmission_strength": "weak_near_term",
+        "blocking_factor": "fixed_contracts_and_low_cost_share"
+      },
+      "evidence_summary": [
+        "The cost share is small and the contract coverage delays pass-through.",
+        "The packet explicitly points to larger variable exposures elsewhere in the cost stack."
+      ],
+      "common_failure_modes": [
+        "Overweighting the most dramatic commodity headline without checking cost share and contract timing.",
+        "Calling the move impossible to assess despite clear packet constraints."
+      ]
+    }
+  ],
+  "pack_variant": "track_i_market_only_frozen_v1"
+}

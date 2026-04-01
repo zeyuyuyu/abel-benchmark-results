@@ -90,6 +90,7 @@ Example:
   - `industrial_intervention_and_estimation`
   - `agentic_live_analysis`
   - `causal_network_operations`
+  - `competing_explanations`
 
 ### `source_family`
 
@@ -122,6 +123,11 @@ Examples:
 - `policy_rollout_identification`
 - `agentic_event_synthesis`
 - `futurex_style_live_prediction`
+- `primary_explanation_selection`
+- `falsifier_selection`
+- `implication_selection`
+- `cause_vs_consequence_tagging`
+- `management_claim_stress_test`
 
 ### `evaluation_regime`
 

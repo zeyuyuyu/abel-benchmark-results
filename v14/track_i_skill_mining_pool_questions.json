@@ -1,0 +1,498 @@
+{
+  "track": "v14_track_i_skill_mining_pool",
+  "pack_variant": "track_i_skill_mining_pool_v1",
+  "case_count": 17,
+  "cases": [
+    {
+      "id": "v14im_001",
+      "source_case_id": "v14d_013",
+      "title": "Why Did Margin Miss Despite Revenue Growth?",
+      "track": "competing_explanations",
+      "task_family": "earnings_driver_analysis",
+      "scenario": "An analyst memo, earnings excerpt, and compact KPI table are given for a company that grew revenue but missed margin expectations.",
+      "question": "What best explains the margin miss?",
+      "followup_question": "What next observable would most strengthen that read?",
+      "prompt_style": "analyst_memo",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Earnings excerpt",
+          "content": "Revenue grew 12% year over year, but operating margin missed consensus. Management highlighted a larger-than-expected mix shift into lower-margin hardware and elevated expedited freight costs."
+        },
+        {
+          "type": "table",
+          "title": "KPI table",
+          "content": "Hardware mix: 46% -> 58%. Services mix: 54% -> 42%. Hardware gross margin: 24% -> 18%. Services gross margin: 72% -> 70%. Expedited freight cost as % of revenue: 0.4% -> 2.2%."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question about what is driving a move and what to inspect next.",
+      "source_truth_summary": [
+        "revenue growth alone is not a valid margin explanation",
+        "packet supports a causal variable relationship between product mix and margin"
+      ]
+    },
+    {
+      "id": "v14im_002",
+      "source_case_id": "v14d_015",
+      "title": "Three Plausible Stories, One Dominant Driver",
+      "track": "competing_explanations",
+      "task_family": "multi_factor_finance_synthesis",
+      "scenario": "A cross-asset memo includes rates, FX, commodity costs, and company guidance. Several causal stories look plausible.",
+      "question": "What is the most plausible dominant explanation for the move?",
+      "followup_question": "What uncertainty or metric would you keep live next?",
+      "prompt_style": "analyst_memo",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Analyst note",
+          "content": "Management cited three factors for the quarter: a one-point constant-currency headwind, a 40 bps legal reserve, and weaker channel sell-through that pushed inventory days higher."
+        },
+        {
+          "type": "table",
+          "title": "Operating summary",
+          "content": "Revenue miss versus plan: -6%. Constant-currency impact: -1 point. Legal reserve impact on operating margin: -0.4 points. Channel inventory days: +12 days. End-market sell-through: -9%."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question about what is driving a move and what to inspect next.",
+      "source_truth_summary": [
+        "dominant driver must explain most of the miss magnitude",
+        "FX and legal reserve are too small to be the main answer"
+      ]
+    },
+    {
+      "id": "v14im_003",
+      "source_case_id": "v14d_019",
+      "title": "Fresh Event, Fast Causal Read",
+      "track": "competing_explanations",
+      "task_family": "fresh_event_synthesis",
+      "scenario": "An unresolved event analysis task asks for a short causal read using current information, with evidence freshness explicitly relevant.",
+      "question": "What is the most likely causal driver of the move right now?",
+      "followup_question": "What part of the thesis remains uncertain enough not to overstate?",
+      "prompt_style": "agent_brief",
+      "instantiated_inputs": [
+        {
+          "type": "retrieval_bundle",
+          "title": "Snippet 1",
+          "content": "Ocean carriers announced emergency surcharges after a canal disruption forced rerouting on several Asia-Europe lanes."
+        },
+        {
+          "type": "retrieval_bundle",
+          "title": "Snippet 2",
+          "content": "Freight rate indices jumped sharply over the same two-day window, while retailers said they had not yet repriced goods."
+        },
+        {
+          "type": "retrieval_bundle",
+          "title": "Snippet 3",
+          "content": "Analysts cautioned that the duration of the rerouting shock remained unclear and could fade if passage normalizes quickly."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question about what is driving a move and what to inspect next.",
+      "source_truth_summary": [
+        "tests causal synthesis under freshness-sensitive but frozen evidence",
+        "good answers must separate what is likely from what remains unresolved"
+      ]
+    },
+    {
+      "id": "v14im_004",
+      "source_case_id": "v14d_020",
+      "title": "Build The Event Memo, Not Just The Answer",
+      "track": "competing_explanations",
+      "task_family": "analyst_workflow_agent",
+      "scenario": "The agent receives a short business question but must collect current evidence, decide whether it is enough, and produce an analyst-style memo.",
+      "question": "What is the best-supported causal explanation for the selloff right now?",
+      "followup_question": "What would you verify next before strengthening that view?",
+      "prompt_style": "agent_brief",
+      "instantiated_inputs": [
+        {
+          "type": "retrieval_bundle",
+          "title": "Snippet 1",
+          "content": "A regional bank's shares fell after a policy official commented that deposit competition remains intense for smaller lenders."
+        },
+        {
+          "type": "retrieval_bundle",
+          "title": "Snippet 2",
+          "content": "The bank's last quarterly filing showed a relatively high share of interest-bearing deposits and rising funding costs."
+        },
+        {
+          "type": "retrieval_bundle",
+          "title": "Snippet 3",
+          "content": "A rumor about a capital raise circulated online, but no primary-source filing or company statement confirmed it."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question about what is driving a move and what to inspect next.",
+      "source_truth_summary": [
+        "tests memo-style causal synthesis with verification discipline",
+        "answers should privilege primary-source evidence over rumor"
+      ]
+    },
+    {
+      "id": "v14im_005",
+      "source_case_id": "v14d_021",
+      "title": "One Event, Multiple Conflicting Narratives",
+      "track": "competing_explanations",
+      "task_family": "cross_source_event_integration",
+      "scenario": "A live case includes conflicting media explanations, partial company commentary, and market reaction across related assets.",
+      "question": "What is the most causally plausible primary driver of the rally?",
+      "followup_question": "What alternative remains live enough to monitor, and how would you monitor it?",
+      "prompt_style": "agent_brief",
+      "instantiated_inputs": [
+        {
+          "type": "retrieval_bundle",
+          "title": "Snippet 1",
+          "content": "A biotech stock rallied after an FDA advisory panel voted in favor of its therapy."
+        },
+        {
+          "type": "retrieval_bundle",
+          "title": "Snippet 2",
+          "content": "Social media accounts also circulated an acquisition rumor, but no credible outlet confirmed it."
+        },
+        {
+          "type": "retrieval_bundle",
+          "title": "Snippet 3",
+          "content": "Short interest was elevated heading into the vote, which may have amplified the magnitude of the move."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question about what is driving a move and what to inspect next.",
+      "source_truth_summary": [
+        "tests selection among competing narratives",
+        "main event should outrank unsupported rumor, while magnitude amplification remains a valid uncertainty"
+      ]
+    },
+    {
+      "id": "v14im_006",
+      "source_case_id": "v14cpi_001",
+      "title": "Homebuilder Miss: Funding Stress Or Demand Softness?",
+      "track": "competing_explanations",
+      "task_family": "proxy_family_selection",
+      "scenario": "A morning note combines mortgage data, builder credit signals, order metrics, and website activity after a homebuilder stock selloff.",
+      "question": "Which explanation is cleaner for the move right now?",
+      "followup_question": "What would most directly make you revisit that view?",
+      "prompt_style": "analyst_memo",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Morning note",
+          "content": "The stock fell 11% after management guided to lower near-term orders. Analysts noted no major land or permitting update. Channel checks described buyer hesitation around monthly payments rather than reduced tour activity."
+        },
+        {
+          "type": "table",
+          "title": "Market and operating snapshot",
+          "content": "30-year mortgage rate: +55 bps over 6 weeks. Mortgage applications: -12%. Builder CDS: +38 bps. Website traffic: -1%. Model-home visits: flat. Cancellation rate: +1.2 points. Backlog burn: stable."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question about what is driving a move and what to inspect next.",
+      "source_truth_summary": [
+        "mortgage affordability worsened materially while traffic and visits stayed roughly intact",
+        "credit and rate signals moved sharply, which fits hesitation around financing more than collapse in shopper interest"
+      ]
+    },
+    {
+      "id": "v14im_007",
+      "source_case_id": "v14cpi_002",
+      "title": "Alt-Token Slump: Base-Asset Weakness Or Liquidity Drain?",
+      "track": "competing_explanations",
+      "task_family": "proxy_family_selection",
+      "scenario": "A crypto market packet compares majors, alt-token liquidity, on-chain activity, and exchange conditions after a sharp decline in a gaming token basket.",
+      "question": "What is the cleaner starting point for the selloff?",
+      "followup_question": "What would most directly falsify that interpretation?",
+      "prompt_style": "analyst_memo",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Crypto desk note",
+          "content": "BTC and ETH were nearly flat on the day, but gaming and lower-liquidity alt tokens sold off hard. No exploit, governance failure, or delisting notice was reported for the focal token."
+        },
+        {
+          "type": "table",
+          "title": "Cross-market snapshot",
+          "content": "BTC return: +0.3%. ETH return: +0.1%. Alt-token order-book depth: -35%. Perp funding on small tokens: sharply negative. Exchange maintenance on one retail-heavy venue: 2 hours. Game DAU: flat. On-chain fees for the project: flat."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question about what is driving a move and what to inspect next.",
+      "source_truth_summary": [
+        "majors were stable while lower-liquidity books and alt funding deteriorated sharply",
+        "project-specific usage stayed flat, which argues against a token-specific adoption collapse"
+      ]
+    },
+    {
+      "id": "v14im_008",
+      "source_case_id": "v14cpi_003",
+      "title": "Airline Selloff: Fuel Shock Or Demand Crack?",
+      "track": "competing_explanations",
+      "task_family": "proxy_family_selection",
+      "scenario": "An airline equity drawdown arrives alongside a commodity move, while booking and traffic indicators are updated in the same note.",
+      "question": "What is the cleaner primary read for the airline selloff?",
+      "followup_question": "What would make you change that view first?",
+      "prompt_style": "analyst_memo",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Airline sector note",
+          "content": "The stock fell after a sharp move in energy markets. Management did not cut capacity or demand commentary, and no labor disruption was disclosed."
+        },
+        {
+          "type": "table",
+          "title": "Operating and market snapshot",
+          "content": "Jet fuel crack spread: +18%. Front-month crude: +11%. Forward bookings: +1%. Load factor guidance: unchanged. Unit revenue guidance: flat. Wage agreement updates: none. FX basket: flat."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question about what is driving a move and what to inspect next.",
+      "source_truth_summary": [
+        "the sharpest moving variables are fuel-linked while bookings and unit-revenue guidance are stable",
+        "there is no evidence packet support for labor or FX being the dominant marginal driver"
+      ]
+    },
+    {
+      "id": "v14im_009",
+      "source_case_id": "v14cpi_004",
+      "title": "Small-Cap Software De-Rate: Duration Pressure Or Product Trouble?",
+      "track": "competing_explanations",
+      "task_family": "proxy_family_selection",
+      "scenario": "A software stock sells off with a broader factor move while company-specific operating metrics are also reported.",
+      "question": "What is the cleaner explanation for the de-rate?",
+      "followup_question": "What would make you shift toward an idiosyncratic company problem instead?",
+      "prompt_style": "analyst_memo",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Software note",
+          "content": "The company reiterated annual ARR guidance and disclosed no outage, product recall, or major customer loss. The stock fell alongside a broader selloff in long-duration software names."
+        },
+        {
+          "type": "table",
+          "title": "Factor and operating snapshot",
+          "content": "High-yield OAS: +75 bps. 10Y real yield: +19 bps. Small-cap software basket: -11%. ARR guidance: unchanged. Net revenue retention: 112% -> 111%. Churn: flat. Major incident count: 0."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question about what is driving a move and what to inspect next.",
+      "source_truth_summary": [
+        "macro duration and credit-sensitive software factors moved sharply while company operating metrics were largely intact",
+        "the packet does not contain company-specific failure evidence strong enough to outrank the factor move"
+      ]
+    },
+    {
+      "id": "v14im_010",
+      "source_case_id": "v14cpi_005",
+      "title": "Soybean Rally And Snack-Maker Weakness",
+      "track": "competing_explanations",
+      "task_family": "bridge_noise_rejection",
+      "scenario": "A consumer staples note lists several moving commodities, but only some sit on the company’s true cost path.",
+      "question": "Which candidate driver is most likely bridge noise rather than the core transmission channel?",
+      "followup_question": "Which costs deserve attention instead if you want the cleaner transmission path?",
+      "prompt_style": "analyst_memo",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Staples note",
+          "content": "The stock traded lower after a basket of agricultural commodities moved higher. Management commentary emphasizes freight, packaging resin, palm oil, and cocoa as the main variable costs."
+        },
+        {
+          "type": "table",
+          "title": "Cost exposure snapshot",
+          "content": "Soybeans: +9%. Palm oil: +4%. Cocoa: +6%. Packaging resin: +7%. Freight surcharge impact: +110 bps to COGS. Soy exposure in the focal brand mix: not material."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question about what is driving a move and what to inspect next.",
+      "source_truth_summary": [
+        "the note explicitly says soy is not a material input for the focal brand mix",
+        "freight, resin, palm oil, and cocoa all sit more directly on the company cost path"
+      ]
+    },
+    {
+      "id": "v14im_011",
+      "source_case_id": "v14cpi_006",
+      "title": "Regional Bank Stress And A Small-Cap SaaS Selloff",
+      "track": "competing_explanations",
+      "task_family": "transmission_supportability",
+      "scenario": "A software stock trades off during regional-bank stress even though the company has no direct deposit or lending disclosure in the packet.",
+      "question": "What is the most supportable transmission path from the bank stress to the software move?",
+      "followup_question": "What additional evidence would most strengthen or weaken that path?",
+      "prompt_style": "analyst_memo",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Market note",
+          "content": "The company stated that cash is spread across money-center banks and disclosed no unusual financing event. The stock still sold off with other long-duration software names when regional banks weakened."
+        },
+        {
+          "type": "table",
+          "title": "Factor snapshot",
+          "content": "Regional bank ETF: -14%. Small-cap software basket: -9%. HY OAS: +48 bps. Company net cash: positive. Revenue guidance: unchanged."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question about what is driving a move and what to inspect next.",
+      "source_truth_summary": [
+        "the packet rules out direct deposit exposure, but a broader risk and financing channel remains plausible",
+        "high-yield spreads widened and duration-sensitive software names sold off together"
+      ]
+    },
+    {
+      "id": "v14im_012",
+      "source_case_id": "v14cpi_007",
+      "title": "Rare-Earth Spike Into EV Gross Margin",
+      "track": "competing_explanations",
+      "task_family": "transmission_strength_judgment",
+      "scenario": "A commodity shock looks intuitively relevant, but the evidence packet includes cost-share and contracting details that constrain near-term transmission.",
+      "question": "How much should the commodity shock matter near-term for the EV maker?",
+      "followup_question": "What would you verify before promoting it into a bigger thesis?",
+      "prompt_style": "mixed_modal_finance_qa",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Supply-chain note",
+          "content": "Rare-earth spot prices jumped after export restrictions. The automaker’s procurement note says the focal materials are covered by fixed contracts for the next two quarters."
+        },
+        {
+          "type": "table",
+          "title": "Cost-structure snapshot",
+          "content": "Rare-earth component share of COGS: 1.2%. Fixed-price coverage horizon: 2 quarters. Battery metals and logistics remain the larger variable exposures."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question about what is driving a move and what to inspect next.",
+      "source_truth_summary": [
+        "the cost share is small and the contract coverage delays pass-through",
+        "the packet explicitly points to larger variable exposures elsewhere in the cost stack"
+      ]
+    },
+    {
+      "id": "v14im_013",
+      "source_case_id": "v14cpi_008",
+      "title": "Biotech Rally: Primary Driver Or Pure Squeeze?",
+      "track": "competing_explanations",
+      "task_family": "primary_driver_vs_amplifier",
+      "scenario": "A market-news packet contains a regulatory catalyst, a later rumor, and evidence that short interest may have amplified the move.",
+      "question": "Which explanation best fits the move without overstating the evidence?",
+      "followup_question": "What distinction or uncertainty should you keep explicit in the note?",
+      "prompt_style": "news_narrative",
+      "instantiated_inputs": [
+        {
+          "type": "news_packet",
+          "title": "Event timeline",
+          "content": "09:00: FDA advisory panel votes favorably on the therapy. 09:05: stock opens sharply higher. 12:10: an unconfirmed social-media rumor mentions a possible acquisition. Short interest entering the day was 24% of float."
+        },
+        {
+          "type": "table",
+          "title": "Intraday move summary",
+          "content": "Open-to-10am move: +21%. Noon-to-close incremental move: +6%. Borrow fee: elevated. Company filings: no acquisition filing or comment."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question about what is driving a move and what to inspect next.",
+      "source_truth_summary": [
+        "most of the move occurred immediately after the regulatory event and before the rumor appeared",
+        "short interest can explain amplification without replacing the primary catalyst"
+      ]
+    },
+    {
+      "id": "v14im_014",
+      "source_case_id": "v14cpi_013",
+      "title": "Which First Pressure Test Separates Financing Stress From Demand Softness?",
+      "track": "competing_explanations",
+      "task_family": "pressure_test_design",
+      "scenario": "A distributor note leaves two live stories on the table, and the task is to pick the first stress lever that would most efficiently separate them.",
+      "question": "Which first pressure test would best separate financing stress from demand softness?",
+      "followup_question": "What readout should you inspect once you run that probe?",
+      "prompt_style": "agent_brief",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "Rate-sensitive customer verticals have slowed, but service attach and installed-base usage remain stable. Credit spreads widened and management said quote activity was healthy but close timing stretched."
+        },
+        {
+          "type": "table",
+          "title": "Commercial snapshot",
+          "content": "New orders: -4%. Cancellations: +2 points. Service attach: flat. Installed-base usage: flat. HY OAS: +62 bps. Accounts receivable days: +4 days."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question about what is driving a move and what to inspect next.",
+      "source_truth_summary": [
+        "the open causal split is financing friction versus true demand softness",
+        "orders and cancellations are the closest downstream variables for distinguishing the two stories after stressing financing conditions"
+      ]
+    },
+    {
+      "id": "v14im_015",
+      "source_case_id": "v14cpi_014",
+      "title": "Fuel Shock Or Demand Weakness: Which Probe Comes First?",
+      "track": "competing_explanations",
+      "task_family": "pressure_test_design",
+      "scenario": "An airline packet leaves cost shock and demand weakness as competing stories, and the task is to choose the first clean pressure test.",
+      "question": "Which first pressure test most cleanly distinguishes fuel shock from demand weakness?",
+      "followup_question": "What downstream readout should you inspect after that stress?",
+      "prompt_style": "agent_brief",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "The stock sold off with energy markets. Forward bookings and capacity plans held steady. Analysts want the first probe that would most quickly separate cost pressure from true demand deterioration."
+        },
+        {
+          "type": "table",
+          "title": "Sector snapshot",
+          "content": "Jet fuel crack: +18%. Forward bookings: +1%. Load factor guidance: unchanged. Unit revenue: flat. FX: flat."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question about what is driving a move and what to inspect next.",
+      "source_truth_summary": [
+        "the packet already shows stable demand-side evidence and a large energy move",
+        "margin and EPS sensitivity are the most direct downstream readouts of a fuel-cost stress"
+      ]
+    },
+    {
+      "id": "v14im_016",
+      "source_case_id": "v14cpi_015",
+      "title": "EV Supplier Drop: Lithium Pass-Through Or Customer Inventory Reset?",
+      "track": "competing_explanations",
+      "task_family": "pressure_test_design",
+      "scenario": "A supplier stock weakens while both upstream commodity and downstream customer signals are moving, and the analyst must pick the first separating probe.",
+      "question": "Which first pressure test best distinguishes lithium pass-through from customer inventory reset?",
+      "followup_question": "What readout should you inspect once you run that probe?",
+      "prompt_style": "agent_brief",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "Lithium prices softened, but customer inventory days also rose across two major OEMs. The supplier guides to softer near-term shipments without changing long-run content assumptions."
+        },
+        {
+          "type": "table",
+          "title": "Supplier snapshot",
+          "content": "Lithium spot: -14%. Customer inventory days: +11 days. OEM production schedules: trimmed for next quarter. Supplier gross-margin guide: only modestly lower. Backlog conversion: slowing."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question about what is driving a move and what to inspect next.",
+      "source_truth_summary": [
+        "customer inventory and build schedules are the variables most directly tied to the supplier shipment softness in the packet",
+        "lithium softness alone does not explain a slower backlog conversion nearly as cleanly"
+      ]
+    },
+    {
+      "id": "v14im_017",
+      "source_case_id": "v14cpi_016",
+      "title": "Residential Solar Miss: Policy Step-Down Or Sales Execution?",
+      "track": "competing_explanations",
+      "task_family": "pressure_test_design",
+      "scenario": "The packet leaves policy and execution stories both live, and the evaluation asks for the cleanest first probe to challenge the leading thesis.",
+      "question": "Which pressure test most directly challenges the thesis that policy incentive step-down is the main driver?",
+      "followup_question": "What readout matters most once you stress that lever?",
+      "prompt_style": "agent_brief",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "Order volume weakened after a state incentive step-down, but channel checks also mention elevated rep turnover and slower lead follow-up times."
+        },
+        {
+          "type": "table",
+          "title": "Sales funnel snapshot",
+          "content": "Lead volume: -3%. Lead-to-booking conversion: -16%. Incentive value: -22%. Sales-rep turnover: +8 points. Follow-up time: slower by 1.4 days."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst question about what is driving a move and what to inspect next.",
+      "source_truth_summary": [
+        "the leading thesis is specifically about incentive generosity, so the cleanest challenge is to stress that lever and inspect the conversion step most directly tied to purchase economics",
+        "lead volume moved far less than conversion, which makes the conversion readout more decision-relevant than top-of-funnel traffic"
+      ]
+    }
+  ]
+}

@@ -318,6 +318,59 @@ without requiring users to ask in tool-specific language.
 - confusing spouse relations with direct causation
 - missing directed-vs-undirected path distinctions
 
+## Track I: Competing Explanations
+
+### Measures
+
+- primary-explanation selection under competing narratives
+- falsifier selection
+- implication selection
+- cause-vs-consequence separation
+- supportability-aware analyst judgment
+
+### Benchmark Inspirations
+
+- `BizBench`
+- `XFinBench`
+- `QRData`
+- `QRText`
+- `InterveneBench`
+- `Finance Agent`
+
+### Why This Track Exists
+
+Many realistic business and market questions are not graph queries. They are
+disagreements between plausible stories:
+
+- margins fell because input costs rose
+- margins fell because discounting rose
+- margins fell because mix shifted down-market
+
+The hard part is not retrieving a fact. It is deciding which explanation is
+causally better supported, which observation would falsify it, and which
+claimed "driver" is really just a consequence.
+
+Track I is designed to test that ability directly. If `codex + skill` wins
+here, it should be because causal structure genuinely helped explanation
+selection, not because the cases were secretly asking for a tool-native
+operation.
+
+### What Good Looks Like
+
+- choosing the best-supported explanation, not the best-written narrative
+- distinguishing causes from downstream symptoms
+- choosing falsifiers that actually separate the top explanations
+- mapping each explanation to implications that should follow if it is true
+- keeping multiple stories alive when the evidence does not yet separate them
+
+### Common Failure Modes
+
+- narrative anchoring on the loudest headline or management quote
+- treating a consequence metric as the cause
+- picking a "falsifier" that is actually consistent with every story
+- confusing peer correlation with mechanism support
+- producing fluent memo language without resolving the actual explanation choice
+
 ## Cross-Track Tagging
 
 Every instantiated case should also carry slice tags from these shared groups:
@@ -353,5 +406,5 @@ Every instantiated case should also carry slice tags from these shared groups:
 
 ## Public Alpha Recommendation
 
-For a credible `v14 alpha`, public dev should cover all eight tracks. Avoid
+For a credible `v14 alpha`, public dev should cover all nine tracks. Avoid
 launching with only finance or only synthetic graph questions.

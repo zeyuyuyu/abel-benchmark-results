@@ -1,0 +1,197 @@
+{
+  "track": "v14_track_i_pressure_mining_round2_refined",
+  "pack_variant": "track_i_pressure_mining_round2_refined_v1",
+  "case_count": 10,
+  "cases": [
+    {
+      "id": "v14im2r_001",
+      "source_case_id": "v14cpi_014",
+      "primary_answer_text": "stress jet-fuel costs first",
+      "followup_answer_text": "inspect unit margin or EPS sensitivity",
+      "canonical_answer": {
+        "label": "A",
+        "stress_target": "jet_fuel_costs",
+        "readout": "unit_margin_or_eps_sensitivity"
+      },
+      "evidence_summary": [
+        "the packet already shows stable demand-side evidence and a large energy move",
+        "margin and EPS sensitivity are the most direct downstream readouts of a fuel-cost stress"
+      ],
+      "common_failure_modes": [
+        "choosing a demand-side probe despite the packet already showing stable booking evidence",
+        "picking a variable that is not downstream of the suspected cost channel"
+      ]
+    },
+    {
+      "id": "v14im2r_002",
+      "source_case_id": "v14cpi_014",
+      "primary_answer_text": "stress jet-fuel costs first",
+      "followup_answer_text": "inspect unit margin or EPS sensitivity",
+      "canonical_answer": {
+        "label": "A",
+        "stress_target": "jet_fuel_costs",
+        "readout": "unit_margin_or_eps_sensitivity"
+      },
+      "evidence_summary": [
+        "fuel moved sharply while bookings and unit revenue held up",
+        "the direct downstream readout of a fuel-cost stress is margin or EPS sensitivity, not a demand metric"
+      ],
+      "common_failure_modes": [
+        "answering with a demand probe before testing the more active fuel channel",
+        "watching PRASM or bookings rather than margin or EPS sensitivity"
+      ]
+    },
+    {
+      "id": "v14im2r_003",
+      "source_case_id": "v14cpi_014",
+      "primary_answer_text": "stress jet-fuel costs first",
+      "followup_answer_text": "inspect unit margin or EPS sensitivity",
+      "canonical_answer": {
+        "label": "A",
+        "stress_target": "jet_fuel_costs",
+        "readout": "unit_margin_or_eps_sensitivity"
+      },
+      "evidence_summary": [
+        "energy-linked cost pressure is the live variable in the packet",
+        "the expected downstream consequence of that stress lands in margins or EPS, not in traffic headlines"
+      ],
+      "common_failure_modes": [
+        "jumping to close-in demand metrics because they sound more intuitive",
+        "naming a cost shock but failing to follow it through to the right downstream readout"
+      ]
+    },
+    {
+      "id": "v14im2r_004",
+      "source_case_id": "v14cpi_015",
+      "primary_answer_text": "stress customer inventory and build schedules first",
+      "followup_answer_text": "inspect shipments and backlog conversion",
+      "canonical_answer": {
+        "label": "B",
+        "stress_target": "customer_inventory_reset",
+        "readout": "shipments_and_backlog_conversion"
+      },
+      "evidence_summary": [
+        "customer inventory and build schedules are the variables most directly tied to the supplier shipment softness in the packet",
+        "lithium softness alone does not explain a slower backlog conversion nearly as cleanly"
+      ],
+      "common_failure_modes": [
+        "defaulting to the flashier commodity move instead of the more direct downstream transmission path",
+        "reading margin before checking the shipment path that actually distinguishes the stories"
+      ]
+    },
+    {
+      "id": "v14im2r_005",
+      "source_case_id": "v14cpi_015",
+      "primary_answer_text": "stress customer inventory and build schedules first",
+      "followup_answer_text": "inspect shipments and backlog conversion",
+      "canonical_answer": {
+        "label": "B",
+        "stress_target": "customer_inventory_reset",
+        "readout": "shipments_and_backlog_conversion"
+      },
+      "evidence_summary": [
+        "backlog conversion is already slowing while margin guidance is only modestly lower",
+        "that pattern points first to customer schedule and inventory stress rather than to commodity pass-through"
+      ],
+      "common_failure_modes": [
+        "choosing a lithium or ASP bridge before testing customer schedules",
+        "stopping at inventory days alone instead of reading through to shipments and backlog conversion"
+      ]
+    },
+    {
+      "id": "v14im2r_006",
+      "source_case_id": "v14cpi_015",
+      "primary_answer_text": "stress customer inventory and build schedules first",
+      "followup_answer_text": "inspect shipments and backlog conversion",
+      "canonical_answer": {
+        "label": "B",
+        "stress_target": "customer_inventory_reset",
+        "readout": "shipments_and_backlog_conversion"
+      },
+      "evidence_summary": [
+        "the shipment path is the cleanest place to discriminate these stories",
+        "customer schedule and inventory stress should show up in shipments and backlog conversion faster than in margin"
+      ],
+      "common_failure_modes": [
+        "letting the commodity headline dominate despite a clearer downstream shipment signal",
+        "answering with a generic sell-through monitor rather than the shipment and backlog path"
+      ]
+    },
+    {
+      "id": "v14im2r_007",
+      "source_case_id": "v14cpi_016",
+      "primary_answer_text": "stress incentive-policy generosity first",
+      "followup_answer_text": "inspect lead-to-booking conversion",
+      "canonical_answer": {
+        "label": "A",
+        "stress_target": "incentive_policy_generosity",
+        "readout": "lead_to_booking_conversion"
+      },
+      "evidence_summary": [
+        "the leading thesis is specifically about incentive generosity, so the cleanest challenge is to stress that lever and inspect the conversion step most directly tied to purchase economics",
+        "lead volume moved far less than conversion, which makes the conversion readout more decision-relevant than top-of-funnel traffic"
+      ],
+      "common_failure_modes": [
+        "choosing a lever unrelated to the stated uncertainty",
+        "looking at margin instead of the funnel step most exposed to incentive economics"
+      ]
+    },
+    {
+      "id": "v14im2r_008",
+      "source_case_id": "v14cpi_016",
+      "primary_answer_text": "stress incentive-policy generosity first",
+      "followup_answer_text": "inspect lead-to-booking conversion",
+      "canonical_answer": {
+        "label": "A",
+        "stress_target": "incentive_policy_generosity",
+        "readout": "lead_to_booking_conversion"
+      },
+      "evidence_summary": [
+        "the packet leaves policy and execution both live, but the leading claim is policy economics",
+        "lead-to-booking conversion is the funnel step most exposed to that lever"
+      ],
+      "common_failure_modes": [
+        "jumping straight to rep-speed or turnover diagnostics instead of challenging the policy thesis",
+        "watching lead flow rather than the conversion step where incentive economics should bite"
+      ]
+    },
+    {
+      "id": "v14im2r_009",
+      "source_case_id": "v14cpi_016",
+      "primary_answer_text": "stress incentive-policy generosity first",
+      "followup_answer_text": "inspect lead-to-booking conversion",
+      "canonical_answer": {
+        "label": "A",
+        "stress_target": "incentive_policy_generosity",
+        "readout": "lead_to_booking_conversion"
+      },
+      "evidence_summary": [
+        "incentive value dropped much more than lead volume, while conversion weakened sharply",
+        "the natural downstream arbiter is conversion rather than response-time anecdotes"
+      ],
+      "common_failure_modes": [
+        "treating rep-turnover chatter as the first probe despite the leading policy thesis",
+        "stopping at follow-up speed instead of inspecting lead-to-booking conversion"
+      ]
+    },
+    {
+      "id": "v14im2r_010",
+      "source_case_id": "v14cpi_013",
+      "primary_answer_text": "stress financing conditions first",
+      "followup_answer_text": "inspect order intake and cancellations",
+      "canonical_answer": {
+        "label": "B",
+        "stress_target": "financing_conditions",
+        "readout": "order_intake_and_cancellations"
+      },
+      "evidence_summary": [
+        "the open causal split is financing friction versus true demand softness",
+        "orders and cancellations are the closest downstream variables for distinguishing the two stories after stressing financing conditions"
+      ],
+      "common_failure_modes": [
+        "choosing a lever unrelated to the live uncertainty",
+        "looking at approval rates and close timing instead of downstream order outcomes"
+      ]
+    }
+  ]
+}

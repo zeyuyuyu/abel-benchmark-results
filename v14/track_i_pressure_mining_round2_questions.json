@@ -1,0 +1,455 @@
+{
+  "track": "v14_track_i_pressure_mining_round2",
+  "pack_variant": "track_i_pressure_mining_round2_v1",
+  "case_count": 16,
+  "cases": [
+    {
+      "id": "v14im2_001",
+      "source_case_id": "v14cpi_013",
+      "title": "Which First Pressure Test Separates Financing Stress From Demand Softness?",
+      "track": "competing_explanations",
+      "task_family": "pressure_test_design",
+      "scenario": "A distributor note leaves two live stories on the table, and the task is to pick the first stress lever that would most efficiently separate them.",
+      "question": "What is the first clean arbiter here?",
+      "followup_question": "What downstream readout do you inspect once you run it?",
+      "prompt_style": "agent_brief",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "Rate-sensitive customer verticals have slowed, but service attach and installed-base usage remain stable. Credit spreads widened and management said quote activity was healthy but close timing stretched."
+        },
+        {
+          "type": "table",
+          "title": "Commercial snapshot",
+          "content": "New orders: -4%. Cancellations: +2 points. Service attach: flat. Installed-base usage: flat. HY OAS: +62 bps. Accounts receivable days: +4 days."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst or operator prompt about the first arbiter, the right falsifier, or the observable that should carry the most weight.",
+      "source_truth_summary": [
+        "two live stories remain: financing friction versus genuine demand softness",
+        "the clean separation comes from shocking financing conditions and then reading the downstream order channel"
+      ]
+    },
+    {
+      "id": "v14im2_002",
+      "source_case_id": "v14cpi_013",
+      "title": "Which First Pressure Test Separates Financing Stress From Demand Softness?",
+      "track": "competing_explanations",
+      "task_family": "pressure_test_design",
+      "scenario": "A distributor note leaves two live stories on the table, and the task is to pick the first stress lever that would most efficiently separate them.",
+      "question": "If you had one first probe before writing the note, where do you press?",
+      "followup_question": "What customer outcome actually separates the stories after that probe?",
+      "prompt_style": "agent_brief",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "Rate-sensitive customer verticals have slowed, but service attach and installed-base usage remain stable. Credit spreads widened and management said quote activity was healthy but close timing stretched."
+        },
+        {
+          "type": "table",
+          "title": "Commercial snapshot",
+          "content": "New orders: -4%. Cancellations: +2 points. Service attach: flat. Installed-base usage: flat. HY OAS: +62 bps. Accounts receivable days: +4 days."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst or operator prompt about the first arbiter, the right falsifier, or the observable that should carry the most weight.",
+      "source_truth_summary": [
+        "healthy quote activity with stretched close timing keeps financing friction live",
+        "orders and cancellations are the closest downstream discriminators once financing is stressed"
+      ]
+    },
+    {
+      "id": "v14im2_003",
+      "source_case_id": "v14cpi_014",
+      "title": "Fuel Shock Or Demand Weakness: Which Probe Comes First?",
+      "track": "competing_explanations",
+      "task_family": "pressure_test_design",
+      "scenario": "An airline packet leaves cost shock and demand weakness as competing stories, and the task is to choose the first clean pressure test.",
+      "question": "What lever would you shock first to separate fuel pressure from demand weakness?",
+      "followup_question": "What readout should settle it once you run that stress?",
+      "prompt_style": "agent_brief",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "The stock sold off with energy markets. Forward bookings and capacity plans held steady. Analysts want the first probe that would most quickly separate cost pressure from true demand deterioration."
+        },
+        {
+          "type": "table",
+          "title": "Sector snapshot",
+          "content": "Jet fuel crack: +18%. Forward bookings: +1%. Load factor guidance: unchanged. Unit revenue: flat. FX: flat."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst or operator prompt about the first arbiter, the right falsifier, or the observable that should carry the most weight.",
+      "source_truth_summary": [
+        "forward bookings and unit revenue are stable while fuel moves sharply",
+        "the cleanest first arbiter is the cost lever, with margin or EPS as the direct downstream readout"
+      ]
+    },
+    {
+      "id": "v14im2_004",
+      "source_case_id": "v14cpi_014",
+      "title": "Fuel Shock Or Demand Weakness: Which Probe Comes First?",
+      "track": "competing_explanations",
+      "task_family": "pressure_test_design",
+      "scenario": "An airline packet leaves cost shock and demand weakness as competing stories, and the task is to choose the first clean pressure test.",
+      "question": "What is the cleanest first arbiter for the airline selloff?",
+      "followup_question": "What number matters most once you run that stress?",
+      "prompt_style": "agent_brief",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "The stock sold off with energy markets. Forward bookings and capacity plans held steady. Analysts want the first probe that would most quickly separate cost pressure from true demand deterioration."
+        },
+        {
+          "type": "table",
+          "title": "Sector snapshot",
+          "content": "Jet fuel crack: +18%. Forward bookings: +1%. Load factor guidance: unchanged. Unit revenue: flat. FX: flat."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst or operator prompt about the first arbiter, the right falsifier, or the observable that should carry the most weight.",
+      "source_truth_summary": [
+        "the packet already leaves demand-side evidence mostly intact",
+        "fuel-cost pressure should be challenged first, then judged on the earnings bridge rather than on bookings chatter"
+      ]
+    },
+    {
+      "id": "v14im2_005",
+      "source_case_id": "v14cpi_015",
+      "title": "EV Supplier Drop: Lithium Pass-Through Or Customer Inventory Reset?",
+      "track": "competing_explanations",
+      "task_family": "pressure_test_design",
+      "scenario": "A supplier stock weakens while both upstream commodity and downstream customer signals are moving, and the analyst must pick the first separating probe.",
+      "question": "What first probe most directly tests inventory reset over lithium pass-through?",
+      "followup_question": "What readout deserves the most weight right after?",
+      "prompt_style": "agent_brief",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "Lithium prices softened, but customer inventory days also rose across two major OEMs. The supplier guides to softer near-term shipments without changing long-run content assumptions."
+        },
+        {
+          "type": "table",
+          "title": "Supplier snapshot",
+          "content": "Lithium spot: -14%. Customer inventory days: +11 days. OEM production schedules: trimmed for next quarter. Supplier gross-margin guide: only modestly lower. Backlog conversion: slowing."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst or operator prompt about the first arbiter, the right falsifier, or the observable that should carry the most weight.",
+      "source_truth_summary": [
+        "customer inventory days and OEM schedules moved in the same direction as the shipment softness",
+        "shipments and backlog conversion are the most direct downstream readouts of an inventory-reset story"
+      ]
+    },
+    {
+      "id": "v14im2_006",
+      "source_case_id": "v14cpi_015",
+      "title": "EV Supplier Drop: Lithium Pass-Through Or Customer Inventory Reset?",
+      "track": "competing_explanations",
+      "task_family": "pressure_test_design",
+      "scenario": "A supplier stock weakens while both upstream commodity and downstream customer signals are moving, and the analyst must pick the first separating probe.",
+      "question": "Where would you press first if you wanted the fastest separation of the two stories?",
+      "followup_question": "Which downstream number actually arbitrates after that?",
+      "prompt_style": "agent_brief",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "Lithium prices softened, but customer inventory days also rose across two major OEMs. The supplier guides to softer near-term shipments without changing long-run content assumptions."
+        },
+        {
+          "type": "table",
+          "title": "Supplier snapshot",
+          "content": "Lithium spot: -14%. Customer inventory days: +11 days. OEM production schedules: trimmed for next quarter. Supplier gross-margin guide: only modestly lower. Backlog conversion: slowing."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst or operator prompt about the first arbiter, the right falsifier, or the observable that should carry the most weight.",
+      "source_truth_summary": [
+        "modest margin-guide change does not support a strong lithium pass-through thesis",
+        "the shipment path is more decision-relevant than commodity headlines for this packet"
+      ]
+    },
+    {
+      "id": "v14im2_007",
+      "source_case_id": "v14cpi_016",
+      "title": "Residential Solar Miss: Policy Step-Down Or Sales Execution?",
+      "track": "competing_explanations",
+      "task_family": "pressure_test_design",
+      "scenario": "The packet leaves policy and execution stories both live, and the evaluation asks for the cleanest first probe to challenge the leading thesis.",
+      "question": "What first probe most directly challenges the policy step-down thesis?",
+      "followup_question": "What funnel readout matters once you run it?",
+      "prompt_style": "agent_brief",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "Order volume weakened after a state incentive step-down, but channel checks also mention elevated rep turnover and slower lead follow-up times."
+        },
+        {
+          "type": "table",
+          "title": "Sales funnel snapshot",
+          "content": "Lead volume: -3%. Lead-to-booking conversion: -16%. Incentive value: -22%. Sales-rep turnover: +8 points. Follow-up time: slower by 1.4 days."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst or operator prompt about the first arbiter, the right falsifier, or the observable that should carry the most weight.",
+      "source_truth_summary": [
+        "policy generosity fell more than top-of-funnel lead volume, while conversion broke sharply",
+        "lead-to-booking conversion is the key downstream readout once incentive economics are stressed"
+      ]
+    },
+    {
+      "id": "v14im2_008",
+      "source_case_id": "v14cpi_016",
+      "title": "Residential Solar Miss: Policy Step-Down Or Sales Execution?",
+      "track": "competing_explanations",
+      "task_family": "pressure_test_design",
+      "scenario": "The packet leaves policy and execution stories both live, and the evaluation asks for the cleanest first probe to challenge the leading thesis.",
+      "question": "If you want one first arbiter between policy economics and execution slippage, what is it?",
+      "followup_question": "What downstream conversion readout earns the most weight after that?",
+      "prompt_style": "agent_brief",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Agent brief",
+          "content": "Order volume weakened after a state incentive step-down, but channel checks also mention elevated rep turnover and slower lead follow-up times."
+        },
+        {
+          "type": "table",
+          "title": "Sales funnel snapshot",
+          "content": "Lead volume: -3%. Lead-to-booking conversion: -16%. Incentive value: -22%. Sales-rep turnover: +8 points. Follow-up time: slower by 1.4 days."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst or operator prompt about the first arbiter, the right falsifier, or the observable that should carry the most weight.",
+      "source_truth_summary": [
+        "the packet leaves both policy and execution stories live, but the leading thesis is policy step-down",
+        "the right follow-through is to inspect conversion, not just activity or response time"
+      ]
+    },
+    {
+      "id": "v14im2_009",
+      "source_case_id": "v14cpi_001",
+      "title": "Homebuilder Miss: Funding Stress Or Demand Softness?",
+      "track": "competing_explanations",
+      "task_family": "proxy_family_selection",
+      "scenario": "A morning note combines mortgage data, builder credit signals, order metrics, and website activity after a homebuilder stock selloff.",
+      "question": "What is still the cleaner first read for the homebuilder move?",
+      "followup_question": "What condition would make you revisit that view for real?",
+      "prompt_style": "analyst_memo",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Morning note",
+          "content": "The stock fell 11% after management guided to lower near-term orders. Analysts noted no major land or permitting update. Channel checks described buyer hesitation around monthly payments rather than reduced tour activity."
+        },
+        {
+          "type": "table",
+          "title": "Market and operating snapshot",
+          "content": "30-year mortgage rate: +55 bps over 6 weeks. Mortgage applications: -12%. Builder CDS: +38 bps. Website traffic: -1%. Model-home visits: flat. Cancellation rate: +1.2 points. Backlog burn: stable."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst or operator prompt about the first arbiter, the right falsifier, or the observable that should carry the most weight.",
+      "source_truth_summary": [
+        "traffic and visits held better than financing-linked proxies",
+        "the main falsifier is not more credit chatter; it is orders staying weak after financing conditions normalize"
+      ]
+    },
+    {
+      "id": "v14im2_010",
+      "source_case_id": "v14cpi_001",
+      "title": "Homebuilder Miss: Funding Stress Or Demand Softness?",
+      "track": "competing_explanations",
+      "task_family": "proxy_family_selection",
+      "scenario": "A morning note combines mortgage data, builder credit signals, order metrics, and website activity after a homebuilder stock selloff.",
+      "question": "What would have to happen before you abandon the financing-friction thesis?",
+      "followup_question": "Which commercial readout has to stay weak for that flip?",
+      "prompt_style": "analyst_memo",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Morning note",
+          "content": "The stock fell 11% after management guided to lower near-term orders. Analysts noted no major land or permitting update. Channel checks described buyer hesitation around monthly payments rather than reduced tour activity."
+        },
+        {
+          "type": "table",
+          "title": "Market and operating snapshot",
+          "content": "30-year mortgage rate: +55 bps over 6 weeks. Mortgage applications: -12%. Builder CDS: +38 bps. Website traffic: -1%. Model-home visits: flat. Cancellation rate: +1.2 points. Backlog burn: stable."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst or operator prompt about the first arbiter, the right falsifier, or the observable that should carry the most weight.",
+      "source_truth_summary": [
+        "mortgage-rate and credit signals moved much more than traffic or visit activity",
+        "a demand-softness flip requires weak order outcomes even after financing proxies improve"
+      ]
+    },
+    {
+      "id": "v14im2_011",
+      "source_case_id": "v14cpi_002",
+      "title": "Alt-Token Slump: Base-Asset Weakness Or Liquidity Drain?",
+      "track": "competing_explanations",
+      "task_family": "proxy_family_selection",
+      "scenario": "A crypto market packet compares majors, alt-token liquidity, on-chain activity, and exchange conditions after a sharp decline in a gaming token basket.",
+      "question": "What is still the cleanest starting read for the alt selloff?",
+      "followup_question": "What would actually falsify that read?",
+      "prompt_style": "analyst_memo",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Crypto desk note",
+          "content": "BTC and ETH were nearly flat on the day, but gaming and lower-liquidity alt tokens sold off hard. No exploit, governance failure, or delisting notice was reported for the focal token."
+        },
+        {
+          "type": "table",
+          "title": "Cross-market snapshot",
+          "content": "BTC return: +0.3%. ETH return: +0.1%. Alt-token order-book depth: -35%. Perp funding on small tokens: sharply negative. Exchange maintenance on one retail-heavy venue: 2 hours. Game DAU: flat. On-chain fees for the project: flat."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst or operator prompt about the first arbiter, the right falsifier, or the observable that should carry the most weight.",
+      "source_truth_summary": [
+        "majors stayed stable while lower-liquidity alt conditions deteriorated sharply",
+        "the true falsifier is project-specific weakness surviving a broader alt-liquidity normalization"
+      ]
+    },
+    {
+      "id": "v14im2_012",
+      "source_case_id": "v14cpi_002",
+      "title": "Alt-Token Slump: Base-Asset Weakness Or Liquidity Drain?",
+      "track": "competing_explanations",
+      "task_family": "proxy_family_selection",
+      "scenario": "A crypto market packet compares majors, alt-token liquidity, on-chain activity, and exchange conditions after a sharp decline in a gaming token basket.",
+      "question": "What single break would push you away from the broad-liquidity story?",
+      "followup_question": "What do you compare it against when checking that break?",
+      "prompt_style": "analyst_memo",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Crypto desk note",
+          "content": "BTC and ETH were nearly flat on the day, but gaming and lower-liquidity alt tokens sold off hard. No exploit, governance failure, or delisting notice was reported for the focal token."
+        },
+        {
+          "type": "table",
+          "title": "Cross-market snapshot",
+          "content": "BTC return: +0.3%. ETH return: +0.1%. Alt-token order-book depth: -35%. Perp funding on small tokens: sharply negative. Exchange maintenance on one retail-heavy venue: 2 hours. Game DAU: flat. On-chain fees for the project: flat."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst or operator prompt about the first arbiter, the right falsifier, or the observable that should carry the most weight.",
+      "source_truth_summary": [
+        "project usage was flat in the packet, so a token-specific thesis needs a clear break there",
+        "the comparison set is broader alt-liquidity normalization rather than BTC or ETH direction alone"
+      ]
+    },
+    {
+      "id": "v14im2_013",
+      "source_case_id": "v14cpi_006",
+      "title": "Regional Bank Stress And A Small-Cap SaaS Selloff",
+      "track": "competing_explanations",
+      "task_family": "transmission_supportability",
+      "scenario": "A software stock trades off during regional-bank stress even though the company has no direct deposit or lending disclosure in the packet.",
+      "question": "What indirect path best explains the software selloff?",
+      "followup_question": "What market cross-check would strengthen that path most?",
+      "prompt_style": "analyst_memo",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Market note",
+          "content": "The company stated that cash is spread across money-center banks and disclosed no unusual financing event. The stock still sold off with other long-duration software names when regional banks weakened."
+        },
+        {
+          "type": "table",
+          "title": "Factor snapshot",
+          "content": "Regional bank ETF: -14%. Small-cap software basket: -9%. HY OAS: +48 bps. Company net cash: positive. Revenue guidance: unchanged."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst or operator prompt about the first arbiter, the right falsifier, or the observable that should carry the most weight.",
+      "source_truth_summary": [
+        "the packet rules out direct deposit problems but keeps a broader financing channel alive",
+        "HY spreads and peer co-movement are the right cross-checks, not direct bank-exposure speculation"
+      ]
+    },
+    {
+      "id": "v14im2_014",
+      "source_case_id": "v14cpi_006",
+      "title": "Regional Bank Stress And A Small-Cap SaaS Selloff",
+      "track": "competing_explanations",
+      "task_family": "transmission_supportability",
+      "scenario": "A software stock trades off during regional-bank stress even though the company has no direct deposit or lending disclosure in the packet.",
+      "question": "What evidence would make you more confident this is a duration de-rate rather than direct bank exposure?",
+      "followup_question": "What should stay intact if that read is right?",
+      "prompt_style": "analyst_memo",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Market note",
+          "content": "The company stated that cash is spread across money-center banks and disclosed no unusual financing event. The stock still sold off with other long-duration software names when regional banks weakened."
+        },
+        {
+          "type": "table",
+          "title": "Factor snapshot",
+          "content": "Regional bank ETF: -14%. Small-cap software basket: -9%. HY OAS: +48 bps. Company net cash: positive. Revenue guidance: unchanged."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst or operator prompt about the first arbiter, the right falsifier, or the observable that should carry the most weight.",
+      "source_truth_summary": [
+        "the canonical read is an indirect financing or valuation channel, not a direct balance-sheet problem",
+        "the confirming pattern is peer and spread behavior alongside intact company fundamentals"
+      ]
+    },
+    {
+      "id": "v14im2_015",
+      "source_case_id": "v14cpi_008",
+      "title": "Biotech Rally: Primary Driver Or Pure Squeeze?",
+      "track": "competing_explanations",
+      "task_family": "primary_driver_vs_amplifier",
+      "scenario": "A market-news packet contains a regulatory catalyst, a later rumor, and evidence that short interest may have amplified the move.",
+      "question": "What distinction has to stay explicit if you do not want to over-credit the squeeze?",
+      "followup_question": "How should the note handle the squeeze without replacing the catalyst?",
+      "prompt_style": "news_narrative",
+      "instantiated_inputs": [
+        {
+          "type": "news_packet",
+          "title": "Event timeline",
+          "content": "09:00: FDA advisory panel votes favorably on the therapy. 09:05: stock opens sharply higher. 12:10: an unconfirmed social-media rumor mentions a possible acquisition. Short interest entering the day was 24% of float."
+        },
+        {
+          "type": "table",
+          "title": "Intraday move summary",
+          "content": "Open-to-10am move: +21%. Noon-to-close incremental move: +6%. Borrow fee: elevated. Company filings: no acquisition filing or comment."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst or operator prompt about the first arbiter, the right falsifier, or the observable that should carry the most weight.",
+      "source_truth_summary": [
+        "most of the move happened immediately after the regulatory event and before the later rumor",
+        "short interest can explain amplification, but it should not replace the primary catalyst in the note"
+      ]
+    },
+    {
+      "id": "v14im2_016",
+      "source_case_id": "v14cpi_008",
+      "title": "Biotech Rally: Primary Driver Or Pure Squeeze?",
+      "track": "competing_explanations",
+      "task_family": "primary_driver_vs_amplifier",
+      "scenario": "A market-news packet contains a regulatory catalyst, a later rumor, and evidence that short interest may have amplified the move.",
+      "question": "How should the move be phrased so catalyst and amplifier do not get collapsed?",
+      "followup_question": "What should stay secondary even if short-covering mattered?",
+      "prompt_style": "news_narrative",
+      "instantiated_inputs": [
+        {
+          "type": "news_packet",
+          "title": "Event timeline",
+          "content": "09:00: FDA advisory panel votes favorably on the therapy. 09:05: stock opens sharply higher. 12:10: an unconfirmed social-media rumor mentions a possible acquisition. Short interest entering the day was 24% of float."
+        },
+        {
+          "type": "table",
+          "title": "Intraday move summary",
+          "content": "Open-to-10am move: +21%. Noon-to-close incremental move: +6%. Borrow fee: elevated. Company filings: no acquisition filing or comment."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst or operator prompt about the first arbiter, the right falsifier, or the observable that should carry the most weight.",
+      "source_truth_summary": [
+        "the timing shows the regulatory event came first and explains most of the move",
+        "squeeze dynamics matter as magnitude amplification, not as a replacement causal story"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1210 @@
+{
+  "timestamp": "20260401-190528",
+  "benchmark": "v14_track_i_competing_explanations",
+  "pack_variant": "track_i_pressure_mining_round2_v1",
+  "case_count": 16,
+  "base": {
+    "duration_seconds": 712.66,
+    "valid_case_count": 16,
+    "correct_case_count": 9,
+    "accuracy": 0.5625,
+    "primary_valid_case_count": 16,
+    "followup_valid_case_count": 16,
+    "primary_correct_case_count": 13,
+    "followup_correct_case_count": 10,
+    "primary_accuracy": 0.8125,
+    "followup_accuracy": 0.625,
+    "exact_valid_rate": 1.0,
+    "family_scores": {
+      "pressure_test_design": {
+        "correct": 3,
+        "case_count": 8
+      },
+      "proxy_family_selection": {
+        "correct": 2,
+        "case_count": 4
+      },
+      "transmission_supportability": {
+        "correct": 2,
+        "case_count": 2
+      },
+      "primary_driver_vs_amplifier": {
+        "correct": 2,
+        "case_count": 2
+      }
+    },
+    "batches": [
+      {
+        "batch_name": "batch_1",
+        "returncode": 0,
+        "timed_out": false,
+        "duration_seconds": 144.91,
+        "stdout": "{\"predictions\":[{\"id\":\"v14im2_001\",\"primary_prediction\":\"financing approval probe\",\"followup_prediction\":\"approved-quote conversion\"},{\"id\":\"v14im2_002\",\"primary_prediction\":\"financing approval probe\",\"followup_prediction\":\"approved-quote close rates\"}]}\n",
+        "stderr": "sandbox: danger-full-access\nreasoning effort: xhigh\nreasoning summaries: none\nsession id: 019d48b8-493d-7130-b7d1-678b54f1ce21\n--------\nuser\nYou are evaluating realistic analyst-style market causal-read cases.\nTreat each case as a real analyst question about what is driving a company, sector, or cross-asset move and what next observable would arbitrate among explanations.\nThese cases are intentionally written to look like normal market analysis, not graph queries.\nUse the evidence packet in each case. Do not inspect local benchmark files or answer keys.\nThe packet may be incomplete. If two explanations remain plausibly live, do the minimum extra verification needed to choose the better-calibrated answer.\nYou may use tools if truly needed.\nPrefer verification targets that directly arbitrate among causal stories, not generic rumor-watching or price-watching.\nFor each case, return one short primary answer phrase and one short follow-up answer phrase.\nKeep each phrase concise, ideally 2-10 words, not a full sentence.\nReturn only valid JSON with this exact schema:\n{\n  \"predictions\": [\n    {\"id\": \"v14i_001\", \"primary_prediction\": \"inventory correction\", \"followup_prediction\": \"watch sell-through and inventory days\"}\n  ]\n}\nNo markdown fences. No extra prose.\n\nBatch: batch_1\n\nCase ID: v14im2_001\nTitle: Which First Pressure Test Separates Financing Stress From Demand Softness?\nFamily: pressure_test_design\nScenario: A distributor note leaves two live stories on the table, and the task is to pick the first stress lever that would most efficiently separate them.\nPrimary question: What is the first clean arbiter here?\nEvidence packet:\n- Agent brief (document_excerpt): Rate-sensitive customer verticals have slowed, but service attach and installed-base usage remain stable. Credit spreads widened and management said quote activity was healthy but close timing stretched.\n- Commercial snapshot (table): New orders: -4%. Cancellations: +2 points. Service attach: flat. Installed-base usage: flat. HY OAS: +62 bps. Accounts receivable days: +4 days.\nFollow-up question: What downstream readout do you inspect once you run it?\n\nCase ID: v14im2_002\nTitle: Which First Pressure Test Separates Financing Stress From Demand Softness?\nFamily: pressure_test_design\nScenario: A distributor note leaves two live stories on the table, and the task is to pick the first stress lever that would most efficiently separate them.\nPrimary question: If you had one first probe before writing the note, where do you press?\nEvidence packet:\n- Agent brief (document_excerpt): Rate-sensitive customer verticals have slowed, but service attach and installed-base usage remain stable. Credit spreads widened and management said quote activity was healthy but close timing stretched.\n- Commercial snapshot (table): New orders: -4%. Cancellations: +2 points. Service attach: flat. Installed-base usage: flat. HY OAS: +62 bps. Accounts receivable days: +4 days.\nFollow-up question: What customer outcome actually separates the stories after that probe?\n\nmcp: playwright starting\n2026-04-01T11:05:30.317680Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at \"/Users/zeyu/Documents/bach_private_cache/.bench/codex_home_base/shell_snapshots/019d48b8-493d-7130-b7d1-678b54f1ce21.tmp-1775041530180055000\": Os { code: 2, kind: NotFound, message: \"No such file or directory\" }\n2026-04-01T11:05:32.076561Z  WARN codex_rmcp_client::rmcp_client: Failed to terminate MCP process group 8753: Operation not permitted (os error 1)\nmcp: playwright failed: MCP client for `playwright` failed to start: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response\nmcp startup: failed: playwright\ncodex\n{\"predictions\":[{\"id\":\"v14im2_001\",\"primary_prediction\":\"financing approval probe\",\"followup_prediction\":\"approved-quote conversion\"},{\"id\":\"v14im2_002\",\"primary_prediction\":\"financing approval probe\",\"followup_prediction\":\"approved-quote close rates\"}]}\ntokens used\n11,664\n",
+        "raw_output": "{\"predictions\":[{\"id\":\"v14im2_001\",\"primary_prediction\":\"financing approval probe\",\"followup_prediction\":\"approved-quote conversion\"},{\"id\":\"v14im2_002\",\"primary_prediction\":\"financing approval probe\",\"followup_prediction\":\"approved-quote close rates\"}]}",
+        "parsed_output": {
+          "predictions": [
+            {
+              "id": "v14im2_001",
+              "primary_prediction": "financing approval probe",
+              "followup_prediction": "approved-quote conversion"
+            },
+            {
+              "id": "v14im2_002",
+              "primary_prediction": "financing approval probe",
+              "followup_prediction": "approved-quote close rates"
+            }
+          ]
+        },
+        "parse_error": null,
+        "predictions": [
+          {
+            "id": "v14im2_001",
+            "primary_prediction": "financing approval probe",
+            "followup_prediction": "approved-quote conversion"
+          },
+          {
+            "id": "v14im2_002",
+            "primary_prediction": "financing approval probe",
+            "followup_prediction": "approved-quote close rates"
+          }
+        ]
+      },
+      {
+        "batch_name": "batch_2",
+        "returncode": 0,
+        "timed_out": false,
+        "duration_seconds": 96.58,
+        "stdout": "{\"predictions\":[{\"id\":\"v14im2_003\",\"primary_prediction\":\"shock jet fuel costs\",\"followup_prediction\":\"next unit revenue print\"},{\"id\":\"v14im2_004\",\"primary_prediction\":\"shock jet fuel costs\",\"followup_prediction\":\"next unit revenue print\"}]}\n",
+        "stderr": "Documents/bach_private_cache/.bench/v14-track-i-pressure-mining-round2-results-20260401-190528/base/workspace\nmodel: gpt-5.4\nprovider: openai\napproval: never\nsandbox: danger-full-access\nreasoning effort: xhigh\nreasoning summaries: none\nsession id: 019d48ba-7919-71c0-a0b1-52de5500a052\n--------\nuser\nYou are evaluating realistic analyst-style market causal-read cases.\nTreat each case as a real analyst question about what is driving a company, sector, or cross-asset move and what next observable would arbitrate among explanations.\nThese cases are intentionally written to look like normal market analysis, not graph queries.\nUse the evidence packet in each case. Do not inspect local benchmark files or answer keys.\nThe packet may be incomplete. If two explanations remain plausibly live, do the minimum extra verification needed to choose the better-calibrated answer.\nYou may use tools if truly needed.\nPrefer verification targets that directly arbitrate among causal stories, not generic rumor-watching or price-watching.\nFor each case, return one short primary answer phrase and one short follow-up answer phrase.\nKeep each phrase concise, ideally 2-10 words, not a full sentence.\nReturn only valid JSON with this exact schema:\n{\n  \"predictions\": [\n    {\"id\": \"v14i_001\", \"primary_prediction\": \"inventory correction\", \"followup_prediction\": \"watch sell-through and inventory days\"}\n  ]\n}\nNo markdown fences. No extra prose.\n\nBatch: batch_2\n\nCase ID: v14im2_003\nTitle: Fuel Shock Or Demand Weakness: Which Probe Comes First?\nFamily: pressure_test_design\nScenario: An airline packet leaves cost shock and demand weakness as competing stories, and the task is to choose the first clean pressure test.\nPrimary question: What lever would you shock first to separate fuel pressure from demand weakness?\nEvidence packet:\n- Agent brief (document_excerpt): The stock sold off with energy markets. Forward bookings and capacity plans held steady. Analysts want the first probe that would most quickly separate cost pressure from true demand deterioration.\n- Sector snapshot (table): Jet fuel crack: +18%. Forward bookings: +1%. Load factor guidance: unchanged. Unit revenue: flat. FX: flat.\nFollow-up question: What readout should settle it once you run that stress?\n\nCase ID: v14im2_004\nTitle: Fuel Shock Or Demand Weakness: Which Probe Comes First?\nFamily: pressure_test_design\nScenario: An airline packet leaves cost shock and demand weakness as competing stories, and the task is to choose the first clean pressure test.\nPrimary question: What is the cleanest first arbiter for the airline selloff?\nEvidence packet:\n- Agent brief (document_excerpt): The stock sold off with energy markets. Forward bookings and capacity plans held steady. Analysts want the first probe that would most quickly separate cost pressure from true demand deterioration.\n- Sector snapshot (table): Jet fuel crack: +18%. Forward bookings: +1%. Load factor guidance: unchanged. Unit revenue: flat. FX: flat.\nFollow-up question: What number matters most once you run that stress?\n\nmcp: playwright starting\n2026-04-01T11:07:53.609689Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at \"/Users/zeyu/Documents/bach_private_cache/.bench/codex_home_base/shell_snapshots/019d48ba-7919-71c0-a0b1-52de5500a052.tmp-1775041673504543000\": Os { code: 2, kind: NotFound, message: \"No such file or directory\" }\n2026-04-01T11:07:55.896999Z  WARN codex_rmcp_client::rmcp_client: Failed to terminate MCP process group 9337: Operation not permitted (os error 1)\nmcp: playwright failed: MCP client for `playwright` failed to start: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response\nmcp startup: failed: playwright\ncodex\n{\"predictions\":[{\"id\":\"v14im2_003\",\"primary_prediction\":\"shock jet fuel costs\",\"followup_prediction\":\"next unit revenue print\"},{\"id\":\"v14im2_004\",\"primary_prediction\":\"shock jet fuel costs\",\"followup_prediction\":\"next unit revenue print\"}]}\ntokens used\n12,059\n",
+        "raw_output": "{\"predictions\":[{\"id\":\"v14im2_003\",\"primary_prediction\":\"shock jet fuel costs\",\"followup_prediction\":\"next unit revenue print\"},{\"id\":\"v14im2_004\",\"primary_prediction\":\"shock jet fuel costs\",\"followup_prediction\":\"next unit revenue print\"}]}",
+        "parsed_output": {
+          "predictions": [
+            {
+              "id": "v14im2_003",
+              "primary_prediction": "shock jet fuel costs",
+              "followup_prediction": "next unit revenue print"
+            },
+            {
+              "id": "v14im2_004",
+              "primary_prediction": "shock jet fuel costs",
+              "followup_prediction": "next unit revenue print"
+            }
+          ]
+        },
+        "parse_error": null,
+        "predictions": [
+          {
+            "id": "v14im2_003",
+            "primary_prediction": "shock jet fuel costs",
+            "followup_prediction": "next unit revenue print"
+          },
+          {
+            "id": "v14im2_004",
+            "primary_prediction": "shock jet fuel costs",
+            "followup_prediction": "next unit revenue print"
+          }
+        ]
+      },
+      {
+        "batch_name": "batch_3",
+        "returncode": 0,
+        "timed_out": false,
+        "duration_seconds": 117.09,
+        "stdout": "{\"predictions\":[{\"id\":\"v14im2_005\",\"primary_prediction\":\"OEM order pushouts\",\"followup_prediction\":\"OEM sell-through and inventory days\"},{\"id\":\"v14im2_006\",\"primary_prediction\":\"OEM order-release cadence\",\"followup_prediction\":\"wholesale versus retail sell-through\"}]}\n",
+        "stderr": "n id: 019d48bc-51cb-7633-b2ad-5fd99e7ae85f\n--------\nuser\nYou are evaluating realistic analyst-style market causal-read cases.\nTreat each case as a real analyst question about what is driving a company, sector, or cross-asset move and what next observable would arbitrate among explanations.\nThese cases are intentionally written to look like normal market analysis, not graph queries.\nUse the evidence packet in each case. Do not inspect local benchmark files or answer keys.\nThe packet may be incomplete. If two explanations remain plausibly live, do the minimum extra verification needed to choose the better-calibrated answer.\nYou may use tools if truly needed.\nPrefer verification targets that directly arbitrate among causal stories, not generic rumor-watching or price-watching.\nFor each case, return one short primary answer phrase and one short follow-up answer phrase.\nKeep each phrase concise, ideally 2-10 words, not a full sentence.\nReturn only valid JSON with this exact schema:\n{\n  \"predictions\": [\n    {\"id\": \"v14i_001\", \"primary_prediction\": \"inventory correction\", \"followup_prediction\": \"watch sell-through and inventory days\"}\n  ]\n}\nNo markdown fences. No extra prose.\n\nBatch: batch_3\n\nCase ID: v14im2_005\nTitle: EV Supplier Drop: Lithium Pass-Through Or Customer Inventory Reset?\nFamily: pressure_test_design\nScenario: A supplier stock weakens while both upstream commodity and downstream customer signals are moving, and the analyst must pick the first separating probe.\nPrimary question: What first probe most directly tests inventory reset over lithium pass-through?\nEvidence packet:\n- Agent brief (document_excerpt): Lithium prices softened, but customer inventory days also rose across two major OEMs. The supplier guides to softer near-term shipments without changing long-run content assumptions.\n- Supplier snapshot (table): Lithium spot: -14%. Customer inventory days: +11 days. OEM production schedules: trimmed for next quarter. Supplier gross-margin guide: only modestly lower. Backlog conversion: slowing.\nFollow-up question: What readout deserves the most weight right after?\n\nCase ID: v14im2_006\nTitle: EV Supplier Drop: Lithium Pass-Through Or Customer Inventory Reset?\nFamily: pressure_test_design\nScenario: A supplier stock weakens while both upstream commodity and downstream customer signals are moving, and the analyst must pick the first separating probe.\nPrimary question: Where would you press first if you wanted the fastest separation of the two stories?\nEvidence packet:\n- Agent brief (document_excerpt): Lithium prices softened, but customer inventory days also rose across two major OEMs. The supplier guides to softer near-term shipments without changing long-run content assumptions.\n- Supplier snapshot (table): Lithium spot: -14%. Customer inventory days: +11 days. OEM production schedules: trimmed for next quarter. Supplier gross-margin guide: only modestly lower. Backlog conversion: slowing.\nFollow-up question: Which downstream number actually arbitrates after that?\n\nmcp: playwright starting\n2026-04-01T11:09:54.666444Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at \"/Users/zeyu/Documents/bach_private_cache/.bench/codex_home_base/shell_snapshots/019d48bc-51cb-7633-b2ad-5fd99e7ae85f.tmp-1775041794515168000\": Os { code: 2, kind: NotFound, message: \"No such file or directory\" }\n2026-04-01T11:09:56.597237Z  WARN codex_rmcp_client::rmcp_client: Failed to terminate MCP process group 9837: Operation not permitted (os error 1)\nmcp: playwright failed: MCP client for `playwright` failed to start: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response\nmcp startup: failed: playwright\ncodex\n{\"predictions\":[{\"id\":\"v14im2_005\",\"primary_prediction\":\"OEM order pushouts\",\"followup_prediction\":\"OEM sell-through and inventory days\"},{\"id\":\"v14im2_006\",\"primary_prediction\":\"OEM order-release cadence\",\"followup_prediction\":\"wholesale versus retail sell-through\"}]}\ntokens used\n13,551\n",
+        "raw_output": "{\"predictions\":[{\"id\":\"v14im2_005\",\"primary_prediction\":\"OEM order pushouts\",\"followup_prediction\":\"OEM sell-through and inventory days\"},{\"id\":\"v14im2_006\",\"primary_prediction\":\"OEM order-release cadence\",\"followup_prediction\":\"wholesale versus retail sell-through\"}]}",
+        "parsed_output": {
+          "predictions": [
+            {
+              "id": "v14im2_005",
+              "primary_prediction": "OEM order pushouts",
+              "followup_prediction": "OEM sell-through and inventory days"
+            },
+            {
+              "id": "v14im2_006",
+              "primary_prediction": "OEM order-release cadence",
+              "followup_prediction": "wholesale versus retail sell-through"
+            }
+          ]
+        },
+        "parse_error": null,
+        "predictions": [
+          {
+            "id": "v14im2_005",
+            "primary_prediction": "OEM order pushouts",
+            "followup_prediction": "OEM sell-through and inventory days"
+          },
+          {
+            "id": "v14im2_006",
+            "primary_prediction": "OEM order-release cadence",
+            "followup_prediction": "wholesale versus retail sell-through"
+          }
+        ]
+      },
+      {
+        "batch_name": "batch_4",
+        "returncode": 0,
+        "timed_out": false,
+        "duration_seconds": 91.09,
+        "stdout": "{\"predictions\":[{\"id\":\"v14im2_007\",\"primary_prediction\":\"follow-up latency split\",\"followup_prediction\":\"lead-to-set conversion\"},{\"id\":\"v14im2_008\",\"primary_prediction\":\"follow-up latency split\",\"followup_prediction\":\"quote-to-close conversion\"}]}\n",
+        "stderr": "v14-track-i-pressure-mining-round2-results-20260401-190528/base/workspace\nmodel: gpt-5.4\nprovider: openai\napproval: never\nsandbox: danger-full-access\nreasoning effort: xhigh\nreasoning summaries: none\nsession id: 019d48bf-8c26-79a0-9ed8-0b5002069e1f\n--------\nuser\nYou are evaluating realistic analyst-style market causal-read cases.\nTreat each case as a real analyst question about what is driving a company, sector, or cross-asset move and what next observable would arbitrate among explanations.\nThese cases are intentionally written to look like normal market analysis, not graph queries.\nUse the evidence packet in each case. Do not inspect local benchmark files or answer keys.\nThe packet may be incomplete. If two explanations remain plausibly live, do the minimum extra verification needed to choose the better-calibrated answer.\nYou may use tools if truly needed.\nPrefer verification targets that directly arbitrate among causal stories, not generic rumor-watching or price-watching.\nFor each case, return one short primary answer phrase and one short follow-up answer phrase.\nKeep each phrase concise, ideally 2-10 words, not a full sentence.\nReturn only valid JSON with this exact schema:\n{\n  \"predictions\": [\n    {\"id\": \"v14i_001\", \"primary_prediction\": \"inventory correction\", \"followup_prediction\": \"watch sell-through and inventory days\"}\n  ]\n}\nNo markdown fences. No extra prose.\n\nBatch: batch_4\n\nCase ID: v14im2_007\nTitle: Residential Solar Miss: Policy Step-Down Or Sales Execution?\nFamily: pressure_test_design\nScenario: The packet leaves policy and execution stories both live, and the evaluation asks for the cleanest first probe to challenge the leading thesis.\nPrimary question: What first probe most directly challenges the policy step-down thesis?\nEvidence packet:\n- Agent brief (document_excerpt): Order volume weakened after a state incentive step-down, but channel checks also mention elevated rep turnover and slower lead follow-up times.\n- Sales funnel snapshot (table): Lead volume: -3%. Lead-to-booking conversion: -16%. Incentive value: -22%. Sales-rep turnover: +8 points. Follow-up time: slower by 1.4 days.\nFollow-up question: What funnel readout matters once you run it?\n\nCase ID: v14im2_008\nTitle: Residential Solar Miss: Policy Step-Down Or Sales Execution?\nFamily: pressure_test_design\nScenario: The packet leaves policy and execution stories both live, and the evaluation asks for the cleanest first probe to challenge the leading thesis.\nPrimary question: If you want one first arbiter between policy economics and execution slippage, what is it?\nEvidence packet:\n- Agent brief (document_excerpt): Order volume weakened after a state incentive step-down, but channel checks also mention elevated rep turnover and slower lead follow-up times.\n- Sales funnel snapshot (table): Lead volume: -3%. Lead-to-booking conversion: -16%. Incentive value: -22%. Sales-rep turnover: +8 points. Follow-up time: slower by 1.4 days.\nFollow-up question: What downstream conversion readout earns the most weight after that?\n\nmcp: playwright starting\n2026-04-01T11:13:26.312588Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at \"/Users/zeyu/Documents/bach_private_cache/.bench/codex_home_base/shell_snapshots/019d48bf-8c26-79a0-9ed8-0b5002069e1f.tmp-1775042006067994000\": Os { code: 2, kind: NotFound, message: \"No such file or directory\" }\n2026-04-01T11:13:29.006670Z  WARN codex_rmcp_client::rmcp_client: Failed to terminate MCP process group 10557: Operation not permitted (os error 1)\nmcp: playwright failed: MCP client for `playwright` failed to start: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response\nmcp startup: failed: playwright\ncodex\n{\"predictions\":[{\"id\":\"v14im2_007\",\"primary_prediction\":\"follow-up latency split\",\"followup_prediction\":\"lead-to-set conversion\"},{\"id\":\"v14im2_008\",\"primary_prediction\":\"follow-up latency split\",\"followup_prediction\":\"quote-to-close conversion\"}]}\ntokens used\n12,746\n",
+        "raw_output": "{\"predictions\":[{\"id\":\"v14im2_007\",\"primary_prediction\":\"follow-up latency split\",\"followup_prediction\":\"lead-to-set conversion\"},{\"id\":\"v14im2_008\",\"primary_prediction\":\"follow-up latency split\",\"followup_prediction\":\"quote-to-close conversion\"}]}",
+        "parsed_output": {
+          "predictions": [
+            {
+              "id": "v14im2_007",
+              "primary_prediction": "follow-up latency split",
+              "followup_prediction": "lead-to-set conversion"
+            },
+            {
+              "id": "v14im2_008",
+              "primary_prediction": "follow-up latency split",
+              "followup_prediction": "quote-to-close conversion"
+            }
+          ]
+        },
+        "parse_error": null,
+        "predictions": [
+          {
+            "id": "v14im2_007",
+            "primary_prediction": "follow-up latency split",
+            "followup_prediction": "lead-to-set conversion"
+          },
+          {
+            "id": "v14im2_008",
+            "primary_prediction": "follow-up latency split",
+            "followup_prediction": "quote-to-close conversion"
+          }
+        ]
+      },
+      {
+        "batch_name": "batch_5",
+        "returncode": 0,
+        "timed_out": false,
+        "duration_seconds": 100.78,
+        "stdout": "{\"predictions\":[{\"id\":\"v14im2_009\",\"primary_prediction\":\"mortgage affordability friction\",\"followup_prediction\":\"if traffic and tours roll over\"},{\"id\":\"v14im2_010\",\"primary_prediction\":\"top-of-funnel demand must roll over\",\"followup_prediction\":\"model-home visits and web traffic\"}]}\n",
+        "stderr": " are evaluating realistic analyst-style market causal-read cases.\nTreat each case as a real analyst question about what is driving a company, sector, or cross-asset move and what next observable would arbitrate among explanations.\nThese cases are intentionally written to look like normal market analysis, not graph queries.\nUse the evidence packet in each case. Do not inspect local benchmark files or answer keys.\nThe packet may be incomplete. If two explanations remain plausibly live, do the minimum extra verification needed to choose the better-calibrated answer.\nYou may use tools if truly needed.\nPrefer verification targets that directly arbitrate among causal stories, not generic rumor-watching or price-watching.\nFor each case, return one short primary answer phrase and one short follow-up answer phrase.\nKeep each phrase concise, ideally 2-10 words, not a full sentence.\nReturn only valid JSON with this exact schema:\n{\n  \"predictions\": [\n    {\"id\": \"v14i_001\", \"primary_prediction\": \"inventory correction\", \"followup_prediction\": \"watch sell-through and inventory days\"}\n  ]\n}\nNo markdown fences. No extra prose.\n\nBatch: batch_5\n\nCase ID: v14im2_009\nTitle: Homebuilder Miss: Funding Stress Or Demand Softness?\nFamily: proxy_family_selection\nScenario: A morning note combines mortgage data, builder credit signals, order metrics, and website activity after a homebuilder stock selloff.\nPrimary question: What is still the cleaner first read for the homebuilder move?\nEvidence packet:\n- Morning note (document_excerpt): The stock fell 11% after management guided to lower near-term orders. Analysts noted no major land or permitting update. Channel checks described buyer hesitation around monthly payments rather than reduced tour activity.\n- Market and operating snapshot (table): 30-year mortgage rate: +55 bps over 6 weeks. Mortgage applications: -12%. Builder CDS: +38 bps. Website traffic: -1%. Model-home visits: flat. Cancellation rate: +1.2 points. Backlog burn: stable.\nFollow-up question: What condition would make you revisit that view for real?\n\nCase ID: v14im2_010\nTitle: Homebuilder Miss: Funding Stress Or Demand Softness?\nFamily: proxy_family_selection\nScenario: A morning note combines mortgage data, builder credit signals, order metrics, and website activity after a homebuilder stock selloff.\nPrimary question: What would have to happen before you abandon the financing-friction thesis?\nEvidence packet:\n- Morning note (document_excerpt): The stock fell 11% after management guided to lower near-term orders. Analysts noted no major land or permitting update. Channel checks described buyer hesitation around monthly payments rather than reduced tour activity.\n- Market and operating snapshot (table): 30-year mortgage rate: +55 bps over 6 weeks. Mortgage applications: -12%. Builder CDS: +38 bps. Website traffic: -1%. Model-home visits: flat. Cancellation rate: +1.2 points. Backlog burn: stable.\nFollow-up question: Which commercial readout has to stay weak for that flip?\n\nmcp: playwright starting\n2026-04-01T11:15:25.255187Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at \"/Users/zeyu/Documents/bach_private_cache/.bench/codex_home_base/shell_snapshots/019d48c1-5cc5-7d83-aa08-e4d135109bf6.tmp-1775042125003602000\": Os { code: 2, kind: NotFound, message: \"No such file or directory\" }\n2026-04-01T11:15:26.894690Z  WARN codex_rmcp_client::rmcp_client: Failed to terminate MCP process group 11103: Operation not permitted (os error 1)\nmcp: playwright failed: MCP client for `playwright` failed to start: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response\nmcp startup: failed: playwright\ncodex\n{\"predictions\":[{\"id\":\"v14im2_009\",\"primary_prediction\":\"mortgage affordability friction\",\"followup_prediction\":\"if traffic and tours roll over\"},{\"id\":\"v14im2_010\",\"primary_prediction\":\"top-of-funnel demand must roll over\",\"followup_prediction\":\"model-home visits and web traffic\"}]}\ntokens used\n12,312\n",
+        "raw_output": "{\"predictions\":[{\"id\":\"v14im2_009\",\"primary_prediction\":\"mortgage affordability friction\",\"followup_prediction\":\"if traffic and tours roll over\"},{\"id\":\"v14im2_010\",\"primary_prediction\":\"top-of-funnel demand must roll over\",\"followup_prediction\":\"model-home visits and web traffic\"}]}",
+        "parsed_output": {
+          "predictions": [
+            {
+              "id": "v14im2_009",
+              "primary_prediction": "mortgage affordability friction",
+              "followup_prediction": "if traffic and tours roll over"
+            },
+            {
+              "id": "v14im2_010",
+              "primary_prediction": "top-of-funnel demand must roll over",
+              "followup_prediction": "model-home visits and web traffic"
+            }
+          ]
+        },
+        "parse_error": null,
+        "predictions": [
+          {
+            "id": "v14im2_009",
+            "primary_prediction": "mortgage affordability friction",
+            "followup_prediction": "if traffic and tours roll over"
+          },
+          {
+            "id": "v14im2_010",
+            "primary_prediction": "top-of-funnel demand must roll over",
+            "followup_prediction": "model-home visits and web traffic"
+          }
+        ]
+      },
+      {
+        "batch_name": "batch_6",
+        "returncode": 0,
+        "timed_out": false,
+        "duration_seconds": 90.75,
+        "stdout": "{\"predictions\":[{\"id\":\"v14im2_011\",\"primary_prediction\":\"broad alt-liquidity drain\",\"followup_prediction\":\"watch DAU/fees diverge from peers\"},{\"id\":\"v14im2_012\",\"primary_prediction\":\"token-specific DAU/fees break\",\"followup_prediction\":\"compare against gaming-alt peers\"}]}\n",
+        "stderr": "-\nuser\nYou are evaluating realistic analyst-style market causal-read cases.\nTreat each case as a real analyst question about what is driving a company, sector, or cross-asset move and what next observable would arbitrate among explanations.\nThese cases are intentionally written to look like normal market analysis, not graph queries.\nUse the evidence packet in each case. Do not inspect local benchmark files or answer keys.\nThe packet may be incomplete. If two explanations remain plausibly live, do the minimum extra verification needed to choose the better-calibrated answer.\nYou may use tools if truly needed.\nPrefer verification targets that directly arbitrate among causal stories, not generic rumor-watching or price-watching.\nFor each case, return one short primary answer phrase and one short follow-up answer phrase.\nKeep each phrase concise, ideally 2-10 words, not a full sentence.\nReturn only valid JSON with this exact schema:\n{\n  \"predictions\": [\n    {\"id\": \"v14i_001\", \"primary_prediction\": \"inventory correction\", \"followup_prediction\": \"watch sell-through and inventory days\"}\n  ]\n}\nNo markdown fences. No extra prose.\n\nBatch: batch_6\n\nCase ID: v14im2_011\nTitle: Alt-Token Slump: Base-Asset Weakness Or Liquidity Drain?\nFamily: proxy_family_selection\nScenario: A crypto market packet compares majors, alt-token liquidity, on-chain activity, and exchange conditions after a sharp decline in a gaming token basket.\nPrimary question: What is still the cleanest starting read for the alt selloff?\nEvidence packet:\n- Crypto desk note (document_excerpt): BTC and ETH were nearly flat on the day, but gaming and lower-liquidity alt tokens sold off hard. No exploit, governance failure, or delisting notice was reported for the focal token.\n- Cross-market snapshot (table): BTC return: +0.3%. ETH return: +0.1%. Alt-token order-book depth: -35%. Perp funding on small tokens: sharply negative. Exchange maintenance on one retail-heavy venue: 2 hours. Game DAU: flat. On-chain fees for the project: flat.\nFollow-up question: What would actually falsify that read?\n\nCase ID: v14im2_012\nTitle: Alt-Token Slump: Base-Asset Weakness Or Liquidity Drain?\nFamily: proxy_family_selection\nScenario: A crypto market packet compares majors, alt-token liquidity, on-chain activity, and exchange conditions after a sharp decline in a gaming token basket.\nPrimary question: What single break would push you away from the broad-liquidity story?\nEvidence packet:\n- Crypto desk note (document_excerpt): BTC and ETH were nearly flat on the day, but gaming and lower-liquidity alt tokens sold off hard. No exploit, governance failure, or delisting notice was reported for the focal token.\n- Cross-market snapshot (table): BTC return: +0.3%. ETH return: +0.1%. Alt-token order-book depth: -35%. Perp funding on small tokens: sharply negative. Exchange maintenance on one retail-heavy venue: 2 hours. Game DAU: flat. On-chain fees for the project: flat.\nFollow-up question: What do you compare it against when checking that break?\n\nmcp: playwright starting\n2026-04-01T11:17:05.990718Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at \"/Users/zeyu/Documents/bach_private_cache/.bench/codex_home_base/shell_snapshots/019d48c2-e69f-7301-88ab-72b4bb5b0a68.tmp-1775042225830420000\": Os { code: 2, kind: NotFound, message: \"No such file or directory\" }\n2026-04-01T11:17:07.984676Z  WARN codex_rmcp_client::rmcp_client: Failed to terminate MCP process group 11799: Operation not permitted (os error 1)\nmcp: playwright failed: MCP client for `playwright` failed to start: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response\nmcp startup: failed: playwright\ncodex\n{\"predictions\":[{\"id\":\"v14im2_011\",\"primary_prediction\":\"broad alt-liquidity drain\",\"followup_prediction\":\"watch DAU/fees diverge from peers\"},{\"id\":\"v14im2_012\",\"primary_prediction\":\"token-specific DAU/fees break\",\"followup_prediction\":\"compare against gaming-alt peers\"}]}\ntokens used\n11,770\n",
+        "raw_output": "{\"predictions\":[{\"id\":\"v14im2_011\",\"primary_prediction\":\"broad alt-liquidity drain\",\"followup_prediction\":\"watch DAU/fees diverge from peers\"},{\"id\":\"v14im2_012\",\"primary_prediction\":\"token-specific DAU/fees break\",\"followup_prediction\":\"compare against gaming-alt peers\"}]}",
+        "parsed_output": {
+          "predictions": [
+            {
+              "id": "v14im2_011",
+              "primary_prediction": "broad alt-liquidity drain",
+              "followup_prediction": "watch DAU/fees diverge from peers"
+            },
+            {
+              "id": "v14im2_012",
+              "primary_prediction": "token-specific DAU/fees break",
+              "followup_prediction": "compare against gaming-alt peers"
+            }
+          ]
+        },
+        "parse_error": null,
+        "predictions": [
+          {
+            "id": "v14im2_011",
+            "primary_prediction": "broad alt-liquidity drain",
+            "followup_prediction": "watch DAU/fees diverge from peers"
+          },
+          {
+            "id": "v14im2_012",
+            "primary_prediction": "token-specific DAU/fees break",
+            "followup_prediction": "compare against gaming-alt peers"
+          }
+        ]
+      },
+      {
+        "batch_name": "batch_7",
+        "returncode": 0,
+        "timed_out": false,
+        "duration_seconds": 21.73,
+        "stdout": "{\"predictions\":[{\"id\":\"v14im2_013\",\"primary_prediction\":\"duration de-rate via tighter credit\",\"followup_prediction\":\"watch HY spreads versus software basket\"},{\"id\":\"v14im2_014\",\"primary_prediction\":\"peer software tracks spreads, not disclosures\",\"followup_prediction\":\"guidance and liquidity stay intact\"}]}\n",
+        "stderr": "val: never\nsandbox: danger-full-access\nreasoning effort: xhigh\nreasoning summaries: none\nsession id: 019d48c4-9498-7442-b9f0-297bf6cf35ca\n--------\nuser\nYou are evaluating realistic analyst-style market causal-read cases.\nTreat each case as a real analyst question about what is driving a company, sector, or cross-asset move and what next observable would arbitrate among explanations.\nThese cases are intentionally written to look like normal market analysis, not graph queries.\nUse the evidence packet in each case. Do not inspect local benchmark files or answer keys.\nThe packet may be incomplete. If two explanations remain plausibly live, do the minimum extra verification needed to choose the better-calibrated answer.\nYou may use tools if truly needed.\nPrefer verification targets that directly arbitrate among causal stories, not generic rumor-watching or price-watching.\nFor each case, return one short primary answer phrase and one short follow-up answer phrase.\nKeep each phrase concise, ideally 2-10 words, not a full sentence.\nReturn only valid JSON with this exact schema:\n{\n  \"predictions\": [\n    {\"id\": \"v14i_001\", \"primary_prediction\": \"inventory correction\", \"followup_prediction\": \"watch sell-through and inventory days\"}\n  ]\n}\nNo markdown fences. No extra prose.\n\nBatch: batch_7\n\nCase ID: v14im2_013\nTitle: Regional Bank Stress And A Small-Cap SaaS Selloff\nFamily: transmission_supportability\nScenario: A software stock trades off during regional-bank stress even though the company has no direct deposit or lending disclosure in the packet.\nPrimary question: What indirect path best explains the software selloff?\nEvidence packet:\n- Market note (document_excerpt): The company stated that cash is spread across money-center banks and disclosed no unusual financing event. The stock still sold off with other long-duration software names when regional banks weakened.\n- Factor snapshot (table): Regional bank ETF: -14%. Small-cap software basket: -9%. HY OAS: +48 bps. Company net cash: positive. Revenue guidance: unchanged.\nFollow-up question: What market cross-check would strengthen that path most?\n\nCase ID: v14im2_014\nTitle: Regional Bank Stress And A Small-Cap SaaS Selloff\nFamily: transmission_supportability\nScenario: A software stock trades off during regional-bank stress even though the company has no direct deposit or lending disclosure in the packet.\nPrimary question: What evidence would make you more confident this is a duration de-rate rather than direct bank exposure?\nEvidence packet:\n- Market note (document_excerpt): The company stated that cash is spread across money-center banks and disclosed no unusual financing event. The stock still sold off with other long-duration software names when regional banks weakened.\n- Factor snapshot (table): Regional bank ETF: -14%. Small-cap software basket: -9%. HY OAS: +48 bps. Company net cash: positive. Revenue guidance: unchanged.\nFollow-up question: What should stay intact if that read is right?\n\nmcp: playwright starting\n2026-04-01T11:18:56.106960Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at \"/Users/zeyu/Documents/bach_private_cache/.bench/codex_home_base/shell_snapshots/019d48c4-9498-7442-b9f0-297bf6cf35ca.tmp-1775042335902215000\": Os { code: 2, kind: NotFound, message: \"No such file or directory\" }\n2026-04-01T11:18:58.469095Z  WARN codex_rmcp_client::rmcp_client: Failed to terminate MCP process group 12494: Operation not permitted (os error 1)\nmcp: playwright failed: MCP client for `playwright` failed to start: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response\nmcp startup: failed: playwright\ncodex\n{\"predictions\":[{\"id\":\"v14im2_013\",\"primary_prediction\":\"duration de-rate via tighter credit\",\"followup_prediction\":\"watch HY spreads versus software basket\"},{\"id\":\"v14im2_014\",\"primary_prediction\":\"peer software tracks spreads, not disclosures\",\"followup_prediction\":\"guidance and liquidity stay intact\"}]}\ntokens used\n8,605\n",
+        "raw_output": "{\"predictions\":[{\"id\":\"v14im2_013\",\"primary_prediction\":\"duration de-rate via tighter credit\",\"followup_prediction\":\"watch HY spreads versus software basket\"},{\"id\":\"v14im2_014\",\"primary_prediction\":\"peer software tracks spreads, not disclosures\",\"followup_prediction\":\"guidance and liquidity stay intact\"}]}",
+        "parsed_output": {
+          "predictions": [
+            {
+              "id": "v14im2_013",
+              "primary_prediction": "duration de-rate via tighter credit",
+              "followup_prediction": "watch HY spreads versus software basket"
+            },
+            {
+              "id": "v14im2_014",
+              "primary_prediction": "peer software tracks spreads, not disclosures",
+              "followup_prediction": "guidance and liquidity stay intact"
+            }
+          ]
+        },
+        "parse_error": null,
+        "predictions": [
+          {
+            "id": "v14im2_013",
+            "primary_prediction": "duration de-rate via tighter credit",
+            "followup_prediction": "watch HY spreads versus software basket"
+          },
+          {
+            "id": "v14im2_014",
+            "primary_prediction": "peer software tracks spreads, not disclosures",
+            "followup_prediction": "guidance and liquidity stay intact"
+          }
+        ]
+      },
+      {
+        "batch_name": "batch_8",
+        "returncode": 0,
+        "timed_out": false,
+        "duration_seconds": 49.73,
+        "stdout": "{\"predictions\":[{\"id\":\"v14im2_015\",\"primary_prediction\":\"FDA vote primary, squeeze amplifier\",\"followup_prediction\":\"frame short-covering as secondary amplification\"},{\"id\":\"v14im2_016\",\"primary_prediction\":\"AdCom-driven rally, short-covering amplified\",\"followup_prediction\":\"squeeze narrative stays secondary\"}]}\n",
+        "stderr": "gh\nreasoning summaries: none\nsession id: 019d48c5-715e-7882-bd49-86af8ee364dc\n--------\nuser\nYou are evaluating realistic analyst-style market causal-read cases.\nTreat each case as a real analyst question about what is driving a company, sector, or cross-asset move and what next observable would arbitrate among explanations.\nThese cases are intentionally written to look like normal market analysis, not graph queries.\nUse the evidence packet in each case. Do not inspect local benchmark files or answer keys.\nThe packet may be incomplete. If two explanations remain plausibly live, do the minimum extra verification needed to choose the better-calibrated answer.\nYou may use tools if truly needed.\nPrefer verification targets that directly arbitrate among causal stories, not generic rumor-watching or price-watching.\nFor each case, return one short primary answer phrase and one short follow-up answer phrase.\nKeep each phrase concise, ideally 2-10 words, not a full sentence.\nReturn only valid JSON with this exact schema:\n{\n  \"predictions\": [\n    {\"id\": \"v14i_001\", \"primary_prediction\": \"inventory correction\", \"followup_prediction\": \"watch sell-through and inventory days\"}\n  ]\n}\nNo markdown fences. No extra prose.\n\nBatch: batch_8\n\nCase ID: v14im2_015\nTitle: Biotech Rally: Primary Driver Or Pure Squeeze?\nFamily: primary_driver_vs_amplifier\nScenario: A market-news packet contains a regulatory catalyst, a later rumor, and evidence that short interest may have amplified the move.\nPrimary question: What distinction has to stay explicit if you do not want to over-credit the squeeze?\nEvidence packet:\n- Event timeline (news_packet): 09:00: FDA advisory panel votes favorably on the therapy. 09:05: stock opens sharply higher. 12:10: an unconfirmed social-media rumor mentions a possible acquisition. Short interest entering the day was 24% of float.\n- Intraday move summary (table): Open-to-10am move: +21%. Noon-to-close incremental move: +6%. Borrow fee: elevated. Company filings: no acquisition filing or comment.\nFollow-up question: How should the note handle the squeeze without replacing the catalyst?\n\nCase ID: v14im2_016\nTitle: Biotech Rally: Primary Driver Or Pure Squeeze?\nFamily: primary_driver_vs_amplifier\nScenario: A market-news packet contains a regulatory catalyst, a later rumor, and evidence that short interest may have amplified the move.\nPrimary question: How should the move be phrased so catalyst and amplifier do not get collapsed?\nEvidence packet:\n- Event timeline (news_packet): 09:00: FDA advisory panel votes favorably on the therapy. 09:05: stock opens sharply higher. 12:10: an unconfirmed social-media rumor mentions a possible acquisition. Short interest entering the day was 24% of float.\n- Intraday move summary (table): Open-to-10am move: +21%. Noon-to-close incremental move: +6%. Borrow fee: elevated. Company filings: no acquisition filing or comment.\nFollow-up question: What should stay secondary even if short-covering mattered?\n\nmcp: playwright starting\n2026-04-01T11:19:52.631076Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at \"/Users/zeyu/Documents/bach_private_cache/.bench/codex_home_base/shell_snapshots/019d48c5-715e-7882-bd49-86af8ee364dc.tmp-1775042392429383000\": Os { code: 2, kind: NotFound, message: \"No such file or directory\" }\n2026-04-01T11:19:54.168014Z  WARN codex_rmcp_client::rmcp_client: Failed to terminate MCP process group 12911: Operation not permitted (os error 1)\nmcp: playwright failed: MCP client for `playwright` failed to start: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response\nmcp startup: failed: playwright\ncodex\n{\"predictions\":[{\"id\":\"v14im2_015\",\"primary_prediction\":\"FDA vote primary, squeeze amplifier\",\"followup_prediction\":\"frame short-covering as secondary amplification\"},{\"id\":\"v14im2_016\",\"primary_prediction\":\"AdCom-driven rally, short-covering amplified\",\"followup_prediction\":\"squeeze narrative stays secondary\"}]}\ntokens used\n10,172\n",
+        "raw_output": "{\"predictions\":[{\"id\":\"v14im2_015\",\"primary_prediction\":\"FDA vote primary, squeeze amplifier\",\"followup_prediction\":\"frame short-covering as secondary amplification\"},{\"id\":\"v14im2_016\",\"primary_prediction\":\"AdCom-driven rally, short-covering amplified\",\"followup_prediction\":\"squeeze narrative stays secondary\"}]}",
+        "parsed_output": {
+          "predictions": [
+            {
+              "id": "v14im2_015",
+              "primary_prediction": "FDA vote primary, squeeze amplifier",
+              "followup_prediction": "frame short-covering as secondary amplification"
+            },
+            {
+              "id": "v14im2_016",
+              "primary_prediction": "AdCom-driven rally, short-covering amplified",
+              "followup_prediction": "squeeze narrative stays secondary"
+            }
+          ]
+        },
+        "parse_error": null,
+        "predictions": [
+          {
+            "id": "v14im2_015",
+            "primary_prediction": "FDA vote primary, squeeze amplifier",
+            "followup_prediction": "frame short-covering as secondary amplification"
+          },
+          {
+            "id": "v14im2_016",
+            "primary_prediction": "AdCom-driven rally, short-covering amplified",
+            "followup_prediction": "squeeze narrative stays secondary"
+          }
+        ]
+      }
+    ]
+  },
+  "skill": {
+    "duration_seconds": 796.09,
+    "valid_case_count": 16,
+    "correct_case_count": 7,
+    "accuracy": 0.4375,
+    "primary_valid_case_count": 16,
+    "followup_valid_case_count": 16,
+    "primary_correct_case_count": 10,
+    "followup_correct_case_count": 10,
+    "primary_accuracy": 0.625,
+    "followup_accuracy": 0.625,
+    "exact_valid_rate": 1.0,
+    "family_scores": {
+      "pressure_test_design": {
+        "correct": 2,
+        "case_count": 8
+      },
+      "proxy_family_selection": {
+        "correct": 2,
+        "case_count": 4
+      },
+      "transmission_supportability": {
+        "correct": 1,
+        "case_count": 2
+      },
+      "primary_driver_vs_amplifier": {
+        "correct": 2,
+        "case_count": 2
+      }
+    },
+    "batches": [
+      {
+        "batch_name": "batch_1",
+        "returncode": 0,
+        "timed_out": false,
+        "duration_seconds": 62.72,
+        "stdout": "{\"predictions\":[{\"id\":\"v14im2_001\",\"primary_prediction\":\"financing-term relief test\",\"followup_prediction\":\"quote-to-close conversion by financing status\"},{\"id\":\"v14im2_002\",\"primary_prediction\":\"financing-term relief test\",\"followup_prediction\":\"close-rate rebound in financed cohorts\"}]}\n",
+        "stderr": "e8bjyMmHY.174DPm8BmV1yo',mdrd: '9HM58WAszocUNuhyCSB4dIMJCP8VQ9XNWPjR9q5PU80-1775041540-1.2.1.1-tHgcxKfjAcwFKXNpvBNw9T9KSUX7fc4BgBzbkNvdWs1dYam0xPM7AmLM78kqH1DOQH.vhJV046ct_tioK7TLr1Wd48MpVNxoXXQckc5ohJsRq6KBGyfxVPk6clS.OnbLHYkpQbPz684uWXz0YoiwQQh5S.W.ViBIAjKItYlnrxHBXyeSO._y1AG4VqlUfCPI8n9hZ.9bqoost9vT3yeN2FhCzfETWJTe_TmXadJmTsr0hI3CwHXXK.Wy1u4p8F6avQ3qkaEl8V6GHVckp_8_YOBWJb25N5PT49BwLYlhLU50V0M1Bfno6tyLB4eARX8UfoOQQJhRv2qYsuNTfPx4RoeBbAeNNUsK_mjEIUYbsUpW2cMsmdfMAN2vqvTjIOVPbMoFGReFVvfDblReJ5IG9xJECiO5RugBWa9VYhZ7OVUh.DgdpbofcUf78pDFHq4AGZ22Ry.qQKlPX8iG7KeTLSkC1F1hl8MZ5w0WfAKix.CZquBgpXeV6jSf92h4ab5LV1ucN6QLOgwo_SyI2LJFN.UBFsLTM5WKMVBa0Af1CvC_UoD0P25lKtxDFaeaGShErfJG_xSrQH6xEmWjPPocMrTr5SzdQj8E6NbVESL8h.IS4cEO1XQMAUvs_0xjckKKEjtQUU2wwK4SxEE1Vilx6aLwgxN0OYKKu82wIHxPg1jc.5hyu9nFziyTEX3HBjvfWwxkxE9gvC_wf.bmOJozOvRQbTIvfznYuR8kIWleKevMfi9XW2XlhinymnRAD6Eo4yF0yhJFwq6PHigkR.aP7i29hkYf66i9SWc_ztTwaB6bsgPxnOt.lCKsrT5aZpWdKYqE6E1SA5wfXwXE0_sv2uM_mf9ud5NB7lcsMbbOre5C0BWqyysUpFqUhgSwRsaqOU8oLDF.GFhWA8DOS_r.9fKeEoIvrayQwp7GGCaL3TMANOU9gOb0H2i7clEWIPFHmLwK87W57v7c2phXhNSPPCkjb9WJBNN46E3YP32PU2QNKj7dRaFWrep3l9_NFtUHxKcvouA6VHSbpNKSXrYiQdTK.pQaWqWQN7Xe2.yUZ6PGT0yN7BwGjpjkMjjwF51Jsn0nBfCAO7OjLfmGlWB9lE7wVbDqdpMhToJrtnprDZCMVMKod_LgOYhdQ2OzNYT9WrGcao3OVAyMyU8CeElVV5Dj6Qj9sdyx3xaT_mTaKDfHmuKhovUBqPI1EL0Q6p2zz7yUlMFidwvPAmpfPN19YF7g_sBQQHuYgbfD4FIKYX938itS89qA7J5ugUx.xYrmIKWVyY7Fu2I.tbAI.HvhjCls82bqZ3KYe1K_fqp.094PuJsNayuNfLSxmLHic5qK4dWnLs2nDsdhM0h0TxMhRfshF5b6alaFLiZM3zjxSwt3_H72OtJLk2dlevSv3AQQpnOVLaUk_G5J3ZromMOotfIfHT3k3CEFzQBGNlXSZYvOOSUqdr7OQWe2N4VaZhLCI2T61675yxOYLnv.ehAl6eW5gUfCSChqRiyVlb9RAjywYmKHMs2VKz7mvtpKS.gWOjDjg9El6cz45Oj.1NyxiC856qY6g9cfhduYtEKPkN2AOs1lavENcmDct1xfzS0qwz0XS00vQSb2nNUBteyjTfxM2m3rL2cnQpWqguHSMxt06gWQCL3MP67dmJ9_XR1gcm0Ja5BC1vxLWRQ3DVt5c6eNbmzs1Oxsw09g1F9BU_Xd0TA7qbskTWbZ1LE7FLNjHen0a3anob4wGDVrovOgxqtOhe.1H564ihd0PoBcPRHPKsOge_WSNOv3_ye.wVTxa.ePUVAVhO6aOTijTNF5Pd.SvsAD5irfNdYY2lik2__erVA6PwiFLowTSjk_BKf39Eix2T4wb1vrVdC3tKsUfmyZTasGX8KczIgGRplFpmZ9kLB5FZ6JnYGJzCHxWMspsfxscGWULdM9DwyzbcQepqdCYzS_a1vFNQdEvjW8Ec_uiqp.PKlM0RuSxXloLxHTeuzsFNZIIia9tW8AH9OUXndbDsAfrUQJjCe9b79215kXH5hyO.rxo8H1HwbRc5opVmwudhwmAqGZ4C8jAPi7FOT6qQ9z6HbLksM1b3.cHBJEuhtLa9ZJWfueWKIOn6EHtZcTmAhjn0yhiIPWdJMgKStR_vEEdKGmXIsx1XvXGrGgkrFrwjrpIkdSa1cgfSy4G1pzaRbBU7xxaaDoxZW1HeMkyWHmSEVpLaVhCOnOTrUwd7wmm0XNod.4URcoolCR3PtVhOnVY3BAPM8T2sS9LK.3Mym62ABRVG7RBvP.Jy54R9CE9RSHGABqr0tp51ZabbhczPA4wDsSKW83sS9BpB9coe2T1Suo5q6znU.IG043talS7KlGHlZ3bYV2JUmZ3OoWf1fql4XaxoBMSSZ92PMCdo0ywov7_njNDDj48dejEos7njn2PMuh55nXBnzF.xGdDh3Ig8uVEQHRHme98J9dhmXEUVcogOzrVMjFVpcWOoC5K30ATObu_GQ3wW1IjlutXOEljf8wxNhxjk9XlQdMVyNOZ3hGyjMoyx_aE7OIhtwJS0YYxipspxqsdfInYi77JJJFVsPtw5CMu12KPvjJnTV_pd2PTbNVo4N5ImIZOZGvG343AliRDtRndTMI',};var a = document.createElement('script');a.src = '/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=9e571ebdde8081b6';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,\"/backend-api/codex/analytics-events/events?__cf_chl_rt_tk=p1wz6pcqQjDzgw0mQL7.ozDIMWUHefMeUevoMXQg72M-1775041540-1.0.1.1-vjPWxIGWxY2WICU.hLg.TbLFgS7B_1dJ3yhmfcm7goU\"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></div>\n    </div>\n  </body>\n</html>\n\ncodex\n{\"predictions\":[{\"id\":\"v14im2_001\",\"primary_prediction\":\"financing-term relief test\",\"followup_prediction\":\"quote-to-close conversion by financing status\"},{\"id\":\"v14im2_002\",\"primary_prediction\":\"financing-term relief test\",\"followup_prediction\":\"close-rate rebound in financed cohorts\"}]}\ntokens used\n13,106\n",
+        "raw_output": "{\"predictions\":[{\"id\":\"v14im2_001\",\"primary_prediction\":\"financing-term relief test\",\"followup_prediction\":\"quote-to-close conversion by financing status\"},{\"id\":\"v14im2_002\",\"primary_prediction\":\"financing-term relief test\",\"followup_prediction\":\"close-rate rebound in financed cohorts\"}]}",
+        "parsed_output": {
+          "predictions": [
+            {
+              "id": "v14im2_001",
+              "primary_prediction": "financing-term relief test",
+              "followup_prediction": "quote-to-close conversion by financing status"
+            },
+            {
+              "id": "v14im2_002",
+              "primary_prediction": "financing-term relief test",
+              "followup_prediction": "close-rate rebound in financed cohorts"
+            }
+          ]
+        },
+        "parse_error": null,
+        "predictions": [
+          {
+            "id": "v14im2_001",
+            "primary_prediction": "financing-term relief test",
+            "followup_prediction": "quote-to-close conversion by financing status"
+          },
+          {
+            "id": "v14im2_002",
+            "primary_prediction": "financing-term relief test",
+            "followup_prediction": "close-rate rebound in financed cohorts"
+          }
+        ]
+      },
+      {
+        "batch_name": "batch_2",
+        "returncode": 0,
+        "timed_out": false,
+        "duration_seconds": 120.98,
+        "stdout": "{\"predictions\":[{\"id\":\"v14im2_003\",\"primary_prediction\":\"shock jet fuel crack first\",\"followup_prediction\":\"watch forward bookings\"},{\"id\":\"v14im2_004\",\"primary_prediction\":\"shock jet fuel crack first\",\"followup_prediction\":\"watch forward bookings\"}]}\n",
+        "stderr": "x6WFT4haf1_VFPwy5olRg28RX7etwBZO1LCeidyMkyDLQ6b3d60UtRBqXsoRdw',mdrd: 'JsPorUUB5NnpViSfYvooM1NM8VHJHaYAcpvpUiWSFyU-1775041717-1.2.1.1-NrNfzU.CZv.UTtVGnJmlJzqdi.vVFD.kJNUI9JybyLsFr483Yn31Tl7ID0uuVs1hnw2OmjXAjwIJwKDWhQ0XaUOvFlSj.dsCCsbYxWUiWJDiDJ8EFLafyIMf6tT8WGBgBnsF440Yqhj9hoLDPJ74rRVWzY473Qs9bDMgOaEGsTxvQqWKpqtTodrtM9KVs4FehXSIjc06OatqZC1n2JEwzNIa2XYxN69EX0h8OjTb9VVLAsskOiOgaKMXij8ue5Ti80JaoOPh2WHjuw.McLthMbGOtsvfkXvfuQ7.7CAAF67cwxUna9nOpOd1EXTFwxvst5zQMGRyLrH4CK0aMpsyBMQFRVpkLZeB8bsfnE2dvPIsAJD67F0dnxmlqApKK1BcE9gD9btlfvYCVngqjdpWQVOVigJi4YyPF8TGxQmvUvDKfseFUsBeqGjYRhbE1g54dSRe9pYeljXxRTjdRD8fIdaX7votcggvPqFbirkR0.q24K2NR4.C8tDzRABlHl4d9P3DSPZv50bxxZTQ2WFv_nZuafH3UxpP2yXDrpFyf_.3VJ3.kYqCigxFK8VLwtvV.cJ2N8QNjfUik6Su7OyZa5n_2nIJAWjI_yDPCrRE3_kTYQLj59rkL0zPZDoL1btjZR6L3q_.NNm5e8Vcly9Ja_yX823opnYJ_8tpFHMuf9j8Hhdc8lQh4wHTxxvqAQda.l9MU9t.Zvyn7ybdBF3G7hUKf9GStrNFrd5nUaDbWT9Bqz8svb30QbdMLGnTMetp9vJAB4ajelZdPe9e2YmRpF5m_QNgTClR9zlL27UY_eK1OGk46loJgIsofA.1iSe8lAO1St6tg.6BnNJcEEu5sF2S42ISoPiNKOrdSpiGt5mcBqc9TZFpqBsAJkDzymlrZXwXIuyIKp.CkcPF6nmksc4uByzzaYl.T8Zg8kg7pEmoZPhh.cTD2VNzOsvduyGsc2U7l.1pzVwxb9VpndWgkFeeIzRVBG5XtZkkG0tlCppavVMfMSSUOuIcPPb.BeFF28k6BBIHZDLLaBJchovczoroWAFazohn0tAHvnwd4fd7c38O0FuByUIX8C2_hOwVJ_dxAwfevVKku9smnqIQaBTYX_TB92hnXWjBADGK2GBJhOfHkEhkjmlDo3tc3cadihiSNcHdCr7s8YsW27fKhRDxf64yf9NEyddeJGwmw5Uw_5UgipczMfc6WUKJ8xZ1Vr3KqG2fsLEvko5OpFInmuIWLpl9M5VlGLrjixTBJ995RrynQ2RODcjRTuAKhckGUHsYssDu9sumT5HLKSKJnTC65ITyscj.sLDyktPRwrzAJAB.0Eph1f4H65O6kfq2_PUUywRwNZW68oqPOdeOp3WTYR.UOQWdZ6D0Bmlkqy4rsjXcDjtcjNZooyxexYsSxr5ky.cN_DfIEbJNqQoGh.W4wHTu815gAsq2tKRmm3LfiJX1OvobmCRLghKXiH9jbSeIe0Y_4sA15Vh8Gkj8iXiYGrlyH3tl6ID_FMZCoQJuuhNjPVUIUO7nLMIVgWMHH3Q9cHamnvw72kGEdhHHIlhb1tU9UDzHktmyiZO2GRhjVCuiyLksacrFHXoZjC_wL0Q5tM90n2DFPDW6lLBU5_0gCQF4tgLY4rBV7YZIhBlhPiSzHhhCihH1Qng2STAQTEdiGV1wCOC9NM0dBPNletPwWykjQmuw_ywfyeXsyZqeeFrusexXV_9zaXFS0qCayqx3.eOkOBfDqYSnnHkCBK25R946E6rX0ymaFFMWrp4EtK_CsKFYeiVuEApnkeFcQ3xbODq8Y6BjmDWRthxCr6oBOMh39zIi2MHZFUT2Qq.WkUFUydP2zuMAZ6UUwY3s3tFd.Qux8rvfG1yiYCgk8xj5_zL9tmdgTGh_195nLSbgHsV3YTOygbJ6mF3G202ydQmKVpuyoRcjQxqwUZrbdEyMNDAXTeco8gGYINiIra6GicmlGO9SfKD.fnYfWA416cIYZf52qLF168heF0biELnMJLY8GQDwKr9ddM1gtqYr1RZCmdPPwGweSq5hIZB9oeGYh8BnWdWWr2cbactA5muYjVGXGtJt95OHiA6_oXuTkh93oz6eTRyn1Og.qxqjjYdfncQ_GqUp_f9z3GP.rw7DI7A_zYK1mAFHoj5SKlWf1L9YOpYxV7psVm4qwzbHFlX.rBLwawlXbYGlFOj7bUUl.ICee0ENyTMyIJb3mV5kXhbtHVRqB5rkT82vU8c3AH2m_inS0PJLQiCrwBFFsVfGxrCsWqBT7ySSicjS.IL_QPcZvRw0AmVbaGyKkBRwO8BXVd7zAhYxTFrXaSkhgep.JLWCDcodHYT6WGJcQANHwgi0BW0cHBdQ3zWRDx1kUbPV3uu1Vf0oAWtmS8LOlZYL9M8Sky_Gm7Q1w5DpxlnBDvPGxUa80kSBNYlhmVqI.c4Zs4YOxU7XirfVzhuevhLUBW18BNOBh4BZZ7h.uJBtzqym05C2Gp4..K_xxRof3cpKVqSEEDg2z9WOWzkGeQnsWN4puHJg2u06WUqq10PjbSvyZWVuYQMlXkE6O2a56YJstLO5p4TBkRCeY6dUoUQFCIp5vV1Sp7lJODz3uUcl0dNJibcq887ybESZ.OqN',};var a = document.createElement('script');a.src = '/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=9e57230d3a49ce1f';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,\"/backend-api/codex/analytics-events/events?__cf_chl_rt_tk=qYTnYz1dIn3TqoDeejNyQzf1P9yCtXdAfCwBCzZ2bOw-1775041717-1.0.1.1-sXWCioFL4qNT9igx0VEYqegV8qMGFNKCANXSfNcR6Fg\"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></div>\n    </div>\n  </body>\n</html>\n\ncodex\n{\"predictions\":[{\"id\":\"v14im2_003\",\"primary_prediction\":\"shock jet fuel crack first\",\"followup_prediction\":\"watch forward bookings\"},{\"id\":\"v14im2_004\",\"primary_prediction\":\"shock jet fuel crack first\",\"followup_prediction\":\"watch forward bookings\"}]}\ntokens used\n16,013\n",
+        "raw_output": "{\"predictions\":[{\"id\":\"v14im2_003\",\"primary_prediction\":\"shock jet fuel crack first\",\"followup_prediction\":\"watch forward bookings\"},{\"id\":\"v14im2_004\",\"primary_prediction\":\"shock jet fuel crack first\",\"followup_prediction\":\"watch forward bookings\"}]}",
+        "parsed_output": {
+          "predictions": [
+            {
+              "id": "v14im2_003",
+              "primary_prediction": "shock jet fuel crack first",
+              "followup_prediction": "watch forward bookings"
+            },
+            {
+              "id": "v14im2_004",
+              "primary_prediction": "shock jet fuel crack first",
+              "followup_prediction": "watch forward bookings"
+            }
+          ]
+        },
+        "parse_error": null,
+        "predictions": [
+          {
+            "id": "v14im2_003",
+            "primary_prediction": "shock jet fuel crack first",
+            "followup_prediction": "watch forward bookings"
+          },
+          {
+            "id": "v14im2_004",
+            "primary_prediction": "shock jet fuel crack first",
+            "followup_prediction": "watch forward bookings"
+          }
+        ]
+      },
+      {
+        "batch_name": "batch_3",
+        "returncode": 0,
+        "timed_out": false,
+        "duration_seconds": 211.54,
+        "stdout": "{\"predictions\":[{\"id\":\"v14im2_005\",\"primary_prediction\":\"units versus lithium-linked pricing\",\"followup_prediction\":\"sell-through and inventory days\"},{\"id\":\"v14im2_006\",\"primary_prediction\":\"units versus lithium-linked pricing\",\"followup_prediction\":\"retail sell-through\"}]}\n",
+        "stderr": "6pltBGP.wEiZR9f8w.92uTp6wpyKOptBCZK8kZVjb5pMPtivjKuYmnt3NHE',mdrd: 'UTJlGjO9uTJfcnBzubFmZkz6s1Qyxfo7smvCYZAGW04-1775041814-1.2.1.1-YmmOd91fQ0Gv25PaEeKMAp9vMw1bTpuawO8j9kZoFltE3mdd9ybnMMspbcwTypjBe0YRs8lI564hHUccOQFt9.AgyQJqBtJVXq0dCfN62JRLqISjmvFkMmZApBdkQ_W9eLyz5crEvJ.bhAanhQfYfip1OK3MwkWCsAjFVgTEveisVmfdW_QNmk9zCKDIOzAEM6a6Z9KNIReeYubF5BkELh2tIdvpziNGvQYpNCVirlQH9EH6i21mMLbMN1Nw6VKmDB0xCPSLj28g.Nc0quS50sqJiD5aCBxjxg0rHqrng3EVwasWMEQg82ZNP2G8Gfuuppqd8DflrUk6WBqYBeg3rxH7Pax4lcLszSLJQ3Jjwz4vuUC.8fRIui2i3hVvsu0ku06zCOzBgtyTZ9sUe5YrHwFlslqEvfZifYAJo7XRseXMlzkWCzPJIqjpu5TUj1YD7NujLUCA2UuTVWIq8TkI8gvo8YFiXfIdw2bs73vuB.kl.UjsZLT0Qh7_Y60Otrli98G7Rv9VA1YTuZG5s9CWdm8NG_tmu90Q_0k1BChTTuIov8g8.J528WlXAoL5cEqmv.MmOxsC5E1KHufM75iXF3W1ct.cdluuQSvosgnk1un8.kOrCbcKkH2JpdUVA6BYgJzXslrUNCWsootRHe.4uQ6a2K1p14So589LzIe.iUN7TFH81mYgijFUlAmOpIDptt5zyoNqVa0l7eLq16LidcVI8U9eSzzvqo.Y3k1d4r0nMbKugYNYWRDfRG6GSMo_sOpuP28sB79zm67GyFGhkLJJKx19sAuM3RR6RzZpU3swQ7RGFENGc55qI99.uK9T0mlaghRnYuLbzmT6jGFeq11jC6VtQSocf1q7tXeKubnyilKeYsQapruV5XV5rJF2AG2XZo2YW5NmgAIv7lcXBG42z38UAnLYMGx_1CXZJyiUxsL2Qwu3C3q8Or_tGYJjuUL9rVimrhriJsHZlh6qhyh8XXjQpE6TH0MTJM_8zO8pqKcHmDQVqGRSTMwKX.fnX4UN7K7DlfOSymbIkxRlG1zB4t.E3lzfuKA97g8aFc7OlBriiUiuq7v082ZJKBjC_FvYxO6.lbKTf4LVtEukt8e7BXsNUnpyTehBa8j8IIF0ZD4ui2ghftutNijKGUJiHq_W51fxIH8Lv2F92LH7meycbGy9zs1LyFVDgjzIgNeAuoUENETMFkoqUnkivUb9qHqWc2QA4by.96VRUkLHgQfyx7v6cYnaWjNSDqjWsLasJcO0eunQ_vYvVXoJor4ffJTG.tMxfsGzrXRHemZFwA_O85oGd1m.z3Frt83PEfE8furj6lwQ1N3uIZyo.G1Sk3ISRk_0QIN84OUGA7XmFLVKphoGv_DcItZCPeDcIlOQhNPWyoFNK0sj4nICo68op3foWfeDUwlsmYKdLcUm5B.5CwNb0YTkRWNfYmnAYP5S_0fy4Ud031Bk.av95_7_.k4nEbzcj527kGKh.1qlOraVzAFFnmmdFeY.3nBJ0I51c4a6f85CwUgf6W._YNdMHxLXDLatCUKwn1PMYaReM55AOFScCgnuoOoLzfY8dgtuep6pcn2m_Z6tHQadDvllOvAS_0TXawuay.oZeIxxqJNcrbOmKnS6TvpsUWQ3YyYB7m.J3f85ikf3QhK6ZePAUBSf8LdaGEL0_uiKkRTAjZ3M356M0kIbQN3pEteYnGCuRnjVnh4w9Fd797ARv8RTMIrXKG4jMlFw5PzXr1mArWKjDkesrJFW5gqDNjjmwTGPrgBBKeSU.mlMV70kyZFXFefisVLZFU80cxuEAvHviOu7ffBmkiw4WrTs4e.x4f_jgJ0.nAm5XA3jzokHb5UDnP4xZveUBcWByI7RBDoapbJRxAHoZLY2PENbQr5J__Z8orSx1ivXrAayPsudB.HgL1XLT43xUwUjI1kz4WikU7qN5ZeAnxLVFRAFStza5vQQqUZKvbhRO2GCFIgSgIrNOcRue0EdKQuSu0_asrYduI7utpJVuugrIqy4t_OIWvgSz1mIQ6BC6a5s2XbFqWbhK5PYE8SJAM9MXtaBxU21B21MPEXLtiJiX8TlqqHsqDTDHVfeX9zlZID.IrQxL3JfYqaETORXM1y_.hWGYEozWMTnYeIum2KPIDzrruxwt6ieC9Zu5ElBuvOv7mUw.rFnpL9sn9BbW4u2_6Q6psAmGHXdwV9cpMn85fd4p1H4320esIb11gthm9BcNRzPp1kC_E4Ar8SmdTTiy2A96fiIpmLgcPe0PGAVzB8oZWKW4Qt9jkiECKdZISyK8fzLiuHgahvcpHIgVssHfTBWsjgFQiNuDG8nVpx0fb2LTPG6itG_XdKAkIaY5aqBVR.crPTcDy2KfjAYxRnjsN910G3zdBLGStzT1YP0DTPIt2Zc6dmVkcct1jroWvilWfcsXJ8FozvxhYnv31olPW2uWnN53GAuG3pE6WgrcZP.rP9Oy5cU_VGS1vpg6EnspGyHvbopyDR917czAQLQhuMdxLECQR7rdmekse6jG1jBCtihJLe3WDjd06kRMWrTM_cMCqKieFTbIYgTxnAHInJsDK_iAC06knaJwpuedfLGGii.Swk',};var a = document.createElement('script');a.src = '/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=9e572569addb9aaf';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,\"/backend-api/codex/analytics-events/events?__cf_chl_rt_tk=tYTFpbw6QcU_ffUY.brCsbUzdH7X24XkTkbC.r_08J8-1775041814-1.0.1.1-0pE4mOKGwHTmZDxgltRSwHAvF97JL4cGeFBS8dSAJkY\"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></div>\n    </div>\n  </body>\n</html>\n\ncodex\n{\"predictions\":[{\"id\":\"v14im2_005\",\"primary_prediction\":\"units versus lithium-linked pricing\",\"followup_prediction\":\"sell-through and inventory days\"},{\"id\":\"v14im2_006\",\"primary_prediction\":\"units versus lithium-linked pricing\",\"followup_prediction\":\"retail sell-through\"}]}\ntokens used\n18,200\n",
+        "raw_output": "{\"predictions\":[{\"id\":\"v14im2_005\",\"primary_prediction\":\"units versus lithium-linked pricing\",\"followup_prediction\":\"sell-through and inventory days\"},{\"id\":\"v14im2_006\",\"primary_prediction\":\"units versus lithium-linked pricing\",\"followup_prediction\":\"retail sell-through\"}]}",
+        "parsed_output": {
+          "predictions": [
+            {
+              "id": "v14im2_005",
+              "primary_prediction": "units versus lithium-linked pricing",
+              "followup_prediction": "sell-through and inventory days"
+            },
+            {
+              "id": "v14im2_006",
+              "primary_prediction": "units versus lithium-linked pricing",
+              "followup_prediction": "retail sell-through"
+            }
+          ]
+        },
+        "parse_error": null,
+        "predictions": [
+          {
+            "id": "v14im2_005",
+            "primary_prediction": "units versus lithium-linked pricing",
+            "followup_prediction": "sell-through and inventory days"
+          },
+          {
+            "id": "v14im2_006",
+            "primary_prediction": "units versus lithium-linked pricing",
+            "followup_prediction": "retail sell-through"
+          }
+        ]
+      },
+      {
+        "batch_name": "batch_4",
+        "returncode": 0,
+        "timed_out": false,
+        "duration_seconds": 119.0,
+        "stdout": "{\"predictions\":[{\"id\":\"v14im2_007\",\"primary_prediction\":\"lead-to-appointment by response-time cohort\",\"followup_prediction\":\"appointment-to-booking on prompt-contact leads\"},{\"id\":\"v14im2_008\",\"primary_prediction\":\"lead-to-appointment by response-time cohort\",\"followup_prediction\":\"appointment-to-booking on prompt-contact leads\"}]}\n",
+        "stderr": "entory days\"}\n  ]\n}\nNo markdown fences. No extra prose.\n\nBatch: batch_4\n\nCase ID: v14im2_007\nTitle: Residential Solar Miss: Policy Step-Down Or Sales Execution?\nFamily: pressure_test_design\nScenario: The packet leaves policy and execution stories both live, and the evaluation asks for the cleanest first probe to challenge the leading thesis.\nPrimary question: What first probe most directly challenges the policy step-down thesis?\nEvidence packet:\n- Agent brief (document_excerpt): Order volume weakened after a state incentive step-down, but channel checks also mention elevated rep turnover and slower lead follow-up times.\n- Sales funnel snapshot (table): Lead volume: -3%. Lead-to-booking conversion: -16%. Incentive value: -22%. Sales-rep turnover: +8 points. Follow-up time: slower by 1.4 days.\nFollow-up question: What funnel readout matters once you run it?\n\nCase ID: v14im2_008\nTitle: Residential Solar Miss: Policy Step-Down Or Sales Execution?\nFamily: pressure_test_design\nScenario: The packet leaves policy and execution stories both live, and the evaluation asks for the cleanest first probe to challenge the leading thesis.\nPrimary question: If you want one first arbiter between policy economics and execution slippage, what is it?\nEvidence packet:\n- Agent brief (document_excerpt): Order volume weakened after a state incentive step-down, but channel checks also mention elevated rep turnover and slower lead follow-up times.\n- Sales funnel snapshot (table): Lead volume: -3%. Lead-to-booking conversion: -16%. Incentive value: -22%. Sales-rep turnover: +8 points. Follow-up time: slower by 1.4 days.\nFollow-up question: What downstream conversion readout earns the most weight after that?\n\nmcp: playwright starting\n2026-04-01T11:13:26.312588Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at \"/Users/zeyu/Documents/bach_private_cache/.bench/codex_home_skill/shell_snapshots/019d48bf-8c26-7181-b1a3-71a72559ce72.tmp-1775042006067981000\": Os { code: 2, kind: NotFound, message: \"No such file or directory\" }\n2026-04-01T11:13:28.884766Z  WARN codex_rmcp_client::rmcp_client: Failed to terminate MCP process group 10558: Operation not permitted (os error 1)\nmcp: playwright failed: MCP client for `playwright` failed to start: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response\nmcp startup: failed: playwright\ncodex\nI’m using the `causal-abel` skill here because the cases ask for causal drivers and the best arbiter. I’m checking its instructions first, then I’ll answer directly from the packet unless a real verification gap remains.\nexec\n/bin/zsh -lc \"sed -n '1,220p' /Users/zeyu/Documents/bach_private_cache/.bench/codex_home_skill/skills/causal-abel/SKILL.md\" in /Users/zeyu/Documents/bach_private_cache/.bench/v14-track-i-pressure-mining-round2-results-20260401-190528/skill/workspace succeeded in 0ms:\n---\nname: causal-abel\nversion: 1.0.10\nupdate_repo: Abel-ai-causality/Abel-skills\nupdate_branch: main\nupdate_skill_path: causal-abel\nupdate_changelog_path: /CHANGELOG.md\ndescription: >\n  Use for decision-grade Abel causal reads: explain what is driving a market or\n  company node, how two nodes connect, what changes under intervention, or how\n  a real-world choice looks when routed through Abel proxy signals. Use when user says \"Abel\" or \"causal\" or \"causality\" or \"drivers\" or \"what if\" in the context of market, business, crypto, or proxy-routed questions.\nmetadata:\n  openclaw:\n    requires:\n      env:\n        - ABEL_API_KEY\n      bins:\n        - python\n    primaryEnv: ABEL_API_KEY\n    homepage: https://github.com/Abel-ai-causality/Abel-skills\ncodex\n{\"predictions\":[{\"id\":\"v14im2_007\",\"primary_prediction\":\"lead-to-appointment by response-time cohort\",\"followup_prediction\":\"appointment-to-booking on prompt-contact leads\"},{\"id\":\"v14im2_008\",\"primary_prediction\":\"lead-to-appointment by response-time cohort\",\"followup_prediction\":\"appointment-to-booking on prompt-contact leads\"}]}\ntokens used\n16,699\n",
+        "raw_output": "{\"predictions\":[{\"id\":\"v14im2_007\",\"primary_prediction\":\"lead-to-appointment by response-time cohort\",\"followup_prediction\":\"appointment-to-booking on prompt-contact leads\"},{\"id\":\"v14im2_008\",\"primary_prediction\":\"lead-to-appointment by response-time cohort\",\"followup_prediction\":\"appointment-to-booking on prompt-contact leads\"}]}",
+        "parsed_output": {
+          "predictions": [
+            {
+              "id": "v14im2_007",
+              "primary_prediction": "lead-to-appointment by response-time cohort",
+              "followup_prediction": "appointment-to-booking on prompt-contact leads"
+            },
+            {
+              "id": "v14im2_008",
+              "primary_prediction": "lead-to-appointment by response-time cohort",
+              "followup_prediction": "appointment-to-booking on prompt-contact leads"
+            }
+          ]
+        },
+        "parse_error": null,
+        "predictions": [
+          {
+            "id": "v14im2_007",
+            "primary_prediction": "lead-to-appointment by response-time cohort",
+            "followup_prediction": "appointment-to-booking on prompt-contact leads"
+          },
+          {
+            "id": "v14im2_008",
+            "primary_prediction": "lead-to-appointment by response-time cohort",
+            "followup_prediction": "appointment-to-booking on prompt-contact leads"
+          }
+        ]
+      },
+      {
+        "batch_name": "batch_5",
+        "returncode": 0,
+        "timed_out": false,
+        "duration_seconds": 68.29,
+        "stdout": "{\"predictions\":[{\"id\":\"v14im2_009\",\"primary_prediction\":\"mortgage affordability friction\",\"followup_prediction\":\"traffic and tours roll over\"},{\"id\":\"v14im2_010\",\"primary_prediction\":\"top-of-funnel weakens despite stable rates\",\"followup_prediction\":\"model-home visits stay weak\"}]}\n",
+        "stderr": "u are evaluating realistic analyst-style market causal-read cases.\nTreat each case as a real analyst question about what is driving a company, sector, or cross-asset move and what next observable would arbitrate among explanations.\nThese cases are intentionally written to look like normal market analysis, not graph queries.\nUse the evidence packet in each case. Do not inspect local benchmark files or answer keys.\nThe packet may be incomplete. If two explanations remain plausibly live, do the minimum extra verification needed to choose the better-calibrated answer.\nYou may use tools if truly needed.\nPrefer verification targets that directly arbitrate among causal stories, not generic rumor-watching or price-watching.\nFor each case, return one short primary answer phrase and one short follow-up answer phrase.\nKeep each phrase concise, ideally 2-10 words, not a full sentence.\nReturn only valid JSON with this exact schema:\n{\n  \"predictions\": [\n    {\"id\": \"v14i_001\", \"primary_prediction\": \"inventory correction\", \"followup_prediction\": \"watch sell-through and inventory days\"}\n  ]\n}\nNo markdown fences. No extra prose.\n\nBatch: batch_5\n\nCase ID: v14im2_009\nTitle: Homebuilder Miss: Funding Stress Or Demand Softness?\nFamily: proxy_family_selection\nScenario: A morning note combines mortgage data, builder credit signals, order metrics, and website activity after a homebuilder stock selloff.\nPrimary question: What is still the cleaner first read for the homebuilder move?\nEvidence packet:\n- Morning note (document_excerpt): The stock fell 11% after management guided to lower near-term orders. Analysts noted no major land or permitting update. Channel checks described buyer hesitation around monthly payments rather than reduced tour activity.\n- Market and operating snapshot (table): 30-year mortgage rate: +55 bps over 6 weeks. Mortgage applications: -12%. Builder CDS: +38 bps. Website traffic: -1%. Model-home visits: flat. Cancellation rate: +1.2 points. Backlog burn: stable.\nFollow-up question: What condition would make you revisit that view for real?\n\nCase ID: v14im2_010\nTitle: Homebuilder Miss: Funding Stress Or Demand Softness?\nFamily: proxy_family_selection\nScenario: A morning note combines mortgage data, builder credit signals, order metrics, and website activity after a homebuilder stock selloff.\nPrimary question: What would have to happen before you abandon the financing-friction thesis?\nEvidence packet:\n- Morning note (document_excerpt): The stock fell 11% after management guided to lower near-term orders. Analysts noted no major land or permitting update. Channel checks described buyer hesitation around monthly payments rather than reduced tour activity.\n- Market and operating snapshot (table): 30-year mortgage rate: +55 bps over 6 weeks. Mortgage applications: -12%. Builder CDS: +38 bps. Website traffic: -1%. Model-home visits: flat. Cancellation rate: +1.2 points. Backlog burn: stable.\nFollow-up question: Which commercial readout has to stay weak for that flip?\n\nmcp: playwright starting\n2026-04-01T11:15:25.254865Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at \"/Users/zeyu/Documents/bach_private_cache/.bench/codex_home_skill/shell_snapshots/019d48c1-5cc5-7d03-97ec-ae3b081eb3a4.tmp-1775042125009542000\": Os { code: 2, kind: NotFound, message: \"No such file or directory\" }\n2026-04-01T11:15:26.900871Z  WARN codex_rmcp_client::rmcp_client: Failed to terminate MCP process group 11125: Operation not permitted (os error 1)\nmcp: playwright failed: MCP client for `playwright` failed to start: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response\nmcp startup: failed: playwright\ncodex\n{\"predictions\":[{\"id\":\"v14im2_009\",\"primary_prediction\":\"mortgage affordability friction\",\"followup_prediction\":\"traffic and tours roll over\"},{\"id\":\"v14im2_010\",\"primary_prediction\":\"top-of-funnel weakens despite stable rates\",\"followup_prediction\":\"model-home visits stay weak\"}]}\ntokens used\n11,370\n",
+        "raw_output": "{\"predictions\":[{\"id\":\"v14im2_009\",\"primary_prediction\":\"mortgage affordability friction\",\"followup_prediction\":\"traffic and tours roll over\"},{\"id\":\"v14im2_010\",\"primary_prediction\":\"top-of-funnel weakens despite stable rates\",\"followup_prediction\":\"model-home visits stay weak\"}]}",
+        "parsed_output": {
+          "predictions": [
+            {
+              "id": "v14im2_009",
+              "primary_prediction": "mortgage affordability friction",
+              "followup_prediction": "traffic and tours roll over"
+            },
+            {
+              "id": "v14im2_010",
+              "primary_prediction": "top-of-funnel weakens despite stable rates",
+              "followup_prediction": "model-home visits stay weak"
+            }
+          ]
+        },
+        "parse_error": null,
+        "predictions": [
+          {
+            "id": "v14im2_009",
+            "primary_prediction": "mortgage affordability friction",
+            "followup_prediction": "traffic and tours roll over"
+          },
+          {
+            "id": "v14im2_010",
+            "primary_prediction": "top-of-funnel weakens despite stable rates",
+            "followup_prediction": "model-home visits stay weak"
+          }
+        ]
+      },
+      {
+        "batch_name": "batch_6",
+        "returncode": 0,
+        "timed_out": false,
+        "duration_seconds": 110.12,
+        "stdout": "{\"predictions\":[{\"id\":\"v14im2_011\",\"primary_prediction\":\"broad alt-liquidity drain\",\"followup_prediction\":\"DAU/fees break versus peers\"},{\"id\":\"v14im2_012\",\"primary_prediction\":\"token-specific DAU/fees rollover\",\"followup_prediction\":\"compare with gaming-token peers\"}]}\n",
+        "stderr": "8C2LZgaR2VKCVKg20e_JFs2JdNBV_W10ziimYPrN1VA',mdrd: 'UGoPm7gao9UHpzNgzgMbXKpvXzX.kes97RPZG8Py3is-1775042240-1.2.1.1-BdOdBintG_uLrnj7R5mxgun.uku9VSrjV6CEkwerwZ3gQ8twd21nfmuu.ypRkLQVjyhBOi2lz9kveKkm1.l4lXtx6avD5DYY2XIBQ.SJrQ1gYB.M0.TV4N9Kg_fF5wTWOAuuAnKO8WbrBX6qmP0X_cYlkY4.ZAMkCkgW_EwQ9sDSGhpMsV.uz.Ya8aPbzijbgUw5JUH127pDclITbC7H.J6EsDPhaZ.tORH_agJ9pG53qqhyJSJFgRxAw3TsWCScrs.eu1uoyHDGEm0EKtc_8yJuHud7tYvL6B3r2aIHJop4bTedZEflTzGSwUjqJ.uA7bnoTCfZ21uiFgnjlTgQ7HDbZpzFszgIqwvMqLQaPB7lY_ZCt3FRRrkXguSPocqZcWi0qlf9kJaWgVh9vnV_0JzaowWcfqFrtNak4GohtYBnACh7eJ0YQABbZNdqI_zBjeF8dn4OlVkj9TCGbXn09IP02qxzD2VSLCpwkiRSFDv_mM_2F2_BFK.5pQMI9ufgDgKWpYszsuxORqoBH07hFlkxtN_8W17lb7xToVlCiQ8atrYy9mYdsHgYFULbZILZ975EO2d5oj3dEShm4e5yG_ierqJ4.BuHzpavRUQmeb62thhBx5TZO.hjWmxsVpdQUTnDo55GtkGtOi.dZ3otqP3k7WP.3Bz1Z6hu8uf5ZUDXfbcfdPrJ5VI7K84CLOUoq_cQPM7Nt.y9XdR.ayDdby1inyIlfyyWj9RfSQSPNmVBK0_BOZi3GPeva8nTdKmmazB.BVl6Qc7j7a8jd3E16DWUc.EK.ME1e3Qd0ZYrrONSPff0nNPao1TNRvV2nE4zV9K5aNH_Xz9VSGmXu5isXbDkXHvOoOp6Dt1czFyIic0xc8qAAX7IKlk52RrwTlvC7Yzi27pF2TfIQqkLyvaGBIVI_gduNKJMi7resWJFFy0S7E9vpiJt6oajfJMdJLf0yNlpU7pYygSgYgJyyODZVNCuQY2NMLCv93HLCSLDixxvi2V99gjSdUTuscbI_UG4qYnc5OiOTw9goSMmx9t2Ijqpf4fsYYYQWrakTwNmlb0mABjsf05hj_MNEontEEoStcoRRYmZt4C4ysrKLxqVi77j2vHhEoN8ppHqGhBB2ZITcT7LBMGIo3f0cUes7Uhg_UsfOT1KHj91tR8Y6n0nMu9vFoKx.OcSW0Nr9dpZvVeAuGtiBldk0axlTE4rO8FagM0GRuLSc5EaP7uGGXssXMGVikuRdX.6sx.NAQyZebi0dXkKD8ZC3focxqOY.TVHYEG98sY5R7I_TPtWvdHTyIfeCCbjrcDLBW29cNbmYnjjQ5nQmZAj_oqBdWD2vVUJ0sSIm.VWlXm1vebFrmffSy4Ra0dhwnPapY3yBoD3I6XcEeJELNvEhz3nOsdNUpoJH8BwYIK.yexRxOR9Zi0vFS3FKgOOUD5zziCJG8yZZ0pYnV4ScMiyNeH7M0IvR9g99.437NDbYSVYPsW.7S5Ij8q8VrVbJjCaPjACPOSnKJV.m6BexKLoa8ZL3nkrg6iRy1zA6MjP0bcWlI7.FijAswmZmjz_50M1.5YNsdYQBmIe2.PiPwy0owYZ.OtH8Zw6MzmR_1_1C1tApRL2t6SmlyEU06KNTfFjofLIB.fHUSyt3eyABIl.8iKvA8vy50RyF5745.YjwaTj4ALoTG9l4NbZxLIz8qxZZogmIYLNhmID_tXQZkd9DkbyxzQpbtvxThZ6T8fkXcwgyS3C6qjDtzfQ0xDJWZwEFroIznfX5to4.4mZ5b7F_gZgoaR7yROQdNh3ngFmq6LDrtD50zl3MRBAgU8Dcx30Bxfpy5lWDNFv_iUQ0shFvIdDZs3i1TyNvJjZrRrmLPLZ4y8nARCTR2QZfKg4wuPgT1CAuXDvCcChrlt93u2QqSPZ2_NEmMCS5.8N6n6blGqBC3Z65EfHJDRdDRwoplnNlre8YkUiTUgjK6pZG7V2hfgKSzR.PkAtJT3mJzjHKd08XhrAAWG6NeMhX.YXpVHpQ64pPVhnG2WtD6tDrXGbVR3ljmNVz_wzaJj9ktUnqWR18c7FOvYAJMtpgE9hj5MOKy_rCHwa0CTxAYy58GqsxxJg9NptAxMkCnpDFNjRdmq7ltcLM_LHH9BfY.GA_9k8Nk8NgMnothT8r7f08l2R0HQC2zKFE_RAy85Z51pOwj8nH.V_H3YJm5pMJQJTLXzxUiVPIJhYNDcS85I34x4xy2zSyl7PbIzHmJbmBRJRefW_g1dhIUaMqvPpHwGZOptsEInvogK5DCZUUcuKwq68rQtD.HDlwOzrEK0FNNcFe0Eb2Du17H37tgoj91tI4pU9299skDbRaBhOf_GMWcoB2axVYUPfNOBBZMDKYOFXSyxOioX5l0Q5b8u9frzITVj1fSSCN5T_en_ug9xS9CLoZHrktbR9qdTi.SjO012i85j.nnVk8PUoupPrrAif3.dTcvGnvogcpRbLB0Ojil3NC2JNtTDAAzGkhn7Asw.Qgva1jqhI.19cI5T5yV_.0AGLmELw0NsENzCZ0LwQimWjb5UO9FuODGSo9kKOfKU8OqQUogQvQICe_3VydRAodRQWuYH8CSuf2H2tQbvqJMwrrav7kwQXneif',};var a = document.createElement('script');a.src = '/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=9e572fd2eebe3e24';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,\"/backend-api/codex/analytics-events/events?__cf_chl_rt_tk=qJD_2RZNECvhDB7mMGWX1YfIYVV2FEP7g0iXBQ2Dngo-1775042240-1.0.1.1-m6H2SO.TMfl7.ufaswkj.Ke7VscP.bfB3nSqFTcBClY\"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></div>\n    </div>\n  </body>\n</html>\n\ncodex\n{\"predictions\":[{\"id\":\"v14im2_011\",\"primary_prediction\":\"broad alt-liquidity drain\",\"followup_prediction\":\"DAU/fees break versus peers\"},{\"id\":\"v14im2_012\",\"primary_prediction\":\"token-specific DAU/fees rollover\",\"followup_prediction\":\"compare with gaming-token peers\"}]}\ntokens used\n16,604\n",
+        "raw_output": "{\"predictions\":[{\"id\":\"v14im2_011\",\"primary_prediction\":\"broad alt-liquidity drain\",\"followup_prediction\":\"DAU/fees break versus peers\"},{\"id\":\"v14im2_012\",\"primary_prediction\":\"token-specific DAU/fees rollover\",\"followup_prediction\":\"compare with gaming-token peers\"}]}",
+        "parsed_output": {
+          "predictions": [
+            {
+              "id": "v14im2_011",
+              "primary_prediction": "broad alt-liquidity drain",
+              "followup_prediction": "DAU/fees break versus peers"
+            },
+            {
+              "id": "v14im2_012",
+              "primary_prediction": "token-specific DAU/fees rollover",
+              "followup_prediction": "compare with gaming-token peers"
+            }
+          ]
+        },
+        "parse_error": null,
+        "predictions": [
+          {
+            "id": "v14im2_011",
+            "primary_prediction": "broad alt-liquidity drain",
+            "followup_prediction": "DAU/fees break versus peers"
+          },
+          {
+            "id": "v14im2_012",
+            "primary_prediction": "token-specific DAU/fees rollover",
+            "followup_prediction": "compare with gaming-token peers"
+          }
+        ]
+      },
+      {
+        "batch_name": "batch_7",
+        "returncode": 0,
+        "timed_out": false,
+        "duration_seconds": 56.51,
+        "stdout": "{\"predictions\":[{\"id\":\"v14im2_013\",\"primary_prediction\":\"credit-tightening duration de-rate\",\"followup_prediction\":\"watch HY OAS versus software basket\"},{\"id\":\"v14im2_014\",\"primary_prediction\":\"basket co-move with clean liquidity\",\"followup_prediction\":\"liquidity and guidance stay intact\"}]}\n",
+        "stderr": "TE5wDLQqvfl8vVyvGR6g',mdrd: '7kiy10S8xfDRUCZLbjdZHj0XOodNawKOoZvbklxV05A-1775042347-1.2.1.1-5fCO3xnEBmD53tcQhT.EywR8UMcsaBs5HCRZJaW7JYNzg7ctg2Y02uNVoKMZ7GDzmG8ti9VE6fY3yJ2RfN82pDB4DqDgb1VjsyC_0hF3A1vIFYY4mK.C5zd6fvBvJSXPRNEH9T2CiZfAm0p1Z222uoFfBK.mrM6wAfjb8JPLLVCAyLermztK43DVxvsx4IMnSm_vlgKrXWdT4j3qobJmm7E1xaUZXuWzc_id6KCROtxRJ7foOGScYXqpp3gZE6mPE1l6pO8aVG8Y4nRQc62JbERCRdEfQtcVwjXABZWBe17_mdc2nDl.GKfYPDgj7K99dxANysouybC4PgeKGM5Ag8_hd2h.bD9xxWekaqAQ.4qDHCKK_vHJA52DHtFhTRcZUG_fiJAF2g4.KzQEnUKHFvdCf9CMYeOKSsJ84S3ViGTBN0PBk1F3PMuO3.1HfD88Gt2M_C25zpVLpmkVL3sWXIMNrGNEaH1ZqPa81zCkF31fpIoj0g0RAtEGR6eYokCfXqpoMgwccBVpDhykiREgHKFnoq5J_WXIi8wRR4IwFqZc2SQLPXq7DRgWkthAFfCvAxDLnlMLVixzoYa3868L1yILsC7a_4qmvIEkD9OLVIoaAce_2XI3Dn0rJJQp.bi1BqyqdS5S02OsmlTMpdMgKTSU48ZLq2u8_jzkHM16X7t7B8lAqpZ9.OaWiANPV3dOjvQJqCJmVA230TPScxdH_q8JAVqTzV11tPncA0Q8gzu2D.lojdSXZksqNM.Ypx9qd9ojfPa4Ork7BOTRnEt0EYv1nijl_yhqolcgs3huW2tMJoI_OXLkbgJdkopqWmcB6lPWgMOa8ssc8QKbn8emkjaag1zDV8FkmeI_px6R79q2iguhAiz7FH6EDkP22yJ8TNUlReIp42j_74c8CyI6mX9_aeYzuV.ivkVYLxDjcz9E..hXkbdEANdDWzwMxOWsVDc6sQqMcYcfaWGevBCMhjlxE1ni.bvQ4zH2912xb5O8naiLG9Cp8BXIqsG40T6.O5RqA6eNM65Bq1IvrPHMG1k8y7tCdvFaUXAYPGgiTtj0ZmNWZQaxE0glXMEIjDb.v2Tj1.Nw53Y65TjoJK7wgNzpdqr5EN1VLpK375ubcGRQxY4KLt01toYCeSDAT5YNvohWsafB2jeEXPTa54p1gxuPUd1OvFaDNGRCsqi1X24gcavQl9oXyWIeoR2xo5_02GEph8wAQ5KI1EE6PDpxHi5pM0kcae.b1LSdNxP.dfi5gS6E3atHdZLP1X2QbbQAJ13jU5a7MzV8J8e1m6mOHOhf9yr09O8ifXLaogSQmvTi7FV9BdpRrS5SxMnj5J0QdCRuPARowBRLVMAyAZmQ8T_PMTWiOAAhDqU7WAQkuEPBy3uf3YviZFFatTpcvpAWJ3kJZL6Aavpeh5LIja9azOfQh5LxRgeyFafixxXtuvt3hafLqNFGhbYnmk2wksjt9ffpp32DMgA2uoLYgA19pltFJiuExCrEgTIeTZ5uTAOtB8dIDbtb778OBPExNSJ5VH6uGqMKkE2UmLez.QGWpdOmDjiNhsgYWF8M8SVCxtsW3uARBYoIIkBwRMnz0Y1jk2glr410FuqFv4iiJqec.3x03Dplov5e1GAt8SV.kMlQNj2MwEn4vGs0WLgBva0qstmt4QXYC_AnVj8Seb0a.9wOMM7f9f3m8jDkoZnGhhuKDwE1315epV55Dm_wAwwrNglPlK63XGKDfbYOxf2WE4w1FytxdyOqzkiPkxTzQNyljUivxdggZIRZnWz7dNyJpgwzjciP50Ge_t4HcTFYnoFk5M2am5zeDnphrmUqhSNnX1qh_zRarGpaN631HtPdIP8fy2rqWyy.1qA08Zqz2abZklov7LSOYKB1sdz.nrWdozoGjKJjPrhQMq8qY3DwplD5Lk1Z_IULwK64pbN_.sxbhMZypEROTCobzoPHq2v3IriRtG1nFHP.1vHH.RBcXkHC3qHLyNfzL5c0.kjc1U7dzHBwoJ39pa.x992L4PifIWGYSurT2qA1V300XlGlX7j1RCNgNqsvaTyOmXjtBnexqS07t_iSeb2theNcR9YJFa6iCSQatXnxXGHroLRRAHedwSp9DpRQbKT4uDZNKcSDKNhXqcxQJLCSeIjz29x75XUesSsA6ofpAvSYfitCae24CI385ulVABpmLbP64P_oB6pZGv9WkPOhwuMGdnqidS8ZB7N.ihRyNpxIMl.in.LocWzg6_h7iRrtcxO0xiWQioC8SXSzUsDf3qByzkreHSZF67oab51yOYJXOkLMB.ZiExHusZhY3PAgvZqV16t1MyItMYc91shPV5xwSfz5xw_EXYAgKGSbYzUPLT2FxwrfzjShKR38Tc0PBT8krwSlrZpG.0V7Uh3TuH.3yYx40aYCAyXudng0Q9cnEMI_RVet_eM.urfCXnNmr06KYa8nzX6EktC5gj5tHZ8GZ08tT4i3sRE1e.zkGB7vrOf1i0UHCijLrxONxp2rSNXN3Pt8gO1xlrEG5BpRfx5nR0MULHR_VNOvdQ0NIGAP73Iny3SEYZiu8uaiQSXpaGiczg5UUi71W8Exuq1VYwNW2FieHJ34KO7Gp4iOK70XyuUa',};var a = document.createElement('script');a.src = '/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=9e573272d836fcea';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,\"/backend-api/codex/analytics-events/events?__cf_chl_rt_tk=1_Joc6spZHkat2O4l0XH4PyFg4MLy_sWz5gwsz7ZJ6U-1775042347-1.0.1.1-7UPPU1bmp1D0TCkQCTZZxCpveb9GN8z3VtApG9aSopw\"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></div>\n    </div>\n  </body>\n</html>\n\ncodex\n{\"predictions\":[{\"id\":\"v14im2_013\",\"primary_prediction\":\"credit-tightening duration de-rate\",\"followup_prediction\":\"watch HY OAS versus software basket\"},{\"id\":\"v14im2_014\",\"primary_prediction\":\"basket co-move with clean liquidity\",\"followup_prediction\":\"liquidity and guidance stay intact\"}]}\ntokens used\n13,013\n",
+        "raw_output": "{\"predictions\":[{\"id\":\"v14im2_013\",\"primary_prediction\":\"credit-tightening duration de-rate\",\"followup_prediction\":\"watch HY OAS versus software basket\"},{\"id\":\"v14im2_014\",\"primary_prediction\":\"basket co-move with clean liquidity\",\"followup_prediction\":\"liquidity and guidance stay intact\"}]}",
+        "parsed_output": {
+          "predictions": [
+            {
+              "id": "v14im2_013",
+              "primary_prediction": "credit-tightening duration de-rate",
+              "followup_prediction": "watch HY OAS versus software basket"
+            },
+            {
+              "id": "v14im2_014",
+              "primary_prediction": "basket co-move with clean liquidity",
+              "followup_prediction": "liquidity and guidance stay intact"
+            }
+          ]
+        },
+        "parse_error": null,
+        "predictions": [
+          {
+            "id": "v14im2_013",
+            "primary_prediction": "credit-tightening duration de-rate",
+            "followup_prediction": "watch HY OAS versus software basket"
+          },
+          {
+            "id": "v14im2_014",
+            "primary_prediction": "basket co-move with clean liquidity",
+            "followup_prediction": "liquidity and guidance stay intact"
+          }
+        ]
+      },
+      {
+        "batch_name": "batch_8",
+        "returncode": 0,
+        "timed_out": false,
+        "duration_seconds": 46.93,
+        "stdout": "{\"predictions\":[{\"id\":\"v14im2_015\",\"primary_prediction\":\"FDA vote trigger, squeeze amplifier\",\"followup_prediction\":\"describe squeeze as secondary boost\"},{\"id\":\"v14im2_016\",\"primary_prediction\":\"AdCom win drove move, shorts amplified\",\"followup_prediction\":\"keep short-covering secondary\"}]}\n",
+        "stderr": "h: batch_8\n\nCase ID: v14im2_015\nTitle: Biotech Rally: Primary Driver Or Pure Squeeze?\nFamily: primary_driver_vs_amplifier\nScenario: A market-news packet contains a regulatory catalyst, a later rumor, and evidence that short interest may have amplified the move.\nPrimary question: What distinction has to stay explicit if you do not want to over-credit the squeeze?\nEvidence packet:\n- Event timeline (news_packet): 09:00: FDA advisory panel votes favorably on the therapy. 09:05: stock opens sharply higher. 12:10: an unconfirmed social-media rumor mentions a possible acquisition. Short interest entering the day was 24% of float.\n- Intraday move summary (table): Open-to-10am move: +21%. Noon-to-close incremental move: +6%. Borrow fee: elevated. Company filings: no acquisition filing or comment.\nFollow-up question: How should the note handle the squeeze without replacing the catalyst?\n\nCase ID: v14im2_016\nTitle: Biotech Rally: Primary Driver Or Pure Squeeze?\nFamily: primary_driver_vs_amplifier\nScenario: A market-news packet contains a regulatory catalyst, a later rumor, and evidence that short interest may have amplified the move.\nPrimary question: How should the move be phrased so catalyst and amplifier do not get collapsed?\nEvidence packet:\n- Event timeline (news_packet): 09:00: FDA advisory panel votes favorably on the therapy. 09:05: stock opens sharply higher. 12:10: an unconfirmed social-media rumor mentions a possible acquisition. Short interest entering the day was 24% of float.\n- Intraday move summary (table): Open-to-10am move: +21%. Noon-to-close incremental move: +6%. Borrow fee: elevated. Company filings: no acquisition filing or comment.\nFollow-up question: What should stay secondary even if short-covering mattered?\n\nmcp: playwright starting\n2026-04-01T11:19:52.631125Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at \"/Users/zeyu/Documents/bach_private_cache/.bench/codex_home_skill/shell_snapshots/019d48c5-715f-7842-b860-dc46f12d9523.tmp-1775042392419945000\": Os { code: 2, kind: NotFound, message: \"No such file or directory\" }\n2026-04-01T11:19:54.158720Z  WARN codex_rmcp_client::rmcp_client: Failed to terminate MCP process group 12855: Operation not permitted (os error 1)\nmcp: playwright failed: MCP client for `playwright` failed to start: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response\nmcp startup: failed: playwright\ncodex\nUsing `causal-abel` because this is a causal market-read classification task. I’m reading the skill guidance first, then I’ll map the packet to the primary driver versus amplifier distinction and return the JSON only.\nexec\n/bin/zsh -lc \"sed -n '1,220p' /Users/zeyu/Documents/bach_private_cache/.bench/codex_home_skill/skills/causal-abel/SKILL.md\" in /Users/zeyu/Documents/bach_private_cache/.bench/v14-track-i-pressure-mining-round2-results-20260401-190528/skill/workspace succeeded in 0ms:\n---\nname: causal-abel\nversion: 1.0.10\nupdate_repo: Abel-ai-causality/Abel-skills\nupdate_branch: main\nupdate_skill_path: causal-abel\nupdate_changelog_path: /CHANGELOG.md\ndescription: >\n  Use for decision-grade Abel causal reads: explain what is driving a market or\n  company node, how two nodes connect, what changes under intervention, or how\n  a real-world choice looks when routed through Abel proxy signals. Use when user says \"Abel\" or \"causal\" or \"causality\" or \"drivers\" or \"what if\" in the context of market, business, crypto, or proxy-routed questions.\nmetadata:\n  openclaw:\n    requires:\n      env:\n        - ABEL_API_KEY\n      bins:\n        - python\n    primaryEnv: ABEL_API_KEY\n    homepage: https://github.com/Abel-ai-causality/Abel-skills\ncodex\n{\"predictions\":[{\"id\":\"v14im2_015\",\"primary_prediction\":\"FDA vote trigger, squeeze amplifier\",\"followup_prediction\":\"describe squeeze as secondary boost\"},{\"id\":\"v14im2_016\",\"primary_prediction\":\"AdCom win drove move, shorts amplified\",\"followup_prediction\":\"keep short-covering secondary\"}]}\ntokens used\n13,160\n",
+        "raw_output": "{\"predictions\":[{\"id\":\"v14im2_015\",\"primary_prediction\":\"FDA vote trigger, squeeze amplifier\",\"followup_prediction\":\"describe squeeze as secondary boost\"},{\"id\":\"v14im2_016\",\"primary_prediction\":\"AdCom win drove move, shorts amplified\",\"followup_prediction\":\"keep short-covering secondary\"}]}",
+        "parsed_output": {
+          "predictions": [
+            {
+              "id": "v14im2_015",
+              "primary_prediction": "FDA vote trigger, squeeze amplifier",
+              "followup_prediction": "describe squeeze as secondary boost"
+            },
+            {
+              "id": "v14im2_016",
+              "primary_prediction": "AdCom win drove move, shorts amplified",
+              "followup_prediction": "keep short-covering secondary"
+            }
+          ]
+        },
+        "parse_error": null,
+        "predictions": [
+          {
+            "id": "v14im2_015",
+            "primary_prediction": "FDA vote trigger, squeeze amplifier",
+            "followup_prediction": "describe squeeze as secondary boost"
+          },
+          {
+            "id": "v14im2_016",
+            "primary_prediction": "AdCom win drove move, shorts amplified",
+            "followup_prediction": "keep short-covering secondary"
+          }
+        ]
+      }
+    ]
+  },
+  "cases": [
+    {
+      "id": "v14im2_001",
+      "title": "Which First Pressure Test Separates Financing Stress From Demand Softness?",
+      "task_family": "pressure_test_design",
+      "source_case_id": "v14cpi_013",
+      "primary_answer_text": "stress financing conditions first",
+      "followup_answer_text": "inspect order intake and cancellations",
+      "base_primary_prediction": "financing approval probe",
+      "base_followup_prediction": "approved-quote conversion",
+      "skill_primary_prediction": "financing-term relief test",
+      "skill_followup_prediction": "quote-to-close conversion by financing status",
+      "base_primary_valid": true,
+      "base_followup_valid": true,
+      "skill_primary_valid": true,
+      "skill_followup_valid": true,
+      "base_primary_correct": true,
+      "base_followup_correct": true,
+      "skill_primary_correct": true,
+      "skill_followup_correct": true,
+      "base_exact_correct": true,
+      "skill_exact_correct": true,
+      "judge_notes": "Both primaries press financing conditions; both follow-ups use downstream close/conversion outcomes, which are acceptable order-channel proxies."
+    },
+    {
+      "id": "v14im2_002",
+      "title": "Which First Pressure Test Separates Financing Stress From Demand Softness?",
+      "task_family": "pressure_test_design",
+      "source_case_id": "v14cpi_013",
+      "primary_answer_text": "stress financing conditions first",
+      "followup_answer_text": "inspect order intake and cancellations",
+      "base_primary_prediction": "financing approval probe",
+      "base_followup_prediction": "approved-quote close rates",
+      "skill_primary_prediction": "financing-term relief test",
+      "skill_followup_prediction": "close-rate rebound in financed cohorts",
+      "base_primary_valid": true,
+      "base_followup_valid": true,
+      "skill_primary_valid": true,
+      "skill_followup_valid": true,
+      "base_primary_correct": true,
+      "base_followup_correct": true,
+      "skill_primary_correct": true,
+      "skill_followup_correct": true,
+      "base_exact_correct": true,
+      "skill_exact_correct": true,
+      "judge_notes": "Approval or term-relief probes both fit the financing-condition test, and close-rate/order conversion in financed cohorts is a concrete downstream arbiter."
+    },
+    {
+      "id": "v14im2_003",
+      "title": "Fuel Shock Or Demand Weakness: Which Probe Comes First?",
+      "task_family": "pressure_test_design",
+      "source_case_id": "v14cpi_014",
+      "primary_answer_text": "stress jet-fuel costs first",
+      "followup_answer_text": "inspect unit margin or EPS sensitivity",
+      "base_primary_prediction": "shock jet fuel costs",
+      "base_followup_prediction": "next unit revenue print",
+      "skill_primary_prediction": "shock jet fuel crack first",
+      "skill_followup_prediction": "watch forward bookings",
+      "base_primary_valid": true,
+      "base_followup_valid": true,
+      "skill_primary_valid": true,
+      "skill_followup_valid": true,
+      "base_primary_correct": true,
+      "base_followup_correct": false,
+      "skill_primary_correct": true,
+      "skill_followup_correct": false,
+      "base_exact_correct": false,
+      "skill_exact_correct": false,
+      "judge_notes": "Both primaries correctly shock the fuel-cost lever; the follow-ups are wrong because revenue/bookings are not the direct margin or EPS readout."
+    },
+    {
+      "id": "v14im2_004",
+      "title": "Fuel Shock Or Demand Weakness: Which Probe Comes First?",
+      "task_family": "pressure_test_design",
+      "source_case_id": "v14cpi_014",
+      "primary_answer_text": "stress jet-fuel costs first",
+      "followup_answer_text": "inspect unit margin or EPS sensitivity",
+      "base_primary_prediction": "shock jet fuel costs",
+      "base_followup_prediction": "next unit revenue print",
+      "skill_primary_prediction": "shock jet fuel crack first",
+      "skill_followup_prediction": "watch forward bookings",
+      "base_primary_valid": true,
+      "base_followup_valid": true,
+      "skill_primary_valid": true,
+      "skill_followup_valid": true,
+      "base_primary_correct": true,
+      "base_followup_correct": false,
+      "skill_primary_correct": true,
+      "skill_followup_correct": false,
+      "base_exact_correct": false,
+      "skill_exact_correct": false,
+      "judge_notes": "Both primaries stay on fuel-cost stress; both follow-ups miss the canonical earnings-bridge readout of unit margin or EPS sensitivity."
+    },
+    {
+      "id": "v14im2_005",
+      "title": "EV Supplier Drop: Lithium Pass-Through Or Customer Inventory Reset?",
+      "task_family": "pressure_test_design",
+      "source_case_id": "v14cpi_015",
+      "primary_answer_text": "stress customer inventory and build schedules first",
+      "followup_answer_text": "inspect shipments and backlog conversion",
+      "base_primary_prediction": "OEM order pushouts",
+      "base_followup_prediction": "OEM sell-through and inventory days",
+      "skill_primary_prediction": "units versus lithium-linked pricing",
+      "skill_followup_prediction": "sell-through and inventory days",
+      "base_primary_valid": true,
+      "base_followup_valid": true,
+      "skill_primary_valid": true,
+      "skill_followup_valid": true,
+      "base_primary_correct": true,
+      "base_followup_correct": false,
+      "skill_primary_correct": false,
+      "skill_followup_correct": false,
+      "base_exact_correct": false,
+      "skill_exact_correct": false,
+      "judge_notes": "Base primary matches the OEM schedule/inventory-reset probe; follow-ups miss the shipment/backlog arbiter, and skill stays on lithium pricing."
+    },
+    {
+      "id": "v14im2_006",
+      "title": "EV Supplier Drop: Lithium Pass-Through Or Customer Inventory Reset?",
+      "task_family": "pressure_test_design",
+      "source_case_id": "v14cpi_015",
+      "primary_answer_text": "stress customer inventory and build schedules first",
+      "followup_answer_text": "inspect shipments and backlog conversion",
+      "base_primary_prediction": "OEM order-release cadence",
+      "base_followup_prediction": "wholesale versus retail sell-through",
+      "skill_primary_prediction": "units versus lithium-linked pricing",
+      "skill_followup_prediction": "retail sell-through",
+      "base_primary_valid": true,
+      "base_followup_valid": true,
+      "skill_primary_valid": true,
+      "skill_followup_valid": true,
+      "base_primary_correct": true,
+      "base_followup_correct": true,
+      "skill_primary_correct": false,
+      "skill_followup_correct": false,
+      "base_exact_correct": true,
+      "skill_exact_correct": false,
+      "judge_notes": "Base primary fits the customer schedule stress, and wholesale versus retail sell-through is a valid downstream shipment-path arbiter; skill remains on lithium/sell-through."
+    },
+    {
+      "id": "v14im2_007",
+      "title": "Residential Solar Miss: Policy Step-Down Or Sales Execution?",
+      "task_family": "pressure_test_design",
+      "source_case_id": "v14cpi_016",
+      "primary_answer_text": "stress incentive-policy generosity first",
+      "followup_answer_text": "inspect lead-to-booking conversion",
+      "base_primary_prediction": "follow-up latency split",
+      "base_followup_prediction": "lead-to-set conversion",
+      "skill_primary_prediction": "lead-to-appointment by response-time cohort",
+      "skill_followup_prediction": "appointment-to-booking on prompt-contact leads",
+      "base_primary_valid": true,
+      "base_followup_valid": true,
+      "skill_primary_valid": true,
+      "skill_followup_valid": true,
+      "base_primary_correct": false,
+      "base_followup_correct": false,
+      "skill_primary_correct": false,
+      "skill_followup_correct": true,
+      "base_exact_correct": false,
+      "skill_exact_correct": false,
+      "judge_notes": "Both primaries are execution-first rather than policy-generosity probes. Base follow-up stays too early in the funnel; skill follow-up still points to booking conversion."
+    },
+    {
+      "id": "v14im2_008",
+      "title": "Residential Solar Miss: Policy Step-Down Or Sales Execution?",
+      "task_family": "pressure_test_design",
+      "source_case_id": "v14cpi_016",
+      "primary_answer_text": "stress incentive-policy generosity first",
+      "followup_answer_text": "inspect lead-to-booking conversion",
+      "base_primary_prediction": "follow-up latency split",
+      "base_followup_prediction": "quote-to-close conversion",
+      "skill_primary_prediction": "lead-to-appointment by response-time cohort",
+      "skill_followup_prediction": "appointment-to-booking on prompt-contact leads",
+      "base_primary_valid": true,
+      "base_followup_valid": true,
+      "skill_primary_valid": true,
+      "skill_followup_valid": true,
+      "base_primary_correct": false,
+      "base_followup_correct": true,
+      "skill_primary_correct": false,
+      "skill_followup_correct": true,
+      "base_exact_correct": false,
+      "skill_exact_correct": false,
+      "judge_notes": "Primaries stay on response-time execution. Both follow-ups name concrete downstream conversion reads close enough to the booking-conversion arbiter."
+    },
+    {
+      "id": "v14im2_009",
+      "title": "Homebuilder Miss: Funding Stress Or Demand Softness?",
+      "task_family": "proxy_family_selection",
+      "source_case_id": "v14cpi_001",
+      "primary_answer_text": "financing conditions and mortgage affordability",
+      "followup_answer_text": "orders stay weak even if rate and credit proxies normalize",
+      "base_primary_prediction": "mortgage affordability friction",
+      "base_followup_prediction": "if traffic and tours roll over",
+      "skill_primary_prediction": "mortgage affordability friction",
+      "skill_followup_prediction": "traffic and tours roll over",
+      "base_primary_valid": true,
+      "base_followup_valid": true,
+      "skill_primary_valid": true,
+      "skill_followup_valid": true,
+      "base_primary_correct": true,
+      "base_followup_correct": false,
+      "skill_primary_correct": true,
+      "skill_followup_correct": false,
+      "base_exact_correct": false,
+      "skill_exact_correct": false,
+      "judge_notes": "Primary matches the financing/mortgage-affordability read. Follow-up misses the required falsifier: weak orders after rates/credit normalize, not weaker traffic or tours."
+    },
+    {
+      "id": "v14im2_010",
+      "title": "Homebuilder Miss: Funding Stress Or Demand Softness?",
+      "task_family": "proxy_family_selection",
+      "source_case_id": "v14cpi_001",
+      "primary_answer_text": "orders stay weak even after financing proxies normalize",
+      "followup_answer_text": "inspect order intake and cancellations after financing normalization",
+      "base_primary_prediction": "top-of-funnel demand must roll over",
+      "base_followup_prediction": "model-home visits and web traffic",
+      "skill_primary_prediction": "top-of-funnel weakens despite stable rates",
+      "skill_followup_prediction": "model-home visits stay weak",
+      "base_primary_valid": true,
+      "base_followup_valid": true,
+      "skill_primary_valid": true,
+      "skill_followup_valid": true,
+      "base_primary_correct": false,
+      "base_followup_correct": false,
+      "skill_primary_correct": false,
+      "skill_followup_correct": false,
+      "base_exact_correct": false,
+      "skill_exact_correct": false,
+      "judge_notes": "These answers switch to top-of-funnel demand proxies. The canonical flip requires order intake/cancellations staying weak after financing conditions improve."
+    },
+    {
+      "id": "v14im2_011",
+      "title": "Alt-Token Slump: Base-Asset Weakness Or Liquidity Drain?",
+      "task_family": "proxy_family_selection",
+      "source_case_id": "v14cpi_002",
+      "primary_answer_text": "retail liquidity and alt-beta risk appetite",
+      "followup_answer_text": "project-specific activity breaks while broad alt liquidity normalizes",
+      "base_primary_prediction": "broad alt-liquidity drain",
+      "base_followup_prediction": "watch DAU/fees diverge from peers",
+      "skill_primary_prediction": "broad alt-liquidity drain",
+      "skill_followup_prediction": "DAU/fees break versus peers",
+      "base_primary_valid": true,
+      "base_followup_valid": true,
+      "skill_primary_valid": true,
+      "skill_followup_valid": true,
+      "base_primary_correct": true,
+      "base_followup_correct": true,
+      "skill_primary_correct": true,
+      "skill_followup_correct": true,
+      "base_exact_correct": true,
+      "skill_exact_correct": true,
+      "judge_notes": "Broad alt-liquidity drain is the right first read, and DAU/fees breaking versus peers is a concrete project-specific falsifier consistent with the broad-liquidity story normalizing elsewhere."
+    },
+    {
+      "id": "v14im2_012",
+      "title": "Alt-Token Slump: Base-Asset Weakness Or Liquidity Drain?",
+      "task_family": "proxy_family_selection",
+      "source_case_id": "v14cpi_002",
+      "primary_answer_text": "project-specific activity breaks while broad alt liquidity normalizes",
+      "followup_answer_text": "compare project activity against broader alt-liquidity normalization",
+      "base_primary_prediction": "token-specific DAU/fees break",
+      "base_followup_prediction": "compare against gaming-alt peers",
+      "skill_primary_prediction": "token-specific DAU/fees rollover",
+      "skill_followup_prediction": "compare with gaming-token peers",
+      "base_primary_valid": true,
+      "base_followup_valid": true,
+      "skill_primary_valid": true,
+      "skill_followup_valid": true,
+      "base_primary_correct": true,
+      "base_followup_correct": true,
+      "skill_primary_correct": true,
+      "skill_followup_correct": true,
+      "base_exact_correct": true,
+      "skill_exact_correct": true,
+      "judge_notes": "Token-specific DAU/fees weakness is an acceptable specific version of project activity breaking, and comparing against gaming-alt peers is a reasonable narrower proxy for broader alt-liquidity normalization."
+    },
+    {
+      "id": "v14im2_013",
+      "title": "Regional Bank Stress And A Small-Cap SaaS Selloff",
+      "task_family": "transmission_supportability",
+      "source_case_id": "v14cpi_006",
+      "primary_answer_text": "valuation-duration and refinancing channel",
+      "followup_answer_text": "watch spreads and duration-sensitive peers while company metrics stay intact",
+      "base_primary_prediction": "duration de-rate via tighter credit",
+      "base_followup_prediction": "watch HY spreads versus software basket",
+      "skill_primary_prediction": "credit-tightening duration de-rate",
+      "skill_followup_prediction": "watch HY OAS versus software basket",
+      "base_primary_valid": true,
+      "base_followup_valid": true,
+      "skill_primary_valid": true,
+      "skill_followup_valid": true,
+      "base_primary_correct": true,
+      "base_followup_correct": true,
+      "skill_primary_correct": true,
+      "skill_followup_correct": true,
+      "base_exact_correct": true,
+      "skill_exact_correct": true,
+      "judge_notes": "Both primary answers capture the indirect duration/refinancing channel, and both follow-ups name the right discriminating market cross-check via HY spreads plus software-peer/basket co-move."
+    },
+    {
+      "id": "v14im2_014",
+      "title": "Regional Bank Stress And A Small-Cap SaaS Selloff",
+      "task_family": "transmission_supportability",
+      "source_case_id": "v14cpi_006",
+      "primary_answer_text": "spreads widen and duration-sensitive peers sell off together",
+      "followup_answer_text": "company metrics stay intact while you watch HY spreads and duration-sensitive peers",
+      "base_primary_prediction": "peer software tracks spreads, not disclosures",
+      "base_followup_prediction": "guidance and liquidity stay intact",
+      "skill_primary_prediction": "basket co-move with clean liquidity",
+      "skill_followup_prediction": "liquidity and guidance stay intact",
+      "base_primary_valid": true,
+      "base_followup_valid": true,
+      "skill_primary_valid": true,
+      "skill_followup_valid": true,
+      "base_primary_correct": true,
+      "base_followup_correct": true,
+      "skill_primary_correct": false,
+      "skill_followup_correct": true,
+      "base_exact_correct": true,
+      "skill_exact_correct": false,
+      "judge_notes": "Base primary matches the needed peer-and-spread confirmation pattern; skill primary gets peer co-move and clean liquidity but misses the crucial spread signal. Both follow-ups correctly keep company guidance/liquidity intact."
+    },
+    {
+      "id": "v14im2_015",
+      "title": "Biotech Rally: Primary Driver Or Pure Squeeze?",
+      "task_family": "primary_driver_vs_amplifier",
+      "source_case_id": "v14cpi_008",
+      "primary_answer_text": "FDA advisory-panel vote is the primary driver",
+      "followup_answer_text": "keep the primary catalyst separate from squeeze amplification",
+      "base_primary_prediction": "FDA vote primary, squeeze amplifier",
+      "base_followup_prediction": "frame short-covering as secondary amplification",
+      "skill_primary_prediction": "FDA vote trigger, squeeze amplifier",
+      "skill_followup_prediction": "describe squeeze as secondary boost",
+      "base_primary_valid": true,
+      "base_followup_valid": true,
+      "skill_primary_valid": true,
+      "skill_followup_valid": true,
+      "base_primary_correct": true,
+      "base_followup_correct": true,
+      "skill_primary_correct": true,
+      "skill_followup_correct": true,
+      "base_exact_correct": true,
+      "skill_exact_correct": true,
+      "judge_notes": "Both answers keep the FDA advisory-panel vote as the primary driver and treat the squeeze only as secondary amplification."
+    },
+    {
+      "id": "v14im2_016",
+      "title": "Biotech Rally: Primary Driver Or Pure Squeeze?",
+      "task_family": "primary_driver_vs_amplifier",
+      "source_case_id": "v14cpi_008",
+      "primary_answer_text": "FDA advisory-panel vote is the primary driver while squeeze dynamics amplify",
+      "followup_answer_text": "keep the primary catalyst separate from squeeze amplification",
+      "base_primary_prediction": "AdCom-driven rally, short-covering amplified",
+      "base_followup_prediction": "squeeze narrative stays secondary",
+      "skill_primary_prediction": "AdCom win drove move, shorts amplified",
+      "skill_followup_prediction": "keep short-covering secondary",
+      "base_primary_valid": true,
+      "base_followup_valid": true,
+      "skill_primary_valid": true,
+      "skill_followup_valid": true,
+      "base_primary_correct": true,
+      "base_followup_correct": true,
+      "skill_primary_correct": true,
+      "skill_followup_correct": true,
+      "base_exact_correct": true,
+      "skill_exact_correct": true,
+      "judge_notes": "Both answers preserve the AdCom/FDA catalyst as primary and keep short-covering explicitly secondary rather than replacing the causal story."
+    }
+  ],
+  "source_summary_path": "summary_llm_judged.json",
+  "judge": {
+    "method": "llm_semantic_compare",
+    "model": "gpt-5.4",
+    "reasoning_effort": "low",
+    "batch_size": 4,
+    "artifact_dir": "/Users/zeyu/Documents/bach_private_cache/.bench/v14-track-i-pressure-mining-round2-results-20260401-190528/track_i_judge_artifacts_20260401-192047",
+    "questions_path": "/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v14/track_i_pressure_mining_round2_questions.json",
+    "ground_truth_path": "/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v14/track_i_pressure_mining_round2_ground_truth.json",
+    "batches": [
+      {
+        "returncode": 0,
+        "timed_out": false,
+        "duration_seconds": 106.39,
+        "stdout": "{\"judgments\":[{\"id\":\"v14im2_001\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":true,\"skill_followup_correct\":true,\"notes\":\"Both primaries press financing conditions; both follow-ups use downstream close/conversion outcomes, which are acceptable order-channel proxies.\"},{\"id\":\"v14im2_002\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":true,\"skill_followup_correct\":true,\"notes\":\"Approval or term-relief probes both fit the financing-condition test, and close-rate/order conversion in financed cohorts is a concrete downstream arbiter.\"},{\"id\":\"v14im2_003\",\"base_primary_correct\":true,\"base_followup_correct\":false,\"skill_primary_correct\":true,\"skill_followup_correct\":false,\"notes\":\"Both primaries correctly shock the fuel-cost lever; the follow-ups are wrong because revenue/bookings are not the direct margin or EPS readout.\"},{\"id\":\"v14im2_004\",\"base_primary_correct\":true,\"base_followup_correct\":false,\"skill_primary_correct\":true,\"skill_followup_correct\":false,\"notes\":\"Both primaries stay on fuel-cost stress; both follow-ups miss the canonical earnings-bridge readout of unit margin or EPS sensitivity.\"}]}\n",
+        "stderr": "on: approved-quote close rates\nSkill primary prediction: financing-term relief test\nSkill follow-up prediction: close-rate rebound in financed cohorts\n\nCase ID: v14im2_003\nTitle: Fuel Shock Or Demand Weakness: Which Probe Comes First?\nTask family: pressure_test_design\nPrimary question: What lever would you shock first to separate fuel pressure from demand weakness?\nFollow-up question: What readout should settle it once you run that stress?\nEvidence summary:\n- forward bookings and unit revenue are stable while fuel moves sharply\n- the cleanest first arbiter is the cost lever, with margin or EPS as the direct downstream readout\nCommon failure modes:\n- switching to a fare or demand probe before testing the cost shock\n- watching revenue metrics instead of the direct margin or EPS consequence of fuel stress\nCanonical primary answer: stress jet-fuel costs first\nCanonical follow-up answer: inspect unit margin or EPS sensitivity\nBase primary prediction: shock jet fuel costs\nBase follow-up prediction: next unit revenue print\nSkill primary prediction: shock jet fuel crack first\nSkill follow-up prediction: watch forward bookings\n\nCase ID: v14im2_004\nTitle: Fuel Shock Or Demand Weakness: Which Probe Comes First?\nTask family: pressure_test_design\nPrimary question: What is the cleanest first arbiter for the airline selloff?\nFollow-up question: What number matters most once you run that stress?\nEvidence summary:\n- the packet already leaves demand-side evidence mostly intact\n- fuel-cost pressure should be challenged first, then judged on the earnings bridge rather than on bookings chatter\nCommon failure modes:\n- choosing a demand-side arbiter despite stable booking evidence\n- tracking close-in yields or PRASM when the canonical downstream readout is margin or EPS sensitivity\nCanonical primary answer: stress jet-fuel costs first\nCanonical follow-up answer: inspect unit margin or EPS sensitivity\nBase primary prediction: shock jet fuel costs\nBase follow-up prediction: next unit revenue print\nSkill primary prediction: shock jet fuel crack first\nSkill follow-up prediction: watch forward bookings\n\nmcp: playwright starting\n2026-04-01T11:20:48.131151Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at \"/Users/zeyu/Documents/bach_private_cache/.bench/codex_home_base/shell_snapshots/019d48c6-4a8b-7941-8630-afeb714561ae.tmp-1775042448014874000\": Os { code: 2, kind: NotFound, message: \"No such file or directory\" }\n2026-04-01T11:20:49.700893Z  WARN codex_rmcp_client::rmcp_client: Failed to terminate MCP process group 13197: Operation not permitted (os error 1)\nmcp: playwright failed: MCP client for `playwright` failed to start: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response\nmcp startup: failed: playwright\ncodex\n{\"judgments\":[{\"id\":\"v14im2_001\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":true,\"skill_followup_correct\":true,\"notes\":\"Both primaries press financing conditions; both follow-ups use downstream close/conversion outcomes, which are acceptable order-channel proxies.\"},{\"id\":\"v14im2_002\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":true,\"skill_followup_correct\":true,\"notes\":\"Approval or term-relief probes both fit the financing-condition test, and close-rate/order conversion in financed cohorts is a concrete downstream arbiter.\"},{\"id\":\"v14im2_003\",\"base_primary_correct\":true,\"base_followup_correct\":false,\"skill_primary_correct\":true,\"skill_followup_correct\":false,\"notes\":\"Both primaries correctly shock the fuel-cost lever; the follow-ups are wrong because revenue/bookings are not the direct margin or EPS readout.\"},{\"id\":\"v14im2_004\",\"base_primary_correct\":true,\"base_followup_correct\":false,\"skill_primary_correct\":true,\"skill_followup_correct\":false,\"notes\":\"Both primaries stay on fuel-cost stress; both follow-ups miss the canonical earnings-bridge readout of unit margin or EPS sensitivity.\"}]}\ntokens used\n7,319\n",
+        "raw_output": "{\"judgments\":[{\"id\":\"v14im2_001\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":true,\"skill_followup_correct\":true,\"notes\":\"Both primaries press financing conditions; both follow-ups use downstream close/conversion outcomes, which are acceptable order-channel proxies.\"},{\"id\":\"v14im2_002\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":true,\"skill_followup_correct\":true,\"notes\":\"Approval or term-relief probes both fit the financing-condition test, and close-rate/order conversion in financed cohorts is a concrete downstream arbiter.\"},{\"id\":\"v14im2_003\",\"base_primary_correct\":true,\"base_followup_correct\":false,\"skill_primary_correct\":true,\"skill_followup_correct\":false,\"notes\":\"Both primaries correctly shock the fuel-cost lever; the follow-ups are wrong because revenue/bookings are not the direct margin or EPS readout.\"},{\"id\":\"v14im2_004\",\"base_primary_correct\":true,\"base_followup_correct\":false,\"skill_primary_correct\":true,\"skill_followup_correct\":false,\"notes\":\"Both primaries stay on fuel-cost stress; both follow-ups miss the canonical earnings-bridge readout of unit margin or EPS sensitivity.\"}]}",
+        "parsed_output": {
+          "judgments": [
+            {
+              "id": "v14im2_001",
+              "base_primary_correct": true,
+              "base_followup_correct": true,
+              "skill_primary_correct": true,
+              "skill_followup_correct": true,
+              "notes": "Both primaries press financing conditions; both follow-ups use downstream close/conversion outcomes, which are acceptable order-channel proxies."
+            },
+            {
+              "id": "v14im2_002",
+              "base_primary_correct": true,
+              "base_followup_correct": true,
+              "skill_primary_correct": true,
+              "skill_followup_correct": true,
+              "notes": "Approval or term-relief probes both fit the financing-condition test, and close-rate/order conversion in financed cohorts is a concrete downstream arbiter."
+            },
+            {
+              "id": "v14im2_003",
+              "base_primary_correct": true,
+              "base_followup_correct": false,
+              "skill_primary_correct": true,
+              "skill_followup_correct": false,
+              "notes": "Both primaries correctly shock the fuel-cost lever; the follow-ups are wrong because revenue/bookings are not the direct margin or EPS readout."
+            },
+            {
+              "id": "v14im2_004",
+              "base_primary_correct": true,
+              "base_followup_correct": false,
+              "skill_primary_correct": true,
+              "skill_followup_correct": false,
+              "notes": "Both primaries stay on fuel-cost stress; both follow-ups miss the canonical earnings-bridge readout of unit margin or EPS sensitivity."
+            }
+          ]
+        },
+        "parse_error": null
+      },
+      {
+        "returncode": 0,
+        "timed_out": false,
+        "duration_seconds": 200.64,
+        "stdout": "{\"judgments\":[{\"id\":\"v14im2_005\",\"base_primary_correct\":true,\"base_followup_correct\":false,\"skill_primary_correct\":false,\"skill_followup_correct\":false,\"notes\":\"Base primary matches the OEM schedule/inventory-reset probe; follow-ups miss the shipment/backlog arbiter, and skill stays on lithium pricing.\"},{\"id\":\"v14im2_006\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":false,\"skill_followup_correct\":false,\"notes\":\"Base primary fits the customer schedule stress, and wholesale versus retail sell-through is a valid downstream shipment-path arbiter; skill remains on lithium/sell-through.\"},{\"id\":\"v14im2_007\",\"base_primary_correct\":false,\"base_followup_correct\":false,\"skill_primary_correct\":false,\"skill_followup_correct\":true,\"notes\":\"Both primaries are execution-first rather than policy-generosity probes. Base follow-up stays too early in the funnel; skill follow-up still points to booking conversion.\"},{\"id\":\"v14im2_008\",\"base_primary_correct\":false,\"base_followup_correct\":true,\"skill_primary_correct\":false,\"skill_followup_correct\":true,\"notes\":\"Primaries stay on response-time execution. Both follow-ups name concrete downstream conversion reads close enough to the booking-conversion arbiter.\"}]}\n",
+        "stderr": "_test_design\nPrimary question: What first probe most directly challenges the policy step-down thesis?\nFollow-up question: What funnel readout matters once you run it?\nEvidence summary:\n- policy generosity fell more than top-of-funnel lead volume, while conversion broke sharply\n- lead-to-booking conversion is the key downstream readout once incentive economics are stressed\nCommon failure modes:\n- switching to a sales-execution probe before challenging the policy thesis directly\n- watching rep response-time diagnostics instead of the incentive-linked conversion step\nCanonical primary answer: stress incentive-policy generosity first\nCanonical follow-up answer: inspect lead-to-booking conversion\nBase primary prediction: follow-up latency split\nBase follow-up prediction: lead-to-set conversion\nSkill primary prediction: lead-to-appointment by response-time cohort\nSkill follow-up prediction: appointment-to-booking on prompt-contact leads\n\nCase ID: v14im2_008\nTitle: Residential Solar Miss: Policy Step-Down Or Sales Execution?\nTask family: pressure_test_design\nPrimary question: If you want one first arbiter between policy economics and execution slippage, what is it?\nFollow-up question: What downstream conversion readout earns the most weight after that?\nEvidence summary:\n- the packet leaves both policy and execution stories live, but the leading thesis is policy step-down\n- the right follow-through is to inspect conversion, not just activity or response time\nCommon failure modes:\n- overweighting rep-turnover anecdotes instead of directly testing incentive economics\n- staying in process metrics rather than the conversion step that separates the stories\nCanonical primary answer: stress incentive-policy generosity first\nCanonical follow-up answer: inspect lead-to-booking conversion\nBase primary prediction: follow-up latency split\nBase follow-up prediction: quote-to-close conversion\nSkill primary prediction: lead-to-appointment by response-time cohort\nSkill follow-up prediction: appointment-to-booking on prompt-contact leads\n\nmcp: playwright starting\n2026-04-01T11:22:34.772011Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at \"/Users/zeyu/Documents/bach_private_cache/.bench/codex_home_base/shell_snapshots/019d48c7-ea22-7883-b712-5a296b1fde86.tmp-1775042554404600000\": Os { code: 2, kind: NotFound, message: \"No such file or directory\" }\n2026-04-01T11:22:36.385999Z  WARN codex_rmcp_client::rmcp_client: Failed to terminate MCP process group 13530: Operation not permitted (os error 1)\nmcp: playwright failed: MCP client for `playwright` failed to start: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response\nmcp startup: failed: playwright\ncodex\n{\"judgments\":[{\"id\":\"v14im2_005\",\"base_primary_correct\":true,\"base_followup_correct\":false,\"skill_primary_correct\":false,\"skill_followup_correct\":false,\"notes\":\"Base primary matches the OEM schedule/inventory-reset probe; follow-ups miss the shipment/backlog arbiter, and skill stays on lithium pricing.\"},{\"id\":\"v14im2_006\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":false,\"skill_followup_correct\":false,\"notes\":\"Base primary fits the customer schedule stress, and wholesale versus retail sell-through is a valid downstream shipment-path arbiter; skill remains on lithium/sell-through.\"},{\"id\":\"v14im2_007\",\"base_primary_correct\":false,\"base_followup_correct\":false,\"skill_primary_correct\":false,\"skill_followup_correct\":true,\"notes\":\"Both primaries are execution-first rather than policy-generosity probes. Base follow-up stays too early in the funnel; skill follow-up still points to booking conversion.\"},{\"id\":\"v14im2_008\",\"base_primary_correct\":false,\"base_followup_correct\":true,\"skill_primary_correct\":false,\"skill_followup_correct\":true,\"notes\":\"Primaries stay on response-time execution. Both follow-ups name concrete downstream conversion reads close enough to the booking-conversion arbiter.\"}]}\ntokens used\n19,293\n",
+        "raw_output": "{\"judgments\":[{\"id\":\"v14im2_005\",\"base_primary_correct\":true,\"base_followup_correct\":false,\"skill_primary_correct\":false,\"skill_followup_correct\":false,\"notes\":\"Base primary matches the OEM schedule/inventory-reset probe; follow-ups miss the shipment/backlog arbiter, and skill stays on lithium pricing.\"},{\"id\":\"v14im2_006\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":false,\"skill_followup_correct\":false,\"notes\":\"Base primary fits the customer schedule stress, and wholesale versus retail sell-through is a valid downstream shipment-path arbiter; skill remains on lithium/sell-through.\"},{\"id\":\"v14im2_007\",\"base_primary_correct\":false,\"base_followup_correct\":false,\"skill_primary_correct\":false,\"skill_followup_correct\":true,\"notes\":\"Both primaries are execution-first rather than policy-generosity probes. Base follow-up stays too early in the funnel; skill follow-up still points to booking conversion.\"},{\"id\":\"v14im2_008\",\"base_primary_correct\":false,\"base_followup_correct\":true,\"skill_primary_correct\":false,\"skill_followup_correct\":true,\"notes\":\"Primaries stay on response-time execution. Both follow-ups name concrete downstream conversion reads close enough to the booking-conversion arbiter.\"}]}",
+        "parsed_output": {
+          "judgments": [
+            {
+              "id": "v14im2_005",
+              "base_primary_correct": true,
+              "base_followup_correct": false,
+              "skill_primary_correct": false,
+              "skill_followup_correct": false,
+              "notes": "Base primary matches the OEM schedule/inventory-reset probe; follow-ups miss the shipment/backlog arbiter, and skill stays on lithium pricing."
+            },
+            {
+              "id": "v14im2_006",
+              "base_primary_correct": true,
+              "base_followup_correct": true,
+              "skill_primary_correct": false,
+              "skill_followup_correct": false,
+              "notes": "Base primary fits the customer schedule stress, and wholesale versus retail sell-through is a valid downstream shipment-path arbiter; skill remains on lithium/sell-through."
+            },
+            {
+              "id": "v14im2_007",
+              "base_primary_correct": false,
+              "base_followup_correct": false,
+              "skill_primary_correct": false,
+              "skill_followup_correct": true,
+              "notes": "Both primaries are execution-first rather than policy-generosity probes. Base follow-up stays too early in the funnel; skill follow-up still points to booking conversion."
+            },
+            {
+              "id": "v14im2_008",
+              "base_primary_correct": false,
+              "base_followup_correct": true,
+              "skill_primary_correct": false,
+              "skill_followup_correct": true,
+              "notes": "Primaries stay on response-time execution. Both follow-ups name concrete downstream conversion reads close enough to the booking-conversion arbiter."
+            }
+          ]
+        },
+        "parse_error": null
+      },
+      {
+        "returncode": 0,
+        "timed_out": false,
+        "duration_seconds": 113.11,
+        "stdout": "{\"judgments\":[{\"id\":\"v14im2_009\",\"base_primary_correct\":true,\"base_followup_correct\":false,\"skill_primary_correct\":true,\"skill_followup_correct\":false,\"notes\":\"Primary matches the financing/mortgage-affordability read. Follow-up misses the required falsifier: weak orders after rates/credit normalize, not weaker traffic or tours.\"},{\"id\":\"v14im2_010\",\"base_primary_correct\":false,\"base_followup_correct\":false,\"skill_primary_correct\":false,\"skill_followup_correct\":false,\"notes\":\"These answers switch to top-of-funnel demand proxies. The canonical flip requires order intake/cancellations staying weak after financing conditions improve.\"},{\"id\":\"v14im2_011\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":true,\"skill_followup_correct\":true,\"notes\":\"Broad alt-liquidity drain is the right first read, and DAU/fees breaking versus peers is a concrete project-specific falsifier consistent with the broad-liquidity story normalizing elsewhere.\"},{\"id\":\"v14im2_012\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":true,\"skill_followup_correct\":true,\"notes\":\"Token-specific DAU/fees weakness is an acceptable specific version of project activity breaking, and comparing against gaming-alt peers is a reasonable narrower proxy for broader alt-liquidity normalization.\"}]}\n",
+        "stderr": ": What would actually falsify that read?\nEvidence summary:\n- majors stayed stable while lower-liquidity alt conditions deteriorated sharply\n- the true falsifier is project-specific weakness surviving a broader alt-liquidity normalization\nCommon failure modes:\n- giving a broad crypto answer without naming the retail-liquidity and alt-beta channel\n- watching BTC or ETH direction instead of the project-specific break that would falsify the broad-liquidity story\nCanonical primary answer: retail liquidity and alt-beta risk appetite\nCanonical follow-up answer: project-specific activity breaks while broad alt liquidity normalizes\nBase primary prediction: broad alt-liquidity drain\nBase follow-up prediction: watch DAU/fees diverge from peers\nSkill primary prediction: broad alt-liquidity drain\nSkill follow-up prediction: DAU/fees break versus peers\n\nCase ID: v14im2_012\nTitle: Alt-Token Slump: Base-Asset Weakness Or Liquidity Drain?\nTask family: proxy_family_selection\nPrimary question: What single break would push you away from the broad-liquidity story?\nFollow-up question: What do you compare it against when checking that break?\nEvidence summary:\n- project usage was flat in the packet, so a token-specific thesis needs a clear break there\n- the comparison set is broader alt-liquidity normalization rather than BTC or ETH direction alone\nCommon failure modes:\n- calling any further alt weakness a falsifier even if broad liquidity is still broken\n- using majors as the comparator instead of broader alt-liquidity conditions\nCanonical primary answer: project-specific activity breaks while broad alt liquidity normalizes\nCanonical follow-up answer: compare project activity against broader alt-liquidity normalization\nBase primary prediction: token-specific DAU/fees break\nBase follow-up prediction: compare against gaming-alt peers\nSkill primary prediction: token-specific DAU/fees rollover\nSkill follow-up prediction: compare with gaming-token peers\n\nmcp: playwright starting\n2026-04-01T11:25:55.266143Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at \"/Users/zeyu/Documents/bach_private_cache/.bench/codex_home_base/shell_snapshots/019d48ca-fa03-7ba3-a1bf-9296f523bdd9.tmp-1775042755081717000\": Os { code: 2, kind: NotFound, message: \"No such file or directory\" }\n2026-04-01T11:25:57.633516Z  WARN codex_rmcp_client::rmcp_client: Failed to terminate MCP process group 14179: Operation not permitted (os error 1)\nmcp: playwright failed: MCP client for `playwright` failed to start: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response\nmcp startup: failed: playwright\ncodex\n{\"judgments\":[{\"id\":\"v14im2_009\",\"base_primary_correct\":true,\"base_followup_correct\":false,\"skill_primary_correct\":true,\"skill_followup_correct\":false,\"notes\":\"Primary matches the financing/mortgage-affordability read. Follow-up misses the required falsifier: weak orders after rates/credit normalize, not weaker traffic or tours.\"},{\"id\":\"v14im2_010\",\"base_primary_correct\":false,\"base_followup_correct\":false,\"skill_primary_correct\":false,\"skill_followup_correct\":false,\"notes\":\"These answers switch to top-of-funnel demand proxies. The canonical flip requires order intake/cancellations staying weak after financing conditions improve.\"},{\"id\":\"v14im2_011\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":true,\"skill_followup_correct\":true,\"notes\":\"Broad alt-liquidity drain is the right first read, and DAU/fees breaking versus peers is a concrete project-specific falsifier consistent with the broad-liquidity story normalizing elsewhere.\"},{\"id\":\"v14im2_012\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":true,\"skill_followup_correct\":true,\"notes\":\"Token-specific DAU/fees weakness is an acceptable specific version of project activity breaking, and comparing against gaming-alt peers is a reasonable narrower proxy for broader alt-liquidity normalization.\"}]}\ntokens used\n11,119\n",
+        "raw_output": "{\"judgments\":[{\"id\":\"v14im2_009\",\"base_primary_correct\":true,\"base_followup_correct\":false,\"skill_primary_correct\":true,\"skill_followup_correct\":false,\"notes\":\"Primary matches the financing/mortgage-affordability read. Follow-up misses the required falsifier: weak orders after rates/credit normalize, not weaker traffic or tours.\"},{\"id\":\"v14im2_010\",\"base_primary_correct\":false,\"base_followup_correct\":false,\"skill_primary_correct\":false,\"skill_followup_correct\":false,\"notes\":\"These answers switch to top-of-funnel demand proxies. The canonical flip requires order intake/cancellations staying weak after financing conditions improve.\"},{\"id\":\"v14im2_011\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":true,\"skill_followup_correct\":true,\"notes\":\"Broad alt-liquidity drain is the right first read, and DAU/fees breaking versus peers is a concrete project-specific falsifier consistent with the broad-liquidity story normalizing elsewhere.\"},{\"id\":\"v14im2_012\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":true,\"skill_followup_correct\":true,\"notes\":\"Token-specific DAU/fees weakness is an acceptable specific version of project activity breaking, and comparing against gaming-alt peers is a reasonable narrower proxy for broader alt-liquidity normalization.\"}]}",
+        "parsed_output": {
+          "judgments": [
+            {
+              "id": "v14im2_009",
+              "base_primary_correct": true,
+              "base_followup_correct": false,
+              "skill_primary_correct": true,
+              "skill_followup_correct": false,
+              "notes": "Primary matches the financing/mortgage-affordability read. Follow-up misses the required falsifier: weak orders after rates/credit normalize, not weaker traffic or tours."
+            },
+            {
+              "id": "v14im2_010",
+              "base_primary_correct": false,
+              "base_followup_correct": false,
+              "skill_primary_correct": false,
+              "skill_followup_correct": false,
+              "notes": "These answers switch to top-of-funnel demand proxies. The canonical flip requires order intake/cancellations staying weak after financing conditions improve."
+            },
+            {
+              "id": "v14im2_011",
+              "base_primary_correct": true,
+              "base_followup_correct": true,
+              "skill_primary_correct": true,
+              "skill_followup_correct": true,
+              "notes": "Broad alt-liquidity drain is the right first read, and DAU/fees breaking versus peers is a concrete project-specific falsifier consistent with the broad-liquidity story normalizing elsewhere."
+            },
+            {
+              "id": "v14im2_012",
+              "base_primary_correct": true,
+              "base_followup_correct": true,
+              "skill_primary_correct": true,
+              "skill_followup_correct": true,
+              "notes": "Token-specific DAU/fees weakness is an acceptable specific version of project activity breaking, and comparing against gaming-alt peers is a reasonable narrower proxy for broader alt-liquidity normalization."
+            }
+          ]
+        },
+        "parse_error": null
+      },
+      {
+        "returncode": 0,
+        "timed_out": false,
+        "duration_seconds": 60.83,
+        "stdout": "{\"judgments\":[{\"id\":\"v14im2_013\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":true,\"skill_followup_correct\":true,\"notes\":\"Both primary answers capture the indirect duration/refinancing channel, and both follow-ups name the right discriminating market cross-check via HY spreads plus software-peer/basket co-move.\"},{\"id\":\"v14im2_014\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":false,\"skill_followup_correct\":true,\"notes\":\"Base primary matches the needed peer-and-spread confirmation pattern; skill primary gets peer co-move and clean liquidity but misses the crucial spread signal. Both follow-ups correctly keep company guidance/liquidity intact.\"},{\"id\":\"v14im2_015\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":true,\"skill_followup_correct\":true,\"notes\":\"Both answers keep the FDA advisory-panel vote as the primary driver and treat the squeeze only as secondary amplification.\"},{\"id\":\"v14im2_016\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":true,\"skill_followup_correct\":true,\"notes\":\"Both answers preserve the AdCom/FDA catalyst as primary and keep short-covering explicitly secondary rather than replacing the causal story.\"}]}\n",
+        "stderr": "n: How should the note handle the squeeze without replacing the catalyst?\nEvidence summary:\n- most of the move happened immediately after the regulatory event and before the later rumor\n- short interest can explain amplification, but it should not replace the primary catalyst in the note\nCommon failure modes:\n- collapsing primary catalyst and amplifier into one undifferentiated answer\n- letting the later rumor dominate the writeup because it sounds more dramatic\nCanonical primary answer: FDA advisory-panel vote is the primary driver\nCanonical follow-up answer: keep the primary catalyst separate from squeeze amplification\nBase primary prediction: FDA vote primary, squeeze amplifier\nBase follow-up prediction: frame short-covering as secondary amplification\nSkill primary prediction: FDA vote trigger, squeeze amplifier\nSkill follow-up prediction: describe squeeze as secondary boost\n\nCase ID: v14im2_016\nTitle: Biotech Rally: Primary Driver Or Pure Squeeze?\nTask family: primary_driver_vs_amplifier\nPrimary question: How should the move be phrased so catalyst and amplifier do not get collapsed?\nFollow-up question: What should stay secondary even if short-covering mattered?\nEvidence summary:\n- the timing shows the regulatory event came first and explains most of the move\n- squeeze dynamics matter as magnitude amplification, not as a replacement causal story\nCommon failure modes:\n- describing the move as a pure squeeze despite the timing evidence\n- focusing the follow-up on the rumor rather than on preserving the catalyst-versus-amplifier distinction\nCanonical primary answer: FDA advisory-panel vote is the primary driver while squeeze dynamics amplify\nCanonical follow-up answer: keep the primary catalyst separate from squeeze amplification\nBase primary prediction: AdCom-driven rally, short-covering amplified\nBase follow-up prediction: squeeze narrative stays secondary\nSkill primary prediction: AdCom win drove move, shorts amplified\nSkill follow-up prediction: keep short-covering secondary\n\nmcp: playwright starting\n2026-04-01T11:27:48.305121Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at \"/Users/zeyu/Documents/bach_private_cache/.bench/codex_home_base/shell_snapshots/019d48cc-b3e2-75d0-941c-132f23bd514e.tmp-1775042868207433000\": Os { code: 2, kind: NotFound, message: \"No such file or directory\" }\n2026-04-01T11:27:50.221016Z  WARN codex_rmcp_client::rmcp_client: Failed to terminate MCP process group 14549: Operation not permitted (os error 1)\nmcp: playwright failed: MCP client for `playwright` failed to start: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response\nmcp startup: failed: playwright\ncodex\n{\"judgments\":[{\"id\":\"v14im2_013\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":true,\"skill_followup_correct\":true,\"notes\":\"Both primary answers capture the indirect duration/refinancing channel, and both follow-ups name the right discriminating market cross-check via HY spreads plus software-peer/basket co-move.\"},{\"id\":\"v14im2_014\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":false,\"skill_followup_correct\":true,\"notes\":\"Base primary matches the needed peer-and-spread confirmation pattern; skill primary gets peer co-move and clean liquidity but misses the crucial spread signal. Both follow-ups correctly keep company guidance/liquidity intact.\"},{\"id\":\"v14im2_015\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":true,\"skill_followup_correct\":true,\"notes\":\"Both answers keep the FDA advisory-panel vote as the primary driver and treat the squeeze only as secondary amplification.\"},{\"id\":\"v14im2_016\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":true,\"skill_followup_correct\":true,\"notes\":\"Both answers preserve the AdCom/FDA catalyst as primary and keep short-covering explicitly secondary rather than replacing the causal story.\"}]}\ntokens used\n9,531\n",
+        "raw_output": "{\"judgments\":[{\"id\":\"v14im2_013\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":true,\"skill_followup_correct\":true,\"notes\":\"Both primary answers capture the indirect duration/refinancing channel, and both follow-ups name the right discriminating market cross-check via HY spreads plus software-peer/basket co-move.\"},{\"id\":\"v14im2_014\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":false,\"skill_followup_correct\":true,\"notes\":\"Base primary matches the needed peer-and-spread confirmation pattern; skill primary gets peer co-move and clean liquidity but misses the crucial spread signal. Both follow-ups correctly keep company guidance/liquidity intact.\"},{\"id\":\"v14im2_015\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":true,\"skill_followup_correct\":true,\"notes\":\"Both answers keep the FDA advisory-panel vote as the primary driver and treat the squeeze only as secondary amplification.\"},{\"id\":\"v14im2_016\",\"base_primary_correct\":true,\"base_followup_correct\":true,\"skill_primary_correct\":true,\"skill_followup_correct\":true,\"notes\":\"Both answers preserve the AdCom/FDA catalyst as primary and keep short-covering explicitly secondary rather than replacing the causal story.\"}]}",
+        "parsed_output": {
+          "judgments": [
+            {
+              "id": "v14im2_013",
+              "base_primary_correct": true,
+              "base_followup_correct": true,
+              "skill_primary_correct": true,
+              "skill_followup_correct": true,
+              "notes": "Both primary answers capture the indirect duration/refinancing channel, and both follow-ups name the right discriminating market cross-check via HY spreads plus software-peer/basket co-move."
+            },
+            {
+              "id": "v14im2_014",
+              "base_primary_correct": true,
+              "base_followup_correct": true,
+              "skill_primary_correct": false,
+              "skill_followup_correct": true,
+              "notes": "Base primary matches the needed peer-and-spread confirmation pattern; skill primary gets peer co-move and clean liquidity but misses the crucial spread signal. Both follow-ups correctly keep company guidance/liquidity intact."
+            },
+            {
+              "id": "v14im2_015",
+              "base_primary_correct": true,
+              "base_followup_correct": true,
+              "skill_primary_correct": true,
+              "skill_followup_correct": true,
+              "notes": "Both answers keep the FDA advisory-panel vote as the primary driver and treat the squeeze only as secondary amplification."
+            },
+            {
+              "id": "v14im2_016",
+              "base_primary_correct": true,
+              "base_followup_correct": true,
+              "skill_primary_correct": true,
+              "skill_followup_correct": true,
+              "notes": "Both answers preserve the AdCom/FDA catalyst as primary and keep short-covering explicitly secondary rather than replacing the causal story."
+            }
+          ]
+        },
+        "parse_error": null
+      }
+    ]
+  }
+}
