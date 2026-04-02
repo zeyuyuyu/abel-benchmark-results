@@ -379,8 +379,41 @@
       "title": "Three Plausible Stories, One Dominant Driver",
       "task_family": "multi_factor_finance_synthesis",
       "source_case_id": "v14d_015",
+      "scenario": "A cross-asset memo includes rates, FX, commodity costs, and company guidance. Several causal stories look plausible.",
+      "question": "What is the most plausible dominant explanation for the move?",
+      "followup_question": "What is the most important next verification or uncertainty to keep live?",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Analyst note",
+          "content": "Management cited three factors for the quarter: a one-point constant-currency headwind, a 40 bps legal reserve, and weaker channel sell-through that pushed inventory days higher."
+        },
+        {
+          "type": "table",
+          "title": "Operating summary",
+          "content": "Revenue miss versus plan: -6%. Constant-currency impact: -1 point. Legal reserve impact on operating margin: -0.4 points. Channel inventory days: +12 days. End-market sell-through: -9%."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst disagreement about explanations and what to verify next, rather than a graph or skill operation.",
       "primary_answer_text": "channel inventory correction and weak sell-through",
       "followup_answer_text": "watch sell-through and inventory-days normalization",
+      "canonical_answer": {
+        "primary_driver": "channel_inventory_correction_and_weak_sell_through",
+        "supporting_variables": [
+          "inventory_days_up",
+          "sell_through_down",
+          "revenue_miss_much_larger_than_fx_headwind"
+        ],
+        "confidence": "medium_high"
+      },
+      "evidence_summary": [
+        "dominant driver must explain most of the miss magnitude",
+        "FX and legal reserve are too small to be the main answer"
+      ],
+      "common_failure_modes": [
+        "choosing the most familiar macro explanation",
+        "overweighting a one-time legal item that mainly affects margin, not revenue"
+      ],
       "base_primary_prediction": "weak sell-through driving inventory build",
       "base_followup_prediction": "sell-through and inventory days",
       "skill_primary_prediction": "channel destocking",
@@ -395,15 +428,50 @@
       "skill_followup_correct": true,
       "base_exact_correct": true,
       "skill_exact_correct": true,
-      "judge_notes": "Base matches weak sell-through plus inventory correction; skill's channel destocking is acceptable shorthand for the same dominant story. Both follow-ups name the key discriminators: sell-through and inventory-days normalization."
+      "judge_notes": "Base matches weak sell-through plus inventory correction; skill's channel destocking is acceptable shorthand for the same dominant story. Both follow-ups name the key discriminators: sell-through and inventory-days normalization.",
+      "exact_winner": "tie"
     },
     {
       "id": "v14i_003",
       "title": "Build The Event Memo, Not Just The Answer",
       "task_family": "analyst_workflow_agent",
       "source_case_id": "v14d_020",
+      "scenario": "The agent receives a short business question but must collect current evidence, decide whether it is enough, and produce an analyst-style memo.",
+      "question": "What is the best-supported causal explanation for the selloff right now?",
+      "followup_question": "What would you verify next before strengthening that view?",
+      "instantiated_inputs": [
+        {
+          "type": "retrieval_bundle",
+          "title": "Snippet 1",
+          "content": "A regional bank's shares fell after a policy official commented that deposit competition remains intense for smaller lenders."
+        },
+        {
+          "type": "retrieval_bundle",
+          "title": "Snippet 2",
+          "content": "The bank's last quarterly filing showed a relatively high share of interest-bearing deposits and rising funding costs."
+        },
+        {
+          "type": "retrieval_bundle",
+          "title": "Snippet 3",
+          "content": "A rumor about a capital raise circulated online, but no primary-source filing or company statement confirmed it."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst disagreement about explanations and what to verify next, rather than a graph or skill operation.",
       "primary_answer_text": "funding-cost and deposit-beta concern",
       "followup_answer_text": "verify uninsured-deposit mix or wholesale-funding dependence",
+      "canonical_answer": {
+        "primary_driver": "funding_cost_and_deposit_beta_concern",
+        "next_verification": "verify_insured_vs_uninsured_deposit_mix_and_wholesale_funding_dependence",
+        "uncertainty": "the_unconfirmed_capital_raise_rumor_should_not_be_treated_as_established_fact"
+      },
+      "evidence_summary": [
+        "tests memo-style causal synthesis with verification discipline",
+        "answers should privilege primary-source evidence over rumor"
+      ],
+      "common_failure_modes": [
+        "treating the rumor as the main driver",
+        "failing to specify what to verify next"
+      ],
       "base_primary_prediction": "deposit competition squeezing funding costs",
       "base_followup_prediction": "primary-source capital raise confirmation",
       "skill_primary_prediction": "deposit-cost pressure",
@@ -418,15 +486,53 @@
       "skill_followup_correct": false,
       "base_exact_correct": false,
       "skill_exact_correct": false,
-      "judge_notes": "Both primaries capture funding-cost/deposit-beta pressure. Both follow-ups miss the needed verification of uninsured-deposit mix or wholesale-funding dependence and instead focus on capital-raise confirmation/filings."
+      "judge_notes": "Both primaries capture funding-cost/deposit-beta pressure. Both follow-ups miss the needed verification of uninsured-deposit mix or wholesale-funding dependence and instead focus on capital-raise confirmation/filings.",
+      "exact_winner": "tie"
     },
     {
       "id": "v14i_004",
       "title": "One Event, Multiple Conflicting Narratives",
       "task_family": "cross_source_event_integration",
       "source_case_id": "v14d_021",
+      "scenario": "A live case includes conflicting media explanations, partial company commentary, and market reaction across related assets.",
+      "question": "What is the most causally plausible primary driver of the rally?",
+      "followup_question": "What uncertainty or alternative is still live enough to monitor?",
+      "instantiated_inputs": [
+        {
+          "type": "retrieval_bundle",
+          "title": "Snippet 1",
+          "content": "A biotech stock rallied after an FDA advisory panel voted in favor of its therapy."
+        },
+        {
+          "type": "retrieval_bundle",
+          "title": "Snippet 2",
+          "content": "Social media accounts also circulated an acquisition rumor, but no credible outlet confirmed it."
+        },
+        {
+          "type": "retrieval_bundle",
+          "title": "Snippet 3",
+          "content": "Short interest was elevated heading into the vote, which may have amplified the magnitude of the move."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst disagreement about explanations and what to verify next, rather than a graph or skill operation.",
       "primary_answer_text": "positive FDA panel vote improving approval odds",
       "followup_answer_text": "short-squeeze amplification remains possible, so verify timing and short interest",
+      "canonical_answer": {
+        "primary_driver": "positive_fda_panel_vote_improving_approval_odds",
+        "uncertainty": "short_squeeze_dynamics_may_have_amplified_the_move_but_do_not_replace_the_main_causal_event",
+        "evidence_used": [
+          "Snippet 1",
+          "Snippet 3"
+        ]
+      },
+      "evidence_summary": [
+        "tests selection among competing narratives",
+        "main event should outrank unsupported rumor, while magnitude amplification remains a valid uncertainty"
+      ],
+      "common_failure_modes": [
+        "choosing the rumor because it sounds more dramatic",
+        "ignoring the distinction between driver and amplifier"
+      ],
       "base_primary_prediction": "favorable FDA panel vote",
       "base_followup_prediction": "watch for credible M&A confirmation",
       "skill_primary_prediction": "positive FDA panel vote",
@@ -441,15 +547,45 @@
       "skill_followup_correct": false,
       "base_exact_correct": false,
       "skill_exact_correct": false,
-      "judge_notes": "Both primaries correctly identify the FDA panel vote as the main driver. Both follow-ups chase M&A rumor rather than the live canonical uncertainty of short-squeeze amplification via timing and short-interest checks."
+      "judge_notes": "Both primaries correctly identify the FDA panel vote as the main driver. Both follow-ups chase M&A rumor rather than the live canonical uncertainty of short-squeeze amplification via timing and short-interest checks.",
+      "exact_winner": "tie"
     },
     {
       "id": "v14i_005",
       "title": "Homebuilder Miss: Funding Stress Or Demand Softness?",
       "task_family": "proxy_family_selection",
       "source_case_id": "v14cpi_001",
+      "scenario": "A morning note combines mortgage data, builder credit signals, order metrics, and website activity after a homebuilder stock selloff.",
+      "question": "Which explanation is cleaner for the move right now?",
+      "followup_question": "What would make you revisit that view first?",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Morning note",
+          "content": "The stock fell 11% after management guided to lower near-term orders. Analysts noted no major land or permitting update. Channel checks described buyer hesitation around monthly payments rather than reduced tour activity."
+        },
+        {
+          "type": "table",
+          "title": "Market and operating snapshot",
+          "content": "30-year mortgage rate: +55 bps over 6 weeks. Mortgage applications: -12%. Builder CDS: +38 bps. Website traffic: -1%. Model-home visits: flat. Cancellation rate: +1.2 points. Backlog burn: stable."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst disagreement about explanations and what to verify next, rather than a graph or skill operation.",
       "primary_answer_text": "financing conditions and mortgage affordability",
       "followup_answer_text": "if orders stay weak after financing proxies normalize, demand softness gains weight",
+      "canonical_answer": {
+        "label": "A",
+        "primary_proxy_family": "financing_conditions_and_mortgage_affordability",
+        "falsifier": "orders_keep_deteriorating_even_if_rate_and_credit_proxies_normalize"
+      },
+      "evidence_summary": [
+        "Mortgage affordability worsened materially while traffic and visits stayed roughly intact.",
+        "Credit and rate signals moved sharply, which fits hesitation around financing more than collapse in underlying shopper interest."
+      ],
+      "common_failure_modes": [
+        "Treating a modest cancellation increase as proof of broad demand collapse.",
+        "Ignoring the sharper movement in mortgage-rate and credit proxies."
+      ],
       "base_primary_prediction": "affordability-driven order softness",
       "base_followup_prediction": "watch CDS and land/permitting changes",
       "skill_primary_prediction": "affordability-driven demand softness",
@@ -464,15 +600,45 @@
       "skill_followup_correct": false,
       "base_exact_correct": false,
       "skill_exact_correct": false,
-      "judge_notes": "Both primaries are close enough because they anchor the move to affordability/financing stress rather than a broad collapse in shopper interest. Neither follow-up gives the discriminating test of whether orders stay weak after financing proxies normalize."
+      "judge_notes": "Both primaries are close enough because they anchor the move to affordability/financing stress rather than a broad collapse in shopper interest. Neither follow-up gives the discriminating test of whether orders stay weak after financing proxies normalize.",
+      "exact_winner": "tie"
     },
     {
       "id": "v14i_006",
       "title": "Regional Bank Stress And A Small-Cap SaaS Selloff",
       "task_family": "transmission_supportability",
       "source_case_id": "v14cpi_006",
+      "scenario": "A software stock trades off during regional-bank stress even though the company has no direct deposit or lending disclosure in the packet.",
+      "question": "What is the most supportable transmission path from the bank stress to the software move?",
+      "followup_question": "What additional evidence would most strengthen or weaken that path?",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Market note",
+          "content": "The company stated that cash is spread across money-center banks and disclosed no unusual financing event. The stock still sold off with other long-duration software names when regional banks weakened."
+        },
+        {
+          "type": "table",
+          "title": "Factor snapshot",
+          "content": "Regional bank ETF: -14%. Small-cap software basket: -9%. HY OAS: +48 bps. Company net cash: positive. Revenue guidance: unchanged."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst disagreement about explanations and what to verify next, rather than a graph or skill operation.",
       "primary_answer_text": "valuation-duration and refinancing channel",
       "followup_answer_text": "watch spreads and duration-sensitive peers while company metrics stay intact",
+      "canonical_answer": {
+        "label": "C",
+        "mechanism": "valuation_duration_and_refinancing_channel",
+        "supportability": "supported_but_indirect"
+      },
+      "evidence_summary": [
+        "The packet rules out direct deposit exposure, but a broader risk and financing channel remains plausible.",
+        "High-yield spreads widened and duration-sensitive software names sold off together."
+      ],
+      "common_failure_modes": [
+        "Assuming no path simply because the company lacks direct bank exposure.",
+        "Inventing a balance-sheet crisis despite the explicit net-cash note."
+      ],
       "base_primary_prediction": "credit-tightening duration derating",
       "base_followup_prediction": "watch HY OAS and SaaS peer correlation",
       "skill_primary_prediction": "credit-spread multiple compression",
@@ -487,15 +653,45 @@
       "skill_followup_correct": true,
       "base_exact_correct": true,
       "skill_exact_correct": true,
-      "judge_notes": "Both capture the bank-stress transmission as a broad credit/duration de-rating rather than direct exposure; the follow-ups correctly point to HY spreads and duration-sensitive SaaS peer behavior as the key arbiters."
+      "judge_notes": "Both capture the bank-stress transmission as a broad credit/duration de-rating rather than direct exposure; the follow-ups correctly point to HY spreads and duration-sensitive SaaS peer behavior as the key arbiters.",
+      "exact_winner": "tie"
     },
     {
       "id": "v14i_007",
       "title": "Airline Selloff: Fuel Shock Or Demand Crack?",
       "task_family": "proxy_family_selection",
       "source_case_id": "v14cpi_003",
+      "scenario": "An airline equity drawdown arrives alongside a commodity move, while booking and traffic indicators are updated in the same note.",
+      "question": "What is the cleaner primary read for the airline selloff?",
+      "followup_question": "What would make you change that view first?",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Airline sector note",
+          "content": "The stock fell after a sharp move in energy markets. Management did not cut capacity or demand commentary, and no labor disruption was disclosed."
+        },
+        {
+          "type": "table",
+          "title": "Operating and market snapshot",
+          "content": "Jet fuel crack spread: +18%. Front-month crude: +11%. Forward bookings: +1%. Load factor guidance: unchanged. Unit revenue guidance: flat. Wage agreement updates: none. FX basket: flat."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst disagreement about explanations and what to verify next, rather than a graph or skill operation.",
       "primary_answer_text": "fuel and input-cost pressure",
       "followup_answer_text": "if bookings or unit revenue break while fuel pressure eases",
+      "canonical_answer": {
+        "label": "A",
+        "primary_proxy_family": "fuel_and_input_cost_pressure",
+        "falsifier": "forward_bookings_or_unit_revenue_break_while_fuel_pressure_eases"
+      },
+      "evidence_summary": [
+        "The sharpest moving variables are fuel-linked while bookings and unit-revenue guidance are stable.",
+        "There is no evidence packet support for labor or FX being the dominant marginal driver."
+      ],
+      "common_failure_modes": [
+        "Assuming all airline weakness is demand-driven without checking booking and unit-revenue evidence.",
+        "Overweighting crude headlines without relating them to the actual airline cost channel."
+      ],
       "base_primary_prediction": "jet fuel cost shock",
       "base_followup_prediction": "watch bookings and unit revenue guidance",
       "skill_primary_prediction": "fuel-cost squeeze",
@@ -510,15 +706,45 @@
       "skill_followup_correct": true,
       "base_exact_correct": true,
       "skill_exact_correct": true,
-      "judge_notes": "Both correctly read the selloff through fuel/input-cost pressure, and both follow-ups use bookings/unit revenue as the concrete evidence that would flip the read toward demand."
+      "judge_notes": "Both correctly read the selloff through fuel/input-cost pressure, and both follow-ups use bookings/unit revenue as the concrete evidence that would flip the read toward demand.",
+      "exact_winner": "tie"
     },
     {
       "id": "v14i_008",
       "title": "Small-Cap Software De-Rate: Duration Pressure Or Product Trouble?",
       "task_family": "proxy_family_selection",
       "source_case_id": "v14cpi_004",
+      "scenario": "A software stock sells off with a broader factor move while company-specific operating metrics are also reported.",
+      "question": "What is the cleaner explanation for the de-rate?",
+      "followup_question": "What would make you shift toward an idiosyncratic company problem instead?",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Software note",
+          "content": "The company reiterated annual ARR guidance and disclosed no outage, product recall, or major customer loss. The stock fell alongside a broader selloff in long-duration software names."
+        },
+        {
+          "type": "table",
+          "title": "Factor and operating snapshot",
+          "content": "High-yield OAS: +75 bps. 10Y real yield: +19 bps. Small-cap software basket: -11%. ARR guidance: unchanged. Net revenue retention: 112% -> 111%. Churn: flat. Major incident count: 0."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst disagreement about explanations and what to verify next, rather than a graph or skill operation.",
       "primary_answer_text": "duration pressure and financing conditions",
       "followup_answer_text": "if renewal or churn metrics break while rates and credit stabilize",
+      "canonical_answer": {
+        "label": "A",
+        "primary_proxy_family": "financing_conditions_and_duration_pressure",
+        "falsifier": "renewal_or_churn_metrics_break_even_if_credit_and_rate_proxies_stabilize"
+      },
+      "evidence_summary": [
+        "Macro duration and credit-sensitive software factors moved sharply while company operating metrics were largely intact.",
+        "The packet does not contain company-specific failure evidence strong enough to outrank the factor move."
+      ],
+      "common_failure_modes": [
+        "Inventing product trouble from price action alone.",
+        "Ignoring the explicit sector-factor de-rating in the evidence packet."
+      ],
       "base_primary_prediction": "duration pressure, not product trouble",
       "base_followup_prediction": "watch NRR/churn and customer losses",
       "skill_primary_prediction": "duration pressure over product trouble",
@@ -533,15 +759,45 @@
       "skill_followup_correct": true,
       "base_exact_correct": true,
       "skill_exact_correct": true,
-      "judge_notes": "Both identify the cleaner explanation as macro duration/factor pressure rather than product trouble; the follow-ups appropriately focus on churn/retention-type deterioration as the idiosyncratic breaker."
+      "judge_notes": "Both identify the cleaner explanation as macro duration/factor pressure rather than product trouble; the follow-ups appropriately focus on churn/retention-type deterioration as the idiosyncratic breaker.",
+      "exact_winner": "tie"
     },
     {
       "id": "v14i_009",
       "title": "Rare-Earth Spike Into EV Gross Margin",
       "task_family": "transmission_strength_judgment",
       "source_case_id": "v14cpi_007",
+      "scenario": "A commodity shock looks intuitively relevant, but the evidence packet includes cost-share and contracting details that constrain near-term transmission.",
+      "question": "How much should the commodity shock matter near-term for the EV maker?",
+      "followup_question": "What would you verify before promoting it into a bigger thesis?",
+      "instantiated_inputs": [
+        {
+          "type": "document_excerpt",
+          "title": "Supply-chain note",
+          "content": "Rare-earth spot prices jumped after export restrictions. The automaker’s procurement note says the focal materials are covered by fixed contracts for the next two quarters."
+        },
+        {
+          "type": "table",
+          "title": "Cost-structure snapshot",
+          "content": "Rare-earth component share of COGS: 1.2%. Fixed-price coverage horizon: 2 quarters. Battery metals and logistics remain the larger variable exposures."
+        }
+      ],
+      "naturalness_rationale": "Looks like a normal analyst disagreement about explanations and what to verify next, rather than a graph or skill operation.",
       "primary_answer_text": "weak near-term pass-through because contracts and cost share limit it",
       "followup_answer_text": "verify contract coverage or cost share before promoting the shock",
+      "canonical_answer": {
+        "label": "C",
+        "transmission_strength": "weak_near_term",
+        "blocking_factor": "fixed_contracts_and_low_cost_share"
+      },
+      "evidence_summary": [
+        "The cost share is small and the contract coverage delays pass-through.",
+        "The packet explicitly points to larger variable exposures elsewhere in the cost stack."
+      ],
+      "common_failure_modes": [
+        "Overweighting the most dramatic commodity headline without checking cost share and contract timing.",
+        "Calling the move impossible to assess despite clear packet constraints."
+      ],
       "base_primary_prediction": "limited near-term margin impact",
       "base_followup_prediction": "verify contract roll-off and availability",
       "skill_primary_prediction": "minimal near-term margin hit",
@@ -556,7 +812,8 @@
       "skill_followup_correct": true,
       "base_exact_correct": true,
       "skill_exact_correct": true,
-      "judge_notes": "Both preserve the core point that the rare-earth shock should have limited near-term margin impact; the follow-ups correctly focus on contract timing/coverage, with extra supply checks not negating the main discriminator."
+      "judge_notes": "Both preserve the core point that the rare-earth shock should have limited near-term margin impact; the follow-ups correctly focus on contract timing/coverage, with extra supply checks not negating the main discriminator.",
+      "exact_winner": "tie"
     }
   ],
   "source_summary_path": "summary_llm_judged.json",

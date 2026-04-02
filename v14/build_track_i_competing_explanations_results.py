@@ -60,6 +60,14 @@ def mark(pred: str | None, ok: bool) -> str:
     return f"`{pred}`{' ✅' if ok else ' ❌'}"
 
 
+def winner_label(row: dict[str, Any]) -> str:
+    if row["skill_exact_correct"] and not row["base_exact_correct"]:
+        return "skill"
+    if row["base_exact_correct"] and not row["skill_exact_correct"]:
+        return "base"
+    return "tie"
+
+
 def build_outputs(
     summary: dict[str, Any],
     *,
@@ -89,8 +97,16 @@ def build_outputs(
                 "title": q["title"],
                 "task_family": q["task_family"],
                 "source_case_id": q["source_case_id"],
+                "scenario": q.get("scenario", ""),
+                "question": q.get("question", ""),
+                "followup_question": q.get("followup_question", ""),
+                "instantiated_inputs": q.get("instantiated_inputs", []),
+                "naturalness_rationale": q.get("naturalness_rationale", ""),
                 "primary_answer_text": t["primary_answer_text"],
                 "followup_answer_text": t["followup_answer_text"],
+                "canonical_answer": t.get("canonical_answer"),
+                "evidence_summary": t.get("evidence_summary", []),
+                "common_failure_modes": t.get("common_failure_modes", []),
                 "base_primary_prediction": base_primary,
                 "base_followup_prediction": base_followup,
                 "skill_primary_prediction": skill_primary,
@@ -106,8 +122,10 @@ def build_outputs(
                 "base_exact_correct": base_primary_ok and base_followup_ok,
                 "skill_exact_correct": skill_primary_ok and skill_followup_ok,
                 "judge_notes": row.get("judge_notes", ""),
+                "exact_winner": "",
             }
         )
+        enriched[-1]["exact_winner"] = winner_label(enriched[-1])
 
     result_json = {
         "timestamp": summary["timestamp"],
@@ -146,25 +164,86 @@ def build_outputs(
         f"- Base duration: `{summary['runs']['base']['duration_seconds']:.2f}s`",
         f"- Skill duration: `{summary['runs']['skill']['duration_seconds']:.2f}s`",
         "",
-        "## Per Case",
+        "## Case Overview",
         "",
         "| Case ID | Source | Family | Canonical primary | Base primary | Skill primary | Canonical follow-up | Base follow-up | Skill follow-up | Exact winner |",
         "|---|---|---|---|---|---|---|---|---|---|",
         ]
     )
     for row in enriched:
-        winner = "tie"
-        if row["skill_exact_correct"] and not row["base_exact_correct"]:
-            winner = "skill"
-        elif row["base_exact_correct"] and not row["skill_exact_correct"]:
-            winner = "base"
         lines.append(
             f"| `{row['id']}` | `{row['source_case_id']}` | `{row['task_family']}` | "
             f"`{row['primary_answer_text']}` | {mark(row['base_primary_prediction'], row['base_primary_correct'])} | "
             f"{mark(row['skill_primary_prediction'], row['skill_primary_correct'])} | "
             f"`{row['followup_answer_text']}` | {mark(row['base_followup_prediction'], row['base_followup_correct'])} | "
-            f"{mark(row['skill_followup_prediction'], row['skill_followup_correct'])} | `{winner}` |"
+            f"{mark(row['skill_followup_prediction'], row['skill_followup_correct'])} | `{row['exact_winner']}` |"
         )
+
+    lines.extend(["", "## Full Cases", ""])
+    for row in enriched:
+        lines.extend(
+            [
+                f"### {row['id']} — {row['title']}",
+                "",
+                f"- Source case: `{row['source_case_id']}`",
+                f"- Family: `{row['task_family']}`",
+                f"- Exact winner: `{row['exact_winner']}`",
+                f"- Base exact: `{'correct' if row['base_exact_correct'] else 'incorrect'}`",
+                f"- Skill exact: `{'correct' if row['skill_exact_correct'] else 'incorrect'}`",
+                f"- Base field score: `{int(row['base_primary_correct']) + int(row['base_followup_correct'])}/2`",
+                f"- Skill field score: `{int(row['skill_primary_correct']) + int(row['skill_followup_correct'])}/2`",
+                "",
+                "Scenario:",
+                row["scenario"] or "_None_",
+                "",
+                f"Primary question: {row['question']}",
+                f"Follow-up question: {row['followup_question']}",
+                "",
+                "Evidence packet:",
+            ]
+        )
+        for item in row["instantiated_inputs"]:
+            lines.append(f"- {item['title']} ({item['type']}): {item['content']}")
+        if row["naturalness_rationale"]:
+            lines.extend(["", f"Naturalness rationale: {row['naturalness_rationale']}"])
+        lines.extend(
+            [
+                "",
+                "Ground truth:",
+                f"- Canonical primary: `{row['primary_answer_text']}`",
+                f"- Canonical follow-up: `{row['followup_answer_text']}`",
+            ]
+        )
+        if row["evidence_summary"]:
+            lines.append("Evidence summary:")
+            for item in row["evidence_summary"]:
+                lines.append(f"- {item}")
+        if row["common_failure_modes"]:
+            lines.append("Common failure modes:")
+            for item in row["common_failure_modes"]:
+                lines.append(f"- {item}")
+        if row["canonical_answer"] is not None:
+            lines.extend(
+                [
+                    "Canonical answer object:",
+                    "```json",
+                    json.dumps(row["canonical_answer"], ensure_ascii=False, indent=2),
+                    "```",
+                ]
+            )
+        lines.extend(
+            [
+                "",
+                "Model replies:",
+                f"- Base primary: {mark(row['base_primary_prediction'], row['base_primary_correct'])}",
+                f"- Base follow-up: {mark(row['base_followup_prediction'], row['base_followup_correct'])}",
+                f"- Skill primary: {mark(row['skill_primary_prediction'], row['skill_primary_correct'])}",
+                f"- Skill follow-up: {mark(row['skill_followup_prediction'], row['skill_followup_correct'])}",
+            ]
+        )
+        if row["judge_notes"]:
+            lines.extend(["", f"Judge notes: {row['judge_notes']}"])
+        lines.append("")
 
     lines.extend(["", "## Per-Family", ""])
     for family in sorted(summary["runs"]["base"]["family_scores"]):
