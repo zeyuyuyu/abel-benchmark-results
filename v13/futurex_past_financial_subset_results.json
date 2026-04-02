@@ -1,0 +1,184 @@
+{
+  "benchmark": "v13-futurex-past-financial-subset",
+  "timestamp": "20260324-115311",
+  "today_context": "March 24, 2026 (UTC+8, Asia/Shanghai)",
+  "case_count": 10,
+  "source_summary_path": "/Users/zeyu/Documents/bach_private_cache/.bench/futurex-results-20260324-115311/summary.json",
+  "runs": {
+    "base": {
+      "correct": 7,
+      "total": 10,
+      "accuracy": 0.7,
+      "duration_seconds": 380.93
+    },
+    "skill": {
+      "correct": 8,
+      "total": 10,
+      "accuracy": 0.8,
+      "duration_seconds": 593.65
+    }
+  },
+  "cases": [
+    {
+      "id": "694fd4d0ae81c200695c89cf",
+      "title": "Bank of Brazil decision in January?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Bank of Brazil decision in January? (resolved around 2026-01-27 (GMT+8)). \nA.  the outcome be No change in the Selic rate after Bank of Brazil's January 2026 meeting?\nB.  the Bank of Brazil raise the Selic rate after January 2026 meeting\nC.  the Bank of Brazil lower the Selic rate after January 2026 meeting\"\n        IMPORTANT: Your final answer MUST end with this exact format:\n        \n        Your task is to identify all the correct option(s) based on your analysis.\n        Your prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\n        Your final answer MUST end with this exact format:\n        listing all correct option(s) you have identified, separated by commas, within the box.\n        For example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options. \n        \n        Do not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "end_time": "2026-01-27",
+      "level": 1,
+      "ground_truth_tokens": [
+        "A"
+      ],
+      "ground_truth_box": "\\boxed{A}",
+      "base_prediction": "\\boxed{A}",
+      "skill_prediction": "\\boxed{A}",
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "695bb4008b62560069adce53",
+      "title": "Gold (GC) above ___ end of January?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Gold (GC) above ___ end of January? (resolved around 2026-02-01 (GMT+8)). \nA. Gold (GC) settle over $7,000 on the final trading day of January 2026\nB. Gold (GC) settle over $6,500 on the final trading day of January 2026\nC. Gold (GC) settle over $6,000 on the final trading day of January 2026\nD. Gold (GC) settle over $5,500 on the final trading day of January 2026\nE. Gold (GC) settle over $5,200 on the final trading day of January 2026\nF. Gold (GC) settle over $5,000 on the final trading day of January 2026\nG. Gold (GC) settle over $4,800 on the final trading day of January 2026\nH. Gold (GC) settle over $4,600 on the final trading day of January 2026\nI. Gold (GC) settle over $4,400 on the final trading day of January 2026\nJ. Gold (GC) settle over $4,200 on the final trading day of January 2026\nK. Gold (GC) settle over $4,000 on the final trading day of January 2026\nL. Gold (GC) settle over $3,600 on the final trading day of January 2026\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options. \n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "end_time": "2026-02-01 00:00:00",
+      "level": 2,
+      "ground_truth_tokens": [
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "ground_truth_box": "\\boxed{H, I, J, K, L}",
+      "base_prediction": "\\boxed{H, I, J, K, L}",
+      "skill_prediction": "\\boxed{H, I, J, K, L}",
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "695bb4008b62560069adce59",
+      "title": "What will Crude Oil (CL) settle at in January?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"What will Crude Oil (CL) settle at in January? (resolved around 2026-02-01 (GMT+8)). \nA. Crude Oil (CL) settle at <$45 in January\nB. Crude Oil (CL) settle at $45-$50 in January\nC. Crude Oil (CL) settle at $60-$65 in January\nD. Crude Oil (CL) settle at $70-$75 in January\nE. Crude Oil (CL) settle at $50-$55 in January\nF. Crude Oil (CL) settle at $65-$70 in January\nG. Crude Oil (CL) settle at $55-$60 in January\nH. Crude Oil (CL) settle at >$75 in January\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options. \n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "end_time": "2026-02-01 00:00:00",
+      "level": 2,
+      "ground_truth_tokens": [
+        "F"
+      ],
+      "ground_truth_box": "\\boxed{F}",
+      "base_prediction": "\\boxed{F}",
+      "skill_prediction": "\\boxed{F}",
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "695bb4008b62560069adce04",
+      "title": "What will Opendoor (OPEN) hit in January 2026?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"What will Opendoor (OPEN) hit in January 2026? (resolved around 2026-02-01 (GMT+8)). \nA. Opendoor reach $11.50 in January\nB. Opendoor reach $10.25 in January\nC. Opendoor reach $9.25 in January\nD. Opendoor reach $8.25 in January\nE. Opendoor reach $7.50 in January\nF. Opendoor reach $7 in January\nG. Opendoor reach $6.50 in January\nH. Opendoor dip to $6 in January\nI. Opendoor dip to $5.50 in January\nJ. Opendoor dip to $5 in January\nK. Opendoor dip to $4.25 in January\nL. Opendoor dip to $3.50 in January\nM. Opendoor dip to $2.50 in January\nN. Opendoor dip to $1.25 in January\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options. \n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "end_time": "2026-02-01 00:00:00",
+      "level": 2,
+      "ground_truth_tokens": [
+        "E",
+        "F",
+        "G",
+        "H",
+        "I"
+      ],
+      "ground_truth_box": "\\boxed{E, F, G, H, I}",
+      "base_prediction": "\\boxed{E, F, G, H, I}",
+      "skill_prediction": "\\boxed{E, F, G, H, I}",
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "695bb4008b62560069adce56",
+      "title": "What will Crude Oil (CL) hit__ by end of January?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"What will Crude Oil (CL) hit__ by end of January? (resolved around 2026-02-01 (GMT+8)). \nA. Crude Oil (CL) hit (HIGH) $75 by end of January\nB. Crude Oil (CL) hit (HIGH) $65 by end of January\nC. Crude Oil (CL) hit (HIGH) $58 by end of January\nD. Crude Oil (CL) hit (LOW) $47 by end of January\nE. Crude Oil (CL) hit (LOW) $35 by end of January\nF. Crude Oil (CL) hit (HIGH) $70 by end of January\nG. Crude Oil (CL) hit (HIGH) $62 by end of January\nH. Crude Oil (CL) hit (LOW) $52 by end of January\nI. Crude Oil (CL) hit (LOW) $42 by end of January\nJ. Crude Oil (CL) hit (HIGH) $60 by end of January\nK. Crude Oil (CL) hit (LOW) $50 by end of January\nL. Crude Oil (CL) hit (LOW) $55 by end of January\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options. \n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "end_time": "2026-02-01 00:00:00",
+      "level": 2,
+      "ground_truth_tokens": [
+        "B",
+        "C",
+        "G",
+        "J"
+      ],
+      "ground_truth_box": "\\boxed{B, C, G, J}",
+      "base_prediction": "\\boxed{B, C, G, J}",
+      "skill_prediction": "\\boxed{B, C, G, J}",
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "695bb4008b62560069adce54",
+      "title": "What will Gold (GC) settle at in January?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"What will Gold (GC) settle at in January? (resolved around 2026-02-01 (GMT+8)). \nA. Gold (GC) settle at <$4,350 in January\nB. Gold (GC) settle at $4,350-$4,475 in January\nC. Gold (GC) settle at $4,475-$4,600 in January\nD. Gold (GC) settle at $4,600-$4,725 in January\nE. Gold (GC) settle at $4,725-$4,850 in January\nF. Gold (GC) settle at $4,850-$4,975 in January\nG. Gold (GC) settle at $4,975-$5,100 in January\nH. Gold (GC) settle at >$5,100 in January\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options. \n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "end_time": "2026-02-01 00:00:00",
+      "level": 2,
+      "ground_truth_tokens": [
+        "E"
+      ],
+      "ground_truth_box": "\\boxed{E}",
+      "base_prediction": "\\boxed{D}",
+      "skill_prediction": "\\boxed{E}",
+      "base_correct": false,
+      "skill_correct": true
+    },
+    {
+      "id": "6957ba8a03568a006853e82e",
+      "title": "Tesla hits $400 or $500 first before end of January 2026?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Tesla hits $400 or $500 first before end of January 2026? (resolved around 2026-02-01 (GMT+8)). \nA. the outcome be Tesla hits or trades below $400.00 first\nB. the outcome be Tesla hits or trades above $500.00 first\nC. the outcome be Tesla hits neither $400 nor $500 before market close on Jan 30\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options. \n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "end_time": "2026-02-01 00:00:00",
+      "level": 1,
+      "ground_truth_tokens": [
+        "A"
+      ],
+      "ground_truth_box": "\\boxed{A}",
+      "base_prediction": "\\boxed{C}",
+      "skill_prediction": "\\boxed{C}",
+      "base_correct": false,
+      "skill_correct": false
+    },
+    {
+      "id": "6957ba8a03568a006853e82f",
+      "title": "Nvidia hits 170, 200 or neither first by end of January 2026?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Nvidia hits 170, 200 or neither first by end of January 2026? (resolved around 2026-02-01 (GMT+8)). \nA. the outcome be Hits or goes below $170.00 first\nB. the outcome be Hits or goes above $200.00 first\nC. the outcome be Hits neither before end of trading January 30\"\nIMPORTANT: Your final answer MUST end with this exact format:\n\nYour task is to identify all the correct option(s) based on your analysis.\nYour prediction will be scored based on its accuracy. You will only receive points if your answer includes ALL correct options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options. \n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "end_time": "2026-02-01 00:00:00",
+      "level": 1,
+      "ground_truth_tokens": [
+        "A"
+      ],
+      "ground_truth_box": "\\boxed{A}",
+      "base_prediction": "\\boxed{C}",
+      "skill_prediction": "\\boxed{C}",
+      "base_correct": false,
+      "skill_correct": false
+    },
+    {
+      "id": "69590c18deacd00066876763",
+      "title": "Will Bitcoin close above USD $100,000 on 31 January 2026 (UTC)?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Will Bitcoin close above USD $100,000 on 31 January 2026 (UTC)? (resolved around 2026-02-02 (GMT+8)). \"\nIMPORTANT: Your final answer MUST end with this exact format:\n\\boxed{Yes} or \\boxed{No}\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "end_time": "2026-02-02 00:00:00",
+      "level": 1,
+      "ground_truth_tokens": [
+        "No"
+      ],
+      "ground_truth_box": "\\boxed{No}",
+      "base_prediction": "\\boxed{No}",
+      "skill_prediction": "\\boxed{No}",
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "69590c18deacd00066876764",
+      "title": "Bitcoin below $82K in January?",
+      "prompt": "You are an agent that can predict future events. The event to be predicted: \"Bitcoin below $82K in January? (resolved around 2026-02-02 (GMT+8)). \"\nIMPORTANT: Your final answer MUST end with this exact format:\n\\boxed{Yes} or \\boxed{No}\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.",
+      "end_time": "2026-02-02 00:00:00",
+      "level": 1,
+      "ground_truth_tokens": [
+        "Yes"
+      ],
+      "ground_truth_box": "\\boxed{Yes}",
+      "base_prediction": "\\boxed{Yes}",
+      "skill_prediction": "\\boxed{Yes}",
+      "base_correct": true,
+      "skill_correct": true
+    }
+  ]
+}

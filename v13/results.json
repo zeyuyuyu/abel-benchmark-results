@@ -1,0 +1,586 @@
+{
+  "timestamp": "20260325-221728",
+  "version": "v13-live-only-finance",
+  "model": "gpt-5.4",
+  "reasoning_effort": "low",
+  "today_context": "March 25, 2026 (GMT+8, Asia/Shanghai)",
+  "case_count": 17,
+  "cases": [
+    {
+      "id": "v13_001",
+      "title": "S&P 500 Single-Day Gains and Losses (%) in Q1",
+      "category": "futurex_official",
+      "source_type": "futurex_online",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "pending",
+      "base_prediction": null,
+      "skill_prediction": null,
+      "resolved": false,
+      "answer_box": null,
+      "base_correct": null,
+      "skill_correct": null
+    },
+    {
+      "id": "v13_002",
+      "title": "What will KOSPI (^KS11) hit in Q1 2026?",
+      "category": "threshold_ladder",
+      "source_type": "futurex_online",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "pending",
+      "base_prediction": null,
+      "skill_prediction": null,
+      "resolved": false,
+      "answer_box": null,
+      "base_correct": null,
+      "skill_correct": null
+    },
+    {
+      "id": "v13_003",
+      "title": "Q1 S&P 500 Performance",
+      "category": "threshold_truth_set",
+      "source_type": "futurex_online",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "pending",
+      "base_prediction": null,
+      "skill_prediction": null,
+      "resolved": false,
+      "answer_box": null,
+      "base_correct": null,
+      "skill_correct": null
+    },
+    {
+      "id": "v13_004",
+      "title": "Will KOSPI (KS11) close above __ end of Q1?",
+      "category": "threshold_truth_set",
+      "source_type": "futurex_online",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "pending",
+      "base_prediction": null,
+      "skill_prediction": null,
+      "resolved": false,
+      "answer_box": null,
+      "base_correct": null,
+      "skill_correct": null
+    },
+    {
+      "id": "v13_005",
+      "title": "What price will Bitcoin hit by March 2026? (add your prediction)",
+      "category": "threshold_ladder",
+      "source_type": "futurex_online",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "pending",
+      "base_prediction": null,
+      "skill_prediction": null,
+      "resolved": false,
+      "answer_box": null,
+      "base_correct": null,
+      "skill_correct": null
+    },
+    {
+      "id": "v13_006",
+      "title": "Banxico interest rate decision in March",
+      "category": "binary_event",
+      "source_type": "futurex_online",
+      "end_time": "2026-03-26",
+      "ground_truth_status": "pending",
+      "base_prediction": null,
+      "skill_prediction": null,
+      "resolved": false,
+      "answer_box": null,
+      "base_correct": null,
+      "skill_correct": null
+    },
+    {
+      "id": "v13_007",
+      "title": "Robinhood launches prediction market through MIAXdx by March 31?",
+      "category": "binary_event",
+      "source_type": "futurex_online",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "pending",
+      "base_prediction": null,
+      "skill_prediction": null,
+      "resolved": false,
+      "answer_box": null,
+      "base_correct": null,
+      "skill_correct": null
+    },
+    {
+      "id": "v13_008",
+      "title": "What will Gold futures (GC) settle at on the final trading day of March 2026?",
+      "category": "month_end_bucket",
+      "source_type": "custom_live",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "resolved",
+      "base_prediction": null,
+      "skill_prediction": null,
+      "resolved": true,
+      "answer_box": "\\boxed{E}",
+      "base_correct": false,
+      "skill_correct": false
+    },
+    {
+      "id": "v13_009",
+      "title": "Which of these WTI crude oil futures (CL) levels will trade at any point before March 31, 2026?",
+      "category": "hit_levels",
+      "source_type": "custom_live",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "resolved",
+      "base_prediction": null,
+      "skill_prediction": null,
+      "resolved": true,
+      "answer_box": "\\boxed{E}",
+      "base_correct": false,
+      "skill_correct": false
+    },
+    {
+      "id": "v13_010",
+      "title": "Which of these increasingly bullish claims about Bitcoin will still be true at the March 2026 close?",
+      "category": "month_end_thresholds",
+      "source_type": "custom_live",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "resolved",
+      "base_prediction": null,
+      "skill_prediction": null,
+      "resolved": true,
+      "answer_box": "\\boxed{D}",
+      "base_correct": false,
+      "skill_correct": false
+    },
+    {
+      "id": "v13_011",
+      "title": "What will Ethereum (ETH-USD) be worth at the March 2026 close?",
+      "category": "month_end_bucket",
+      "source_type": "custom_live",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "resolved",
+      "base_prediction": null,
+      "skill_prediction": null,
+      "resolved": true,
+      "answer_box": "\\boxed{D}",
+      "base_correct": false,
+      "skill_correct": false
+    },
+    {
+      "id": "v13_012",
+      "title": "Which semiconductor stock will post the best percentage return from the March 25, 2026 close through the March 31, 2026 close?",
+      "category": "winner_market",
+      "source_type": "custom_live",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "resolved",
+      "base_prediction": null,
+      "skill_prediction": null,
+      "resolved": true,
+      "answer_box": "\\boxed{E}",
+      "base_correct": false,
+      "skill_correct": false
+    },
+    {
+      "id": "v13_013",
+      "title": "Which of these semiconductor stocks will finish March 2026 above their March 25, 2026 close?",
+      "category": "up_membership",
+      "source_type": "custom_live",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "resolved",
+      "base_prediction": null,
+      "skill_prediction": null,
+      "resolved": true,
+      "answer_box": "\\boxed{E}",
+      "base_correct": false,
+      "skill_correct": false
+    },
+    {
+      "id": "v13_014",
+      "title": "Which of these risk assets will finish March 2026 above their March 25, 2026 close?",
+      "category": "up_membership",
+      "source_type": "custom_live",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "resolved",
+      "base_prediction": null,
+      "skill_prediction": null,
+      "resolved": true,
+      "answer_box": "\\boxed{D}",
+      "base_correct": false,
+      "skill_correct": false
+    },
+    {
+      "id": "v13_015",
+      "title": "Which will post the larger percentage return from the March 25, 2026 close through the March 31, 2026 close?",
+      "category": "winner_market",
+      "source_type": "custom_live",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "resolved",
+      "base_prediction": null,
+      "skill_prediction": null,
+      "resolved": true,
+      "answer_box": "\\boxed{E}",
+      "base_correct": false,
+      "skill_correct": false
+    },
+    {
+      "id": "v13_016",
+      "title": "Will NVIDIA stock close above $185 by March 31, 2026?",
+      "category": "binary_price_event",
+      "source_type": "custom_live",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "resolved",
+      "base_prediction": null,
+      "skill_prediction": null,
+      "resolved": true,
+      "answer_box": "\\boxed{E}",
+      "base_correct": false,
+      "skill_correct": false
+    },
+    {
+      "id": "v13_017",
+      "title": "Will AMD stock close above $215 by March 31, 2026?",
+      "category": "binary_price_event",
+      "source_type": "custom_live",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "resolved",
+      "base_prediction": null,
+      "skill_prediction": null,
+      "resolved": true,
+      "answer_box": "\\boxed{D}",
+      "base_correct": false,
+      "skill_correct": false
+    }
+  ],
+  "runs": {
+    "base": {
+      "duration_seconds": 742.18,
+      "prediction_count": 0,
+      "valid_prediction_count": 0,
+      "predictions": [
+        {
+          "id": "v13_001",
+          "prediction": null
+        },
+        {
+          "id": "v13_002",
+          "prediction": null
+        },
+        {
+          "id": "v13_003",
+          "prediction": null
+        },
+        {
+          "id": "v13_004",
+          "prediction": null
+        },
+        {
+          "id": "v13_005",
+          "prediction": null
+        },
+        {
+          "id": "v13_006",
+          "prediction": null
+        },
+        {
+          "id": "v13_007",
+          "prediction": null
+        },
+        {
+          "id": "v13_008",
+          "prediction": null
+        },
+        {
+          "id": "v13_009",
+          "prediction": null
+        },
+        {
+          "id": "v13_010",
+          "prediction": null
+        },
+        {
+          "id": "v13_011",
+          "prediction": null
+        },
+        {
+          "id": "v13_012",
+          "prediction": null
+        },
+        {
+          "id": "v13_013",
+          "prediction": null
+        },
+        {
+          "id": "v13_014",
+          "prediction": null
+        },
+        {
+          "id": "v13_015",
+          "prediction": null
+        },
+        {
+          "id": "v13_016",
+          "prediction": null
+        },
+        {
+          "id": "v13_017",
+          "prediction": null
+        }
+      ],
+      "batches": [
+        {
+          "batch_name": "batch_1",
+          "returncode": -15,
+          "duration_seconds": 329.33,
+          "stdout": "",
+          "stderr": "en better experience and more innovative products for customers.”\nThe independent exchange will be managed by a joint venture with Robinhood Markets, Inc. serving as the controlling partner and providing strong retail demand and distribution. Market making leader Susquehanna International Group has been brought on as a key partner and day-one liquidity provider, with other liquidity providers to be added to ensure the best possible execution for customers. The venture will accelerate delivery of its services by acquiring MIAXdx, a CFTC-licensed Designated Contract Market (DCM), Derivatives Clearing Organization (DCO) and Swap Execution Facility (SEF), and wholly-owned subsidiary of Miami International Holdings, Inc. (MIAX) (NYSE: MIAX). MIAX will remain invested through a strategic 10% equity stake in the exchange. \nPrediction Markets have quickly become Robinhood’s fastest-growing product line by revenue. Just one year since launch, 9 billion contracts have been traded by more than 1 million Robinhood customers. By introducing a robust, institutional-grade exchange to the market, we’ll add more choices for consumers. We’ll also gain the flexibility to build faster and deliver more contracts and services to traders.\nThe exchange will serve Robinhood Derivatives and other FCMs, and is expected to begin operations in 2026. \nAbout Robinhood Markets, Inc. \nRobinhood Markets, Inc. (NASDAQ: HOOD) transformed financial services by introducing commission-free stock trading and democratizing access to the markets for millions of investors. Today, Robinhood, through its subsidiaries, lets you trade stocks, options, futures (which includes event contracts), and crypto, invest for retirement, earn with Robinhood Gold, and access an expert-managed portfolio with Robinhood Strategies. Headquartered in Menlo Park, California, Robinhood puts customers in the driver's seat, delivering unprecedented value and products intentionally designed for a new generation of investors. Additional information about Robinhood can be found at www.robinhood.com.\nForward-Looking Statements\nThis blog post includes forward-looking statements about, among other things, the proposed acquisition of MIAXdx, the formation and expected operations of the new joint venture, anticipated timing, and future products and services. Actual results may differ materially due to various risks and uncertainties, including the satisfaction of closing conditions, regulatory approvals, maintenance of applicable regulatory licenses, integration challenges, and other factors described in Robinhood Markets, Inc.’s filings with the Securities and Exchange Commission. Robinhood undertakes no obligation to update these statements, except as required by law. \n5020819\n\n2026-03-25T14:22:43.161277Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T14:22:43.161303Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-25T14:22:43.524576Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T14:22:43.524603Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n🌐 Searching the web...\n🌐 Searched: MIAXdx March 2026 launch prediction markets\n🌐 Searching the web...\n🌐 Searched: KOSPI March 25 2026 Reuters 5642 5500 5750\n",
+          "raw_output": "",
+          "parsed_output": null,
+          "parse_error": "Expecting value: line 1 column 1 (char 0)",
+          "predictions": [],
+          "validation": {
+            "case_count_expected": 7,
+            "prediction_count_returned": 0,
+            "valid_prediction_count": 0,
+            "all_cases_returned": false,
+            "all_predictions_valid": true,
+            "missing_case_ids": [
+              "v13_001",
+              "v13_002",
+              "v13_003",
+              "v13_004",
+              "v13_005",
+              "v13_006",
+              "v13_007"
+            ],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_2",
+          "returncode": -15,
+          "duration_seconds": 40.88,
+          "stdout": "",
+          "stderr": "rect options and NO incorrect options. Selecting any wrong option or failing to select all correct options will result in a penalty.\nYour final answer MUST end with this exact format:\nlisting all correct option(s) you have identified, separated by commas, within the box.\nFor example: \\boxed{A} for a single correct option, or \\boxed{B, C} for multiple correct options.\n\nDo not use any other format. Do not refuse to make a prediction. Do not say \"I cannot predict the future.\" You must make a clear prediction based on the best data currently available, using the box format specified above.\nmcp: playwright starting\n2026-03-25T14:23:00.242277Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at \"/Users/zeyu/Documents/bach_private_cache/.bench/codex_home_base/shell_snapshots/019d2560-918a-74e0-87e2-20cef6f3923f.tmp-1774448580085176000\": Os { code: 2, kind: NotFound, message: \"No such file or directory\" }\n2026-03-25T14:23:03.418297Z  WARN codex_rmcp_client::rmcp_client: Failed to terminate MCP process group 11361: Operation not permitted (os error 1)\nmcp: playwright failed: MCP client for `playwright` failed to start: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response\nmcp startup: failed: playwright\n2026-03-25T14:23:03.870545Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T14:23:03.870577Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-25T14:23:04.237171Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T14:23:04.237191Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-25T14:23:06.045956Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T14:23:06.045987Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-25T14:23:06.427145Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T14:23:06.427175Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\ncodex\nI’m gathering live market context for the five cases first: current BTC/ETH/equity levels from finance data, plus recent gold and WTI futures pricing and catalysts from the web.\n🌐 Searching the web...\n🌐 Searched: finance: BTC\n🌐 Searching the web...\n🌐 Searched: March 2026 gold futures GC price March 25 2026 settlement Reuters\n🌐 Searching the web...\n🌐 Searched: https://www.kiplinger.com/investing/live/march-fed-meeting-2026-live-updates-and-commentary\n🌐 Searching the web...\n🌐 Searched: Reuters March 25 2026 gold futures settled March 25 2026\n",
+          "raw_output": "",
+          "parsed_output": null,
+          "parse_error": "Expecting value: line 1 column 1 (char 0)",
+          "predictions": [],
+          "validation": {
+            "case_count_expected": 5,
+            "prediction_count_returned": 0,
+            "valid_prediction_count": 0,
+            "all_cases_returned": false,
+            "all_predictions_valid": true,
+            "missing_case_ids": [
+              "v13_008",
+              "v13_009",
+              "v13_010",
+              "v13_011",
+              "v13_012"
+            ],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_3",
+          "returncode": -15,
+          "duration_seconds": 371.97,
+          "stdout": "",
+          "stderr": "cceeded in 0ms:\n2026-03-25 14:24:24 UTC\n2026-03-25T14:24:25.258079Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T14:24:25.258181Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-25T14:24:25.627906Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T14:24:25.627923Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\nexec\n/bin/zsh -lc \"python3 - <<'PY'\nimport datetime\nprint(datetime.date(2026,3,31).strftime('%A'))\nPY\" in /Users/zeyu/Documents/bach_private_cache/.bench/v13-live-only-results-20260325-221728/base/workspace succeeded in 0ms:\nTuesday\nexec\n/bin/zsh -lc \"python3 - <<'PY'\nimport importlib.util\nmods=['yfinance','pandas','numpy','requests']\nfor m in mods:\n    print(m, bool(importlib.util.find_spec(m)))\nPY\" in /Users/zeyu/Documents/bach_private_cache/.bench/v13-live-only-results-20260325-221728/base/workspace succeeded in 0ms:\nyfinance True\npandas True\nnumpy True\nrequests True\n2026-03-25T14:24:30.289900Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T14:24:30.289939Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-25T14:24:30.666837Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T14:24:30.666853Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-25T14:28:45.417252Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T14:28:45.418946Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-25T14:29:36.072350Z  WARN codex_core::codex: stream disconnected - retrying sampling request (1/5 in 208ms)...\n2026-03-25T14:29:42.828516Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T14:29:42.828559Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n",
+          "raw_output": "",
+          "parsed_output": null,
+          "parse_error": "Expecting value: line 1 column 1 (char 0)",
+          "predictions": [],
+          "validation": {
+            "case_count_expected": 5,
+            "prediction_count_returned": 0,
+            "valid_prediction_count": 0,
+            "all_cases_returned": false,
+            "all_predictions_valid": true,
+            "missing_case_ids": [
+              "v13_013",
+              "v13_014",
+              "v13_015",
+              "v13_016",
+              "v13_017"
+            ],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        }
+      ]
+    },
+    "skill": {
+      "duration_seconds": 742.17,
+      "prediction_count": 0,
+      "valid_prediction_count": 0,
+      "predictions": [
+        {
+          "id": "v13_001",
+          "prediction": null
+        },
+        {
+          "id": "v13_002",
+          "prediction": null
+        },
+        {
+          "id": "v13_003",
+          "prediction": null
+        },
+        {
+          "id": "v13_004",
+          "prediction": null
+        },
+        {
+          "id": "v13_005",
+          "prediction": null
+        },
+        {
+          "id": "v13_006",
+          "prediction": null
+        },
+        {
+          "id": "v13_007",
+          "prediction": null
+        },
+        {
+          "id": "v13_008",
+          "prediction": null
+        },
+        {
+          "id": "v13_009",
+          "prediction": null
+        },
+        {
+          "id": "v13_010",
+          "prediction": null
+        },
+        {
+          "id": "v13_011",
+          "prediction": null
+        },
+        {
+          "id": "v13_012",
+          "prediction": null
+        },
+        {
+          "id": "v13_013",
+          "prediction": null
+        },
+        {
+          "id": "v13_014",
+          "prediction": null
+        },
+        {
+          "id": "v13_015",
+          "prediction": null
+        },
+        {
+          "id": "v13_016",
+          "prediction": null
+        },
+        {
+          "id": "v13_017",
+          "prediction": null
+        }
+      ],
+      "batches": [
+        {
+          "batch_name": "batch_1",
+          "returncode": -15,
+          "duration_seconds": 329.32,
+          "stdout": "",
+          "stderr": "                                  \n2026-03-16 00:00:00-04:00  130.869995  133.940002  130.800003  133.100006  133.100006  24762800        0.0           0.0            0.0\n2026-03-17 00:00:00-04:00  134.759995  135.990005  133.169998  134.429993  134.429993  15549900        0.0           0.0            0.0\n2026-03-18 00:00:00-04:00  133.990005  135.350006  131.779999  131.880005  131.880005  19764500        0.0           0.0            0.0\n2026-03-19 00:00:00-04:00  128.419998  135.539993  126.720001  134.820007  134.820007  21186400        0.0           0.0            0.0\n2026-03-20 00:00:00-04:00  132.570007  132.919998  125.489998  125.779999  125.779999  32030700        0.0           0.0            0.0\n2026-03-23 00:00:00-04:00  131.710007  134.699997  129.580002  133.809998  133.809998  32748800        0.0           0.0            0.0\n2026-03-24 00:00:00-04:00  127.309998  130.850006  127.250000  128.750000  128.750000  24625200        0.0           0.0            0.0\n2026-03-25 00:00:00-04:00  129.544998  130.360001  127.029999  129.710007  129.710007   5791057        0.0           0.0            0.0\n1m return -12.881988551552602\n\nTICKER HOOD\n                                Open       High        Low      Close  Adj Close    Volume  Dividends  Stock Splits\nDate                                                                                                               \n2026-03-16 00:00:00-04:00  75.099998  75.805000  74.110001  75.309998  75.309998  22783400        0.0           0.0\n2026-03-17 00:00:00-04:00  75.400002  77.699997  75.389999  77.349998  77.349998  20210200        0.0           0.0\n2026-03-18 00:00:00-04:00  76.129997  77.250000  74.830002  74.900002  74.900002  21937600        0.0           0.0\n2026-03-19 00:00:00-04:00  72.279999  75.160004  71.699997  74.160004  74.160004  21552500        0.0           0.0\n🌐 Searching the web...\n🌐 Searched: MIAXdx Robinhood March 2026 prediction market launch\n🌐 Searching the web...\n🌐 Searched: https://robinhood.com/us/en/newsroom/robinhood-prediction-markets-joint-venture/\n🌐 Searching the web...\n🌐 Searched: site:robinhood.com/support 'Event contracts are offered by Robinhood Derivatives, LLC through either KalshiEX LLC or ForecastEx LLC'\n🌐 Searching the web...\n🌐 Searched: Bitcoin March 25 2026 Reuters ETF flows strategy reserve tariffs March 2026\n2026-03-25T14:22:30.335447Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T14:22:30.335501Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-25T14:22:52.530039Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T14:22:52.530085Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-25T14:22:52.902570Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T14:22:52.902597Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n🌐 Searching the web...\n",
+          "raw_output": "",
+          "parsed_output": null,
+          "parse_error": "Expecting value: line 1 column 1 (char 0)",
+          "predictions": [],
+          "validation": {
+            "case_count_expected": 7,
+            "prediction_count_returned": 0,
+            "valid_prediction_count": 0,
+            "all_cases_returned": false,
+            "all_predictions_valid": true,
+            "missing_case_ids": [
+              "v13_001",
+              "v13_002",
+              "v13_003",
+              "v13_004",
+              "v13_005",
+              "v13_006",
+              "v13_007"
+            ],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_2",
+          "returncode": -15,
+          "duration_seconds": 40.88,
+          "stdout": "",
+          "stderr": "sOa.ykNEdLzBt4CtCjWWndYoqIKUB1i8cbbXUBc2yPONXiG66XUDgZw7QiPwAMH1AiYC8esBht9S9_8NJl1bzVGYONmU5fmtYZyyfcrZwEfzaghMYPCuOst9gLgoThRFdGAF6uqPhLtv6K5C2hYsNsXfFO79TFeNWO94cE8KONcqajxAi.sTY4zZwWb4w2nO8wXLE5r8pjqgx2mp6yuFCjM3MWEJUOjtQ1m1MIVe9dZaQAwYAX39ofBMsVhPyqW7lSN1SgY3aSbc7QJ8z7JGtVpZCQmYubXss1YjXn.1s7Byc.WMgd3zf0Emq91VVxgMFmHRKGCvDk_dpT4nL7s7IBgpjiulbzzoPpt70BPhBD80sOrS0TIxpKYgnDmz6dxPyzhh0wpajQQ2zAN29zM5L4zEghcS94iRG15SGvd.Ceahkg9pB4jyvmFeDOpnXUcSLAfAUT9pdBIMQ8TS1U9vy2lnUd2S9P61.vzAVA5kxTnJEWFRZ_YW8LJFtp9ol_QrcCiJEAVhCjaZkUA0RRpQMn8.tfTuvvnz7RagReNX6Cv5Hx44y9Wu4WiM3eZFS2gqGkNRqG5ncvR9NR7yDhsT.cn2KKoYNKSGev5HNGp9SbHwAPjqvBTJUmW4QtxTZzKznHx_e308ANyZPj9Mp0wUp1iueefbdozuKPEj2ppL2pTJ7axJPa8qYSGBZ2d2Vz8N3QOkjrxv0pthplk_8FcsOrLni3rWe7MOeEyajgLm7xLoJWLVVL7D92i0q3J0Z.z6YXUM35YjWPWLd8Ipj7YlndL0xG6Zx0yWaHvcwXrhc7_1WdZHaiihvSOAtNvsEorTeDl.oIJkgWESM6NPKi4BfiqhJ4OV_6t9125LJCIEHIJbUsaFqF7cj7aPSlFO2nxVkR_aFRjvd00rBsLdWTr8tBC2ZRE1Ji5A50DBkZEEaVU.Vq4oSCsf7dh0fr6dI2paXLgyDUkvU_w0dVHreLY5zzzOmUky_bgxg_x9FuClM0rHw8IYto.cc_8FQTQnRE',};var a = document.createElement('script');a.src = '/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=9e1e92d2894f9c33';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,\"/backend-api/codex/analytics-events/events?__cf_chl_rt_tk=r84gpmtqTNaqkxE.GfLRl21dlqDmvvrynKKpzQsoAQY-1774448607-1.0.1.1-xyzmHLnIUwPOT97K5uYN1bK.G18sJMmsXLRY5auYOzc\"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></div>\n    </div>\n  </body>\n</html>\n\n2026-03-25T14:23:27.266722Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T14:23:27.266743Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\nPlan update\nRead the market-causal workflow. Next step is collecting live market state and catalysts from web and pricing sources.\n  ✓ Read the market-causal skill instructions relevant to financial proxy use\n  → Collect current prices and recent catalysts for gold, WTI, BTC, ETH, NVDA/AMD/AVGO/TSM\n  • Synthesize near-term scenarios and choose predictions for v13_008 to v13_012\n2026-03-25T14:23:31.241969Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T14:23:31.242031Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-25T14:23:31.631500Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T14:23:31.631525Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n",
+          "raw_output": "",
+          "parsed_output": null,
+          "parse_error": "Expecting value: line 1 column 1 (char 0)",
+          "predictions": [],
+          "validation": {
+            "case_count_expected": 5,
+            "prediction_count_returned": 0,
+            "valid_prediction_count": 0,
+            "all_cases_returned": false,
+            "all_predictions_valid": true,
+            "missing_case_ids": [
+              "v13_008",
+              "v13_009",
+              "v13_010",
+              "v13_011",
+              "v13_012"
+            ],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_3",
+          "returncode": -15,
+          "duration_seconds": 371.97,
+          "stdout": "",
+          "stderr": "se log out and sign in again.\nexec\n/bin/zsh -lc \"sed -n '1,240p' /Users/zeyu/Documents/bach_private_cache/.bench/codex_home_skill/skills/causal-abel/references/probe-usage.md\" in /Users/zeyu/Documents/bach_private_cache/.bench/v13-live-only-results-20260325-221728/skill/workspace succeeded in 0ms:\n# Probe Usage\n\nUse this file for `cap_probe.py` details and reusable command patterns after the routing decision is already clear.\n\n## Authorization First\n\n- Do not run the bundled probe against live Abel APIs until an Abel user API key is available in session state, `--api-key`, or `.env.skills`.\n- If the key is missing, start the OAuth handoff from `setup-guide.md` first and persist the resulting key before probing.\n- By default, `cap_probe.py` reads `<skill-root>/.env.skills`, so treat it as an authorized probe, not an anonymous public probe.\n\n## Bundled Script\n\nPrefer the bundled probe script over ad hoc payload construction.\n\nPrimary script:\n\n- `scripts/cap_probe.py`\n\nDeterministic subcommands:\n\nexec\n/bin/zsh -lc 'python3 /Users/zeyu/Documents/bach_private_cache/.bench/codex_home_skill/skills/causal-abel/scripts/check_skill_update.py' in /Users/zeyu/Documents/bach_private_cache/.bench/v13-live-only-results-20260325-221728/skill/workspace succeeded in 392ms:\n{\n  \"ok\": false,\n  \"checked\": false,\n  \"skill_name\": \"causal-abel\",\n  \"current_version\": \"1.0.7\",\n  \"remote_version\": null,\n  \"update_available\": false,\n  \"scope\": null,\n  \"warning\": \"This refresh command targets only `causal-abel`.\",\n  \"next_command\": null,\n  \"error\": \"No lock entry was found for `causal-abel`. The skill may need to be installed with the public skills CLI.\"\n}\n2026-03-25T14:24:27.732600Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T14:24:27.732640Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-25T14:24:28.125136Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T14:24:28.125203Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n🌐 Searching the web...\n🌐 Searched: finance: NVDA\n2026-03-25T14:28:45.465023Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T14:28:45.465364Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-25T14:29:35.893723Z  WARN codex_core::codex: stream disconnected - retrying sampling request (1/5 in 207ms)...\n2026-03-25T14:29:42.463370Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-25T14:29:42.466315Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n",
+          "raw_output": "",
+          "parsed_output": null,
+          "parse_error": "Expecting value: line 1 column 1 (char 0)",
+          "predictions": [],
+          "validation": {
+            "case_count_expected": 5,
+            "prediction_count_returned": 0,
+            "valid_prediction_count": 0,
+            "all_cases_returned": false,
+            "all_predictions_valid": true,
+            "missing_case_ids": [
+              "v13_013",
+              "v13_014",
+              "v13_015",
+              "v13_016",
+              "v13_017"
+            ],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "rescored_at": "2026-04-02T17:20:32+08:00",
+    "resolved_case_count": 10,
+    "pending_case_count": 7,
+    "base_correct_count": 0,
+    "skill_correct_count": 0,
+    "base_accuracy": 0.0,
+    "skill_accuracy": 0.0
+  },
+  "summary": {
+    "prediction_diff_count": 0,
+    "base_duration_seconds": 742.18,
+    "skill_duration_seconds": 742.17,
+    "base_valid_prediction_count": 0,
+    "skill_valid_prediction_count": 0
+  }
+}
