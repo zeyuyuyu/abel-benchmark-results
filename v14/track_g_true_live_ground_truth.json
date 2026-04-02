@@ -128,9 +128,11 @@
     },
     {
       "id": "v13_008",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{E}",
+      "answer_tokens": [
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -170,13 +172,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 4783.2001953125
+      }
     },
     {
       "id": "v13_009",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{E}",
+      "answer_tokens": [
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -216,13 +223,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 100.12000274658203
+      }
     },
     {
       "id": "v13_010",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -262,13 +274,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 68078.5546875
+      }
     },
     {
       "id": "v13_011",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -308,13 +325,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 2138.737060546875
+      }
     },
     {
       "id": "v13_012",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{E}",
+      "answer_tokens": [
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -354,13 +376,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 175.75
+      }
     },
     {
       "id": "v13_013",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{E}",
+      "answer_tokens": [
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -400,13 +427,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 210.2100067138672
+      }
     },
     {
       "id": "v13_014",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -446,13 +478,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 313.489990234375
+      }
     },
     {
       "id": "v13_015",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{E}",
+      "answer_tokens": [
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -492,13 +529,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 341.489990234375
+      }
     },
     {
       "id": "v13_016",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{E}",
+      "answer_tokens": [
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -538,13 +580,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 381.260009765625
+      }
     },
     {
       "id": "v13_017",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -584,13 +631,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 255.6300048828125
+      }
     },
     {
       "id": "v13_018",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -630,13 +682,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 369.3699951171875
+      }
     },
     {
       "id": "v13_019",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -676,13 +733,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 210.57000732421875
+      }
     },
     {
       "id": "v13_020",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{E}",
+      "answer_tokens": [
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -722,13 +784,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 579.22998046875
+      }
     },
     {
       "id": "v13_021",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{E}",
+      "answer_tokens": [
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -768,13 +835,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 584.3099975585938
+      }
     },
     {
       "id": "v13_022",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{E}",
+      "answer_tokens": [
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -814,13 +886,20 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 655.239990234375
+      }
     },
     {
       "id": "v13_023",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_threshold_truths",
@@ -857,13 +936,20 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 68078.5546875
+      }
     },
     {
       "id": "v13_024",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_threshold_truths",
@@ -900,13 +986,21 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 2138.737060546875
+      }
     },
     {
       "id": "v13_025",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C, D}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_threshold_truths",
@@ -943,13 +1037,21 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 175.75
+      }
     },
     {
       "id": "v13_026",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C, D}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_threshold_truths",
@@ -986,13 +1088,21 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 210.2100067138672
+      }
     },
     {
       "id": "v13_027",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C, D}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_threshold_truths",
@@ -1029,13 +1139,20 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 381.260009765625
+      }
     },
     {
       "id": "v13_028",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_threshold_truths",
@@ -1072,13 +1189,20 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 255.6300048828125
+      }
     },
     {
       "id": "v13_029",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_threshold_truths",
@@ -1115,13 +1239,20 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 369.3699951171875
+      }
     },
     {
       "id": "v13_030",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_threshold_truths",
@@ -1158,13 +1289,22 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 210.57000732421875
+      }
     },
     {
       "id": "v13_031",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C, D, E}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_threshold_truths",
@@ -1201,13 +1341,21 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 579.22998046875
+      }
     },
     {
       "id": "v13_032",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C, D}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_threshold_truths",
@@ -1244,13 +1392,21 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 584.3099975585938
+      }
     },
     {
       "id": "v13_033",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C, D}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_threshold_truths",
@@ -1287,13 +1443,22 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 338.5400085449219
+      }
     },
     {
       "id": "v13_034",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C, D, E}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_threshold_truths",
@@ -1330,13 +1495,20 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 437.82000732421875
+      }
     },
     {
       "id": "v13_035",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "hit_levels",
@@ -1379,13 +1551,21 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "max_high": 106.86000061035156,
+        "min_low": 92.08000183105469
+      }
     },
     {
       "id": "v13_036",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "hit_levels",
@@ -1428,13 +1608,19 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "max_high": 4789.10009765625,
+        "min_low": 4413.39990234375
+      }
     },
     {
       "id": "v13_037",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "hit_levels",
@@ -1477,12 +1663,16 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "max_high": 69230.359375,
+        "min_low": 64971.70703125
+      }
     },
     {
       "id": "v13_038",
-      "status": "pending",
-      "answer_box": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{}",
       "answer_tokens": [],
       "resolution_spec": {
         "source": "yfinance",
@@ -1526,13 +1716,19 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "max_high": 2165.666259765625,
+        "min_low": 1939.5286865234375
+      }
     },
     {
       "id": "v13_039",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "hit_levels",
@@ -1575,13 +1771,22 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "max_high": 177.3699951171875,
+        "min_low": 164.27000427246094
+      }
     },
     {
       "id": "v13_040",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C, D}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "hit_levels",
@@ -1624,13 +1829,19 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "max_high": 221.0,
+        "min_low": 192.8699951171875
+      }
     },
     {
       "id": "v13_041",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "hit_levels",
@@ -1673,13 +1884,22 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "max_high": 384.44000244140625,
+        "min_low": 352.1400146484375
+      }
     },
     {
       "id": "v13_042",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, D, E}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "D",
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "hit_levels",
@@ -1722,13 +1942,22 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "max_high": 587.739990234375,
+        "min_low": 555.5999755859375
+      }
     },
     {
       "id": "v13_043",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A, D, E, F}",
+      "answer_tokens": [
+        "A",
+        "D",
+        "E",
+        "F"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "hit_levels",
@@ -1771,13 +2000,23 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "max_high": 658.52001953125,
+        "min_low": 629.280029296875
+      }
     },
     {
       "id": "v13_044",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, D, E, F}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "hit_levels",
@@ -1820,13 +2059,20 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "max_high": 342.6499938964844,
+        "min_low": 307.260009765625
+      }
     },
     {
       "id": "v13_045",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{D, E}",
+      "answer_tokens": [
+        "D",
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "hit_levels",
@@ -1869,12 +2115,16 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "max_high": 179.75,
+        "min_low": 158.4600067138672
+      }
     },
     {
       "id": "v13_046",
-      "status": "pending",
-      "answer_box": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{}",
       "answer_tokens": [],
       "resolution_spec": {
         "source": "yfinance",
@@ -1918,13 +2168,19 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "max_high": 139.0800018310547,
+        "min_low": 117.75
+      }
     },
     {
       "id": "v13_047",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
@@ -1936,13 +2192,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 175.75
+      }
     },
     {
       "id": "v13_048",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
@@ -1954,13 +2215,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 210.2100067138672
+      }
     },
     {
       "id": "v13_049",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
@@ -1972,13 +2238,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 313.489990234375
+      }
     },
     {
       "id": "v13_050",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{Yes}",
+      "answer_tokens": [
+        "Yes"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
@@ -1990,13 +2261,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 341.489990234375
+      }
     },
     {
       "id": "v13_051",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
@@ -2008,13 +2284,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 381.260009765625
+      }
     },
     {
       "id": "v13_052",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
@@ -2026,13 +2307,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 255.6300048828125
+      }
     },
     {
       "id": "v13_053",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
@@ -2044,13 +2330,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 369.3699951171875
+      }
     },
     {
       "id": "v13_054",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
@@ -2062,13 +2353,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 210.57000732421875
+      }
     },
     {
       "id": "v13_055",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{Yes}",
+      "answer_tokens": [
+        "Yes"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
@@ -2080,13 +2376,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 579.22998046875
+      }
     },
     {
       "id": "v13_056",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
@@ -2098,13 +2399,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 584.3099975585938
+      }
     },
     {
       "id": "v13_057",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{Yes}",
+      "answer_tokens": [
+        "Yes"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
@@ -2116,13 +2422,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 655.239990234375
+      }
     },
     {
       "id": "v13_058",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
@@ -2134,13 +2445,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 249.55999755859375
+      }
     },
     {
       "id": "v13_059",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
@@ -2152,13 +2468,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 68078.5546875
+      }
     },
     {
       "id": "v13_060",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
@@ -2170,13 +2491,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 2138.737060546875
+      }
     },
     {
       "id": "v13_061",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
@@ -2188,13 +2514,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 172.99000549316406
+      }
     },
     {
       "id": "v13_062",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
@@ -2206,13 +2537,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 122.77999877929688
+      }
     },
     {
       "id": "v13_063",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
@@ -2224,13 +2560,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 58.970001220703125
+      }
     },
     {
       "id": "v13_064",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
@@ -2242,13 +2583,18 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "close": 49.439998626708984
+      }
     },
     {
       "id": "v13_065",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2279,13 +2625,23 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "D": 0.047162,
+          "B": 0.031604,
+          "A": 0.026337,
+          "C": 0.01317
+        }
+      }
     },
     {
       "id": "v13_066",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2316,13 +2672,23 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "D": 0.057877,
+          "C": 0.0146,
+          "A": 0.010835,
+          "B": 0.00929
+        }
+      }
     },
     {
       "id": "v13_067",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2348,13 +2714,22 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "B": 0.018334,
+          "A": 0.015734,
+          "C": 0.008568
+        }
+      }
     },
     {
       "id": "v13_068",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2385,13 +2760,23 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "B": 0.036013,
+          "C": -0.002249,
+          "A": -0.010731,
+          "D": -0.076356
+        }
+      }
     },
     {
       "id": "v13_069",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2422,13 +2807,23 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "A": 0.067833,
+          "C": -0.028109,
+          "B": -0.04145,
+          "D": -0.049954
+        }
+      }
     },
     {
       "id": "v13_070",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{C}",
+      "answer_tokens": [
+        "C"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2459,13 +2854,23 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "C": 0.04567,
+          "D": 0.021352,
+          "B": 0.012755,
+          "A": 0.007951
+        }
+      }
     },
     {
       "id": "v13_071",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{C}",
+      "answer_tokens": [
+        "C"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2491,13 +2896,22 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "C": 0.121277,
+          "B": 0.092802,
+          "A": 0.077273
+        }
+      }
     },
     {
       "id": "v13_072",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{C}",
+      "answer_tokens": [
+        "C"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2528,13 +2942,23 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "C": 0.057877,
+          "A": 0.026337,
+          "D": 0.0146,
+          "B": 0.00929
+        }
+      }
     },
     {
       "id": "v13_073",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2565,13 +2989,26 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "D": 0.029466,
+          "A": 0.02459,
+          "B": -0.002249,
+          "C": -0.076356
+        }
+      }
     },
     {
       "id": "v13_074",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C, D}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "membership_above_reference",
@@ -2602,13 +3039,26 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "closes": {
+          "A": 175.75,
+          "B": 210.2100067138672,
+          "C": 313.489990234375,
+          "D": 341.489990234375
+        }
+      }
     },
     {
       "id": "v13_075",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C, D}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "membership_above_reference",
@@ -2639,13 +3089,25 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "closes": {
+          "A": 255.6300048828125,
+          "B": 369.3699951171875,
+          "C": 210.57000732421875,
+          "D": 579.22998046875
+        }
+      }
     },
     {
       "id": "v13_076",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "membership_above_reference",
@@ -2671,13 +3133,22 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "closes": {
+          "A": 655.239990234375,
+          "B": 584.3099975585938,
+          "C": 249.55999755859375
+        }
+      }
     },
     {
       "id": "v13_077",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "membership_above_reference",
@@ -2708,13 +3179,23 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "closes": {
+          "A": 68078.5546875,
+          "B": 2138.737060546875,
+          "C": 172.99000549316406,
+          "D": 122.77999877929688
+        }
+      }
     },
     {
       "id": "v13_078",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "membership_above_reference",
@@ -2745,13 +3226,26 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "closes": {
+          "A": 100.12000274658203,
+          "B": 58.970001220703125,
+          "C": 160.77999877929688,
+          "D": 197.41000366210938
+        }
+      }
     },
     {
       "id": "v13_079",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C, D}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "membership_above_reference",
@@ -2782,13 +3276,25 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "closes": {
+          "A": 49.439998626708984,
+          "B": 295.3800048828125,
+          "C": 860.2100219726562,
+          "D": 49.27000045776367
+        }
+      }
     },
     {
       "id": "v13_080",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "membership_above_reference",
@@ -2814,13 +3320,25 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "closes": {
+          "A": 4783.2001953125,
+          "B": 437.82000732421875,
+          "C": 68.13999938964844
+        }
+      }
     },
     {
       "id": "v13_081",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C, D}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "membership_above_reference",
@@ -2851,13 +3369,24 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "closes": {
+          "A": 175.75,
+          "B": 369.3699951171875,
+          "C": 579.22998046875,
+          "D": 210.57000732421875
+        }
+      }
     },
     {
       "id": "v13_082",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A, D}",
+      "answer_tokens": [
+        "A",
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "membership_above_reference",
@@ -2888,13 +3417,23 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "closes": {
+          "A": 381.260009765625,
+          "B": 172.99000549316406,
+          "C": 122.77999877929688,
+          "D": 338.5400085449219
+        }
+      }
     },
     {
       "id": "v13_083",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2915,13 +3454,21 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "B": 0.036013,
+          "A": -0.010731
+        }
+      }
     },
     {
       "id": "v13_084",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2942,13 +3489,21 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "B": 0.031604,
+          "A": 0.026337
+        }
+      }
     },
     {
       "id": "v13_085",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2969,13 +3524,21 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "A": 0.010835,
+          "B": 0.00929
+        }
+      }
     },
     {
       "id": "v13_086",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2996,13 +3559,21 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "B": 0.057877,
+          "A": 0.0146
+        }
+      }
     },
     {
       "id": "v13_087",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -3023,13 +3594,21 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "B": 0.018334,
+          "A": 0.015734
+        }
+      }
     },
     {
       "id": "v13_088",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -3050,13 +3629,21 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "B": 0.007951,
+          "A": -0.04145
+        }
+      }
     },
     {
       "id": "v13_089",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -3077,13 +3664,21 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "A": 0.077273,
+          "B": 0.067833
+        }
+      }
     },
     {
       "id": "v13_090",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -3104,13 +3699,21 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "A": -0.002249,
+          "B": -0.076356
+        }
+      }
     },
     {
       "id": "v13_091",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -3131,13 +3734,21 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "B": 0.121277,
+          "A": 0.092802
+        }
+      }
     },
     {
       "id": "v13_092",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -3158,13 +3769,21 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "A": 0.029466,
+          "B": 0.018334
+        }
+      }
     },
     {
       "id": "v13_093",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -3185,13 +3804,21 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "B": 0.026337,
+          "A": 0.02459
+        }
+      }
     },
     {
       "id": "v13_094",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -3212,13 +3839,21 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "B": 0.04567,
+          "A": 0.012755
+        }
+      }
     },
     {
       "id": "v13_095",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -3239,13 +3874,21 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "A": -0.028109,
+          "B": -0.049954
+        }
+      }
     },
     {
       "id": "v13_096",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -3266,13 +3909,21 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "B": 0.0146,
+          "A": 0.010835
+        }
+      }
     },
     {
       "id": "v13_097",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -3293,13 +3944,21 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "B": 0.058629,
+          "A": 0.057877
+        }
+      }
     },
     {
       "id": "v13_098",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -3320,13 +3979,21 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "B": 0.047162,
+          "A": 0.01317
+        }
+      }
     },
     {
       "id": "v13_099",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -3347,13 +4014,21 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "B": 0.015734,
+          "A": 0.008568
+        }
+      }
     },
     {
       "id": "v13_100",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -3374,7 +4049,13 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "returns": {
+          "B": -0.002249,
+          "A": -0.010731
+        }
+      }
     }
   ]
 }

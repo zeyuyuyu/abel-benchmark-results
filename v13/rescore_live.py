@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
-"""Backfill scores for the v13 live-only finance benchmark."""
+"""Backfill live benchmark ground truth and scores."""
 
 from __future__ import annotations
 
 import ast
+import argparse
 import json
 import math
 import re
+from functools import lru_cache
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any
@@ -15,7 +17,7 @@ import yfinance as yf
 from datasets import load_dataset
 
 
-ROOT = Path("/Users/zeyu/Documents/bach_private_cache/abel-benchmark-results/v13")
+ROOT = Path(__file__).resolve().parent
 RESULTS_PATH = ROOT / "results.json"
 GROUND_TRUTH_PATH = ROOT / "ground_truth.json"
 REPORT_PATH = ROOT / "benchmark_report.md"
@@ -63,6 +65,7 @@ def extract_prediction_tokens(prediction: str | None) -> list[str]:
     return sorted(part.strip() for part in inner.split(",") if part.strip())
 
 
+@lru_cache(maxsize=None)
 def fetch_history(symbol: str, start_date: str, end_date: str) -> Any:
     end_dt = datetime.fromisoformat(end_date) + timedelta(days=2)
     hist = yf.Ticker(symbol).history(
@@ -74,6 +77,7 @@ def fetch_history(symbol: str, start_date: str, end_date: str) -> Any:
     return hist.dropna(subset=["Close"])
 
 
+@lru_cache(maxsize=None)
 def fetch_close_on(symbol: str, resolution_date: str) -> float | None:
     hist = fetch_history(symbol, resolution_date, resolution_date)
     if hist.empty:
@@ -160,6 +164,49 @@ def resolve_custom(spec: dict[str, Any]) -> tuple[list[str] | None, dict[str, An
     raise ValueError(f"Unsupported custom resolution method: {method}")
 
 
+def resolve_case_spec(
+    spec: dict[str, Any],
+    *,
+    futurex_row_map: dict[str, Any],
+) -> tuple[list[str] | None, dict[str, Any] | None]:
+    if spec["source"] == "futurex_past_backfill":
+        row = futurex_row_map.get(spec["source_id"])
+        if row is None:
+            return None, None
+        return normalize_tokens(row["ground_truth"]), {
+            "source_dataset": FUTUREX_PAST_DATASET,
+            "source_id": spec["source_id"],
+        }
+    return resolve_custom(spec)
+
+
+def backfill_ground_truth_cases(
+    cases: list[dict[str, Any]],
+    *,
+    futurex_row_map: dict[str, Any],
+) -> dict[str, int]:
+    resolved_count = 0
+    pending_count = 0
+    for gt_entry in cases:
+        resolved_tokens, resolved_meta = resolve_case_spec(
+            gt_entry["resolution_spec"],
+            futurex_row_map=futurex_row_map,
+        )
+        if resolved_tokens is None:
+            gt_entry["status"] = "pending"
+            gt_entry["answer_tokens"] = []
+            gt_entry["answer_box"] = None
+            gt_entry.pop("resolved_meta", None)
+            pending_count += 1
+            continue
+        gt_entry["status"] = "resolved"
+        gt_entry["answer_tokens"] = resolved_tokens
+        gt_entry["answer_box"] = boxed_from_tokens(resolved_tokens)
+        gt_entry["resolved_meta"] = resolved_meta
+        resolved_count += 1
+    return {"resolved": resolved_count, "pending": pending_count}
+
+
 def render_report(results: dict[str, Any]) -> str:
     scoring = results["scoring"]
     lines = [
@@ -203,11 +250,31 @@ def render_report(results: dict[str, Any]) -> str:
     return "\n".join(lines) + "\n"
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--results-path", type=Path, default=RESULTS_PATH)
+    parser.add_argument("--ground-truth-path", type=Path, default=GROUND_TRUTH_PATH)
+    parser.add_argument("--report-path", type=Path, default=REPORT_PATH)
+    parser.add_argument("--ground-truth-only", action="store_true")
+    return parser.parse_args()
+
+
 def main() -> None:
-    results = load_json(RESULTS_PATH)
-    ground_truth = load_json(GROUND_TRUTH_PATH)
+    args = parse_args()
+    ground_truth = load_json(args.ground_truth_path)
     futurex_past = load_dataset(FUTUREX_PAST_DATASET, split="train")
     futurex_row_map = {row["id"]: row for row in futurex_past}
+    backfill_counts = backfill_ground_truth_cases(
+        ground_truth["cases"],
+        futurex_row_map=futurex_row_map,
+    )
+    write_json(args.ground_truth_path, ground_truth)
+
+    if args.ground_truth_only:
+        print(json.dumps(backfill_counts, indent=2, ensure_ascii=False))
+        return
+
+    results = load_json(args.results_path)
 
     base_prediction_map = {item["id"]: item["prediction"] for item in results["runs"]["base"]["predictions"]}
     skill_prediction_map = {item["id"]: item["prediction"] for item in results["runs"]["skill"]["predictions"]}
@@ -219,27 +286,11 @@ def main() -> None:
 
     for case in results["cases"]:
         gt_entry = gt_map[case["id"]]
-        spec = gt_entry["resolution_spec"]
-        resolved_tokens: list[str] | None = None
-        resolved_meta: dict[str, Any] | None = None
+        resolved_tokens = gt_entry.get("answer_tokens", [])
+        case["ground_truth_status"] = gt_entry.get("status", "pending")
 
-        if spec["source"] == "futurex_past_backfill":
-            row = futurex_row_map.get(spec["source_id"])
-            if row is not None:
-                resolved_tokens = normalize_tokens(row["ground_truth"])
-                resolved_meta = {
-                    "source_dataset": FUTUREX_PAST_DATASET,
-                    "source_id": spec["source_id"],
-                }
-        else:
-            resolved_tokens, resolved_meta = resolve_custom(spec)
-
-        if resolved_tokens is not None:
-            answer_box = boxed_from_tokens(resolved_tokens)
-            gt_entry["status"] = "resolved"
-            gt_entry["answer_tokens"] = resolved_tokens
-            gt_entry["answer_box"] = answer_box
-            gt_entry["resolved_meta"] = resolved_meta
+        if gt_entry.get("status") == "resolved":
+            answer_box = gt_entry["answer_box"]
             case["resolved"] = True
             case["answer_box"] = answer_box
             base_tokens = extract_prediction_tokens(base_prediction_map.get(case["id"]))
@@ -270,9 +321,8 @@ def main() -> None:
         "skill_accuracy": round(skill_correct_count / resolved_count, 4) if resolved_count else None,
     }
 
-    write_json(GROUND_TRUTH_PATH, ground_truth)
-    write_json(RESULTS_PATH, results)
-    REPORT_PATH.write_text(render_report(results), encoding="utf-8")
+    write_json(args.results_path, results)
+    args.report_path.write_text(render_report(results), encoding="utf-8")
     print(json.dumps(results["scoring"], indent=2, ensure_ascii=False))
 
 

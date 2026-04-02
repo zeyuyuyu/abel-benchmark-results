@@ -1,0 +1,1198 @@
+{
+  "timestamp": "20260326-111553",
+  "version": "v13-live-only-finance",
+  "model": "gpt-5.4",
+  "reasoning_effort": "low",
+  "today_context": "March 25, 2026 (GMT+8, Asia/Shanghai)",
+  "source_filter": [
+    "custom_live"
+  ],
+  "case_id_filter": [
+    "v13_008",
+    "v13_012",
+    "v13_023",
+    "v13_027",
+    "v13_035",
+    "v13_039",
+    "v13_047",
+    "v13_059",
+    "v13_068",
+    "v13_071",
+    "v13_074",
+    "v13_077",
+    "v13_083",
+    "v13_087"
+  ],
+  "max_batch_prompt_chars": 2500,
+  "case_count": 14,
+  "cases": [
+    {
+      "id": "v13_008",
+      "title": "What will Gold futures (GC) close at on March 31, 2026?",
+      "category": "month_end_bucket",
+      "source_type": "custom_live",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "resolved",
+      "base_prediction": "\\boxed{C}",
+      "skill_prediction": "\\boxed{E}",
+      "resolved": true,
+      "answer_box": "\\boxed{E}",
+      "base_correct": false,
+      "skill_correct": true
+    },
+    {
+      "id": "v13_012",
+      "title": "What will NVIDIA (NVDA) close at by the end of March 2026?",
+      "category": "month_end_bucket",
+      "source_type": "custom_live",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "resolved",
+      "base_prediction": "\\boxed{D}",
+      "skill_prediction": "\\boxed{C}",
+      "resolved": true,
+      "answer_box": "\\boxed{E}",
+      "base_correct": false,
+      "skill_correct": false
+    },
+    {
+      "id": "v13_023",
+      "title": "Which of these statements about the Bitcoin (BTC-USD) close on March 31, 2026 will be true?",
+      "category": "month_end_thresholds",
+      "source_type": "custom_live",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "resolved",
+      "base_prediction": "\\boxed{A, B, C}",
+      "skill_prediction": "\\boxed{A, B, C}",
+      "resolved": true,
+      "answer_box": "\\boxed{A, B, C}",
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "v13_027",
+      "title": "Which of these Tesla (TSLA) closing thresholds are still met at the March 2026 close?",
+      "category": "month_end_thresholds",
+      "source_type": "custom_live",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "resolved",
+      "base_prediction": "\\boxed{A, B}",
+      "skill_prediction": "\\boxed{A, B}",
+      "resolved": true,
+      "answer_box": "\\boxed{A, B, C, D}",
+      "base_correct": false,
+      "skill_correct": false
+    },
+    {
+      "id": "v13_035",
+      "title": "Which of these WTI crude oil futures (CL) levels will trade before market close on March 31, 2026?",
+      "category": "hit_levels",
+      "source_type": "custom_live",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "resolved",
+      "base_prediction": "\\boxed{A, B, D, E}",
+      "skill_prediction": "\\boxed{A, B, C, D, E}",
+      "resolved": true,
+      "answer_box": "\\boxed{A, B, C}",
+      "base_correct": false,
+      "skill_correct": false
+    },
+    {
+      "id": "v13_039",
+      "title": "Which of these price marks will NVIDIA (NVDA) reach before March 31, 2026?",
+      "category": "hit_levels",
+      "source_type": "custom_live",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "resolved",
+      "base_prediction": "\\boxed{A}",
+      "skill_prediction": "\\boxed{A}",
+      "resolved": true,
+      "answer_box": "\\boxed{D}",
+      "base_correct": false,
+      "skill_correct": false
+    },
+    {
+      "id": "v13_047",
+      "title": "Will NVIDIA (NVDA) close above $185 on March 31, 2026?",
+      "category": "binary_price_event",
+      "source_type": "custom_live",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "resolved",
+      "base_prediction": "\\boxed{No}",
+      "skill_prediction": "\\boxed{No}",
+      "resolved": true,
+      "answer_box": "\\boxed{No}",
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "v13_059",
+      "title": "Will Bitcoin (BTC-USD) close above $74,000 on the last trading day of March 2026?",
+      "category": "binary_price_event",
+      "source_type": "custom_live",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "resolved",
+      "base_prediction": "\\boxed{No}",
+      "skill_prediction": "\\boxed{No}",
+      "resolved": true,
+      "answer_box": "\\boxed{No}",
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "v13_068",
+      "title": "Across these crypto assets and proxies, which delivers the best performance from the March 26, 2026 close to the March 31, 2026 close?",
+      "category": "winner_market",
+      "source_type": "custom_live",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "resolved",
+      "base_prediction": "\\boxed{B}",
+      "skill_prediction": "\\boxed{B}",
+      "resolved": true,
+      "answer_box": "\\boxed{B}",
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "v13_071",
+      "title": "Which of these precious-metals names finishes with the best return from the March 25, 2026 close through month-end?",
+      "category": "winner_market",
+      "source_type": "custom_live",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "resolved",
+      "base_prediction": "\\boxed{C}",
+      "skill_prediction": "\\boxed{C}",
+      "resolved": true,
+      "answer_box": "\\boxed{C}",
+      "base_correct": true,
+      "skill_correct": true
+    },
+    {
+      "id": "v13_074",
+      "title": "Which of these semiconductor names close March 31, 2026 above their March 25, 2026 close?",
+      "category": "up_membership",
+      "source_type": "custom_live",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "resolved",
+      "base_prediction": "\\boxed{A, B, C, D}",
+      "skill_prediction": "\\boxed{A, B, D}",
+      "resolved": true,
+      "answer_box": "\\boxed{A, B, C, D}",
+      "base_correct": true,
+      "skill_correct": false
+    },
+    {
+      "id": "v13_077",
+      "title": "Which of these crypto assets and proxies end March 2026 above their March 26, 2026 close?",
+      "category": "up_membership",
+      "source_type": "custom_live",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "resolved",
+      "base_prediction": "\\boxed{A, D}",
+      "skill_prediction": "\\boxed{B}",
+      "resolved": true,
+      "answer_box": "\\boxed{B}",
+      "base_correct": false,
+      "skill_correct": true
+    },
+    {
+      "id": "v13_083",
+      "title": "Which performs better from the March 26, 2026 close through the March 31, 2026 close: Bitcoin (BTC-USD) or Ethereum (ETH-USD)?",
+      "category": "head_to_head",
+      "source_type": "custom_live",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "resolved",
+      "base_prediction": "\\boxed{A}",
+      "skill_prediction": "\\boxed{A}",
+      "resolved": true,
+      "answer_box": "\\boxed{B}",
+      "base_correct": false,
+      "skill_correct": false
+    },
+    {
+      "id": "v13_087",
+      "title": "Between SPDR S&P 500 ETF (SPY) and Invesco QQQ Trust (QQQ), which does better from the March 25, 2026 close to the March 31, 2026 close?",
+      "category": "head_to_head",
+      "source_type": "custom_live",
+      "end_time": "2026-03-31",
+      "ground_truth_status": "resolved",
+      "base_prediction": "\\boxed{B}",
+      "skill_prediction": "\\boxed{A}",
+      "resolved": true,
+      "answer_box": "\\boxed{B}",
+      "base_correct": true,
+      "skill_correct": false
+    }
+  ],
+  "runs": {
+    "base": {
+      "duration_seconds": 3456.04,
+      "prediction_count": 14,
+      "valid_prediction_count": 14,
+      "predictions": [
+        {
+          "id": "v13_008",
+          "prediction": "\\boxed{C}"
+        },
+        {
+          "id": "v13_012",
+          "prediction": "\\boxed{D}"
+        },
+        {
+          "id": "v13_023",
+          "prediction": "\\boxed{A, B, C}"
+        },
+        {
+          "id": "v13_027",
+          "prediction": "\\boxed{A, B}"
+        },
+        {
+          "id": "v13_035",
+          "prediction": "\\boxed{A, B, D, E}"
+        },
+        {
+          "id": "v13_039",
+          "prediction": "\\boxed{A}"
+        },
+        {
+          "id": "v13_047",
+          "prediction": "\\boxed{No}"
+        },
+        {
+          "id": "v13_059",
+          "prediction": "\\boxed{No}"
+        },
+        {
+          "id": "v13_068",
+          "prediction": "\\boxed{B}"
+        },
+        {
+          "id": "v13_071",
+          "prediction": "\\boxed{C}"
+        },
+        {
+          "id": "v13_074",
+          "prediction": "\\boxed{A, B, C, D}"
+        },
+        {
+          "id": "v13_077",
+          "prediction": "\\boxed{A, D}"
+        },
+        {
+          "id": "v13_083",
+          "prediction": "\\boxed{A}"
+        },
+        {
+          "id": "v13_087",
+          "prediction": "\\boxed{B}"
+        }
+      ],
+      "batches": [
+        {
+          "batch_name": "batch_1",
+          "returncode": 0,
+          "duration_seconds": 468.84,
+          "stdout": "{\"predictions\":[{\"id\":\"v13_008\",\"prediction\":\"\\\\boxed{C}\"}]}\n",
+          "stderr": "an Francisco, Wednesday, March 25, 2026. (AP Photo/Jeff Chiu)\" srcset=\"https://dims.apnews.com/dims4/default/ea749fa/2147483647/strip/true/crop/5011x3340+0+0/resize/240x160!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F12%2Ffd%2F01d43e2a913d44d33bceefd07e3b%2F21cecd7ec60d420dbaed6ad441711d66 1x,https://dims.apnews.com/dims4/default/eb51f3d/2147483647/strip/true/crop/5011x3340+0+0/resize/480x320!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F12%2Ffd%2F01d43e2a913d44d33bceefd07e3b%2F21cecd7ec60d420dbaed6ad441711d66 2x\" width=\"240\" height=\"160\" src=\"https://dims.apnews.com/dims4/default/ea749fa/2147483647/strip/true/crop/5011x3340+0+0/resize/240x160!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F12%2Ffd%2F01d43e2a913d44d33bceefd07e3b%2F21cecd7ec60d420dbaed6ad441711d66\"\n\n100  824k    0  824k    0     0   340k      0 --:--:--  0:00:02 --:--:--  340k\n18811:<img class=\"Image\" alt=\"Philadelphia 76ers&#x27; Joel Embiid (21) goes up for a shot against Chicago Bulls&#x27; Nick Richards (13) during the first half of an NBA basketball game Wednesday, March 25, 2026, in Philadelphia. (AP Photo/Matt Slocum)\" srcset=\"https://dims.apnews.com/dims4/default/729a718/2147483647/strip/true/crop/3939x2626+0+0/resize/240x160!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fb9%2F72%2Ff70b9190313ee93bba60c980189e%2F2ea34d8e8ecd47068a8298563ca0d902 1x,https://dims.apnews.com/dims4/default/241d3d1/2147483647/strip/true/crop/3939x2626+0+0/resize/480x320!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fb9%2F72%2Ff70b9190313ee93bba60c980189e%2F2ea34d8e8ecd47068a8298563ca0d902 2x\" width=\"240\" height=\"160\" src=\"https://dims.apnews.com/dims4/default/729a718/2147483647/strip/true/crop/3939x2626+0+0/resize/240x160!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fb9%2F72%2Ff70b9190313ee93bba60c980189e%2F2ea34d8e8ecd47068a8298563ca0d902\"\n19214:<img class=\"Image\" alt=\"Indiana Fever guard Caitlyn Clark takes photos during pregame before an NBA basketball game between the Indiana Pacers and the Los Angeles Lakers in Indianapolis, Wednesday, March 25, 2026. (AP Photo/Michael Conroy)\" srcset=\"https://dims.apnews.com/dims4/default/8a9f474/2147483647/strip/true/crop/7187x4792+0+0/resize/240x160!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Faa%2F7a%2F497add2136fe398a96c822a908c1%2F682b7c3ea6e74d5291b971f0224e969b 1x,https://dims.apnews.com/dims4/default/aadae54/2147483647/strip/true/crop/7187x4792+0+0/resize/480x320!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Faa%2F7a%2F497add2136fe398a96c822a908c1%2F682b7c3ea6e74d5291b971f0224e969b 2x\" width=\"240\" height=\"160\" src=\"https://dims.apnews.com/dims4/default/8a9f474/2147483647/strip/true/crop/7187x4792+0+0/resize/240x160!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Faa%2F7a%2F497add2136fe398a96c822a908c1%2F682b7c3ea6e74d5291b971f0224e969b\"\n2026-03-26T03:23:25.645679Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:23:25.645708Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:23:25.996760Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:23:25.996787Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\ncodex\n{\"predictions\":[{\"id\":\"v13_008\",\"prediction\":\"\\\\boxed{C}\"}]}\ntokens used\n154,131\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v13_008\",\"prediction\":\"\\\\boxed{C}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v13_008",
+                "prediction": "\\boxed{C}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v13_008",
+              "prediction": "\\boxed{C}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 1,
+            "prediction_count_returned": 1,
+            "valid_prediction_count": 1,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_2",
+          "returncode": 0,
+          "duration_seconds": 142.92,
+          "stdout": "{\"predictions\":[{\"id\":\"v13_012\",\"prediction\":\"\\\\boxed{D}\"}]}\n",
+          "stderr": "Case ID: v13_012\nTitle: What will NVIDIA (NVDA) close at by the end of March 2026?\nCategory: month_end_bucket\nEnd Time: 2026-03-31\nExpected answer format: boxed_letters\nPrompt:\nWhat will NVIDIA (NVDA) close at by the end of March 2026? (resolved around 2026-03-31 (GMT+8)). \nA.  NVIDIA (NVDA) closes below $170\nB.  NVIDIA (NVDA) closes at least $170 but below $175\nC.  NVIDIA (NVDA) closes at least $175 but below $180\nD.  NVIDIA (NVDA) closes at least $180 but below $185\nE.  NVIDIA (NVDA) closes at least $185\nmcp: playwright starting\n2026-03-26T03:27:44.353449Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at \"/Users/zeyu/Documents/bach_private_cache/.bench/codex_home_base/shell_snapshots/019d282f-04d3-7e60-83fe-239a495127ff.tmp-1774495664194352000\": Os { code: 2, kind: NotFound, message: \"No such file or directory\" }\n2026-03-26T03:27:46.882842Z  WARN codex_rmcp_client::rmcp_client: Failed to terminate MCP process group 8428: Operation not permitted (os error 1)\nmcp: playwright failed: MCP client for `playwright` failed to start: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response\nmcp startup: failed: playwright\n2026-03-26T03:27:47.234132Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:27:47.234175Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:27:47.594060Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:27:47.594087Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:27:49.586064Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:27:49.586118Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:27:49.932764Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:27:49.932822Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n🌐 Searching the web...\n🌐 Searched: finance: NVDA\n🌐 Searching the web...\n🌐 Searched: NVDA stock March 2026 recent news March 25 2026\n🌐 Searching the web...\n🌐 Searched: March 25 2026 NVDA rises why March 25 2026 Reuters\n🌐 Searching the web...\n🌐 Searched: finance: ^IXIC\n🌐 Searching the web...\n🌐 Searched: Reuters February 2026 Nvidia stock after earnings February 26 2026 Reuters\n🌐 Searching the web...\n🌐 Searched: Reuters Nvidia February 2026 earnings stock reaction\n🌐 Searching the web...\n🌐 Searched: NVDA all time high March 2026 stock price high\ncodex\n{\"predictions\":[{\"id\":\"v13_012\",\"prediction\":\"\\\\boxed{D}\"}]}\ntokens used\n26,695\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v13_012\",\"prediction\":\"\\\\boxed{D}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v13_012",
+                "prediction": "\\boxed{D}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v13_012",
+              "prediction": "\\boxed{D}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 1,
+            "prediction_count_returned": 1,
+            "valid_prediction_count": 1,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_3",
+          "returncode": 0,
+          "duration_seconds": 139.1,
+          "stdout": "{\"predictions\":[{\"id\":\"v13_023\",\"prediction\":\"\\\\boxed{A, B, C}\"}]}\n",
+          "stderr": "ive-20260326-111553/base/workspace succeeded in 892ms:\n<string>:1: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).\n2026-03-08 67271.19\n2026-03-09 66036.16\n2026-03-10 68459.32\n2026-03-11 69883.01\n2026-03-12 70226.82\n2026-03-13 70544.43\n2026-03-14 70965.28\n2026-03-15 71217.1\n2026-03-16 72681.91\n2026-03-17 74858.15\n2026-03-18 73926.28\n2026-03-19 71255.86\n2026-03-20 69871.45\n2026-03-21 70552.63\n2026-03-22 68733.55\n2026-03-23 67848.88\n2026-03-24 70892.83\n2026-03-25 70524.51\n2026-03-26 71309.26\n2026-03-26T03:35:01.931463Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:35:01.931523Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:35:02.340042Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:35:02.340066Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\nexec\n/bin/zsh -lc \"python3 - <<'PY'\nimport json, urllib.request, statistics, math\nj=json.load(urllib.request.urlopen('https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=60&interval=daily'))\nprices=[p for _,p in j['prices']]\nrets=[math.log(prices[i]/prices[i-1]) for i in range(1,len(prices))]\nlast=prices[-1]\nfor n in (7,14,30):\n    sub=rets[-n:]\n    sd=statistics.stdev(sub)\n    print('days',n,'ann_sd',round(sd*(365**0.5),3),'daily_sd_pct',round(sd*100,2))\nprint('last',round(last,2),'mean7',round(sum(prices[-7:])/7,2),'mean14',round(sum(prices[-14:])/14,2),'mean30',round(sum(prices[-30:])/30,2))\nprint('min14',round(min(prices[-14:]),2),'max14',round(max(prices[-14:]),2))\nPY\" in /Users/zeyu/Documents/bach_private_cache/.bench/v13-live-only-results-custom_live-20260326-111553/base/workspace succeeded in 556ms:\ndays 7 ann_sd 0.431 daily_sd_pct 2.26\ndays 14 ann_sd 0.421 daily_sd_pct 2.2\ndays 30 ann_sd 0.517 daily_sd_pct 2.7\nlast 70748.07 mean7 70087.1 mean14 71098.98 mean30 69690.26\nmin14 67848.88 max14 74858.15\n2026-03-26T03:35:10.212342Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:35:10.212415Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:35:10.578942Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:35:10.578973Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\ncodex\n{\"predictions\":[{\"id\":\"v13_023\",\"prediction\":\"\\\\boxed{A, B, C}\"}]}\ntokens used\n21,209\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v13_023\",\"prediction\":\"\\\\boxed{A, B, C}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v13_023",
+                "prediction": "\\boxed{A, B, C}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v13_023",
+              "prediction": "\\boxed{A, B, C}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 1,
+            "prediction_count_returned": 1,
+            "valid_prediction_count": 1,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_4",
+          "returncode": 0,
+          "duration_seconds": 250.62,
+          "stdout": "{\"predictions\":[{\"id\":\"v13_027\",\"prediction\":\"\\\\boxed{A, B}\"}]}\n",
+          "stderr": "request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:40:04.525655Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:40:04.880858Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:40:04.880889Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n🌐 Searching the web...\n🌐 Searched: Reuters March 25 2026 Tesla stock deliveries expectations March 2026\n🌐 Searching the web...\n🌐 Searched: finance: QQQ\n🌐 Searching the web...\n🌐 Searched: Tesla March 2026 close prediction market 390 400 March 31 2026\n🌐 Searching the web...\n🌐 Searched: site:polymarket.com TSLA above 390 March 31 2026\n🌐 Searching the web...\n🌐 Searched: https://polymarket.com/event/tsla-above-in-march-2026/tsla-above-460-on-march-31-2026\n🌐 Searching the web...\n🌐 Searched: '$390' in https://polymarket.com/event/tsla-above-in-march-2026/tsla-above-460-on-march-31-2026\ncodex\nI have enough to decide the bucket. One last quick check is the technical placement versus moving averages so I’m not overreacting to the last three-day bounce.\nexec\n/bin/zsh -lc \"python3 - <<'PY'\nimport csv, urllib.request, io, statistics\nurl='https://stooq.com/q/d/l/?s=tsla.us&i=d'\nreq=urllib.request.Request(url, headers={'User-Agent':'Mozilla/5.0'})\nwith urllib.request.urlopen(req, timeout=20) as r:\n    text=r.read().decode('utf-8', 'replace')\nrows=list(csv.DictReader(io.StringIO(text)))\nrows=[r for r in rows if r['Close']\"'!='\"'']\ncloses=[float(r['Close']) for r in rows]\ndates=[r['Date'] for r in rows]\nfor w in [5,10,20,50,100,200]:\n    if len(closes)>=w:\n        sma=sum(closes[-w:])/w\n        print('SMA',w,round(sma,2),'diff_pct',round((closes[-1]/sma-1)*100,2))\nprint('latest',dates[-1],closes[-1])\nprint('5d high/low',max(closes[-5:]),min(closes[-5:]))\nprint('10d high/low',max(closes[-10:]),min(closes[-10:]))\nprint('20d high/low',max(closes[-20:]),min(closes[-20:]))\nPY\" in /Users/zeyu/Documents/bach_private_cache/.bench/v13-live-only-results-custom_live-20260326-111553/base/workspace succeeded in 1.85s:\nSMA 5 379.62 diff_pct 1.67\nSMA 10 387.19 diff_pct -0.32\nSMA 20 394.62 diff_pct -2.2\nSMA 50 411.68 diff_pct -6.25\nSMA 100 427.84 diff_pct -9.79\nSMA 200 395.57 diff_pct -2.43\nlatest 2026-03-25 385.95\n5d high/low 385.95 367.96\n10d high/low 399.27 367.96\n20d high/low 408.58 367.96\n2026-03-26T03:41:57.842458Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:41:57.842518Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:41:58.233100Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:41:58.233123Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\ncodex\n{\"predictions\":[{\"id\":\"v13_027\",\"prediction\":\"\\\\boxed{A, B}\"}]}\ntokens used\n60,651\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v13_027\",\"prediction\":\"\\\\boxed{A, B}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v13_027",
+                "prediction": "\\boxed{A, B}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v13_027",
+              "prediction": "\\boxed{A, B}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 1,
+            "prediction_count_returned": 1,
+            "valid_prediction_count": 1,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_5",
+          "returncode": 0,
+          "duration_seconds": 420.54,
+          "stdout": "{\"predictions\":[{\"id\":\"v13_035\",\"prediction\":\"\\\\boxed{A, B, D, E}\"}]}\n",
+          "stderr": " new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:48:03.162901Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\ncodex\nI’m checking one last thing: whether a “moderate range expansion” is the better base case than an immediate one-way breakout. The recent session ranges are wide enough that this distinction matters for whether 96 and 86 make the cut.\nexec\n/bin/zsh -lc \"python3 - <<'PY'\n# use close/high/low from Feb26-Mar26 from investing data\nrows = [\n('2026-02-26',65.21,66.71,63.60),\n('2026-02-27',67.02,67.83,64.85),\n('2026-03-02',71.23,75.33,69.20),\n('2026-03-03',74.56,77.98,70.41),\n('2026-03-04',74.66,77.23,73.28),\n('2026-03-05',81.01,82.16,74.97),\n('2026-03-06',90.90,92.61,78.24),\n('2026-03-09',91.48,113.41,79.00),\n('2026-03-10',82.10,88.49,75.64),\n('2026-03-11',86.07,87.32,80.60),\n('2026-03-12',94.43,95.68,87.18),\n('2026-03-13',96.84,97.31,91.09),\n('2026-03-16',93.50,102.44,92.93),\n('2026-03-17',96.21,98.42,93.83),\n('2026-03-18',96.32,100.55,91.96),\n('2026-03-19',96.14,101.48,92.80),\n('2026-03-20',98.32,99.67,93.42),\n('2026-03-23',88.13,101.67,84.37),\n('2026-03-24',92.35,93.36,86.34),\n('2026-03-25',91.08,91.48,86.49),\n('2026-03-26',91.98,92.08,90.97),\n]\ncur=91.98\n# windows of next 4 sessions starting from days where close between 88 and 96 inclusive, excluding last 4 incomplete\nfor i,(d,c,h,l) in enumerate(rows[:-4]):\n    if 88 <= c <= 96:\n        nxt=rows[i+1:i+5]\n        maxh=max(r[2] for r in nxt)\n        minl=min(r[3] for r in nxt)\n        print(d,'start',c,'next4 maxh',maxh,'minl',minl,'levels',{\n            'A':maxh>=94,'B':maxh>=96,'C':maxh>=98,'D':minl<=88,'E':minl<=86,'F':minl<=84\n        })\nPY\" in /Users/zeyu/Documents/bach_private_cache/.bench/v13-live-only-results-custom_live-20260326-111553/base/workspace succeeded in 0ms:\n2026-03-06 start 90.9 next4 maxh 113.41 minl 75.64 levels {'A': True, 'B': True, 'C': True, 'D': True, 'E': True, 'F': True}\n2026-03-09 start 91.48 next4 maxh 97.31 minl 75.64 levels {'A': True, 'B': True, 'C': False, 'D': True, 'E': True, 'F': True}\n2026-03-12 start 94.43 next4 maxh 102.44 minl 91.09 levels {'A': True, 'B': True, 'C': True, 'D': False, 'E': False, 'F': False}\n2026-03-16 start 93.5 next4 maxh 101.48 minl 91.96 levels {'A': True, 'B': True, 'C': True, 'D': False, 'E': False, 'F': False}\n2026-03-26T03:48:21.183220Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:48:21.183291Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:48:21.529914Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:48:21.529940Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n🌐 Searching the web...\n🌐 Searched: site:finance.yahoo.com March 26 2026 oil prices WTI 91 92 talks extend next week\n🌐 Searching the web...\n🌐 Searched: site:finance.yahoo.com Reuters March 26 2026 oil prices rise 1% as US Iran extend talks into next week\n🌐 Searching the web...\n🌐 Searched the web\ncodex\n{\"predictions\":[{\"id\":\"v13_035\",\"prediction\":\"\\\\boxed{A, B, D, E}\"}]}\ntokens used\n122,354\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v13_035\",\"prediction\":\"\\\\boxed{A, B, D, E}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v13_035",
+                "prediction": "\\boxed{A, B, D, E}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v13_035",
+              "prediction": "\\boxed{A, B, D, E}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 1,
+            "prediction_count_returned": 1,
+            "valid_prediction_count": 1,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_6",
+          "returncode": 0,
+          "duration_seconds": 250.67,
+          "stdout": "{\"predictions\":[{\"id\":\"v13_039\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"v13_047\",\"prediction\":\"\\\\boxed{No}\"}]}\n",
+          "stderr": "ge: \"No such file or directory\" }\n2026-03-26T03:50:31.754347Z  WARN codex_rmcp_client::rmcp_client: Failed to terminate MCP process group 19821: Operation not permitted (os error 1)\nmcp: playwright failed: MCP client for `playwright` failed to start: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response\nmcp startup: failed: playwright\n2026-03-26T03:50:32.130536Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:50:32.130584Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:50:32.486614Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:50:32.486658Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:50:34.212774Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:50:34.212831Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:50:34.595897Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:50:34.595940Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\ncodex\nI’m checking the current NVDA price context first, since the forecast window is only a few trading days and that level materially changes the answer.\n🌐 Searching the web...\n🌐 Searched: finance: NVDA\n🌐 Searching the web...\n🌐 Searched: NVDA 52-week range March 2026\n🌐 Searching the web...\n🌐 Searched: https://www.statmuse.com/money/ask/nvidia-stock-price-history-march-2026\n🌐 Searching the web...\n🌐 Searched: NVDA news March 25 2026 recency\n🌐 Searching the web...\n🌐 Searched: finance: ^VIX\n🌐 Searching the web...\n🌐 Searched: March 25 2026 stock market tariffs semiconductors rally\n🌐 Searching the web...\n🌐 Searched: NVDA options implied move March 31 2026\n🌐 Searching the web...\n🌐 Searched: March 25 2026 Reuters Nvidia stock March 25 2026\n🌐 Searching the web...\n🌐 Searched: https://www.investing.com/analysis/nvidia-near-resistance-a-shortterm-profittaking-setup-200676552\n🌐 Searching the web...\n🌐 Searched: site:investing.com NVDA March 24 2026 technical analysis\n🌐 Searching the web...\n🌐 Searched: https://i-invdn-com.investing.com/content/711b24ea78104a31db6c129113b7d838.pdf\n🌐 Searching the web...\n🌐 Searched: 'NVDA' in https://i-invdn-com.investing.com/content/711b24ea78104a31db6c129113b7d838.pdf\n🌐 Searching the web...\n🌐 Searched: site:i-invdn-com.investing.com Monte Safieddine March 24 2026 NVIDIA pdf\ncodex\n{\"predictions\":[{\"id\":\"v13_039\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"v13_047\",\"prediction\":\"\\\\boxed{No}\"}]}\ntokens used\n73,177\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v13_039\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"v13_047\",\"prediction\":\"\\\\boxed{No}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v13_039",
+                "prediction": "\\boxed{A}"
+              },
+              {
+                "id": "v13_047",
+                "prediction": "\\boxed{No}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v13_039",
+              "prediction": "\\boxed{A}"
+            },
+            {
+              "id": "v13_047",
+              "prediction": "\\boxed{No}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 2,
+            "prediction_count_returned": 2,
+            "valid_prediction_count": 2,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_7",
+          "returncode": 0,
+          "duration_seconds": 259.69,
+          "stdout": "{\"predictions\":[{\"id\":\"v13_059\",\"prediction\":\"\\\\boxed{No}\"},{\"id\":\"v13_068\",\"prediction\":\"\\\\boxed{B}\"}]}\n",
+          "stderr": ". Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:01:55.104505Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\nexec\n/bin/zsh -lc \"python3 - <<'PY'\nimport yfinance as yf\nimport pandas as pd\nsymbols=['BTC-USD','ETH-USD','COIN','MSTR']\nseries=[]\nfor s in symbols:\n    tk=yf.Ticker(s)\n    df=tk.history(start='2026-01-15', end='2026-03-27', interval='1d', auto_adjust=False)\n    if df.empty:\n        print('EMPTY', s)\n        continue\n    idx=pd.Index(pd.to_datetime(df.index).date, name='Date')\n    ser=pd.Series(df['Close'].to_numpy(), index=idx, name=s)\n    series.append(ser)\nprices=pd.concat(series, axis=1).dropna()\nfw=prices.shift(-5)/prices-1\nfw=fw.dropna()\nprint('sample', prices.index.min(), prices.index.max(), len(prices))\nprint('winner_counts_5step')\nprint(fw.idxmax(axis=1).value_counts().to_string())\nprint('\\\\nlast_15_windows')\nfor idx,row in fw.tail(15).iterrows():\n    print(idx, row.idxmax(), {k: round(v*100,2) for k,v in row.to_dict().items()})\nPY\" in /Users/zeyu/Documents/bach_private_cache/.bench/v13-live-only-results-custom_live-20260326-111553/base/workspace succeeded in 2.25s:\nsample 2026-01-15 2026-03-24 47\nwinner_counts_5step\nCOIN       20\nETH-USD     9\nMSTR        8\nBTC-USD     5\n\nlast_15_windows\n2026-02-25 COIN {'BTC-USD': 6.99, 'ETH-USD': 3.5, 'COIN': 13.59, 'MSTR': 7.95}\n2026-02-26 COIN {'BTC-USD': 5.02, 'ETH-USD': 2.21, 'COIN': 13.61, 'MSTR': 4.81}\n2026-02-27 COIN {'BTC-USD': 3.42, 'ETH-USD': 2.49, 'COIN': 12.15, 'MSTR': 3.11}\n2026-03-02 COIN {'BTC-USD': -0.54, 'ETH-USD': -1.69, 'COIN': 7.85, 'MSTR': 0.94}\n2026-03-03 COIN {'BTC-USD': 2.39, 'ETH-USD': 2.74, 'COIN': 7.76, 'MSTR': 4.36}\n2026-03-04 BTC-USD {'BTC-USD': -3.45, 'ETH-USD': -3.52, 'COIN': -4.93, 'MSTR': -5.54}\n2026-03-05 ETH-USD {'BTC-USD': -0.49, 'ETH-USD': 0.07, 'COIN': -6.07, 'MSTR': -1.77}\n2026-03-06 ETH-USD {'BTC-USD': 4.16, 'ETH-USD': 5.75, 'COIN': -0.86, 'MSTR': 4.6}\n2026-03-09 ETH-USD {'BTC-USD': 9.44, 'ETH-USD': 17.98, 'COIN': 1.77, 'MSTR': 6.17}\n2026-03-10 ETH-USD {'BTC-USD': 5.71, 'ETH-USD': 13.79, 'COIN': 6.98, 'MSTR': 8.54}\n2026-03-11 ETH-USD {'BTC-USD': 1.48, 'ETH-USD': 7.41, 'COIN': 1.84, 'MSTR': 1.61}\n2026-03-12 COIN {'BTC-USD': -0.82, 'ETH-USD': 3.1, 'COIN': 5.01, 'MSTR': 0.66}\n2026-03-26T04:02:06.054026Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:02:06.054063Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T04:02:06.405284Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:02:06.405309Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n🌐 Searching the web...\n🌐 Searched: Reuters March 24 2026 Coinbase shares fell reason March 24 2026\n🌐 Searching the web...\n🌐 Searched: Coinbase shares March 24 2026 fell reason\n🌐 Searching the web...\n🌐 Searched: https://coinmarketcap.com/academy/article/ether-etps-attract-dollar793-million-in-weekly-inflows-surpassing-bitcoin-for-first-time-in-2025\ncodex\n{\"predictions\":[{\"id\":\"v13_059\",\"prediction\":\"\\\\boxed{No}\"},{\"id\":\"v13_068\",\"prediction\":\"\\\\boxed{B}\"}]}\ntokens used\n62,905\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v13_059\",\"prediction\":\"\\\\boxed{No}\"},{\"id\":\"v13_068\",\"prediction\":\"\\\\boxed{B}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v13_059",
+                "prediction": "\\boxed{No}"
+              },
+              {
+                "id": "v13_068",
+                "prediction": "\\boxed{B}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v13_059",
+              "prediction": "\\boxed{No}"
+            },
+            {
+              "id": "v13_068",
+              "prediction": "\\boxed{B}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 2,
+            "prediction_count_returned": 2,
+            "valid_prediction_count": 2,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_8",
+          "returncode": 0,
+          "duration_seconds": 141.12,
+          "stdout": "{\"predictions\":[{\"id\":\"v13_071\",\"prediction\":\"\\\\boxed{C}\"}]}\n",
+          "stderr": "                                                       \n2026-03-17  80.430000  82.239998  78.580002  79.529999  79.529999    248\n2026-03-18  76.500000  77.735001  74.800003  77.237999  77.237999    340\n2026-03-19  75.705002  76.105003  67.000000  70.902000  70.902000    138\n2026-03-20  71.919998  71.925003  69.360001  69.360001  69.360001     45\n2026-03-23  64.739998  69.510002  61.090000  69.049004  69.049004    271\n2026-03-26T04:06:45.403028Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:06:45.403083Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T04:06:45.756310Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:06:45.756349Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n🌐 Searching the web...\n🌐 Searched: March 26 2026 gold silver rally tariffs recession Reuters precious metals\ncodex\nI have the key factual input now: on the actual March 25 close, `SLV` had already reclaimed more relative ground than the gold proxies, while `GC` was only modestly ahead of `GLD`. I’m using that plus the 2026 silver-beta regime to make the final call.\nexec\n/bin/zsh -lc \"python3 - <<'PY'\n# Quick recent-return comparison using the closes already observed.\nseries = {\n    'GLD': [459.269989,444.739990,426.410004,413.380005,404.040009,404.130005,416.290009],\n    'SLV': [71.660004,68.699997,65.680000,61.520000,62.470001,62.950001,65.209999],\n    'GC': [5001.000000,4889.899902,4600.700195,4570.399902,4404.100098,4399.299805,4549.799805],\n}\nlabels = ['3/17','3/18','3/19','3/20','3/23','3/24','3/25']\nfor name, vals in series.items():\n    r1 = vals[-1]/vals[-2]-1\n    r3 = vals[-1]/vals[-4]-1\n    r5 = vals[-1]/vals[0]-1\n    print(name, {'1d': round(r1*100,2), '3d': round(r3*100,2), 'since_3_17': round(r5*100,2)})\nPY\" in /Users/zeyu/Documents/bach_private_cache/.bench/v13-live-only-results-custom_live-20260326-111553/base/workspace succeeded in 0ms:\nGLD {'1d': 3.01, '3d': 0.7, 'since_3_17': -9.36}\nSLV {'1d': 3.59, '3d': 6.0, 'since_3_17': -9.0}\nGC {'1d': 3.42, '3d': -0.45, 'since_3_17': -9.02}\n2026-03-26T04:07:26.431247Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:07:26.431344Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T04:07:26.790892Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:07:26.790927Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\ncodex\n{\"predictions\":[{\"id\":\"v13_071\",\"prediction\":\"\\\\boxed{C}\"}]}\ntokens used\n39,242\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v13_071\",\"prediction\":\"\\\\boxed{C}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v13_071",
+                "prediction": "\\boxed{C}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v13_071",
+              "prediction": "\\boxed{C}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 1,
+            "prediction_count_returned": 1,
+            "valid_prediction_count": 1,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_9",
+          "returncode": 0,
+          "duration_seconds": 557.99,
+          "stdout": "{\"predictions\":[{\"id\":\"v13_074\",\"prediction\":\"\\\\boxed{A, B, C, D}\"}]}\n",
+          "stderr": "t_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:17:48.787773Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T04:17:49.157598Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:17:49.157656Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n exited 1 in 3.48s:\nTraceback (most recent call last):\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 464, in _make_request\n    self._validate_conn(conn)\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 1093, in _validate_conn\n    conn.connect()\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/urllib3/connection.py\", line 790, in connect\n    sock_and_verified = _ssl_wrap_socket_and_match_hostname(\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/urllib3/connection.py\", line 969, in _ssl_wrap_socket_and_match_hostname\n    ssl_sock = ssl_wrap_socket(\n               ^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/urllib3/util/ssl_.py\", line 480, in ssl_wrap_socket\n    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/urllib3/util/ssl_.py\", line 524, in _ssl_wrap_socket_impl\n    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py\", line 455, in wrap_socket\n    return self.sslsocket_class._create(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n2026-03-26T04:17:54.820806Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:17:54.820865Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T04:17:55.222865Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:17:55.222930Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n🌐 Searching the web...\n🌐 Searched: TSM stock March 25 2026 why rose\n🌐 Searching the web...\n🌐 Searched: Broadcom stock March 2026 why AVGO March 25 2026\n🌐 Searching the web...\n🌐 Searched: Nvidia March 2026 stock catalyst March 25 2026 Reuters\n🌐 Searching the web...\n🌐 Searched: AMD Meta 100 billion AI infrastructure agreement March 2026\ncodex\n{\"predictions\":[{\"id\":\"v13_074\",\"prediction\":\"\\\\boxed{A, B, C, D}\"}]}\ntokens used\n123,013\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v13_074\",\"prediction\":\"\\\\boxed{A, B, C, D}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v13_074",
+                "prediction": "\\boxed{A, B, C, D}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v13_074",
+              "prediction": "\\boxed{A, B, C, D}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 1,
+            "prediction_count_returned": 1,
+            "valid_prediction_count": 1,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_10",
+          "returncode": 0,
+          "duration_seconds": 316.29,
+          "stdout": "{\"predictions\":[{\"id\":\"v13_077\",\"prediction\":\"\\\\boxed{A, D}\"}]}\n",
+          "stderr": " timeout=20) as r:\n        data=json.load(r)\n    result=data['chart']['result'][0]\n    ts=result['timestamp']\n    closes=result['indicators']['quote'][0]['close']\n    print(sym)\n    for t,c in list(zip(ts,closes))[-8:]:\n        from datetime import datetime, timezone\n        dt=datetime.fromtimestamp(t, tz=timezone.utc).date()\n        print(dt, None if c is None else round(c,2))\n    print()\nPY\" in /Users/zeyu/Documents/bach_private_cache/.bench/v13-live-only-results-custom_live-20260326-111553/base/workspace2026-03-26T04:24:27.862426Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:24:27.862527Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T04:24:28.211226Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:24:28.211274Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n succeeded in 2.86s:\nBTC-USD\n2026-03-20 70522.59\n2026-03-21 68711.52\n2026-03-22 67845.21\n2026-03-23 70914.86\n2026-03-24 70517.86\n2026-03-25 None\n2026-03-26 None\n2026-03-26 70740.34\n\nETH-USD\n2026-03-20 2146.5\n2026-03-21 2076.69\n2026-03-22 2053.05\n2026-03-23 2152.15\n2026-03-24 2155.7\n2026-03-25 None\n2026-03-26 None\n2026-03-26 2148.54\n\n2026-03-26T04:24:31.793465Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:24:31.793553Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T04:24:32.167735Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:24:32.167793Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n🌐 Searching the web...\n🌐 Searched: Coinbase stock dropped March 24 2026 reason recency 5\n🌐 Searching the web...\n🌐 Searched: Ethereum March 2026 underperformance reason recency 10\n🌐 Searching the web...\n🌐 Searched: Bitcoin March 2026 technical resistance 71k 72k recency 10\n🌐 Searching the web...\n🌐 Searched: MSTR March 25 2026 news recency 3\n2026-03-26T04:25:38.827664Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:25:38.827714Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\ncodex\n{\"predictions\":[{\"id\":\"v13_077\",\"prediction\":\"\\\\boxed{A, D}\"}]}\ntokens used\n122,810\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v13_077\",\"prediction\":\"\\\\boxed{A, D}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v13_077",
+                "prediction": "\\boxed{A, D}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v13_077",
+              "prediction": "\\boxed{A, D}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 1,
+            "prediction_count_returned": 1,
+            "valid_prediction_count": 1,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_11",
+          "returncode": 0,
+          "duration_seconds": 215.79,
+          "stdout": "{\"predictions\":[{\"id\":\"v13_083\",\"prediction\":\"\\\\boxed{A}\"}]}\n",
+          "stderr": "sign in again.\nexec\n/bin/zsh -lc \"python3 - <<'PY'\nimport json, urllib.request\nreq=urllib.request.Request('https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=365&interval=daily', headers={'User-Agent':'Mozilla/5.0'})\nwith urllib.request.urlopen(req, timeout=20) as r:\n    btc=[p for _,p in json.load(r)['prices']]\nreq=urllib.request.Request('https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=365&interval=daily', headers={'User-Agent':'Mozilla/5.0'})\nwith urllib.request.urlopen(req, timeout=20) as r:\n    eth=[p for _,p in json.load(r)['prices']]\nratio=[e/b for e,b in zip(eth,btc)]\nconds=[]\nfor i in range(31, len(ratio)-5):\n    r5=ratio[i]/ratio[i-5]-1\n    r7=ratio[i]/ratio[i-7]-1\n    r14=ratio[i]/ratio[i-14]-1\n    r30=ratio[i]/ratio[i-30]-1\n    if r5>0 and r7<0 and r14>0 and r30>0:\n        f5=ratio[i+5]/ratio[i]-1\n        conds.append((r5,r7,r14,r30,f5))\nprint('matches', len(conds))\nif conds:\n    avg=sum(x[4] for x in conds)/len(conds)\n    pos=sum(1 for x in conds if x[4]>0)/len(conds)\n    print('avg', avg, 'pos', pos)\n    print('samples', [round(x[4],4) for x in conds[-15:]])\nPY\" in /Users/zeyu/Documents/bach_private_cache/.bench/v13-live-only-results-custom_live-20260326-111553/base/workspace exited 1 in 3.43s:\nTraceback (most recent call last):\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/urllib/request.py\", line 1344, in do_open\n    h.request(req.get_method(), req.selector, req.data, headers,\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py\", line 1336, in request\n    self._send_request(method, url, body, headers, encode_chunked)\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py\", line 1382, in _send_request\n    self.endheaders(body, encode_chunked=encode_chunked)\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py\", line 1331, in endheaders\n    self._send_output(message_body, encode_chunked=encode_chunked)\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py\", line 1091, in _send_output\n    self.send(msg)\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py\", line 1035, in send\n    self.connect()\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py\", line 1477, in connect\n    self.sock = self._context.wrap_socket(self.sock,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py\", line 455, in wrap_socket\n    return self.sslsocket_class._create(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py\", line 1041, in _create\n2026-03-26T04:31:55.098957Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:31:55.099001Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T04:31:55.459837Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:31:55.459865Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\ncodex\n{\"predictions\":[{\"id\":\"v13_083\",\"prediction\":\"\\\\boxed{A}\"}]}\ntokens used\n74,917\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v13_083\",\"prediction\":\"\\\\boxed{A}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v13_083",
+                "prediction": "\\boxed{A}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v13_083",
+              "prediction": "\\boxed{A}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 1,
+            "prediction_count_returned": 1,
+            "valid_prediction_count": 1,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_12",
+          "returncode": 0,
+          "duration_seconds": 292.47,
+          "stdout": "{\"predictions\":[{\"id\":\"v13_087\",\"prediction\":\"\\\\boxed{B}\"}]}\n",
+          "stderr": "s March 25 2026\nexec\n/bin/zsh -lc \"python3 - <<'PY'\nimport yfinance as yf, pandas as pd\nprices = yf.download(['SPY','QQQ'], start='2025-12-31', end='2026-03-27', auto_adjust=True, progress=False)['Close'].dropna()\nbase = prices.iloc[0]\nperf = prices / base - 1\nprint('YTD through 2026-03-25')\nprint(perf.iloc[-1].to_string())\nprint('\\\\nMonthly changes:')\nfor start,end,label in [('2025-12-31','2026-01-31','Jan'),('2026-01-31','2026-02-28','Feb'),('2026-02-28','2026-03-26','Mar_to_25')]:\n    df = yf.download(['SPY','QQQ'], start=start, end=end, auto_adjust=True, progress=False)['Close'].dropna()\n    ret = df.iloc[-1]/df.iloc[0]-1\n    print(label)\n    print(ret.to_string())\nPY\" in /Users/zeyu/Documents/bach_private_cache/.bench/v13-live-only-results-custom_live-20260326-111553/base/workspace succeeded in 5.38s:\nYTD through 2026-03-25\nTicker\nQQQ   -0.043122\nSPY   -0.034177\n\nMonthly changes:\nJan\nTicker\nQQQ    0.012306\nSPY    0.014738\nFeb\nTicker\nQQQ   -0.030105\nSPY   -0.013546\nMar_to_25\nTicker\nQQQ   -0.033334\nSPY   -0.040453\n2026-03-26T04:38:35.865289Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:38:35.867346Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T04:38:36.250011Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:38:36.250042Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\nexec\n/bin/zsh -lc \"python3 - <<'PY'\nimport yfinance as yf, pandas as pd\nsymbols=['SMH','XLK','SPY','QQQ']\nprices=yf.download(symbols,start='2025-12-31',end='2026-03-27',auto_adjust=True,progress=False)['Close'].dropna()\nfor win,label in [(5,'5d'),(20,'20d'),(60,'YTD-ish')]:\n    if len(prices)>=win+1:\n        ret=prices.iloc[-1]/prices.iloc[-(win+1)]-1\n        print('\\\\n',label)\n        print(ret.to_string())\nPY\" in /Users/zeyu/Documents/bach_private_cache/.bench/v13-live-only-results-custom_live-20260326-111553/base/workspace succeeded in 2.79s:\n\n 5d\nTicker\nQQQ   -0.011901\nSMH    0.013590\nSPY   -0.004258\nXLK   -0.008698\n\n 20d\nTicker\nQQQ   -0.046799\nSMH   -0.063685\nSPY   -0.049825\nXLK   -0.043703\n2026-03-26T04:38:47.678456Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:38:47.679616Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T04:38:48.249954Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:38:48.249996Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\ncodex\n{\"predictions\":[{\"id\":\"v13_087\",\"prediction\":\"\\\\boxed{B}\"}]}\ntokens used\n74,402\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v13_087\",\"prediction\":\"\\\\boxed{B}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v13_087",
+                "prediction": "\\boxed{B}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v13_087",
+              "prediction": "\\boxed{B}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 1,
+            "prediction_count_returned": 1,
+            "valid_prediction_count": 1,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        }
+      ]
+    },
+    "skill": {
+      "duration_seconds": 5093.61,
+      "prediction_count": 14,
+      "valid_prediction_count": 14,
+      "predictions": [
+        {
+          "id": "v13_008",
+          "prediction": "\\boxed{E}"
+        },
+        {
+          "id": "v13_012",
+          "prediction": "\\boxed{C}"
+        },
+        {
+          "id": "v13_023",
+          "prediction": "\\boxed{A, B, C}"
+        },
+        {
+          "id": "v13_027",
+          "prediction": "\\boxed{A, B}"
+        },
+        {
+          "id": "v13_035",
+          "prediction": "\\boxed{A, B, C, D, E}"
+        },
+        {
+          "id": "v13_039",
+          "prediction": "\\boxed{A}"
+        },
+        {
+          "id": "v13_047",
+          "prediction": "\\boxed{No}"
+        },
+        {
+          "id": "v13_059",
+          "prediction": "\\boxed{No}"
+        },
+        {
+          "id": "v13_068",
+          "prediction": "\\boxed{B}"
+        },
+        {
+          "id": "v13_071",
+          "prediction": "\\boxed{C}"
+        },
+        {
+          "id": "v13_074",
+          "prediction": "\\boxed{A, B, D}"
+        },
+        {
+          "id": "v13_077",
+          "prediction": "\\boxed{B}"
+        },
+        {
+          "id": "v13_083",
+          "prediction": "\\boxed{A}"
+        },
+        {
+          "id": "v13_087",
+          "prediction": "\\boxed{A}"
+        }
+      ],
+      "batches": [
+        {
+          "batch_name": "batch_1",
+          "returncode": 0,
+          "duration_seconds": 708.66,
+          "stdout": "{\"predictions\":[{\"id\":\"v13_008\",\"prediction\":\"\\\\boxed{E}\"}]}\n",
+          "stderr": "token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\nexec\n/bin/zsh -lc \"curl -L --max-time 20 -A 'Mozilla/5.0' -s 'https://stooq.com/q/l/?s=gc.f&f=sd2t2ohlc&h&e=csv'\" in /Users/zeyu/Documents/bach_private_cache/.bench/v13-live-only-results-custom_live-20260326-111553/skill/workspace succeeded in 1.02s:\nSymbol,Date,Time,Open,High,Low,Close\nGC.F,2026-03-26,04:27:03,4541.85,4573.87,4518.57,4537.2\n2026-03-26T03:27:06.271901Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:27:06.271948Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:27:06.624099Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:27:06.624153Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:27:12.486698Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:27:12.486817Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:27:12.861682Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:27:12.861733Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\nPlan update\n  ✓ Read causal workflow guidance relevant to market forecasting\n  ✓ Gather current gold and macro context\n  ✓ Choose the most likely March 31 bucket and return JSON\n2026-03-26T03:27:39.370116Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:27:39.370234Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:27:39.724465Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:27:39.724508Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\ncodex\n{\"predictions\":[{\"id\":\"v13_008\",\"prediction\":\"\\\\boxed{E}\"}]}\ntokens used\n283,472\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v13_008\",\"prediction\":\"\\\\boxed{E}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v13_008",
+                "prediction": "\\boxed{E}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v13_008",
+              "prediction": "\\boxed{E}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 1,
+            "prediction_count_returned": 1,
+            "valid_prediction_count": 1,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_2",
+          "returncode": 0,
+          "duration_seconds": 343.5,
+          "stdout": "{\"predictions\":[{\"id\":\"v13_012\",\"prediction\":\"\\\\boxed{C}\"}]}\n",
+          "stderr": "your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:32:37.861869Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:32:37.861918Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:32:43.074956Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:32:43.075002Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n🌐 Searching the web...\n🌐 Searched: late March 2026 Nasdaq tariffs AI stocks March 2026\n🌐 Searching the web...\n🌐 Searched: site:apnews.com March 25 2026 Wall Street Nasdaq AI stocks\ncodex\nOne last check: if the benchmark’s GMT+8 cutoff effectively maps to the March 30 U.S. close instead of March 31 U.S. close, that only shortens the horizon and makes the current bucket even stickier. I’m running that sanity check and then I’ll finalize.\nexec\n/bin/zsh -lc \"python3 - <<'PY'\nimport math, statistics\nlast=178.68\n# recent 24 daily returns from stooq window\nprices=[187.9,189.82,191.55,192.85,195.56,184.89,177.19,182.48,180.05,183.04,183.33,177.69,182.64,184.76,186.03,183.14,180.25,183.22,181.93,180.4,178.56,172.7,175.64,175.2,178.68]\nrets=[math.log(prices[i]/prices[i-1]) for i in range(1,len(prices))]\nsd=statistics.stdev(rets)\nfor horizon,mu_day in [('3d_recent',statistics.mean(rets)),('3d_flat',0.00015448145312812312),('4d_recent',statistics.mean(rets)),('4d_flat',0.00015448145312812312)]:\n    h=3 if horizon.startswith('3') else 4\n    mu=mu_day*h\n    sigma=sd*math.sqrt(h)\n    from math import erf,sqrt\n    def cdf(x):\n        return 0.5*(1+erf((math.log(x/last)-mu)/(sigma*sqrt(2))))\n    probs=[cdf(170), cdf(175)-cdf(170), cdf(180)-cdf(175), cdf(185)-cdf(180), 1-cdf(185)]\n    print(horizon,[round(p,4) for p in probs])\nPY\" in /Users/zeyu/Documents/bach_private_cache/.bench/v13-live-only-results-custom_live-20260326-111553/skill/workspace succeeded in 0ms:\n3d_recent [0.1285, 0.2241, 0.2864, 0.2186, 0.1424]\n3d_flat [0.0952, 0.1945, 0.2816, 0.2429, 0.1858]\n4d_recent [0.175, 0.2146, 0.2492, 0.196, 0.1651]\n4d_flat [0.1276, 0.1867, 0.2461, 0.219, 0.2205]\n2026-03-26T03:33:22.418941Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:33:22.418996Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:33:22.769082Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:33:22.769152Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\ncodex\n{\"predictions\":[{\"id\":\"v13_012\",\"prediction\":\"\\\\boxed{C}\"}]}\ntokens used\n89,167\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v13_012\",\"prediction\":\"\\\\boxed{C}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v13_012",
+                "prediction": "\\boxed{C}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v13_012",
+              "prediction": "\\boxed{C}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 1,
+            "prediction_count_returned": 1,
+            "valid_prediction_count": 1,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_3",
+          "returncode": 0,
+          "duration_seconds": 271.31,
+          "stdout": "{\"predictions\":[{\"id\":\"v13_023\",\"prediction\":\"\\\\boxed{A, B, C}\"}]}\n",
+          "stderr": "p in prices:\n    d=dt.datetime.fromtimestamp(ts/1000, dt.timezone.utc).date().isoformat()\n    by[d]=p\nout=sorted(by.items())\nprint('last_30')\nfor d,p in out[-30:]:\n    print(d, round(p,2))\n# basic rolling stats\nfor n in [5,10,20,60]:\n    if len(out)>=n:\n        ret=out[-1][1]/out[-n][1]-1\n        print(f'return_{n-1}d', round(ret*100,2),'pct')\n# fit simple linear trend on logs last 30d\nys=[math.log(p) for _,p in out[-30:]]\nxs=list(range(len(ys)))\nmx=sum(xs)/len(xs); my=sum(ys)/len(ys)\nnum=sum((x-mx)*(y-my) for x,y in zip(xs,ys)); den=sum((x-mx)**2 for x in xs)\nb=num/den; a=my-b*mx\npred_5=math.exp(a+b*(len(ys)-1+5))\nprint('log_trend_pred_5d', round(pred_5,2))\n# AR1 on log returns last 60d rough OLS with intercept\nrets=[math.log(out[i][1]/out[i-1][1]) for i in range(1,len(out))]\nrs=rets[-60:]\nX=rs[:-1]; Y=rs[1:]\nmx=sum(X)/len(X); my=sum(Y)/len(Y)\nnum=sum((x-mx)*(y-my) for x,y in zip(X,Y)); den=sum((x-mx)**2 for x in X)\nphi=num/den if den else 0\nc=my-phi*mx\nprint('ar1_phi', round(phi,3),'c', round(c,5))\n# simulate expected cumulative 5d return with ar1 from last ret\nr=rs[-1]\nexp=0\nfor _ in range(5):\n    r=c+phi*r\n    exp+=r\nprint('ar1_expected_price_5d', round(out[-1][1]*math.exp(exp),2))\nPY\" in /Users/zeyu/Documents/bach_private_cache/.bench/v13-live-only-results-custom_live-20260326-111553/skill/workspace2026-03-26T03:37:38.084289Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:37:38.084329Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:37:38.440478Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:37:38.440516Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n succeeded in 2.11s:\nlast_30\n2026-02-25 64074.11\n2026-02-26 67947.39\n2026-02-27 67469.06\n2026-02-28 65883.99\n2026-03-01 67008.45\n2026-03-02 65713.5\n2026-03-03 68864.04\n2026-03-04 68321.62\n2026-03-05 72669.77\n2026-03-06 70874.99\n2026-03-07 68148.28\n2026-03-08 67271.19\n2026-03-09 66036.16\n2026-03-10 68459.32\n2026-03-11 69883.01\n2026-03-12 70226.82\n2026-03-13 70544.43\n2026-03-14 70965.28\n2026-03-15 71217.1\n2026-03-26T03:37:40.594316Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:37:40.594354Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:37:40.975462Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:37:40.975501Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\ncodex\n{\"predictions\":[{\"id\":\"v13_023\",\"prediction\":\"\\\\boxed{A, B, C}\"}]}\ntokens used\n95,234\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v13_023\",\"prediction\":\"\\\\boxed{A, B, C}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v13_023",
+                "prediction": "\\boxed{A, B, C}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v13_023",
+              "prediction": "\\boxed{A, B, C}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 1,
+            "prediction_count_returned": 1,
+            "valid_prediction_count": 1,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_4",
+          "returncode": 0,
+          "duration_seconds": 280.73,
+          "stdout": "{\"predictions\":[{\"id\":\"v13_027\",\"prediction\":\"\\\\boxed{A, B}\"}]}\n",
+          "stderr": "atistics\ncloses=[403.32,392.355,405.94,405.4013,396.73,398.6,399.25,407.82,395.01,391.2,395.56,399.27,392.78,380.3,367.96,380.85,383.03,385.95]\nrets=[math.log(closes[i]/closes[i-1]) for i in range(1,len(closes))]\nprint('mean_logret',statistics.mean(rets))\nprint('stdev_logret',statistics.stdev(rets))\ncur=closes[-1]\nfor thr in [370,380,390,400,410]:\n    z=(math.log(thr/cur)-4*statistics.mean(rets))/(statistics.stdev(rets)*(4**0.5))\n    # normal tail approx\n    import math\n    p=0.5*math.erfc(z/math.sqrt(2))\n    print(thr,p)\nPY\" in /Users/zeyu/Documents/bach_private_cache/.bench/v13-live-only-results-custom_live-20260326-111553/skill/workspace succeeded in 0ms:\nmean_logret -0.002589556713479529\nstdev_logret 0.022004172111442698\n370 0.7653593788888408\n380 0.5468344042471014\n390 0.3182590597449889\n400 0.14734965653684404\n410 0.05381280843728642\n2026-03-26T03:41:46.138608Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:41:46.138650Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:41:46.507156Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:41:46.507181Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\nexec\n/bin/zsh -lc \"python3 - <<'PY'\nimport math,statistics\ncloses=[391.2,395.56,399.27,392.78,380.3,367.96,380.85,383.03,385.95]\nrets=[math.log(closes[i]/closes[i-1]) for i in range(1,len(closes))]\nprint('mean_logret',statistics.mean(rets))\nprint('stdev_logret',statistics.stdev(rets))\ncur=closes[-1]\nfor thr in [370,380,390,400,410]:\n    z=(math.log(thr/cur)-4*statistics.mean(rets))/(statistics.stdev(rets)*(4**0.5))\n    p=0.5*math.erfc(z/math.sqrt(2))\n    print(thr,p)\nPY\" in /Users/zeyu/Documents/bach_private_cache/.bench/v13-live-only-results-custom_live-20260326-111553/skill/workspace succeeded in 0ms:\nmean_logret -0.0016888888455999424\nstdev_logret 0.02348922572566304\n370 0.7747511884540199\n380 0.5741367117391871\n390 0.3571797273256405\n400 0.18275086963813647\n410 0.07628002829832875\n2026-03-26T03:41:54.518524Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:41:54.518592Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:41:54.888737Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:41:54.888757Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n🌐 Searching the web...\n🌐 Searched: Tesla Q1 2026 delivery estimates March 2026 Reuters\ncodex\n{\"predictions\":[{\"id\":\"v13_027\",\"prediction\":\"\\\\boxed{A, B}\"}]}\ntokens used\n45,725\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v13_027\",\"prediction\":\"\\\\boxed{A, B}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v13_027",
+                "prediction": "\\boxed{A, B}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v13_027",
+              "prediction": "\\boxed{A, B}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 1,
+            "prediction_count_returned": 1,
+            "valid_prediction_count": 1,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_5",
+          "returncode": 0,
+          "duration_seconds": 469.94,
+          "stdout": "{\"predictions\":[{\"id\":\"v13_035\",\"prediction\":\"\\\\boxed{A, B, C, D, E}\"}]}\n",
+          "stderr": " = {'Jan':1,'Feb':2,'Mar':3,'Apr':4,'May':5,'Jun':6,'Jul':7,'Aug':8,'Sep':9,'Oct':10,'Nov':11,'Dec':12}\nparsed=[]\nfor date_s,o,h,l,c in rows:\n    d_s, mon, y = date_s.split()\n    parsed.append((dt.date(int(y), months[mon], int(d_s)), float(o), float(h), float(l), float(c)))\nparsed.sort()\nfor band in [2.5,4.0,5.0]:\n    sims=[]\n    for i,(d,o,h,l,c) in enumerate(parsed[:-4]):\n        if abs(c-91.68)<=band:\n            fut=parsed[i+1:i+5]\n            maxh=max(x[2] for x in fut)\n            minl=min(x[3] for x in fut)\n            sims.append((str(d),c,maxh,minl))\n    print('\\\\nband',band,'n',len(sims))\n    print(sims)\n    for name,val,side in [('A',94,'high'),('B',96,'high'),('C',98,'high'),('D',88,'low'),('E',86,'low'),('F',84,'low')]:\n        if side=='high':\n            hit=sum(1 for _,c,maxh,minl in sims if maxh>=val)\n        else:\n            hit=sum(1 for _,c,maxh,minl in sims if minl<=val)\n        print(name, round(hit/len(sims),2) if sims else None)\nPY\" in /Users/zeyu/Documents/bach_private_cache/.bench/v13-live-only-results-custom_live-20260326-111553/skill/workspace2026-03-26T03:48:56.777336Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:48:56.777462Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n succeeded in 1.69s:\n\nband 2.5 n 2\n[('2026-03-06', 90.9, 119.48, 76.73), ('2026-03-16', 92.46, 100.48, 91.45)]\nA 1.0\nB 1.0\nC 1.0\nD 0.5\nE 0.5\nF 0.5\n\nband 4.0 n 6\n[('2026-03-06', 90.9, 119.48, 76.73), ('2026-03-09', 94.77, 99.32, 76.73), ('2026-03-16', 92.46, 100.48, 91.45), ('2026-03-17', 95.53, 101.67, 84.37), ('2026-03-18', 95.46, 101.67, 84.37), ('2026-03-19', 95.55, 101.67, 84.37)]\nA 1.0\nB 1.0\nC 1.0\nD 0.83\nE 0.83\nF 0.33\n\nband 5.0 n 8\n2026-03-26T03:48:57.139426Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:48:57.139453Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:48:59.226918Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:48:59.226950Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:48:59.591279Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:48:59.591315Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n🌐 Searching the web...\n🌐 Searched: March 25 2026 WTI crude oil ceasefire reserve release Reuters March 25\n🌐 Searching the web...\n🌐 Searched: March 23 2026 WTI 84.37 cause ceasefire Hormuz Reuters\ncodex\n{\"predictions\":[{\"id\":\"v13_035\",\"prediction\":\"\\\\boxed{A, B, C, D, E}\"}]}\ntokens used\n168,314\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v13_035\",\"prediction\":\"\\\\boxed{A, B, C, D, E}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v13_035",
+                "prediction": "\\boxed{A, B, C, D, E}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v13_035",
+              "prediction": "\\boxed{A, B, C, D, E}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 1,
+            "prediction_count_returned": 1,
+            "valid_prediction_count": 1,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_6",
+          "returncode": 0,
+          "duration_seconds": 475.86,
+          "stdout": "{\"predictions\":[{\"id\":\"v13_039\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"v13_047\",\"prediction\":\"\\\\boxed{No}\"}]}\n",
+          "stderr": "h; deeper downside and higher upside tails are materially less likely. I’m doing one last relative read on AMD, since the graph at least shows NVIDIA connected there even when the ETF links are sparse.\nexec\n/bin/zsh -lc \"python3 scripts/cap_probe.py --base-url 'https://cap.abel.ai' observe AMD_close\" in /Users/zeyu/Documents/bach_private_cache/.bench/codex_home_skill/skills/causal-abelexec\n/bin/zsh -lc \"python3 scripts/cap_probe.py --base-url 'https://cap.abel.ai' paths NVDA_close AMD_close --max-paths 3\" in /Users/zeyu/Documents/bach_private_cache/.bench/codex_home_skill/skills/causal-abel succeeded in 1.22s:\n{\n  \"ok\": true,\n  \"status_code\": 200,\n  \"cap_version\": \"0.2.2\",\n  \"request_id\": \"fdf65129-4310-4cab-9037-b73ab784bfb6\",\n  \"verb\": \"observe.predict\",\n  \"status\": \"success\",\n  \"result\": {\n    \"target_node\": \"AMD_close\",\n    \"prediction\": 0.003259560528183705,\n    \"drivers\": [\n      \"MLNUSD_close\",\n      \"PEAKUSD_close\"\n    ]\n  },\n  \"provenance\": {\n    \"algorithm\": \"primitive.predict\",\n    \"graph_version\": \"CausalNodeV2\",\n    \"computation_time_ms\": 87,\n    \"server_name\": \"abel-cap\",\n succeeded in 1.30s:\n{\n  \"ok\": true,\n  \"status_code\": 200,\n  \"cap_version\": \"0.2.2\",\n  \"request_id\": \"6c5ccd58-2749-4022-b51a-54b4934154f2\",\n  \"verb\": \"graph.paths\",\n  \"status\": \"success\",\n  \"result\": {\n    \"reasoning_mode\": \"structural_semantics\",\n    \"identification_status\": \"not_applicable\",\n    \"assumptions\": [\n      \"causal_sufficiency\",\n      \"faithfulness\",\n      \"no_instantaneous_effects\",\n      \"no_latent_confounders_addressed\",\n      \"abel_structural_summary_only\",\n      \"abel_hidden_field_policy\"\n    ],\n    \"source_node_id\": \"NVDA_close\",\n    \"target_node_id\": \"AMD_close\",\n2026-03-26T03:58:02.608953Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:58:02.609020Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:58:02.962480Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:58:02.962532Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:58:07.198381Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:58:07.198420Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T03:58:07.565923Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T03:58:07.565961Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\ncodex\n{\"predictions\":[{\"id\":\"v13_039\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"v13_047\",\"prediction\":\"\\\\boxed{No}\"}]}\ntokens used\n79,221\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v13_039\",\"prediction\":\"\\\\boxed{A}\"},{\"id\":\"v13_047\",\"prediction\":\"\\\\boxed{No}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v13_039",
+                "prediction": "\\boxed{A}"
+              },
+              {
+                "id": "v13_047",
+                "prediction": "\\boxed{No}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v13_039",
+              "prediction": "\\boxed{A}"
+            },
+            {
+              "id": "v13_047",
+              "prediction": "\\boxed{No}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 2,
+            "prediction_count_returned": 2,
+            "valid_prediction_count": 2,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_7",
+          "returncode": 0,
+          "duration_seconds": 420.62,
+          "stdout": "{\"predictions\":[{\"id\":\"v13_059\",\"prediction\":\"\\\\boxed{No}\"},{\"id\":\"v13_068\",\"prediction\":\"\\\\boxed{B}\"}]}\n",
+          "stderr": "cess token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:03:52.171844Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\nexec\n/bin/zsh -lc \"python3 - <<'PY'\nimport json, urllib.request\nsymbols='BTC-USD,ETH-USD,COIN,MSTR'\nurl=f'https://query1.finance.yahoo.com/v7/finance/quote?symbols={symbols}'\nreq=urllib.request.Request(url, headers={'User-Agent':'Mozilla/5.0'})\nwith urllib.request.urlopen(req, timeout=20) as r:\n    data=json.load(r)\nfor q in data['quoteResponse']['result']:\n    sym=q['symbol']\n    reg=q.get('regularMarketPrice')\n    prev=q.get('regularMarketPreviousClose')\n    post=q.get('postMarketPrice')\n    pre=q.get('preMarketPrice')\n    print(sym, 'regular', reg, 'prev', prev, 'post', post, 'pre', pre)\nPY\" in /Users/zeyu/Documents/bach_private_cache/.bench/v13-live-only-results-custom_live-20260326-111553/skill/workspace exited 1 in 682ms:\nTraceback (most recent call last):\n  File \"<stdin>\", line 5, in <module>\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/urllib/request.py\", line 215, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/urllib/request.py\", line 521, in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/urllib/request.py\", line 630, in http_response\n    response = self.parent.error(\n               ^^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/urllib/request.py\", line 559, in error\n    return self._call_chain(*args)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/urllib/request.py\", line 492, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/urllib/request.py\", line 639, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 401: Unauthorized\n2026-03-26T04:04:03.052043Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:04:03.052161Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T04:04:03.426554Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:04:03.426606Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n🌐 Searching the web...\n🌐 Searched: Bitcoin ETF flows March 25 2026\n🌐 Searching the web...\n🌐 Searched: https://fortune.com/crypto/2025/03/31/microstrategy-strategy-michael-saylor-bitcoin-1-9-billion/\n🌐 Searching the web...\n🌐 Searched: site:sec.gov Strategy Inc 8-K March 2026 bitcoin\n🌐 Searching the web...\n🌐 Searched: bitcoin price March 2026 ETF inflows policy site:coindesk.com\n🌐 Searching the web...\n🌐 Searched: Bitcoin Iran oil March 2026 site:finance.yahoo.com\ncodex\n{\"predictions\":[{\"id\":\"v13_059\",\"prediction\":\"\\\\boxed{No}\"},{\"id\":\"v13_068\",\"prediction\":\"\\\\boxed{B}\"}]}\ntokens used\n82,747\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v13_059\",\"prediction\":\"\\\\boxed{No}\"},{\"id\":\"v13_068\",\"prediction\":\"\\\\boxed{B}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v13_059",
+                "prediction": "\\boxed{No}"
+              },
+              {
+                "id": "v13_068",
+                "prediction": "\\boxed{B}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v13_059",
+              "prediction": "\\boxed{No}"
+            },
+            {
+              "id": "v13_068",
+              "prediction": "\\boxed{B}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 2,
+            "prediction_count_returned": 2,
+            "valid_prediction_count": 2,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_8",
+          "returncode": 0,
+          "duration_seconds": 264.78,
+          "stdout": "{\"predictions\":[{\"id\":\"v13_071\",\"prediction\":\"\\\\boxed{C}\"}]}\n",
+          "stderr": "https://stooq.com/q/d/l/?s=xagusd&i=d' | tail -n 12\" in /Users/zeyu/Documents/bach_private_cache/.bench/v13-live-only-results-custom_live-20260326-111553/skill/workspace2026-03-26T04:09:21.144758Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:09:21.144800Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T04:09:21.501161Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:09:21.501181Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n succeeded in 2.10s:\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n100  544k    0  544k    0     0   245k      0 --:--:--  0:00:02 --:--:--  245k\n2026-03-11,88.319,89.429,84.485,85.851\n2026-03-12,84.951,87.43,83.057,83.431\n2026-03-13,84.379,85.434,79.479,80.6\n2026-03-16,80.523,81.605,77.14,80.855\n2026-03-17,80.786,82.548,78.312,79.252\n2026-03-18,79.027,80.189,75.015,75.704\n2026-03-19,75.71,76.695,65.538,73.1\n2026-03-20,72.212,74.55,67.699,67.915\n2026-03-23,68.829,70.761,61.012,69.498\n2026-03-24,69.652,71.471,66.021,71.255\n2026-03-25,71.689,74.533,70.916,71.289\n2026-03-26,71.158,72.188,70.403,71.784\n succeeded in 2.25s:\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n100  512k    0  512k    0     0   215k      0 --:--:--  0:00:02 --:--:--  215k\n100  564k    0  564k    0     0   237k      0 --:--:--  0:00:02 --:--:--  237k\n2026-03-11,5189.42,5222.91,5151.52,5181.99\n2026-03-12,5138.89,5191.65,5055.77,5078.39\n2026-03-13,5096.1,5128.27,5009.83,5019.83\n2026-03-16,5024.88,5037.62,4968.83,5010.69\n2026-03-17,5002.52,5043.51,4975.4,5003.05\n2026-03-18,5000.16,5016.17,4807.71,4836.86\n2026-03-19,4834.68,4867.09,4504.84,4655.29\n2026-03-20,4636.58,4735.66,4478.84,4493.95\n2026-03-23,4498.43,4511.43,4100.71,4416.89\n2026-03-24,4426.76,4484.22,4308.11,4471.2\n2026-03-25,4484.67,4601.78,4472.71,4515.91\n2026-03-26,4517.71,4543.67,4489.7,4515.69\n2026-03-26T04:09:24.450994Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:09:24.451082Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T04:09:24.803563Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:09:24.803593Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\ncodex\n{\"predictions\":[{\"id\":\"v13_071\",\"prediction\":\"\\\\boxed{C}\"}]}\ntokens used\n78,349\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v13_071\",\"prediction\":\"\\\\boxed{C}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v13_071",
+                "prediction": "\\boxed{C}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v13_071",
+              "prediction": "\\boxed{C}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 1,
+            "prediction_count_returned": 1,
+            "valid_prediction_count": 1,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_9",
+          "returncode": 0,
+          "duration_seconds": 648.65,
+          "stdout": "{\"predictions\":[{\"id\":\"v13_074\",\"prediction\":\"\\\\boxed{A, B, D}\"}]}\n",
+          "stderr": "//query1.finance.yahoo.com/v8/finance/chart/{t}?interval=1d&range=5d&includePrePost=true'\n    req=urllib.request.Request(url, headers={'User-Agent':'Mozilla/5.0'})\n    with urllib.request.urlopen(req, timeout=20) as r:\n        data=json.load(r)\n    r0=data['chart']['result'][0]\n    meta=r0['meta']\n    timestamps=r0['timestamp']\n    closes=r0['indicators']['adjclose'][0]['adjclose']\n    rows=[]\n    import datetime\n    for ts,c in zip(timestamps, closes):\n        if c is not None:\n            rows.append((datetime.datetime.utcfromtimestamp(ts).strftime('%Y-%m-%d'), c))\n    uniq=[]; seen=set()\n    for d,c in rows:\n        if d not in seen:\n            uniq.append((d,c)); seen.add(d)\n    print(json.dumps({'symbol':t,'regularMarketPrice':meta.get('regularMarketPrice'),'chartPreviousClose':meta.get('chartPreviousClose'),'recent':uniq[-5:]}))\nPY\" in /Users/zeyu/Documents/bach_private_cache/.bench/v13-live-only-results-custom_live-20260326-111553/skill/workspace2026-03-26T04:19:27.488848Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:19:27.488939Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n succeeded in 1.45s:\n<stdin>:15: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).\n{\"symbol\": \"2330.TW\", \"regularMarketPrice\": 1850.0, \"chartPreviousClose\": 1840.0, \"recent\": [[\"2026-03-20\", 1840.0], [\"2026-03-23\", 1810.0], [\"2026-03-24\", 1810.0], [\"2026-03-25\", 1845.0], [\"2026-03-26\", 1850.0]]}\n{\"symbol\": \"2454.TW\", \"regularMarketPrice\": 1605.0, \"chartPreviousClose\": 1700.0, \"recent\": [[\"2026-03-20\", 1700.0], [\"2026-03-23\", 1625.0], [\"2026-03-24\", 1620.0], [\"2026-03-25\", 1620.0], [\"2026-03-26\", 1605.0]]}\n2026-03-26T04:19:27.839551Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:19:27.839595Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T04:19:33.957089Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:19:33.957134Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T04:19:34.305888Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:19:34.305924Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n🌐 Searching the web...\n🌐 Searched: NVDA ex dividend date March 2026\ncodex\n{\"predictions\":[{\"id\":\"v13_074\",\"prediction\":\"\\\\boxed{A, B, D}\"}]}\ntokens used\n129,115\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v13_074\",\"prediction\":\"\\\\boxed{A, B, D}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v13_074",
+                "prediction": "\\boxed{A, B, D}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v13_074",
+              "prediction": "\\boxed{A, B, D}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 1,
+            "prediction_count_returned": 1,
+            "valid_prediction_count": 1,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_10",
+          "returncode": 0,
+          "duration_seconds": 466.61,
+          "stdout": "{\"predictions\":[{\"id\":\"v13_077\",\"prediction\":\"\\\\boxed{B}\"}]}\n",
+          "stderr": "ve.predict\",\"graph_version\":\"CausalNodeV2\",\"computation_time_ms\":67,\"server_name\":\"abel-cap\",\"server_version\":\"0.1.0\",\"cap_spec_version\":\"0.2.2\"}}\n2026-03-26T04:27:58.861260Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:27:58.861315Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T04:27:59.231054Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:27:59.231096Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T04:28:02.861626Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:28:02.861695Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T04:28:03.209468Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:28:03.209496Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\nPlan update\nUsed the live Abel CAP surface where available, supplemented with compact external market checks for the blocked nodes. The strongest consistent signal is ETH up, COIN down, with BTC/MSTR lacking enough positive edge to include.\n  ✓ Read the relevant forecasting skill guidance and gather current market context for BTC, ETH, COIN, and MSTR around 2026-03-26\n  ✓ Assess short-horizon directional drivers through month-end and choose up-membership set\n  → Return the required JSON prediction\n2026-03-26T04:28:16.563758Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:28:16.563864Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T04:28:16.931386Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:28:16.931420Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\ncodex\n{\"predictions\":[{\"id\":\"v13_077\",\"prediction\":\"\\\\boxed{B}\"}]}\ntokens used\n99,774\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v13_077\",\"prediction\":\"\\\\boxed{B}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v13_077",
+                "prediction": "\\boxed{B}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v13_077",
+              "prediction": "\\boxed{B}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 1,
+            "prediction_count_returned": 1,
+            "valid_prediction_count": 1,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_11",
+          "returncode": 0,
+          "duration_seconds": 345.95,
+          "stdout": "{\"predictions\":[{\"id\":\"v13_083\",\"prediction\":\"\\\\boxed{A}\"}]}\n",
+          "stderr": "in.\n2026-03-26T04:33:32.232541Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:33:32.232576Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\nexec\n/bin/zsh -lc \"curl -sS 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum&price_change_percentage=7d,30d'\" in /Users/zeyu/Documents/bach_private_cache/.bench/v13-live-only-results-custom_live-20260326-111553/skill/workspace succeeded in 1.39s:\n[{\"id\":\"bitcoin\",\"symbol\":\"btc\",\"name\":\"Bitcoin\",\"image\":\"https://coin-images.coingecko.com/coins/images/1/large/bitcoin.png?1696501400\",\"current_price\":70831,\"market_cap\":1416767226380,\"market_cap_rank\":1,\"fully_diluted_valuation\":1416767226380,\"total_volume\":35332706591,\"high_24h\":71922,\"low_24h\":70604,\"price_change_24h\":72.3,\"price_change_percentage_24h\":0.10218,\"market_cap_change_24h\":832774929,\"market_cap_change_percentage_24h\":0.05881,\"circulating_supply\":20003043.0,\"total_supply\":20003043.0,\"max_supply\":21000000.0,\"ath\":126080,\"ath_change_percentage\":-43.82059,\"ath_date\":\"2025-10-06T18:57:42.558Z\",\"atl\":67.81,\"atl_change_percentage\":104356.55085,\"atl_date\":\"2013-07-06T00:00:00.000Z\",\"roi\":null,\"last_updated\":\"2026-03-26T04:33:14.839Z\",\"price_change_percentage_30d_in_currency\":11.439506807999448,\"price_change_percentage_7d_in_currency\":-0.5534797635845667},{\"id\":\"ethereum\",\"symbol\":\"eth\",\"name\":\"Ethereum\",\"image\":\"https://coin-images.coingecko.com/coins/images/279/large/ethereum.png?1696501628\",\"current_price\":2151.63,\"market_cap\":259678485384,\"market_cap_rank\":2,\"fully_diluted_valuation\":259678485384,\"total_volume\":15348024929,\"high_24h\":2196.43,\"low_24h\":2145.85,\"price_change_24h\":-9.759968158741685,\"price_change_percentage_24h\":-0.45156,\"market_cap_change_24h\":-1239456444.4270325,\"market_cap_change_percentage_24h\":-0.47504,\"circulating_supply\":120691533.0678,\"total_supply\":120691533.0678,\"max_supply\":null,\"ath\":4946.05,\"ath_change_percentage\":-56.49796,\"ath_date\":\"2025-08-24T19:21:03.333Z\",\"atl\":0.432979,\"atl_change_percentage\":496837.01053,\"atl_date\":\"2015-10-20T00:00:00.000Z\",\"roi\":{\"times\":39.610658624710965,\"currency\":\"btc\",\"percentage\":3961.065862471097},\"last_updated\":\"2026-03-26T04:33:14.997Z\",\"price_change_percentage_30d_in_currency\":17.501486865130797,\"price_change_percentage_7d_in_currency\":-2.7507561220074908}]\n2026-03-26T04:33:37.755838Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:33:37.756121Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T04:33:38.192198Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:33:38.192225Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n🌐 Searching the web...\n🌐 Searched the web\n🌐 Searching the web...\n🌐 Searched: \"BlackRock launches a staking ETF\" Ethereum March 2026\ncodex\n{\"predictions\":[{\"id\":\"v13_083\",\"prediction\":\"\\\\boxed{A}\"}]}\ntokens used\n92,022\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v13_083\",\"prediction\":\"\\\\boxed{A}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v13_083",
+                "prediction": "\\boxed{A}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v13_083",
+              "prediction": "\\boxed{A}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 1,
+            "prediction_count_returned": 1,
+            "valid_prediction_count": 1,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        },
+        {
+          "batch_name": "batch_12",
+          "returncode": 0,
+          "duration_seconds": 397.0,
+          "stdout": "{\"predictions\":[{\"id\":\"v13_087\",\"prediction\":\"\\\\boxed{A}\"}]}\n",
+          "stderr": "r\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:39:54.723846Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T04:39:55.078893Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:39:55.078985Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\nexec\n/bin/zsh -lc \"python3 - <<'PY'\nimport urllib.request, csv, io\nfor s in ['nvda.us','msft.us','aapl.us','amzn.us']:\n    data=urllib.request.urlopen(f'https://stooq.com/q/d/l/?s={s}&i=d', timeout=20).read().decode()\n    r=list(csv.DictReader(io.StringIO(data)))\n    vals=r[-6:]\n    print(s)\n    for row in vals:\n        print(row['Date'], row['Close'])\n    print('---')\nPY\" in /Users/zeyu/Documents/bach_private_cache/.bench/v13-live-only-results-custom_live-20260326-111553/skill/workspace2026-03-26T04:40:06.896418Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:40:06.896465Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T04:40:07.243607Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:40:07.243651Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n succeeded in 8.75s:\nnvda.us\n2026-03-18 180.4\n2026-03-19 178.56\n2026-03-20 172.7\n2026-03-23 175.64\n2026-03-24 175.2\n2026-03-25 178.68\n---\nmsft.us\n2026-03-18 391.79\n2026-03-19 389.02\n2026-03-20 381.87\n2026-03-23 383\n2026-03-24 372.74\n2026-03-25 371.04\n---\naapl.us\n2026-03-18 249.94\n2026-03-19 248.96\n2026-03-20 247.99\n2026-03-26T04:40:15.829818Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:40:15.829978Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n2026-03-26T04:40:16.199588Z ERROR codex_login::auth::manager: Failed to refresh token: 401 Unauthorized: {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n2026-03-26T04:40:16.199646Z ERROR codex_login::auth::manager: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.\n🌐 Searching the web...\n🌐 Searched: March 2026 quarter-end rebalancing equities buy sell after bond outperformance\ncodex\n{\"predictions\":[{\"id\":\"v13_087\",\"prediction\":\"\\\\boxed{A}\"}]}\ntokens used\n96,603\n",
+          "raw_output": "{\"predictions\":[{\"id\":\"v13_087\",\"prediction\":\"\\\\boxed{A}\"}]}",
+          "parsed_output": {
+            "predictions": [
+              {
+                "id": "v13_087",
+                "prediction": "\\boxed{A}"
+              }
+            ]
+          },
+          "parse_error": null,
+          "predictions": [
+            {
+              "id": "v13_087",
+              "prediction": "\\boxed{A}"
+            }
+          ],
+          "validation": {
+            "case_count_expected": 1,
+            "prediction_count_returned": 1,
+            "valid_prediction_count": 1,
+            "all_cases_returned": true,
+            "all_predictions_valid": true,
+            "missing_case_ids": [],
+            "extra_case_ids": [],
+            "invalid_predictions": []
+          }
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "rescored_at": "2026-04-02T15:08:24+08:00",
+    "resolved_case_count": 14,
+    "pending_case_count": 0,
+    "base_correct_count": 7,
+    "skill_correct_count": 7,
+    "base_accuracy": 0.5,
+    "skill_accuracy": 0.5
+  },
+  "summary": {
+    "prediction_diff_count": 6,
+    "base_duration_seconds": 3456.04,
+    "skill_duration_seconds": 5093.61,
+    "base_valid_prediction_count": 14,
+    "skill_valid_prediction_count": 14
+  }
+}

@@ -7,7 +7,7 @@
       "id": "v13_001",
       "status": "pending",
       "answer_box": null,
-      "answer_tokens": null,
+      "answer_tokens": [],
       "resolution_spec": {
         "source": "futurex_past_backfill",
         "dataset_name": "futurex-ai/Futurex-Past",
@@ -20,7 +20,7 @@
       "id": "v13_002",
       "status": "pending",
       "answer_box": null,
-      "answer_tokens": null,
+      "answer_tokens": [],
       "resolution_spec": {
         "source": "futurex_past_backfill",
         "dataset_name": "futurex-ai/Futurex-Past",
@@ -33,7 +33,7 @@
       "id": "v13_003",
       "status": "pending",
       "answer_box": null,
-      "answer_tokens": null,
+      "answer_tokens": [],
       "resolution_spec": {
         "source": "futurex_past_backfill",
         "dataset_name": "futurex-ai/Futurex-Past",
@@ -46,7 +46,7 @@
       "id": "v13_004",
       "status": "pending",
       "answer_box": null,
-      "answer_tokens": null,
+      "answer_tokens": [],
       "resolution_spec": {
         "source": "futurex_past_backfill",
         "dataset_name": "futurex-ai/Futurex-Past",
@@ -59,7 +59,7 @@
       "id": "v13_005",
       "status": "pending",
       "answer_box": null,
-      "answer_tokens": null,
+      "answer_tokens": [],
       "resolution_spec": {
         "source": "futurex_past_backfill",
         "dataset_name": "futurex-ai/Futurex-Past",
@@ -72,7 +72,7 @@
       "id": "v13_006",
       "status": "pending",
       "answer_box": null,
-      "answer_tokens": null,
+      "answer_tokens": [],
       "resolution_spec": {
         "source": "futurex_past_backfill",
         "dataset_name": "futurex-ai/Futurex-Past",
@@ -85,7 +85,7 @@
       "id": "v13_007",
       "status": "pending",
       "answer_box": null,
-      "answer_tokens": null,
+      "answer_tokens": [],
       "resolution_spec": {
         "source": "futurex_past_backfill",
         "dataset_name": "futurex-ai/Futurex-Past",
@@ -96,9 +96,11 @@
     },
     {
       "id": "v13_008",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{E}",
+      "answer_tokens": [
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -108,39 +110,44 @@
           {
             "label": "A",
             "type": "lt",
-            "value": 4450
+            "value": 4350
           },
           {
             "label": "B",
+            "type": "range",
+            "lower": 4350,
+            "upper": 4400
+          },
+          {
+            "label": "C",
+            "type": "range",
+            "lower": 4400,
+            "upper": 4450
+          },
+          {
+            "label": "D",
             "type": "range",
             "lower": 4450,
             "upper": 4500
           },
           {
-            "label": "C",
-            "type": "range",
-            "lower": 4500,
-            "upper": 4550
-          },
-          {
-            "label": "D",
-            "type": "range",
-            "lower": 4550,
-            "upper": 4600
-          },
-          {
             "label": "E",
             "type": "ge",
-            "value": 4600
+            "value": 4500
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 4783.2001953125
       }
     },
     {
       "id": "v13_009",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{E}",
+      "answer_tokens": [
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -150,39 +157,44 @@
           {
             "label": "A",
             "type": "lt",
-            "value": 88
+            "value": 90
           },
           {
             "label": "B",
-            "type": "range",
-            "lower": 88,
-            "upper": 90
-          },
-          {
-            "label": "C",
             "type": "range",
             "lower": 90,
             "upper": 92
           },
           {
-            "label": "D",
+            "label": "C",
             "type": "range",
             "lower": 92,
             "upper": 94
           },
           {
+            "label": "D",
+            "type": "range",
+            "lower": 94,
+            "upper": 96
+          },
+          {
             "label": "E",
             "type": "ge",
-            "value": 94
+            "value": 96
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 100.12000274658203
       }
     },
     {
       "id": "v13_010",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -192,39 +204,44 @@
           {
             "label": "A",
             "type": "lt",
-            "value": 66000
+            "value": 64000
           },
           {
             "label": "B",
+            "type": "range",
+            "lower": 64000,
+            "upper": 66000
+          },
+          {
+            "label": "C",
             "type": "range",
             "lower": 66000,
             "upper": 68000
           },
           {
-            "label": "C",
+            "label": "D",
             "type": "range",
             "lower": 68000,
             "upper": 70000
           },
           {
-            "label": "D",
-            "type": "range",
-            "lower": 70000,
-            "upper": 72000
-          },
-          {
             "label": "E",
             "type": "ge",
-            "value": 72000
+            "value": 70000
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 68078.5546875
       }
     },
     {
       "id": "v13_011",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -234,39 +251,44 @@
           {
             "label": "A",
             "type": "lt",
-            "value": 2000
+            "value": 1900
           },
           {
             "label": "B",
+            "type": "range",
+            "lower": 1900,
+            "upper": 2000
+          },
+          {
+            "label": "C",
             "type": "range",
             "lower": 2000,
             "upper": 2100
           },
           {
-            "label": "C",
+            "label": "D",
             "type": "range",
             "lower": 2100,
             "upper": 2200
           },
           {
-            "label": "D",
-            "type": "range",
-            "lower": 2200,
-            "upper": 2300
-          },
-          {
             "label": "E",
             "type": "ge",
-            "value": 2300
+            "value": 2200
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 2138.737060546875
       }
     },
     {
       "id": "v13_012",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{E}",
+      "answer_tokens": [
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -276,39 +298,44 @@
           {
             "label": "A",
             "type": "lt",
-            "value": 170
+            "value": 160
           },
           {
             "label": "B",
+            "type": "range",
+            "lower": 160,
+            "upper": 165
+          },
+          {
+            "label": "C",
+            "type": "range",
+            "lower": 165,
+            "upper": 170
+          },
+          {
+            "label": "D",
             "type": "range",
             "lower": 170,
             "upper": 175
           },
           {
-            "label": "C",
-            "type": "range",
-            "lower": 175,
-            "upper": 180
-          },
-          {
-            "label": "D",
-            "type": "range",
-            "lower": 180,
-            "upper": 185
-          },
-          {
             "label": "E",
             "type": "ge",
-            "value": 185
+            "value": 175
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 175.75
       }
     },
     {
       "id": "v13_013",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{E}",
+      "answer_tokens": [
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -318,39 +345,44 @@
           {
             "label": "A",
             "type": "lt",
-            "value": 210
+            "value": 195
           },
           {
             "label": "B",
             "type": "range",
-            "lower": 210,
-            "upper": 215
+            "lower": 195,
+            "upper": 200
           },
           {
             "label": "C",
             "type": "range",
-            "lower": 215,
-            "upper": 220
+            "lower": 200,
+            "upper": 205
           },
           {
             "label": "D",
             "type": "range",
-            "lower": 220,
-            "upper": 225
+            "lower": 205,
+            "upper": 210
           },
           {
             "label": "E",
             "type": "ge",
-            "value": 225
+            "value": 210
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 210.2100067138672
       }
     },
     {
       "id": "v13_014",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -360,39 +392,44 @@
           {
             "label": "A",
             "type": "lt",
-            "value": 310
+            "value": 300
           },
           {
             "label": "B",
+            "type": "range",
+            "lower": 300,
+            "upper": 305
+          },
+          {
+            "label": "C",
+            "type": "range",
+            "lower": 305,
+            "upper": 310
+          },
+          {
+            "label": "D",
             "type": "range",
             "lower": 310,
             "upper": 315
           },
           {
-            "label": "C",
-            "type": "range",
-            "lower": 315,
-            "upper": 320
-          },
-          {
-            "label": "D",
-            "type": "range",
-            "lower": 320,
-            "upper": 325
-          },
-          {
             "label": "E",
             "type": "ge",
-            "value": 325
+            "value": 315
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 313.489990234375
       }
     },
     {
       "id": "v13_015",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{E}",
+      "answer_tokens": [
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -402,39 +439,44 @@
           {
             "label": "A",
             "type": "lt",
-            "value": 340
+            "value": 315
           },
           {
             "label": "B",
             "type": "range",
-            "lower": 340,
-            "upper": 345
+            "lower": 315,
+            "upper": 320
           },
           {
             "label": "C",
             "type": "range",
-            "lower": 345,
-            "upper": 350
+            "lower": 320,
+            "upper": 325
           },
           {
             "label": "D",
             "type": "range",
-            "lower": 350,
-            "upper": 355
+            "lower": 325,
+            "upper": 330
           },
           {
             "label": "E",
             "type": "ge",
-            "value": 355
+            "value": 330
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 341.489990234375
       }
     },
     {
       "id": "v13_016",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{E}",
+      "answer_tokens": [
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -444,39 +486,44 @@
           {
             "label": "A",
             "type": "lt",
-            "value": 370
+            "value": 350
           },
           {
             "label": "B",
+            "type": "range",
+            "lower": 350,
+            "upper": 360
+          },
+          {
+            "label": "C",
+            "type": "range",
+            "lower": 360,
+            "upper": 370
+          },
+          {
+            "label": "D",
             "type": "range",
             "lower": 370,
             "upper": 380
           },
           {
-            "label": "C",
-            "type": "range",
-            "lower": 380,
-            "upper": 390
-          },
-          {
-            "label": "D",
-            "type": "range",
-            "lower": 390,
-            "upper": 400
-          },
-          {
             "label": "E",
             "type": "ge",
-            "value": 400
+            "value": 380
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 381.260009765625
       }
     },
     {
       "id": "v13_017",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -512,13 +559,18 @@
             "value": 260
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 255.6300048828125
       }
     },
     {
       "id": "v13_018",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -528,39 +580,44 @@
           {
             "label": "A",
             "type": "lt",
-            "value": 360
+            "value": 355
           },
           {
             "label": "B",
+            "type": "range",
+            "lower": 355,
+            "upper": 360
+          },
+          {
+            "label": "C",
             "type": "range",
             "lower": 360,
             "upper": 365
           },
           {
-            "label": "C",
+            "label": "D",
             "type": "range",
             "lower": 365,
             "upper": 370
           },
           {
-            "label": "D",
-            "type": "range",
-            "lower": 370,
-            "upper": 375
-          },
-          {
             "label": "E",
             "type": "ge",
-            "value": 375
+            "value": 370
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 369.3699951171875
       }
     },
     {
       "id": "v13_019",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -596,13 +653,18 @@
             "value": 215
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 210.57000732421875
       }
     },
     {
       "id": "v13_020",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{E}",
+      "answer_tokens": [
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -612,39 +674,44 @@
           {
             "label": "A",
             "type": "lt",
-            "value": 570
+            "value": 530
           },
           {
             "label": "B",
             "type": "range",
-            "lower": 570,
-            "upper": 580
+            "lower": 530,
+            "upper": 540
           },
           {
             "label": "C",
             "type": "range",
-            "lower": 580,
-            "upper": 590
+            "lower": 540,
+            "upper": 550
           },
           {
             "label": "D",
             "type": "range",
-            "lower": 590,
-            "upper": 600
+            "lower": 550,
+            "upper": 560
           },
           {
             "label": "E",
             "type": "ge",
-            "value": 600
+            "value": 560
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 579.22998046875
       }
     },
     {
       "id": "v13_021",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{E}",
+      "answer_tokens": [
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -654,39 +721,44 @@
           {
             "label": "A",
             "type": "lt",
-            "value": 580
+            "value": 565
           },
           {
             "label": "B",
             "type": "range",
-            "lower": 580,
-            "upper": 585
+            "lower": 565,
+            "upper": 570
           },
           {
             "label": "C",
             "type": "range",
-            "lower": 585,
-            "upper": 590
+            "lower": 570,
+            "upper": 575
           },
           {
             "label": "D",
             "type": "range",
-            "lower": 590,
-            "upper": 595
+            "lower": 575,
+            "upper": 580
           },
           {
             "label": "E",
             "type": "ge",
-            "value": 595
+            "value": 580
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 584.3099975585938
       }
     },
     {
       "id": "v13_022",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{E}",
+      "answer_tokens": [
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_bucket",
@@ -696,39 +768,46 @@
           {
             "label": "A",
             "type": "lt",
-            "value": 645
+            "value": 635
           },
           {
             "label": "B",
+            "type": "range",
+            "lower": 635,
+            "upper": 640
+          },
+          {
+            "label": "C",
+            "type": "range",
+            "lower": 640,
+            "upper": 645
+          },
+          {
+            "label": "D",
             "type": "range",
             "lower": 645,
             "upper": 650
           },
           {
-            "label": "C",
-            "type": "range",
-            "lower": 650,
-            "upper": 655
-          },
-          {
-            "label": "D",
-            "type": "range",
-            "lower": 655,
-            "upper": 660
-          },
-          {
             "label": "E",
             "type": "ge",
-            "value": 660
+            "value": 650
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 655.239990234375
       }
     },
     {
       "id": "v13_023",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_threshold_truths",
@@ -738,36 +817,43 @@
           {
             "label": "A",
             "operator": "gt",
-            "value": 66000
+            "value": 64000
           },
           {
             "label": "B",
             "operator": "gt",
-            "value": 68000
+            "value": 66000
           },
           {
             "label": "C",
             "operator": "gt",
-            "value": 70000
+            "value": 68000
           },
           {
             "label": "D",
             "operator": "gt",
-            "value": 72000
+            "value": 70000
           },
           {
             "label": "E",
             "operator": "gt",
-            "value": 74000
+            "value": 72000
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 68078.5546875
       }
     },
     {
       "id": "v13_024",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_threshold_truths",
@@ -777,36 +863,44 @@
           {
             "label": "A",
             "operator": "gt",
-            "value": 2000
+            "value": 1900
           },
           {
             "label": "B",
             "operator": "gt",
-            "value": 2100
+            "value": 2000
           },
           {
             "label": "C",
             "operator": "gt",
-            "value": 2200
+            "value": 2100
           },
           {
             "label": "D",
             "operator": "gt",
-            "value": 2300
+            "value": 2200
           },
           {
             "label": "E",
             "operator": "gt",
-            "value": 2400
+            "value": 2300
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 2138.737060546875
       }
     },
     {
       "id": "v13_025",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C, D}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_threshold_truths",
@@ -816,36 +910,44 @@
           {
             "label": "A",
             "operator": "gt",
-            "value": 170
+            "value": 160
           },
           {
             "label": "B",
             "operator": "gt",
-            "value": 175
+            "value": 165
           },
           {
             "label": "C",
             "operator": "gt",
-            "value": 180
+            "value": 170
           },
           {
             "label": "D",
             "operator": "gt",
-            "value": 185
+            "value": 175
           },
           {
             "label": "E",
             "operator": "gt",
-            "value": 190
+            "value": 180
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 175.75
       }
     },
     {
       "id": "v13_026",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C, D}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_threshold_truths",
@@ -855,36 +957,44 @@
           {
             "label": "A",
             "operator": "gt",
-            "value": 210
+            "value": 195
           },
           {
             "label": "B",
             "operator": "gt",
-            "value": 215
+            "value": 200
           },
           {
             "label": "C",
             "operator": "gt",
-            "value": 220
+            "value": 205
           },
           {
             "label": "D",
             "operator": "gt",
-            "value": 225
+            "value": 210
           },
           {
             "label": "E",
             "operator": "gt",
-            "value": 230
+            "value": 215
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 210.2100067138672
       }
     },
     {
       "id": "v13_027",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C, D}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_threshold_truths",
@@ -894,36 +1004,43 @@
           {
             "label": "A",
             "operator": "gt",
-            "value": 370
+            "value": 350
           },
           {
             "label": "B",
             "operator": "gt",
-            "value": 380
+            "value": 360
           },
           {
             "label": "C",
             "operator": "gt",
-            "value": 390
+            "value": 370
           },
           {
             "label": "D",
             "operator": "gt",
-            "value": 400
+            "value": 380
           },
           {
             "label": "E",
             "operator": "gt",
-            "value": 410
+            "value": 390
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 381.260009765625
       }
     },
     {
       "id": "v13_028",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_threshold_truths",
@@ -956,13 +1073,20 @@
             "value": 265
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 255.6300048828125
       }
     },
     {
       "id": "v13_029",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_threshold_truths",
@@ -972,36 +1096,43 @@
           {
             "label": "A",
             "operator": "gt",
-            "value": 360
+            "value": 355
           },
           {
             "label": "B",
             "operator": "gt",
-            "value": 365
+            "value": 360
           },
           {
             "label": "C",
             "operator": "gt",
-            "value": 370
+            "value": 365
           },
           {
             "label": "D",
             "operator": "gt",
-            "value": 375
+            "value": 370
           },
           {
             "label": "E",
             "operator": "gt",
-            "value": 380
+            "value": 375
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 369.3699951171875
       }
     },
     {
       "id": "v13_030",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_threshold_truths",
@@ -1034,13 +1165,22 @@
             "value": 220
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 210.57000732421875
       }
     },
     {
       "id": "v13_031",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C, D, E}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_threshold_truths",
@@ -1050,36 +1190,44 @@
           {
             "label": "A",
             "operator": "gt",
-            "value": 570
+            "value": 530
           },
           {
             "label": "B",
             "operator": "gt",
-            "value": 580
+            "value": 540
           },
           {
             "label": "C",
             "operator": "gt",
-            "value": 590
+            "value": 550
           },
           {
             "label": "D",
             "operator": "gt",
-            "value": 600
+            "value": 560
           },
           {
             "label": "E",
             "operator": "gt",
-            "value": 610
+            "value": 570
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 579.22998046875
       }
     },
     {
       "id": "v13_032",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C, D}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_threshold_truths",
@@ -1089,36 +1237,44 @@
           {
             "label": "A",
             "operator": "gt",
-            "value": 580
+            "value": 565
           },
           {
             "label": "B",
             "operator": "gt",
-            "value": 585
+            "value": 570
           },
           {
             "label": "C",
             "operator": "gt",
-            "value": 590
+            "value": 575
           },
           {
             "label": "D",
             "operator": "gt",
-            "value": 595
+            "value": 580
           },
           {
             "label": "E",
             "operator": "gt",
-            "value": 600
+            "value": 585
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 584.3099975585938
       }
     },
     {
       "id": "v13_033",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C, D}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_threshold_truths",
@@ -1128,36 +1284,45 @@
           {
             "label": "A",
             "operator": "gt",
-            "value": 335
+            "value": 320
           },
           {
             "label": "B",
             "operator": "gt",
-            "value": 340
+            "value": 325
           },
           {
             "label": "C",
             "operator": "gt",
-            "value": 345
+            "value": 330
           },
           {
             "label": "D",
             "operator": "gt",
-            "value": 350
+            "value": 335
           },
           {
             "label": "E",
             "operator": "gt",
-            "value": 355
+            "value": 340
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 338.5400085449219
       }
     },
     {
       "id": "v13_034",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C, D, E}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "close_threshold_truths",
@@ -1167,536 +1332,621 @@
           {
             "label": "A",
             "operator": "gt",
-            "value": 405
+            "value": 390
           },
           {
             "label": "B",
             "operator": "gt",
-            "value": 410
+            "value": 395
           },
           {
             "label": "C",
             "operator": "gt",
-            "value": 415
+            "value": 400
           },
           {
             "label": "D",
             "operator": "gt",
-            "value": 420
+            "value": 405
           },
           {
             "label": "E",
             "operator": "gt",
-            "value": 425
+            "value": 410
           }
         ]
+      },
+      "resolved_meta": {
+        "close": 437.82000732421875
       }
     },
     {
       "id": "v13_035",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "hit_levels",
         "symbol": "CL=F",
-        "start_date": "2026-03-25",
+        "start_date": "2026-03-27",
         "resolution_date": "2026-03-31",
         "levels": [
           {
             "label": "A",
-            "direction": "high",
-            "value": 94
-          },
-          {
-            "label": "B",
             "direction": "high",
             "value": 96
           },
           {
-            "label": "C",
+            "label": "B",
             "direction": "high",
             "value": 98
           },
           {
+            "label": "C",
+            "direction": "high",
+            "value": 100
+          },
+          {
             "label": "D",
+            "direction": "low",
+            "value": 90
+          },
+          {
+            "label": "E",
             "direction": "low",
             "value": 88
           },
           {
-            "label": "E",
-            "direction": "low",
-            "value": 86
-          },
-          {
             "label": "F",
             "direction": "low",
-            "value": 84
+            "value": 86
           }
         ]
+      },
+      "resolved_meta": {
+        "max_high": 106.86000061035156,
+        "min_low": 92.08000183105469
       }
     },
     {
       "id": "v13_036",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "hit_levels",
         "symbol": "GC=F",
-        "start_date": "2026-03-25",
+        "start_date": "2026-03-27",
         "resolution_date": "2026-03-31",
         "levels": [
           {
             "label": "A",
+            "direction": "high",
+            "value": 4500
+          },
+          {
+            "label": "B",
+            "direction": "high",
+            "value": 4550
+          },
+          {
+            "label": "C",
             "direction": "high",
             "value": 4600
           },
           {
-            "label": "B",
-            "direction": "high",
-            "value": 4650
-          },
-          {
-            "label": "C",
-            "direction": "high",
-            "value": 4700
-          },
-          {
             "label": "D",
             "direction": "low",
-            "value": 4450
+            "value": 4350
           },
           {
             "label": "E",
             "direction": "low",
-            "value": 4400
+            "value": 4300
           },
           {
             "label": "F",
             "direction": "low",
-            "value": 4350
+            "value": 4250
           }
         ]
+      },
+      "resolved_meta": {
+        "max_high": 4789.10009765625,
+        "min_low": 4413.39990234375
       }
     },
     {
       "id": "v13_037",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "hit_levels",
         "symbol": "BTC-USD",
-        "start_date": "2026-03-26",
+        "start_date": "2026-03-27",
         "resolution_date": "2026-03-31",
         "levels": [
           {
             "label": "A",
+            "direction": "high",
+            "value": 72000
+          },
+          {
+            "label": "B",
             "direction": "high",
             "value": 74000
           },
           {
-            "label": "B",
+            "label": "C",
             "direction": "high",
             "value": 76000
           },
           {
-            "label": "C",
-            "direction": "high",
-            "value": 78000
-          },
-          {
             "label": "D",
-            "direction": "low",
-            "value": 68000
-          },
-          {
-            "label": "E",
             "direction": "low",
             "value": 66000
           },
           {
-            "label": "F",
+            "label": "E",
             "direction": "low",
             "value": 64000
+          },
+          {
+            "label": "F",
+            "direction": "low",
+            "value": 62000
           }
         ]
+      },
+      "resolved_meta": {
+        "max_high": 69230.359375,
+        "min_low": 64971.70703125
       }
     },
     {
       "id": "v13_038",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{}",
+      "answer_tokens": [],
       "resolution_spec": {
         "source": "yfinance",
         "method": "hit_levels",
         "symbol": "ETH-USD",
+        "start_date": "2026-03-27",
+        "resolution_date": "2026-03-31",
+        "levels": [
+          {
+            "label": "A",
+            "direction": "high",
+            "value": 2200
+          },
+          {
+            "label": "B",
+            "direction": "high",
+            "value": 2300
+          },
+          {
+            "label": "C",
+            "direction": "high",
+            "value": 2400
+          },
+          {
+            "label": "D",
+            "direction": "low",
+            "value": 1900
+          },
+          {
+            "label": "E",
+            "direction": "low",
+            "value": 1800
+          },
+          {
+            "label": "F",
+            "direction": "low",
+            "value": 1700
+          }
+        ]
+      },
+      "resolved_meta": {
+        "max_high": 2165.666259765625,
+        "min_low": 1939.5286865234375
+      }
+    },
+    {
+      "id": "v13_039",
+      "status": "resolved",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
+      "resolution_spec": {
+        "source": "yfinance",
+        "method": "hit_levels",
+        "symbol": "NVDA",
         "start_date": "2026-03-26",
         "resolution_date": "2026-03-31",
         "levels": [
           {
             "label": "A",
             "direction": "high",
-            "value": 2300
+            "value": 180
           },
           {
             "label": "B",
-            "direction": "high",
-            "value": 2400
-          },
-          {
-            "label": "C",
-            "direction": "high",
-            "value": 2500
-          },
-          {
-            "label": "D",
-            "direction": "low",
-            "value": 2000
-          },
-          {
-            "label": "E",
-            "direction": "low",
-            "value": 1900
-          },
-          {
-            "label": "F",
-            "direction": "low",
-            "value": 1800
-          }
-        ]
-      }
-    },
-    {
-      "id": "v13_039",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
-      "resolution_spec": {
-        "source": "yfinance",
-        "method": "hit_levels",
-        "symbol": "NVDA",
-        "start_date": "2026-03-25",
-        "resolution_date": "2026-03-31",
-        "levels": [
-          {
-            "label": "A",
             "direction": "high",
             "value": 185
           },
           {
-            "label": "B",
+            "label": "C",
             "direction": "high",
             "value": 190
           },
           {
-            "label": "C",
-            "direction": "high",
-            "value": 195
-          },
-          {
             "label": "D",
-            "direction": "low",
-            "value": 170
-          },
-          {
-            "label": "E",
             "direction": "low",
             "value": 165
           },
           {
-            "label": "F",
+            "label": "E",
             "direction": "low",
             "value": 160
+          },
+          {
+            "label": "F",
+            "direction": "low",
+            "value": 155
           }
         ]
+      },
+      "resolved_meta": {
+        "max_high": 177.3699951171875,
+        "min_low": 164.27000427246094
       }
     },
     {
       "id": "v13_040",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C, D}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "hit_levels",
         "symbol": "AMD",
-        "start_date": "2026-03-25",
+        "start_date": "2026-03-26",
         "resolution_date": "2026-03-31",
         "levels": [
           {
             "label": "A",
             "direction": "high",
-            "value": 230
+            "value": 210
           },
           {
             "label": "B",
             "direction": "high",
-            "value": 235
+            "value": 215
           },
           {
             "label": "C",
             "direction": "high",
-            "value": 240
+            "value": 220
           },
           {
             "label": "D",
             "direction": "low",
-            "value": 215
+            "value": 195
           },
           {
             "label": "E",
             "direction": "low",
-            "value": 210
+            "value": 190
           },
           {
             "label": "F",
             "direction": "low",
-            "value": 205
+            "value": 185
           }
         ]
+      },
+      "resolved_meta": {
+        "max_high": 221.0,
+        "min_low": 192.8699951171875
       }
     },
     {
       "id": "v13_041",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "hit_levels",
         "symbol": "TSLA",
-        "start_date": "2026-03-25",
+        "start_date": "2026-03-26",
         "resolution_date": "2026-03-31",
         "levels": [
           {
             "label": "A",
+            "direction": "high",
+            "value": 390
+          },
+          {
+            "label": "B",
             "direction": "high",
             "value": 400
           },
           {
-            "label": "B",
+            "label": "C",
             "direction": "high",
             "value": 410
           },
           {
-            "label": "C",
-            "direction": "high",
-            "value": 420
-          },
-          {
             "label": "D",
-            "direction": "low",
-            "value": 370
-          },
-          {
-            "label": "E",
             "direction": "low",
             "value": 360
           },
           {
-            "label": "F",
+            "label": "E",
             "direction": "low",
             "value": 350
+          },
+          {
+            "label": "F",
+            "direction": "low",
+            "value": 340
           }
         ]
+      },
+      "resolved_meta": {
+        "max_high": 384.44000244140625,
+        "min_low": 352.1400146484375
       }
     },
     {
       "id": "v13_042",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, D, E}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "D",
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "hit_levels",
         "symbol": "QQQ",
-        "start_date": "2026-03-25",
+        "start_date": "2026-03-26",
         "resolution_date": "2026-03-31",
         "levels": [
           {
             "label": "A",
             "direction": "high",
-            "value": 595
+            "value": 580
           },
           {
             "label": "B",
             "direction": "high",
-            "value": 600
+            "value": 585
           },
           {
             "label": "C",
             "direction": "high",
-            "value": 605
+            "value": 590
           },
           {
             "label": "D",
             "direction": "low",
-            "value": 580
+            "value": 565
           },
           {
             "label": "E",
             "direction": "low",
-            "value": 575
+            "value": 560
           },
           {
             "label": "F",
             "direction": "low",
-            "value": 570
+            "value": 555
           }
         ]
+      },
+      "resolved_meta": {
+        "max_high": 587.739990234375,
+        "min_low": 555.5999755859375
       }
     },
     {
       "id": "v13_043",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A, D, E, F}",
+      "answer_tokens": [
+        "A",
+        "D",
+        "E",
+        "F"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "hit_levels",
         "symbol": "SPY",
-        "start_date": "2026-03-25",
+        "start_date": "2026-03-26",
         "resolution_date": "2026-03-31",
         "levels": [
           {
             "label": "A",
+            "direction": "high",
+            "value": 655
+          },
+          {
+            "label": "B",
+            "direction": "high",
+            "value": 660
+          },
+          {
+            "label": "C",
             "direction": "high",
             "value": 665
           },
           {
-            "label": "B",
-            "direction": "high",
-            "value": 670
-          },
-          {
-            "label": "C",
-            "direction": "high",
-            "value": 675
-          },
-          {
             "label": "D",
             "direction": "low",
-            "value": 650
+            "value": 640
           },
           {
             "label": "E",
             "direction": "low",
-            "value": 645
+            "value": 635
           },
           {
             "label": "F",
             "direction": "low",
-            "value": 640
+            "value": 630
           }
         ]
+      },
+      "resolved_meta": {
+        "max_high": 658.52001953125,
+        "min_low": 629.280029296875
       }
     },
     {
       "id": "v13_044",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, D, E, F}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "hit_levels",
         "symbol": "SOXX",
-        "start_date": "2026-03-25",
+        "start_date": "2026-03-26",
         "resolution_date": "2026-03-31",
         "levels": [
           {
             "label": "A",
             "direction": "high",
-            "value": 355
+            "value": 335
           },
           {
             "label": "B",
             "direction": "high",
-            "value": 360
+            "value": 340
           },
           {
             "label": "C",
             "direction": "high",
-            "value": 365
+            "value": 345
           },
           {
             "label": "D",
             "direction": "low",
-            "value": 340
+            "value": 320
           },
           {
             "label": "E",
             "direction": "low",
-            "value": 335
+            "value": 315
           },
           {
             "label": "F",
             "direction": "low",
-            "value": 330
+            "value": 310
           }
         ]
+      },
+      "resolved_meta": {
+        "max_high": 342.6499938964844,
+        "min_low": 307.260009765625
       }
     },
     {
       "id": "v13_045",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{D, E}",
+      "answer_tokens": [
+        "D",
+        "E"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "hit_levels",
         "symbol": "COIN",
-        "start_date": "2026-03-25",
+        "start_date": "2026-03-26",
         "resolution_date": "2026-03-31",
         "levels": [
           {
             "label": "A",
             "direction": "high",
-            "value": 190
+            "value": 180
           },
           {
             "label": "B",
             "direction": "high",
-            "value": 195
+            "value": 185
           },
           {
             "label": "C",
             "direction": "high",
-            "value": 200
+            "value": 190
           },
           {
             "label": "D",
             "direction": "low",
-            "value": 175
+            "value": 165
           },
           {
             "label": "E",
             "direction": "low",
-            "value": 170
+            "value": 160
           },
           {
             "label": "F",
             "direction": "low",
-            "value": 165
+            "value": 155
           }
         ]
+      },
+      "resolved_meta": {
+        "max_high": 179.75,
+        "min_low": 158.4600067138672
       }
     },
     {
       "id": "v13_046",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{}",
+      "answer_tokens": [],
       "resolution_spec": {
         "source": "yfinance",
         "method": "hit_levels",
         "symbol": "MSTR",
-        "start_date": "2026-03-25",
+        "start_date": "2026-03-26",
         "resolution_date": "2026-03-31",
         "levels": [
           {
@@ -1730,83 +1980,114 @@
             "value": 60
           }
         ]
+      },
+      "resolved_meta": {
+        "max_high": 139.0800018310547,
+        "min_low": 117.75
       }
     },
     {
       "id": "v13_047",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
         "symbol": "NVDA",
         "resolution_date": "2026-03-31",
         "operator": "gt",
-        "value": 185
+        "value": 180
+      },
+      "resolved_meta": {
+        "close": 175.75
       }
     },
     {
       "id": "v13_048",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
         "symbol": "AMD",
         "resolution_date": "2026-03-31",
         "operator": "gt",
-        "value": 230
+        "value": 215
+      },
+      "resolved_meta": {
+        "close": 210.2100067138672
       }
     },
     {
       "id": "v13_049",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
         "symbol": "AVGO",
         "resolution_date": "2026-03-31",
         "operator": "gt",
-        "value": 330
+        "value": 320
+      },
+      "resolved_meta": {
+        "close": 313.489990234375
       }
     },
     {
       "id": "v13_050",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{Yes}",
+      "answer_tokens": [
+        "Yes"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
         "symbol": "TSM",
         "resolution_date": "2026-03-31",
         "operator": "gt",
-        "value": 360
+        "value": 340
+      },
+      "resolved_meta": {
+        "close": 341.489990234375
       }
     },
     {
       "id": "v13_051",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
         "symbol": "TSLA",
         "resolution_date": "2026-03-31",
         "operator": "gt",
-        "value": 410
+        "value": 400
+      },
+      "resolved_meta": {
+        "close": 381.260009765625
       }
     },
     {
       "id": "v13_052",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
@@ -1814,139 +2095,189 @@
         "resolution_date": "2026-03-31",
         "operator": "gt",
         "value": 260
+      },
+      "resolved_meta": {
+        "close": 255.6300048828125
       }
     },
     {
       "id": "v13_053",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
         "symbol": "MSFT",
         "resolution_date": "2026-03-31",
         "operator": "gt",
-        "value": 380
+        "value": 375
+      },
+      "resolved_meta": {
+        "close": 369.3699951171875
       }
     },
     {
       "id": "v13_054",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
         "symbol": "AMZN",
         "resolution_date": "2026-03-31",
         "operator": "gt",
-        "value": 220
+        "value": 215
+      },
+      "resolved_meta": {
+        "close": 210.57000732421875
       }
     },
     {
       "id": "v13_055",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{Yes}",
+      "answer_tokens": [
+        "Yes"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
         "symbol": "META",
         "resolution_date": "2026-03-31",
         "operator": "gt",
-        "value": 620
+        "value": 570
+      },
+      "resolved_meta": {
+        "close": 579.22998046875
       }
     },
     {
       "id": "v13_056",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
         "symbol": "QQQ",
         "resolution_date": "2026-03-31",
         "operator": "gt",
-        "value": 600
+        "value": 590
+      },
+      "resolved_meta": {
+        "close": 584.3099975585938
       }
     },
     {
       "id": "v13_057",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{Yes}",
+      "answer_tokens": [
+        "Yes"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
         "symbol": "SPY",
         "resolution_date": "2026-03-31",
         "operator": "gt",
-        "value": 670
+        "value": 655
+      },
+      "resolved_meta": {
+        "close": 655.239990234375
       }
     },
     {
       "id": "v13_058",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
         "symbol": "IWM",
         "resolution_date": "2026-03-31",
         "operator": "gt",
-        "value": 260
+        "value": 255
+      },
+      "resolved_meta": {
+        "close": 249.55999755859375
       }
     },
     {
       "id": "v13_059",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
         "symbol": "BTC-USD",
         "resolution_date": "2026-03-31",
         "operator": "gt",
-        "value": 74000
+        "value": 72000
+      },
+      "resolved_meta": {
+        "close": 68078.5546875
       }
     },
     {
       "id": "v13_060",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
         "symbol": "ETH-USD",
         "resolution_date": "2026-03-31",
         "operator": "gt",
-        "value": 2300
+        "value": 2200
+      },
+      "resolved_meta": {
+        "close": 2138.737060546875
       }
     },
     {
       "id": "v13_061",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
         "symbol": "COIN",
         "resolution_date": "2026-03-31",
         "operator": "gt",
-        "value": 195
+        "value": 185
+      },
+      "resolved_meta": {
+        "close": 172.99000549316406
       }
     },
     {
       "id": "v13_062",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
@@ -1954,13 +2285,18 @@
         "resolution_date": "2026-03-31",
         "operator": "gt",
         "value": 160
+      },
+      "resolved_meta": {
+        "close": 122.77999877929688
       }
     },
     {
       "id": "v13_063",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
@@ -1968,13 +2304,18 @@
         "resolution_date": "2026-03-31",
         "operator": "lt",
         "value": 58
+      },
+      "resolved_meta": {
+        "close": 58.970001220703125
       }
     },
     {
       "id": "v13_064",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "binary_close_threshold",
@@ -1982,13 +2323,18 @@
         "resolution_date": "2026-03-31",
         "operator": "lt",
         "value": 48
+      },
+      "resolved_meta": {
+        "close": 49.439998626708984
       }
     },
     {
       "id": "v13_065",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -1996,32 +2342,42 @@
         "symbols": {
           "A": {
             "symbol": "NVDA",
-            "reference_close": 178.68,
-            "reference_date": "2026-03-25"
+            "reference_close": 171.24,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "AMD",
-            "reference_close": 220.27,
-            "reference_date": "2026-03-25"
+            "reference_close": 203.77,
+            "reference_date": "2026-03-26"
           },
           "C": {
             "symbol": "AVGO",
-            "reference_close": 318.81,
-            "reference_date": "2026-03-25"
+            "reference_close": 309.415,
+            "reference_date": "2026-03-26"
           },
           "D": {
             "symbol": "TSM",
-            "reference_close": 347.75,
-            "reference_date": "2026-03-25"
+            "reference_close": 326.11,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "D": 0.047162,
+          "B": 0.031604,
+          "A": 0.026337,
+          "C": 0.01317
         }
       }
     },
     {
       "id": "v13_066",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2029,32 +2385,42 @@
         "symbols": {
           "A": {
             "symbol": "AAPL",
-            "reference_close": 252.62,
-            "reference_date": "2026-03-25"
+            "reference_close": 252.89,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "MSFT",
-            "reference_close": 371.04,
-            "reference_date": "2026-03-25"
+            "reference_close": 365.97,
+            "reference_date": "2026-03-26"
           },
           "C": {
             "symbol": "AMZN",
-            "reference_close": 211.71,
-            "reference_date": "2026-03-25"
+            "reference_close": 207.54,
+            "reference_date": "2026-03-26"
           },
           "D": {
             "symbol": "META",
-            "reference_close": 594.89,
-            "reference_date": "2026-03-25"
+            "reference_close": 547.54,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "D": 0.057877,
+          "C": 0.0146,
+          "A": 0.010835,
+          "B": 0.00929
         }
       }
     },
     {
       "id": "v13_067",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2062,27 +2428,36 @@
         "symbols": {
           "A": {
             "symbol": "SPY",
-            "reference_close": 656.82,
-            "reference_date": "2026-03-25"
+            "reference_close": 645.09,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "QQQ",
-            "reference_close": 587.82,
-            "reference_date": "2026-03-25"
+            "reference_close": 573.79,
+            "reference_date": "2026-03-26"
           },
           "C": {
             "symbol": "IWM",
-            "reference_close": 251.82,
-            "reference_date": "2026-03-25"
+            "reference_close": 247.44,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "B": 0.018334,
+          "A": 0.015734,
+          "C": 0.008568
         }
       }
     },
     {
       "id": "v13_068",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2090,32 +2465,42 @@
         "symbols": {
           "A": {
             "symbol": "BTC-USD",
-            "reference_close": 70950.0625,
-            "reference_date": "2026-03-26"
+            "reference_close": 68817.0391,
+            "reference_date": "2026-03-27"
           },
           "B": {
             "symbol": "ETH-USD",
-            "reference_close": 2154.3943,
-            "reference_date": "2026-03-26"
+            "reference_close": 2064.3914,
+            "reference_date": "2026-03-27"
           },
           "C": {
             "symbol": "COIN",
-            "reference_close": 181.1,
-            "reference_date": "2026-03-25"
+            "reference_close": 173.38,
+            "reference_date": "2026-03-26"
           },
           "D": {
             "symbol": "MSTR",
-            "reference_close": 139.13,
-            "reference_date": "2026-03-25"
+            "reference_close": 132.93,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "B": 0.036013,
+          "C": -0.002249,
+          "A": -0.010731,
+          "D": -0.076356
         }
       }
     },
     {
       "id": "v13_069",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2123,32 +2508,42 @@
         "symbols": {
           "A": {
             "symbol": "CL=F",
-            "reference_close": 91.4,
-            "reference_date": "2026-03-25"
+            "reference_close": 93.76,
+            "reference_date": "2026-03-27"
           },
           "B": {
             "symbol": "XLE",
-            "reference_close": 60.57,
-            "reference_date": "2026-03-25"
+            "reference_close": 61.52,
+            "reference_date": "2026-03-26"
           },
           "C": {
             "symbol": "XOM",
-            "reference_close": 163.26,
-            "reference_date": "2026-03-25"
+            "reference_close": 165.43,
+            "reference_date": "2026-03-26"
           },
           "D": {
             "symbol": "CVX",
-            "reference_close": 205.15,
-            "reference_date": "2026-03-25"
+            "reference_close": 207.79,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "A": 0.067833,
+          "C": -0.028109,
+          "B": -0.04145,
+          "D": -0.049954
         }
       }
     },
     {
       "id": "v13_070",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{C}",
+      "answer_tokens": [
+        "C"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2156,32 +2551,42 @@
         "symbols": {
           "A": {
             "symbol": "XLF",
-            "reference_close": 49.34,
-            "reference_date": "2026-03-25"
+            "reference_close": 49.05,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "JPM",
-            "reference_close": 295.42,
-            "reference_date": "2026-03-25"
+            "reference_close": 291.66,
+            "reference_date": "2026-03-26"
           },
           "C": {
             "symbol": "GS",
-            "reference_close": 841.84,
-            "reference_date": "2026-03-25"
+            "reference_close": 822.64,
+            "reference_date": "2026-03-26"
           },
           "D": {
             "symbol": "BAC",
-            "reference_close": 48.75,
-            "reference_date": "2026-03-25"
+            "reference_close": 48.24,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "C": 0.04567,
+          "D": 0.021352,
+          "B": 0.012755,
+          "A": 0.007951
         }
       }
     },
     {
       "id": "v13_071",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{C}",
+      "answer_tokens": [
+        "C"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2189,27 +2594,36 @@
         "symbols": {
           "A": {
             "symbol": "GC=F",
-            "reference_close": 4528.6001,
-            "reference_date": "2026-03-25"
+            "reference_close": 4440.1001,
+            "reference_date": "2026-03-27"
           },
           "B": {
             "symbol": "GLD",
-            "reference_close": 416.29,
-            "reference_date": "2026-03-25"
+            "reference_close": 400.64,
+            "reference_date": "2026-03-26"
           },
           "C": {
             "symbol": "SLV",
-            "reference_close": 65.21,
-            "reference_date": "2026-03-25"
+            "reference_close": 60.77,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "C": 0.121277,
+          "B": 0.092802,
+          "A": 0.077273
         }
       }
     },
     {
       "id": "v13_072",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{C}",
+      "answer_tokens": [
+        "C"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2217,32 +2631,42 @@
         "symbols": {
           "A": {
             "symbol": "NVDA",
-            "reference_close": 178.68,
-            "reference_date": "2026-03-25"
+            "reference_close": 171.24,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "MSFT",
-            "reference_close": 371.04,
-            "reference_date": "2026-03-25"
+            "reference_close": 365.97,
+            "reference_date": "2026-03-26"
           },
           "C": {
             "symbol": "META",
-            "reference_close": 594.89,
-            "reference_date": "2026-03-25"
+            "reference_close": 547.54,
+            "reference_date": "2026-03-26"
           },
           "D": {
             "symbol": "AMZN",
-            "reference_close": 211.71,
-            "reference_date": "2026-03-25"
+            "reference_close": 207.54,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "C": 0.057877,
+          "A": 0.026337,
+          "D": 0.0146,
+          "B": 0.00929
         }
       }
     },
     {
       "id": "v13_073",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{D}",
+      "answer_tokens": [
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2250,32 +2674,45 @@
         "symbols": {
           "A": {
             "symbol": "TSLA",
-            "reference_close": 385.95,
-            "reference_date": "2026-03-25"
+            "reference_close": 372.11,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "COIN",
-            "reference_close": 181.1,
-            "reference_date": "2026-03-25"
+            "reference_close": 173.38,
+            "reference_date": "2026-03-26"
           },
           "C": {
             "symbol": "MSTR",
-            "reference_close": 139.13,
-            "reference_date": "2026-03-25"
+            "reference_close": 132.93,
+            "reference_date": "2026-03-26"
           },
           "D": {
             "symbol": "SOXX",
-            "reference_close": 345.25,
-            "reference_date": "2026-03-25"
+            "reference_close": 328.85,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "D": 0.029466,
+          "A": 0.02459,
+          "B": -0.002249,
+          "C": -0.076356
         }
       }
     },
     {
       "id": "v13_074",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C, D}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "membership_above_reference",
@@ -2283,32 +2720,45 @@
         "symbols": {
           "A": {
             "symbol": "NVDA",
-            "reference_close": 178.68,
-            "reference_date": "2026-03-25"
+            "reference_close": 171.24,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "AMD",
-            "reference_close": 220.27,
-            "reference_date": "2026-03-25"
+            "reference_close": 203.77,
+            "reference_date": "2026-03-26"
           },
           "C": {
             "symbol": "AVGO",
-            "reference_close": 318.81,
-            "reference_date": "2026-03-25"
+            "reference_close": 309.415,
+            "reference_date": "2026-03-26"
           },
           "D": {
             "symbol": "TSM",
-            "reference_close": 347.75,
-            "reference_date": "2026-03-25"
+            "reference_close": 326.11,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "closes": {
+          "A": 175.75,
+          "B": 210.2100067138672,
+          "C": 313.489990234375,
+          "D": 341.489990234375
         }
       }
     },
     {
       "id": "v13_075",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C, D}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "membership_above_reference",
@@ -2316,32 +2766,44 @@
         "symbols": {
           "A": {
             "symbol": "AAPL",
-            "reference_close": 252.62,
-            "reference_date": "2026-03-25"
+            "reference_close": 252.89,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "MSFT",
-            "reference_close": 371.04,
-            "reference_date": "2026-03-25"
+            "reference_close": 365.97,
+            "reference_date": "2026-03-26"
           },
           "C": {
             "symbol": "AMZN",
-            "reference_close": 211.71,
-            "reference_date": "2026-03-25"
+            "reference_close": 207.54,
+            "reference_date": "2026-03-26"
           },
           "D": {
             "symbol": "META",
-            "reference_close": 594.89,
-            "reference_date": "2026-03-25"
+            "reference_close": 547.54,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "closes": {
+          "A": 255.6300048828125,
+          "B": 369.3699951171875,
+          "C": 210.57000732421875,
+          "D": 579.22998046875
         }
       }
     },
     {
       "id": "v13_076",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "membership_above_reference",
@@ -2349,27 +2811,36 @@
         "symbols": {
           "A": {
             "symbol": "SPY",
-            "reference_close": 656.82,
-            "reference_date": "2026-03-25"
+            "reference_close": 645.09,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "QQQ",
-            "reference_close": 587.82,
-            "reference_date": "2026-03-25"
+            "reference_close": 573.79,
+            "reference_date": "2026-03-26"
           },
           "C": {
             "symbol": "IWM",
-            "reference_close": 251.82,
-            "reference_date": "2026-03-25"
+            "reference_close": 247.44,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "closes": {
+          "A": 655.239990234375,
+          "B": 584.3099975585938,
+          "C": 249.55999755859375
         }
       }
     },
     {
       "id": "v13_077",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "membership_above_reference",
@@ -2377,32 +2848,42 @@
         "symbols": {
           "A": {
             "symbol": "BTC-USD",
-            "reference_close": 70950.0625,
-            "reference_date": "2026-03-26"
+            "reference_close": 68817.0391,
+            "reference_date": "2026-03-27"
           },
           "B": {
             "symbol": "ETH-USD",
-            "reference_close": 2154.3943,
-            "reference_date": "2026-03-26"
+            "reference_close": 2064.3914,
+            "reference_date": "2026-03-27"
           },
           "C": {
             "symbol": "COIN",
-            "reference_close": 181.1,
-            "reference_date": "2026-03-25"
+            "reference_close": 173.38,
+            "reference_date": "2026-03-26"
           },
           "D": {
             "symbol": "MSTR",
-            "reference_close": 139.13,
-            "reference_date": "2026-03-25"
+            "reference_close": 132.93,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "closes": {
+          "A": 68078.5546875,
+          "B": 2138.737060546875,
+          "C": 172.99000549316406,
+          "D": 122.77999877929688
         }
       }
     },
     {
       "id": "v13_078",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "membership_above_reference",
@@ -2410,32 +2891,45 @@
         "symbols": {
           "A": {
             "symbol": "CL=F",
-            "reference_close": 91.4,
-            "reference_date": "2026-03-25"
+            "reference_close": 93.76,
+            "reference_date": "2026-03-27"
           },
           "B": {
             "symbol": "XLE",
-            "reference_close": 60.57,
-            "reference_date": "2026-03-25"
+            "reference_close": 61.52,
+            "reference_date": "2026-03-26"
           },
           "C": {
             "symbol": "XOM",
-            "reference_close": 163.26,
-            "reference_date": "2026-03-25"
+            "reference_close": 165.43,
+            "reference_date": "2026-03-26"
           },
           "D": {
             "symbol": "CVX",
-            "reference_close": 205.15,
-            "reference_date": "2026-03-25"
+            "reference_close": 207.79,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "closes": {
+          "A": 100.12000274658203,
+          "B": 58.970001220703125,
+          "C": 160.77999877929688,
+          "D": 197.41000366210938
         }
       }
     },
     {
       "id": "v13_079",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C, D}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "membership_above_reference",
@@ -2443,32 +2937,44 @@
         "symbols": {
           "A": {
             "symbol": "XLF",
-            "reference_close": 49.34,
-            "reference_date": "2026-03-25"
+            "reference_close": 49.05,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "JPM",
-            "reference_close": 295.42,
-            "reference_date": "2026-03-25"
+            "reference_close": 291.66,
+            "reference_date": "2026-03-26"
           },
           "C": {
             "symbol": "GS",
-            "reference_close": 841.84,
-            "reference_date": "2026-03-25"
+            "reference_close": 822.64,
+            "reference_date": "2026-03-26"
           },
           "D": {
             "symbol": "BAC",
-            "reference_close": 48.75,
-            "reference_date": "2026-03-25"
+            "reference_close": 48.24,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "closes": {
+          "A": 49.439998626708984,
+          "B": 295.3800048828125,
+          "C": 860.2100219726562,
+          "D": 49.27000045776367
         }
       }
     },
     {
       "id": "v13_080",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "membership_above_reference",
@@ -2476,27 +2982,39 @@
         "symbols": {
           "A": {
             "symbol": "GC=F",
-            "reference_close": 4528.6001,
-            "reference_date": "2026-03-25"
+            "reference_close": 4440.1001,
+            "reference_date": "2026-03-27"
           },
           "B": {
             "symbol": "GLD",
-            "reference_close": 416.29,
-            "reference_date": "2026-03-25"
+            "reference_close": 400.64,
+            "reference_date": "2026-03-26"
           },
           "C": {
             "symbol": "SLV",
-            "reference_close": 65.21,
-            "reference_date": "2026-03-25"
+            "reference_close": 60.77,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "closes": {
+          "A": 4783.2001953125,
+          "B": 437.82000732421875,
+          "C": 68.13999938964844
         }
       }
     },
     {
       "id": "v13_081",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A, B, C, D}",
+      "answer_tokens": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "membership_above_reference",
@@ -2504,32 +3022,43 @@
         "symbols": {
           "A": {
             "symbol": "NVDA",
-            "reference_close": 178.68,
-            "reference_date": "2026-03-25"
+            "reference_close": 171.24,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "MSFT",
-            "reference_close": 371.04,
-            "reference_date": "2026-03-25"
+            "reference_close": 365.97,
+            "reference_date": "2026-03-26"
           },
           "C": {
             "symbol": "META",
-            "reference_close": 594.89,
-            "reference_date": "2026-03-25"
+            "reference_close": 547.54,
+            "reference_date": "2026-03-26"
           },
           "D": {
             "symbol": "AMZN",
-            "reference_close": 211.71,
-            "reference_date": "2026-03-25"
+            "reference_close": 207.54,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "closes": {
+          "A": 175.75,
+          "B": 369.3699951171875,
+          "C": 579.22998046875,
+          "D": 210.57000732421875
         }
       }
     },
     {
       "id": "v13_082",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A, D}",
+      "answer_tokens": [
+        "A",
+        "D"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "membership_above_reference",
@@ -2537,32 +3066,42 @@
         "symbols": {
           "A": {
             "symbol": "TSLA",
-            "reference_close": 385.95,
-            "reference_date": "2026-03-25"
+            "reference_close": 372.11,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "COIN",
-            "reference_close": 181.1,
-            "reference_date": "2026-03-25"
+            "reference_close": 173.38,
+            "reference_date": "2026-03-26"
           },
           "C": {
             "symbol": "MSTR",
-            "reference_close": 139.13,
-            "reference_date": "2026-03-25"
+            "reference_close": 132.93,
+            "reference_date": "2026-03-26"
           },
           "D": {
             "symbol": "SOXX",
-            "reference_close": 345.25,
-            "reference_date": "2026-03-25"
+            "reference_close": 328.85,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "closes": {
+          "A": 381.260009765625,
+          "B": 172.99000549316406,
+          "C": 122.77999877929688,
+          "D": 338.5400085449219
         }
       }
     },
     {
       "id": "v13_083",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2570,22 +3109,30 @@
         "symbols": {
           "A": {
             "symbol": "BTC-USD",
-            "reference_close": 70950.0625,
-            "reference_date": "2026-03-26"
+            "reference_close": 68817.0391,
+            "reference_date": "2026-03-27"
           },
           "B": {
             "symbol": "ETH-USD",
-            "reference_close": 2154.3943,
-            "reference_date": "2026-03-26"
+            "reference_close": 2064.3914,
+            "reference_date": "2026-03-27"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "B": 0.036013,
+          "A": -0.010731
         }
       }
     },
     {
       "id": "v13_084",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2593,22 +3140,30 @@
         "symbols": {
           "A": {
             "symbol": "NVDA",
-            "reference_close": 178.68,
-            "reference_date": "2026-03-25"
+            "reference_close": 171.24,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "AMD",
-            "reference_close": 220.27,
-            "reference_date": "2026-03-25"
+            "reference_close": 203.77,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "B": 0.031604,
+          "A": 0.026337
         }
       }
     },
     {
       "id": "v13_085",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2616,22 +3171,30 @@
         "symbols": {
           "A": {
             "symbol": "AAPL",
-            "reference_close": 252.62,
-            "reference_date": "2026-03-25"
+            "reference_close": 252.89,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "MSFT",
-            "reference_close": 371.04,
-            "reference_date": "2026-03-25"
+            "reference_close": 365.97,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "A": 0.010835,
+          "B": 0.00929
         }
       }
     },
     {
       "id": "v13_086",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2639,22 +3202,30 @@
         "symbols": {
           "A": {
             "symbol": "AMZN",
-            "reference_close": 211.71,
-            "reference_date": "2026-03-25"
+            "reference_close": 207.54,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "META",
-            "reference_close": 594.89,
-            "reference_date": "2026-03-25"
+            "reference_close": 547.54,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "B": 0.057877,
+          "A": 0.0146
         }
       }
     },
     {
       "id": "v13_087",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2662,22 +3233,30 @@
         "symbols": {
           "A": {
             "symbol": "SPY",
-            "reference_close": 656.82,
-            "reference_date": "2026-03-25"
+            "reference_close": 645.09,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "QQQ",
-            "reference_close": 587.82,
-            "reference_date": "2026-03-25"
+            "reference_close": 573.79,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "B": 0.018334,
+          "A": 0.015734
         }
       }
     },
     {
       "id": "v13_088",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2685,22 +3264,30 @@
         "symbols": {
           "A": {
             "symbol": "XLE",
-            "reference_close": 60.57,
-            "reference_date": "2026-03-25"
+            "reference_close": 61.52,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "XLF",
-            "reference_close": 49.34,
-            "reference_date": "2026-03-25"
+            "reference_close": 49.05,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "B": 0.007951,
+          "A": -0.04145
         }
       }
     },
     {
       "id": "v13_089",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2708,22 +3295,30 @@
         "symbols": {
           "A": {
             "symbol": "GC=F",
-            "reference_close": 4528.6001,
-            "reference_date": "2026-03-25"
+            "reference_close": 4440.1001,
+            "reference_date": "2026-03-27"
           },
           "B": {
             "symbol": "CL=F",
-            "reference_close": 91.4,
-            "reference_date": "2026-03-25"
+            "reference_close": 93.76,
+            "reference_date": "2026-03-27"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "A": 0.077273,
+          "B": 0.067833
         }
       }
     },
     {
       "id": "v13_090",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2731,22 +3326,30 @@
         "symbols": {
           "A": {
             "symbol": "COIN",
-            "reference_close": 181.1,
-            "reference_date": "2026-03-25"
+            "reference_close": 173.38,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "MSTR",
-            "reference_close": 139.13,
-            "reference_date": "2026-03-25"
+            "reference_close": 132.93,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "A": -0.002249,
+          "B": -0.076356
         }
       }
     },
     {
       "id": "v13_091",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2754,22 +3357,30 @@
         "symbols": {
           "A": {
             "symbol": "GLD",
-            "reference_close": 416.29,
-            "reference_date": "2026-03-25"
+            "reference_close": 400.64,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "SLV",
-            "reference_close": 65.21,
-            "reference_date": "2026-03-25"
+            "reference_close": 60.77,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "B": 0.121277,
+          "A": 0.092802
         }
       }
     },
     {
       "id": "v13_092",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2777,22 +3388,30 @@
         "symbols": {
           "A": {
             "symbol": "SOXX",
-            "reference_close": 345.25,
-            "reference_date": "2026-03-25"
+            "reference_close": 328.85,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "QQQ",
-            "reference_close": 587.82,
-            "reference_date": "2026-03-25"
+            "reference_close": 573.79,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "A": 0.029466,
+          "B": 0.018334
         }
       }
     },
     {
       "id": "v13_093",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2800,22 +3419,30 @@
         "symbols": {
           "A": {
             "symbol": "TSLA",
-            "reference_close": 385.95,
-            "reference_date": "2026-03-25"
+            "reference_close": 372.11,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "NVDA",
-            "reference_close": 178.68,
-            "reference_date": "2026-03-25"
+            "reference_close": 171.24,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "B": 0.026337,
+          "A": 0.02459
         }
       }
     },
     {
       "id": "v13_094",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2823,22 +3450,30 @@
         "symbols": {
           "A": {
             "symbol": "JPM",
-            "reference_close": 295.42,
-            "reference_date": "2026-03-25"
+            "reference_close": 291.66,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "GS",
-            "reference_close": 841.84,
-            "reference_date": "2026-03-25"
+            "reference_close": 822.64,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "B": 0.04567,
+          "A": 0.012755
         }
       }
     },
     {
       "id": "v13_095",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2846,22 +3481,30 @@
         "symbols": {
           "A": {
             "symbol": "XOM",
-            "reference_close": 163.26,
-            "reference_date": "2026-03-25"
+            "reference_close": 165.43,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "CVX",
-            "reference_close": 205.15,
-            "reference_date": "2026-03-25"
+            "reference_close": 207.79,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "A": -0.028109,
+          "B": -0.049954
         }
       }
     },
     {
       "id": "v13_096",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2869,22 +3512,30 @@
         "symbols": {
           "A": {
             "symbol": "AAPL",
-            "reference_close": 252.62,
-            "reference_date": "2026-03-25"
+            "reference_close": 252.89,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "AMZN",
-            "reference_close": 211.71,
-            "reference_date": "2026-03-25"
+            "reference_close": 207.54,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "B": 0.0146,
+          "A": 0.010835
         }
       }
     },
     {
       "id": "v13_097",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2892,22 +3543,30 @@
         "symbols": {
           "A": {
             "symbol": "META",
-            "reference_close": 594.89,
-            "reference_date": "2026-03-25"
+            "reference_close": 547.54,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "GOOGL",
-            "reference_close": 290.93,
-            "reference_date": "2026-03-25"
+            "reference_close": 280.92,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "B": 0.058629,
+          "A": 0.057877
         }
       }
     },
     {
       "id": "v13_098",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2915,22 +3574,30 @@
         "symbols": {
           "A": {
             "symbol": "AVGO",
-            "reference_close": 318.81,
-            "reference_date": "2026-03-25"
+            "reference_close": 309.415,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "TSM",
-            "reference_close": 347.75,
-            "reference_date": "2026-03-25"
+            "reference_close": 326.11,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "B": 0.047162,
+          "A": 0.01317
         }
       }
     },
     {
       "id": "v13_099",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2938,22 +3605,30 @@
         "symbols": {
           "A": {
             "symbol": "IWM",
-            "reference_close": 251.82,
-            "reference_date": "2026-03-25"
+            "reference_close": 247.44,
+            "reference_date": "2026-03-26"
           },
           "B": {
             "symbol": "SPY",
-            "reference_close": 656.82,
-            "reference_date": "2026-03-25"
+            "reference_close": 645.09,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "B": 0.015734,
+          "A": 0.008568
         }
       }
     },
     {
       "id": "v13_100",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": null,
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "yfinance",
         "method": "winner_by_return",
@@ -2961,14 +3636,20 @@
         "symbols": {
           "A": {
             "symbol": "BTC-USD",
-            "reference_close": 70950.0625,
-            "reference_date": "2026-03-26"
+            "reference_close": 68817.0391,
+            "reference_date": "2026-03-27"
           },
           "B": {
             "symbol": "COIN",
-            "reference_close": 181.1,
-            "reference_date": "2026-03-25"
+            "reference_close": 173.38,
+            "reference_date": "2026-03-26"
           }
+        }
+      },
+      "resolved_meta": {
+        "returns": {
+          "B": -0.002249,
+          "A": -0.010731
         }
       }
     }

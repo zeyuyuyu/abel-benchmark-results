@@ -1,6 +1,6 @@
 {
   "version": "v14-public-benchmark-manifest",
-  "generated_at": "2026-03-31T11:55:34Z",
+  "generated_at": "2026-04-02T07:07:44Z",
   "scope": "v14",
   "visibility": "public",
   "notes": [
@@ -76,8 +76,8 @@
       "search_policy": "web_search_allowed_live",
       "visibility": "public",
       "case_count": 100,
-      "ground_truth_available_count": 0,
-      "ground_truth_pending_count": 100,
+      "ground_truth_available_count": 93,
+      "ground_truth_pending_count": 7,
       "missing_ground_truth_count": 0,
       "missing_ground_truth_ids": [],
       "questions_path": "v14/track_g_true_live_questions.json",
