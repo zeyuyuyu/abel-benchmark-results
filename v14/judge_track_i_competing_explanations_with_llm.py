@@ -293,15 +293,15 @@ def main() -> None:
             judgments[str(item["id"])] = item
 
     judged_summary = deepcopy(summary)
-    judged_summary["source_summary_path"] = str(args.summary_path)
+    judged_summary["source_summary_path"] = args.summary_path.name
     judged_summary["judge"] = {
         "method": "llm_semantic_compare",
         "model": MODEL,
         "reasoning_effort": REASONING_EFFORT,
         "batch_size": args.batch_size,
-        "artifact_dir": str(judge_dir),
-        "questions_path": str(args.questions_path),
-        "ground_truth_path": str(args.ground_truth_path),
+        "artifact_dir": judge_dir.name,
+        "questions_path": args.questions_path.name,
+        "ground_truth_path": args.ground_truth_path.name,
         "batches": judge_batches,
     }
     judged_summary["raw_runs_before_llm_judge"] = deepcopy(summary["runs"])

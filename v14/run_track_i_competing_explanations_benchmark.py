@@ -327,8 +327,8 @@ def main() -> None:
     results: dict[str, Any] = {
         "timestamp": timestamp,
         "version": args.benchmark_slug,
-        "questions_path": str(args.questions_path),
-        "ground_truth_path": str(args.ground_truth_path),
+        "questions_path": args.questions_path.name,
+        "ground_truth_path": args.ground_truth_path.name,
         "model": MODEL,
         "reasoning_effort": REASONING_EFFORT,
         "timeout_seconds": args.timeout_seconds,

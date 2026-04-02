@@ -64,7 +64,7 @@ def main() -> None:
     rows.sort(key=lambda item: (item["strict_skill_win"], item["score_edge"], item["skill_score"]), reverse=True)
 
     report_json = {
-        "source_summary_path": str(args.judged_summary_path),
+        "source_summary_path": args.judged_summary_path.name,
         "case_count": len(rows),
         "strict_skill_win_count": len(strict_ids),
         "score_edge_positive_count": sum(1 for row in rows if row["score_edge"] > 0),
