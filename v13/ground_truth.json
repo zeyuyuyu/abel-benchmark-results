@@ -5,15 +5,25 @@
   "cases": [
     {
       "id": "v13_001",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{B, C, D, E, F}",
+      "answer_tokens": [
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
       "resolution_spec": {
         "source": "futurex_past_backfill",
         "dataset_name": "futurex-ai/Futurex-Past",
         "source_id": "69a2e39e5692ef005cdbf2d9",
         "expected_after": "2026-03-31",
         "title": "S&P 500 Single-Day Gains and Losses (%) in Q1"
+      },
+      "resolved_meta": {
+        "source_dataset": "futurex-ai/Futurex-Past",
+        "source_id": "69a2e39e5692ef005cdbf2d9"
       }
     },
     {
@@ -31,28 +41,42 @@
     },
     {
       "id": "v13_003",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
       "resolution_spec": {
         "source": "futurex_past_backfill",
         "dataset_name": "futurex-ai/Futurex-Past",
         "source_id": "69a2e39e5692ef005cdbf2d8",
         "expected_after": "2026-03-31",
         "title": "Q1 S&P 500 Performance"
+      },
+      "resolved_meta": {
+        "source_dataset": "futurex-ai/Futurex-Past",
+        "source_id": "69a2e39e5692ef005cdbf2d8"
       }
     },
     {
       "id": "v13_004",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{C, F, G}",
+      "answer_tokens": [
+        "C",
+        "F",
+        "G"
+      ],
       "resolution_spec": {
         "source": "futurex_past_backfill",
         "dataset_name": "futurex-ai/Futurex-Past",
         "source_id": "69a2e39e5692ef005cdbf2e8",
         "expected_after": "2026-03-31",
         "title": "Will KOSPI (KS11) close above __ end of Q1?"
+      },
+      "resolved_meta": {
+        "source_dataset": "futurex-ai/Futurex-Past",
+        "source_id": "69a2e39e5692ef005cdbf2e8"
       }
     },
     {
@@ -70,28 +94,40 @@
     },
     {
       "id": "v13_006",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "futurex_past_backfill",
         "dataset_name": "futurex-ai/Futurex-Past",
         "source_id": "699c4887d1d3cf005c1e48ad",
         "expected_after": "2026-03-26",
         "title": "Banxico interest rate decision in March"
+      },
+      "resolved_meta": {
+        "source_dataset": "futurex-ai/Futurex-Past",
+        "source_id": "699c4887d1d3cf005c1e48ad"
       }
     },
     {
       "id": "v13_007",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "futurex_past_backfill",
         "dataset_name": "futurex-ai/Futurex-Past",
         "source_id": "69a2e39e5692ef005cdbf27c",
         "expected_after": "2026-03-31",
         "title": "Robinhood launches prediction market through MIAXdx by March 31?"
+      },
+      "resolved_meta": {
+        "source_dataset": "futurex-ai/Futurex-Past",
+        "source_id": "69a2e39e5692ef005cdbf27c"
       }
     },
     {

@@ -9,9 +9,15 @@
   "cases": [
     {
       "id": "v13_001",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{B, C, D, E, F}",
+      "answer_tokens": [
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
       "resolution_spec": {
         "source": "futurex_past_backfill",
         "dataset_name": "futurex-ai/Futurex-Past",
@@ -22,7 +28,11 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "source_dataset": "futurex-ai/Futurex-Past",
+        "source_id": "69a2e39e5692ef005cdbf2d9"
+      }
     },
     {
       "id": "v13_002",
@@ -43,9 +53,11 @@
     },
     {
       "id": "v13_003",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{A}",
+      "answer_tokens": [
+        "A"
+      ],
       "resolution_spec": {
         "source": "futurex_past_backfill",
         "dataset_name": "futurex-ai/Futurex-Past",
@@ -56,13 +68,21 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "source_dataset": "futurex-ai/Futurex-Past",
+        "source_id": "69a2e39e5692ef005cdbf2d8"
+      }
     },
     {
       "id": "v13_004",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{C, F, G}",
+      "answer_tokens": [
+        "C",
+        "F",
+        "G"
+      ],
       "resolution_spec": {
         "source": "futurex_past_backfill",
         "dataset_name": "futurex-ai/Futurex-Past",
@@ -73,7 +93,11 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "source_dataset": "futurex-ai/Futurex-Past",
+        "source_id": "69a2e39e5692ef005cdbf2e8"
+      }
     },
     {
       "id": "v13_005",
@@ -94,9 +118,11 @@
     },
     {
       "id": "v13_006",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{B}",
+      "answer_tokens": [
+        "B"
+      ],
       "resolution_spec": {
         "source": "futurex_past_backfill",
         "dataset_name": "futurex-ai/Futurex-Past",
@@ -107,13 +133,19 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "source_dataset": "futurex-ai/Futurex-Past",
+        "source_id": "699c4887d1d3cf005c1e48ad"
+      }
     },
     {
       "id": "v13_007",
-      "status": "pending",
-      "answer_box": null,
-      "answer_tokens": [],
+      "status": "resolved",
+      "answer_box": "\\boxed{No}",
+      "answer_tokens": [
+        "No"
+      ],
       "resolution_spec": {
         "source": "futurex_past_backfill",
         "dataset_name": "futurex-ai/Futurex-Past",
@@ -124,7 +156,11 @@
       "notes": [
         "Ground truth intentionally blank until forward resolution completes.",
         "Use the resolution_spec to know where and when the answer should be backfilled."
-      ]
+      ],
+      "resolved_meta": {
+        "source_dataset": "futurex-ai/Futurex-Past",
+        "source_id": "69a2e39e5692ef005cdbf27c"
+      }
     },
     {
       "id": "v13_008",

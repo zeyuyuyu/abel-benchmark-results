@@ -12,13 +12,13 @@
       "category": "futurex_official",
       "source_type": "futurex_online",
       "end_time": "2026-03-31",
-      "ground_truth_status": "pending",
+      "ground_truth_status": "resolved",
       "base_prediction": null,
       "skill_prediction": null,
-      "resolved": false,
-      "answer_box": null,
-      "base_correct": null,
-      "skill_correct": null
+      "resolved": true,
+      "answer_box": "\\boxed{B, C, D, E, F}",
+      "base_correct": false,
+      "skill_correct": false
     },
     {
       "id": "v13_002",
@@ -40,13 +40,13 @@
       "category": "threshold_truth_set",
       "source_type": "futurex_online",
       "end_time": "2026-03-31",
-      "ground_truth_status": "pending",
+      "ground_truth_status": "resolved",
       "base_prediction": null,
       "skill_prediction": null,
-      "resolved": false,
-      "answer_box": null,
-      "base_correct": null,
-      "skill_correct": null
+      "resolved": true,
+      "answer_box": "\\boxed{A}",
+      "base_correct": false,
+      "skill_correct": false
     },
     {
       "id": "v13_004",
@@ -54,13 +54,13 @@
       "category": "threshold_truth_set",
       "source_type": "futurex_online",
       "end_time": "2026-03-31",
-      "ground_truth_status": "pending",
+      "ground_truth_status": "resolved",
       "base_prediction": null,
       "skill_prediction": null,
-      "resolved": false,
-      "answer_box": null,
-      "base_correct": null,
-      "skill_correct": null
+      "resolved": true,
+      "answer_box": "\\boxed{C, F, G}",
+      "base_correct": false,
+      "skill_correct": false
     },
     {
       "id": "v13_005",
@@ -82,13 +82,13 @@
       "category": "binary_event",
       "source_type": "futurex_online",
       "end_time": "2026-03-26",
-      "ground_truth_status": "pending",
+      "ground_truth_status": "resolved",
       "base_prediction": null,
       "skill_prediction": null,
-      "resolved": false,
-      "answer_box": null,
-      "base_correct": null,
-      "skill_correct": null
+      "resolved": true,
+      "answer_box": "\\boxed{B}",
+      "base_correct": false,
+      "skill_correct": false
     },
     {
       "id": "v13_007",
@@ -96,13 +96,13 @@
       "category": "binary_event",
       "source_type": "futurex_online",
       "end_time": "2026-03-31",
-      "ground_truth_status": "pending",
+      "ground_truth_status": "resolved",
       "base_prediction": null,
       "skill_prediction": null,
-      "resolved": false,
-      "answer_box": null,
-      "base_correct": null,
-      "skill_correct": null
+      "resolved": true,
+      "answer_box": "\\boxed{No}",
+      "base_correct": false,
+      "skill_correct": false
     },
     {
       "id": "v13_008",
@@ -568,9 +568,9 @@
     }
   },
   "scoring": {
-    "rescored_at": "2026-04-02T17:20:32+08:00",
-    "resolved_case_count": 10,
-    "pending_case_count": 7,
+    "rescored_at": "2026-04-07T09:56:40+08:00",
+    "resolved_case_count": 15,
+    "pending_case_count": 2,
     "base_correct_count": 0,
     "skill_correct_count": 0,
     "base_accuracy": 0.0,

@@ -256,19 +256,26 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--ground-truth-path", type=Path, default=GROUND_TRUTH_PATH)
     parser.add_argument("--report-path", type=Path, default=REPORT_PATH)
     parser.add_argument("--ground-truth-only", action="store_true")
+    parser.add_argument("--skip-backfill", action="store_true")
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
     ground_truth = load_json(args.ground_truth_path)
-    futurex_past = load_dataset(FUTUREX_PAST_DATASET, split="train")
-    futurex_row_map = {row["id"]: row for row in futurex_past}
-    backfill_counts = backfill_ground_truth_cases(
-        ground_truth["cases"],
-        futurex_row_map=futurex_row_map,
-    )
-    write_json(args.ground_truth_path, ground_truth)
+    if args.skip_backfill:
+        backfill_counts = {
+            "resolved": sum(1 for item in ground_truth["cases"] if item.get("status") == "resolved"),
+            "pending": sum(1 for item in ground_truth["cases"] if item.get("status") != "resolved"),
+        }
+    else:
+        futurex_past = load_dataset(FUTUREX_PAST_DATASET, split="train")
+        futurex_row_map = {row["id"]: row for row in futurex_past}
+        backfill_counts = backfill_ground_truth_cases(
+            ground_truth["cases"],
+            futurex_row_map=futurex_row_map,
+        )
+        write_json(args.ground_truth_path, ground_truth)
 
     if args.ground_truth_only:
         print(json.dumps(backfill_counts, indent=2, ensure_ascii=False))
